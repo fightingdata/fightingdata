@@ -1,0 +1,54 @@
+---
+layout: layout.njk
+title: Upcoming Events
+description: View all upcoming UFC events and fight cards
+---
+
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold mb-8">Upcoming UFC Events</h1>
+        
+        {% if events.length > 0 %}
+            <div class="grid gap-6">
+                {% for event in events %}
+                <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-red-600 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white mb-2">{{ event.name }}</h2>
+                            <p class="text-gray-400">{{ event.date }} • {{ event.location }}</p>
+                        </div>
+                        <a href="/events/{{ event.slug }}/" class="mt-4 md:mt-0 bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition text-sm font-semibold">
+                            View Full Card
+                        </a>
+                    </div>
+                    
+                    {% if event.matchups.length > 0 %}
+                    <div class="border-t border-gray-800 pt-4">
+                        <p class="text-sm text-gray-400 mb-3">{{ event.matchups.length }} fights scheduled</p>
+                        <div class="space-y-2">
+                            {% for matchup in event.matchups | limit(3) %}
+                            <a href="/compare/{{ matchup.slug }}/" class="block border-l-4 border-red-600 pl-4 py-2 hover:bg-gray-800 transition rounded">
+                                <p class="font-semibold text-white">{{ matchup.fighter_a }} vs. {{ matchup.fighter_b }}</p>
+                                <p class="text-sm text-gray-400">{{ matchup.weight_class }}</p>
+                            </a>
+                            {% endfor %}
+                            
+                            {% if event.matchups.length > 3 %}
+                            <a href="/events/{{ event.slug }}/" class="block text-red-600 hover:text-red-500 text-sm pl-4 py-2">
+                                + {{ event.matchups.length - 3 }} more fights →
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="bg-gray-900 border border-gray-800 rounded-lg p-12 text-center">
+                <h2 class="text-xl font-bold mb-4">No Upcoming Events</h2>
+                <p class="text-gray-400">Check back soon for the next UFC event schedule.</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
