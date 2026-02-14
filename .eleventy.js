@@ -2,16 +2,9 @@ module.exports = function(eleventyConfig) {
   // Copy static assets to output
   eleventyConfig.addPassthroughCopy("assets");
   
-  // Copy pre-generated HTML reports
-  eleventyConfig.addPassthroughCopy({
-    "../scripts/reports": "compare"
-  });
-  
-  // Copy pre-generated event previews
-  eleventyConfig.addPassthroughCopy({
-    "../scripts/event_previews": "events"
-  });
-  
+eleventyConfig.addPassthroughCopy("events");
+  eleventyConfig.addPassthroughCopy("compare");    
+
   // Add limit filter (like Liquid)
   eleventyConfig.addFilter("limit", function(array, limit) {
     if (!array || !Array.isArray(array)) return [];
