@@ -17,3 +17,13 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer-when-downgrade"
+
+[[redirects]]
+  from = "/events/:slug/"
+  to = "/events/:slug.html"
+  status = 200
+
+[[redirects]]
+  from = "/compare/:slug/"
+  to = "/compare/:slug.html"
+  status = 200
