@@ -6,96 +6,72 @@ description: Learn about FightingData.com - UFC fight analysis powered by data
 
 <section class="py-16">
     <div class="container mx-auto px-4 max-w-4xl">
-        <h1 class="text-4xl font-bold mb-8">About FightingData.com</h1>
+        <h1 class="text-4xl font-bold mb-4">About FightingData</h1>
+        <p class="text-gray-400 text-lg mb-12">The story behind the data.</p>
         
-        <div class="prose prose-invert prose-red max-w-none">
-            <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 mb-8">
-                <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
-                <p class="text-gray-300 leading-relaxed">
-                    FightingData.com provides comprehensive, data-driven UFC fight analysis for fans who want to make informed decisions. We believe fight analysis should be accurate, accessible, and actionable.
-                </p>
-            </div>
-            
-            <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 mb-8">
-                <h2 class="text-2xl font-bold mb-4">What We Offer</h2>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start">
-                        <span class="text-red-600 mr-2">•</span>
-                        <span><strong class="text-white">Fighter Comparisons:</strong> Head-to-head statistical analysis for any UFC matchup</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-red-600 mr-2">•</span>
-                        <span><strong class="text-white">Career Stats:</strong> Comprehensive career averages for striking, grappling, and more</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-red-600 mr-2">•</span>
-                        <span><strong class="text-white">Recent Form:</strong> Last 5 fight analysis to understand current performance</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-red-600 mr-2">•</span>
-                        <span><strong class="text-white">Event Previews:</strong> Complete fight card breakdowns for upcoming events</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 mb-8">
-                <h2 class="text-2xl font-bold mb-4">Data Source</h2>
-                <p class="text-gray-300 leading-relaxed mb-4">
-                    All fight statistics are sourced directly from <a href="http://ufcstats.com" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-500 transition">UFCStats.com</a>, the official statistics provider for the UFC.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    We verify data accuracy through automated validation and manual spot-checks. Our database is updated weekly after every UFC event.
-                </p>
-            </div>
-            
-            <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 mb-8">
-                <h2 class="text-2xl font-bold mb-4">Methodology</h2>
-                <p class="text-gray-300 leading-relaxed mb-4">
-                    Our fighter comparisons use two key metrics:
-                </p>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start">
-                        <span class="text-red-600 mr-2">1.</span>
-                        <span><strong class="text-white">Career Stats:</strong> Complete UFC fight history (since Nov 2000)</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-red-600 mr-2">2.</span>
-                        <span><strong class="text-white">Last 5 Fights:</strong> Recent form to capture current performance trends</span>
-                    </li>
-                </ul>
-                <p class="text-gray-300 leading-relaxed mt-4">
-                    Edge indicators (highlighted in green) show which fighter has the statistical advantage in each category.
-                </p>
-            </div>
-            
-            <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 mb-8">
-                <h2 class="text-2xl font-bold mb-4">Coverage</h2>
-                <div class="grid md:grid-cols-2 gap-4 text-gray-300">
-                    <div>
-                        <p class="font-semibold text-white mb-2">Historical Data:</p>
-                        <p>UFC 28 (Nov 2000) → Present</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-white mb-2">Total Fights:</p>
-                        <p>16,000+ fights analyzed</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-white mb-2">Fighters:</p>
-                        <p>2,400+ fighters tracked</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-white mb-2">Updates:</p>
-                        <p>Weekly (after every event)</p>
-                    </div>
+        <!-- Mission -->
+        <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-4">What We Do</h2>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                FightingData.com is a UFC analytics platform built for people who want to understand matchups through data, not hot takes. Every time a fight card is announced, we generate head-to-head statistical breakdowns for every matchup on the card — striking, grappling, control, finishing tendencies — so you can form your own opinions grounded in real numbers.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                We don't sell picks. We don't predict winners. We present the data clearly and let you draw your own conclusions.
+            </p>
+        </div>
+        
+        <!-- How It Works -->
+        <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-4">How It Works</h2>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                When you open a fighter comparison, you'll see two tables: career statistics and recent performance. Career stats cover every UFC fight a fighter has had since November 2000. Recent performance focuses on their most recent bouts to capture current form — because a fighter's last few outings often tell a different story than their career averages.
+            </p>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Edge indicators highlight which fighter has the statistical advantage in each category. These aren't predictions — they're a quick visual guide to where each fighter's strengths and vulnerabilities lie relative to their opponent.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                We break analysis into three areas: <strong class="text-white">striking</strong> (accuracy, volume, defense, knockdowns), <strong class="text-white">grappling</strong> (takedown accuracy vs. opponent's takedown defense, submission attempts, control time), and <strong class="text-white">finishing ability</strong> (KO rate, submission rate, and how fights typically end).
+            </p>
+        </div>
+        
+        <!-- Data Source -->
+        <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-4">Our Data</h2>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                All fight statistics are sourced from <a href="http://ufcstats.com" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-500 transition">UFCStats.com</a>, the official statistics provider for the UFC. We verify accuracy through automated validation checks and manual spot-checks against the source.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <div class="border border-gray-800 rounded-lg p-4">
+                    <p class="text-white font-semibold mb-1">Historical Coverage</p>
+                    <p class="text-gray-400 text-sm">UFC 28 (Nov 2000) through present</p>
+                </div>
+                <div class="border border-gray-800 rounded-lg p-4">
+                    <p class="text-white font-semibold mb-1">Total Fights</p>
+                    <p class="text-gray-400 text-sm">8,000+ fights analyzed</p>
+                </div>
+                <div class="border border-gray-800 rounded-lg p-4">
+                    <p class="text-white font-semibold mb-1">Fighters Tracked</p>
+                    <p class="text-gray-400 text-sm">2,400+ active and historical fighters</p>
+                </div>
+                <div class="border border-gray-800 rounded-lg p-4">
+                    <p class="text-white font-semibold mb-1">Update Frequency</p>
+                    <p class="text-gray-400 text-sm">Weekly, after every UFC event</p>
                 </div>
             </div>
-            
-            <div class="bg-gray-900 border border-gray-800 rounded-lg p-8">
-                <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
-                <p class="text-gray-300 leading-relaxed text-sm">
-                    FightingData.com provides statistical analysis for informational and entertainment purposes only. We do not provide betting advice or gambling services. Past performance does not guarantee future results. Always gamble responsibly.
-                </p>
-            </div>
+        </div>
+        
+        <!-- Disclaimer -->
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
+            <p class="text-gray-400 leading-relaxed text-sm">
+                FightingData.com provides statistical analysis for informational and entertainment purposes only. We do not provide betting advice, gambling services, or win predictions. Past performance does not guarantee future results. If you choose to gamble, please do so responsibly.
+            </p>
+        </div>
+
+        <!-- Feedback -->
+        <div class="text-center mt-12">
+            <p class="text-gray-400">Something wrong? Have an idea?</p>
+            <a href="mailto:feedback@fightingdata.com" class="text-red-600 hover:text-red-500 font-semibold transition">Send us feedback &rarr;</a>
         </div>
     </div>
 </section>

@@ -5,7 +5,7 @@ description: UFC Fight Analysis - Data-driven insights for every matchup
 ---
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-black via-gray-900 to-black py-20">
+<section class="hero-section py-20">
     <div class="container mx-auto px-4 text-center">
         <h1 class="text-5xl md:text-6xl font-bold mb-6">
             UFC Fight Analysis<br>
@@ -15,11 +15,8 @@ description: UFC Fight Analysis - Data-driven insights for every matchup
             Compare fighters. Analyze matchups. Make informed decisions with comprehensive fight statistics.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/events/" class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition">
+            <a href="/events/" class="btn btn-primary px-8 py-3 rounded-lg font-semibold text-lg">
                 Upcoming Events
-            </a>
-            <a href="/compare/" class="bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition border border-gray-700">
-                Compare Fighters
             </a>
         </div>
     </div>
@@ -28,22 +25,18 @@ description: UFC Fight Analysis - Data-driven insights for every matchup
 <!-- Stats Bar -->
 <section class="bg-gray-900 border-y border-gray-800 py-8">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="grid grid-cols-3 gap-8 text-center">
             <div>
-                <div class="text-3xl font-bold text-red-600">{% if stats.total_fighters %}{{ stats.total_fighters | replace(",", ",") }}{% else %}2,493{% endif %}</div>
+                <div class="text-3xl font-bold text-red-600 stat-number">{% if stats.total_fighters %}{{ stats.total_fighters }}{% else %}2,493{% endif %}</div>
                 <div class="text-gray-400 text-sm mt-1">Fighters Tracked</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-red-600">{% if stats.total_fights %}{{ stats.total_fights | replace(",", ",") }}{% else %}16,073{% endif %}</div>
+                <div class="text-3xl font-bold text-red-600 stat-number">{% if stats.total_fights %}{{ stats.total_fights }}{% else %}8,337{% endif %}</div>
                 <div class="text-gray-400 text-sm mt-1">Fights Analyzed</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-red-600">{% if stats.total_events %}{{ stats.total_events | replace(",", ",") }}{% else %}767{% endif %}</div>
+                <div class="text-3xl font-bold text-red-600 stat-number">{% if stats.total_events %}{{ stats.total_events }}{% else %}767{% endif %}</div>
                 <div class="text-gray-400 text-sm mt-1">Events Cataloged</div>
-            </div>
-            <div>
-                <div class="text-3xl font-bold text-red-600">{% if stats.upcoming_events %}{{ stats.upcoming_events }}{% else %}6{% endif %}</div>
-                <div class="text-gray-400 text-sm mt-1">Upcoming Events</div>
             </div>
         </div>
     </div>
@@ -57,16 +50,18 @@ description: UFC Fight Analysis - Data-driven insights for every matchup
         {% if events.length > 0 %}
             <div class="grid gap-6">
                 {% for event in events | limit(3) %}
-                <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-red-600 transition">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-2">{{ event.name }}</h3>
-                            <p class="text-gray-400">{{ event.date }} • {{ event.location }}</p>
+                <div class="event-card bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-red-600 transition">
+                    <a href="/events/{{ event.slug }}/" class="event-card-link">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">{{ event.name }}</h3>
+                                <p class="text-gray-400">{{ event.date }} &bull; {{ event.location }}</p>
+                            </div>
+                            <span class="mt-4 md:mt-0 btn btn-primary px-6 py-2 rounded text-sm font-semibold">
+                                View Card &rarr;
+                            </span>
                         </div>
-                        <a href="/events/{{ event.slug }}/" class="mt-4 md:mt-0 bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition text-sm font-semibold">
-                            View Card
-                        </a>
-                    </div>
+                    </a>
                     
                     {% if event.matchups.length > 0 %}
                     <div class="space-y-2">
@@ -79,7 +74,7 @@ description: UFC Fight Analysis - Data-driven insights for every matchup
                         
                         {% if event.matchups.length > 5 %}
                         <a href="/events/{{ event.slug }}/" class="block text-red-600 hover:text-red-500 text-sm pl-4 py-2">
-                            + {{ event.matchups.length - 5 }} more fights →
+                            + {{ event.matchups.length - 5 }} more fights &rarr;
                         </a>
                         {% endif %}
                     </div>
@@ -90,7 +85,7 @@ description: UFC Fight Analysis - Data-driven insights for every matchup
             
             <div class="text-center mt-8">
                 <a href="/events/" class="text-red-600 hover:text-red-500 font-semibold">
-                    View All Events →
+                    View All Events &rarr;
                 </a>
             </div>
         {% else %}
@@ -108,33 +103,33 @@ description: UFC Fight Analysis - Data-driven insights for every matchup
         
         <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
-                <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="feature-icon mx-auto mb-4">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-2">Comprehensive Stats</h3>
-                <p class="text-gray-400">Career and recent form analysis for every fighter in the UFC.</p>
+                <h3 class="text-xl font-bold mb-2">Head-to-Head Matchups</h3>
+                <p class="text-gray-400">Side-by-side fighter comparisons with career stats, recent form, and edge indicators for every upcoming fight.</p>
             </div>
             
             <div class="text-center">
-                <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="feature-icon mx-auto mb-4">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-2">100% Accurate</h3>
-                <p class="text-gray-400">All data verified against UFCStats.com official records.</p>
+                <h3 class="text-xl font-bold mb-2">25 Years of Data</h3>
+                <p class="text-gray-400">Every UFC fight since November 2000 — striking, grappling, control time, and finishing stats across 8,000+ fights.</p>
             </div>
             
             <div class="text-center">
-                <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="feature-icon mx-auto mb-4">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-2">Always Updated</h3>
-                <p class="text-gray-400">Fresh data after every UFC event, every week.</p>
+                <h3 class="text-xl font-bold mb-2">Updated Every Fight Week</h3>
+                <p class="text-gray-400">Fresh analysis after every event. New matchup breakdowns published as soon as fight cards are announced.</p>
             </div>
         </div>
     </div>
