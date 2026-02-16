@@ -119,7 +119,9 @@ button:focus-visible {
 .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
 .px-8 { padding-left: 2rem; padding-right: 2rem; }
 
+.mb-1 { margin-bottom: 0.25rem; }
 .mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
 .mb-4 { margin-bottom: 1rem; }
 .mb-6 { margin-bottom: 1.5rem; }
 .mb-8 { margin-bottom: 2rem; }
@@ -210,7 +212,7 @@ button:focus-visible {
 .hover\:text-red-500:hover { color: #ef4444; }
 .hover\:border-red-600:hover { border-color: #dc2626; }
 
-/* Border Left */
+/* Border */
 .border-l-4 { border-left-width: 4px; }
 .border-t { border-top-width: 1px; }
 .border-y { border-top-width: 1px; border-bottom-width: 1px; }
@@ -255,7 +257,8 @@ button:focus-visible {
     border-color: #374151;
 }
 
-/* Event Cards — fully clickable header area */
+/* ─── Event Cards ─────────────────────────────────────────────────── */
+
 .event-card {
     position: relative;
 }
@@ -274,11 +277,76 @@ button:focus-visible {
     color: #ffffff;
 }
 
-.event-card-link .text-gray-400 {
-    color: #9ca3af;
+.event-card-link .text-gray-300 {
+    color: #d1d5db;
 }
 
-/* Feature icons */
+/* ─── Matchup List (inside event cards) ───────────────────────────── */
+
+.matchup-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.matchup-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 0.75rem;
+    border-bottom: 1px solid #1f2937;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.15s ease;
+    border-radius: 0.25rem;
+}
+
+.matchup-row:last-of-type {
+    border-bottom: none;
+}
+
+.matchup-row:hover {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+.matchup-names {
+    font-size: 1.0625rem;
+    font-weight: 600;
+}
+
+.matchup-weight {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+.matchup-more {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: #dc2626;
+    text-decoration: none;
+}
+
+.matchup-more:hover {
+    color: #ef4444;
+}
+
+@media (max-width: 640px) {
+    .matchup-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.125rem;
+    }
+    
+    .matchup-weight {
+        margin-left: 0;
+    }
+}
+
+/* ─── Feature Icons ───────────────────────────────────────────────── */
+
 .feature-icon {
     width: 4rem;
     height: 4rem;
