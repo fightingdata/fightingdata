@@ -1,151 +1,237 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sean Strickland vs Anthony Hernandez - Fight Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Strickland vs Anthony Hernandez - Fight Analysis | FightingData.com</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
+            padding: 2rem 1rem;
         }
         h1 {
             text-align: center;
-            color: #333;
-            border-bottom: 3px solid #d32f2f;
-            padding-bottom: 10px;
+            color: #fff;
+            border-bottom: 3px solid #dc2626;
+            padding-bottom: 15px;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
         }
         h2 {
-            color: #d32f2f;
-            margin-top: 30px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+            color: #dc2626;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #1f2937;
+            padding-bottom: 8px;
+            font-size: 1.5rem;
         }
         .fighter-header {
             display: flex;
             justify-content: space-around;
-            margin: 20px 0;
-            background: white;
-            padding: 20px;
+            align-items: center;
+            margin: 1.5rem 0;
+            background: #111827;
+            padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #1f2937;
         }
         .fighter-info {
             text-align: center;
         }
         .fighter-info h3 {
             margin: 0;
-            color: #d32f2f;
-            font-size: 24px;
+            color: #fff;
+            font-size: 1.5rem;
         }
-        .record {
-            font-size: 20px;
+        .record-pro {
+            font-size: 1.125rem;
             font-weight: bold;
-            color: #666;
-            margin: 10px 0;
+            color: #fff;
+            margin: 2px 0 2px;
+        }
+        .record-ufc {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            margin: 0 0 4px;
+        }
+        .record-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .vs-divider {
+            font-size: 2.5rem;
+            color: #dc2626;
+            font-weight: 700;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
-            margin: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #111827;
+            margin: 1rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #1f2937;
         }
         th, td {
-            padding: 12px;
+            padding: 10px 12px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #1f2937;
         }
         th {
-            background: #333;
-            color: white;
-            font-weight: bold;
+            background: #1f2937;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
         tr:hover {
-            background: #f5f5f5;
+            background: #1a2332;
         }
         .stat-name {
-            font-weight: bold;
+            font-weight: 600;
             width: 40%;
+            color: #d1d5db;
+            font-size: 1.05rem;
         }
-        .stat-a {
+        .stat-a, .stat-b {
             width: 20%;
             text-align: center;
-        }
-        .stat-b {
-            width: 20%;
-            text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff;
+            font-size: 1.05rem;
         }
         .edge {
             width: 20%;
             text-align: center;
             font-weight: bold;
+            font-size: 1.1rem;
         }
         .edge-a {
-            color: #2e7d32;
+            color: #16a34a;
         }
         .edge-b {
-            color: #c62828;
+            color: #dc2626;
         }
         .edge-even {
-            color: #666;
+            color: #6b7280;
         }
         .narrative {
-            background: white;
-            padding: 20px;
+            background: #111827;
+            padding: 1.5rem;
             border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            line-height: 1.6;
+            margin: 1rem 0;
+            border: 1px solid #1f2937;
+            line-height: 1.7;
+            color: #d1d5db;
+        }
+        .narrative p {
+            margin-bottom: 0.75rem;
+        }
+        .narrative p:last-child {
+            margin-bottom: 0;
+        }
+        .narrative strong {
+            color: #fff;
         }
         .section-header {
-            background: #333;
-            color: white;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 16px;
+            background: #1f2937;
+            color: #9ca3af;
+            padding: 8px 12px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         .sample-warning {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            color: #856404;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: #f59e0b;
             padding: 10px 15px;
             border-radius: 6px;
             margin: 10px 0;
             font-size: 14px;
         }
         .sample-warning strong {
-            color: #856404;
+            color: #f59e0b;
         }
         .timestamp {
             text-align: center;
-            color: #999;
-            font-size: 12px;
-            margin-top: 20px;
+            color: #6b7280;
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #1f2937;
+        }
+        .site-footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            border-top: 1px solid #1f2937;
+        }
+        .site-footer a {
+            color: #dc2626;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.5rem; }
+            .fighter-info h3 { font-size: 1.125rem; }
+            .vs-divider { font-size: 1.75rem; }
+            .fighter-header { flex-direction: column; gap: 1rem; }
+            .stat-name { width: 35%; font-size: 0.8rem; }
+            .stat-a, .stat-b { width: 22%; font-size: 0.8rem; }
+            .edge { width: 21%; font-size: 0.75rem; }
         }
     </style>
 </head>
 <body>
-    <h1>🥊 Sean Strickland vs Anthony Hernandez</h1>
+    <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div style="max-width:1200px;margin:0 auto;padding:0.75rem 1rem 0;">
+        <a href="/events/ufc-fight-night-strickland-vs-hernandez/" style="color:#9ca3af;text-decoration:none;font-size:0.875rem;">&#8592; Back to UFC Fight Night: Strickland vs. Hernandez</a>
+    </div>
+
+    <div class="container">
+    <h1>Sean Strickland vs Anthony Hernandez</h1>
     
     <div class="fighter-header">
         <div class="fighter-info">
             <h3>Sean Strickland</h3>
-            <div class="record">16-7-0</div>
-            <div>24 UFC Fights</div>
+            <div class="record-label">Pro Record</div>
+            <div class="record-pro">29-7-0</div>
+            <div class="record-label">UFC Record</div>
+            <div class="record-ufc">16-7-0 (23 fights)</div>
         </div>
-        <div style="font-size: 48px; color: #d32f2f;">VS</div>
+        <div class="vs-divider">VS</div>
         <div class="fighter-info">
             <h3>Anthony Hernandez</h3>
-            <div class="record">9-2-0</div>
-            <div>12 UFC Fights</div>
+            <div class="record-label">Pro Record</div>
+            <div class="record-pro">15-2-0 (1 NC)</div>
+            <div class="record-label">UFC Record</div>
+            <div class="record-ufc">9-2-0 (11 fights)</div>
         </div>
     </div>
 
-    <h2>📊 Career Statistics</h2>
+    <h2>Career Statistics</h2>
     <table>
         <thead>
             <tr>
@@ -164,35 +250,35 @@
                 <td class="stat-name">Sig. Strike Accuracy</td>
                 <td class="stat-a">42.5%</td>
                 <td class="stat-b">62.8%</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Sig. Strikes Landed/min</td>
-                <td class="stat-a">6.1</td>
-                <td class="stat-b">3.1</td>
-                <td class="edge edge-even">→</td>
+                <td class="stat-a">5.9</td>
+                <td class="stat-b">4.5</td>
+                <td class="edge edge-even">-</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Sig. Strikes Absorbed/min</td>
-                <td class="stat-a">4.7</td>
-                <td class="stat-b">1.8</td>
-                <td class="edge edge-even">→</td>
+                <td class="stat-a">4.6</td>
+                <td class="stat-b">2.5</td>
+                <td class="edge edge-even">-</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Strike Differential</td>
                 <td class="stat-a">1.4/min</td>
-                <td class="stat-b">1.4/min</td>
-                <td class="edge edge-even">→</td>
+                <td class="stat-b">2.0/min</td>
+                <td class="edge edge-even">-</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Knockdowns/15min</td>
                 <td class="stat-a">0.2</td>
                 <td class="stat-b">0.0</td>
-                <td class="edge edge-even">→</td>
+                <td class="edge edge-even">-</td>
             </tr>
 
             <tr>
@@ -203,35 +289,35 @@
                 <td class="stat-name">Takedown Accuracy</td>
                 <td class="stat-a">64.3%</td>
                 <td class="stat-b">48.6%</td>
-                <td class="edge edge-a">✅ A</td>
+                <td class="edge edge-a">A</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Takedown Defense</td>
                 <td class="stat-a">76.2%</td>
                 <td class="stat-b">68.2%</td>
-                <td class="edge edge-a">✅ A</td>
+                <td class="edge edge-a">A</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Takedowns Landed/15min</td>
-                <td class="stat-a">0.8</td>
-                <td class="stat-b">4.5</td>
-                <td class="edge edge-even">→</td>
+                <td class="stat-a">0.7</td>
+                <td class="stat-b">6.5</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Submission Attempts/15min</td>
                 <td class="stat-a">0.2</td>
-                <td class="stat-b">1.2</td>
-                <td class="edge edge-even">→</td>
+                <td class="stat-b">1.8</td>
+                <td class="edge edge-even">-</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Control Time/15min</td>
-                <td class="stat-a">76.4 sec</td>
-                <td class="stat-b">356.1 sec</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="stat-a">1:14</td>
+                <td class="stat-b">8:33</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
             <tr>
@@ -242,34 +328,34 @@
                 <td class="stat-name">KO/TKO % of Wins</td>
                 <td class="stat-a">25.0%</td>
                 <td class="stat-b">22.2%</td>
-                <td class="edge edge-even">→</td>
+                <td class="edge edge-even">-</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Submission % of Wins</td>
                 <td class="stat-a">6.2%</td>
                 <td class="stat-b">55.6%</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Decision % of Wins</td>
                 <td class="stat-a">68.8%</td>
                 <td class="stat-b">22.2%</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Avg Fight Time</td>
-                <td class="stat-a">15:00</td>
-                <td class="stat-b">15:00</td>
-                <td class="edge edge-even">→</td>
+                <td class="stat-a">16:03</td>
+                <td class="stat-b">11:20</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
         </tbody>
     </table>
 
-    <h2>🔥 Last 5 Fights</h2>
+    <h2>Last 5 Fights</h2>
     <table>
         <thead>
             <tr>
@@ -283,56 +369,61 @@
 
             <tr>
                 <td class="stat-name">Sig. Strike Accuracy</td>
-                <td class="stat-a">46.5%</td>
-                <td class="stat-b">63.6%</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="stat-a">46.1%</td>
+                <td class="stat-b">64.8%</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Sig. Strikes Landed/min</td>
-                <td class="stat-a">8.3</td>
-                <td class="stat-b">4.1</td>
-                <td class="edge edge-even">→</td>
+                <td class="stat-a">6.4</td>
+                <td class="stat-b">5.0</td>
+                <td class="edge edge-even">-</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Sig. Strikes Absorbed/min</td>
-                <td class="stat-a">7.1</td>
-                <td class="stat-b">1.5</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="stat-a">5.3</td>
+                <td class="stat-b">1.9</td>
+                <td class="edge edge-even">-</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Takedown Accuracy</td>
                 <td class="stat-a">0.0%</td>
-                <td class="stat-b">41.9%</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="stat-b">41.6%</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Takedown Defense</td>
-                <td class="stat-a">46.2%</td>
-                <td class="stat-b">100.0%</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="stat-a">46.7%</td>
+                <td class="stat-b">75.0%</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
             <tr>
                 <td class="stat-name">Control Time/Fight</td>
-                <td class="stat-a">3.0 sec</td>
-                <td class="stat-b">455.4 sec</td>
-                <td class="edge edge-b">✅ B</td>
+                <td class="stat-a">0:05</td>
+                <td class="stat-b">9:01</td>
+                <td class="edge edge-b">B</td>
             </tr>
 
         </tbody>
     </table>
 
-    <h2>📝 Analysis Summary</h2>
+    <h2>Analysis Summary</h2>
     <div class="narrative">
 <p><strong>Striking:</strong> Both fighters show relatively even striking capabilities. This fight could come down to who implements their game plan better.</p><p><strong>Grappling:</strong> Sean Strickland has superior takedown offense (64.3% accuracy vs 48.6%). </p><p><strong>Control:</strong> Anthony Hernandez typically controls significantly more time in fights, which could be crucial in a potential decision.</p><p><strong>Finish Threat:</strong> Anthony Hernandez finishes 78% of wins (22% KO, 56% Sub). High finish probability.</p>
     </div>
     
     <div class="timestamp">
-        Report generated: 2026-02-15 11:58:47
+        Report generated: 2026-02-16 22:50:00 | Data source: UFCStats.com
+    </div>
+    </div>
+
+    <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
     </div>
 </body>
 </html>

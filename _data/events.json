@@ -77,6 +77,30 @@
         "fighter_b": "Carli Judice",
         "weight_class": "Women's Flyweight",
         "slug": "juliana-miller-vs-carli-judice"
+      },
+      {
+        "fighter_a": "Uros Medic",
+        "fighter_b": "Geoff Neal",
+        "weight_class": "Welterweight",
+        "slug": "uros-medic-vs-geoff-neal"
+      },
+      {
+        "fighter_a": "Jacobe Smith",
+        "fighter_b": "Josiah Harrell",
+        "weight_class": "Welterweight",
+        "slug": "jacobe-smith-vs-josiah-harrell"
+      },
+      {
+        "fighter_a": "Punahele Soriano",
+        "fighter_b": "Ramiz Brahimaj",
+        "weight_class": "Welterweight",
+        "slug": "punahele-soriano-vs-ramiz-brahimaj"
+      },
+      {
+        "fighter_a": "Jean-Paul Lebosnoyani",
+        "fighter_b": "Phil Rowe",
+        "weight_class": "Welterweight",
+        "slug": "jean-paul-lebosnoyani-vs-phil-rowe"
       }
     ]
   },
@@ -290,6 +314,24 @@
         "fighter_b": "Sam Hughes",
         "weight_class": "Women's Strawweight",
         "slug": "piera-rodriguez-vs-sam-hughes"
+      },
+      {
+        "fighter_a": "Charles Johnson",
+        "fighter_b": "Bruno Silva",
+        "weight_class": "Flyweight",
+        "slug": "charles-johnson-vs-bruno-silva"
+      },
+      {
+        "fighter_a": "SuYoung You",
+        "fighter_b": "Elijah Smith",
+        "weight_class": "Bantamweight",
+        "slug": "suyoung-you-vs-elijah-smith"
+      },
+      {
+        "fighter_a": "Bolaji Oki",
+        "fighter_b": "Manoel Sousa",
+        "weight_class": "Lightweight",
+        "slug": "bolaji-oki-vs-manoel-sousa"
       }
     ]
   },
@@ -458,6 +500,12 @@
         "fighter_b": "Stephanie Luciano",
         "weight_class": "Women's Strawweight",
         "slug": "carol-foro-vs-stephanie-luciano"
+      },
+      {
+        "fighter_a": "Terrance McKinney",
+        "fighter_b": "Kyle Nelson",
+        "weight_class": "Lightweight",
+        "slug": "terrance-mckinney-vs-kyle-nelson"
       }
     ]
   }

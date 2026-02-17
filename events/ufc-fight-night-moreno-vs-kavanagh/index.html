@@ -6,157 +6,167 @@
     <title>UFC Fight Night: Moreno vs. Kavanagh - FightingData.com</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-        .header { margin-bottom: 3rem; border-bottom: 2px solid #DC2626; padding-bottom: 2rem; }
-        .event-status { display: inline-block; background: #DC2626; color: #fff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: 700; margin-bottom: 1rem; }
-        .event-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .event-meta { color: #9CA3AF; font-size: 1.125rem; }
+        .event-header { margin-bottom: 2rem; border-bottom: 2px solid #dc2626; padding-bottom: 1.5rem; }
+        .event-status { display: inline-block; background: #dc2626; color: #fff; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+        .event-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .event-meta { color: #9ca3af; font-size: 1rem; }
         .event-meta strong { color: #fff; }
-        .matchups { display: grid; gap: 1.5rem; }
-        .matchup-card { background: #1F2937; border: 1px solid #374151; border-radius: 8px; padding: 1.5rem; transition: all 0.2s; }
-        .matchup-card:hover { border-color: #DC2626; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3); }
-        .weight-class { color: #9CA3AF; font-size: 0.875rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .fighters { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-        .fighter-name { font-size: 1.5rem; font-weight: 600; }
-        .vs { color: #DC2626; font-weight: 700; font-size: 1.25rem; }
-        .compare-link { display: inline-block; background: #DC2626; color: #fff; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
-        .compare-link:hover { background: #B91C1C; }
-        .no-matchups { background: #1F2937; border: 1px solid #374151; border-radius: 8px; padding: 2rem; text-align: center; color: #9CA3AF; }
-        .footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #374151; color: #9CA3AF; text-align: center; font-size: 0.875rem; }
-        .footer a { color: #DC2626; text-decoration: none; }
-        @media (max-width: 768px) { .event-title { font-size: 1.75rem; } .fighter-name { font-size: 1.25rem; } .fighters { flex-direction: column; text-align: center; } }
+        .matchups { display: grid; gap: 1rem; }
+        .matchup-card { display: block; background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1.25rem 1.5rem; transition: all 0.2s; text-decoration: none; color: #fff; }
+        .matchup-card:hover { border-color: #dc2626; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3); }
+        .weight-class { color: #9ca3af; font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .fighters { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .fighter-name { font-size: 1.35rem; font-weight: 600; }
+        .fighter-record { font-size: 0.9rem; font-weight: 400; color: #9ca3af; }
+        .vs { color: #dc2626; font-weight: 700; font-size: 1.1rem; }
+        .compare-cta { color: #dc2626; font-weight: 600; font-size: 0.875rem; }
+        .no-matchups { background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 2rem; text-align: center; color: #9ca3af; }
+        .site-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1f2937; color: #6b7280; text-align: center; font-size: 0.875rem; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        @media (max-width: 768px) { .event-title { font-size: 1.5rem; } .fighter-name { font-size: 1.125rem; } .fighters { flex-direction: column; text-align: center; gap: 0.25rem; } }
     </style>
 </head>
 <body>
+    <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <div class="header">
-            <div class="event-status">IN 13 DAYS</div>
+        <div class="event-header">
+            <div class="event-status">IN 12 DAYS</div>
             <h1 class="event-title">UFC Fight Night: Moreno vs. Kavanagh</h1>
             <div class="event-meta"><strong>Saturday, February 28, 2026</strong> &bull; Mexico City, Distrito Federal, Mexico</div>
         </div>
         <div class="matchups">
-            <div class="matchup-card">
+            <a href="/compare/brandon-moreno-vs-loneer-kavanagh/" class="matchup-card">
                 <div class="weight-class">Flyweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Brandon Moreno</div>
+                    <div class="fighter-name">Brandon Moreno <span class="fighter-record">(23-9-2)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Lone'er Kavanagh</div>
+                    <div class="fighter-name">Lone'er Kavanagh <span class="fighter-record">(9-1-0)</span></div>
                 </div>
-                <a href="/compare/brandon-moreno-vs-loneer-kavanagh/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/marlon-vera-vs-david-martinez/" class="matchup-card">
                 <div class="weight-class">Bantamweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Marlon Vera</div>
+                    <div class="fighter-name">Marlon Vera <span class="fighter-record">(23-11-1)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">David Martinez</div>
+                    <div class="fighter-name">David Martinez <span class="fighter-record">(13-1-0)</span></div>
                 </div>
-                <a href="/compare/marlon-vera-vs-david-martinez/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/daniel-zellhuber-vs-king-green/" class="matchup-card">
                 <div class="weight-class">Lightweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Daniel Zellhuber</div>
+                    <div class="fighter-name">Daniel Zellhuber <span class="fighter-record">(15-3-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">King Green</div>
+                    <div class="fighter-name">King Green <span class="fighter-record">(33-17-1 (1 NC))</span></div>
                 </div>
-                <a href="/compare/daniel-zellhuber-vs-king-green/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/edgar-chairez-vs-felipe-bunes/" class="matchup-card">
                 <div class="weight-class">Flyweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Edgar Chairez</div>
+                    <div class="fighter-name">Edgar Chairez <span class="fighter-record">(12-6-0 (1 NC))</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Felipe Bunes</div>
+                    <div class="fighter-name">Felipe Bunes <span class="fighter-record">(14-8-0)</span></div>
                 </div>
-                <a href="/compare/edgar-chairez-vs-felipe-bunes/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/imanol-rodriguez-vs-kevin-borjas/" class="matchup-card">
                 <div class="weight-class">Flyweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Imanol Rodriguez</div>
+                    <div class="fighter-name">Imanol Rodriguez <span class="fighter-record">(6-0-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Kevin Borjas</div>
+                    <div class="fighter-name">Kevin Borjas <span class="fighter-record">(10-4-0)</span></div>
                 </div>
-                <a href="/compare/imanol-rodriguez-vs-kevin-borjas/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/ryan-gandra-vs-jose-daniel-medina/" class="matchup-card">
                 <div class="weight-class">Middleweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Ryan Gandra</div>
+                    <div class="fighter-name">Ryan Gandra <span class="fighter-record">(8-1-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Jose Daniel Medina</div>
+                    <div class="fighter-name">Jose Daniel Medina <span class="fighter-record">(11-6-0)</span></div>
                 </div>
-                <a href="/compare/ryan-gandra-vs-jose-daniel-medina/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/ailin-perez-vs-macy-chiasson/" class="matchup-card">
                 <div class="weight-class">Women's Bantamweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Ailin Perez</div>
+                    <div class="fighter-name">Ailin Perez <span class="fighter-record">(12-2-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Macy Chiasson</div>
+                    <div class="fighter-name">Macy Chiasson <span class="fighter-record">(11-5-0)</span></div>
                 </div>
-                <a href="/compare/ailin-perez-vs-macy-chiasson/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/cristian-quinonez-vs-kris-moutinho/" class="matchup-card">
                 <div class="weight-class">Bantamweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Cristian Quinonez</div>
+                    <div class="fighter-name">Cristian Quinonez <span class="fighter-record">(18-5-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Kris Moutinho</div>
+                    <div class="fighter-name">Kris Moutinho <span class="fighter-record">(14-7-0)</span></div>
                 </div>
-                <a href="/compare/cristian-quinonez-vs-kris-moutinho/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/douglas-silva-de-andrade-vs-javier-reyes/" class="matchup-card">
                 <div class="weight-class">Featherweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Douglas Silva de Andrade</div>
+                    <div class="fighter-name">Douglas Silva de Andrade <span class="fighter-record">(29-6-0 (1 NC))</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Javier Reyes</div>
+                    <div class="fighter-name">Javier Reyes <span class="fighter-record">(22-5-0)</span></div>
                 </div>
-                <a href="/compare/douglas-silva-de-andrade-vs-javier-reyes/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/sofia-montenegro-vs-ernesta-kareckaite/" class="matchup-card">
                 <div class="weight-class">Women's Flyweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Sofia Montenegro</div>
+                    <div class="fighter-name">Sofia Montenegro <span class="fighter-record">(6-2-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Ernesta Kareckaite</div>
+                    <div class="fighter-name">Ernesta Kareckaite <span class="fighter-record">(6-1-1)</span></div>
                 </div>
-                <a href="/compare/sofia-montenegro-vs-ernesta-kareckaite/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/erik-silva-vs-francis-marshall/" class="matchup-card">
                 <div class="weight-class">Featherweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Erik Silva</div>
+                    <div class="fighter-name">Erik Silva <span class="fighter-record">(9-3-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Francis Marshall</div>
+                    <div class="fighter-name">Francis Marshall <span class="fighter-record">(8-3-0)</span></div>
                 </div>
-                <a href="/compare/erik-silva-vs-francis-marshall/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/damian-pinas-vs-wes-schultz/" class="matchup-card">
                 <div class="weight-class">Middleweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Damian Pinas</div>
+                    <div class="fighter-name">Damian Pinas <span class="fighter-record">(8-1-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Wes Schultz</div>
+                    <div class="fighter-name">Wes Schultz <span class="fighter-record">(8-2-0)</span></div>
                 </div>
-                <a href="/compare/damian-pinas-vs-wes-schultz/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
-            <div class="matchup-card">
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/santiago-luna-vs-angel-pacheco/" class="matchup-card">
                 <div class="weight-class">Bantamweight</div>
                 <div class="fighters">
-                    <div class="fighter-name">Santiago Luna</div>
+                    <div class="fighter-name">Santiago Luna <span class="fighter-record">(7-0-0)</span></div>
                     <div class="vs">vs</div>
-                    <div class="fighter-name">Angel Pacheco</div>
+                    <div class="fighter-name">Angel Pacheco <span class="fighter-record">(7-3-0)</span></div>
                 </div>
-                <a href="/compare/santiago-luna-vs-angel-pacheco/" class="compare-link">View Fighter Comparison &rarr;</a>
-            </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
         </div>
-        <div class="footer">
-            <p>Data sourced from <a href="http://ufcstats.com/event-details/0cfbbfa0ba6d9855" target="_blank">UFCStats.com</a></p>
-            <p>&copy; 2026 FightingData.com</p>
+        <div class="site-footer">
+            <p>&copy; 2026 <a href="/">FightingData.com</a></p>
         </div>
     </div>
 </body>
