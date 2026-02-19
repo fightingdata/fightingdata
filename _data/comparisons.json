@@ -30,16 +30,6 @@
     "weight_class": "Heavyweight"
   },
   {
-    "fighter_a": "Jacobe Smith",
-    "fighter_b": "Seokhyeon Ko",
-    "slug": "jacobe-smith-vs-seokhyeon-ko",
-    "url": "/compare/jacobe-smith-vs-seokhyeon-ko/",
-    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
-    "event_date": "2026-02-21",
-    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
-    "weight_class": "Welterweight"
-  },
-  {
     "fighter_a": "Zach Reese",
     "fighter_b": "Michel Pereira",
     "slug": "zach-reese-vs-michel-pereira",
@@ -88,16 +78,6 @@
     "event_date": "2026-02-21",
     "event_slug": "ufc-fight-night-strickland-vs-hernandez",
     "weight_class": "Women's Bantamweight"
-  },
-  {
-    "fighter_a": "Austin Vanderford",
-    "fighter_b": "Jean-Paul Lebosnoyani",
-    "slug": "austin-vanderford-vs-jean-paul-lebosnoyani",
-    "url": "/compare/austin-vanderford-vs-jean-paul-lebosnoyani/",
-    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
-    "event_date": "2026-02-21",
-    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
-    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Jordan Leavitt",
