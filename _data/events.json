@@ -13,6 +13,12 @@
         "slug": "sean-strickland-vs-anthony-hernandez"
       },
       {
+        "fighter_a": "Uros Medic",
+        "fighter_b": "Geoff Neal",
+        "weight_class": "Welterweight",
+        "slug": "uros-medic-vs-geoff-neal"
+      },
+      {
         "fighter_a": "Dan Ige",
         "fighter_b": "Melquizael Costa",
         "weight_class": "Featherweight",
@@ -23,6 +29,12 @@
         "fighter_b": "Ante Delija",
         "weight_class": "Heavyweight",
         "slug": "serghei-spivac-vs-ante-delija"
+      },
+      {
+        "fighter_a": "Jacobe Smith",
+        "fighter_b": "Josiah Harrell",
+        "weight_class": "Welterweight",
+        "slug": "jacobe-smith-vs-josiah-harrell"
       },
       {
         "fighter_a": "Zach Reese",
@@ -55,30 +67,6 @@
         "slug": "nora-cornolle-vs-joselyne-edwards"
       },
       {
-        "fighter_a": "Jordan Leavitt",
-        "fighter_b": "Yadier del Valle",
-        "weight_class": "Featherweight",
-        "slug": "jordan-leavitt-vs-yadier-del-valle"
-      },
-      {
-        "fighter_a": "Juliana Miller",
-        "fighter_b": "Carli Judice",
-        "weight_class": "Women's Flyweight",
-        "slug": "juliana-miller-vs-carli-judice"
-      },
-      {
-        "fighter_a": "Uros Medic",
-        "fighter_b": "Geoff Neal",
-        "weight_class": "Welterweight",
-        "slug": "uros-medic-vs-geoff-neal"
-      },
-      {
-        "fighter_a": "Jacobe Smith",
-        "fighter_b": "Josiah Harrell",
-        "weight_class": "Welterweight",
-        "slug": "jacobe-smith-vs-josiah-harrell"
-      },
-      {
         "fighter_a": "Punahele Soriano",
         "fighter_b": "Ramiz Brahimaj",
         "weight_class": "Welterweight",
@@ -89,6 +77,18 @@
         "fighter_b": "Phil Rowe",
         "weight_class": "Welterweight",
         "slug": "jean-paul-lebosnoyani-vs-phil-rowe"
+      },
+      {
+        "fighter_a": "Jordan Leavitt",
+        "fighter_b": "Yadier del Valle",
+        "weight_class": "Featherweight",
+        "slug": "jordan-leavitt-vs-yadier-del-valle"
+      },
+      {
+        "fighter_a": "Juliana Miller",
+        "fighter_b": "Carli Judice",
+        "weight_class": "Women's Flyweight",
+        "slug": "juliana-miller-vs-carli-judice"
       }
     ]
   },
@@ -193,40 +193,10 @@
         "slug": "max-holloway-vs-charles-oliveira"
       },
       {
-        "fighter_a": "Brian Ortega",
-        "fighter_b": "Renato Moicano",
-        "weight_class": "Lightweight",
-        "slug": "brian-ortega-vs-renato-moicano"
-      },
-      {
         "fighter_a": "Caio Borralho",
         "fighter_b": "Reinier de Ridder",
         "weight_class": "Middleweight",
         "slug": "caio-borralho-vs-reinier-de-ridder"
-      },
-      {
-        "fighter_a": "Cody Garbrandt",
-        "fighter_b": "Xiao Long",
-        "weight_class": "Bantamweight",
-        "slug": "cody-garbrandt-vs-xiao-long"
-      },
-      {
-        "fighter_a": "Sumudaerji",
-        "fighter_b": "Jesus Aguilar",
-        "weight_class": "Flyweight",
-        "slug": "sumudaerji-vs-jesus-aguilar"
-      },
-      {
-        "fighter_a": "Luke Fernandez",
-        "fighter_b": "Rodolfo Bellato",
-        "weight_class": "Light Heavyweight",
-        "slug": "luke-fernandez-vs-rodolfo-bellato"
-      },
-      {
-        "fighter_a": "Gregory Rodrigues",
-        "fighter_b": "Brunno Ferreira",
-        "weight_class": "Middleweight",
-        "slug": "gregory-rodrigues-vs-brunno-ferreira"
       },
       {
         "fighter_a": "Rob Font",
@@ -235,10 +205,16 @@
         "slug": "rob-font-vs-raul-rosas-jr"
       },
       {
-        "fighter_a": "Cody Durden",
-        "fighter_b": "Nyamjargal Tumendemberel",
-        "weight_class": "Flyweight",
-        "slug": "cody-durden-vs-nyamjargal-tumendemberel"
+        "fighter_a": "Gregory Rodrigues",
+        "fighter_b": "Brunno Ferreira",
+        "weight_class": "Middleweight",
+        "slug": "gregory-rodrigues-vs-brunno-ferreira"
+      },
+      {
+        "fighter_a": "Cody Garbrandt",
+        "fighter_b": "Xiao Long",
+        "weight_class": "Bantamweight",
+        "slug": "cody-garbrandt-vs-xiao-long"
       },
       {
         "fighter_a": "Donte Johnson",
@@ -247,10 +223,34 @@
         "slug": "donte-johnson-vs-dusko-todorovic"
       },
       {
+        "fighter_a": "Cody Durden",
+        "fighter_b": "Nyamjargal Tumendemberel",
+        "weight_class": "Flyweight",
+        "slug": "cody-durden-vs-nyamjargal-tumendemberel"
+      },
+      {
+        "fighter_a": "Sumudaerji",
+        "fighter_b": "Jesus Aguilar",
+        "weight_class": "Flyweight",
+        "slug": "sumudaerji-vs-jesus-aguilar"
+      },
+      {
         "fighter_a": "JooSang Yoo",
         "fighter_b": "Gaston Bolanos",
         "weight_class": "Featherweight",
         "slug": "joosang-yoo-vs-gaston-bolanos"
+      },
+      {
+        "fighter_a": "Luke Fernandez",
+        "fighter_b": "Rodolfo Bellato",
+        "weight_class": "Light Heavyweight",
+        "slug": "luke-fernandez-vs-rodolfo-bellato"
+      },
+      {
+        "fighter_a": "Brian Ortega",
+        "fighter_b": "Renato Moicano",
+        "weight_class": "Lightweight",
+        "slug": "brian-ortega-vs-renato-moicano"
       }
     ]
   },
@@ -320,6 +320,12 @@
         "fighter_b": "Manoel Sousa",
         "weight_class": "Lightweight",
         "slug": "bolaji-oki-vs-manoel-sousa"
+      },
+      {
+        "fighter_a": "Steven Asplund",
+        "fighter_b": "Vitor Petrino",
+        "weight_class": "Heavyweight",
+        "slug": "steven-asplund-vs-vitor-petrino"
       }
     ]
   },

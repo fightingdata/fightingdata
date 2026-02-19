@@ -10,6 +10,16 @@
     "weight_class": "Middleweight"
   },
   {
+    "fighter_a": "Uros Medic",
+    "fighter_b": "Geoff Neal",
+    "slug": "uros-medic-vs-geoff-neal",
+    "url": "/compare/uros-medic-vs-geoff-neal/",
+    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
+    "event_date": "2026-02-21",
+    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
+    "weight_class": "Welterweight"
+  },
+  {
     "fighter_a": "Dan Ige",
     "fighter_b": "Melquizael Costa",
     "slug": "dan-ige-vs-melquizael-costa",
@@ -28,6 +38,16 @@
     "event_date": "2026-02-21",
     "event_slug": "ufc-fight-night-strickland-vs-hernandez",
     "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Jacobe Smith",
+    "fighter_b": "Josiah Harrell",
+    "slug": "jacobe-smith-vs-josiah-harrell",
+    "url": "/compare/jacobe-smith-vs-josiah-harrell/",
+    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
+    "event_date": "2026-02-21",
+    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
+    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Zach Reese",
@@ -80,46 +100,6 @@
     "weight_class": "Women's Bantamweight"
   },
   {
-    "fighter_a": "Jordan Leavitt",
-    "fighter_b": "Yadier del Valle",
-    "slug": "jordan-leavitt-vs-yadier-del-valle",
-    "url": "/compare/jordan-leavitt-vs-yadier-del-valle/",
-    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
-    "event_date": "2026-02-21",
-    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Juliana Miller",
-    "fighter_b": "Carli Judice",
-    "slug": "juliana-miller-vs-carli-judice",
-    "url": "/compare/juliana-miller-vs-carli-judice/",
-    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
-    "event_date": "2026-02-21",
-    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
-    "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Uros Medic",
-    "fighter_b": "Geoff Neal",
-    "slug": "uros-medic-vs-geoff-neal",
-    "url": "/compare/uros-medic-vs-geoff-neal/",
-    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
-    "event_date": "2026-02-21",
-    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Jacobe Smith",
-    "fighter_b": "Josiah Harrell",
-    "slug": "jacobe-smith-vs-josiah-harrell",
-    "url": "/compare/jacobe-smith-vs-josiah-harrell/",
-    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
-    "event_date": "2026-02-21",
-    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
-    "weight_class": "Welterweight"
-  },
-  {
     "fighter_a": "Punahele Soriano",
     "fighter_b": "Ramiz Brahimaj",
     "slug": "punahele-soriano-vs-ramiz-brahimaj",
@@ -138,6 +118,26 @@
     "event_date": "2026-02-21",
     "event_slug": "ufc-fight-night-strickland-vs-hernandez",
     "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Jordan Leavitt",
+    "fighter_b": "Yadier del Valle",
+    "slug": "jordan-leavitt-vs-yadier-del-valle",
+    "url": "/compare/jordan-leavitt-vs-yadier-del-valle/",
+    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
+    "event_date": "2026-02-21",
+    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Juliana Miller",
+    "fighter_b": "Carli Judice",
+    "slug": "juliana-miller-vs-carli-judice",
+    "url": "/compare/juliana-miller-vs-carli-judice/",
+    "event_name": "UFC Fight Night: Strickland vs. Hernandez",
+    "event_date": "2026-02-21",
+    "event_slug": "ufc-fight-night-strickland-vs-hernandez",
+    "weight_class": "Women's Flyweight"
   },
   {
     "fighter_a": "Brandon Moreno",
@@ -280,60 +280,10 @@
     "weight_class": "Lightweight"
   },
   {
-    "fighter_a": "Brian Ortega",
-    "fighter_b": "Renato Moicano",
-    "slug": "brian-ortega-vs-renato-moicano",
-    "url": "/compare/brian-ortega-vs-renato-moicano/",
-    "event_name": "UFC 326: Holloway vs. Oliveira 2",
-    "event_date": "2026-03-07",
-    "event_slug": "ufc-326-holloway-vs-oliveira-2",
-    "weight_class": "Lightweight"
-  },
-  {
     "fighter_a": "Caio Borralho",
     "fighter_b": "Reinier de Ridder",
     "slug": "caio-borralho-vs-reinier-de-ridder",
     "url": "/compare/caio-borralho-vs-reinier-de-ridder/",
-    "event_name": "UFC 326: Holloway vs. Oliveira 2",
-    "event_date": "2026-03-07",
-    "event_slug": "ufc-326-holloway-vs-oliveira-2",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Cody Garbrandt",
-    "fighter_b": "Xiao Long",
-    "slug": "cody-garbrandt-vs-xiao-long",
-    "url": "/compare/cody-garbrandt-vs-xiao-long/",
-    "event_name": "UFC 326: Holloway vs. Oliveira 2",
-    "event_date": "2026-03-07",
-    "event_slug": "ufc-326-holloway-vs-oliveira-2",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Sumudaerji",
-    "fighter_b": "Jesus Aguilar",
-    "slug": "sumudaerji-vs-jesus-aguilar",
-    "url": "/compare/sumudaerji-vs-jesus-aguilar/",
-    "event_name": "UFC 326: Holloway vs. Oliveira 2",
-    "event_date": "2026-03-07",
-    "event_slug": "ufc-326-holloway-vs-oliveira-2",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Luke Fernandez",
-    "fighter_b": "Rodolfo Bellato",
-    "slug": "luke-fernandez-vs-rodolfo-bellato",
-    "url": "/compare/luke-fernandez-vs-rodolfo-bellato/",
-    "event_name": "UFC 326: Holloway vs. Oliveira 2",
-    "event_date": "2026-03-07",
-    "event_slug": "ufc-326-holloway-vs-oliveira-2",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Gregory Rodrigues",
-    "fighter_b": "Brunno Ferreira",
-    "slug": "gregory-rodrigues-vs-brunno-ferreira",
-    "url": "/compare/gregory-rodrigues-vs-brunno-ferreira/",
     "event_name": "UFC 326: Holloway vs. Oliveira 2",
     "event_date": "2026-03-07",
     "event_slug": "ufc-326-holloway-vs-oliveira-2",
@@ -350,14 +300,24 @@
     "weight_class": "Bantamweight"
   },
   {
-    "fighter_a": "Cody Durden",
-    "fighter_b": "Nyamjargal Tumendemberel",
-    "slug": "cody-durden-vs-nyamjargal-tumendemberel",
-    "url": "/compare/cody-durden-vs-nyamjargal-tumendemberel/",
+    "fighter_a": "Gregory Rodrigues",
+    "fighter_b": "Brunno Ferreira",
+    "slug": "gregory-rodrigues-vs-brunno-ferreira",
+    "url": "/compare/gregory-rodrigues-vs-brunno-ferreira/",
     "event_name": "UFC 326: Holloway vs. Oliveira 2",
     "event_date": "2026-03-07",
     "event_slug": "ufc-326-holloway-vs-oliveira-2",
-    "weight_class": "Flyweight"
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Cody Garbrandt",
+    "fighter_b": "Xiao Long",
+    "slug": "cody-garbrandt-vs-xiao-long",
+    "url": "/compare/cody-garbrandt-vs-xiao-long/",
+    "event_name": "UFC 326: Holloway vs. Oliveira 2",
+    "event_date": "2026-03-07",
+    "event_slug": "ufc-326-holloway-vs-oliveira-2",
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Donte Johnson",
@@ -370,6 +330,26 @@
     "weight_class": "Middleweight"
   },
   {
+    "fighter_a": "Cody Durden",
+    "fighter_b": "Nyamjargal Tumendemberel",
+    "slug": "cody-durden-vs-nyamjargal-tumendemberel",
+    "url": "/compare/cody-durden-vs-nyamjargal-tumendemberel/",
+    "event_name": "UFC 326: Holloway vs. Oliveira 2",
+    "event_date": "2026-03-07",
+    "event_slug": "ufc-326-holloway-vs-oliveira-2",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Sumudaerji",
+    "fighter_b": "Jesus Aguilar",
+    "slug": "sumudaerji-vs-jesus-aguilar",
+    "url": "/compare/sumudaerji-vs-jesus-aguilar/",
+    "event_name": "UFC 326: Holloway vs. Oliveira 2",
+    "event_date": "2026-03-07",
+    "event_slug": "ufc-326-holloway-vs-oliveira-2",
+    "weight_class": "Flyweight"
+  },
+  {
     "fighter_a": "JooSang Yoo",
     "fighter_b": "Gaston Bolanos",
     "slug": "joosang-yoo-vs-gaston-bolanos",
@@ -378,6 +358,26 @@
     "event_date": "2026-03-07",
     "event_slug": "ufc-326-holloway-vs-oliveira-2",
     "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Luke Fernandez",
+    "fighter_b": "Rodolfo Bellato",
+    "slug": "luke-fernandez-vs-rodolfo-bellato",
+    "url": "/compare/luke-fernandez-vs-rodolfo-bellato/",
+    "event_name": "UFC 326: Holloway vs. Oliveira 2",
+    "event_date": "2026-03-07",
+    "event_slug": "ufc-326-holloway-vs-oliveira-2",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Brian Ortega",
+    "fighter_b": "Renato Moicano",
+    "slug": "brian-ortega-vs-renato-moicano",
+    "url": "/compare/brian-ortega-vs-renato-moicano/",
+    "event_name": "UFC 326: Holloway vs. Oliveira 2",
+    "event_date": "2026-03-07",
+    "event_slug": "ufc-326-holloway-vs-oliveira-2",
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Josh Emmett",
@@ -478,6 +478,16 @@
     "event_date": "2026-03-14",
     "event_slug": "ufc-fight-night-emmett-vs-vallejos",
     "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Steven Asplund",
+    "fighter_b": "Vitor Petrino",
+    "slug": "steven-asplund-vs-vitor-petrino",
+    "url": "/compare/steven-asplund-vs-vitor-petrino/",
+    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
+    "event_date": "2026-03-14",
+    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
+    "weight_class": "Heavyweight"
   },
   {
     "fighter_a": "Movsar Evloev",
