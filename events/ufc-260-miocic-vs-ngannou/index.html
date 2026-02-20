@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC 260: Miocic vs. Ngannou Results - FightingData.com</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Event header */
+        .event-header { margin-bottom: 2rem; border-bottom: 2px solid #dc2626; padding-bottom: 1.5rem; }
+        .event-status { display: inline-block; background: #374151; color: #d1d5db; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+        .event-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .event-meta { color: #9ca3af; font-size: 1rem; }
+        .event-meta strong { color: #fff; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        /* Summary bar */
+        .event-summary { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .summary-stat { font-size: 0.85rem; color: #9ca3af; }
+        .summary-stat strong { color: #fff; }
+
+        /* Fight cards */
+        .fights-list { display: grid; gap: 0.75rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937; border-radius: 8px; overflow: hidden; }
+        .fight-card-header { padding: 1rem 1.25rem; user-select: none; }
+        .fight-card-header.clickable { cursor: pointer; }
+        .fight-card-header.clickable:hover { background: #1a2332; }
+        .weight-class-tag { color: #6b7280; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+        .fight-result { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; color: #fff; }
+        .fight-detail-line { font-size: 0.85rem; color: #9ca3af; margin-bottom: 0.4rem; }
+
+        /* Totals */
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .winner-name { color: #d1d5db; }
+        .loser-name { color: #9ca3af; }
+        .fighter-a-name { color: #d1d5db; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+
+        /* Expand toggle */
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.35rem; }
+
+        /* Round-by-round tables */
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117; margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem; padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .winner-row td { color: #fff; }
+        .winner-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .loser-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Footer */
+        .site-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1f2937; color: #6b7280; text-align: center; font-size: 0.875rem; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .event-title { font-size: 1.5rem; }
+            .fight-result { font-size: 1rem; }
+            .totals-name { min-width: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="/events/#previous" class="back-link">&#8592; Back to Events</a>
+        <div class="event-header">
+            <div class="event-status">COMPLETED</div>
+            <h1 class="event-title">UFC 260: Miocic vs. Ngannou</h1>
+            <div class="event-meta"><strong>Saturday, March 27, 2021</strong> &bull; Las Vegas, Nevada, USA</div>
+        </div>
+        
+        <div class="event-summary">
+            <div class="summary-stat"><strong>10</strong> fights</div>
+            <div class="summary-stat"><strong>4</strong> KO/TKO</div>
+            <div class="summary-stat"><strong>2</strong> submissions</div>
+            <div class="summary-stat"><strong>4</strong> decisions</div>
+        </div>
+        <div class="fights-list">
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
+                    <div class="weight-class-tag">Heavyweight</div>
+                    <div class="fight-result">Francis Ngannou def. Stipe Miocic</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 2, 0:52</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name loser-name">Stipe Miocic (L)</span><span class="totals-stat">12/13</span><span class="totals-pct">92%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:04</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Francis Ngannou</td><td>23/37</td><td>62%</td><td>1/2</td><td>0:19</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Stipe Miocic</td><td>8/8</td><td>100%</td><td>0/1</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Francis Ngannou</td><td>13/19</td><td>68%</td><td>0/0</td><td>0:03</td><td>2</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Stipe Miocic</td><td>4/5</td><td>80%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
+                    <div class="weight-class-tag">Welterweight</div>
+                    <div class="fight-result">Vicente Luque def. Tyron Woodley</div>
+                    <div class="fight-detail-line">Submission (D'Arce Choke) &bull; Rd 1, 3:56</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Vicente Luque (W)</span><span class="totals-stat">25/33</span><span class="totals-pct">76%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:03</span></div><div class="totals-line"><span class="totals-name loser-name">Tyron Woodley (L)</span><span class="totals-stat">18/40</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:22</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Vicente Luque</td><td>25/33</td><td>76%</td><td>0/0</td><td>2:03</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Tyron Woodley</td><td>18/40</td><td>45%</td><td>0/1</td><td>0:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
+                    <div class="weight-class-tag">Bantamweight</div>
+                    <div class="fight-result">Sean O'Malley def. Thomas Almeida</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 3, 3:52</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Sean O'Malley (W)</span><span class="totals-stat">86/149</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span><span class="totals-kd">KD 2</span></div><div class="totals-line"><span class="totals-name loser-name">Thomas Almeida (L)</span><span class="totals-stat">25/71</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:22</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Sean O'Malley</td><td>36/58</td><td>62%</td><td>0/0</td><td>0:03</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Thomas Almeida</td><td>8/22</td><td>36%</td><td>1/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Sean O'Malley</td><td>17/40</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Thomas Almeida</td><td>12/27</td><td>44%</td><td>0/0</td><td>0:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Sean O'Malley</td><td>33/51</td><td>65%</td><td>0/0</td><td>0:05</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Thomas Almeida</td><td>5/22</td><td>23%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
+                    <div class="weight-class-tag">Women's Flyweight</div>
+                    <div class="fight-result">Miranda Maverick def. Gillian Robertson</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Miranda Maverick (W)</span><span class="totals-stat">71/150</span><span class="totals-pct">47%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 4:40</span></div><div class="totals-line"><span class="totals-name loser-name">Gillian Robertson (L)</span><span class="totals-stat">27/68</span><span class="totals-pct">40%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 3:29</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Miranda Maverick</td><td>25/70</td><td>36%</td><td>2/2</td><td>0:48</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Gillian Robertson</td><td>17/44</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Miranda Maverick</td><td>15/35</td><td>43%</td><td>0/1</td><td>0:14</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Gillian Robertson</td><td>8/16</td><td>50%</td><td>2/2</td><td>3:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Miranda Maverick</td><td>31/45</td><td>69%</td><td>1/1</td><td>3:38</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Gillian Robertson</td><td>2/8</td><td>25%</td><td>0/2</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
+                    <div class="weight-class-tag">Lightweight</div>
+                    <div class="fight-result">Jamie Mullarkey def. Khama Worthy</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 0:46</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jamie Mullarkey (W)</span><span class="totals-stat">6/13</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name loser-name">Khama Worthy (L)</span><span class="totals-stat">5/10</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jamie Mullarkey</td><td>6/13</td><td>46%</td><td>0/0</td><td>0:04</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Khama Worthy</td><td>5/10</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-5&#39;)">
+                    <div class="weight-class-tag">Light Heavyweight</div>
+                    <div class="fight-result">Alonzo Menifield def. Fabio Cherant</div>
+                    <div class="fight-detail-line">Submission (Von Flue Choke) &bull; Rd 1, 1:11</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Alonzo Menifield (W)</span><span class="totals-stat">3/3</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name loser-name">Fabio Cherant (L)</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-5">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Alonzo Menifield</td><td>3/3</td><td>100%</td><td>1/1</td><td>1:07</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Fabio Cherant</td><td>0/1</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-6&#39;)">
+                    <div class="weight-class-tag">Welterweight</div>
+                    <div class="fight-result">Abubakar Nurmagomedov def. Jared Gooden</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Abubakar Nurmagomedov (W)</span><span class="totals-stat">60/120</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 4:18</span></div><div class="totals-line"><span class="totals-name loser-name">Jared Gooden (L)</span><span class="totals-stat">43/136</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-6">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Abubakar Nurmagomedov</td><td>23/42</td><td>55%</td><td>0/1</td><td>0:07</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jared Gooden</td><td>14/49</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Abubakar Nurmagomedov</td><td>30/63</td><td>48%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jared Gooden</td><td>17/62</td><td>27%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Abubakar Nurmagomedov</td><td>7/15</td><td>47%</td><td>1/4</td><td>4:07</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jared Gooden</td><td>12/25</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-7&#39;)">
+                    <div class="weight-class-tag">Light Heavyweight</div>
+                    <div class="fight-result">Michal Oleksiejczuk def. Modestas Bukauskas</div>
+                    <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Michal Oleksiejczuk (W)</span><span class="totals-stat">56/122</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:09</span></div><div class="totals-line"><span class="totals-name loser-name">Modestas Bukauskas (L)</span><span class="totals-stat">58/167</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:04</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-7">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Michal Oleksiejczuk</td><td>14/38</td><td>37%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Modestas Bukauskas</td><td>18/62</td><td>29%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Michal Oleksiejczuk</td><td>20/40</td><td>50%</td><td>0/0</td><td>0:10</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Modestas Bukauskas</td><td>23/56</td><td>41%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Michal Oleksiejczuk</td><td>22/44</td><td>50%</td><td>0/2</td><td>0:59</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Modestas Bukauskas</td><td>17/49</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-8&#39;)">
+                    <div class="weight-class-tag">Featherweight</div>
+                    <div class="fight-result">Omar Morales def. Shane Young</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Omar Morales (W)</span><span class="totals-stat">69/144</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:27</span></div><div class="totals-line"><span class="totals-name loser-name">Shane Young (L)</span><span class="totals-stat">46/105</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 3:26</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-8">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Omar Morales</td><td>7/14</td><td>50%</td><td>1/1</td><td>0:46</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shane Young</td><td>8/14</td><td>57%</td><td>0/0</td><td>1:37</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Omar Morales</td><td>28/61</td><td>46%</td><td>0/0</td><td>0:11</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shane Young</td><td>18/37</td><td>49%</td><td>1/2</td><td>0:38</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Omar Morales</td><td>34/69</td><td>49%</td><td>1/1</td><td>0:30</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shane Young</td><td>20/54</td><td>37%</td><td>0/3</td><td>1:11</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-9&#39;)">
+                    <div class="weight-class-tag">Middleweight</div>
+                    <div class="fight-result">Marc-Andre Barriault def. Abu Azaitar</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 3, 4:56</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Marc-Andre Barriault (W)</span><span class="totals-stat">141/275</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 6:00</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name loser-name">Abu Azaitar (L)</span><span class="totals-stat">108/219</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:03</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-9">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Marc-Andre Barriault</td><td>22/47</td><td>47%</td><td>0/0</td><td>1:10</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Abu Azaitar</td><td>46/87</td><td>53%</td><td>0/0</td><td>1:20</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Marc-Andre Barriault</td><td>60/128</td><td>47%</td><td>0/1</td><td>0:43</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Abu Azaitar</td><td>55/112</td><td>49%</td><td>0/2</td><td>0:43</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Marc-Andre Barriault</td><td>59/100</td><td>59%</td><td>0/0</td><td>4:07</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Abu Azaitar</td><td>7/20</td><td>35%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+        </div>
+        <div class="site-footer">
+            <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+        </div>
+    </div>
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Round Details';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Round Details';
+        }
+    }
+    </script>
+</body>
+</html>

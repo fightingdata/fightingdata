@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC 49: Unfinished Business Results - FightingData.com</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Event header */
+        .event-header { margin-bottom: 2rem; border-bottom: 2px solid #dc2626; padding-bottom: 1.5rem; }
+        .event-status { display: inline-block; background: #374151; color: #d1d5db; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+        .event-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .event-meta { color: #9ca3af; font-size: 1rem; }
+        .event-meta strong { color: #fff; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        /* Summary bar */
+        .event-summary { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .summary-stat { font-size: 0.85rem; color: #9ca3af; }
+        .summary-stat strong { color: #fff; }
+
+        /* Fight cards */
+        .fights-list { display: grid; gap: 0.75rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937; border-radius: 8px; overflow: hidden; }
+        .fight-card-header { padding: 1rem 1.25rem; user-select: none; }
+        .fight-card-header.clickable { cursor: pointer; }
+        .fight-card-header.clickable:hover { background: #1a2332; }
+        .weight-class-tag { color: #6b7280; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+        .fight-result { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; color: #fff; }
+        .fight-detail-line { font-size: 0.85rem; color: #9ca3af; margin-bottom: 0.4rem; }
+
+        /* Totals */
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .winner-name { color: #d1d5db; }
+        .loser-name { color: #9ca3af; }
+        .fighter-a-name { color: #d1d5db; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+
+        /* Expand toggle */
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.35rem; }
+
+        /* Round-by-round tables */
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117; margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem; padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .winner-row td { color: #fff; }
+        .winner-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .loser-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Footer */
+        .site-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1f2937; color: #6b7280; text-align: center; font-size: 0.875rem; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .event-title { font-size: 1.5rem; }
+            .fight-result { font-size: 1rem; }
+            .totals-name { min-width: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="/events/#previous" class="back-link">&#8592; Back to Events</a>
+        <div class="event-header">
+            <div class="event-status">COMPLETED</div>
+            <h1 class="event-title">UFC 49: Unfinished Business</h1>
+            <div class="event-meta"><strong>Saturday, August 21, 2004</strong> &bull; Las Vegas, Nevada, USA</div>
+        </div>
+        
+        <div class="event-summary">
+            <div class="summary-stat"><strong>8</strong> fights</div>
+            <div class="summary-stat"><strong>6</strong> KO/TKO</div>
+            <div class="summary-stat"><strong>1</strong> submissions</div>
+            <div class="summary-stat"><strong>1</strong> decisions</div>
+        </div>
+        <div class="fights-list">
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
+                    <div class="weight-class-tag">Light Heavyweight</div>
+                    <div class="fight-result">Randy Couture def. Vitor Belfort</div>
+                    <div class="fight-detail-line">KO/TKO &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Randy Couture (W)</span><span class="totals-stat">50/71</span><span class="totals-pct">70%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 14:06</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Randy Couture</td><td>14/25</td><td>56%</td><td>1/2</td><td>4:34</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vitor Belfort</td><td>2/3</td><td>67%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Randy Couture</td><td>16/19</td><td>84%</td><td>1/2</td><td>4:46</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vitor Belfort</td><td>1/2</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Randy Couture</td><td>20/27</td><td>74%</td><td>0/0</td><td>4:46</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vitor Belfort</td><td>0/1</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
+                    <div class="weight-class-tag">Middleweight</div>
+                    <div class="fight-result">Joe Riggs def. Joe Doerksen</div>
+                    <div class="fight-detail-line">KO/TKO (Elbows) &bull; Rd 2, 3:39</div>
+                    
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Joe Riggs</td><td>5/18</td><td>28%</td><td>1/2</td><td>2:56</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Joe Doerksen</td><td>5/6</td><td>83%</td><td>2/5</td><td>0:45</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Joe Riggs</td><td>24/37</td><td>65%</td><td>1/1</td><td>3:08</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Joe Doerksen</td><td>1/1</td><td>100%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
+                    <div class="weight-class-tag">Light Heavyweight</div>
+                    <div class="fight-result">Chuck Liddell def. Vernon White</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 4:05</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Chuck Liddell (W)</span><span class="totals-stat">31/68</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:31</span><span class="totals-kd">KD 2</span></div><div class="totals-line"><span class="totals-name loser-name">Vernon White (L)</span><span class="totals-stat">13/37</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Chuck Liddell</td><td>31/68</td><td>46%</td><td>1/1</td><td>1:31</td><td>2</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vernon White</td><td>13/37</td><td>35%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
+                    <div class="weight-class-tag">Middleweight</div>
+                    <div class="fight-result">David Terrell def. Matt Lindland</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 0:24</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">David Terrell (W)</span><span class="totals-stat">5/7</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name loser-name">Matt Lindland (L)</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">David Terrell</td><td>5/7</td><td>71%</td><td>0/0</td><td>0:08</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Matt Lindland</td><td>0/1</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
+                    <div class="weight-class-tag">Heavyweight</div>
+                    <div class="fight-result">Justin Eilers def. Mike Kyle</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 1:14</div>
+                    
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Justin Eilers</td><td>4/9</td><td>44%</td><td>0/1</td><td>0:01</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mike Kyle</td><td>7/16</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-5&#39;)">
+                    <div class="weight-class-tag">Welterweight</div>
+                    <div class="fight-result">Chris Lytle def. Ronald Jhun</div>
+                    <div class="fight-detail-line">Submission (Guillotine Choke) &bull; Rd 2, 1:17</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Chris Lytle (W)</span><span class="totals-stat">12/25</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 4:22</span><span class="totals-kd">KD 1</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-5">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Chris Lytle</td><td>9/15</td><td>60%</td><td>0/0</td><td>4:10</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ronald Jhun</td><td>4/8</td><td>50%</td><td>1/1</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Chris Lytle</td><td>3/10</td><td>30%</td><td>0/1</td><td>0:12</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ronald Jhun</td><td>4/8</td><td>50%</td><td>0/0</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-6&#39;)">
+                    <div class="weight-class-tag">Welterweight</div>
+                    <div class="fight-result">Karo Parisyan def. Nick Diaz</div>
+                    <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Karo Parisyan (W)</span><span class="totals-stat">27/79</span><span class="totals-pct">34%</span><span class="totals-stat">TD 9/15</span><span class="totals-stat">Ctrl 6:52</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-6">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Karo Parisyan</td><td>8/30</td><td>27%</td><td>2/3</td><td>3:18</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Nick Diaz</td><td>11/26</td><td>42%</td><td>1/1</td><td>0:16</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Karo Parisyan</td><td>11/26</td><td>42%</td><td>2/5</td><td>0:32</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Nick Diaz</td><td>23/58</td><td>40%</td><td>0/0</td><td>1:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Karo Parisyan</td><td>8/23</td><td>35%</td><td>5/7</td><td>3:02</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Nick Diaz</td><td>3/18</td><td>17%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-7&#39;)">
+                    <div class="weight-class-tag">Lightweight</div>
+                    <div class="fight-result">Yves Edwards def. Josh Thomson</div>
+                    <div class="fight-detail-line">KO/TKO (Kick) &bull; Rd 1, 4:32</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Yves Edwards (W)</span><span class="totals-stat">16/21</span><span class="totals-pct">76%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:40</span><span class="totals-kd">KD 1</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-7">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Yves Edwards</td><td>16/21</td><td>76%</td><td>0/1</td><td>0:40</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Josh Thomson</td><td>13/22</td><td>59%</td><td>2/3</td><td>1:36</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+        </div>
+        <div class="site-footer">
+            <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+        </div>
+    </div>
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Round Details';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Round Details';
+        }
+    }
+    </script>
+</body>
+</html>

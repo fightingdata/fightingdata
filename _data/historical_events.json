@@ -1,0 +1,6090 @@
+[
+  {
+    "id": 761,
+    "name": "UFC Fight Night: Bautista vs. Oliveira",
+    "date": "2026-02-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-bautista-vs-oliveira",
+    "year": "2026"
+  },
+  {
+    "id": 760,
+    "name": "UFC 325: Volkanovski vs. Lopes 2",
+    "date": "2026-01-31",
+    "location": "Sydney, New South Wales, Australia",
+    "slug": "ufc-325-volkanovski-vs-lopes-2",
+    "year": "2026"
+  },
+  {
+    "id": 759,
+    "name": "UFC 324: Gaethje vs. Pimblett",
+    "date": "2026-01-24",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-324-gaethje-vs-pimblett",
+    "year": "2026"
+  },
+  {
+    "id": 758,
+    "name": "UFC Fight Night: Royval vs. Kape",
+    "date": "2025-12-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-royval-vs-kape",
+    "year": "2025"
+  },
+  {
+    "id": 757,
+    "name": "UFC 323: Dvalishvili vs. Yan 2",
+    "date": "2025-12-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-323-dvalishvili-vs-yan-2",
+    "year": "2025"
+  },
+  {
+    "id": 756,
+    "name": "UFC Fight Night: Tsarukyan vs. Hooker",
+    "date": "2025-11-22",
+    "location": "Doha, Qatar",
+    "slug": "ufc-fight-night-tsarukyan-vs-hooker",
+    "year": "2025"
+  },
+  {
+    "id": 755,
+    "name": "UFC 322: Della Maddalena vs. Makhachev",
+    "date": "2025-11-15",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-322-della-maddalena-vs-makhachev",
+    "year": "2025"
+  },
+  {
+    "id": 754,
+    "name": "UFC Fight Night: Bonfim vs. Brown",
+    "date": "2025-11-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-bonfim-vs-brown",
+    "year": "2025"
+  },
+  {
+    "id": 753,
+    "name": "UFC Fight Night: Garcia vs. Onama",
+    "date": "2025-11-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-garcia-vs-onama",
+    "year": "2025"
+  },
+  {
+    "id": 752,
+    "name": "UFC 321: Aspinall vs. Gane",
+    "date": "2025-10-25",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-321-aspinall-vs-gane",
+    "year": "2025"
+  },
+  {
+    "id": 751,
+    "name": "UFC Fight Night: De Ridder vs. Allen",
+    "date": "2025-10-18",
+    "location": "Vancouver, British Columbia, Canada",
+    "slug": "ufc-fight-night-de-ridder-vs-allen",
+    "year": "2025"
+  },
+  {
+    "id": 750,
+    "name": "UFC Fight Night: Oliveira vs. Gamrot",
+    "date": "2025-10-11",
+    "location": "Rio de Janeiro, Rio de Janeiro, Brazil",
+    "slug": "ufc-fight-night-oliveira-vs-gamrot",
+    "year": "2025"
+  },
+  {
+    "id": 749,
+    "name": "UFC 320: Ankalaev vs. Pereira 2",
+    "date": "2025-10-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-320-ankalaev-vs-pereira-2",
+    "year": "2025"
+  },
+  {
+    "id": 748,
+    "name": "UFC Fight Night: Ulberg vs. Reyes",
+    "date": "2025-09-27",
+    "location": "Perth, Western Australia, Australia",
+    "slug": "ufc-fight-night-ulberg-vs-reyes",
+    "year": "2025"
+  },
+  {
+    "id": 747,
+    "name": "UFC Fight Night: Lopes vs. Silva",
+    "date": "2025-09-13",
+    "location": "San Antonio, Texas, USA",
+    "slug": "ufc-fight-night-lopes-vs-silva",
+    "year": "2025"
+  },
+  {
+    "id": 746,
+    "name": "UFC Fight Night: Imavov vs. Borralho",
+    "date": "2025-09-06",
+    "location": "Paris, Ile-de-France, France",
+    "slug": "ufc-fight-night-imavov-vs-borralho",
+    "year": "2025"
+  },
+  {
+    "id": 745,
+    "name": "UFC Fight Night: Walker vs. Zhang",
+    "date": "2025-08-23",
+    "location": "Shanghai, Hebei, China",
+    "slug": "ufc-fight-night-walker-vs-zhang",
+    "year": "2025"
+  },
+  {
+    "id": 744,
+    "name": "UFC - Road to UFC 4.6",
+    "date": "2025-08-22",
+    "location": "Shanghai, Hebei, China",
+    "slug": "ufc-road-to-ufc-46",
+    "year": "2025"
+  },
+  {
+    "id": 743,
+    "name": "UFC 319: Du Plessis vs. Chimaev",
+    "date": "2025-08-16",
+    "location": "Chicago, Illinois, USA",
+    "slug": "ufc-319-du-plessis-vs-chimaev",
+    "year": "2025"
+  },
+  {
+    "id": 742,
+    "name": "UFC Fight Night: Dolidze vs. Hernandez",
+    "date": "2025-08-09",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dolidze-vs-hernandez",
+    "year": "2025"
+  },
+  {
+    "id": 741,
+    "name": "UFC Fight Night: Taira vs. Park",
+    "date": "2025-08-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-taira-vs-park",
+    "year": "2025"
+  },
+  {
+    "id": 740,
+    "name": "UFC Fight Night: Whittaker vs. De Ridder",
+    "date": "2025-07-26",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-whittaker-vs-de-ridder",
+    "year": "2025"
+  },
+  {
+    "id": 739,
+    "name": "UFC 318: Holloway vs. Poirier 3",
+    "date": "2025-07-19",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-318-holloway-vs-poirier-3",
+    "year": "2025"
+  },
+  {
+    "id": 738,
+    "name": "UFC Fight Night: Lewis vs. Teixeira",
+    "date": "2025-07-12",
+    "location": "Nashville, Tennessee, USA",
+    "slug": "ufc-fight-night-lewis-vs-teixeira",
+    "year": "2025"
+  },
+  {
+    "id": 737,
+    "name": "UFC 317: Topuria vs. Oliveira",
+    "date": "2025-06-28",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-317-topuria-vs-oliveira",
+    "year": "2025"
+  },
+  {
+    "id": 736,
+    "name": "UFC Fight Night: Hill vs. Rountree Jr.",
+    "date": "2025-06-21",
+    "location": "Baku, Azerbaijan",
+    "slug": "ufc-fight-night-hill-vs-rountree-jr",
+    "year": "2025"
+  },
+  {
+    "id": 735,
+    "name": "UFC Fight Night: Usman vs. Buckley",
+    "date": "2025-06-14",
+    "location": "Atlanta, Georgia, USA",
+    "slug": "ufc-fight-night-usman-vs-buckley",
+    "year": "2025"
+  },
+  {
+    "id": 734,
+    "name": "UFC 316: Dvalishvili vs. O'Malley 2",
+    "date": "2025-06-07",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-316-dvalishvili-vs-omalley-2",
+    "year": "2025"
+  },
+  {
+    "id": 733,
+    "name": "UFC Fight Night: Blanchfield vs. Barber",
+    "date": "2025-05-31",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-blanchfield-vs-barber",
+    "year": "2025"
+  },
+  {
+    "id": 732,
+    "name": "UFC Fight Night: Burns vs. Morales",
+    "date": "2025-05-17",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-burns-vs-morales",
+    "year": "2025"
+  },
+  {
+    "id": 731,
+    "name": "UFC 315: Muhammad vs. Della Maddalena",
+    "date": "2025-05-10",
+    "location": "Montreal, Quebec, Canada",
+    "slug": "ufc-315-muhammad-vs-della-maddalena",
+    "year": "2025"
+  },
+  {
+    "id": 730,
+    "name": "UFC Fight Night: Sandhagen vs. Figueiredo",
+    "date": "2025-05-03",
+    "location": "Des Moines, Iowa, USA",
+    "slug": "ufc-fight-night-sandhagen-vs-figueiredo",
+    "year": "2025"
+  },
+  {
+    "id": 729,
+    "name": "UFC Fight Night: Machado Garry vs. Prates",
+    "date": "2025-04-26",
+    "location": "Kansas City, Missouri, USA",
+    "slug": "ufc-fight-night-machado-garry-vs-prates",
+    "year": "2025"
+  },
+  {
+    "id": 728,
+    "name": "UFC 314: Volkanovski vs. Lopes",
+    "date": "2025-04-12",
+    "location": "Miami, Florida, USA",
+    "slug": "ufc-314-volkanovski-vs-lopes",
+    "year": "2025"
+  },
+  {
+    "id": 727,
+    "name": "UFC Fight Night: Emmett vs. Murphy",
+    "date": "2025-04-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-emmett-vs-murphy",
+    "year": "2025"
+  },
+  {
+    "id": 726,
+    "name": "UFC Fight Night: Moreno vs. Erceg",
+    "date": "2025-03-29",
+    "location": "Mexico City, Distrito Federal, Mexico",
+    "slug": "ufc-fight-night-moreno-vs-erceg",
+    "year": "2025"
+  },
+  {
+    "id": 725,
+    "name": "UFC Fight Night: Edwards vs. Brady",
+    "date": "2025-03-22",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-edwards-vs-brady",
+    "year": "2025"
+  },
+  {
+    "id": 724,
+    "name": "UFC Fight Night: Vettori vs. Dolidze 2",
+    "date": "2025-03-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-vettori-vs-dolidze-2",
+    "year": "2025"
+  },
+  {
+    "id": 723,
+    "name": "UFC 313: Pereira vs. Ankalaev",
+    "date": "2025-03-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-313-pereira-vs-ankalaev",
+    "year": "2025"
+  },
+  {
+    "id": 722,
+    "name": "UFC Fight Night: Kape vs. Almabayev",
+    "date": "2025-03-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-kape-vs-almabayev",
+    "year": "2025"
+  },
+  {
+    "id": 721,
+    "name": "UFC Fight Night: Cejudo vs. Song",
+    "date": "2025-02-22",
+    "location": "Seattle, Washington, USA",
+    "slug": "ufc-fight-night-cejudo-vs-song",
+    "year": "2025"
+  },
+  {
+    "id": 720,
+    "name": "UFC Fight Night: Cannonier vs. Rodrigues",
+    "date": "2025-02-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-cannonier-vs-rodrigues",
+    "year": "2025"
+  },
+  {
+    "id": 719,
+    "name": "UFC 312: Du Plessis vs. Strickland 2",
+    "date": "2025-02-08",
+    "location": "Sydney, New South Wales, Australia",
+    "slug": "ufc-312-du-plessis-vs-strickland-2",
+    "year": "2025"
+  },
+  {
+    "id": 718,
+    "name": "UFC Fight Night: Adesanya vs. Imavov",
+    "date": "2025-02-01",
+    "location": "Riyadh, Riyadh, Saudi Arabia",
+    "slug": "ufc-fight-night-adesanya-vs-imavov",
+    "year": "2025"
+  },
+  {
+    "id": 717,
+    "name": "UFC 311: Makhachev vs. Moicano",
+    "date": "2025-01-18",
+    "location": "Inglewood, California, USA",
+    "slug": "ufc-311-makhachev-vs-moicano",
+    "year": "2025"
+  },
+  {
+    "id": 716,
+    "name": "UFC Fight Night: Dern vs. Ribas 2",
+    "date": "2025-01-11",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dern-vs-ribas-2",
+    "year": "2025"
+  },
+  {
+    "id": 715,
+    "name": "UFC Fight Night: Covington vs. Buckley",
+    "date": "2024-12-14",
+    "location": "Tampa, Florida, USA",
+    "slug": "ufc-fight-night-covington-vs-buckley",
+    "year": "2024"
+  },
+  {
+    "id": 714,
+    "name": "UFC 310: Pantoja vs. Asakura",
+    "date": "2024-12-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-310-pantoja-vs-asakura",
+    "year": "2024"
+  },
+  {
+    "id": 713,
+    "name": "UFC Fight Night: Yan vs. Figueiredo",
+    "date": "2024-11-23",
+    "location": "Macau, China",
+    "slug": "ufc-fight-night-yan-vs-figueiredo",
+    "year": "2024"
+  },
+  {
+    "id": 712,
+    "name": "UFC 309: Jones vs. Miocic",
+    "date": "2024-11-16",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-309-jones-vs-miocic",
+    "year": "2024"
+  },
+  {
+    "id": 711,
+    "name": "UFC Fight Night: Magny vs. Prates",
+    "date": "2024-11-09",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-magny-vs-prates",
+    "year": "2024"
+  },
+  {
+    "id": 710,
+    "name": "UFC Fight Night: Moreno vs. Albazi",
+    "date": "2024-11-02",
+    "location": "Edmonton, Alberta, Canada",
+    "slug": "ufc-fight-night-moreno-vs-albazi",
+    "year": "2024"
+  },
+  {
+    "id": 709,
+    "name": "UFC 308: Topuria vs. Holloway",
+    "date": "2024-10-26",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-308-topuria-vs-holloway",
+    "year": "2024"
+  },
+  {
+    "id": 708,
+    "name": "UFC Fight Night: Hernandez vs. Pereira",
+    "date": "2024-10-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-hernandez-vs-pereira",
+    "year": "2024"
+  },
+  {
+    "id": 707,
+    "name": "UFC Fight Night: Royval vs. Taira",
+    "date": "2024-10-12",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-royval-vs-taira",
+    "year": "2024"
+  },
+  {
+    "id": 706,
+    "name": "UFC 307: Pereira vs. Rountree Jr.",
+    "date": "2024-10-05",
+    "location": "Salt Lake City, Utah, USA",
+    "slug": "ufc-307-pereira-vs-rountree-jr",
+    "year": "2024"
+  },
+  {
+    "id": 705,
+    "name": "UFC Fight Night: Moicano vs. Saint Denis",
+    "date": "2024-09-28",
+    "location": "Paris, Ile-de-France, France",
+    "slug": "ufc-fight-night-moicano-vs-saint-denis",
+    "year": "2024"
+  },
+  {
+    "id": 704,
+    "name": "UFC 306: Riyadh Season Noche UFC",
+    "date": "2024-09-14",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-306-riyadh-season-noche-ufc",
+    "year": "2024"
+  },
+  {
+    "id": 703,
+    "name": "UFC Fight Night: Burns vs. Brady",
+    "date": "2024-09-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-burns-vs-brady",
+    "year": "2024"
+  },
+  {
+    "id": 702,
+    "name": "UFC Fight Night: Cannonier vs. Borralho",
+    "date": "2024-08-24",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-cannonier-vs-borralho",
+    "year": "2024"
+  },
+  {
+    "id": 701,
+    "name": "UFC 305: Du Plessis vs. Adesanya",
+    "date": "2024-08-17",
+    "location": "Perth, Western Australia, Australia",
+    "slug": "ufc-305-du-plessis-vs-adesanya",
+    "year": "2024"
+  },
+  {
+    "id": 700,
+    "name": "UFC Fight Night: Tybura vs. Spivac 2",
+    "date": "2024-08-10",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-tybura-vs-spivac-2",
+    "year": "2024"
+  },
+  {
+    "id": 699,
+    "name": "UFC Fight Night: Sandhagen vs. Nurmagomedov",
+    "date": "2024-08-03",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-sandhagen-vs-nurmagomedov",
+    "year": "2024"
+  },
+  {
+    "id": 698,
+    "name": "UFC 304: Edwards vs. Muhammad 2",
+    "date": "2024-07-27",
+    "location": "Manchester, England, United Kingdom",
+    "slug": "ufc-304-edwards-vs-muhammad-2",
+    "year": "2024"
+  },
+  {
+    "id": 697,
+    "name": "UFC Fight Night: Lemos vs. Jandiroba",
+    "date": "2024-07-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-lemos-vs-jandiroba",
+    "year": "2024"
+  },
+  {
+    "id": 696,
+    "name": "UFC Fight Night: Namajunas vs. Cortez",
+    "date": "2024-07-13",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-fight-night-namajunas-vs-cortez",
+    "year": "2024"
+  },
+  {
+    "id": 695,
+    "name": "UFC 303: Pereira vs. Prochazka 2",
+    "date": "2024-06-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-303-pereira-vs-prochazka-2",
+    "year": "2024"
+  },
+  {
+    "id": 694,
+    "name": "UFC Fight Night: Whittaker vs. Aliskerov",
+    "date": "2024-06-22",
+    "location": "Riyadh, Riyadh, Saudi Arabia",
+    "slug": "ufc-fight-night-whittaker-vs-aliskerov",
+    "year": "2024"
+  },
+  {
+    "id": 693,
+    "name": "UFC Fight Night: Perez vs. Taira",
+    "date": "2024-06-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-perez-vs-taira",
+    "year": "2024"
+  },
+  {
+    "id": 692,
+    "name": "UFC Fight Night: Cannonier vs. Imavov",
+    "date": "2024-06-08",
+    "location": "Louisville, Kentucky, USA",
+    "slug": "ufc-fight-night-cannonier-vs-imavov",
+    "year": "2024"
+  },
+  {
+    "id": 691,
+    "name": "UFC 302: Makhachev vs. Poirier",
+    "date": "2024-06-01",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-302-makhachev-vs-poirier",
+    "year": "2024"
+  },
+  {
+    "id": 690,
+    "name": "UFC Fight Night: Barboza vs. Murphy",
+    "date": "2024-05-18",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-barboza-vs-murphy",
+    "year": "2024"
+  },
+  {
+    "id": 689,
+    "name": "UFC Fight Night: Lewis vs. Nascimento",
+    "date": "2024-05-11",
+    "location": "St. Louis, Missouri, USA",
+    "slug": "ufc-fight-night-lewis-vs-nascimento",
+    "year": "2024"
+  },
+  {
+    "id": 688,
+    "name": "UFC 301: Pantoja vs. Erceg",
+    "date": "2024-05-04",
+    "location": "Rio de Janeiro, Rio de Janeiro, Brazil",
+    "slug": "ufc-301-pantoja-vs-erceg",
+    "year": "2024"
+  },
+  {
+    "id": 687,
+    "name": "UFC Fight Night: Nicolau vs. Perez",
+    "date": "2024-04-27",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-nicolau-vs-perez",
+    "year": "2024"
+  },
+  {
+    "id": 686,
+    "name": "UFC 300: Pereira vs. Hill",
+    "date": "2024-04-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-300-pereira-vs-hill",
+    "year": "2024"
+  },
+  {
+    "id": 685,
+    "name": "UFC Fight Night: Allen vs. Curtis 2",
+    "date": "2024-04-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-allen-vs-curtis-2",
+    "year": "2024"
+  },
+  {
+    "id": 684,
+    "name": "UFC Fight Night: Blanchfield vs. Fiorot",
+    "date": "2024-03-30",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-fight-night-blanchfield-vs-fiorot",
+    "year": "2024"
+  },
+  {
+    "id": 683,
+    "name": "UFC Fight Night: Ribas vs. Namajunas",
+    "date": "2024-03-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-ribas-vs-namajunas",
+    "year": "2024"
+  },
+  {
+    "id": 682,
+    "name": "UFC Fight Night: Tuivasa vs. Tybura",
+    "date": "2024-03-16",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-tuivasa-vs-tybura",
+    "year": "2024"
+  },
+  {
+    "id": 681,
+    "name": "UFC 299: O'Malley vs. Vera 2",
+    "date": "2024-03-09",
+    "location": "Miami, Florida, USA",
+    "slug": "ufc-299-omalley-vs-vera-2",
+    "year": "2024"
+  },
+  {
+    "id": 680,
+    "name": "UFC Fight Night: Rozenstruik vs. Gaziev",
+    "date": "2024-03-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-rozenstruik-vs-gaziev",
+    "year": "2024"
+  },
+  {
+    "id": 679,
+    "name": "UFC Fight Night: Moreno vs. Royval 2",
+    "date": "2024-02-24",
+    "location": "Mexico City, Distrito Federal, Mexico",
+    "slug": "ufc-fight-night-moreno-vs-royval-2",
+    "year": "2024"
+  },
+  {
+    "id": 678,
+    "name": "UFC 298: Volkanovski vs. Topuria",
+    "date": "2024-02-17",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-298-volkanovski-vs-topuria",
+    "year": "2024"
+  },
+  {
+    "id": 677,
+    "name": "UFC Fight Night: Hermansson vs. Pyfer",
+    "date": "2024-02-10",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-hermansson-vs-pyfer",
+    "year": "2024"
+  },
+  {
+    "id": 676,
+    "name": "UFC Fight Night: Dolidze vs. Imavov",
+    "date": "2024-02-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dolidze-vs-imavov",
+    "year": "2024"
+  },
+  {
+    "id": 675,
+    "name": "UFC 297: Strickland vs. Du Plessis",
+    "date": "2024-01-20",
+    "location": "Toronto, Ontario, Canada",
+    "slug": "ufc-297-strickland-vs-du-plessis",
+    "year": "2024"
+  },
+  {
+    "id": 674,
+    "name": "UFC Fight Night: Ankalaev vs. Walker 2",
+    "date": "2024-01-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-ankalaev-vs-walker-2",
+    "year": "2024"
+  },
+  {
+    "id": 673,
+    "name": "UFC 296: Edwards vs. Covington",
+    "date": "2023-12-16",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-296-edwards-vs-covington",
+    "year": "2023"
+  },
+  {
+    "id": 672,
+    "name": "UFC Fight Night: Song vs. Gutierrez",
+    "date": "2023-12-09",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-song-vs-gutierrez",
+    "year": "2023"
+  },
+  {
+    "id": 671,
+    "name": "UFC Fight Night: Dariush vs. Tsarukyan",
+    "date": "2023-12-02",
+    "location": "Austin, Texas, USA",
+    "slug": "ufc-fight-night-dariush-vs-tsarukyan",
+    "year": "2023"
+  },
+  {
+    "id": 670,
+    "name": "UFC Fight Night: Allen vs. Craig",
+    "date": "2023-11-18",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-allen-vs-craig",
+    "year": "2023"
+  },
+  {
+    "id": 669,
+    "name": "UFC 295: Prochazka vs. Pereira",
+    "date": "2023-11-11",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-295-prochazka-vs-pereira",
+    "year": "2023"
+  },
+  {
+    "id": 668,
+    "name": "UFC Fight Night: Almeida vs. Lewis",
+    "date": "2023-11-04",
+    "location": "Sao Paulo, Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-almeida-vs-lewis",
+    "year": "2023"
+  },
+  {
+    "id": 667,
+    "name": "UFC 294: Makhachev vs. Volkanovski 2",
+    "date": "2023-10-21",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-294-makhachev-vs-volkanovski-2",
+    "year": "2023"
+  },
+  {
+    "id": 666,
+    "name": "UFC Fight Night: Yusuff vs. Barboza",
+    "date": "2023-10-14",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-yusuff-vs-barboza",
+    "year": "2023"
+  },
+  {
+    "id": 665,
+    "name": "UFC Fight Night: Dawson vs. Green",
+    "date": "2023-10-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dawson-vs-green",
+    "year": "2023"
+  },
+  {
+    "id": 664,
+    "name": "UFC Fight Night: Fiziev vs. Gamrot",
+    "date": "2023-09-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-fiziev-vs-gamrot",
+    "year": "2023"
+  },
+  {
+    "id": 663,
+    "name": "UFC Fight Night: Grasso vs. Shevchenko 2",
+    "date": "2023-09-16",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-grasso-vs-shevchenko-2",
+    "year": "2023"
+  },
+  {
+    "id": 662,
+    "name": "UFC 293: Adesanya vs. Strickland",
+    "date": "2023-09-09",
+    "location": "Sydney, New South Wales, Australia",
+    "slug": "ufc-293-adesanya-vs-strickland",
+    "year": "2023"
+  },
+  {
+    "id": 661,
+    "name": "UFC Fight Night: Gane vs. Spivac",
+    "date": "2023-09-02",
+    "location": "Paris, Ile-de-France, France",
+    "slug": "ufc-fight-night-gane-vs-spivac",
+    "year": "2023"
+  },
+  {
+    "id": 660,
+    "name": "UFC Fight Night: Holloway vs. The Korean Zombie",
+    "date": "2023-08-26",
+    "location": "Kallang, Singapore",
+    "slug": "ufc-fight-night-holloway-vs-the-korean-zombie",
+    "year": "2023"
+  },
+  {
+    "id": 659,
+    "name": "UFC 292: Sterling vs. O'Malley",
+    "date": "2023-08-19",
+    "location": "Boston, Massachusetts, USA",
+    "slug": "ufc-292-sterling-vs-omalley",
+    "year": "2023"
+  },
+  {
+    "id": 658,
+    "name": "UFC Fight Night: Luque vs. Dos Anjos",
+    "date": "2023-08-12",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-luque-vs-dos-anjos",
+    "year": "2023"
+  },
+  {
+    "id": 657,
+    "name": "UFC Fight Night: Sandhagen vs. Font",
+    "date": "2023-08-05",
+    "location": "Nashville, Tennessee, USA",
+    "slug": "ufc-fight-night-sandhagen-vs-font",
+    "year": "2023"
+  },
+  {
+    "id": 656,
+    "name": "UFC 291: Poirier vs. Gaethje 2",
+    "date": "2023-07-29",
+    "location": "Salt Lake City, Utah, USA",
+    "slug": "ufc-291-poirier-vs-gaethje-2",
+    "year": "2023"
+  },
+  {
+    "id": 655,
+    "name": "UFC Fight Night: Aspinall vs. Tybura",
+    "date": "2023-07-22",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-aspinall-vs-tybura",
+    "year": "2023"
+  },
+  {
+    "id": 654,
+    "name": "UFC Fight Night: Holm vs. Bueno Silva",
+    "date": "2023-07-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-holm-vs-bueno-silva",
+    "year": "2023"
+  },
+  {
+    "id": 653,
+    "name": "UFC 290: Volkanovski vs. Rodriguez",
+    "date": "2023-07-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-290-volkanovski-vs-rodriguez",
+    "year": "2023"
+  },
+  {
+    "id": 652,
+    "name": "UFC Fight Night: Strickland vs. Magomedov",
+    "date": "2023-07-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-strickland-vs-magomedov",
+    "year": "2023"
+  },
+  {
+    "id": 651,
+    "name": "UFC Fight Night: Emmett vs. Topuria",
+    "date": "2023-06-24",
+    "location": "Jacksonville, Florida, USA",
+    "slug": "ufc-fight-night-emmett-vs-topuria",
+    "year": "2023"
+  },
+  {
+    "id": 650,
+    "name": "UFC Fight Night: Vettori vs. Cannonier",
+    "date": "2023-06-17",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-vettori-vs-cannonier",
+    "year": "2023"
+  },
+  {
+    "id": 649,
+    "name": "UFC 289: Nunes vs. Aldana",
+    "date": "2023-06-10",
+    "location": "Vancouver, British Columbia, Canada",
+    "slug": "ufc-289-nunes-vs-aldana",
+    "year": "2023"
+  },
+  {
+    "id": 648,
+    "name": "UFC Fight Night: Kara-France vs. Albazi",
+    "date": "2023-06-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-kara-france-vs-albazi",
+    "year": "2023"
+  },
+  {
+    "id": 647,
+    "name": "UFC Fight Night: Dern vs. Hill",
+    "date": "2023-05-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dern-vs-hill",
+    "year": "2023"
+  },
+  {
+    "id": 646,
+    "name": "UFC Fight Night: Rozenstruik vs. Almeida",
+    "date": "2023-05-13",
+    "location": "Charlotte, North Carolina, USA",
+    "slug": "ufc-fight-night-rozenstruik-vs-almeida",
+    "year": "2023"
+  },
+  {
+    "id": 645,
+    "name": "UFC 288: Sterling vs. Cejudo",
+    "date": "2023-05-06",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-288-sterling-vs-cejudo",
+    "year": "2023"
+  },
+  {
+    "id": 644,
+    "name": "UFC Fight Night: Song vs. Simon",
+    "date": "2023-04-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-song-vs-simon",
+    "year": "2023"
+  },
+  {
+    "id": 643,
+    "name": "UFC Fight Night: Pavlovich vs. Blaydes",
+    "date": "2023-04-22",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-pavlovich-vs-blaydes",
+    "year": "2023"
+  },
+  {
+    "id": 642,
+    "name": "UFC Fight Night: Holloway vs. Allen",
+    "date": "2023-04-15",
+    "location": "Kansas City, Missouri, USA",
+    "slug": "ufc-fight-night-holloway-vs-allen",
+    "year": "2023"
+  },
+  {
+    "id": 641,
+    "name": "UFC 287: Pereira vs. Adesanya 2",
+    "date": "2023-04-08",
+    "location": "Miami, Florida, USA",
+    "slug": "ufc-287-pereira-vs-adesanya-2",
+    "year": "2023"
+  },
+  {
+    "id": 640,
+    "name": "UFC Fight Night: Vera vs. Sandhagen",
+    "date": "2023-03-25",
+    "location": "San Antonio, Texas, USA",
+    "slug": "ufc-fight-night-vera-vs-sandhagen",
+    "year": "2023"
+  },
+  {
+    "id": 639,
+    "name": "UFC 286: Edwards vs. Usman 3",
+    "date": "2023-03-18",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-286-edwards-vs-usman-3",
+    "year": "2023"
+  },
+  {
+    "id": 638,
+    "name": "UFC Fight Night: Yan vs. Dvalishvili",
+    "date": "2023-03-11",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-yan-vs-dvalishvili",
+    "year": "2023"
+  },
+  {
+    "id": 637,
+    "name": "UFC 285: Jones vs. Gane",
+    "date": "2023-03-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-285-jones-vs-gane",
+    "year": "2023"
+  },
+  {
+    "id": 636,
+    "name": "UFC Fight Night: Muniz vs. Allen",
+    "date": "2023-02-25",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-muniz-vs-allen",
+    "year": "2023"
+  },
+  {
+    "id": 635,
+    "name": "UFC Fight Night: Andrade vs. Blanchfield",
+    "date": "2023-02-18",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-andrade-vs-blanchfield",
+    "year": "2023"
+  },
+  {
+    "id": 634,
+    "name": "UFC 284: Makhachev vs. Volkanovski",
+    "date": "2023-02-11",
+    "location": "Perth, Western Australia, Australia",
+    "slug": "ufc-284-makhachev-vs-volkanovski",
+    "year": "2023"
+  },
+  {
+    "id": 633,
+    "name": "UFC Fight Night: Lewis vs. Spivac",
+    "date": "2023-02-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-lewis-vs-spivac",
+    "year": "2023"
+  },
+  {
+    "id": 632,
+    "name": "UFC 283: Teixeira vs. Hill",
+    "date": "2023-01-21",
+    "location": "Rio de Janeiro, Rio de Janeiro, Brazil",
+    "slug": "ufc-283-teixeira-vs-hill",
+    "year": "2023"
+  },
+  {
+    "id": 631,
+    "name": "UFC Fight Night: Strickland vs. Imavov",
+    "date": "2023-01-14",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-strickland-vs-imavov",
+    "year": "2023"
+  },
+  {
+    "id": 630,
+    "name": "UFC Fight Night: Cannonier vs. Strickland",
+    "date": "2022-12-17",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-cannonier-vs-strickland",
+    "year": "2022"
+  },
+  {
+    "id": 629,
+    "name": "UFC 282: Blachowicz vs. Ankalaev",
+    "date": "2022-12-10",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-282-blachowicz-vs-ankalaev",
+    "year": "2022"
+  },
+  {
+    "id": 628,
+    "name": "UFC Fight Night: Thompson vs. Holland",
+    "date": "2022-12-03",
+    "location": "Orlando, Florida, USA",
+    "slug": "ufc-fight-night-thompson-vs-holland",
+    "year": "2022"
+  },
+  {
+    "id": 627,
+    "name": "UFC Fight Night: Nzechukwu vs. Cutelaba",
+    "date": "2022-11-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-nzechukwu-vs-cutelaba",
+    "year": "2022"
+  },
+  {
+    "id": 626,
+    "name": "UFC 281: Adesanya vs. Pereira",
+    "date": "2022-11-12",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-281-adesanya-vs-pereira",
+    "year": "2022"
+  },
+  {
+    "id": 625,
+    "name": "UFC Fight Night: Rodriguez vs. Lemos",
+    "date": "2022-11-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-rodriguez-vs-lemos",
+    "year": "2022"
+  },
+  {
+    "id": 624,
+    "name": "UFC Fight Night: Kattar vs. Allen",
+    "date": "2022-10-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-kattar-vs-allen",
+    "year": "2022"
+  },
+  {
+    "id": 623,
+    "name": "UFC 280: Oliveira vs. Makhachev",
+    "date": "2022-10-22",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-280-oliveira-vs-makhachev",
+    "year": "2022"
+  },
+  {
+    "id": 622,
+    "name": "UFC Fight Night: Grasso vs. Araujo",
+    "date": "2022-10-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-grasso-vs-araujo",
+    "year": "2022"
+  },
+  {
+    "id": 621,
+    "name": "UFC Fight Night: Dern vs. Yan",
+    "date": "2022-10-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dern-vs-yan",
+    "year": "2022"
+  },
+  {
+    "id": 620,
+    "name": "UFC Fight Night: Sandhagen vs. Song",
+    "date": "2022-09-17",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-sandhagen-vs-song",
+    "year": "2022"
+  },
+  {
+    "id": 619,
+    "name": "UFC 279: Diaz vs. Ferguson",
+    "date": "2022-09-10",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-279-diaz-vs-ferguson",
+    "year": "2022"
+  },
+  {
+    "id": 618,
+    "name": "UFC Fight Night: Gane vs. Tuivasa",
+    "date": "2022-09-03",
+    "location": "Paris, Ile-de-France, France",
+    "slug": "ufc-fight-night-gane-vs-tuivasa",
+    "year": "2022"
+  },
+  {
+    "id": 617,
+    "name": "UFC 278: Usman vs. Edwards",
+    "date": "2022-08-20",
+    "location": "Salt Lake City, Utah, USA",
+    "slug": "ufc-278-usman-vs-edwards",
+    "year": "2022"
+  },
+  {
+    "id": 616,
+    "name": "UFC Fight Night: Vera vs. Cruz",
+    "date": "2022-08-13",
+    "location": "San Diego, California, USA",
+    "slug": "ufc-fight-night-vera-vs-cruz",
+    "year": "2022"
+  },
+  {
+    "id": 615,
+    "name": "UFC Fight Night: Santos vs. Hill",
+    "date": "2022-08-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-santos-vs-hill",
+    "year": "2022"
+  },
+  {
+    "id": 614,
+    "name": "UFC 277: Pena vs. Nunes 2",
+    "date": "2022-07-30",
+    "location": "Dallas, Texas, USA",
+    "slug": "ufc-277-pena-vs-nunes-2",
+    "year": "2022"
+  },
+  {
+    "id": 613,
+    "name": "UFC Fight Night: Blaydes vs. Aspinall",
+    "date": "2022-07-23",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-blaydes-vs-aspinall",
+    "year": "2022"
+  },
+  {
+    "id": 612,
+    "name": "UFC Fight Night: Ortega vs. Rodriguez",
+    "date": "2022-07-16",
+    "location": "Elmont, New York, USA",
+    "slug": "ufc-fight-night-ortega-vs-rodriguez",
+    "year": "2022"
+  },
+  {
+    "id": 611,
+    "name": "UFC Fight Night: Dos Anjos vs. Fiziev",
+    "date": "2022-07-09",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dos-anjos-vs-fiziev",
+    "year": "2022"
+  },
+  {
+    "id": 610,
+    "name": "UFC 276: Adesanya vs. Cannonier",
+    "date": "2022-07-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-276-adesanya-vs-cannonier",
+    "year": "2022"
+  },
+  {
+    "id": 609,
+    "name": "UFC Fight Night: Tsarukyan vs. Gamrot",
+    "date": "2022-06-25",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-tsarukyan-vs-gamrot",
+    "year": "2022"
+  },
+  {
+    "id": 608,
+    "name": "UFC Fight Night: Kattar vs. Emmett",
+    "date": "2022-06-18",
+    "location": "Austin, Texas, USA",
+    "slug": "ufc-fight-night-kattar-vs-emmett",
+    "year": "2022"
+  },
+  {
+    "id": 607,
+    "name": "UFC 275: Teixeira vs. Prochazka",
+    "date": "2022-06-11",
+    "location": "Kallang, Singapore",
+    "slug": "ufc-275-teixeira-vs-prochazka",
+    "year": "2022"
+  },
+  {
+    "id": 606,
+    "name": "UFC Fight Night: Volkov vs. Rozenstruik",
+    "date": "2022-06-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-volkov-vs-rozenstruik",
+    "year": "2022"
+  },
+  {
+    "id": 605,
+    "name": "UFC Fight Night: Holm vs. Vieira",
+    "date": "2022-05-21",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-holm-vs-vieira",
+    "year": "2022"
+  },
+  {
+    "id": 604,
+    "name": "UFC Fight Night: Blachowicz vs. Rakic",
+    "date": "2022-05-14",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-blachowicz-vs-rakic",
+    "year": "2022"
+  },
+  {
+    "id": 603,
+    "name": "UFC 274: Oliveira vs. Gaethje",
+    "date": "2022-05-07",
+    "location": "Phoenix, Arizona, USA",
+    "slug": "ufc-274-oliveira-vs-gaethje",
+    "year": "2022"
+  },
+  {
+    "id": 602,
+    "name": "UFC Fight Night: Font vs. Vera",
+    "date": "2022-04-30",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-font-vs-vera",
+    "year": "2022"
+  },
+  {
+    "id": 601,
+    "name": "UFC Fight Night: Lemos vs. Andrade",
+    "date": "2022-04-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-lemos-vs-andrade",
+    "year": "2022"
+  },
+  {
+    "id": 600,
+    "name": "UFC Fight Night: Luque vs. Muhammad",
+    "date": "2022-04-16",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-luque-vs-muhammad",
+    "year": "2022"
+  },
+  {
+    "id": 599,
+    "name": "UFC 273: Volkanovski vs. The Korean Zombie",
+    "date": "2022-04-09",
+    "location": "Jacksonville, Florida, USA",
+    "slug": "ufc-273-volkanovski-vs-the-korean-zombie",
+    "year": "2022"
+  },
+  {
+    "id": 598,
+    "name": "UFC Fight Night: Blaydes vs. Daukaus",
+    "date": "2022-03-26",
+    "location": "Columbus, Ohio, USA",
+    "slug": "ufc-fight-night-blaydes-vs-daukaus",
+    "year": "2022"
+  },
+  {
+    "id": 597,
+    "name": "UFC Fight Night: Volkov vs. Aspinall",
+    "date": "2022-03-19",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-volkov-vs-aspinall",
+    "year": "2022"
+  },
+  {
+    "id": 596,
+    "name": "UFC Fight Night: Santos vs. Ankalaev",
+    "date": "2022-03-12",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-santos-vs-ankalaev",
+    "year": "2022"
+  },
+  {
+    "id": 595,
+    "name": "UFC 272: Covington vs. Masvidal",
+    "date": "2022-03-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-272-covington-vs-masvidal",
+    "year": "2022"
+  },
+  {
+    "id": 594,
+    "name": "UFC Fight Night: Makhachev vs. Green",
+    "date": "2022-02-26",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-makhachev-vs-green",
+    "year": "2022"
+  },
+  {
+    "id": 593,
+    "name": "UFC Fight Night: Walker vs. Hill",
+    "date": "2022-02-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-walker-vs-hill",
+    "year": "2022"
+  },
+  {
+    "id": 592,
+    "name": "UFC 271: Adesanya vs. Whittaker 2",
+    "date": "2022-02-12",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-271-adesanya-vs-whittaker-2",
+    "year": "2022"
+  },
+  {
+    "id": 591,
+    "name": "UFC Fight Night: Hermansson vs. Strickland",
+    "date": "2022-02-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-hermansson-vs-strickland",
+    "year": "2022"
+  },
+  {
+    "id": 590,
+    "name": "UFC 270: Ngannou vs. Gane",
+    "date": "2022-01-22",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-270-ngannou-vs-gane",
+    "year": "2022"
+  },
+  {
+    "id": 589,
+    "name": "UFC Fight Night: Kattar vs. Chikadze",
+    "date": "2022-01-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-kattar-vs-chikadze",
+    "year": "2022"
+  },
+  {
+    "id": 588,
+    "name": "UFC Fight Night: Lewis vs. Daukaus",
+    "date": "2021-12-18",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-lewis-vs-daukaus",
+    "year": "2021"
+  },
+  {
+    "id": 587,
+    "name": "UFC 269: Oliveira vs. Poirier",
+    "date": "2021-12-11",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-269-oliveira-vs-poirier",
+    "year": "2021"
+  },
+  {
+    "id": 586,
+    "name": "UFC Fight Night: Font vs. Aldo",
+    "date": "2021-12-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-font-vs-aldo",
+    "year": "2021"
+  },
+  {
+    "id": 585,
+    "name": "UFC Fight Night: Vieira vs. Tate",
+    "date": "2021-11-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-vieira-vs-tate",
+    "year": "2021"
+  },
+  {
+    "id": 584,
+    "name": "UFC Fight Night: Holloway vs. Rodriguez",
+    "date": "2021-11-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-holloway-vs-rodriguez",
+    "year": "2021"
+  },
+  {
+    "id": 583,
+    "name": "UFC 268: Usman vs. Covington 2",
+    "date": "2021-11-06",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-268-usman-vs-covington-2",
+    "year": "2021"
+  },
+  {
+    "id": 582,
+    "name": "UFC 267: Blachowicz vs. Teixeira",
+    "date": "2021-10-30",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-267-blachowicz-vs-teixeira",
+    "year": "2021"
+  },
+  {
+    "id": 581,
+    "name": "UFC Fight Night: Costa vs. Vettori",
+    "date": "2021-10-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-costa-vs-vettori",
+    "year": "2021"
+  },
+  {
+    "id": 580,
+    "name": "UFC Fight Night: Ladd vs. Dumont",
+    "date": "2021-10-16",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-ladd-vs-dumont",
+    "year": "2021"
+  },
+  {
+    "id": 579,
+    "name": "UFC Fight Night: Dern vs. Rodriguez",
+    "date": "2021-10-09",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dern-vs-rodriguez",
+    "year": "2021"
+  },
+  {
+    "id": 578,
+    "name": "UFC Fight Night: Santos vs. Walker",
+    "date": "2021-10-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-santos-vs-walker",
+    "year": "2021"
+  },
+  {
+    "id": 577,
+    "name": "UFC 266: Volkanovski vs. Ortega",
+    "date": "2021-09-25",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-266-volkanovski-vs-ortega",
+    "year": "2021"
+  },
+  {
+    "id": 576,
+    "name": "UFC Fight Night: Smith vs. Spann",
+    "date": "2021-09-18",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-smith-vs-spann",
+    "year": "2021"
+  },
+  {
+    "id": 575,
+    "name": "UFC Fight Night: Brunson vs. Till",
+    "date": "2021-09-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-brunson-vs-till",
+    "year": "2021"
+  },
+  {
+    "id": 574,
+    "name": "UFC Fight Night: Barboza vs. Chikadze",
+    "date": "2021-08-28",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-barboza-vs-chikadze",
+    "year": "2021"
+  },
+  {
+    "id": 573,
+    "name": "UFC Fight Night: Cannonier vs. Gastelum",
+    "date": "2021-08-21",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-cannonier-vs-gastelum",
+    "year": "2021"
+  },
+  {
+    "id": 572,
+    "name": "UFC 265: Lewis vs. Gane",
+    "date": "2021-08-07",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-265-lewis-vs-gane",
+    "year": "2021"
+  },
+  {
+    "id": 571,
+    "name": "UFC Fight Night: Hall vs. Strickland",
+    "date": "2021-07-31",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-hall-vs-strickland",
+    "year": "2021"
+  },
+  {
+    "id": 570,
+    "name": "UFC Fight Night: Sandhagen vs. Dillashaw",
+    "date": "2021-07-24",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-sandhagen-vs-dillashaw",
+    "year": "2021"
+  },
+  {
+    "id": 569,
+    "name": "UFC Fight Night: Makhachev vs. Moises",
+    "date": "2021-07-17",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-makhachev-vs-moises",
+    "year": "2021"
+  },
+  {
+    "id": 568,
+    "name": "UFC 264: Poirier vs. McGregor 3",
+    "date": "2021-07-10",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-264-poirier-vs-mcgregor-3",
+    "year": "2021"
+  },
+  {
+    "id": 567,
+    "name": "UFC Fight Night: Gane vs. Volkov",
+    "date": "2021-06-26",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-gane-vs-volkov",
+    "year": "2021"
+  },
+  {
+    "id": 566,
+    "name": "UFC Fight Night: Jung vs. Ige",
+    "date": "2021-06-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-jung-vs-ige",
+    "year": "2021"
+  },
+  {
+    "id": 565,
+    "name": "UFC 263: Adesanya vs. Vettori 2",
+    "date": "2021-06-12",
+    "location": "Glendale, Arizona, USA",
+    "slug": "ufc-263-adesanya-vs-vettori-2",
+    "year": "2021"
+  },
+  {
+    "id": 564,
+    "name": "UFC Fight Night: Rozenstruik vs. Sakai",
+    "date": "2021-06-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-rozenstruik-vs-sakai",
+    "year": "2021"
+  },
+  {
+    "id": 563,
+    "name": "UFC Fight Night: Font vs. Garbrandt",
+    "date": "2021-05-22",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-font-vs-garbrandt",
+    "year": "2021"
+  },
+  {
+    "id": 562,
+    "name": "UFC 262: Oliveira vs. Chandler",
+    "date": "2021-05-15",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-262-oliveira-vs-chandler",
+    "year": "2021"
+  },
+  {
+    "id": 561,
+    "name": "UFC Fight Night: Rodriguez vs. Waterson",
+    "date": "2021-05-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-rodriguez-vs-waterson",
+    "year": "2021"
+  },
+  {
+    "id": 560,
+    "name": "UFC Fight Night: Reyes vs. Prochazka",
+    "date": "2021-05-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-reyes-vs-prochazka",
+    "year": "2021"
+  },
+  {
+    "id": 559,
+    "name": "UFC 261: Usman vs. Masvidal 2",
+    "date": "2021-04-24",
+    "location": "Jacksonville, Florida, USA",
+    "slug": "ufc-261-usman-vs-masvidal-2",
+    "year": "2021"
+  },
+  {
+    "id": 558,
+    "name": "UFC Fight Night: Whittaker vs. Gastelum",
+    "date": "2021-04-17",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-whittaker-vs-gastelum",
+    "year": "2021"
+  },
+  {
+    "id": 557,
+    "name": "UFC Fight Night: Vettori vs. Holland",
+    "date": "2021-04-10",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-vettori-vs-holland",
+    "year": "2021"
+  },
+  {
+    "id": 556,
+    "name": "UFC 260: Miocic vs. Ngannou",
+    "date": "2021-03-27",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-260-miocic-vs-ngannou",
+    "year": "2021"
+  },
+  {
+    "id": 555,
+    "name": "UFC Fight Night: Brunson vs. Holland",
+    "date": "2021-03-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-brunson-vs-holland",
+    "year": "2021"
+  },
+  {
+    "id": 554,
+    "name": "UFC Fight Night: Edwards vs. Muhammad",
+    "date": "2021-03-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-edwards-vs-muhammad",
+    "year": "2021"
+  },
+  {
+    "id": 553,
+    "name": "UFC 259: Blachowicz vs. Adesanya",
+    "date": "2021-03-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-259-blachowicz-vs-adesanya",
+    "year": "2021"
+  },
+  {
+    "id": 552,
+    "name": "UFC Fight Night: Rozenstruik vs. Gane",
+    "date": "2021-02-27",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-rozenstruik-vs-gane",
+    "year": "2021"
+  },
+  {
+    "id": 551,
+    "name": "UFC Fight Night: Blaydes vs. Lewis",
+    "date": "2021-02-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-blaydes-vs-lewis",
+    "year": "2021"
+  },
+  {
+    "id": 550,
+    "name": "UFC 258: Usman vs. Burns",
+    "date": "2021-02-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-258-usman-vs-burns",
+    "year": "2021"
+  },
+  {
+    "id": 549,
+    "name": "UFC Fight Night: Overeem vs. Volkov",
+    "date": "2021-02-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-overeem-vs-volkov",
+    "year": "2021"
+  },
+  {
+    "id": 548,
+    "name": "UFC 257: Poirier vs. McGregor",
+    "date": "2021-01-23",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-257-poirier-vs-mcgregor",
+    "year": "2021"
+  },
+  {
+    "id": 547,
+    "name": "UFC Fight Night: Chiesa vs. Magny",
+    "date": "2021-01-20",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-chiesa-vs-magny",
+    "year": "2021"
+  },
+  {
+    "id": 546,
+    "name": "UFC Fight Night: Holloway vs. Kattar",
+    "date": "2021-01-16",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-holloway-vs-kattar",
+    "year": "2021"
+  },
+  {
+    "id": 545,
+    "name": "UFC Fight Night: Thompson vs. Neal",
+    "date": "2020-12-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-thompson-vs-neal",
+    "year": "2020"
+  },
+  {
+    "id": 544,
+    "name": "UFC 256: Figueiredo vs. Moreno",
+    "date": "2020-12-12",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-256-figueiredo-vs-moreno",
+    "year": "2020"
+  },
+  {
+    "id": 543,
+    "name": "UFC Fight Night: Hermansson vs. Vettori",
+    "date": "2020-12-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-hermansson-vs-vettori",
+    "year": "2020"
+  },
+  {
+    "id": 542,
+    "name": "UFC Fight Night: Smith vs. Clark",
+    "date": "2020-11-28",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-smith-vs-clark",
+    "year": "2020"
+  },
+  {
+    "id": 541,
+    "name": "UFC 255: Figueiredo vs. Perez",
+    "date": "2020-11-21",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-255-figueiredo-vs-perez",
+    "year": "2020"
+  },
+  {
+    "id": 540,
+    "name": "UFC Fight Night: Felder vs. Dos Anjos",
+    "date": "2020-11-14",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-felder-vs-dos-anjos",
+    "year": "2020"
+  },
+  {
+    "id": 539,
+    "name": "UFC Fight Night: Santos vs. Teixeira",
+    "date": "2020-11-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-santos-vs-teixeira",
+    "year": "2020"
+  },
+  {
+    "id": 538,
+    "name": "UFC Fight Night: Hall vs. Silva",
+    "date": "2020-10-31",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-hall-vs-silva",
+    "year": "2020"
+  },
+  {
+    "id": 537,
+    "name": "UFC 254: Khabib vs. Gaethje",
+    "date": "2020-10-24",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-254-khabib-vs-gaethje",
+    "year": "2020"
+  },
+  {
+    "id": 536,
+    "name": "UFC Fight Night: Ortega vs. The Korean Zombie",
+    "date": "2020-10-17",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-ortega-vs-the-korean-zombie",
+    "year": "2020"
+  },
+  {
+    "id": 535,
+    "name": "UFC Fight Night: Moraes vs. Sandhagen",
+    "date": "2020-10-10",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-moraes-vs-sandhagen",
+    "year": "2020"
+  },
+  {
+    "id": 534,
+    "name": "UFC Fight Night: Holm vs. Aldana",
+    "date": "2020-10-03",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-holm-vs-aldana",
+    "year": "2020"
+  },
+  {
+    "id": 533,
+    "name": "UFC 253: Adesanya vs. Costa",
+    "date": "2020-09-26",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-253-adesanya-vs-costa",
+    "year": "2020"
+  },
+  {
+    "id": 532,
+    "name": "UFC Fight Night: Covington vs. Woodley",
+    "date": "2020-09-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-covington-vs-woodley",
+    "year": "2020"
+  },
+  {
+    "id": 531,
+    "name": "UFC Fight Night: Waterson vs. Hill",
+    "date": "2020-09-12",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-waterson-vs-hill",
+    "year": "2020"
+  },
+  {
+    "id": 530,
+    "name": "UFC Fight Night: Overeem vs. Sakai",
+    "date": "2020-09-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-overeem-vs-sakai",
+    "year": "2020"
+  },
+  {
+    "id": 529,
+    "name": "UFC Fight Night: Smith vs. Rakic",
+    "date": "2020-08-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-smith-vs-rakic",
+    "year": "2020"
+  },
+  {
+    "id": 528,
+    "name": "UFC Fight Night: Munhoz vs. Edgar",
+    "date": "2020-08-22",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-munhoz-vs-edgar",
+    "year": "2020"
+  },
+  {
+    "id": 527,
+    "name": "UFC 252: Miocic vs. Cormier 3",
+    "date": "2020-08-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-252-miocic-vs-cormier-3",
+    "year": "2020"
+  },
+  {
+    "id": 526,
+    "name": "UFC Fight Night: Lewis vs. Oleinik",
+    "date": "2020-08-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-lewis-vs-oleinik",
+    "year": "2020"
+  },
+  {
+    "id": 525,
+    "name": "UFC Fight Night: Brunson vs. Shahbazyan",
+    "date": "2020-08-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-brunson-vs-shahbazyan",
+    "year": "2020"
+  },
+  {
+    "id": 524,
+    "name": "UFC Fight Night: Whittaker vs. Till",
+    "date": "2020-07-25",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-whittaker-vs-till",
+    "year": "2020"
+  },
+  {
+    "id": 523,
+    "name": "UFC Fight Night: Figueiredo vs. Benavidez 2",
+    "date": "2020-07-18",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-figueiredo-vs-benavidez-2",
+    "year": "2020"
+  },
+  {
+    "id": 522,
+    "name": "UFC Fight Night: Kattar vs. Ige",
+    "date": "2020-07-15",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-kattar-vs-ige",
+    "year": "2020"
+  },
+  {
+    "id": 521,
+    "name": "UFC 251: Usman vs. Masvidal",
+    "date": "2020-07-11",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-251-usman-vs-masvidal",
+    "year": "2020"
+  },
+  {
+    "id": 520,
+    "name": "UFC Fight Night: Poirier vs. Hooker",
+    "date": "2020-06-27",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-poirier-vs-hooker",
+    "year": "2020"
+  },
+  {
+    "id": 519,
+    "name": "UFC Fight Night: Blaydes vs. Volkov",
+    "date": "2020-06-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-blaydes-vs-volkov",
+    "year": "2020"
+  },
+  {
+    "id": 518,
+    "name": "UFC Fight Night: Eye vs. Calvillo",
+    "date": "2020-06-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-eye-vs-calvillo",
+    "year": "2020"
+  },
+  {
+    "id": 517,
+    "name": "UFC 250: Nunes vs. Spencer",
+    "date": "2020-06-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-250-nunes-vs-spencer",
+    "year": "2020"
+  },
+  {
+    "id": 516,
+    "name": "UFC Fight Night: Woodley vs. Burns",
+    "date": "2020-05-30",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-woodley-vs-burns",
+    "year": "2020"
+  },
+  {
+    "id": 515,
+    "name": "UFC Fight Night: Overeem vs. Harris",
+    "date": "2020-05-16",
+    "location": "Jacksonville, Florida, USA",
+    "slug": "ufc-fight-night-overeem-vs-harris",
+    "year": "2020"
+  },
+  {
+    "id": 514,
+    "name": "UFC Fight Night: Smith vs. Teixeira",
+    "date": "2020-05-13",
+    "location": "Jacksonville, Florida, USA",
+    "slug": "ufc-fight-night-smith-vs-teixeira",
+    "year": "2020"
+  },
+  {
+    "id": 513,
+    "name": "UFC 249: Ferguson vs. Gaethje",
+    "date": "2020-05-09",
+    "location": "Jacksonville, Florida, USA",
+    "slug": "ufc-249-ferguson-vs-gaethje",
+    "year": "2020"
+  },
+  {
+    "id": 512,
+    "name": "UFC Fight Night: Lee vs. Oliveira",
+    "date": "2020-03-14",
+    "location": "Brasilia, Distrito Federal, Brazil",
+    "slug": "ufc-fight-night-lee-vs-oliveira",
+    "year": "2020"
+  },
+  {
+    "id": 511,
+    "name": "UFC 248: Adesanya vs. Romero",
+    "date": "2020-03-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-248-adesanya-vs-romero",
+    "year": "2020"
+  },
+  {
+    "id": 510,
+    "name": "UFC Fight Night: Benavidez vs. Figueiredo",
+    "date": "2020-02-29",
+    "location": "Norfolk, Virginia, USA",
+    "slug": "ufc-fight-night-benavidez-vs-figueiredo",
+    "year": "2020"
+  },
+  {
+    "id": 509,
+    "name": "UFC Fight Night: Felder vs. Hooker",
+    "date": "2020-02-22",
+    "location": "Auckland, New Zealand",
+    "slug": "ufc-fight-night-felder-vs-hooker",
+    "year": "2020"
+  },
+  {
+    "id": 508,
+    "name": "UFC Fight Night: Anderson vs. Blachowicz",
+    "date": "2020-02-15",
+    "location": "Rio Rancho, New Mexico, USA",
+    "slug": "ufc-fight-night-anderson-vs-blachowicz",
+    "year": "2020"
+  },
+  {
+    "id": 507,
+    "name": "UFC 247: Jones vs. Reyes",
+    "date": "2020-02-08",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-247-jones-vs-reyes",
+    "year": "2020"
+  },
+  {
+    "id": 506,
+    "name": "UFC Fight Night: Blaydes vs. Dos Santos",
+    "date": "2020-01-25",
+    "location": "Raleigh, North Carolina, USA",
+    "slug": "ufc-fight-night-blaydes-vs-dos-santos",
+    "year": "2020"
+  },
+  {
+    "id": 505,
+    "name": "UFC 246: McGregor vs. Cowboy",
+    "date": "2020-01-18",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-246-mcgregor-vs-cowboy",
+    "year": "2020"
+  },
+  {
+    "id": 504,
+    "name": "UFC Fight Night: Edgar vs. The Korean Zombie",
+    "date": "2019-12-21",
+    "location": "Busan, South Korea",
+    "slug": "ufc-fight-night-edgar-vs-the-korean-zombie",
+    "year": "2019"
+  },
+  {
+    "id": 503,
+    "name": "UFC 245: Usman vs. Covington",
+    "date": "2019-12-14",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-245-usman-vs-covington",
+    "year": "2019"
+  },
+  {
+    "id": 502,
+    "name": "UFC Fight Night: Overeem vs. Rozenstruik",
+    "date": "2019-12-07",
+    "location": "Washington, DC, USA",
+    "slug": "ufc-fight-night-overeem-vs-rozenstruik",
+    "year": "2019"
+  },
+  {
+    "id": 501,
+    "name": "UFC Fight Night: Blachowicz vs. Jacare",
+    "date": "2019-11-16",
+    "location": "Sao Paulo, Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-blachowicz-vs-jacare",
+    "year": "2019"
+  },
+  {
+    "id": 500,
+    "name": "UFC Fight Night: Zabit vs. Kattar",
+    "date": "2019-11-09",
+    "location": "Moscow, Moscow, Russia",
+    "slug": "ufc-fight-night-zabit-vs-kattar",
+    "year": "2019"
+  },
+  {
+    "id": 499,
+    "name": "UFC 244: Masvidal vs. Diaz",
+    "date": "2019-11-02",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-244-masvidal-vs-diaz",
+    "year": "2019"
+  },
+  {
+    "id": 498,
+    "name": "UFC Fight Night: Maia vs. Askren",
+    "date": "2019-10-26",
+    "location": "Kallang, Singapore",
+    "slug": "ufc-fight-night-maia-vs-askren",
+    "year": "2019"
+  },
+  {
+    "id": 497,
+    "name": "UFC Fight Night: Reyes vs. Weidman",
+    "date": "2019-10-18",
+    "location": "Boston, Massachusetts, USA",
+    "slug": "ufc-fight-night-reyes-vs-weidman",
+    "year": "2019"
+  },
+  {
+    "id": 496,
+    "name": "UFC Fight Night: Joanna vs. Waterson",
+    "date": "2019-10-12",
+    "location": "Tampa, Florida, USA",
+    "slug": "ufc-fight-night-joanna-vs-waterson",
+    "year": "2019"
+  },
+  {
+    "id": 495,
+    "name": "UFC 243: Whittaker vs. Adesanya",
+    "date": "2019-10-05",
+    "location": "Melbourne, Victoria, Australia",
+    "slug": "ufc-243-whittaker-vs-adesanya",
+    "year": "2019"
+  },
+  {
+    "id": 494,
+    "name": "UFC Fight Night: Hermansson vs. Cannonier",
+    "date": "2019-09-28",
+    "location": "Copenhagen, Denmark",
+    "slug": "ufc-fight-night-hermansson-vs-cannonier",
+    "year": "2019"
+  },
+  {
+    "id": 493,
+    "name": "UFC Fight Night: Rodriguez vs. Stephens",
+    "date": "2019-09-21",
+    "location": "Mexico City, Distrito Federal, Mexico",
+    "slug": "ufc-fight-night-rodriguez-vs-stephens",
+    "year": "2019"
+  },
+  {
+    "id": 492,
+    "name": "UFC Fight Night: Cowboy vs. Gaethje",
+    "date": "2019-09-14",
+    "location": "Vancouver, British Columbia, Canada",
+    "slug": "ufc-fight-night-cowboy-vs-gaethje",
+    "year": "2019"
+  },
+  {
+    "id": 491,
+    "name": "UFC 242: Khabib vs. Poirier",
+    "date": "2019-09-07",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-242-khabib-vs-poirier",
+    "year": "2019"
+  },
+  {
+    "id": 490,
+    "name": "UFC Fight Night: Andrade vs. Zhang",
+    "date": "2019-08-31",
+    "location": "Shenzhen, Guangdong, China",
+    "slug": "ufc-fight-night-andrade-vs-zhang",
+    "year": "2019"
+  },
+  {
+    "id": 489,
+    "name": "UFC 241: Cormier vs. Miocic 2",
+    "date": "2019-08-17",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-241-cormier-vs-miocic-2",
+    "year": "2019"
+  },
+  {
+    "id": 488,
+    "name": "UFC Fight Night: Shevchenko vs. Carmouche 2",
+    "date": "2019-08-10",
+    "location": "Montevideo, Uruguay",
+    "slug": "ufc-fight-night-shevchenko-vs-carmouche-2",
+    "year": "2019"
+  },
+  {
+    "id": 487,
+    "name": "UFC Fight Night: Covington vs. Lawler",
+    "date": "2019-08-03",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-fight-night-covington-vs-lawler",
+    "year": "2019"
+  },
+  {
+    "id": 486,
+    "name": "UFC 240: Holloway vs. Edgar",
+    "date": "2019-07-27",
+    "location": "Edmonton, Alberta, Canada",
+    "slug": "ufc-240-holloway-vs-edgar",
+    "year": "2019"
+  },
+  {
+    "id": 485,
+    "name": "UFC Fight Night: Dos Anjos vs. Edwards",
+    "date": "2019-07-20",
+    "location": "San Antonio, Texas, USA",
+    "slug": "ufc-fight-night-dos-anjos-vs-edwards",
+    "year": "2019"
+  },
+  {
+    "id": 484,
+    "name": "UFC Fight Night: De Randamie vs. Ladd",
+    "date": "2019-07-13",
+    "location": "Sacramento, California, USA",
+    "slug": "ufc-fight-night-de-randamie-vs-ladd",
+    "year": "2019"
+  },
+  {
+    "id": 483,
+    "name": "UFC 239: Jones vs. Santos",
+    "date": "2019-07-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-239-jones-vs-santos",
+    "year": "2019"
+  },
+  {
+    "id": 482,
+    "name": "UFC Fight Night: Ngannou vs. Dos Santos",
+    "date": "2019-06-29",
+    "location": "Minneapolis, Minnesota, USA",
+    "slug": "ufc-fight-night-ngannou-vs-dos-santos",
+    "year": "2019"
+  },
+  {
+    "id": 481,
+    "name": "UFC Fight Night: Moicano vs. The Korean Zombie",
+    "date": "2019-06-22",
+    "location": "Greenville, South Carolina, USA",
+    "slug": "ufc-fight-night-moicano-vs-the-korean-zombie",
+    "year": "2019"
+  },
+  {
+    "id": 480,
+    "name": "UFC 238: Cejudo vs. Moraes",
+    "date": "2019-06-08",
+    "location": "Chicago, Illinois, USA",
+    "slug": "ufc-238-cejudo-vs-moraes",
+    "year": "2019"
+  },
+  {
+    "id": 479,
+    "name": "UFC Fight Night: Gustafsson vs. Smith",
+    "date": "2019-06-01",
+    "location": "Stockholm, Sweden",
+    "slug": "ufc-fight-night-gustafsson-vs-smith",
+    "year": "2019"
+  },
+  {
+    "id": 478,
+    "name": "UFC Fight Night: Dos Anjos vs. Lee",
+    "date": "2019-05-18",
+    "location": "Rochester, New York, USA",
+    "slug": "ufc-fight-night-dos-anjos-vs-lee",
+    "year": "2019"
+  },
+  {
+    "id": 477,
+    "name": "UFC 237: Namajunas vs. Andrade",
+    "date": "2019-05-11",
+    "location": "Rio de Janeiro, Rio de Janeiro, Brazil",
+    "slug": "ufc-237-namajunas-vs-andrade",
+    "year": "2019"
+  },
+  {
+    "id": 476,
+    "name": "UFC Fight Night: Iaquinta vs. Cowboy",
+    "date": "2019-05-04",
+    "location": "Ottawa, Ontario, Canada",
+    "slug": "ufc-fight-night-iaquinta-vs-cowboy",
+    "year": "2019"
+  },
+  {
+    "id": 475,
+    "name": "UFC Fight Night: Jacare vs. Hermansson",
+    "date": "2019-04-27",
+    "location": "Sunrise, Florida, USA",
+    "slug": "ufc-fight-night-jacare-vs-hermansson",
+    "year": "2019"
+  },
+  {
+    "id": 474,
+    "name": "UFC Fight Night: Overeem vs. Oleinik",
+    "date": "2019-04-20",
+    "location": "Saint Petersburg, Saint Petersburg, Russia",
+    "slug": "ufc-fight-night-overeem-vs-oleinik",
+    "year": "2019"
+  },
+  {
+    "id": 473,
+    "name": "UFC 236: Holloway vs. Poirier 2",
+    "date": "2019-04-13",
+    "location": "Atlanta, Georgia, USA",
+    "slug": "ufc-236-holloway-vs-poirier-2",
+    "year": "2019"
+  },
+  {
+    "id": 472,
+    "name": "UFC Fight Night: Barboza vs. Gaethje",
+    "date": "2019-03-30",
+    "location": "Philadelphia, Pennsylvania, USA",
+    "slug": "ufc-fight-night-barboza-vs-gaethje",
+    "year": "2019"
+  },
+  {
+    "id": 471,
+    "name": "UFC Fight Night: Thompson vs. Pettis",
+    "date": "2019-03-23",
+    "location": "Nashville, Tennessee, USA",
+    "slug": "ufc-fight-night-thompson-vs-pettis",
+    "year": "2019"
+  },
+  {
+    "id": 470,
+    "name": "UFC Fight Night: Till vs. Masvidal",
+    "date": "2019-03-16",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-till-vs-masvidal",
+    "year": "2019"
+  },
+  {
+    "id": 469,
+    "name": "UFC Fight Night: Lewis vs. Dos Santos",
+    "date": "2019-03-09",
+    "location": "Wichita, Kansas, USA",
+    "slug": "ufc-fight-night-lewis-vs-dos-santos",
+    "year": "2019"
+  },
+  {
+    "id": 468,
+    "name": "UFC 235: Jones vs. Smith",
+    "date": "2019-03-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-235-jones-vs-smith",
+    "year": "2019"
+  },
+  {
+    "id": 467,
+    "name": "UFC Fight Night: Blachowicz vs. Santos",
+    "date": "2019-02-23",
+    "location": "Prague, Czech Republic",
+    "slug": "ufc-fight-night-blachowicz-vs-santos",
+    "year": "2019"
+  },
+  {
+    "id": 466,
+    "name": "UFC Fight Night: Ngannou vs. Velasquez",
+    "date": "2019-02-17",
+    "location": "Phoenix, Arizona, USA",
+    "slug": "ufc-fight-night-ngannou-vs-velasquez",
+    "year": "2019"
+  },
+  {
+    "id": 465,
+    "name": "UFC 234: Adesanya vs. Silva",
+    "date": "2019-02-09",
+    "location": "Melbourne, Victoria, Australia",
+    "slug": "ufc-234-adesanya-vs-silva",
+    "year": "2019"
+  },
+  {
+    "id": 464,
+    "name": "UFC Fight Night: Assuncao vs. Moraes 2",
+    "date": "2019-02-02",
+    "location": "Fortaleza, Ceara, Brazil",
+    "slug": "ufc-fight-night-assuncao-vs-moraes-2",
+    "year": "2019"
+  },
+  {
+    "id": 463,
+    "name": "UFC Fight Night: Cejudo vs. Dillashaw",
+    "date": "2019-01-19",
+    "location": "Brooklyn, New York, USA",
+    "slug": "ufc-fight-night-cejudo-vs-dillashaw",
+    "year": "2019"
+  },
+  {
+    "id": 462,
+    "name": "UFC 232: Jones vs. Gustafsson 2",
+    "date": "2018-12-29",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-232-jones-vs-gustafsson-2",
+    "year": "2018"
+  },
+  {
+    "id": 461,
+    "name": "UFC Fight Night: Lee vs. Iaquinta",
+    "date": "2018-12-15",
+    "location": "Milwaukee, Wisconsin, USA",
+    "slug": "ufc-fight-night-lee-vs-iaquinta",
+    "year": "2018"
+  },
+  {
+    "id": 460,
+    "name": "UFC 231: Holloway vs. Ortega",
+    "date": "2018-12-08",
+    "location": "Toronto, Ontario, Canada",
+    "slug": "ufc-231-holloway-vs-ortega",
+    "year": "2018"
+  },
+  {
+    "id": 459,
+    "name": "UFC Fight Night: Dos Santos vs. Tuivasa",
+    "date": "2018-12-01",
+    "location": "Adelaide, South Australia, Australia",
+    "slug": "ufc-fight-night-dos-santos-vs-tuivasa",
+    "year": "2018"
+  },
+  {
+    "id": 458,
+    "name": "The Ultimate Fighter: Heavy Hitters Finale",
+    "date": "2018-11-30",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-heavy-hitters-finale",
+    "year": "2018"
+  },
+  {
+    "id": 457,
+    "name": "UFC Fight Night: Blaydes vs. Ngannou 2",
+    "date": "2018-11-24",
+    "location": "Beijing, China",
+    "slug": "ufc-fight-night-blaydes-vs-ngannou-2",
+    "year": "2018"
+  },
+  {
+    "id": 456,
+    "name": "UFC Fight Night: Magny vs. Ponzinibbio",
+    "date": "2018-11-17",
+    "location": "Buenos Aires, Buenos Aires, Argentina",
+    "slug": "ufc-fight-night-magny-vs-ponzinibbio",
+    "year": "2018"
+  },
+  {
+    "id": 455,
+    "name": "UFC Fight Night: Korean Zombie vs. Rodriguez",
+    "date": "2018-11-10",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-fight-night-korean-zombie-vs-rodriguez",
+    "year": "2018"
+  },
+  {
+    "id": 454,
+    "name": "UFC 230: Cormier vs. Lewis",
+    "date": "2018-11-03",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-230-cormier-vs-lewis",
+    "year": "2018"
+  },
+  {
+    "id": 453,
+    "name": "UFC Fight Night: Oezdemir vs. Smith",
+    "date": "2018-10-27",
+    "location": "Moncton, New Brunswick, Canada",
+    "slug": "ufc-fight-night-oezdemir-vs-smith",
+    "year": "2018"
+  },
+  {
+    "id": 452,
+    "name": "UFC 229: Khabib vs. McGregor",
+    "date": "2018-10-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-229-khabib-vs-mcgregor",
+    "year": "2018"
+  },
+  {
+    "id": 451,
+    "name": "UFC Fight Night: Marreta vs. Anders",
+    "date": "2018-09-22",
+    "location": "Sao Paulo, Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-marreta-vs-anders",
+    "year": "2018"
+  },
+  {
+    "id": 450,
+    "name": "UFC Fight Night: Hunt vs. Oleinik",
+    "date": "2018-09-15",
+    "location": "Moscow, Moscow, Russia",
+    "slug": "ufc-fight-night-hunt-vs-oleinik",
+    "year": "2018"
+  },
+  {
+    "id": 449,
+    "name": "UFC 228: Woodley vs. Till",
+    "date": "2018-09-08",
+    "location": "Dallas, Texas, USA",
+    "slug": "ufc-228-woodley-vs-till",
+    "year": "2018"
+  },
+  {
+    "id": 448,
+    "name": "UFC Fight Night: Gaethje vs. Vick",
+    "date": "2018-08-25",
+    "location": "Lincoln, Nebraska, USA",
+    "slug": "ufc-fight-night-gaethje-vs-vick",
+    "year": "2018"
+  },
+  {
+    "id": 447,
+    "name": "UFC 227: Dillashaw vs. Garbrandt 2",
+    "date": "2018-08-04",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-227-dillashaw-vs-garbrandt-2",
+    "year": "2018"
+  },
+  {
+    "id": 446,
+    "name": "UFC Fight Night: Alvarez vs. Poirier 2",
+    "date": "2018-07-28",
+    "location": "Calgary, Alberta, Canada",
+    "slug": "ufc-fight-night-alvarez-vs-poirier-2",
+    "year": "2018"
+  },
+  {
+    "id": 445,
+    "name": "UFC Fight Night: Shogun vs. Smith",
+    "date": "2018-07-22",
+    "location": "Hamburg, Hamburg, Germany",
+    "slug": "ufc-fight-night-shogun-vs-smith",
+    "year": "2018"
+  },
+  {
+    "id": 444,
+    "name": "UFC Fight Night: Dos Santos vs. Ivanov",
+    "date": "2018-07-14",
+    "location": "Boise, Idaho, USA",
+    "slug": "ufc-fight-night-dos-santos-vs-ivanov",
+    "year": "2018"
+  },
+  {
+    "id": 443,
+    "name": "UFC 226: Miocic vs. Cormier",
+    "date": "2018-07-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-226-miocic-vs-cormier",
+    "year": "2018"
+  },
+  {
+    "id": 442,
+    "name": "The Ultimate Fighter: Undefeated Finale",
+    "date": "2018-07-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-undefeated-finale",
+    "year": "2018"
+  },
+  {
+    "id": 441,
+    "name": "UFC Fight Night: Cowboy vs. Edwards",
+    "date": "2018-06-23",
+    "location": "Kallang, Singapore",
+    "slug": "ufc-fight-night-cowboy-vs-edwards",
+    "year": "2018"
+  },
+  {
+    "id": 440,
+    "name": "UFC 225: Whittaker vs. Romero 2",
+    "date": "2018-06-09",
+    "location": "Chicago, Illinois, USA",
+    "slug": "ufc-225-whittaker-vs-romero-2",
+    "year": "2018"
+  },
+  {
+    "id": 439,
+    "name": "UFC Fight Night: Rivera vs. Moraes",
+    "date": "2018-06-01",
+    "location": "Utica, New York, USA",
+    "slug": "ufc-fight-night-rivera-vs-moraes",
+    "year": "2018"
+  },
+  {
+    "id": 438,
+    "name": "UFC Fight Night: Thompson vs. Till",
+    "date": "2018-05-27",
+    "location": "Liverpool, England, United Kingdom",
+    "slug": "ufc-fight-night-thompson-vs-till",
+    "year": "2018"
+  },
+  {
+    "id": 437,
+    "name": "UFC Fight Night: Maia vs. Usman",
+    "date": "2018-05-19",
+    "location": "Santiago, Chile",
+    "slug": "ufc-fight-night-maia-vs-usman",
+    "year": "2018"
+  },
+  {
+    "id": 436,
+    "name": "UFC 224: Nunes vs. Pennington",
+    "date": "2018-05-12",
+    "location": "Rio de Janeiro, Rio de Janeiro, Brazil",
+    "slug": "ufc-224-nunes-vs-pennington",
+    "year": "2018"
+  },
+  {
+    "id": 435,
+    "name": "UFC Fight Night: Barboza vs. Lee",
+    "date": "2018-04-21",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-fight-night-barboza-vs-lee",
+    "year": "2018"
+  },
+  {
+    "id": 434,
+    "name": "UFC Fight Night: Poirier vs. Gaethje",
+    "date": "2018-04-14",
+    "location": "Glendale, Arizona, USA",
+    "slug": "ufc-fight-night-poirier-vs-gaethje",
+    "year": "2018"
+  },
+  {
+    "id": 433,
+    "name": "UFC 223: Khabib vs. Iaquinta",
+    "date": "2018-04-07",
+    "location": "Brooklyn, New York, USA",
+    "slug": "ufc-223-khabib-vs-iaquinta",
+    "year": "2018"
+  },
+  {
+    "id": 432,
+    "name": "UFC Fight Night: Werdum vs. Volkov",
+    "date": "2018-03-17",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-werdum-vs-volkov",
+    "year": "2018"
+  },
+  {
+    "id": 431,
+    "name": "UFC 222: Cyborg vs. Kunitskaya",
+    "date": "2018-03-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-222-cyborg-vs-kunitskaya",
+    "year": "2018"
+  },
+  {
+    "id": 430,
+    "name": "UFC Fight Night: Emmett vs. Stephens",
+    "date": "2018-02-24",
+    "location": "Orlando, Florida, USA",
+    "slug": "ufc-fight-night-emmett-vs-stephens",
+    "year": "2018"
+  },
+  {
+    "id": 429,
+    "name": "UFC Fight Night: Cerrone vs. Medeiros",
+    "date": "2018-02-18",
+    "location": "Austin, Texas, USA",
+    "slug": "ufc-fight-night-cerrone-vs-medeiros",
+    "year": "2018"
+  },
+  {
+    "id": 428,
+    "name": "UFC 221: Romero vs. Rockhold",
+    "date": "2018-02-10",
+    "location": "Perth, Western Australia, Australia",
+    "slug": "ufc-221-romero-vs-rockhold",
+    "year": "2018"
+  },
+  {
+    "id": 427,
+    "name": "UFC Fight Night: Machida vs. Anders",
+    "date": "2018-02-03",
+    "location": "Belem, Para, Brazil",
+    "slug": "ufc-fight-night-machida-vs-anders",
+    "year": "2018"
+  },
+  {
+    "id": 426,
+    "name": "UFC Fight Night: Jacare vs. Brunson 2",
+    "date": "2018-01-27",
+    "location": "Charlotte, North Carolina, USA",
+    "slug": "ufc-fight-night-jacare-vs-brunson-2",
+    "year": "2018"
+  },
+  {
+    "id": 425,
+    "name": "UFC 220: Miocic vs. Ngannou",
+    "date": "2018-01-20",
+    "location": "Boston, Massachusetts, USA",
+    "slug": "ufc-220-miocic-vs-ngannou",
+    "year": "2018"
+  },
+  {
+    "id": 424,
+    "name": "UFC Fight Night: Stephens vs. Choi",
+    "date": "2018-01-14",
+    "location": "St. Louis, Missouri, USA",
+    "slug": "ufc-fight-night-stephens-vs-choi",
+    "year": "2018"
+  },
+  {
+    "id": 423,
+    "name": "UFC 219: Cyborg vs. Holm",
+    "date": "2017-12-30",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-219-cyborg-vs-holm",
+    "year": "2017"
+  },
+  {
+    "id": 422,
+    "name": "UFC Fight Night: Lawler vs. Dos Anjos",
+    "date": "2017-12-16",
+    "location": "Winnipeg, Manitoba, Canada",
+    "slug": "ufc-fight-night-lawler-vs-dos-anjos",
+    "year": "2017"
+  },
+  {
+    "id": 421,
+    "name": "UFC Fight Night: Swanson vs. Ortega",
+    "date": "2017-12-09",
+    "location": "Fresno, California, USA",
+    "slug": "ufc-fight-night-swanson-vs-ortega",
+    "year": "2017"
+  },
+  {
+    "id": 420,
+    "name": "UFC 218: Holloway vs. Aldo 2",
+    "date": "2017-12-02",
+    "location": "Detroit, Michigan, USA",
+    "slug": "ufc-218-holloway-vs-aldo-2",
+    "year": "2017"
+  },
+  {
+    "id": 419,
+    "name": "The Ultimate Fighter: A New World Champion Finale",
+    "date": "2017-12-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-a-new-world-champion-finale",
+    "year": "2017"
+  },
+  {
+    "id": 418,
+    "name": "UFC Fight Night: Bisping vs. Gastelum",
+    "date": "2017-11-25",
+    "location": "Shanghai, Hebei, China",
+    "slug": "ufc-fight-night-bisping-vs-gastelum",
+    "year": "2017"
+  },
+  {
+    "id": 417,
+    "name": "UFC Fight Night: Werdum vs. Tybura",
+    "date": "2017-11-18",
+    "location": "Sydney, New South Wales, Australia",
+    "slug": "ufc-fight-night-werdum-vs-tybura",
+    "year": "2017"
+  },
+  {
+    "id": 416,
+    "name": "UFC Fight Night: Poirier vs. Pettis",
+    "date": "2017-11-11",
+    "location": "Norfolk, Virginia, USA",
+    "slug": "ufc-fight-night-poirier-vs-pettis",
+    "year": "2017"
+  },
+  {
+    "id": 415,
+    "name": "UFC 217: Bisping vs. St-Pierre",
+    "date": "2017-11-04",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-217-bisping-vs-st-pierre",
+    "year": "2017"
+  },
+  {
+    "id": 414,
+    "name": "UFC Fight Night: Brunson vs. Machida",
+    "date": "2017-10-28",
+    "location": "Sao Paulo, Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-brunson-vs-machida",
+    "year": "2017"
+  },
+  {
+    "id": 413,
+    "name": "UFC Fight Night: Cerrone vs. Till",
+    "date": "2017-10-21",
+    "location": "Gdansk, Poland",
+    "slug": "ufc-fight-night-cerrone-vs-till",
+    "year": "2017"
+  },
+  {
+    "id": 412,
+    "name": "UFC 216: Ferguson vs. Lee",
+    "date": "2017-10-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-216-ferguson-vs-lee",
+    "year": "2017"
+  },
+  {
+    "id": 411,
+    "name": "UFC Fight Night: Saint Preux vs. Okami",
+    "date": "2017-09-22",
+    "location": "Saitama, Saitama, Japan",
+    "slug": "ufc-fight-night-saint-preux-vs-okami",
+    "year": "2017"
+  },
+  {
+    "id": 410,
+    "name": "UFC Fight Night: Rockhold vs. Branch",
+    "date": "2017-09-16",
+    "location": "Pittsburgh, Pennsylvania, USA",
+    "slug": "ufc-fight-night-rockhold-vs-branch",
+    "year": "2017"
+  },
+  {
+    "id": 409,
+    "name": "UFC 215: Nunes vs Shevchenko 2",
+    "date": "2017-09-09",
+    "location": "Edmonton, Alberta, Canada",
+    "slug": "ufc-215-nunes-vs-shevchenko-2",
+    "year": "2017"
+  },
+  {
+    "id": 408,
+    "name": "UFC Fight Night: Volkov vs. Struve",
+    "date": "2017-09-02",
+    "location": "Rotterdam, Zuid-Holland, Netherlands",
+    "slug": "ufc-fight-night-volkov-vs-struve",
+    "year": "2017"
+  },
+  {
+    "id": 407,
+    "name": "UFC Fight Night: Pettis vs. Moreno",
+    "date": "2017-08-05",
+    "location": "Mexico City, Distrito Federal, Mexico",
+    "slug": "ufc-fight-night-pettis-vs-moreno",
+    "year": "2017"
+  },
+  {
+    "id": 406,
+    "name": "UFC 214: Cormier vs. Jones 2",
+    "date": "2017-07-29",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-214-cormier-vs-jones-2",
+    "year": "2017"
+  },
+  {
+    "id": 405,
+    "name": "UFC Fight Night: Weidman vs. Gastelum",
+    "date": "2017-07-22",
+    "location": "Uniondale, New York, USA",
+    "slug": "ufc-fight-night-weidman-vs-gastelum",
+    "year": "2017"
+  },
+  {
+    "id": 404,
+    "name": "UFC Fight Night: Nelson vs. Ponzinibbio",
+    "date": "2017-07-16",
+    "location": "Glasgow, Scotland, United Kingdom",
+    "slug": "ufc-fight-night-nelson-vs-ponzinibbio",
+    "year": "2017"
+  },
+  {
+    "id": 403,
+    "name": "UFC 213: Romero vs. Whittaker",
+    "date": "2017-07-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-213-romero-vs-whittaker",
+    "year": "2017"
+  },
+  {
+    "id": 402,
+    "name": "The Ultimate Fighter: Redemption Finale",
+    "date": "2017-07-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-redemption-finale",
+    "year": "2017"
+  },
+  {
+    "id": 401,
+    "name": "UFC Fight Night: Chiesa vs. Lee",
+    "date": "2017-06-25",
+    "location": "Oklahoma City, Oklahoma, USA",
+    "slug": "ufc-fight-night-chiesa-vs-lee",
+    "year": "2017"
+  },
+  {
+    "id": 400,
+    "name": "UFC Fight Night: Holm vs. Correia",
+    "date": "2017-06-17",
+    "location": "Kallang, Singapore",
+    "slug": "ufc-fight-night-holm-vs-correia",
+    "year": "2017"
+  },
+  {
+    "id": 399,
+    "name": "UFC Fight Night: Lewis vs. Hunt",
+    "date": "2017-06-10",
+    "location": "Auckland, New Zealand",
+    "slug": "ufc-fight-night-lewis-vs-hunt",
+    "year": "2017"
+  },
+  {
+    "id": 398,
+    "name": "UFC 212: Aldo vs. Holloway",
+    "date": "2017-06-03",
+    "location": "Rio de Janeiro, Rio de Janeiro, Brazil",
+    "slug": "ufc-212-aldo-vs-holloway",
+    "year": "2017"
+  },
+  {
+    "id": 397,
+    "name": "UFC Fight Night: Gustafsson vs. Teixeira",
+    "date": "2017-05-28",
+    "location": "Stockholm, Sweden",
+    "slug": "ufc-fight-night-gustafsson-vs-teixeira",
+    "year": "2017"
+  },
+  {
+    "id": 396,
+    "name": "UFC 211: Miocic vs. Dos Santos",
+    "date": "2017-05-13",
+    "location": "Dallas, Texas, USA",
+    "slug": "ufc-211-miocic-vs-dos-santos",
+    "year": "2017"
+  },
+  {
+    "id": 395,
+    "name": "UFC Fight Night: Swanson vs. Lobov",
+    "date": "2017-04-22",
+    "location": "Nashville, Tennessee, USA",
+    "slug": "ufc-fight-night-swanson-vs-lobov",
+    "year": "2017"
+  },
+  {
+    "id": 394,
+    "name": "UFC on FOX: Johnson vs. Reis",
+    "date": "2017-04-15",
+    "location": "Kansas City, Missouri, USA",
+    "slug": "ufc-on-fox-johnson-vs-reis",
+    "year": "2017"
+  },
+  {
+    "id": 393,
+    "name": "UFC 210: Cormier vs. Johnson 2",
+    "date": "2017-04-08",
+    "location": "Buffalo, New York, USA",
+    "slug": "ufc-210-cormier-vs-johnson-2",
+    "year": "2017"
+  },
+  {
+    "id": 392,
+    "name": "UFC Fight Night: Manuwa vs. Anderson",
+    "date": "2017-03-18",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-manuwa-vs-anderson",
+    "year": "2017"
+  },
+  {
+    "id": 391,
+    "name": "UFC Fight Night: Belfort vs. Gastelum",
+    "date": "2017-03-11",
+    "location": "Fortaleza, Ceara, Brazil",
+    "slug": "ufc-fight-night-belfort-vs-gastelum",
+    "year": "2017"
+  },
+  {
+    "id": 390,
+    "name": "UFC 209: Woodley vs. Thompson 2",
+    "date": "2017-03-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-209-woodley-vs-thompson-2",
+    "year": "2017"
+  },
+  {
+    "id": 389,
+    "name": "UFC Fight Night: Lewis vs. Browne",
+    "date": "2017-02-19",
+    "location": "Halifax, Nova Scotia, Canada",
+    "slug": "ufc-fight-night-lewis-vs-browne",
+    "year": "2017"
+  },
+  {
+    "id": 388,
+    "name": "UFC 208: Holm vs. De Randamie",
+    "date": "2017-02-11",
+    "location": "Brooklyn, New York, USA",
+    "slug": "ufc-208-holm-vs-de-randamie",
+    "year": "2017"
+  },
+  {
+    "id": 387,
+    "name": "UFC Fight Night: Bermudez vs. The Korean Zombie",
+    "date": "2017-02-04",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-fight-night-bermudez-vs-the-korean-zombie",
+    "year": "2017"
+  },
+  {
+    "id": 386,
+    "name": "UFC on FOX: Shevchenko vs. Pena",
+    "date": "2017-01-28",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-on-fox-shevchenko-vs-pena",
+    "year": "2017"
+  },
+  {
+    "id": 385,
+    "name": "UFC Fight Night: Rodriguez vs. Penn",
+    "date": "2017-01-15",
+    "location": "Phoenix, Arizona, USA",
+    "slug": "ufc-fight-night-rodriguez-vs-penn",
+    "year": "2017"
+  },
+  {
+    "id": 384,
+    "name": "UFC 207: Nunes vs. Rousey",
+    "date": "2016-12-30",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-207-nunes-vs-rousey",
+    "year": "2016"
+  },
+  {
+    "id": 383,
+    "name": "UFC on FOX: VanZant vs. Waterson",
+    "date": "2016-12-17",
+    "location": "Sacramento, California, USA",
+    "slug": "ufc-on-fox-vanzant-vs-waterson",
+    "year": "2016"
+  },
+  {
+    "id": 382,
+    "name": "UFC 206: Holloway vs. Pettis",
+    "date": "2016-12-10",
+    "location": "Toronto, Ontario, Canada",
+    "slug": "ufc-206-holloway-vs-pettis",
+    "year": "2016"
+  },
+  {
+    "id": 381,
+    "name": "UFC Fight Night: Lewis vs. Abdurakhimov",
+    "date": "2016-12-09",
+    "location": "Albany, New York, USA",
+    "slug": "ufc-fight-night-lewis-vs-abdurakhimov",
+    "year": "2016"
+  },
+  {
+    "id": 380,
+    "name": "The Ultimate Fighter: Tournament of Champions Finale",
+    "date": "2016-12-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-tournament-of-champions-finale",
+    "year": "2016"
+  },
+  {
+    "id": 379,
+    "name": "UFC Fight Night: Whittaker vs. Brunson",
+    "date": "2016-11-26",
+    "location": "Melbourne, Victoria, Australia",
+    "slug": "ufc-fight-night-whittaker-vs-brunson",
+    "year": "2016"
+  },
+  {
+    "id": 378,
+    "name": "UFC Fight Night: Mousasi vs. Hall 2",
+    "date": "2016-11-19",
+    "location": "Belfast, Northern Ireland, United Kingdom",
+    "slug": "ufc-fight-night-mousasi-vs-hall-2",
+    "year": "2016"
+  },
+  {
+    "id": 377,
+    "name": "UFC Fight Night: Bader vs. Nogueira",
+    "date": "2016-11-19",
+    "location": "Sao Paulo, Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-bader-vs-nogueira",
+    "year": "2016"
+  },
+  {
+    "id": 376,
+    "name": "UFC 205: Alvarez vs McGregor",
+    "date": "2016-11-12",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-205-alvarez-vs-mcgregor",
+    "year": "2016"
+  },
+  {
+    "id": 375,
+    "name": "UFC Fight Night: Dos Anjos vs. Ferguson",
+    "date": "2016-11-05",
+    "location": "Mexico City, Distrito Federal, Mexico",
+    "slug": "ufc-fight-night-dos-anjos-vs-ferguson",
+    "year": "2016"
+  },
+  {
+    "id": 374,
+    "name": "UFC 204: Bisping vs. Henderson",
+    "date": "2016-10-08",
+    "location": "Manchester, England, United Kingdom",
+    "slug": "ufc-204-bisping-vs-henderson",
+    "year": "2016"
+  },
+  {
+    "id": 373,
+    "name": "UFC Fight Night: Lineker vs. Dodson",
+    "date": "2016-10-01",
+    "location": "Portland, Oregon, USA",
+    "slug": "ufc-fight-night-lineker-vs-dodson",
+    "year": "2016"
+  },
+  {
+    "id": 372,
+    "name": "UFC Fight Night: Cyborg vs. Lansberg",
+    "date": "2016-09-24",
+    "location": "Brasilia, Distrito Federal, Brazil",
+    "slug": "ufc-fight-night-cyborg-vs-lansberg",
+    "year": "2016"
+  },
+  {
+    "id": 371,
+    "name": "UFC Fight Night: Poirier vs. Johnson",
+    "date": "2016-09-17",
+    "location": "Hidalgo, Texas, USA",
+    "slug": "ufc-fight-night-poirier-vs-johnson",
+    "year": "2016"
+  },
+  {
+    "id": 370,
+    "name": "UFC 203: Miocic vs. Overeem",
+    "date": "2016-09-10",
+    "location": "Cleveland, Ohio, USA",
+    "slug": "ufc-203-miocic-vs-overeem",
+    "year": "2016"
+  },
+  {
+    "id": 369,
+    "name": "UFC Fight Night: Arlovski vs. Barnett",
+    "date": "2016-09-03",
+    "location": "Hamburg, Hamburg, Germany",
+    "slug": "ufc-fight-night-arlovski-vs-barnett",
+    "year": "2016"
+  },
+  {
+    "id": 368,
+    "name": "UFC on FOX: Maia vs. Condit",
+    "date": "2016-08-27",
+    "location": "Vancouver, British Columbia, Canada",
+    "slug": "ufc-on-fox-maia-vs-condit",
+    "year": "2016"
+  },
+  {
+    "id": 367,
+    "name": "UFC 202: Diaz vs. McGregor 2",
+    "date": "2016-08-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-202-diaz-vs-mcgregor-2",
+    "year": "2016"
+  },
+  {
+    "id": 366,
+    "name": "UFC Fight Night: Rodriguez vs. Caceres",
+    "date": "2016-08-06",
+    "location": "Salt Lake City, Utah, USA",
+    "slug": "ufc-fight-night-rodriguez-vs-caceres",
+    "year": "2016"
+  },
+  {
+    "id": 365,
+    "name": "UFC 201: Lawler vs. Woodley",
+    "date": "2016-07-30",
+    "location": "Atlanta, Georgia, USA",
+    "slug": "ufc-201-lawler-vs-woodley",
+    "year": "2016"
+  },
+  {
+    "id": 364,
+    "name": "UFC on FOX: Holm vs. Shevchenko",
+    "date": "2016-07-23",
+    "location": "Chicago, Illinois, USA",
+    "slug": "ufc-on-fox-holm-vs-shevchenko",
+    "year": "2016"
+  },
+  {
+    "id": 363,
+    "name": "UFC Fight Night: McDonald vs. Lineker",
+    "date": "2016-07-13",
+    "location": "Sioux Falls, South Dakota, USA",
+    "slug": "ufc-fight-night-mcdonald-vs-lineker",
+    "year": "2016"
+  },
+  {
+    "id": 362,
+    "name": "UFC 200: Tate vs Nunes",
+    "date": "2016-07-09",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-200-tate-vs-nunes",
+    "year": "2016"
+  },
+  {
+    "id": 361,
+    "name": "The Ultimate Fighter: Team Joanna vs. Team Cláudia Finale",
+    "date": "2016-07-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-joanna-vs-team-cláudia-finale",
+    "year": "2016"
+  },
+  {
+    "id": 360,
+    "name": "UFC Fight Night: Dos Anjos vs. Alvarez",
+    "date": "2016-07-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-dos-anjos-vs-alvarez",
+    "year": "2016"
+  },
+  {
+    "id": 359,
+    "name": "UFC Fight Night: MacDonald vs Thompson",
+    "date": "2016-06-18",
+    "location": "Ottawa, Ontario, Canada",
+    "slug": "ufc-fight-night-macdonald-vs-thompson",
+    "year": "2016"
+  },
+  {
+    "id": 358,
+    "name": "UFC 199: Rockhold vs. Bisping 2",
+    "date": "2016-06-04",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-199-rockhold-vs-bisping-2",
+    "year": "2016"
+  },
+  {
+    "id": 357,
+    "name": "UFC Fight Night: Almeida vs Garbrandt",
+    "date": "2016-05-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-almeida-vs-garbrandt",
+    "year": "2016"
+  },
+  {
+    "id": 356,
+    "name": "UFC 198: Werdum vs Miocic",
+    "date": "2016-05-14",
+    "location": "Curitiba, Parana, Brazil",
+    "slug": "ufc-198-werdum-vs-miocic",
+    "year": "2016"
+  },
+  {
+    "id": 355,
+    "name": "UFC Fight Night: Overeem vs Arlovski",
+    "date": "2016-05-08",
+    "location": "Rotterdam, Zuid-Holland, Netherlands",
+    "slug": "ufc-fight-night-overeem-vs-arlovski",
+    "year": "2016"
+  },
+  {
+    "id": 354,
+    "name": "UFC 197: Jones vs Saint Preux",
+    "date": "2016-04-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-197-jones-vs-saint-preux",
+    "year": "2016"
+  },
+  {
+    "id": 353,
+    "name": "UFC on FOX: Teixeira vs Evans",
+    "date": "2016-04-16",
+    "location": "Tampa, Florida, USA",
+    "slug": "ufc-on-fox-teixeira-vs-evans",
+    "year": "2016"
+  },
+  {
+    "id": 352,
+    "name": "UFC Fight Night: Rothwell vs Dos Santos",
+    "date": "2016-04-10",
+    "location": "Zagreb, Croatia",
+    "slug": "ufc-fight-night-rothwell-vs-dos-santos",
+    "year": "2016"
+  },
+  {
+    "id": 351,
+    "name": "UFC Fight Night: Hunt vs Mir",
+    "date": "2016-03-19",
+    "location": "Brisbane, Queensland, Australia",
+    "slug": "ufc-fight-night-hunt-vs-mir",
+    "year": "2016"
+  },
+  {
+    "id": 350,
+    "name": "UFC 196: McGregor vs Diaz",
+    "date": "2016-03-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-196-mcgregor-vs-diaz",
+    "year": "2016"
+  },
+  {
+    "id": 349,
+    "name": "UFC Fight Night: Silva vs Bisping",
+    "date": "2016-02-27",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-silva-vs-bisping",
+    "year": "2016"
+  },
+  {
+    "id": 348,
+    "name": "UFC Fight Night: Cowboy vs Cowboy",
+    "date": "2016-02-21",
+    "location": "Pittsburgh, Pennsylvania, USA",
+    "slug": "ufc-fight-night-cowboy-vs-cowboy",
+    "year": "2016"
+  },
+  {
+    "id": 347,
+    "name": "UFC Fight Night: Hendricks vs Thompson",
+    "date": "2016-02-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-hendricks-vs-thompson",
+    "year": "2016"
+  },
+  {
+    "id": 346,
+    "name": "UFC on FOX: Johnson vs. Bader",
+    "date": "2016-01-30",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-on-fox-johnson-vs-bader",
+    "year": "2016"
+  },
+  {
+    "id": 345,
+    "name": "UFC Fight Night: Dillashaw vs Cruz",
+    "date": "2016-01-17",
+    "location": "Boston, Massachusetts, USA",
+    "slug": "ufc-fight-night-dillashaw-vs-cruz",
+    "year": "2016"
+  },
+  {
+    "id": 344,
+    "name": "UFC 195: Lawler vs Condit",
+    "date": "2016-01-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-195-lawler-vs-condit",
+    "year": "2016"
+  },
+  {
+    "id": 343,
+    "name": "UFC on FOX: Dos Anjos vs. Cowboy 2",
+    "date": "2015-12-19",
+    "location": "Orlando, Florida, USA",
+    "slug": "ufc-on-fox-dos-anjos-vs-cowboy-2",
+    "year": "2015"
+  },
+  {
+    "id": 342,
+    "name": "UFC 194: Aldo vs McGregor",
+    "date": "2015-12-12",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-194-aldo-vs-mcgregor",
+    "year": "2015"
+  },
+  {
+    "id": 341,
+    "name": "The Ultimate Fighter: Team McGregor vs. Team Faber Finale",
+    "date": "2015-12-11",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-mcgregor-vs-team-faber-finale",
+    "year": "2015"
+  },
+  {
+    "id": 340,
+    "name": "UFC Fight Night: Namajunas vs. VanZant",
+    "date": "2015-12-10",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-namajunas-vs-vanzant",
+    "year": "2015"
+  },
+  {
+    "id": 339,
+    "name": "UFC Fight Night: Henderson vs Masvidal",
+    "date": "2015-11-28",
+    "location": "Seoul, South Korea",
+    "slug": "ufc-fight-night-henderson-vs-masvidal",
+    "year": "2015"
+  },
+  {
+    "id": 338,
+    "name": "UFC Fight Night: Magny vs Gastelum",
+    "date": "2015-11-21",
+    "location": "Monterrey, Nuevo Leon, Mexico",
+    "slug": "ufc-fight-night-magny-vs-gastelum",
+    "year": "2015"
+  },
+  {
+    "id": 337,
+    "name": "UFC 193: Rousey vs Holm",
+    "date": "2015-11-14",
+    "location": "Melbourne, Victoria, Australia",
+    "slug": "ufc-193-rousey-vs-holm",
+    "year": "2015"
+  },
+  {
+    "id": 336,
+    "name": "UFC Fight Night: Belfort vs Henderson 3",
+    "date": "2015-11-07",
+    "location": "Sao Paulo, Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-belfort-vs-henderson-3",
+    "year": "2015"
+  },
+  {
+    "id": 335,
+    "name": "UFC Fight Night: Holohan vs Smolka",
+    "date": "2015-10-24",
+    "location": "Dublin, Leinster, Ireland",
+    "slug": "ufc-fight-night-holohan-vs-smolka",
+    "year": "2015"
+  },
+  {
+    "id": 334,
+    "name": "UFC 192: Cormier vs Gustafsson",
+    "date": "2015-10-03",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-192-cormier-vs-gustafsson",
+    "year": "2015"
+  },
+  {
+    "id": 333,
+    "name": "UFC Fight Night: Barnett vs Nelson",
+    "date": "2015-09-26",
+    "location": "Saitama, Japan",
+    "slug": "ufc-fight-night-barnett-vs-nelson",
+    "year": "2015"
+  },
+  {
+    "id": 332,
+    "name": "UFC 191: Johnson vs Dodson 2",
+    "date": "2015-09-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-191-johnson-vs-dodson-2",
+    "year": "2015"
+  },
+  {
+    "id": 331,
+    "name": "UFC Fight Night: Holloway vs Oliveira",
+    "date": "2015-08-23",
+    "location": "Saskatoon, Saskatchewan, Canada",
+    "slug": "ufc-fight-night-holloway-vs-oliveira",
+    "year": "2015"
+  },
+  {
+    "id": 330,
+    "name": "UFC Fight Night: Teixeira vs Saint Preux",
+    "date": "2015-08-08",
+    "location": "Nashville, Tennessee, USA",
+    "slug": "ufc-fight-night-teixeira-vs-saint-preux",
+    "year": "2015"
+  },
+  {
+    "id": 329,
+    "name": "UFC 190: Rousey vs Correia",
+    "date": "2015-08-01",
+    "location": "Rio de Janeiro, Rio de Janeiro, Brazil",
+    "slug": "ufc-190-rousey-vs-correia",
+    "year": "2015"
+  },
+  {
+    "id": 328,
+    "name": "UFC on FOX: Dillashaw vs. Barao II",
+    "date": "2015-07-25",
+    "location": "Chicago, Illinois, USA",
+    "slug": "ufc-on-fox-dillashaw-vs-barao-ii",
+    "year": "2015"
+  },
+  {
+    "id": 327,
+    "name": "UFC Fight Night: Bisping vs Leites",
+    "date": "2015-07-18",
+    "location": "Glasgow, Scotland, United Kingdom",
+    "slug": "ufc-fight-night-bisping-vs-leites",
+    "year": "2015"
+  },
+  {
+    "id": 326,
+    "name": "UFC Fight Night: Mir vs Duffee",
+    "date": "2015-07-15",
+    "location": "San Diego, California, USA",
+    "slug": "ufc-fight-night-mir-vs-duffee",
+    "year": "2015"
+  },
+  {
+    "id": 325,
+    "name": "The Ultimate Fighter: American Top Team vs. Blackzilians Finale",
+    "date": "2015-07-12",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-american-top-team-vs-blackzilians-finale",
+    "year": "2015"
+  },
+  {
+    "id": 324,
+    "name": "UFC 189: Mendes vs McGregor",
+    "date": "2015-07-11",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-189-mendes-vs-mcgregor",
+    "year": "2015"
+  },
+  {
+    "id": 323,
+    "name": "UFC Fight Night: Machida vs Romero",
+    "date": "2015-06-27",
+    "location": "Hollywood, Florida, USA",
+    "slug": "ufc-fight-night-machida-vs-romero",
+    "year": "2015"
+  },
+  {
+    "id": 322,
+    "name": "UFC Fight Night: Jedrzejczyk vs Penne",
+    "date": "2015-06-20",
+    "location": "Berlin, Berlin, Germany",
+    "slug": "ufc-fight-night-jedrzejczyk-vs-penne",
+    "year": "2015"
+  },
+  {
+    "id": 321,
+    "name": "UFC 188: Velasquez vs Werdum",
+    "date": "2015-06-13",
+    "location": "Mexico City, Distrito Federal, Mexico",
+    "slug": "ufc-188-velasquez-vs-werdum",
+    "year": "2015"
+  },
+  {
+    "id": 320,
+    "name": "UFC Fight Night: Boetsch vs Henderson",
+    "date": "2015-06-06",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-fight-night-boetsch-vs-henderson",
+    "year": "2015"
+  },
+  {
+    "id": 319,
+    "name": "UFC Fight Night: Condit vs Alves",
+    "date": "2015-05-30",
+    "location": "Goiania, Goias, Brazil",
+    "slug": "ufc-fight-night-condit-vs-alves",
+    "year": "2015"
+  },
+  {
+    "id": 318,
+    "name": "UFC 187: Johnson vs Cormier",
+    "date": "2015-05-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-187-johnson-vs-cormier",
+    "year": "2015"
+  },
+  {
+    "id": 317,
+    "name": "UFC Fight Night: Edgar vs Faber",
+    "date": "2015-05-16",
+    "location": "Manila, Philippines",
+    "slug": "ufc-fight-night-edgar-vs-faber",
+    "year": "2015"
+  },
+  {
+    "id": 316,
+    "name": "UFC Fight Night: Miocic vs Hunt",
+    "date": "2015-05-09",
+    "location": "Adelaide, South Australia, Australia",
+    "slug": "ufc-fight-night-miocic-vs-hunt",
+    "year": "2015"
+  },
+  {
+    "id": 315,
+    "name": "UFC 186: Johnson vs Horiguchi",
+    "date": "2015-04-25",
+    "location": "Montreal, Quebec, Canada",
+    "slug": "ufc-186-johnson-vs-horiguchi",
+    "year": "2015"
+  },
+  {
+    "id": 314,
+    "name": "UFC on FOX: Machida vs Rockhold",
+    "date": "2015-04-18",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-on-fox-machida-vs-rockhold",
+    "year": "2015"
+  },
+  {
+    "id": 313,
+    "name": "UFC Fight Night: Gonzaga vs Cro Cop 2",
+    "date": "2015-04-11",
+    "location": "Krakow, Poland",
+    "slug": "ufc-fight-night-gonzaga-vs-cro-cop-2",
+    "year": "2015"
+  },
+  {
+    "id": 312,
+    "name": "UFC Fight Night: Mendes vs Lamas",
+    "date": "2015-04-04",
+    "location": "Fairfax, Virginia, USA",
+    "slug": "ufc-fight-night-mendes-vs-lamas",
+    "year": "2015"
+  },
+  {
+    "id": 311,
+    "name": "UFC Fight Night: Maia vs LaFlare",
+    "date": "2015-03-21",
+    "location": "Rio de Janeiro, Brazil",
+    "slug": "ufc-fight-night-maia-vs-laflare",
+    "year": "2015"
+  },
+  {
+    "id": 310,
+    "name": "UFC 185: Pettis vs Dos Anjos",
+    "date": "2015-03-14",
+    "location": "Dallas, Texas, USA",
+    "slug": "ufc-185-pettis-vs-dos-anjos",
+    "year": "2015"
+  },
+  {
+    "id": 309,
+    "name": "UFC 184: Rousey vs Zingano",
+    "date": "2015-02-28",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-184-rousey-vs-zingano",
+    "year": "2015"
+  },
+  {
+    "id": 308,
+    "name": "UFC Fight Night: Bigfoot vs Mir",
+    "date": "2015-02-22",
+    "location": "Porto Alegre, Rio Grande do Sul, Brazil",
+    "slug": "ufc-fight-night-bigfoot-vs-mir",
+    "year": "2015"
+  },
+  {
+    "id": 307,
+    "name": "UFC Fight Night: Henderson vs Thatch",
+    "date": "2015-02-14",
+    "location": "Broomfield, Colorado, USA",
+    "slug": "ufc-fight-night-henderson-vs-thatch",
+    "year": "2015"
+  },
+  {
+    "id": 306,
+    "name": "UFC 183: Silva vs Diaz",
+    "date": "2015-01-31",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-183-silva-vs-diaz",
+    "year": "2015"
+  },
+  {
+    "id": 305,
+    "name": "UFC on FOX: Gustafsson vs Johnson",
+    "date": "2015-01-24",
+    "location": "Stockholm, Sweden",
+    "slug": "ufc-on-fox-gustafsson-vs-johnson",
+    "year": "2015"
+  },
+  {
+    "id": 304,
+    "name": "UFC Fight Night: McGregor vs Siver",
+    "date": "2015-01-18",
+    "location": "Boston, Massachusetts, USA",
+    "slug": "ufc-fight-night-mcgregor-vs-siver",
+    "year": "2015"
+  },
+  {
+    "id": 303,
+    "name": "UFC 182: Jones vs Cormier",
+    "date": "2015-01-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-182-jones-vs-cormier",
+    "year": "2015"
+  },
+  {
+    "id": 302,
+    "name": "UFC Fight Night: Machida vs Dollaway",
+    "date": "2014-12-20",
+    "location": "Barueri, Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-machida-vs-dollaway",
+    "year": "2014"
+  },
+  {
+    "id": 301,
+    "name": "UFC on FOX: Dos Santos vs Miocic",
+    "date": "2014-12-13",
+    "location": "Phoenix, Arizona, USA",
+    "slug": "ufc-on-fox-dos-santos-vs-miocic",
+    "year": "2014"
+  },
+  {
+    "id": 300,
+    "name": "The Ultimate Fighter: A Champion Will Be Crowned Finale",
+    "date": "2014-12-12",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-a-champion-will-be-crowned-finale",
+    "year": "2014"
+  },
+  {
+    "id": 299,
+    "name": "UFC 181: Hendricks vs Lawler II",
+    "date": "2014-12-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-181-hendricks-vs-lawler-ii",
+    "year": "2014"
+  },
+  {
+    "id": 298,
+    "name": "UFC Fight Night: Edgar vs Swanson",
+    "date": "2014-11-22",
+    "location": "Austin, Texas, USA",
+    "slug": "ufc-fight-night-edgar-vs-swanson",
+    "year": "2014"
+  },
+  {
+    "id": 297,
+    "name": "UFC 180: Werdum vs Hunt",
+    "date": "2014-11-15",
+    "location": "Mexico City, Distrito Federal, Mexico",
+    "slug": "ufc-180-werdum-vs-hunt",
+    "year": "2014"
+  },
+  {
+    "id": 296,
+    "name": "UFC Fight Night 56: Shogun vs Saint Preux",
+    "date": "2014-11-08",
+    "location": "Uberlandia, Minas Gerais, Brazil",
+    "slug": "ufc-fight-night-56-shogun-vs-saint-preux",
+    "year": "2014"
+  },
+  {
+    "id": 295,
+    "name": "UFC Fight Night: Rockhold vs Bisping",
+    "date": "2014-11-07",
+    "location": "Sydney, New South Wales, Australia",
+    "slug": "ufc-fight-night-rockhold-vs-bisping",
+    "year": "2014"
+  },
+  {
+    "id": 294,
+    "name": "UFC 179: Aldo vs Mendes 2",
+    "date": "2014-10-25",
+    "location": "Rio de Janeiro, Brazil",
+    "slug": "ufc-179-aldo-vs-mendes-2",
+    "year": "2014"
+  },
+  {
+    "id": 293,
+    "name": "UFC Fight Night: Nelson vs Story",
+    "date": "2014-10-04",
+    "location": "Stockholm, Sweden",
+    "slug": "ufc-fight-night-nelson-vs-story",
+    "year": "2014"
+  },
+  {
+    "id": 292,
+    "name": "UFC Fight Night: MacDonald vs Saffiedine",
+    "date": "2014-10-04",
+    "location": "Halifax, Nova Scotia, Canada",
+    "slug": "ufc-fight-night-macdonald-vs-saffiedine",
+    "year": "2014"
+  },
+  {
+    "id": 291,
+    "name": "UFC 178: Johnson vs Cariaso",
+    "date": "2014-09-27",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-178-johnson-vs-cariaso",
+    "year": "2014"
+  },
+  {
+    "id": 290,
+    "name": "UFC Fight Night: Hunt vs Nelson",
+    "date": "2014-09-20",
+    "location": "Saitama, Japan",
+    "slug": "ufc-fight-night-hunt-vs-nelson",
+    "year": "2014"
+  },
+  {
+    "id": 289,
+    "name": "UFC Fight Night: Bigfoot vs Arlovski",
+    "date": "2014-09-13",
+    "location": "Brasilia, Distrito Federal, Brazil",
+    "slug": "ufc-fight-night-bigfoot-vs-arlovski",
+    "year": "2014"
+  },
+  {
+    "id": 288,
+    "name": "UFC Fight Night: Jacare vs Mousasi",
+    "date": "2014-09-05",
+    "location": "Ledyard, Connecticut, USA",
+    "slug": "ufc-fight-night-jacare-vs-mousasi",
+    "year": "2014"
+  },
+  {
+    "id": 287,
+    "name": "UFC 177: Dillashaw vs Soto",
+    "date": "2014-08-30",
+    "location": "Sacramento, California, USA",
+    "slug": "ufc-177-dillashaw-vs-soto",
+    "year": "2014"
+  },
+  {
+    "id": 286,
+    "name": "UFC Fight Night: Bisping vs Le",
+    "date": "2014-08-23",
+    "location": "Macau, China",
+    "slug": "ufc-fight-night-bisping-vs-le",
+    "year": "2014"
+  },
+  {
+    "id": 285,
+    "name": "UFC Fight Night: Henderson vs Dos Anjos",
+    "date": "2014-08-23",
+    "location": "Tulsa, Oklahoma, USA",
+    "slug": "ufc-fight-night-henderson-vs-dos-anjos",
+    "year": "2014"
+  },
+  {
+    "id": 284,
+    "name": "UFC Fight Night: Bader vs Saint Preux",
+    "date": "2014-08-16",
+    "location": "Bangor, Maine, USA",
+    "slug": "ufc-fight-night-bader-vs-saint-preux",
+    "year": "2014"
+  },
+  {
+    "id": 283,
+    "name": "UFC on FOX: Lawler vs Brown",
+    "date": "2014-07-26",
+    "location": "San Jose, California, USA",
+    "slug": "ufc-on-fox-lawler-vs-brown",
+    "year": "2014"
+  },
+  {
+    "id": 282,
+    "name": "UFC Fight Night: McGregor vs Brandao",
+    "date": "2014-07-19",
+    "location": "Dublin, Leinster, Ireland",
+    "slug": "ufc-fight-night-mcgregor-vs-brandao",
+    "year": "2014"
+  },
+  {
+    "id": 281,
+    "name": "UFC Fight Night: Cowboy vs Miller",
+    "date": "2014-07-16",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-fight-night-cowboy-vs-miller",
+    "year": "2014"
+  },
+  {
+    "id": 280,
+    "name": "The Ultimate Fighter: Team Edgar vs. Team Penn Finale",
+    "date": "2014-07-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-edgar-vs-team-penn-finale",
+    "year": "2014"
+  },
+  {
+    "id": 279,
+    "name": "UFC 175: Weidman vs Machida",
+    "date": "2014-07-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-175-weidman-vs-machida",
+    "year": "2014"
+  },
+  {
+    "id": 278,
+    "name": "UFC Fight Night: Te Huna vs Marquardt",
+    "date": "2014-06-28",
+    "location": "Auckland, New Zealand",
+    "slug": "ufc-fight-night-te-huna-vs-marquardt",
+    "year": "2014"
+  },
+  {
+    "id": 277,
+    "name": "UFC Fight Night: Swanson vs Stephens",
+    "date": "2014-06-28",
+    "location": "San Antonio, Texas, USA",
+    "slug": "ufc-fight-night-swanson-vs-stephens",
+    "year": "2014"
+  },
+  {
+    "id": 276,
+    "name": "UFC 174: Johnson vs Bagautinov",
+    "date": "2014-06-14",
+    "location": "Vancouver, British Columbia, Canada",
+    "slug": "ufc-174-johnson-vs-bagautinov",
+    "year": "2014"
+  },
+  {
+    "id": 275,
+    "name": "UFC Fight Night: Henderson vs Khabilov",
+    "date": "2014-06-07",
+    "location": "Albuquerque, New Mexico, USA",
+    "slug": "ufc-fight-night-henderson-vs-khabilov",
+    "year": "2014"
+  },
+  {
+    "id": 274,
+    "name": "UFC Fight Night: Munoz vs Mousasi",
+    "date": "2014-05-31",
+    "location": "Berlin, Germany",
+    "slug": "ufc-fight-night-munoz-vs-mousasi",
+    "year": "2014"
+  },
+  {
+    "id": 273,
+    "name": "UFC Fight Night: Miocic vs Maldonado",
+    "date": "2014-05-31",
+    "location": "Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-miocic-vs-maldonado",
+    "year": "2014"
+  },
+  {
+    "id": 272,
+    "name": "UFC 173: Barao vs Dillashaw",
+    "date": "2014-05-24",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-173-barao-vs-dillashaw",
+    "year": "2014"
+  },
+  {
+    "id": 271,
+    "name": "UFC Fight Night: Brown vs Silva",
+    "date": "2014-05-10",
+    "location": "Cincinnati, Ohio, USA",
+    "slug": "ufc-fight-night-brown-vs-silva",
+    "year": "2014"
+  },
+  {
+    "id": 270,
+    "name": "UFC 172: Jones vs Teixeira",
+    "date": "2014-04-26",
+    "location": "Baltimore, Maryland, USA",
+    "slug": "ufc-172-jones-vs-teixeira",
+    "year": "2014"
+  },
+  {
+    "id": 269,
+    "name": "UFC on FOX: Werdum vs Browne",
+    "date": "2014-04-19",
+    "location": "Orlando, Florida, USA",
+    "slug": "ufc-on-fox-werdum-vs-browne",
+    "year": "2014"
+  },
+  {
+    "id": 268,
+    "name": "UFC Fight Night: Bisping vs Kennedy",
+    "date": "2014-04-16",
+    "location": "Quebec City, Quebec, Canada",
+    "slug": "ufc-fight-night-bisping-vs-kennedy",
+    "year": "2014"
+  },
+  {
+    "id": 267,
+    "name": "UFC Fight Night: Minotauro vs Nelson",
+    "date": "2014-04-11",
+    "location": "Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-minotauro-vs-nelson",
+    "year": "2014"
+  },
+  {
+    "id": 266,
+    "name": "UFC Fight Night: Shogun vs Henderson 2",
+    "date": "2014-03-23",
+    "location": "Natal, Rio Grande do Norte, Brazil",
+    "slug": "ufc-fight-night-shogun-vs-henderson-2",
+    "year": "2014"
+  },
+  {
+    "id": 265,
+    "name": "UFC 171: Hendricks vs Lawler",
+    "date": "2014-03-15",
+    "location": "Dallas, Texas, USA",
+    "slug": "ufc-171-hendricks-vs-lawler",
+    "year": "2014"
+  },
+  {
+    "id": 264,
+    "name": "UFC Fight Night: Gustafsson vs Manuwa",
+    "date": "2014-03-08",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-fight-night-gustafsson-vs-manuwa",
+    "year": "2014"
+  },
+  {
+    "id": 263,
+    "name": "UFC Fight Night: Kim vs Hathaway",
+    "date": "2014-03-01",
+    "location": "Macau, China",
+    "slug": "ufc-fight-night-kim-vs-hathaway",
+    "year": "2014"
+  },
+  {
+    "id": 262,
+    "name": "UFC 170: Rousey vs McMann",
+    "date": "2014-02-22",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-170-rousey-vs-mcmann",
+    "year": "2014"
+  },
+  {
+    "id": 261,
+    "name": "UFC Fight Night: Machida vs Mousasi",
+    "date": "2014-02-15",
+    "location": "Jaragua do Sul, Santa Catarina, Brazil",
+    "slug": "ufc-fight-night-machida-vs-mousasi",
+    "year": "2014"
+  },
+  {
+    "id": 260,
+    "name": "UFC 169: Barao vs Faber 2",
+    "date": "2014-02-01",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-169-barao-vs-faber-2",
+    "year": "2014"
+  },
+  {
+    "id": 259,
+    "name": "UFC on FOX: Henderson vs Thomson",
+    "date": "2014-01-25",
+    "location": "Chicago, Illinois, USA",
+    "slug": "ufc-on-fox-henderson-vs-thomson",
+    "year": "2014"
+  },
+  {
+    "id": 258,
+    "name": "UFC Fight Night: Rockhold vs Philippou",
+    "date": "2014-01-15",
+    "location": "Duluth, Georgia, USA",
+    "slug": "ufc-fight-night-rockhold-vs-philippou",
+    "year": "2014"
+  },
+  {
+    "id": 257,
+    "name": "UFC Fight Night: Saffiedine vs Lim",
+    "date": "2014-01-04",
+    "location": "Singapore, Singapore",
+    "slug": "ufc-fight-night-saffiedine-vs-lim",
+    "year": "2014"
+  },
+  {
+    "id": 256,
+    "name": "UFC 168: Weidman vs Silva 2",
+    "date": "2013-12-28",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-168-weidman-vs-silva-2",
+    "year": "2013"
+  },
+  {
+    "id": 255,
+    "name": "UFC on FOX: Johnson vs. Benavidez 2",
+    "date": "2013-12-14",
+    "location": "Sacramento, California, USA",
+    "slug": "ufc-on-fox-johnson-vs-benavidez-2",
+    "year": "2013"
+  },
+  {
+    "id": 254,
+    "name": "UFC Fight Night: Hunt vs Bigfoot",
+    "date": "2013-12-06",
+    "location": "Brisbane, Queensland, Australia",
+    "slug": "ufc-fight-night-hunt-vs-bigfoot",
+    "year": "2013"
+  },
+  {
+    "id": 253,
+    "name": "The Ultimate Fighter: Team Rousey vs. Team Tate Finale",
+    "date": "2013-11-30",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-rousey-vs-team-tate-finale",
+    "year": "2013"
+  },
+  {
+    "id": 252,
+    "name": "UFC 167: St-Pierre vs Hendricks",
+    "date": "2013-11-16",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-167-st-pierre-vs-hendricks",
+    "year": "2013"
+  },
+  {
+    "id": 251,
+    "name": "UFC Fight Night: Belfort vs Henderson 2",
+    "date": "2013-11-09",
+    "location": "Goiania, Goias, Brazil",
+    "slug": "ufc-fight-night-belfort-vs-henderson-2",
+    "year": "2013"
+  },
+  {
+    "id": 250,
+    "name": "UFC Fight Night: Fight for the Troops 3",
+    "date": "2013-11-06",
+    "location": "Fort Campbell, Kentucky, USA",
+    "slug": "ufc-fight-night-fight-for-the-troops-3",
+    "year": "2013"
+  },
+  {
+    "id": 249,
+    "name": "UFC Fight Night: Machida vs Munoz",
+    "date": "2013-10-26",
+    "location": "Manchester, England, United Kingdom",
+    "slug": "ufc-fight-night-machida-vs-munoz",
+    "year": "2013"
+  },
+  {
+    "id": 248,
+    "name": "UFC 166: Velasquez vs Dos Santos 3",
+    "date": "2013-10-19",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-166-velasquez-vs-dos-santos-3",
+    "year": "2013"
+  },
+  {
+    "id": 247,
+    "name": "UFC Fight Night: Maia vs Shields",
+    "date": "2013-10-09",
+    "location": "Barueri, Sao Paulo, Brazil",
+    "slug": "ufc-fight-night-maia-vs-shields",
+    "year": "2013"
+  },
+  {
+    "id": 246,
+    "name": "UFC 165: Jones vs Gustafsson",
+    "date": "2013-09-21",
+    "location": "Toronto, Ontario, Canada",
+    "slug": "ufc-165-jones-vs-gustafsson",
+    "year": "2013"
+  },
+  {
+    "id": 245,
+    "name": "UFC Fight Night: Teixeira vs Bader",
+    "date": "2013-09-04",
+    "location": "Belo Horizonte, Minas Gerais, Brazil",
+    "slug": "ufc-fight-night-teixeira-vs-bader",
+    "year": "2013"
+  },
+  {
+    "id": 244,
+    "name": "UFC 164: Henderson vs Pettis 2",
+    "date": "2013-08-31",
+    "location": "Milwaukee, Wisconsin, USA",
+    "slug": "ufc-164-henderson-vs-pettis-2",
+    "year": "2013"
+  },
+  {
+    "id": 243,
+    "name": "UFC Fight Night: Condit vs Kampmann 2",
+    "date": "2013-08-28",
+    "location": "Indianapolis, Indiana, USA",
+    "slug": "ufc-fight-night-condit-vs-kampmann-2",
+    "year": "2013"
+  },
+  {
+    "id": 242,
+    "name": "UFC Fight Night: Shogun vs Sonnen",
+    "date": "2013-08-17",
+    "location": "Boston, Massachusetts, USA",
+    "slug": "ufc-fight-night-shogun-vs-sonnen",
+    "year": "2013"
+  },
+  {
+    "id": 241,
+    "name": "UFC 163: Aldo vs Jung",
+    "date": "2013-08-03",
+    "location": "Rio de Janeiro, Brazil",
+    "slug": "ufc-163-aldo-vs-jung",
+    "year": "2013"
+  },
+  {
+    "id": 240,
+    "name": "UFC on FOX: Johnson vs Moraga",
+    "date": "2013-07-27",
+    "location": "Seattle, Washington, USA",
+    "slug": "ufc-on-fox-johnson-vs-moraga",
+    "year": "2013"
+  },
+  {
+    "id": 239,
+    "name": "UFC 162: Silva vs Weidman",
+    "date": "2013-07-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-162-silva-vs-weidman",
+    "year": "2013"
+  },
+  {
+    "id": 238,
+    "name": "UFC 161: Evans vs Henderson",
+    "date": "2013-06-15",
+    "location": "Winnipeg, Manitoba, Canada",
+    "slug": "ufc-161-evans-vs-henderson",
+    "year": "2013"
+  },
+  {
+    "id": 237,
+    "name": "UFC on FUEL TV: Nogueira vs. Werdum",
+    "date": "2013-06-08",
+    "location": "Fortaleza, Ceara, Brazil",
+    "slug": "ufc-on-fuel-tv-nogueira-vs-werdum",
+    "year": "2013"
+  },
+  {
+    "id": 236,
+    "name": "UFC 160: Velasquez vs Silva 2",
+    "date": "2013-05-25",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-160-velasquez-vs-silva-2",
+    "year": "2013"
+  },
+  {
+    "id": 235,
+    "name": "UFC on FX: Belfort vs. Rockhold",
+    "date": "2013-05-18",
+    "location": "Jaragua do Sul, Santa Catarina, Brazil",
+    "slug": "ufc-on-fx-belfort-vs-rockhold",
+    "year": "2013"
+  },
+  {
+    "id": 234,
+    "name": "UFC 159: Jones vs Sonnen",
+    "date": "2013-04-27",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-159-jones-vs-sonnen",
+    "year": "2013"
+  },
+  {
+    "id": 233,
+    "name": "UFC on FOX: Henderson vs Melendez",
+    "date": "2013-04-20",
+    "location": "San Jose, California, USA",
+    "slug": "ufc-on-fox-henderson-vs-melendez",
+    "year": "2013"
+  },
+  {
+    "id": 232,
+    "name": "The Ultimate Fighter: Team Jones vs. Team Sonnen Finale",
+    "date": "2013-04-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-jones-vs-team-sonnen-finale",
+    "year": "2013"
+  },
+  {
+    "id": 231,
+    "name": "UFC on FUEL TV: Mousasi vs Latifi",
+    "date": "2013-04-06",
+    "location": "Stockholm, Sweden",
+    "slug": "ufc-on-fuel-tv-mousasi-vs-latifi",
+    "year": "2013"
+  },
+  {
+    "id": 230,
+    "name": "UFC 158: St-Pierre vs Diaz",
+    "date": "2013-03-16",
+    "location": "Montreal, Quebec, Canada",
+    "slug": "ufc-158-st-pierre-vs-diaz",
+    "year": "2013"
+  },
+  {
+    "id": 229,
+    "name": "UFC on FUEL TV: Silva vs. Stann",
+    "date": "2013-03-02",
+    "location": "Saitama, Japan",
+    "slug": "ufc-on-fuel-tv-silva-vs-stann",
+    "year": "2013"
+  },
+  {
+    "id": 228,
+    "name": "UFC 157: Rousey vs Carmouche",
+    "date": "2013-02-23",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-157-rousey-vs-carmouche",
+    "year": "2013"
+  },
+  {
+    "id": 227,
+    "name": "UFC on FUEL TV: Barao vs McDonald",
+    "date": "2013-02-16",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-on-fuel-tv-barao-vs-mcdonald",
+    "year": "2013"
+  },
+  {
+    "id": 226,
+    "name": "UFC 156: Aldo vs Edgar",
+    "date": "2013-02-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-156-aldo-vs-edgar",
+    "year": "2013"
+  },
+  {
+    "id": 225,
+    "name": "UFC on FOX: Johnson vs Dodson",
+    "date": "2013-01-26",
+    "location": "Chicago, Illinois, USA",
+    "slug": "ufc-on-fox-johnson-vs-dodson",
+    "year": "2013"
+  },
+  {
+    "id": 224,
+    "name": "UFC on FX: Belfort vs Bisping",
+    "date": "2013-01-19",
+    "location": "Sao Paulo, Brazil",
+    "slug": "ufc-on-fx-belfort-vs-bisping",
+    "year": "2013"
+  },
+  {
+    "id": 223,
+    "name": "UFC 155: Dos Santos vs Velasquez II",
+    "date": "2012-12-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-155-dos-santos-vs-velasquez-ii",
+    "year": "2012"
+  },
+  {
+    "id": 222,
+    "name": "The Ultimate Fighter: Team Carwin vs. Team Nelson Finale",
+    "date": "2012-12-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-carwin-vs-team-nelson-finale",
+    "year": "2012"
+  },
+  {
+    "id": 221,
+    "name": "UFC on FX: Sotiropoulos vs Pearson",
+    "date": "2012-12-14",
+    "location": "Gold Coast, Queensland, Australia",
+    "slug": "ufc-on-fx-sotiropoulos-vs-pearson",
+    "year": "2012"
+  },
+  {
+    "id": 220,
+    "name": "UFC on FOX: Henderson vs Diaz",
+    "date": "2012-12-08",
+    "location": "Seattle, Washington, USA",
+    "slug": "ufc-on-fox-henderson-vs-diaz",
+    "year": "2012"
+  },
+  {
+    "id": 219,
+    "name": "UFC 154: St-Pierre vs Condit",
+    "date": "2012-11-17",
+    "location": "Montreal, Quebec, Canada",
+    "slug": "ufc-154-st-pierre-vs-condit",
+    "year": "2012"
+  },
+  {
+    "id": 218,
+    "name": "UFC Macao: Franklin vs Le",
+    "date": "2012-11-10",
+    "location": "Macau, China",
+    "slug": "ufc-macao-franklin-vs-le",
+    "year": "2012"
+  },
+  {
+    "id": 217,
+    "name": "UFC 153: Silva vs Bonnar",
+    "date": "2012-10-13",
+    "location": "Rio de Janeiro, Brazil",
+    "slug": "ufc-153-silva-vs-bonnar",
+    "year": "2012"
+  },
+  {
+    "id": 216,
+    "name": "UFC on FX: Browne vs Bigfoot",
+    "date": "2012-10-05",
+    "location": "Minneapolis, Minnesota, USA",
+    "slug": "ufc-on-fx-browne-vs-bigfoot",
+    "year": "2012"
+  },
+  {
+    "id": 215,
+    "name": "UFC on FUEL TV: Struve vs Miocic",
+    "date": "2012-09-29",
+    "location": "Nottingham, England, United Kingdom",
+    "slug": "ufc-on-fuel-tv-struve-vs-miocic",
+    "year": "2012"
+  },
+  {
+    "id": 214,
+    "name": "UFC 152: Jones vs Belfort",
+    "date": "2012-09-22",
+    "location": "Toronto, Ontario, Canada",
+    "slug": "ufc-152-jones-vs-belfort",
+    "year": "2012"
+  },
+  {
+    "id": 213,
+    "name": "UFC 150: Henderson vs Edgar II",
+    "date": "2012-08-11",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-150-henderson-vs-edgar-ii",
+    "year": "2012"
+  },
+  {
+    "id": 212,
+    "name": "UFC on FOX: Shogun vs Vera",
+    "date": "2012-08-04",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-on-fox-shogun-vs-vera",
+    "year": "2012"
+  },
+  {
+    "id": 211,
+    "name": "UFC 149: Faber vs Barao",
+    "date": "2012-07-21",
+    "location": "Calgary, Alberta, Canada",
+    "slug": "ufc-149-faber-vs-barao",
+    "year": "2012"
+  },
+  {
+    "id": 210,
+    "name": "UFC on FUEL TV: Munoz vs Weidman",
+    "date": "2012-07-11",
+    "location": "San Jose, California, USA",
+    "slug": "ufc-on-fuel-tv-munoz-vs-weidman",
+    "year": "2012"
+  },
+  {
+    "id": 209,
+    "name": "UFC 148: Silva vs Sonnen 2",
+    "date": "2012-07-07",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-148-silva-vs-sonnen-2",
+    "year": "2012"
+  },
+  {
+    "id": 208,
+    "name": "UFC 147: Silva vs Franklin 2",
+    "date": "2012-06-23",
+    "location": "Belo Horizonte, Minas Gerais, Brazil",
+    "slug": "ufc-147-silva-vs-franklin-2",
+    "year": "2012"
+  },
+  {
+    "id": 207,
+    "name": "UFC on FX: Maynard vs Guida",
+    "date": "2012-06-22",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-on-fx-maynard-vs-guida",
+    "year": "2012"
+  },
+  {
+    "id": 206,
+    "name": "UFC on FX: Johnson vs McCall",
+    "date": "2012-06-08",
+    "location": "Sunrise, Florida, USA",
+    "slug": "ufc-on-fx-johnson-vs-mccall",
+    "year": "2012"
+  },
+  {
+    "id": 205,
+    "name": "The Ultimate Fighter: Live Finale",
+    "date": "2012-06-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-live-finale",
+    "year": "2012"
+  },
+  {
+    "id": 204,
+    "name": "UFC 146: Dos Santos vs Mir",
+    "date": "2012-05-26",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-146-dos-santos-vs-mir",
+    "year": "2012"
+  },
+  {
+    "id": 203,
+    "name": "UFC on FUEL TV: Korean Zombie vs Poirier",
+    "date": "2012-05-15",
+    "location": "Fairfax, Virginia, USA",
+    "slug": "ufc-on-fuel-tv-korean-zombie-vs-poirier",
+    "year": "2012"
+  },
+  {
+    "id": 202,
+    "name": "UFC on FOX: Diaz vs Miller",
+    "date": "2012-05-05",
+    "location": "East Rutherford, New Jersey, USA",
+    "slug": "ufc-on-fox-diaz-vs-miller",
+    "year": "2012"
+  },
+  {
+    "id": 201,
+    "name": "UFC 145: Jones vs Evans",
+    "date": "2012-04-21",
+    "location": "Atlanta, Georgia, USA",
+    "slug": "ufc-145-jones-vs-evans",
+    "year": "2012"
+  },
+  {
+    "id": 200,
+    "name": "UFC on FUEL TV: Gustafsson vs Silva",
+    "date": "2012-04-14",
+    "location": "Stockholm, Sweden",
+    "slug": "ufc-on-fuel-tv-gustafsson-vs-silva",
+    "year": "2012"
+  },
+  {
+    "id": 199,
+    "name": "UFC on FX: Alves vs Kampmann",
+    "date": "2012-03-02",
+    "location": "Sydney, New South Wales, Australia",
+    "slug": "ufc-on-fx-alves-vs-kampmann",
+    "year": "2012"
+  },
+  {
+    "id": 198,
+    "name": "UFC 144: Edgar vs Henderson",
+    "date": "2012-02-25",
+    "location": "Saitama, Japan",
+    "slug": "ufc-144-edgar-vs-henderson",
+    "year": "2012"
+  },
+  {
+    "id": 197,
+    "name": "UFC on FUEL TV: Sanchez vs Ellenberger",
+    "date": "2012-02-15",
+    "location": "Omaha, Nebraska, USA",
+    "slug": "ufc-on-fuel-tv-sanchez-vs-ellenberger",
+    "year": "2012"
+  },
+  {
+    "id": 196,
+    "name": "UFC 143: Diaz vs Condit",
+    "date": "2012-02-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-143-diaz-vs-condit",
+    "year": "2012"
+  },
+  {
+    "id": 195,
+    "name": "UFC on FOX: Evans vs Davis",
+    "date": "2012-01-28",
+    "location": "Chicago, Illinois, USA",
+    "slug": "ufc-on-fox-evans-vs-davis",
+    "year": "2012"
+  },
+  {
+    "id": 194,
+    "name": "UFC on FX: Guillard vs Miller",
+    "date": "2012-01-20",
+    "location": "Nashville, Tennessee, USA",
+    "slug": "ufc-on-fx-guillard-vs-miller",
+    "year": "2012"
+  },
+  {
+    "id": 193,
+    "name": "UFC 142: Aldo vs Mendes",
+    "date": "2012-01-14",
+    "location": "Rio de Janeiro, Brazil",
+    "slug": "ufc-142-aldo-vs-mendes",
+    "year": "2012"
+  },
+  {
+    "id": 192,
+    "name": "UFC 141: Lesnar vs Overeem",
+    "date": "2011-12-30",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-141-lesnar-vs-overeem",
+    "year": "2011"
+  },
+  {
+    "id": 191,
+    "name": "UFC 140: Jones vs Machida",
+    "date": "2011-12-10",
+    "location": "Toronto, Ontario, Canada",
+    "slug": "ufc-140-jones-vs-machida",
+    "year": "2011"
+  },
+  {
+    "id": 190,
+    "name": "The Ultimate Fighter: Team Bisping vs Team Miller Finale",
+    "date": "2011-12-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-bisping-vs-team-miller-finale",
+    "year": "2011"
+  },
+  {
+    "id": 189,
+    "name": "UFC 139: Shogun vs Henderson",
+    "date": "2011-11-19",
+    "location": "San Jose, California, USA",
+    "slug": "ufc-139-shogun-vs-henderson",
+    "year": "2011"
+  },
+  {
+    "id": 188,
+    "name": "UFC on FOX: Velasquez vs Dos Santos",
+    "date": "2011-11-12",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-on-fox-velasquez-vs-dos-santos",
+    "year": "2011"
+  },
+  {
+    "id": 187,
+    "name": "UFC 138: Leben vs Munoz",
+    "date": "2011-11-05",
+    "location": "Birmingham, England, United Kingdom",
+    "slug": "ufc-138-leben-vs-munoz",
+    "year": "2011"
+  },
+  {
+    "id": 186,
+    "name": "UFC 137: Penn vs Diaz",
+    "date": "2011-10-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-137-penn-vs-diaz",
+    "year": "2011"
+  },
+  {
+    "id": 185,
+    "name": "UFC 136: Edgar vs Maynard 3",
+    "date": "2011-10-08",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-136-edgar-vs-maynard-3",
+    "year": "2011"
+  },
+  {
+    "id": 184,
+    "name": "UFC Live: Cruz vs Johnson",
+    "date": "2011-10-01",
+    "location": "Washington, DC, USA",
+    "slug": "ufc-live-cruz-vs-johnson",
+    "year": "2011"
+  },
+  {
+    "id": 183,
+    "name": "UFC 135: Jones vs Rampage",
+    "date": "2011-09-24",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-135-jones-vs-rampage",
+    "year": "2011"
+  },
+  {
+    "id": 182,
+    "name": "UFC Fight Night: Shields vs Ellenberger",
+    "date": "2011-09-17",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-fight-night-shields-vs-ellenberger",
+    "year": "2011"
+  },
+  {
+    "id": 181,
+    "name": "UFC 134: Silva vs Okami",
+    "date": "2011-08-27",
+    "location": "Rio de Janeiro, Brazil",
+    "slug": "ufc-134-silva-vs-okami",
+    "year": "2011"
+  },
+  {
+    "id": 180,
+    "name": "UFC Live: Hardy vs Lytle",
+    "date": "2011-08-14",
+    "location": "Milwaukee, Wisconsin, USA",
+    "slug": "ufc-live-hardy-vs-lytle",
+    "year": "2011"
+  },
+  {
+    "id": 179,
+    "name": "UFC 133: Evans vs Ortiz 2",
+    "date": "2011-08-06",
+    "location": "Philadelphia, Pennsylvania, USA",
+    "slug": "ufc-133-evans-vs-ortiz-2",
+    "year": "2011"
+  },
+  {
+    "id": 178,
+    "name": "UFC 132: Cruz vs Faber",
+    "date": "2011-07-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-132-cruz-vs-faber",
+    "year": "2011"
+  },
+  {
+    "id": 177,
+    "name": "UFC Live: Kongo vs Barry",
+    "date": "2011-06-26",
+    "location": "Pittsburgh, Pennsylvania, USA",
+    "slug": "ufc-live-kongo-vs-barry",
+    "year": "2011"
+  },
+  {
+    "id": 176,
+    "name": "UFC 131: Dos Santos vs Carwin",
+    "date": "2011-06-11",
+    "location": "Vancouver, British Columbia, Canada",
+    "slug": "ufc-131-dos-santos-vs-carwin",
+    "year": "2011"
+  },
+  {
+    "id": 175,
+    "name": "The Ultimate Fighter: Team Lesnar vs Team dos Santos Finale",
+    "date": "2011-06-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-lesnar-vs-team-dos-santos-finale",
+    "year": "2011"
+  },
+  {
+    "id": 174,
+    "name": "UFC 130: Rampage vs Hamill",
+    "date": "2011-05-28",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-130-rampage-vs-hamill",
+    "year": "2011"
+  },
+  {
+    "id": 173,
+    "name": "UFC 129: St-Pierre vs Shields",
+    "date": "2011-04-30",
+    "location": "Toronto, Ontario, Canada",
+    "slug": "ufc-129-st-pierre-vs-shields",
+    "year": "2011"
+  },
+  {
+    "id": 172,
+    "name": "UFC Fight Night: Nogueira vs Davis",
+    "date": "2011-03-26",
+    "location": "Seattle, Washington, USA",
+    "slug": "ufc-fight-night-nogueira-vs-davis",
+    "year": "2011"
+  },
+  {
+    "id": 171,
+    "name": "UFC 128: Shogun vs Jones",
+    "date": "2011-03-19",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-128-shogun-vs-jones",
+    "year": "2011"
+  },
+  {
+    "id": 170,
+    "name": "UFC Live: Sanchez vs Kampmann",
+    "date": "2011-03-03",
+    "location": "Louisville, Kentucky, USA",
+    "slug": "ufc-live-sanchez-vs-kampmann",
+    "year": "2011"
+  },
+  {
+    "id": 169,
+    "name": "UFC 127: Penn vs Fitch",
+    "date": "2011-02-26",
+    "location": "Sydney, New South Wales, Australia",
+    "slug": "ufc-127-penn-vs-fitch",
+    "year": "2011"
+  },
+  {
+    "id": 168,
+    "name": "UFC 126: Silva vs Belfort",
+    "date": "2011-02-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-126-silva-vs-belfort",
+    "year": "2011"
+  },
+  {
+    "id": 167,
+    "name": "UFC Fight Night: Fight for the Troops 2",
+    "date": "2011-01-22",
+    "location": "Killeen, Texas, USA",
+    "slug": "ufc-fight-night-fight-for-the-troops-2",
+    "year": "2011"
+  },
+  {
+    "id": 166,
+    "name": "UFC 125: Resolution",
+    "date": "2011-01-01",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-125-resolution",
+    "year": "2011"
+  },
+  {
+    "id": 165,
+    "name": "UFC 124: St-Pierre vs Koscheck 2",
+    "date": "2010-12-11",
+    "location": "Montreal, Quebec, Canada",
+    "slug": "ufc-124-st-pierre-vs-koscheck-2",
+    "year": "2010"
+  },
+  {
+    "id": 164,
+    "name": "The Ultimate Fighter: Team GSP vs Team Koscheck Finale",
+    "date": "2010-12-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-gsp-vs-team-koscheck-finale",
+    "year": "2010"
+  },
+  {
+    "id": 163,
+    "name": "UFC 123: Rampage vs Machida",
+    "date": "2010-11-20",
+    "location": "Auburn Hills, Michigan, USA",
+    "slug": "ufc-123-rampage-vs-machida",
+    "year": "2010"
+  },
+  {
+    "id": 162,
+    "name": "UFC 122: Marquardt vs Okami",
+    "date": "2010-11-13",
+    "location": "Oberhausen, North Rhine-Westphalia, Germany",
+    "slug": "ufc-122-marquardt-vs-okami",
+    "year": "2010"
+  },
+  {
+    "id": 161,
+    "name": "UFC 121: Lesnar vs Velasquez",
+    "date": "2010-10-23",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-121-lesnar-vs-velasquez",
+    "year": "2010"
+  },
+  {
+    "id": 160,
+    "name": "UFC 120: Bisping vs Akiyama",
+    "date": "2010-10-16",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-120-bisping-vs-akiyama",
+    "year": "2010"
+  },
+  {
+    "id": 159,
+    "name": "UFC 119: Mir vs Cro Cop",
+    "date": "2010-09-25",
+    "location": "Indianapolis, Indiana, USA",
+    "slug": "ufc-119-mir-vs-cro-cop",
+    "year": "2010"
+  },
+  {
+    "id": 158,
+    "name": "UFC Fight Night: Marquardt vs Palhares",
+    "date": "2010-09-15",
+    "location": "Austin, Texas, USA",
+    "slug": "ufc-fight-night-marquardt-vs-palhares",
+    "year": "2010"
+  },
+  {
+    "id": 157,
+    "name": "UFC 118: Edgar vs Penn 2",
+    "date": "2010-08-28",
+    "location": "Boston, Massachusetts, USA",
+    "slug": "ufc-118-edgar-vs-penn-2",
+    "year": "2010"
+  },
+  {
+    "id": 156,
+    "name": "UFC 117: Silva vs Sonnen",
+    "date": "2010-08-07",
+    "location": "Oakland, California, USA",
+    "slug": "ufc-117-silva-vs-sonnen",
+    "year": "2010"
+  },
+  {
+    "id": 155,
+    "name": "UFC Live: Jones vs Matyushenko",
+    "date": "2010-08-01",
+    "location": "San Diego, California, USA",
+    "slug": "ufc-live-jones-vs-matyushenko",
+    "year": "2010"
+  },
+  {
+    "id": 154,
+    "name": "UFC 116: Lesnar vs Carwin",
+    "date": "2010-07-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-116-lesnar-vs-carwin",
+    "year": "2010"
+  },
+  {
+    "id": 153,
+    "name": "The Ultimate Fighter: Team Liddell vs Team Ortiz Finale",
+    "date": "2010-06-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-liddell-vs-team-ortiz-finale",
+    "year": "2010"
+  },
+  {
+    "id": 152,
+    "name": "UFC 115: Liddell vs Franklin",
+    "date": "2010-06-12",
+    "location": "Vancouver, British Columbia, Canada",
+    "slug": "ufc-115-liddell-vs-franklin",
+    "year": "2010"
+  },
+  {
+    "id": 151,
+    "name": "UFC 114: Rampage vs Evans",
+    "date": "2010-05-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-114-rampage-vs-evans",
+    "year": "2010"
+  },
+  {
+    "id": 150,
+    "name": "UFC 113: Machida vs Shogun 2",
+    "date": "2010-05-08",
+    "location": "Montreal, Quebec, Canada",
+    "slug": "ufc-113-machida-vs-shogun-2",
+    "year": "2010"
+  },
+  {
+    "id": 149,
+    "name": "UFC 112: Invincible",
+    "date": "2010-04-10",
+    "location": "Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-112-invincible",
+    "year": "2010"
+  },
+  {
+    "id": 148,
+    "name": "UFC Fight Night: Florian vs Gomi",
+    "date": "2010-03-31",
+    "location": "Charlotte, North Carolina, USA",
+    "slug": "ufc-fight-night-florian-vs-gomi",
+    "year": "2010"
+  },
+  {
+    "id": 147,
+    "name": "UFC 111: St-Pierre vs Hardy",
+    "date": "2010-03-27",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-111-st-pierre-vs-hardy",
+    "year": "2010"
+  },
+  {
+    "id": 146,
+    "name": "UFC Live: Vera vs Jones",
+    "date": "2010-03-21",
+    "location": "Broomfield, Colorado, USA",
+    "slug": "ufc-live-vera-vs-jones",
+    "year": "2010"
+  },
+  {
+    "id": 145,
+    "name": "UFC 110: Nogueira vs Velasquez",
+    "date": "2010-02-20",
+    "location": "Sydney, New South Wales, Australia",
+    "slug": "ufc-110-nogueira-vs-velasquez",
+    "year": "2010"
+  },
+  {
+    "id": 144,
+    "name": "UFC 109: Relentless",
+    "date": "2010-02-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-109-relentless",
+    "year": "2010"
+  },
+  {
+    "id": 143,
+    "name": "UFC Fight Night: Maynard vs Diaz",
+    "date": "2010-01-11",
+    "location": "Fairfax, Virginia, USA",
+    "slug": "ufc-fight-night-maynard-vs-diaz",
+    "year": "2010"
+  },
+  {
+    "id": 142,
+    "name": "UFC 108: Evans vs Silva",
+    "date": "2010-01-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-108-evans-vs-silva",
+    "year": "2010"
+  },
+  {
+    "id": 141,
+    "name": "UFC 107: Penn vs Sanchez",
+    "date": "2009-12-12",
+    "location": "Memphis, Tennessee, USA",
+    "slug": "ufc-107-penn-vs-sanchez",
+    "year": "2009"
+  },
+  {
+    "id": 140,
+    "name": "The Ultimate Fighter: Heavyweights Finale",
+    "date": "2009-12-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-heavyweights-finale",
+    "year": "2009"
+  },
+  {
+    "id": 139,
+    "name": "UFC 106: Ortiz vs Griffin 2",
+    "date": "2009-11-21",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-106-ortiz-vs-griffin-2",
+    "year": "2009"
+  },
+  {
+    "id": 138,
+    "name": "UFC 105: Couture vs Vera",
+    "date": "2009-11-14",
+    "location": "Manchester, England, United Kingdom",
+    "slug": "ufc-105-couture-vs-vera",
+    "year": "2009"
+  },
+  {
+    "id": 137,
+    "name": "UFC 104: Machida vs Shogun",
+    "date": "2009-10-24",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-104-machida-vs-shogun",
+    "year": "2009"
+  },
+  {
+    "id": 136,
+    "name": "UFC 103: Franklin vs Belfort",
+    "date": "2009-09-19",
+    "location": "Dallas, Texas, USA",
+    "slug": "ufc-103-franklin-vs-belfort",
+    "year": "2009"
+  },
+  {
+    "id": 135,
+    "name": "UFC Fight Night: Diaz vs Guillard",
+    "date": "2009-09-16",
+    "location": "Oklahoma City, Oklahoma, USA",
+    "slug": "ufc-fight-night-diaz-vs-guillard",
+    "year": "2009"
+  },
+  {
+    "id": 134,
+    "name": "UFC 102: Couture vs Nogueira",
+    "date": "2009-08-29",
+    "location": "Portland, Oregon, USA",
+    "slug": "ufc-102-couture-vs-nogueira",
+    "year": "2009"
+  },
+  {
+    "id": 133,
+    "name": "UFC 101: Declaration",
+    "date": "2009-08-08",
+    "location": "Philadelphia, Pennsylvania, USA",
+    "slug": "ufc-101-declaration",
+    "year": "2009"
+  },
+  {
+    "id": 132,
+    "name": "UFC 100",
+    "date": "2009-07-11",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-100",
+    "year": "2009"
+  },
+  {
+    "id": 131,
+    "name": "The Ultimate Fighter: United States vs. United Kingdom Finale",
+    "date": "2009-06-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-united-states-vs-united-kingdom-finale",
+    "year": "2009"
+  },
+  {
+    "id": 130,
+    "name": "UFC 99: The Comeback",
+    "date": "2009-06-13",
+    "location": "Cologne, North Rhine-Westphalia, Germany",
+    "slug": "ufc-99-the-comeback",
+    "year": "2009"
+  },
+  {
+    "id": 129,
+    "name": "UFC 98: Evans vs Machida",
+    "date": "2009-05-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-98-evans-vs-machida",
+    "year": "2009"
+  },
+  {
+    "id": 128,
+    "name": "UFC 97: Redemption",
+    "date": "2009-04-18",
+    "location": "Montreal, Quebec, Canada",
+    "slug": "ufc-97-redemption",
+    "year": "2009"
+  },
+  {
+    "id": 127,
+    "name": "UFC Fight Night: Condit vs Kampmann",
+    "date": "2009-04-01",
+    "location": "Nashville, Tennessee, USA",
+    "slug": "ufc-fight-night-condit-vs-kampmann",
+    "year": "2009"
+  },
+  {
+    "id": 126,
+    "name": "UFC 96: Jackson vs Jardine",
+    "date": "2009-03-07",
+    "location": "Columbus, Ohio, USA",
+    "slug": "ufc-96-jackson-vs-jardine",
+    "year": "2009"
+  },
+  {
+    "id": 125,
+    "name": "UFC 95: Sanchez vs Stevenson",
+    "date": "2009-02-21",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-95-sanchez-vs-stevenson",
+    "year": "2009"
+  },
+  {
+    "id": 124,
+    "name": "UFC Fight Night: Lauzon vs Stephens",
+    "date": "2009-02-07",
+    "location": "Tampa, Florida, USA",
+    "slug": "ufc-fight-night-lauzon-vs-stephens",
+    "year": "2009"
+  },
+  {
+    "id": 123,
+    "name": "UFC 94: St-Pierre vs Penn 2",
+    "date": "2009-01-31",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-94-st-pierre-vs-penn-2",
+    "year": "2009"
+  },
+  {
+    "id": 122,
+    "name": "UFC 93: Franklin vs Henderson",
+    "date": "2009-01-17",
+    "location": "Dublin, Leinster, Ireland",
+    "slug": "ufc-93-franklin-vs-henderson",
+    "year": "2009"
+  },
+  {
+    "id": 121,
+    "name": "UFC 92: The Ultimate 2008",
+    "date": "2008-12-27",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-92-the-ultimate-2008",
+    "year": "2008"
+  },
+  {
+    "id": 120,
+    "name": "The Ultimate Fighter: Team Nogueira vs. Team Mir Finale",
+    "date": "2008-12-13",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-nogueira-vs-team-mir-finale",
+    "year": "2008"
+  },
+  {
+    "id": 119,
+    "name": "UFC Fight Night - Fight for the Troops",
+    "date": "2008-12-10",
+    "location": "Fayetteville, North Carolina, USA",
+    "slug": "ufc-fight-night-fight-for-the-troops",
+    "year": "2008"
+  },
+  {
+    "id": 118,
+    "name": "UFC 91: Couture vs Lesnar",
+    "date": "2008-11-15",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-91-couture-vs-lesnar",
+    "year": "2008"
+  },
+  {
+    "id": 117,
+    "name": "UFC 90: Silva vs Cote",
+    "date": "2008-10-25",
+    "location": "Rosemont, Illinois, USA",
+    "slug": "ufc-90-silva-vs-cote",
+    "year": "2008"
+  },
+  {
+    "id": 116,
+    "name": "UFC 89: Bisping vs Leben",
+    "date": "2008-10-18",
+    "location": "Birmingham, England, United Kingdom",
+    "slug": "ufc-89-bisping-vs-leben",
+    "year": "2008"
+  },
+  {
+    "id": 115,
+    "name": "UFC Fight Night: Diaz vs Neer",
+    "date": "2008-09-17",
+    "location": "Omaha, Nebraska, USA",
+    "slug": "ufc-fight-night-diaz-vs-neer",
+    "year": "2008"
+  },
+  {
+    "id": 114,
+    "name": "UFC 88: Breakthrough",
+    "date": "2008-09-06",
+    "location": "Atlanta, Georgia, USA",
+    "slug": "ufc-88-breakthrough",
+    "year": "2008"
+  },
+  {
+    "id": 113,
+    "name": "UFC 87: Seek And Destroy",
+    "date": "2008-08-09",
+    "location": "Minneapolis, Minnesota, USA",
+    "slug": "ufc-87-seek-and-destroy",
+    "year": "2008"
+  },
+  {
+    "id": 112,
+    "name": "UFC: Silva vs Irvin",
+    "date": "2008-07-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-silva-vs-irvin",
+    "year": "2008"
+  },
+  {
+    "id": 111,
+    "name": "UFC 86: Jackson vs Griffin",
+    "date": "2008-07-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-86-jackson-vs-griffin",
+    "year": "2008"
+  },
+  {
+    "id": 110,
+    "name": "The Ultimate Fighter: Team Rampage vs Team Forrest Finale",
+    "date": "2008-06-21",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-rampage-vs-team-forrest-finale",
+    "year": "2008"
+  },
+  {
+    "id": 109,
+    "name": "UFC 85: Bedlam",
+    "date": "2008-06-07",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-85-bedlam",
+    "year": "2008"
+  },
+  {
+    "id": 108,
+    "name": "UFC 84: Ill Will",
+    "date": "2008-05-24",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-84-ill-will",
+    "year": "2008"
+  },
+  {
+    "id": 107,
+    "name": "UFC 83: Serra vs St-Pierre 2",
+    "date": "2008-04-19",
+    "location": "Montreal, Quebec, Canada",
+    "slug": "ufc-83-serra-vs-st-pierre-2",
+    "year": "2008"
+  },
+  {
+    "id": 106,
+    "name": "UFC Fight Night: Florian vs Lauzon",
+    "date": "2008-04-02",
+    "location": "Broomfield, Colorado, USA",
+    "slug": "ufc-fight-night-florian-vs-lauzon",
+    "year": "2008"
+  },
+  {
+    "id": 105,
+    "name": "UFC 82: Pride of a Champion",
+    "date": "2008-03-01",
+    "location": "Columbus, Ohio, USA",
+    "slug": "ufc-82-pride-of-a-champion",
+    "year": "2008"
+  },
+  {
+    "id": 104,
+    "name": "UFC 81: Breaking Point",
+    "date": "2008-02-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-81-breaking-point",
+    "year": "2008"
+  },
+  {
+    "id": 103,
+    "name": "UFC Fight Night: Swick vs Burkman",
+    "date": "2008-01-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-swick-vs-burkman",
+    "year": "2008"
+  },
+  {
+    "id": 102,
+    "name": "UFC 80: Rapid Fire",
+    "date": "2008-01-19",
+    "location": "Newcastle, England, United Kingdom",
+    "slug": "ufc-80-rapid-fire",
+    "year": "2008"
+  },
+  {
+    "id": 101,
+    "name": "UFC 79: Nemesis",
+    "date": "2007-12-29",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-79-nemesis",
+    "year": "2007"
+  },
+  {
+    "id": 100,
+    "name": "The Ultimate Fighter: Team Hughes vs. Team Serra Finale",
+    "date": "2007-12-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-hughes-vs-team-serra-finale",
+    "year": "2007"
+  },
+  {
+    "id": 99,
+    "name": "UFC 78: Validation",
+    "date": "2007-11-17",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-78-validation",
+    "year": "2007"
+  },
+  {
+    "id": 98,
+    "name": "UFC 77: Hostile Territory",
+    "date": "2007-10-20",
+    "location": "Cincinnati, Ohio, USA",
+    "slug": "ufc-77-hostile-territory",
+    "year": "2007"
+  },
+  {
+    "id": 97,
+    "name": "UFC 76: Knockout",
+    "date": "2007-09-22",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-76-knockout",
+    "year": "2007"
+  },
+  {
+    "id": 96,
+    "name": "UFC Fight Night: Thomas vs Florian",
+    "date": "2007-09-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-thomas-vs-florian",
+    "year": "2007"
+  },
+  {
+    "id": 95,
+    "name": "UFC 75: Champion vs Champion",
+    "date": "2007-09-08",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-75-champion-vs-champion",
+    "year": "2007"
+  },
+  {
+    "id": 94,
+    "name": "UFC 74: Respect",
+    "date": "2007-08-25",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-74-respect",
+    "year": "2007"
+  },
+  {
+    "id": 93,
+    "name": "UFC 73: Stacked",
+    "date": "2007-07-07",
+    "location": "Sacramento, California, USA",
+    "slug": "ufc-73-stacked",
+    "year": "2007"
+  },
+  {
+    "id": 92,
+    "name": "The Ultimate Fighter: Team Pulver vs. Team Penn Finale",
+    "date": "2007-06-23",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-pulver-vs-team-penn-finale",
+    "year": "2007"
+  },
+  {
+    "id": 91,
+    "name": "UFC 72: Victory",
+    "date": "2007-06-16",
+    "location": "Belfast, Northern Ireland, United Kingdom",
+    "slug": "ufc-72-victory",
+    "year": "2007"
+  },
+  {
+    "id": 90,
+    "name": "UFC Fight Night: Stout vs Fisher",
+    "date": "2007-06-12",
+    "location": "Hollywood, Florida, USA",
+    "slug": "ufc-fight-night-stout-vs-fisher",
+    "year": "2007"
+  },
+  {
+    "id": 89,
+    "name": "UFC 71: Liddell vs Jackson",
+    "date": "2007-05-26",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-71-liddell-vs-jackson",
+    "year": "2007"
+  },
+  {
+    "id": 88,
+    "name": "UFC 70: Nations Collide",
+    "date": "2007-04-21",
+    "location": "Manchester, England, United Kingdom",
+    "slug": "ufc-70-nations-collide",
+    "year": "2007"
+  },
+  {
+    "id": 87,
+    "name": "UFC 69: Shootout",
+    "date": "2007-04-07",
+    "location": "Houston, Texas, USA",
+    "slug": "ufc-69-shootout",
+    "year": "2007"
+  },
+  {
+    "id": 86,
+    "name": "UFC Fight Night: Stevenson vs Guillard",
+    "date": "2007-04-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-stevenson-vs-guillard",
+    "year": "2007"
+  },
+  {
+    "id": 85,
+    "name": "UFC 68: The Uprising",
+    "date": "2007-03-03",
+    "location": "Columbus, Ohio, USA",
+    "slug": "ufc-68-the-uprising",
+    "year": "2007"
+  },
+  {
+    "id": 84,
+    "name": "UFC 67: All or Nothing",
+    "date": "2007-02-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-67-all-or-nothing",
+    "year": "2007"
+  },
+  {
+    "id": 83,
+    "name": "UFC Fight Night: Evans vs Salmon",
+    "date": "2007-01-25",
+    "location": "Hollywood, Florida, USA",
+    "slug": "ufc-fight-night-evans-vs-salmon",
+    "year": "2007"
+  },
+  {
+    "id": 82,
+    "name": "UFC 66: Liddell vs Ortiz 2",
+    "date": "2006-12-30",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-66-liddell-vs-ortiz-2",
+    "year": "2006"
+  },
+  {
+    "id": 81,
+    "name": "UFC Fight Night: Sanchez vs Riggs",
+    "date": "2006-12-13",
+    "location": "San Diego, California, USA",
+    "slug": "ufc-fight-night-sanchez-vs-riggs",
+    "year": "2006"
+  },
+  {
+    "id": 80,
+    "name": "UFC 65: Bad Intentions",
+    "date": "2006-11-18",
+    "location": "Sacramento, California, USA",
+    "slug": "ufc-65-bad-intentions",
+    "year": "2006"
+  },
+  {
+    "id": 79,
+    "name": "The Ultimate Fighter: The Comeback Finale",
+    "date": "2006-11-11",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-the-comeback-finale",
+    "year": "2006"
+  },
+  {
+    "id": 78,
+    "name": "UFC 64: Unstoppable",
+    "date": "2006-10-14",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-64-unstoppable",
+    "year": "2006"
+  },
+  {
+    "id": 77,
+    "name": "Ortiz vs Shamrock 3: The Final Chapter",
+    "date": "2006-10-10",
+    "location": "Hollywood, Florida, USA",
+    "slug": "ortiz-vs-shamrock-3-the-final-chapter",
+    "year": "2006"
+  },
+  {
+    "id": 76,
+    "name": "UFC 63: Hughes vs Penn",
+    "date": "2006-09-23",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-63-hughes-vs-penn",
+    "year": "2006"
+  },
+  {
+    "id": 75,
+    "name": "UFC 62: Liddell vs Sobral",
+    "date": "2006-08-26",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-62-liddell-vs-sobral",
+    "year": "2006"
+  },
+  {
+    "id": 74,
+    "name": "UFC Fight Night 6",
+    "date": "2006-08-17",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-6",
+    "year": "2006"
+  },
+  {
+    "id": 73,
+    "name": "UFC 61: Bitter Rivals",
+    "date": "2006-07-08",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-61-bitter-rivals",
+    "year": "2006"
+  },
+  {
+    "id": 72,
+    "name": "UFC Fight Night 5",
+    "date": "2006-06-28",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-5",
+    "year": "2006"
+  },
+  {
+    "id": 71,
+    "name": "The Ultimate Fighter: Team Ortiz vs. Team Shamrock Finale",
+    "date": "2006-06-24",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-ortiz-vs-team-shamrock-finale",
+    "year": "2006"
+  },
+  {
+    "id": 70,
+    "name": "UFC 60: Hughes vs Gracie",
+    "date": "2006-05-27",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-60-hughes-vs-gracie",
+    "year": "2006"
+  },
+  {
+    "id": 69,
+    "name": "UFC 59: Reality Check",
+    "date": "2006-04-15",
+    "location": "Anaheim, California, USA",
+    "slug": "ufc-59-reality-check",
+    "year": "2006"
+  },
+  {
+    "id": 68,
+    "name": "UFC Fight Night 4",
+    "date": "2006-04-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-4",
+    "year": "2006"
+  },
+  {
+    "id": 67,
+    "name": "UFC 58: USA vs Canada",
+    "date": "2006-03-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-58-usa-vs-canada",
+    "year": "2006"
+  },
+  {
+    "id": 66,
+    "name": "UFC 57: Liddell vs Couture 3",
+    "date": "2006-02-04",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-57-liddell-vs-couture-3",
+    "year": "2006"
+  },
+  {
+    "id": 65,
+    "name": "UFC Fight Night 3",
+    "date": "2006-01-16",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-3",
+    "year": "2006"
+  },
+  {
+    "id": 64,
+    "name": "UFC 56: Full Force",
+    "date": "2005-11-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-56-full-force",
+    "year": "2005"
+  },
+  {
+    "id": 63,
+    "name": "The Ultimate Fighter: Team Hughes vs. Team Franklin Finale",
+    "date": "2005-11-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-hughes-vs-team-franklin-finale",
+    "year": "2005"
+  },
+  {
+    "id": 62,
+    "name": "UFC 55: Fury",
+    "date": "2005-10-07",
+    "location": "Uncasville, Connecticut, USA",
+    "slug": "ufc-55-fury",
+    "year": "2005"
+  },
+  {
+    "id": 61,
+    "name": "UFC Fight Night 2",
+    "date": "2005-10-03",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-2",
+    "year": "2005"
+  },
+  {
+    "id": 60,
+    "name": "UFC 54: Boiling Point",
+    "date": "2005-08-20",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-54-boiling-point",
+    "year": "2005"
+  },
+  {
+    "id": 59,
+    "name": "UFC Fight Night 1",
+    "date": "2005-08-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-1",
+    "year": "2005"
+  },
+  {
+    "id": 58,
+    "name": "UFC 53: Heavy Hitters",
+    "date": "2005-06-04",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-53-heavy-hitters",
+    "year": "2005"
+  },
+  {
+    "id": 57,
+    "name": "UFC 52: Couture vs Liddell 2",
+    "date": "2005-04-16",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-52-couture-vs-liddell-2",
+    "year": "2005"
+  },
+  {
+    "id": 56,
+    "name": "The Ultimate Fighter: Team Couture vs. Team Liddell Finale",
+    "date": "2005-04-09",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "the-ultimate-fighter-team-couture-vs-team-liddell-finale",
+    "year": "2005"
+  },
+  {
+    "id": 55,
+    "name": "UFC 51: Super Saturday",
+    "date": "2005-02-05",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-51-super-saturday",
+    "year": "2005"
+  },
+  {
+    "id": 54,
+    "name": "UFC 50: The War Of '04",
+    "date": "2004-10-22",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-50-the-war-of-04",
+    "year": "2004"
+  },
+  {
+    "id": 53,
+    "name": "UFC 49: Unfinished Business",
+    "date": "2004-08-21",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-49-unfinished-business",
+    "year": "2004"
+  },
+  {
+    "id": 52,
+    "name": "UFC 48: Payback",
+    "date": "2004-06-19",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-48-payback",
+    "year": "2004"
+  },
+  {
+    "id": 51,
+    "name": "UFC 47: It's On!",
+    "date": "2004-04-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-47-its-on",
+    "year": "2004"
+  },
+  {
+    "id": 50,
+    "name": "UFC 46: Supernatural",
+    "date": "2004-01-31",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-46-supernatural",
+    "year": "2004"
+  },
+  {
+    "id": 49,
+    "name": "UFC 45: Revolution",
+    "date": "2003-11-21",
+    "location": "Uncasville, Connecticut, USA",
+    "slug": "ufc-45-revolution",
+    "year": "2003"
+  },
+  {
+    "id": 48,
+    "name": "UFC 44: Undisputed",
+    "date": "2003-09-26",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-44-undisputed",
+    "year": "2003"
+  },
+  {
+    "id": 47,
+    "name": "UFC 43: Meltdown",
+    "date": "2003-06-06",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-43-meltdown",
+    "year": "2003"
+  },
+  {
+    "id": 46,
+    "name": "UFC 42: Sudden Impact",
+    "date": "2003-04-25",
+    "location": "Miami, Florida, USA",
+    "slug": "ufc-42-sudden-impact",
+    "year": "2003"
+  },
+  {
+    "id": 45,
+    "name": "UFC 41: Onslaught",
+    "date": "2003-02-28",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-41-onslaught",
+    "year": "2003"
+  },
+  {
+    "id": 44,
+    "name": "UFC 40: Vendetta",
+    "date": "2002-11-22",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-40-vendetta",
+    "year": "2002"
+  },
+  {
+    "id": 43,
+    "name": "UFC 39: The Warriors Return",
+    "date": "2002-09-27",
+    "location": "Uncasville, Connecticut, USA",
+    "slug": "ufc-39-the-warriors-return",
+    "year": "2002"
+  },
+  {
+    "id": 42,
+    "name": "UFC 38: Brawl at the Hall",
+    "date": "2002-07-13",
+    "location": "London, England, United Kingdom",
+    "slug": "ufc-38-brawl-at-the-hall",
+    "year": "2002"
+  },
+  {
+    "id": 41,
+    "name": "UFC 37.5: As Real As It Gets",
+    "date": "2002-06-22",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-375-as-real-as-it-gets",
+    "year": "2002"
+  },
+  {
+    "id": 40,
+    "name": "UFC 37: High Impact",
+    "date": "2002-05-10",
+    "location": "Bossier City, Louisiana, USA",
+    "slug": "ufc-37-high-impact",
+    "year": "2002"
+  },
+  {
+    "id": 39,
+    "name": "UFC 36: Worlds Collide",
+    "date": "2002-03-22",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-36-worlds-collide",
+    "year": "2002"
+  },
+  {
+    "id": 38,
+    "name": "UFC 35: Throwdown",
+    "date": "2002-01-11",
+    "location": "Uncasville, Connecticut, USA",
+    "slug": "ufc-35-throwdown",
+    "year": "2002"
+  },
+  {
+    "id": 37,
+    "name": "UFC 34: High Voltage",
+    "date": "2001-11-02",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-34-high-voltage",
+    "year": "2001"
+  },
+  {
+    "id": 36,
+    "name": "UFC 33: Victory in Vegas",
+    "date": "2001-09-28",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-33-victory-in-vegas",
+    "year": "2001"
+  },
+  {
+    "id": 35,
+    "name": "UFC 32: Showdown in the Meadowlands",
+    "date": "2001-06-29",
+    "location": "East Rutherford, New Jersey, USA",
+    "slug": "ufc-32-showdown-in-the-meadowlands",
+    "year": "2001"
+  },
+  {
+    "id": 34,
+    "name": "UFC 31: Locked and Loaded",
+    "date": "2001-05-04",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-31-locked-and-loaded",
+    "year": "2001"
+  },
+  {
+    "id": 33,
+    "name": "UFC 30: Battle on the Boardwalk",
+    "date": "2001-02-23",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-30-battle-on-the-boardwalk",
+    "year": "2001"
+  },
+  {
+    "id": 32,
+    "name": "UFC 29: Defense of the Belts",
+    "date": "2000-12-16",
+    "location": "Tokyo, Japan",
+    "slug": "ufc-29-defense-of-the-belts",
+    "year": "2000"
+  },
+  {
+    "id": 31,
+    "name": "UFC 28: High Stakes",
+    "date": "2000-11-17",
+    "location": "Atlantic City, New Jersey, USA",
+    "slug": "ufc-28-high-stakes",
+    "year": "2000"
+  },
+  {
+    "id": 30,
+    "name": "UFC 27: Ultimate Bad Boyz",
+    "date": "2000-09-22",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-27-ultimate-bad-boyz",
+    "year": "2000"
+  },
+  {
+    "id": 29,
+    "name": "UFC 26: Ultimate Field Of Dreams",
+    "date": "2000-06-09",
+    "location": "Cedar Rapids, Iowa, USA",
+    "slug": "ufc-26-ultimate-field-of-dreams",
+    "year": "2000"
+  },
+  {
+    "id": 28,
+    "name": "UFC 25: Ultimate Japan 3",
+    "date": "2000-04-14",
+    "location": "Tokyo, Japan",
+    "slug": "ufc-25-ultimate-japan-3",
+    "year": "2000"
+  },
+  {
+    "id": 27,
+    "name": "UFC 24: First Defense",
+    "date": "2000-03-10",
+    "location": "Lake Charles, Louisiana, USA",
+    "slug": "ufc-24-first-defense",
+    "year": "2000"
+  },
+  {
+    "id": 26,
+    "name": "UFC 23: Ultimate Japan 2",
+    "date": "1999-11-19",
+    "location": "Chiba, Japan",
+    "slug": "ufc-23-ultimate-japan-2",
+    "year": "1999"
+  },
+  {
+    "id": 25,
+    "name": "UFC 22: Only One Can be Champion",
+    "date": "1999-09-24",
+    "location": "Lake Charles, Louisiana, USA",
+    "slug": "ufc-22-only-one-can-be-champion",
+    "year": "1999"
+  },
+  {
+    "id": 24,
+    "name": "UFC 21: Return of the Champions",
+    "date": "1999-07-16",
+    "location": "Cedar Rapids, Iowa, USA",
+    "slug": "ufc-21-return-of-the-champions",
+    "year": "1999"
+  },
+  {
+    "id": 23,
+    "name": "UFC 20: Battle for the Gold",
+    "date": "1999-05-07",
+    "location": "Birmingham, Alabama, USA",
+    "slug": "ufc-20-battle-for-the-gold",
+    "year": "1999"
+  },
+  {
+    "id": 22,
+    "name": "UFC 19: Ultimate Young Guns",
+    "date": "1999-03-05",
+    "location": "Bay St. Louis, Mississippi, USA",
+    "slug": "ufc-19-ultimate-young-guns",
+    "year": "1999"
+  },
+  {
+    "id": 21,
+    "name": "UFC 18: The Road to the Heavyweight Title",
+    "date": "1999-01-08",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-18-the-road-to-the-heavyweight-title",
+    "year": "1999"
+  },
+  {
+    "id": 20,
+    "name": "UFC - Ultimate Brazil",
+    "date": "1998-10-16",
+    "location": "Sao Paulo, Brazil",
+    "slug": "ufc-ultimate-brazil",
+    "year": "1998"
+  },
+  {
+    "id": 19,
+    "name": "UFC 17: Redemption",
+    "date": "1998-05-15",
+    "location": "Mobile, Alabama, USA",
+    "slug": "ufc-17-redemption",
+    "year": "1998"
+  },
+  {
+    "id": 18,
+    "name": "UFC 16: Battle in the Bayou",
+    "date": "1998-03-13",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-16-battle-in-the-bayou",
+    "year": "1998"
+  },
+  {
+    "id": 17,
+    "name": "UFC - Ultimate Japan",
+    "date": "1997-12-21",
+    "location": "Yokohama, Kanagawa, Japan",
+    "slug": "ufc-ultimate-japan",
+    "year": "1997"
+  },
+  {
+    "id": 16,
+    "name": "UFC 15: Collision Course",
+    "date": "1997-10-17",
+    "location": "Bay St. Louis, Mississippi, USA",
+    "slug": "ufc-15-collision-course",
+    "year": "1997"
+  },
+  {
+    "id": 15,
+    "name": "UFC 14: Showdown",
+    "date": "1997-07-27",
+    "location": "Birmingham, Alabama, USA",
+    "slug": "ufc-14-showdown",
+    "year": "1997"
+  },
+  {
+    "id": 14,
+    "name": "UFC 13: The Ultimate Force",
+    "date": "1997-05-30",
+    "location": "Augusta, Georgia, USA",
+    "slug": "ufc-13-the-ultimate-force",
+    "year": "1997"
+  },
+  {
+    "id": 13,
+    "name": "UFC 12: Judgement Day",
+    "date": "1997-02-07",
+    "location": "Dothan, Alabama, USA",
+    "slug": "ufc-12-judgement-day",
+    "year": "1997"
+  },
+  {
+    "id": 12,
+    "name": "UFC - Ultimate Ultimate '96",
+    "date": "1996-12-07",
+    "location": "Birmingham, Alabama, USA",
+    "slug": "ufc-ultimate-ultimate-96",
+    "year": "1996"
+  },
+  {
+    "id": 11,
+    "name": "UFC 11: The Proving Ground",
+    "date": "1996-09-20",
+    "location": "Augusta, Georgia, USA",
+    "slug": "ufc-11-the-proving-ground",
+    "year": "1996"
+  },
+  {
+    "id": 10,
+    "name": "UFC 10: The Tournament",
+    "date": "1996-07-12",
+    "location": "Birmingham, Alabama, USA",
+    "slug": "ufc-10-the-tournament",
+    "year": "1996"
+  },
+  {
+    "id": 9,
+    "name": "UFC 9: Motor City Madness",
+    "date": "1996-05-17",
+    "location": "Detroit, Michigan, USA",
+    "slug": "ufc-9-motor-city-madness",
+    "year": "1996"
+  },
+  {
+    "id": 8,
+    "name": "UFC 8: David vs Goliath",
+    "date": "1996-02-16",
+    "location": "San Juan, Puerto Rico",
+    "slug": "ufc-8-david-vs-goliath",
+    "year": "1996"
+  },
+  {
+    "id": 7,
+    "name": "UFC - Ultimate Ultimate '95",
+    "date": "1995-12-16",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-ultimate-ultimate-95",
+    "year": "1995"
+  },
+  {
+    "id": 6,
+    "name": "UFC 7: The Brawl in Buffalo",
+    "date": "1995-09-08",
+    "location": "Buffalo, New York, USA",
+    "slug": "ufc-7-the-brawl-in-buffalo",
+    "year": "1995"
+  },
+  {
+    "id": 5,
+    "name": "UFC 6: Clash of the Titans",
+    "date": "1995-07-14",
+    "location": "Casper, Wyoming, USA",
+    "slug": "ufc-6-clash-of-the-titans",
+    "year": "1995"
+  },
+  {
+    "id": 4,
+    "name": "UFC 5: The Return of the Beast",
+    "date": "1995-04-07",
+    "location": "Charlotte, North Carolina, USA",
+    "slug": "ufc-5-the-return-of-the-beast",
+    "year": "1995"
+  },
+  {
+    "id": 3,
+    "name": "UFC 4: Revenge of the Warriors",
+    "date": "1994-12-16",
+    "location": "Tulsa, Oklahoma, USA",
+    "slug": "ufc-4-revenge-of-the-warriors",
+    "year": "1994"
+  },
+  {
+    "id": 2,
+    "name": "UFC 3: The American Dream",
+    "date": "1994-09-09",
+    "location": "Charlotte, North Carolina, USA",
+    "slug": "ufc-3-the-american-dream",
+    "year": "1994"
+  },
+  {
+    "id": 1,
+    "name": "UFC 2: No Way Out",
+    "date": "1994-03-11",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-2-no-way-out",
+    "year": "1994"
+  }
+]

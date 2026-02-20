@@ -1,56 +1,143 @@
 ---
 layout: layout.njk
-title: Upcoming Events
-description: View all upcoming UFC events and fight cards
+title: UFC Events
+description: Browse upcoming UFC events and previous fight results
 ---
 
 <section class="py-16">
     <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold mb-8">Upcoming UFC Events</h1>
+        <h1 class="text-4xl font-bold mb-6">UFC Events</h1>
         
-        {% if events.length > 0 %}
-            <div class="grid gap-6">
-                {% for event in events %}
-                <div class="event-card bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-red-600 transition">
-                    <a href="/events/{{ event.slug }}/" class="event-card-link">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                            <div>
-                               <h2 class="text-2xl font-bold text-red-600 mb-1">{{ event.name }}</h2>
-                                <p class="text-lg text-gray-300">{{ event.date }} &bull; {{ event.location }}</p>
+        <!-- Tabs -->
+        <div class="events-tabs mb-8">
+            <button class="events-tab active" id="tab-upcoming" onclick="switchTab('upcoming')">Upcoming</button>
+            <button class="events-tab" id="tab-previous" onclick="switchTab('previous')">Previous Results</button>
+        </div>
+
+        <!-- Upcoming Events Panel -->
+        <div id="panel-upcoming" class="events-panel">
+            {% if events.length > 0 %}
+                <div class="grid gap-6">
+                    {% for event in events %}
+                    <div class="event-card bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-red-600 transition">
+                        <a href="/events/{{ event.slug }}/" class="event-card-link">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <div>
+                                   <h2 class="text-2xl font-bold text-red-600 mb-1">{{ event.name }}</h2>
+                                    <p class="text-lg text-gray-300">{{ event.date }} &bull; {{ event.location }}</p>
+                                </div>
+                                <span class="mt-4 md:mt-0 btn btn-primary px-6 py-2 rounded font-semibold">
+                                    View Full Card &rarr;
+                                </span>
                             </div>
-                            <span class="mt-4 md:mt-0 btn btn-primary px-6 py-2 rounded font-semibold">
-                                View Full Card &rarr;
-                            </span>
+                        </a>
+                        
+                        {% if event.matchups.length > 0 %}
+                        <div class="border-t border-gray-800 pt-4">
+                            <p class="text-gray-400 mb-3">{{ event.matchups.length }} fights scheduled</p>
+                            <div class="matchup-list">
+                                {% for matchup in event.matchups | limit(3) %}
+                                <a href="/compare/{{ matchup.slug }}/" class="matchup-row">
+                                    <span class="matchup-names">{{ matchup.fighter_a }} vs. {{ matchup.fighter_b }}</span>
+                                    <span class="matchup-weight">{{ matchup.weight_class }}</span>
+                                </a>
+                                {% endfor %}
+                                
+                                {% if event.matchups.length > 3 %}
+                                <a href="/events/{{ event.slug }}/" class="matchup-more">
+                                    + {{ event.matchups.length - 3 }} more fights &rarr;
+                                </a>
+                                {% endif %}
+                            </div>
                         </div>
-                    </a>
-                    
-                    {% if event.matchups.length > 0 %}
-                    <div class="border-t border-gray-800 pt-4">
-                        <p class="text-gray-400 mb-3">{{ event.matchups.length }} fights scheduled</p>
-                        <div class="matchup-list">
-                            {% for matchup in event.matchups | limit(3) %}
-                            <a href="/compare/{{ matchup.slug }}/" class="matchup-row">
-                                <span class="matchup-names">{{ matchup.fighter_a }} vs. {{ matchup.fighter_b }}</span>
-                                <span class="matchup-weight">{{ matchup.weight_class }}</span>
-                            </a>
-                            {% endfor %}
-                            
-                            {% if event.matchups.length > 3 %}
-                            <a href="/events/{{ event.slug }}/" class="matchup-more">
-                                + {{ event.matchups.length - 3 }} more fights &rarr;
-                            </a>
-                            {% endif %}
-                        </div>
+                        {% endif %}
                     </div>
-                    {% endif %}
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <div class="bg-gray-900 border border-gray-800 rounded-lg p-12 text-center">
-                <h2 class="text-xl font-bold mb-4">No Upcoming Events</h2>
-                <p class="text-gray-400">Check back soon for the next UFC event schedule.</p>
-            </div>
-        {% endif %}
+            {% else %}
+                <div class="bg-gray-900 border border-gray-800 rounded-lg p-12 text-center">
+                    <h2 class="text-xl font-bold mb-4">No Upcoming Events</h2>
+                    <p class="text-gray-400">Check back soon for the next UFC event schedule.</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Previous Results Panel -->
+        <div id="panel-previous" class="events-panel" style="display:none;">
+            {% if historical_events.length > 0 %}
+                <div class="previous-header">
+                    <p class="text-gray-400">{{ historical_events.length }} completed events</p>
+                    <div class="year-filter">
+                        <label for="year-select" class="text-gray-400 text-sm">Year:</label>
+                        <select id="year-select" onchange="filterByYear(this.value)">
+                            {# Build unique years from data #}
+                            {% set years = [] %}
+                            {% for event in historical_events %}
+                                {% if event.year and event.year not in years %}
+                                    {% set _ = years.push(event.year) %}
+                                {% endif %}
+                            {% endfor %}
+                            {% for year in years %}
+                                <option value="{{ year }}">{{ year }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div id="event-count-display" class="text-gray-400 text-sm mb-4"></div>
+                <div class="grid gap-4" id="historical-list">
+                    {% for event in historical_events %}
+                    <a href="/events/{{ event.slug }}/" class="historical-event-card" data-year="{{ event.year }}">
+                        <div class="hist-event-name">{{ event.name }}</div>
+                        <div class="hist-event-meta">{{ event.date }}{% if event.location %} &bull; {{ event.location }}{% endif %}</div>
+                    </a>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="bg-gray-900 border border-gray-800 rounded-lg p-12 text-center">
+                    <h2 class="text-xl font-bold mb-4">No Previous Events</h2>
+                    <p class="text-gray-400">Historical event results will appear here after events are completed.</p>
+                </div>
+            {% endif %}
+        </div>
     </div>
 </section>
+
+<script>
+function switchTab(tab) {
+    document.getElementById('tab-upcoming').classList.toggle('active', tab === 'upcoming');
+    document.getElementById('tab-previous').classList.toggle('active', tab === 'previous');
+    document.getElementById('panel-upcoming').style.display = tab === 'upcoming' ? 'block' : 'none';
+    document.getElementById('panel-previous').style.display = tab === 'previous' ? 'block' : 'none';
+    history.replaceState(null, '', tab === 'previous' ? '#previous' : '#upcoming');
+    
+    // Apply year filter on first show
+    if (tab === 'previous') {
+        var select = document.getElementById('year-select');
+        if (select) filterByYear(select.value);
+    }
+}
+
+function filterByYear(year) {
+    var cards = document.querySelectorAll('#historical-list .historical-event-card');
+    var shown = 0;
+    cards.forEach(function(card) {
+        if (card.getAttribute('data-year') === year) {
+            card.style.display = '';
+            shown++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    var countEl = document.getElementById('event-count-display');
+    if (countEl) countEl.textContent = shown + ' events in ' + year;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.hash === '#previous') {
+        switchTab('previous');
+    }
+    // Apply default year filter
+    var select = document.getElementById('year-select');
+    if (select && select.value) filterByYear(select.value);
+});
+</script>
