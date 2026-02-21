@@ -39,3 +39,55 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+
+// Fighter Directory — Live Search
+document.addEventListener('DOMContentLoaded', function() {
+    var searchInput = document.getElementById('fighter-search');
+    if (!searchInput) return;
+
+    var grid = document.getElementById('fighter-dir-grid');
+    var countEl = document.getElementById('fighter-results-count');
+    var allRows = grid ? Array.from(grid.querySelectorAll('.fighter-dir-row')) : [];
+    var activeRows = allRows.filter(function(r) { return !r.classList.contains('inactive-fighter'); });
+
+    // Show initial count
+    if (countEl) {
+        countEl.textContent = activeRows.length + ' active fighters';
+    }
+
+    searchInput.addEventListener('input', function() {
+        var query = this.value.toLowerCase().trim();
+        var shown = 0;
+
+        allRows.forEach(function(row) {
+            var name = (row.getAttribute('data-name') || '').toLowerCase();
+            var isActive = !row.classList.contains('inactive-fighter');
+
+            if (query) {
+                // When searching, show ALL matching fighters (active + inactive)
+                if (name.indexOf(query) !== -1) {
+                    row.style.display = '';
+                    shown++;
+                } else {
+                    row.style.display = 'none';
+                }
+            } else {
+                // No search query — show only active fighters
+                if (isActive) {
+                    row.style.display = '';
+                    shown++;
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        });
+
+        if (countEl) {
+            if (query) {
+                countEl.textContent = shown + ' fighter' + (shown !== 1 ? 's' : '') + ' found';
+            } else {
+                countEl.textContent = activeRows.length + ' active fighters';
+            }
+        }
+    });
+});

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morono - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Alex Morono UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Alex Morono</h1>
+            <div class="profile-division">Welterweight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">24-13-0 (1 NC)</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">13-10-0 (24 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Feb 2026</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">35 (Aug 16, 1990)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'11"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">170 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">72"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Alex Morono</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">39.8%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.9</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.5</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">0.4/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">24.0%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">50.0%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">0.3</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">0.3</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">0:50</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">15.4%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">15.4%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">69.2%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">11:51</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.3</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.1</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">33.9%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.5</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">5.8</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">33.3%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">41.7%</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">0:15</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Daniil Donchenko</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bautista vs. Oliveira &bull; Feb 2026</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">40/146</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Daniil Donchenko</span><span class="totals-stat">100/162</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:20</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>16/38</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Daniil Donchenko</td><td>39/59</td><td>66%</td><td>0/0</td><td>1:44</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>6/43</td><td>14%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Daniil Donchenko</td><td>27/40</td><td>68%</td><td>0/0</td><td>0:35</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>18/65</td><td>28%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Daniil Donchenko</td><td>34/63</td><td>54%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Carlos Leal</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:16 &bull; UFC 313: Pereira vs. Ankalaev &bull; Mar 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">40/95</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:20</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Leal</span><span class="totals-stat">79/120</span><span class="totals-pct">66%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>40/95</td><td>42%</td><td>0/1</td><td>0:20</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Carlos Leal</td><td>79/120</td><td>66%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Daniel Rodriguez</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Royval vs. Taira &bull; Oct 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">74/257</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Daniel Rodriguez</span><span class="totals-stat">123/257</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:56</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>31/81</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Daniel Rodriguez</td><td>25/56</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>23/91</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Daniel Rodriguez</td><td>44/99</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>20/85</td><td>24%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Daniel Rodriguez</td><td>54/102</td><td>53%</td><td>1/1</td><td>0:56</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Niko Price</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 302: Makhachev vs. Poirier &bull; Jun 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">96/210</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Niko Price</span><span class="totals-stat">108/224</span><span class="totals-pct">48%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 3:37</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>34/72</td><td>47%</td><td>1/1</td><td>0:29</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Niko Price</td><td>16/51</td><td>31%</td><td>1/1</td><td>1:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>21/43</td><td>49%</td><td>0/0</td><td>0:27</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Niko Price</td><td>34/65</td><td>52%</td><td>3/3</td><td>2:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>41/95</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Niko Price</td><td>58/108</td><td>54%</td><td>1/1</td><td>0:23</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Court McGee</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Allen vs. Curtis 2 &bull; Apr 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">38/141</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Court McGee</span><span class="totals-stat">60/160</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 3:20</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>12/50</td><td>24%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Court McGee</td><td>22/52</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>9/28</td><td>32%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Court McGee</td><td>20/41</td><td>49%</td><td>0/2</td><td>3:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>17/63</td><td>27%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Court McGee</td><td>18/67</td><td>27%</td><td>1/4</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Joaquin Buckley</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dawson vs. Green &bull; Oct 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">40/141</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">Joaquin Buckley</span><span class="totals-stat">68/176</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:21</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>12/33</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joaquin Buckley</td><td>10/41</td><td>24%</td><td>2/4</td><td>0:35</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>15/52</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joaquin Buckley</td><td>18/45</td><td>40%</td><td>0/0</td><td>0:27</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>13/56</td><td>23%</td><td>1/2</td><td>0:13</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joaquin Buckley</td><td>40/90</td><td>44%</td><td>0/0</td><td>1:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Tim Means</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 2:09 &bull; UFC Fight Night: Rozenstruik vs. Almeida &bull; May 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">33/92</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tim Means</span><span class="totals-stat">40/87</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:46</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>18/58</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tim Means</td><td>32/64</td><td>50%</td><td>0/0</td><td>0:27</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>15/34</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tim Means</td><td>8/23</td><td>35%</td><td>2/2</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Santiago Ponzinibbio</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:29 &bull; UFC 282: Blachowicz vs. Ankalaev &bull; Dec 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">38/131</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Santiago Ponzinibbio</span><span class="totals-stat">66/155</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:01</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>17/55</td><td>31%</td><td>0/0</td><td>0:08</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Santiago Ponzinibbio</td><td>22/42</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>13/50</td><td>26%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Santiago Ponzinibbio</td><td>26/73</td><td>36%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>8/26</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Santiago Ponzinibbio</td><td>18/40</td><td>45%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Matthew Semelsberger</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 277: Pena vs. Nunes 2 &bull; Jul 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">106/194</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:24</span></div><div class="totals-line"><span class="totals-name opponent">Matthew Semelsberger</span><span class="totals-stat">74/229</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:38</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>30/69</td><td>43%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Matthew Semelsberger</td><td>22/75</td><td>29%</td><td>0/0</td><td>0:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>47/76</td><td>62%</td><td>0/2</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Matthew Semelsberger</td><td>26/87</td><td>30%</td><td>1/1</td><td>0:43</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>29/49</td><td>59%</td><td>0/1</td><td>0:19</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Matthew Semelsberger</td><td>26/67</td><td>39%</td><td>0/0</td><td>1:34</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Mickey Gall</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Font vs. Aldo &bull; Dec 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">90/230</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:23</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Mickey Gall</span><span class="totals-stat">65/144</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:08</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>26/56</td><td>46%</td><td>0/0</td><td>1:23</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mickey Gall</td><td>15/32</td><td>47%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>29/78</td><td>37%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mickey Gall</td><td>23/47</td><td>49%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>35/96</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mickey Gall</td><td>27/65</td><td>42%</td><td>0/0</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. David Zawada</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brunson vs. Till &bull; Sep 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">90/213</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:06</span></div><div class="totals-line"><span class="totals-name opponent">David Zawada</span><span class="totals-stat">86/205</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:39</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>37/84</td><td>44%</td><td>0/0</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">David Zawada</td><td>33/83</td><td>40%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>29/76</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">David Zawada</td><td>31/74</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>24/53</td><td>45%</td><td>0/0</td><td>1:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">David Zawada</td><td>22/48</td><td>46%</td><td>1/2</td><td>0:39</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Donald Cerrone</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:40 &bull; UFC Fight Night: Rodriguez vs. Waterson &bull; May 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">35/84</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:47</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">17/35</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>35/84</td><td>42%</td><td>0/2</td><td>0:47</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Donald Cerrone</td><td>17/35</td><td>49%</td><td>0/2</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Anthony Pettis</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Thompson vs. Neal &bull; Dec 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">31/78</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 2:30</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">50/80</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 4:32</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>11/24</td><td>46%</td><td>1/2</td><td>2:30</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Pettis</td><td>6/14</td><td>43%</td><td>0/0</td><td>0:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>17/46</td><td>37%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Pettis</td><td>32/51</td><td>63%</td><td>0/1</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>3/8</td><td>38%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Pettis</td><td>12/15</td><td>80%</td><td>0/0</td><td>3:58</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-13')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Rhys McKee</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Felder vs. Dos Anjos &bull; Nov 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">176/321</span><span class="totals-pct">55%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 2:34</span></div><div class="totals-line"><span class="totals-name opponent">Rhys McKee</span><span class="totals-stat">124/230</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:12</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>61/110</td><td>55%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rhys McKee</td><td>39/89</td><td>44%</td><td>0/1</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>68/120</td><td>57%</td><td>1/1</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rhys McKee</td><td>51/81</td><td>63%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>47/91</td><td>52%</td><td>2/2</td><td>2:15</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rhys McKee</td><td>34/60</td><td>57%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-14')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Khaos Williams</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:27 &bull; UFC 247: Jones vs. Reyes &bull; Feb 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Khaos Williams</span><span class="totals-stat">10/17</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:05</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>1/4</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Khaos Williams</td><td>10/17</td><td>59%</td><td>0/1</td><td>0:05</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-15')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Max Griffin</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Joanna vs. Waterson &bull; Oct 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">81/255</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:27</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Max Griffin</span><span class="totals-stat">75/166</span><span class="totals-pct">45%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 2:35</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>31/104</td><td>30%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Max Griffin</td><td>24/63</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>40/110</td><td>36%</td><td>0/1</td><td>0:17</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Max Griffin</td><td>30/67</td><td>45%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>10/41</td><td>24%</td><td>0/0</td><td>0:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Max Griffin</td><td>21/36</td><td>58%</td><td>4/5</td><td>2:32</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-16')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Zak Ottow</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 3:34 &bull; UFC Fight Night: Lewis vs. Dos Santos &bull; Mar 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">25/55</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:31</span></div><div class="totals-line"><span class="totals-name opponent">Zak Ottow</span><span class="totals-stat">10/31</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:07</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>25/55</td><td>45%</td><td>0/0</td><td>0:31</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Zak Ottow</td><td>10/31</td><td>32%</td><td>1/1</td><td>0:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-17')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Song Kenan</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Ngannou 2 &bull; Nov 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">98/212</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:46</span></div><div class="totals-line"><span class="totals-name opponent">Song Kenan</span><span class="totals-stat">61/152</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>34/77</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Song Kenan</td><td>19/51</td><td>37%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>28/62</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Song Kenan</td><td>17/46</td><td>37%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>36/73</td><td>49%</td><td>0/2</td><td>0:46</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Song Kenan</td><td>25/55</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-18')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Jordan Mein</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Alvarez vs. Poirier 2 &bull; Jul 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">20/67</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:46</span></div><div class="totals-line"><span class="totals-name opponent">Jordan Mein</span><span class="totals-stat">14/38</span><span class="totals-pct">37%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 9:02</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>10/32</td><td>31%</td><td>0/0</td><td>0:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jordan Mein</td><td>5/15</td><td>33%</td><td>2/2</td><td>3:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>3/14</td><td>21%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jordan Mein</td><td>7/13</td><td>54%</td><td>1/1</td><td>4:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>7/21</td><td>33%</td><td>0/0</td><td>1:36</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jordan Mein</td><td>2/10</td><td>20%</td><td>0/1</td><td>1:24</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-19')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Joshua Burkman</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:12 &bull; UFC Fight Night: Cerrone vs. Medeiros &bull; Feb 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">7/19</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Joshua Burkman</span><span class="totals-stat">4/13</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>7/19</td><td>37%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joshua Burkman</td><td>4/13</td><td>31%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-20')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Keita Nakamura</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Saint Preux vs. Okami &bull; Sep 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">38/123</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>8/40</td><td>20%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Keita Nakamura</td><td>7/17</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>15/40</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Keita Nakamura</td><td>10/32</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>15/43</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Keita Nakamura</td><td>10/37</td><td>27%</td><td>2/2</td><td>0:45</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-21')">
+                <div class="fight-result-badge result-nc">NC</div>
+                <div class="fight-opponent">vs. Niko Price</div>
+                <div class="fight-meta">Overturned (Punch) &bull; Rd 2, 5:00 &bull; UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">45/131</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Niko Price</span><span class="totals-stat">23/117</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>20/70</td><td>29%</td><td>0/0</td><td>0:08</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Niko Price</td><td>6/35</td><td>17%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>25/61</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Niko Price</td><td>17/82</td><td>21%</td><td>0/1</td><td>0:00</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-22')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. James Moontasri</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: VanZant vs. Waterson &bull; Dec 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">111/186</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:54</span></div><div class="totals-line"><span class="totals-name opponent">James Moontasri</span><span class="totals-stat">46/95</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>18/39</td><td>46%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">James Moontasri</td><td>15/25</td><td>60%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>30/56</td><td>54%</td><td>0/3</td><td>0:33</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">James Moontasri</td><td>12/24</td><td>50%</td><td>0/0</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>63/91</td><td>69%</td><td>0/0</td><td>0:21</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">James Moontasri</td><td>19/46</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-23')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Kyle Noke</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alex Morono</span><span class="totals-stat">43/125</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:05</span></div><div class="totals-line"><span class="totals-name opponent">Kyle Noke</span><span class="totals-stat">59/134</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 3:08</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alex Morono</td><td>11/41</td><td>27%</td><td>0/0</td><td>0:46</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kyle Noke</td><td>20/48</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alex Morono</td><td>16/36</td><td>44%</td><td>0/0</td><td>0:19</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kyle Noke</td><td>15/39</td><td>38%</td><td>0/1</td><td>2:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alex Morono</td><td>16/48</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kyle Noke</td><td>24/47</td><td>51%</td><td>1/2</td><td>0:54</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 22:59:59 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

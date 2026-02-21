@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nik Lentz - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Nik Lentz UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Nik Lentz</h1>
+            <div class="profile-division">Catch Weight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">30-12-2 (1 NC)</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">14-8-1 (24 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Jan 2021</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">41 (Aug 13, 1984)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'8"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">145 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">68"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Nik Lentz</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">47.4%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">3.4</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">3.1</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">0.3/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">33.5%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">43.8%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">3.3</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">1.2</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">4:30</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">21.4%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">14.3%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">64.3%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">12:47</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.1</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.1</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">45.4%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.1</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.0</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">23.8%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">33.3%</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">2:57</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Movsar Evloev</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 257: Poirier vs. McGregor &bull; Jan 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">46/127</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:26</span></div><div class="totals-line"><span class="totals-name opponent">Movsar Evloev</span><span class="totals-stat">82/170</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 4:36</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>7/15</td><td>47%</td><td>0/2</td><td>0:46</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Movsar Evloev</td><td>7/15</td><td>47%</td><td>1/1</td><td>3:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>20/45</td><td>44%</td><td>1/2</td><td>0:33</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Movsar Evloev</td><td>28/55</td><td>51%</td><td>1/1</td><td>0:59</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>19/67</td><td>28%</td><td>0/1</td><td>0:07</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Movsar Evloev</td><td>47/100</td><td>47%</td><td>0/0</td><td>0:15</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Arnold Allen</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Dos Santos &bull; Jan 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">49/172</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/9</span><span class="totals-stat">Ctrl 1:17</span></div><div class="totals-line"><span class="totals-name opponent">Arnold Allen</span><span class="totals-stat">63/131</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:21</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>16/49</td><td>33%</td><td>0/4</td><td>0:56</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Arnold Allen</td><td>20/41</td><td>49%</td><td>0/1</td><td>0:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>24/68</td><td>35%</td><td>0/2</td><td>0:17</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Arnold Allen</td><td>29/56</td><td>52%</td><td>0/0</td><td>0:17</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>9/55</td><td>16%</td><td>0/3</td><td>0:04</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Arnold Allen</td><td>14/34</td><td>41%</td><td>0/0</td><td>0:57</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Charles Oliveira</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 1:10 &bull; UFC Fight Night: Dos Anjos vs. Lee &bull; May 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">18/49</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:40</span></div><div class="totals-line"><span class="totals-name opponent">Charles Oliveira</span><span class="totals-stat">38/59</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:38</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>12/38</td><td>32%</td><td>1/2</td><td>0:16</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Charles Oliveira</td><td>24/39</td><td>62%</td><td>0/0</td><td>1:30</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>6/11</td><td>55%</td><td>1/2</td><td>1:24</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Charles Oliveira</td><td>14/20</td><td>70%</td><td>0/0</td><td>0:08</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Scott Holtzman</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Ngannou vs. Velasquez &bull; Feb 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">71/122</span><span class="totals-pct">58%</span><span class="totals-stat">TD 5/19</span><span class="totals-stat">Ctrl 6:48</span></div><div class="totals-line"><span class="totals-name opponent">Scott Holtzman</span><span class="totals-stat">54/122</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:18</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>32/43</td><td>74%</td><td>2/8</td><td>2:44</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Scott Holtzman</td><td>5/20</td><td>25%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>23/45</td><td>51%</td><td>2/5</td><td>1:45</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Scott Holtzman</td><td>17/48</td><td>35%</td><td>0/0</td><td>0:15</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>16/34</td><td>47%</td><td>1/6</td><td>2:19</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Scott Holtzman</td><td>32/54</td><td>59%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Gray Maynard</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 1:19 &bull; UFC 229: Khabib vs. McGregor &bull; Oct 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">75/101</span><span class="totals-pct">74%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 3:34</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Gray Maynard</span><span class="totals-stat">13/27</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>64/80</td><td>80%</td><td>2/5</td><td>3:32</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Gray Maynard</td><td>5/11</td><td>45%</td><td>0/0</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>11/21</td><td>52%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Gray Maynard</td><td>8/16</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. David Teymur</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rivera vs. Moraes &bull; Jun 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">61/144</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:44</span></div><div class="totals-line"><span class="totals-name opponent">David Teymur</span><span class="totals-stat">67/187</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>25/49</td><td>51%</td><td>0/3</td><td>0:35</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">David Teymur</td><td>23/63</td><td>37%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>15/42</td><td>36%</td><td>0/1</td><td>0:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">David Teymur</td><td>18/56</td><td>32%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>21/53</td><td>40%</td><td>0/1</td><td>0:07</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">David Teymur</td><td>26/68</td><td>38%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Will Brooks</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 2:05 &bull; UFC Fight Night: Werdum vs. Tybura &bull; Nov 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">34/82</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:46</span></div><div class="totals-line"><span class="totals-name opponent">Will Brooks</span><span class="totals-stat">49/78</span><span class="totals-pct">63%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:45</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>23/52</td><td>44%</td><td>0/1</td><td>0:46</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Will Brooks</td><td>26/43</td><td>60%</td><td>1/3</td><td>0:33</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>11/30</td><td>37%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Will Brooks</td><td>23/35</td><td>66%</td><td>1/1</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Islam Makhachev</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 208: Holm vs. De Randamie &bull; Feb 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">13/35</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:30</span></div><div class="totals-line"><span class="totals-name opponent">Islam Makhachev</span><span class="totals-stat">43/58</span><span class="totals-pct">74%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 11:53</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>6/9</td><td>67%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Islam Makhachev</td><td>9/9</td><td>100%</td><td>2/2</td><td>4:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>5/14</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Islam Makhachev</td><td>11/24</td><td>46%</td><td>1/1</td><td>3:51</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>2/12</td><td>17%</td><td>0/2</td><td>0:24</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Islam Makhachev</td><td>23/25</td><td>92%</td><td>2/2</td><td>3:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Michael McBride</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:17 &bull; UFC 203: Miocic vs. Overeem &bull; Sep 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">38/50</span><span class="totals-pct">76%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 7:19</span></div><div class="totals-line"><span class="totals-name opponent">Michael McBride</span><span class="totals-stat">16/31</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:31</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>16/18</td><td>89%</td><td>4/5</td><td>4:19</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Michael McBride</td><td>5/9</td><td>56%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>22/32</td><td>69%</td><td>1/1</td><td>3:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Michael McBride</td><td>11/22</td><td>50%</td><td>0/1</td><td>0:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Danny Castillo</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FOX: Dos Anjos vs. Cowboy 2 &bull; Dec 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">59/132</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 1:35</span></div><div class="totals-line"><span class="totals-name opponent">Danny Castillo</span><span class="totals-stat">57/124</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 3:33</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>12/31</td><td>39%</td><td>1/2</td><td>0:29</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Castillo</td><td>15/23</td><td>65%</td><td>0/3</td><td>1:57</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>25/54</td><td>46%</td><td>1/1</td><td>0:33</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Castillo</td><td>18/51</td><td>35%</td><td>0/1</td><td>0:45</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>22/47</td><td>47%</td><td>1/3</td><td>0:33</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Castillo</td><td>24/50</td><td>48%</td><td>2/2</td><td>0:51</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Manvel Gamburyan</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brown vs Silva &bull; May 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">52/99</span><span class="totals-pct">53%</span><span class="totals-stat">TD 4/16</span><span class="totals-stat">Ctrl 9:18</span></div><div class="totals-line"><span class="totals-name opponent">Manvel Gamburyan</span><span class="totals-stat">28/52</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:20</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>20/33</td><td>61%</td><td>2/7</td><td>3:28</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Manvel Gamburyan</td><td>6/17</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>19/40</td><td>48%</td><td>1/6</td><td>3:11</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Manvel Gamburyan</td><td>8/16</td><td>50%</td><td>1/1</td><td>0:33</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>13/26</td><td>50%</td><td>1/3</td><td>2:39</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Manvel Gamburyan</td><td>14/19</td><td>74%</td><td>0/1</td><td>0:47</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Chad Mendes</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">40/119</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Chad Mendes</span><span class="totals-stat">35/70</span><span class="totals-pct">50%</span><span class="totals-stat">TD 7/10</span><span class="totals-stat">Ctrl 5:15</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>13/39</td><td>33%</td><td>0/2</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Chad Mendes</td><td>15/30</td><td>50%</td><td>3/3</td><td>2:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>9/30</td><td>30%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Chad Mendes</td><td>10/17</td><td>59%</td><td>3/4</td><td>1:51</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>18/50</td><td>36%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Chad Mendes</td><td>10/23</td><td>43%</td><td>1/3</td><td>1:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Hacran Dias</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FX: Belfort vs. Rockhold &bull; May 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">42/95</span><span class="totals-pct">44%</span><span class="totals-stat">TD 4/17</span><span class="totals-stat">Ctrl 7:29</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Hacran Dias</span><span class="totals-stat">40/86</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 3:40</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>13/41</td><td>32%</td><td>1/8</td><td>2:17</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hacran Dias</td><td>10/29</td><td>34%</td><td>0/2</td><td>0:33</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>23/34</td><td>68%</td><td>3/5</td><td>4:30</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hacran Dias</td><td>6/12</td><td>50%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>6/20</td><td>30%</td><td>0/4</td><td>0:42</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hacran Dias</td><td>24/45</td><td>53%</td><td>1/1</td><td>3:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-13')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Diego Nunes</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FX: Belfort vs Bisping &bull; Jan 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">56/74</span><span class="totals-pct">76%</span><span class="totals-stat">TD 10/21</span><span class="totals-stat">Ctrl 12:10</span></div><div class="totals-line"><span class="totals-name opponent">Diego Nunes</span><span class="totals-stat">18/32</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>25/28</td><td>89%</td><td>5/10</td><td>4:24</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Diego Nunes</td><td>1/4</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>19/25</td><td>76%</td><td>1/2</td><td>4:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Diego Nunes</td><td>6/7</td><td>86%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>12/21</td><td>57%</td><td>4/9</td><td>3:32</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Diego Nunes</td><td>11/21</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-14')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Eiji Mitsuoka</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:45 &bull; UFC 150: Henderson vs Edgar II &bull; Aug 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">33/37</span><span class="totals-pct">89%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 2:52</span></div><div class="totals-line"><span class="totals-name opponent">Eiji Mitsuoka</span><span class="totals-stat">5/10</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:07</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>33/37</td><td>89%</td><td>4/4</td><td>2:52</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Eiji Mitsuoka</td><td>5/10</td><td>50%</td><td>0/2</td><td>0:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-15')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Evan Dunham</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">39/76</span><span class="totals-pct">51%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 0:58</span></div><div class="totals-line"><span class="totals-name opponent">Evan Dunham</span><span class="totals-stat">68/97</span><span class="totals-pct">70%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 4:53</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>19/39</td><td>49%</td><td>2/4</td><td>0:33</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Evan Dunham</td><td>32/52</td><td>62%</td><td>1/1</td><td>1:38</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>20/37</td><td>54%</td><td>0/4</td><td>0:25</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Evan Dunham</td><td>36/45</td><td>80%</td><td>1/1</td><td>3:15</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-16')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Mark Bocek</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 140: Jones vs Machida &bull; Dec 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">10/31</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:45</span></div><div class="totals-line"><span class="totals-name opponent">Mark Bocek</span><span class="totals-stat">46/85</span><span class="totals-pct">54%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 11:39</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>4/8</td><td>50%</td><td>0/0</td><td>0:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mark Bocek</td><td>17/24</td><td>71%</td><td>2/3</td><td>3:59</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>4/12</td><td>33%</td><td>0/0</td><td>0:27</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mark Bocek</td><td>12/27</td><td>44%</td><td>1/2</td><td>3:24</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>2/11</td><td>18%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mark Bocek</td><td>17/34</td><td>50%</td><td>2/2</td><td>4:16</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-17')">
+                <div class="fight-result-badge result-nc">NC</div>
+                <div class="fight-opponent">vs. Charles Oliveira</div>
+                <div class="fight-meta">Overturned &bull; Rd 2, 1:48 &bull; UFC Live: Kongo vs Barry &bull; Jun 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">14/33</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 2:21</span></div><div class="totals-line"><span class="totals-name opponent">Charles Oliveira</span><span class="totals-stat">31/59</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:15</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>13/31</td><td>42%</td><td>1/4</td><td>2:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Charles Oliveira</td><td>25/49</td><td>51%</td><td>1/2</td><td>0:54</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>1/2</td><td>50%</td><td>1/3</td><td>0:11</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Charles Oliveira</td><td>6/10</td><td>60%</td><td>0/0</td><td>1:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-18')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Waylon Lowe</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 2:24 &bull; UFC Fight Night: Nogueira vs Davis &bull; Mar 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">51/91</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Waylon Lowe</span><span class="totals-stat">46/61</span><span class="totals-pct">75%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 4:31</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>6/21</td><td>29%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Waylon Lowe</td><td>14/18</td><td>78%</td><td>3/3</td><td>2:34</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>27/40</td><td>68%</td><td>0/2</td><td>0:16</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Waylon Lowe</td><td>20/23</td><td>87%</td><td>1/2</td><td>1:49</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>18/30</td><td>60%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Waylon Lowe</td><td>12/20</td><td>60%</td><td>0/1</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-19')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Tyson Griffin</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 123: Rampage vs Machida &bull; Nov 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">34/59</span><span class="totals-pct">58%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 3:23</span></div><div class="totals-line"><span class="totals-name opponent">Tyson Griffin</span><span class="totals-stat">31/60</span><span class="totals-pct">52%</span><span class="totals-stat">TD 8/13</span><span class="totals-stat">Ctrl 7:08</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>13/14</td><td>93%</td><td>1/1</td><td>0:43</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tyson Griffin</td><td>7/15</td><td>47%</td><td>4/8</td><td>3:20</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>14/32</td><td>44%</td><td>1/3</td><td>0:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tyson Griffin</td><td>12/24</td><td>50%</td><td>3/4</td><td>2:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>7/13</td><td>54%</td><td>2/4</td><td>2:22</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tyson Griffin</td><td>12/21</td><td>57%</td><td>1/1</td><td>1:43</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-20')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Andre Winner</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 118: Edgar vs Penn 2 &bull; Aug 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">23/32</span><span class="totals-pct">72%</span><span class="totals-stat">TD 7/18</span><span class="totals-stat">Ctrl 13:00</span></div><div class="totals-line"><span class="totals-name opponent">Andre Winner</span><span class="totals-stat">20/35</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>7/11</td><td>64%</td><td>3/9</td><td>4:13</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Winner</td><td>8/14</td><td>57%</td><td>0/0</td><td>0:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>10/13</td><td>77%</td><td>2/6</td><td>4:11</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Winner</td><td>9/10</td><td>90%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>6/8</td><td>75%</td><td>2/3</td><td>4:36</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Winner</td><td>3/11</td><td>27%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-21')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Rob Emerson</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Florian vs Gomi &bull; Mar 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">46/96</span><span class="totals-pct">48%</span><span class="totals-stat">TD 4/14</span><span class="totals-stat">Ctrl 8:54</span></div><div class="totals-line"><span class="totals-name opponent">Rob Emerson</span><span class="totals-stat">24/74</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:19</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>15/33</td><td>45%</td><td>1/7</td><td>1:48</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rob Emerson</td><td>12/41</td><td>29%</td><td>0/1</td><td>0:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>11/24</td><td>46%</td><td>2/5</td><td>3:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rob Emerson</td><td>11/28</td><td>39%</td><td>0/0</td><td>0:13</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>20/39</td><td>51%</td><td>1/2</td><td>3:48</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rob Emerson</td><td>1/5</td><td>20%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-22')">
+                <div class="fight-result-badge result-nc">D</div>
+                <div class="fight-opponent">vs. Thiago Tavares</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Maynard vs Diaz &bull; Jan 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">71/206</span><span class="totals-pct">34%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 1:53</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Tavares</span><span class="totals-stat">55/146</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 1:46</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>16/53</td><td>30%</td><td>3/5</td><td>1:27</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Tavares</td><td>6/23</td><td>26%</td><td>0/3</td><td>0:30</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>27/73</td><td>37%</td><td>0/3</td><td>0:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Tavares</td><td>18/48</td><td>38%</td><td>1/3</td><td>0:58</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>28/80</td><td>35%</td><td>1/5</td><td>0:16</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Tavares</td><td>31/75</td><td>41%</td><td>0/0</td><td>0:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-23')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Rafaello Oliveira</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nik Lentz</span><span class="totals-stat">67/136</span><span class="totals-pct">49%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 3:19</span></div><div class="totals-line"><span class="totals-name opponent">Rafaello Oliveira</span><span class="totals-stat">29/110</span><span class="totals-pct">26%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 5:41</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Nik Lentz</td><td>21/45</td><td>47%</td><td>1/2</td><td>0:32</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rafaello Oliveira</td><td>13/46</td><td>28%</td><td>2/5</td><td>2:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Nik Lentz</td><td>22/51</td><td>43%</td><td>2/2</td><td>0:16</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rafaello Oliveira</td><td>10/41</td><td>24%</td><td>1/1</td><td>2:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Nik Lentz</td><td>24/40</td><td>60%</td><td>1/1</td><td>2:31</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rafaello Oliveira</td><td>6/23</td><td>26%</td><td>1/1</td><td>1:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 23:00:34 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+---
+layout: layout.njk
+title: UFC Fighters
+description: Browse and search UFC fighter profiles with career stats and fight history
+---
+
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold mb-2">UFC Fighters</h1>
+        <p class="fighter-dir-note">
+            Active fighters below have fought in the last 12 months. Search to find any fighter in our database.
+        </p>
+
+        <div class="fighter-search-box">
+            <div class="fighter-search-wrapper">
+                <svg class="fighter-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input
+                    type="text"
+                    id="fighter-search"
+                    class="fighter-search-input"
+                    placeholder="Search by name..."
+                    autocomplete="off"
+                />
+            </div>
+        </div>
+
+        <div id="fighter-results-count" class="fighter-results-count"></div>
+
+        <div id="fighter-dir-grid" class="fighter-dir-grid">
+            {% for fighter in fighters %}
+                {% set isActive = fighter.last_fight_date >= "2025-02-20" %}
+                <a href="/fighters/{{ fighter.slug }}/"
+                   class="fighter-dir-row{% if not isActive %} inactive-fighter{% endif %}"
+                   data-name="{{ fighter.name }}"
+                   {% if not isActive %}style="display:none;"{% endif %}>
+                    <span class="fighter-dir-name">{{ fighter.name }}</span>
+                    <span class="fighter-dir-meta">
+                        {% if fighter.career_record %}<span class="fighter-dir-record">{{ fighter.career_record }}</span>{% endif %}
+                        {% if fighter.division %}<span>{{ fighter.division }}</span>{% endif %}
+                    </span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

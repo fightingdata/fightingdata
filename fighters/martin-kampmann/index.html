@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Kampmann - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Martin Kampmann UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Martin Kampmann</h1>
+            <div class="profile-division">Welterweight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">20-7-0</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">11-6-0 (17 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Aug 2013</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">43 (Apr 17, 1982)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">6'0"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">170 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">72"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Martin Kampmann</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">42.4%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">3.2</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">3.3</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">-0.1/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">41.3%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">78.5%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">1.9</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">2.1</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">4:25</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">18.2%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">45.5%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">36.4%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">9:01</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.5</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.3</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">33.5%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">2.5</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.7</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">31.2%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">62.5%</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">2:39</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Carlos Condit</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 4, 0:54 &bull; UFC Fight Night: Condit vs Kampmann 2 &bull; Aug 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">35/97</span><span class="totals-pct">36%</span><span class="totals-stat">TD 6/15</span><span class="totals-stat">Ctrl 5:23</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Condit</span><span class="totals-stat">100/235</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:14</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>5/10</td><td>50%</td><td>4/5</td><td>3:47</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Carlos Condit</td><td>7/15</td><td>47%</td><td>0/0</td><td>0:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>18/44</td><td>41%</td><td>0/5</td><td>0:38</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Carlos Condit</td><td>34/91</td><td>37%</td><td>0/1</td><td>0:15</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Martin Kampmann</td><td>8/35</td><td>23%</td><td>1/3</td><td>0:52</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Carlos Condit</td><td>44/104</td><td>42%</td><td>0/0</td><td>0:41</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Martin Kampmann</td><td>4/8</td><td>50%</td><td>1/2</td><td>0:06</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Carlos Condit</td><td>15/25</td><td>60%</td><td>0/1</td><td>0:00</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Johny Hendricks</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:46 &bull; UFC 154: St-Pierre vs Condit &bull; Nov 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">0/4</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Johny Hendricks</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>0/4</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Johny Hendricks</td><td>3/7</td><td>43%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Jake Ellenberger</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 1:40 &bull; The Ultimate Fighter: Live Finale &bull; Jun 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">13/31</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:29</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Jake Ellenberger</span><span class="totals-stat">19/50</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:07</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>3/9</td><td>33%</td><td>0/1</td><td>0:22</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jake Ellenberger</td><td>6/19</td><td>32%</td><td>0/0</td><td>4:05</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>10/22</td><td>45%</td><td>0/0</td><td>0:07</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jake Ellenberger</td><td>13/31</td><td>42%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Thiago Alves</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 4:12 &bull; UFC on FX: Alves vs Kampmann &bull; Mar 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">47/118</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 2:30</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Alves</span><span class="totals-stat">62/118</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:31</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>12/22</td><td>55%</td><td>1/4</td><td>1:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Alves</td><td>11/23</td><td>48%</td><td>1/1</td><td>2:23</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>23/57</td><td>40%</td><td>0/2</td><td>0:34</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Alves</td><td>32/55</td><td>58%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Martin Kampmann</td><td>12/39</td><td>31%</td><td>0/1</td><td>0:53</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Alves</td><td>19/40</td><td>48%</td><td>1/2</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Rick Story</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 139: Shogun vs Henderson &bull; Nov 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">38/147</span><span class="totals-pct">26%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 4:55</span></div><div class="totals-line"><span class="totals-name opponent">Rick Story</span><span class="totals-stat">61/170</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:36</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>17/67</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rick Story</td><td>34/91</td><td>37%</td><td>0/1</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>11/56</td><td>20%</td><td>1/2</td><td>1:56</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rick Story</td><td>13/47</td><td>28%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Martin Kampmann</td><td>10/24</td><td>42%</td><td>2/7</td><td>2:59</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rick Story</td><td>14/32</td><td>44%</td><td>1/2</td><td>0:26</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Diego Sanchez</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Live: Sanchez vs Kampmann &bull; Mar 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">77/200</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:21</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Diego Sanchez</span><span class="totals-stat">51/202</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/15</span><span class="totals-stat">Ctrl 1:37</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>32/64</td><td>50%</td><td>0/0</td><td>0:17</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Diego Sanchez</td><td>10/37</td><td>27%</td><td>0/5</td><td>0:32</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>26/66</td><td>39%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Diego Sanchez</td><td>22/77</td><td>29%</td><td>0/7</td><td>0:44</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Martin Kampmann</td><td>19/70</td><td>27%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Diego Sanchez</td><td>19/88</td><td>22%</td><td>1/3</td><td>0:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Jake Shields</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 121: Lesnar vs Velasquez &bull; Oct 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">35/54</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:15</span></div><div class="totals-line"><span class="totals-name opponent">Jake Shields</span><span class="totals-stat">25/46</span><span class="totals-pct">54%</span><span class="totals-stat">TD 4/15</span><span class="totals-stat">Ctrl 7:29</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>10/14</td><td>71%</td><td>0/0</td><td>0:30</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jake Shields</td><td>14/21</td><td>67%</td><td>1/5</td><td>2:36</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>15/25</td><td>60%</td><td>0/0</td><td>1:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jake Shields</td><td>8/12</td><td>67%</td><td>2/5</td><td>2:54</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Martin Kampmann</td><td>10/15</td><td>67%</td><td>0/0</td><td>1:45</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jake Shields</td><td>3/13</td><td>23%</td><td>1/5</td><td>1:59</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Paulo Thiago</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 115: Liddell vs Franklin &bull; Jun 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">24/59</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 7:01</span></div><div class="totals-line"><span class="totals-name opponent">Paulo Thiago</span><span class="totals-stat">13/40</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 1:34</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>10/27</td><td>37%</td><td>0/0</td><td>0:30</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paulo Thiago</td><td>6/18</td><td>33%</td><td>1/5</td><td>0:59</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>6/15</td><td>40%</td><td>0/1</td><td>2:32</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paulo Thiago</td><td>5/15</td><td>33%</td><td>0/1</td><td>0:29</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Martin Kampmann</td><td>8/17</td><td>47%</td><td>1/2</td><td>3:59</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paulo Thiago</td><td>2/7</td><td>29%</td><td>0/3</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Jacob Volkmann</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:03 &bull; UFC 108: Evans vs Silva &bull; Jan 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">14/34</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:44</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Jacob Volkmann</span><span class="totals-stat">13/36</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>14/34</td><td>41%</td><td>0/0</td><td>1:44</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jacob Volkmann</td><td>13/36</td><td>36%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Paul Daley</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:31 &bull; UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">12/35</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:20</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>12/35</td><td>34%</td><td>0/2</td><td>0:20</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Daley</td><td>27/63</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Carlos Condit</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Condit vs Kampmann &bull; Apr 2009</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">26/61</span><span class="totals-pct">43%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 7:47</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Condit</span><span class="totals-stat">35/86</span><span class="totals-pct">41%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 3:10</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>5/13</td><td>38%</td><td>2/2</td><td>1:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Carlos Condit</td><td>13/36</td><td>36%</td><td>1/1</td><td>1:58</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>13/33</td><td>39%</td><td>1/1</td><td>2:28</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Carlos Condit</td><td>15/36</td><td>42%</td><td>2/3</td><td>1:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Martin Kampmann</td><td>8/15</td><td>53%</td><td>2/2</td><td>4:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Carlos Condit</td><td>7/14</td><td>50%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Alexandre Barros</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:09 &bull; UFC 93: Franklin vs Henderson &bull; Jan 2009</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">33/52</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:06</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Alexandre Barros</span><span class="totals-stat">8/20</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:16</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>9/23</td><td>39%</td><td>0/1</td><td>0:32</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Alexandre Barros</td><td>7/17</td><td>41%</td><td>1/1</td><td>2:16</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>24/29</td><td>83%</td><td>0/0</td><td>2:34</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Alexandre Barros</td><td>1/3</td><td>33%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Nate Marquardt</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:22 &bull; UFC 88: Breakthrough &bull; Sep 2008</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">1/7</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Nate Marquardt</span><span class="totals-stat">22/36</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>1/7</td><td>14%</td><td>0/0</td><td>0:08</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nate Marquardt</td><td>22/36</td><td>61%</td><td>0/0</td><td>0:10</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-13')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Jorge Rivera</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:44 &bull; UFC 85: Bedlam &bull; Jun 2008</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">4/9</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:06</span></div><div class="totals-line"><span class="totals-name opponent">Jorge Rivera</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>4/9</td><td>44%</td><td>1/1</td><td>2:06</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jorge Rivera</td><td>2/6</td><td>33%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-14')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Drew McFedries</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:06 &bull; UFC 68: The Uprising &bull; Mar 2007</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">15/32</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:01</span></div><div class="totals-line"><span class="totals-name opponent">Drew McFedries</span><span class="totals-stat">16/33</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>15/32</td><td>47%</td><td>1/1</td><td>2:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Drew McFedries</td><td>16/33</td><td>48%</td><td>0/0</td><td>0:11</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-15')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Thales Leites</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: The Comeback Finale &bull; Nov 2006</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">101/200</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:40</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Thales Leites</span><span class="totals-stat">46/171</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/12</span><span class="totals-stat">Ctrl 2:30</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>8/25</td><td>32%</td><td>0/0</td><td>0:50</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thales Leites</td><td>14/29</td><td>48%</td><td>1/4</td><td>2:08</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Martin Kampmann</td><td>37/76</td><td>49%</td><td>0/0</td><td>0:09</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thales Leites</td><td>18/72</td><td>25%</td><td>0/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Martin Kampmann</td><td>56/99</td><td>57%</td><td>0/0</td><td>0:41</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thales Leites</td><td>14/70</td><td>20%</td><td>0/5</td><td>0:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-16')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Crafton Wallace</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:59 &bull; UFC Fight Night 6 &bull; Aug 2006</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Martin Kampmann</span><span class="totals-stat">19/26</span><span class="totals-pct">73%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:30</span></div><div class="totals-line"><span class="totals-name opponent">Crafton Wallace</span><span class="totals-stat">1/9</span><span class="totals-pct">11%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Martin Kampmann</td><td>19/26</td><td>73%</td><td>1/1</td><td>2:30</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Crafton Wallace</td><td>1/9</td><td>11%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 23:00:31 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

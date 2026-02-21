@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Thomson - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Josh Thomson UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Josh Thomson</h1>
+            <div class="profile-division">Lightweight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">22-9-0 (1 NC)</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">1-3-0 (4 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Jul 2015</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">47 (Sep 21, 1978)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'10"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">155 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">71"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Josh Thomson</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">38.1%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">2.1</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">3.3</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">-1.2/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">26.1%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">37.5%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">1.4</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">0.0</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">2:50</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">100.0%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">0.0%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">0.0%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">15:56</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.2</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.0</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">38.1%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">2.1</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">3.3</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">26.1%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">37.5%</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">3:01</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Tony Ferguson</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Mir vs Duffee &bull; Jul 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Thomson</span><span class="totals-stat">33/100</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:33</span></div><div class="totals-line"><span class="totals-name opponent">Tony Ferguson</span><span class="totals-stat">83/149</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:46</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Josh Thomson</td><td>18/36</td><td>50%</td><td>1/3</td><td>1:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tony Ferguson</td><td>15/44</td><td>34%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Josh Thomson</td><td>8/28</td><td>29%</td><td>0/0</td><td>1:13</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tony Ferguson</td><td>43/56</td><td>77%</td><td>0/0</td><td>1:39</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Josh Thomson</td><td>7/36</td><td>19%</td><td>0/3</td><td>0:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tony Ferguson</td><td>25/49</td><td>51%</td><td>0/1</td><td>0:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. King Green</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FOX: Lawler vs Brown &bull; Jul 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Thomson</span><span class="totals-stat">45/120</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">King Green</span><span class="totals-stat">59/141</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:53</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Josh Thomson</td><td>12/37</td><td>32%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">King Green</td><td>18/51</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Josh Thomson</td><td>18/49</td><td>37%</td><td>0/3</td><td>0:09</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">King Green</td><td>23/48</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Josh Thomson</td><td>15/34</td><td>44%</td><td>0/1</td><td>0:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">King Green</td><td>18/42</td><td>43%</td><td>0/2</td><td>0:53</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Benson Henderson</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC on FOX: Henderson vs Thomson &bull; Jan 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Thomson</span><span class="totals-stat">19/58</span><span class="totals-pct">33%</span><span class="totals-stat">TD 4/11</span><span class="totals-stat">Ctrl 7:51</span></div><div class="totals-line"><span class="totals-name opponent">Benson Henderson</span><span class="totals-stat">46/91</span><span class="totals-pct">51%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 5:01</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Josh Thomson</td><td>1/2</td><td>50%</td><td>1/2</td><td>3:12</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Benson Henderson</td><td>1/6</td><td>17%</td><td>1/1</td><td>1:01</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Josh Thomson</td><td>6/15</td><td>40%</td><td>1/2</td><td>0:47</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Benson Henderson</td><td>11/24</td><td>46%</td><td>0/0</td><td>1:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Josh Thomson</td><td>2/10</td><td>20%</td><td>0/3</td><td>0:30</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Benson Henderson</td><td>17/30</td><td>57%</td><td>2/2</td><td>1:29</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Josh Thomson</td><td>2/11</td><td>18%</td><td>2/2</td><td>2:41</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Benson Henderson</td><td>6/10</td><td>60%</td><td>1/1</td><td>1:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Josh Thomson</td><td>8/20</td><td>40%</td><td>0/2</td><td>0:41</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Benson Henderson</td><td>11/21</td><td>52%</td><td>0/0</td><td>0:17</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Nate Diaz</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 3:44 &bull; UFC on FOX: Henderson vs Melendez &bull; Apr 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Thomson</span><span class="totals-stat">36/71</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:22</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Nate Diaz</span><span class="totals-stat">21/74</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:55</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Josh Thomson</td><td>15/33</td><td>45%</td><td>1/1</td><td>0:23</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nate Diaz</td><td>10/44</td><td>23%</td><td>0/0</td><td>0:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Josh Thomson</td><td>21/38</td><td>55%</td><td>0/0</td><td>0:59</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nate Diaz</td><td>11/30</td><td>37%</td><td>1/1</td><td>0:30</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Yves Edwards</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 4:32 &bull; UFC 49: Unfinished Business &bull; Aug 2004</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Thomson</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yves Edwards</span><span class="totals-stat">16/21</span><span class="totals-pct">76%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:40</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Josh Thomson</td><td>13/22</td><td>59%</td><td>2/3</td><td>1:36</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Yves Edwards</td><td>16/21</td><td>76%</td><td>0/1</td><td>0:40</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Hermes Franca</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC 46: Supernatural &bull; Jan 2004</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Thomson</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Hermes Franca</span><span class="totals-stat">22/46</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 5:19</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Josh Thomson</td><td>20/42</td><td>48%</td><td>1/1</td><td>0:48</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hermes Franca</td><td>5/12</td><td>42%</td><td>1/1</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Josh Thomson</td><td>13/17</td><td>76%</td><td>0/0</td><td>3:12</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hermes Franca</td><td>4/9</td><td>44%</td><td>1/2</td><td>0:58</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Josh Thomson</td><td>7/9</td><td>78%</td><td>1/2</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hermes Franca</td><td>13/25</td><td>52%</td><td>0/0</td><td>4:09</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Gerald Strebendt</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:45 &bull; UFC 44: Undisputed &bull; Sep 2003</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Thomson</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gerald Strebendt</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Josh Thomson</td><td>11/18</td><td>61%</td><td>1/1</td><td>2:27</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Gerald Strebendt</td><td>0/0</td><td>—</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 23:00:24 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

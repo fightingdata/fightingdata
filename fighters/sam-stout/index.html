@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Stout - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Sam Stout UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Sam Stout</h1>
+            <div class="profile-division">Lightweight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">20-12-1</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">9-11-0 (20 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Aug 2015</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">41 (Apr 23, 1984)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'9"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">155 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">70"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Sam Stout</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">28.9%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.2</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.1</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">0.1/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">38.5%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">77.9%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">0.6</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">0.1</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">1:39</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">11.1%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">0.0%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">88.9%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">11:55</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.2</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.1</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">28.5%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.2</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.5</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">60.0%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">86.7%</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">0:25</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Frankie Perez</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:54 &bull; UFC Fight Night: Holloway vs Oliveira &bull; Aug 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">2/16</span><span class="totals-pct">12%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>2/16</td><td>12%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Frankie Perez</td><td>12/15</td><td>80%</td><td>0/0</td><td>0:04</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Ross Pearson</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:33 &bull; UFC 185: Pettis vs Dos Anjos &bull; Mar 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">23/111</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Ross Pearson</span><span class="totals-stat">25/75</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>18/82</td><td>22%</td><td>0/1</td><td>0:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ross Pearson</td><td>15/58</td><td>26%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>5/29</td><td>17%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ross Pearson</td><td>10/17</td><td>59%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. KJ Noons</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:30 &bull; UFC Fight Night: Bisping vs Kennedy &bull; Apr 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">5/8</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">KJ Noons</span><span class="totals-stat">7/11</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>5/8</td><td>62%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">KJ Noons</td><td>7/11</td><td>64%</td><td>0/0</td><td>0:03</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Cody McKenzie</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">54/189</span><span class="totals-pct">29%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:45</span></div><div class="totals-line"><span class="totals-name opponent">Cody McKenzie</span><span class="totals-stat">31/90</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/13</span><span class="totals-stat">Ctrl 1:44</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>13/43</td><td>30%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Cody McKenzie</td><td>14/29</td><td>48%</td><td>1/5</td><td>1:44</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>20/65</td><td>31%</td><td>0/1</td><td>0:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Cody McKenzie</td><td>11/30</td><td>37%</td><td>0/5</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>21/81</td><td>26%</td><td>1/1</td><td>0:38</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Cody McKenzie</td><td>6/31</td><td>19%</td><td>0/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. James Krause</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 4:47 &bull; UFC 161: Evans vs Henderson &bull; Jun 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">73/226</span><span class="totals-pct">32%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:20</span></div><div class="totals-line"><span class="totals-name opponent">James Krause</span><span class="totals-stat">96/188</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>21/52</td><td>40%</td><td>1/1</td><td>0:31</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">James Krause</td><td>30/60</td><td>50%</td><td>0/0</td><td>1:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>26/81</td><td>32%</td><td>0/0</td><td>0:28</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">James Krause</td><td>25/57</td><td>44%</td><td>1/2</td><td>0:44</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>26/93</td><td>28%</td><td>1/1</td><td>0:21</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">James Krause</td><td>41/71</td><td>58%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Caros Fodor</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 157: Rousey vs Carmouche &bull; Feb 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">46/120</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 6:39</span></div><div class="totals-line"><span class="totals-name opponent">Caros Fodor</span><span class="totals-stat">47/92</span><span class="totals-pct">51%</span><span class="totals-stat">TD 3/13</span><span class="totals-stat">Ctrl 2:07</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>15/31</td><td>48%</td><td>1/1</td><td>3:29</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Caros Fodor</td><td>12/22</td><td>55%</td><td>1/3</td><td>0:28</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>19/58</td><td>33%</td><td>0/1</td><td>1:30</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Caros Fodor</td><td>19/39</td><td>49%</td><td>1/3</td><td>0:16</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>12/31</td><td>39%</td><td>0/1</td><td>1:40</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Caros Fodor</td><td>16/31</td><td>52%</td><td>1/7</td><td>1:23</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. John Makdessi</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 154: St-Pierre vs Condit &bull; Nov 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">63/369</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">John Makdessi</span><span class="totals-stat">84/157</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>21/120</td><td>18%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">John Makdessi</td><td>24/47</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>26/123</td><td>21%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">John Makdessi</td><td>29/56</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>16/126</td><td>13%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">John Makdessi</td><td>31/54</td><td>57%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Spencer Fisher</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FX: Maynard vs Guida &bull; Jun 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">64/189</span><span class="totals-pct">34%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 3:51</span></div><div class="totals-line"><span class="totals-name opponent">Spencer Fisher</span><span class="totals-stat">65/156</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:06</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>15/59</td><td>25%</td><td>1/2</td><td>1:37</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>20/45</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>24/57</td><td>42%</td><td>1/3</td><td>1:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>19/49</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>25/73</td><td>34%</td><td>2/3</td><td>1:11</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>26/62</td><td>42%</td><td>0/1</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Thiago Tavares</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 142: Aldo vs Mendes &bull; Jan 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">45/172</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Tavares</span><span class="totals-stat">50/128</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 2:22</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>7/27</td><td>26%</td><td>0/0</td><td>0:21</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Tavares</td><td>9/19</td><td>47%</td><td>2/6</td><td>2:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>16/62</td><td>26%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Tavares</td><td>18/56</td><td>32%</td><td>0/3</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>22/83</td><td>27%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Tavares</td><td>23/53</td><td>43%</td><td>0/2</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Yves Edwards</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:52 &bull; UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">13/54</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Yves Edwards</span><span class="totals-stat">14/32</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:15</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>13/54</td><td>24%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Yves Edwards</td><td>14/32</td><td>44%</td><td>1/2</td><td>1:15</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Paul Taylor</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 121: Lesnar vs Velasquez &bull; Oct 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">107/295</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Paul Taylor</span><span class="totals-stat">140/296</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>38/99</td><td>38%</td><td>1/1</td><td>0:07</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Taylor</td><td>50/84</td><td>60%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>30/83</td><td>36%</td><td>0/0</td><td>0:19</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Taylor</td><td>38/89</td><td>43%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>39/113</td><td>35%</td><td>0/1</td><td>0:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Taylor</td><td>52/123</td><td>42%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Jeremy Stephens</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 113: Machida vs Shogun 2 &bull; May 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">70/181</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:48</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Jeremy Stephens</span><span class="totals-stat">55/119</span><span class="totals-pct">46%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 1:11</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>23/57</td><td>40%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jeremy Stephens</td><td>26/35</td><td>74%</td><td>1/1</td><td>0:26</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>21/61</td><td>34%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jeremy Stephens</td><td>17/38</td><td>45%</td><td>1/2</td><td>0:45</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>26/63</td><td>41%</td><td>0/0</td><td>0:48</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jeremy Stephens</td><td>12/46</td><td>26%</td><td>1/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Joe Lauzon</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 108: Evans vs Silva &bull; Jan 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">94/264</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:25</span></div><div class="totals-line"><span class="totals-name opponent">Joe Lauzon</span><span class="totals-stat">26/81</span><span class="totals-pct">32%</span><span class="totals-stat">TD 4/16</span><span class="totals-stat">Ctrl 2:39</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>20/55</td><td>36%</td><td>0/0</td><td>1:07</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joe Lauzon</td><td>10/30</td><td>33%</td><td>2/5</td><td>1:09</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>29/84</td><td>35%</td><td>0/0</td><td>1:09</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joe Lauzon</td><td>9/20</td><td>45%</td><td>1/5</td><td>0:44</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>45/125</td><td>36%</td><td>0/0</td><td>0:09</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joe Lauzon</td><td>7/31</td><td>23%</td><td>1/6</td><td>0:46</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-13')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Matt Wiman</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 97: Redemption &bull; Apr 2009</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">62/186</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:39</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Matt Wiman</span><span class="totals-stat">46/104</span><span class="totals-pct">44%</span><span class="totals-stat">TD 4/11</span><span class="totals-stat">Ctrl 4:25</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>23/81</td><td>28%</td><td>0/0</td><td>0:53</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Matt Wiman</td><td>21/46</td><td>46%</td><td>2/4</td><td>0:50</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>31/81</td><td>38%</td><td>0/0</td><td>0:55</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Matt Wiman</td><td>15/38</td><td>39%</td><td>0/1</td><td>0:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>8/24</td><td>33%</td><td>0/0</td><td>0:51</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Matt Wiman</td><td>10/20</td><td>50%</td><td>2/6</td><td>3:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-14')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Terry Etim</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 89: Bisping vs Leben &bull; Oct 2008</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">55/288</span><span class="totals-pct">19%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Terry Etim</span><span class="totals-stat">69/192</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>19/98</td><td>19%</td><td>1/1</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Terry Etim</td><td>29/70</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>19/95</td><td>20%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Terry Etim</td><td>19/59</td><td>32%</td><td>0/1</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>17/95</td><td>18%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Terry Etim</td><td>21/63</td><td>33%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-15')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Rich Clementi</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 83: Serra vs St-Pierre 2 &bull; Apr 2008</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">48/176</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Rich Clementi</span><span class="totals-stat">40/102</span><span class="totals-pct">39%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 5:23</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>4/16</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rich Clementi</td><td>7/16</td><td>44%</td><td>2/3</td><td>3:57</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>18/79</td><td>23%</td><td>0/1</td><td>0:11</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rich Clementi</td><td>19/48</td><td>40%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>26/81</td><td>32%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rich Clementi</td><td>14/38</td><td>37%</td><td>1/4</td><td>1:26</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-16')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Per Eklund</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 80: Rapid Fire &bull; Jan 2008</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">33/127</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 5:34</span></div><div class="totals-line"><span class="totals-name opponent">Per Eklund</span><span class="totals-stat">20/43</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/30</span><span class="totals-stat">Ctrl 3:02</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>8/42</td><td>19%</td><td>0/0</td><td>2:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Per Eklund</td><td>9/16</td><td>56%</td><td>0/10</td><td>0:57</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>15/48</td><td>31%</td><td>0/0</td><td>1:45</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Per Eklund</td><td>7/14</td><td>50%</td><td>1/10</td><td>1:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>10/37</td><td>27%</td><td>0/0</td><td>1:46</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Per Eklund</td><td>4/13</td><td>31%</td><td>1/10</td><td>0:58</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-17')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Spencer Fisher</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Stout vs Fisher &bull; Jun 2007</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">76/286</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Spencer Fisher</span><span class="totals-stat">88/239</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:09</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>23/84</td><td>27%</td><td>0/0</td><td>0:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>33/91</td><td>36%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>21/86</td><td>24%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>28/71</td><td>39%</td><td>0/2</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>32/116</td><td>28%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>27/77</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-18')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Kenny Florian</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:46 &bull; The Ultimate Fighter: Team Ortiz vs. Team Shamrock Finale &bull; Jun 2006</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">0/4</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kenny Florian</span><span class="totals-stat">5/8</span><span class="totals-pct">62%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:37</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>0/4</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kenny Florian</td><td>5/8</td><td>62%</td><td>1/2</td><td>1:37</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-19')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Spencer Fisher</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 58: USA vs Canada &bull; Mar 2006</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Stout</span><span class="totals-stat">62/183</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:00</span></div><div class="totals-line"><span class="totals-name opponent">Spencer Fisher</span><span class="totals-stat">53/148</span><span class="totals-pct">36%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 4:19</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Stout</td><td>11/37</td><td>30%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>18/50</td><td>36%</td><td>3/3</td><td>3:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Stout</td><td>29/75</td><td>39%</td><td>0/0</td><td>0:07</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>24/60</td><td>40%</td><td>1/1</td><td>0:48</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Stout</td><td>22/71</td><td>31%</td><td>0/0</td><td>0:51</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Spencer Fisher</td><td>11/38</td><td>29%</td><td>0/5</td><td>0:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 23:00:41 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alistair Overeem - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Alistair Overeem UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Alistair Overeem</h1>
+            <div class="profile-division">Heavyweight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">47-19-0 (1 NC)</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">11-9-0 (20 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Feb 2021</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">45 (May 17, 1980)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">6'4"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">265 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">80"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Alistair Overeem</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">74.3%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.0</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">3.3</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">0.7/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">34.5%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">62.5%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">0.8</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">0.3</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">4:02</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">81.8%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">0.0%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">18.2%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">8:55</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.8</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.0</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">76.5%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.2</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.7</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">37.5%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">—</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">3:55</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Alexander Volkov</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:06 &bull; UFC Fight Night: Overeem vs. Volkov &bull; Feb 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">10/20</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkov</span><span class="totals-stat">54/88</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>8/14</td><td>57%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Alexander Volkov</td><td>33/53</td><td>62%</td><td>0/0</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>2/6</td><td>33%</td><td>0/1</td><td>0:15</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Alexander Volkov</td><td>21/35</td><td>60%</td><td>0/0</td><td>0:03</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Augusto Sakai</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 5, 0:26 &bull; UFC Fight Night: Overeem vs. Sakai &bull; Sep 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">92/114</span><span class="totals-pct">81%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 5:29</span></div><div class="totals-line"><span class="totals-name opponent">Augusto Sakai</span><span class="totals-stat">99/173</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:22</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>11/18</td><td>61%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Augusto Sakai</td><td>22/36</td><td>61%</td><td>0/0</td><td>0:45</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>13/16</td><td>81%</td><td>0/0</td><td>1:12</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Augusto Sakai</td><td>24/40</td><td>60%</td><td>0/0</td><td>0:58</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alistair Overeem</td><td>23/27</td><td>85%</td><td>1/1</td><td>1:44</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Augusto Sakai</td><td>34/54</td><td>63%</td><td>0/0</td><td>0:38</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Alistair Overeem</td><td>40/48</td><td>83%</td><td>1/1</td><td>2:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Augusto Sakai</td><td>19/43</td><td>44%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Alistair Overeem</td><td>5/5</td><td>100%</td><td>1/1</td><td>0:15</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Augusto Sakai</td><td>0/0</td><td>—</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Walt Harris</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:00 &bull; UFC Fight Night: Overeem vs. Harris &bull; May 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">68/85</span><span class="totals-pct">80%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:22</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Walt Harris</span><span class="totals-stat">25/48</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:47</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>27/33</td><td>82%</td><td>1/1</td><td>2:56</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Walt Harris</td><td>24/42</td><td>57%</td><td>0/0</td><td>0:47</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>41/52</td><td>79%</td><td>0/0</td><td>1:26</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Walt Harris</td><td>1/6</td><td>17%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Jairzinho Rozenstruik</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 5, 4:56 &bull; UFC Fight Night: Overeem vs. Rozenstruik &bull; Dec 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">74/105</span><span class="totals-pct">70%</span><span class="totals-stat">TD 2/10</span><span class="totals-stat">Ctrl 8:19</span></div><div class="totals-line"><span class="totals-name opponent">Jairzinho Rozenstruik</span><span class="totals-stat">89/209</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>13/15</td><td>87%</td><td>1/2</td><td>3:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jairzinho Rozenstruik</td><td>5/13</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>14/20</td><td>70%</td><td>0/1</td><td>2:06</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jairzinho Rozenstruik</td><td>19/35</td><td>54%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alistair Overeem</td><td>18/25</td><td>72%</td><td>1/3</td><td>2:30</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jairzinho Rozenstruik</td><td>14/33</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Alistair Overeem</td><td>18/28</td><td>64%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jairzinho Rozenstruik</td><td>30/73</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Alistair Overeem</td><td>11/17</td><td>65%</td><td>0/3</td><td>0:29</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jairzinho Rozenstruik</td><td>21/55</td><td>38%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Aleksei Oleinik</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 4:45 &bull; UFC Fight Night: Overeem vs. Oleinik &bull; Apr 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">29/33</span><span class="totals-pct">88%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:10</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Aleksei Oleinik</span><span class="totals-stat">38/58</span><span class="totals-pct">66%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:22</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>29/33</td><td>88%</td><td>0/1</td><td>1:10</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Aleksei Oleinik</td><td>38/58</td><td>66%</td><td>0/0</td><td>1:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Sergei Pavlovich</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:21 &bull; UFC Fight Night: Blaydes vs. Ngannou 2 &bull; Nov 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">22/26</span><span class="totals-pct">85%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:57</span></div><div class="totals-line"><span class="totals-name opponent">Sergei Pavlovich</span><span class="totals-stat">13/32</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:12</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>22/26</td><td>85%</td><td>1/2</td><td>1:57</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sergei Pavlovich</td><td>13/32</td><td>41%</td><td>0/2</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Curtis Blaydes</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 2:56 &bull; UFC 225: Whittaker vs. Romero 2 &bull; Jun 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Curtis Blaydes</span><span class="totals-stat">37/53</span><span class="totals-pct">70%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 7:47</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>1/3</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Curtis Blaydes</td><td>1/5</td><td>20%</td><td>1/1</td><td>2:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>4/5</td><td>80%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Curtis Blaydes</td><td>13/20</td><td>65%</td><td>2/2</td><td>3:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alistair Overeem</td><td>2/4</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Curtis Blaydes</td><td>23/28</td><td>82%</td><td>1/1</td><td>1:57</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Francis Ngannou</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:42 &bull; UFC 218: Holloway vs. Aldo 2 &bull; Dec 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>1/4</td><td>25%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Francis Ngannou</td><td>6/14</td><td>43%</td><td>0/0</td><td>1:02</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Fabricio Werdum</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 2, 3:43 &bull; UFC 213: Romero vs. Whittaker &bull; Jul 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">21/38</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:20</span></div><div class="totals-line"><span class="totals-name opponent">Fabricio Werdum</span><span class="totals-stat">49/115</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:39</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>5/10</td><td>50%</td><td>0/0</td><td>0:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Fabricio Werdum</td><td>12/30</td><td>40%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>10/16</td><td>62%</td><td>0/0</td><td>0:56</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Fabricio Werdum</td><td>13/39</td><td>33%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alistair Overeem</td><td>6/12</td><td>50%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Fabricio Werdum</td><td>24/46</td><td>52%</td><td>1/1</td><td>2:39</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Mark Hunt</div>
+                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 3, 1:44 &bull; UFC 209: Woodley vs. Thompson 2 &bull; Mar 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">55/70</span><span class="totals-pct">79%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:33</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Mark Hunt</span><span class="totals-stat">21/51</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>24/32</td><td>75%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mark Hunt</td><td>9/26</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>22/28</td><td>79%</td><td>0/0</td><td>2:55</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mark Hunt</td><td>10/17</td><td>59%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alistair Overeem</td><td>9/10</td><td>90%</td><td>0/0</td><td>0:38</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mark Hunt</td><td>2/8</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Stipe Miocic</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:27 &bull; UFC 203: Miocic vs. Overeem &bull; Sep 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">9/17</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Stipe Miocic</span><span class="totals-stat">34/60</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:21</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>9/17</td><td>53%</td><td>0/0</td><td>0:06</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Stipe Miocic</td><td>34/60</td><td>57%</td><td>1/1</td><td>0:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Andrei Arlovski</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:12 &bull; UFC Fight Night: Overeem vs Arlovski &bull; May 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">23/30</span><span class="totals-pct">77%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:19</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Andrei Arlovski</span><span class="totals-stat">16/33</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:47</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>10/13</td><td>77%</td><td>1/1</td><td>1:11</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andrei Arlovski</td><td>14/26</td><td>54%</td><td>0/0</td><td>0:47</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>13/17</td><td>76%</td><td>0/0</td><td>0:08</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andrei Arlovski</td><td>2/7</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Junior Dos Santos</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:43 &bull; UFC on FOX: Dos Anjos vs. Cowboy 2 &bull; Dec 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">32/43</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Junior Dos Santos</span><span class="totals-stat">22/46</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>9/13</td><td>69%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Junior Dos Santos</td><td>7/15</td><td>47%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>23/30</td><td>77%</td><td>0/0</td><td>0:03</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Junior Dos Santos</td><td>15/31</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-13')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Roy Nelson</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 185: Pettis vs Dos Anjos &bull; Mar 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">62/84</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Roy Nelson</span><span class="totals-stat">23/77</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:34</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>25/28</td><td>89%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Roy Nelson</td><td>11/25</td><td>44%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>18/29</td><td>62%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Roy Nelson</td><td>5/29</td><td>17%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alistair Overeem</td><td>19/27</td><td>70%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Roy Nelson</td><td>7/23</td><td>30%</td><td>0/3</td><td>0:34</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-14')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Stefan Struve</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:13 &bull; UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">17/25</span><span class="totals-pct">68%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:41</span></div><div class="totals-line"><span class="totals-name opponent">Stefan Struve</span><span class="totals-stat">2/5</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>17/25</td><td>68%</td><td>1/2</td><td>2:41</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Stefan Struve</td><td>2/5</td><td>40%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-15')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Ben Rothwell</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:19 &bull; UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">20/21</span><span class="totals-pct">95%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Ben Rothwell</span><span class="totals-stat">17/27</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>20/21</td><td>95%</td><td>0/1</td><td>0:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ben Rothwell</td><td>17/27</td><td>63%</td><td>0/0</td><td>0:13</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-16')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Frank Mir</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 169: Barao vs Faber 2 &bull; Feb 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">62/74</span><span class="totals-pct">84%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 8:37</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>30/35</td><td>86%</td><td>0/0</td><td>2:29</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Frank Mir</td><td>1/11</td><td>9%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>14/17</td><td>82%</td><td>0/0</td><td>3:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Frank Mir</td><td>2/9</td><td>22%</td><td>1/1</td><td>0:29</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alistair Overeem</td><td>18/22</td><td>82%</td><td>0/0</td><td>3:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Frank Mir</td><td>0/3</td><td>0%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-17')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Travis Browne</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 4:08 &bull; UFC Fight Night: Shogun vs Sonnen &bull; Aug 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">41/66</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:15</span><span class="totals-kd">KD 2</span></div><div class="totals-line"><span class="totals-name opponent">Travis Browne</span><span class="totals-stat">14/27</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>41/66</td><td>62%</td><td>0/1</td><td>2:15</td><td>2</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Travis Browne</td><td>14/27</td><td>52%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-18')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Antonio Silva</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:25 &bull; UFC 156: Aldo vs Edgar &bull; Feb 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">51/71</span><span class="totals-pct">72%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 6:24</span></div><div class="totals-line"><span class="totals-name opponent">Antonio Silva</span><span class="totals-stat">21/48</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>22/32</td><td>69%</td><td>0/0</td><td>2:19</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Antonio Silva</td><td>3/13</td><td>23%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Alistair Overeem</td><td>27/36</td><td>75%</td><td>1/1</td><td>4:04</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Antonio Silva</td><td>4/15</td><td>27%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Alistair Overeem</td><td>2/3</td><td>67%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Antonio Silva</td><td>14/20</td><td>70%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-19')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Brock Lesnar</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:26 &bull; UFC 141: Lesnar vs Overeem &bull; Dec 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alistair Overeem</span><span class="totals-stat">19/24</span><span class="totals-pct">79%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Brock Lesnar</span><span class="totals-stat">6/18</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Alistair Overeem</td><td>19/24</td><td>79%</td><td>0/0</td><td>0:17</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brock Lesnar</td><td>6/18</td><td>33%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 23:00:00 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

@@ -27,3 +27,8 @@
   from = "/compare/:slug/"
   to = "/compare/:slug.html"
   status = 200
+
+[[redirects]]
+  from = "/fighters/:slug/"
+  to = "/fighters/:slug.html"
+  status = 200

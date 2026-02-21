@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared Gordon - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Jared Gordon UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Jared Gordon</h1>
+            <div class="profile-division">Lightweight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">21-8-0 (1 NC)</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">9-7-0 (17 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Sep 2025</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">37 (Sep 6, 1988)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'9"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">155 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">68"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Jared Gordon</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">53.8%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">5.6</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.1</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">1.5/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">32.8%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">60.5%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">1.8</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">0.0</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">5:06</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">33.3%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">0.0%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">66.7%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">10:52</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.2</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.2</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">43.1%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">6.6</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">7.4</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">11.1%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">50.0%</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">1:10</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Rafa Garcia</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 2:27 &bull; UFC Fight Night: Lopes vs. Silva &bull; Sep 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">65/186</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Rafa Garcia</span><span class="totals-stat">91/162</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:01</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>23/64</td><td>36%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rafa Garcia</td><td>22/41</td><td>54%</td><td>1/1</td><td>0:24</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>31/86</td><td>36%</td><td>1/1</td><td>0:09</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rafa Garcia</td><td>33/61</td><td>54%</td><td>1/2</td><td>1:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>11/36</td><td>31%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rafa Garcia</td><td>36/60</td><td>60%</td><td>0/0</td><td>0:25</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Thiago Moises</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:37 &bull; UFC Fight Night: Burns vs. Morales &bull; May 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">7/13</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:36</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Moises</span><span class="totals-stat">5/9</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>7/13</td><td>54%</td><td>1/1</td><td>2:36</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Thiago Moises</td><td>5/9</td><td>56%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Nasrat Haqparast</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Whittaker vs. Aliskerov &bull; Jun 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">141/299</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/13</span><span class="totals-stat">Ctrl 2:49</span></div><div class="totals-line"><span class="totals-name opponent">Nasrat Haqparast</span><span class="totals-stat">146/316</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>16/56</td><td>29%</td><td>0/7</td><td>1:13</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nasrat Haqparast</td><td>35/64</td><td>55%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>55/88</td><td>62%</td><td>0/1</td><td>1:34</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nasrat Haqparast</td><td>37/80</td><td>46%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>70/155</td><td>45%</td><td>0/5</td><td>0:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nasrat Haqparast</td><td>74/172</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Mark Madsen</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:42 &bull; UFC 295: Prochazka vs. Pereira &bull; Nov 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">36/66</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Mark Madsen</span><span class="totals-stat">35/57</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:04</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>36/66</td><td>55%</td><td>0/0</td><td>0:19</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mark Madsen</td><td>35/57</td><td>61%</td><td>0/0</td><td>1:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-nc">NC</div>
+                <div class="fight-opponent">vs. King Green</div>
+                <div class="fight-meta">CNC &bull; Rd 1, 4:35 &bull; UFC Fight Night: Pavlovich vs. Blaydes &bull; Apr 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">17/53</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">King Green</span><span class="totals-stat">23/69</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:01</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>17/53</td><td>32%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">King Green</td><td>23/69</td><td>33%</td><td>0/1</td><td>0:01</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Paddy Pimblett</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 282: Blachowicz vs. Ankalaev &bull; Dec 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">60/103</span><span class="totals-pct">58%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 6:28</span></div><div class="totals-line"><span class="totals-name opponent">Paddy Pimblett</span><span class="totals-stat">63/155</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:35</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>32/53</td><td>60%</td><td>0/1</td><td>0:28</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paddy Pimblett</td><td>29/70</td><td>41%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>24/46</td><td>52%</td><td>1/2</td><td>2:07</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paddy Pimblett</td><td>28/70</td><td>40%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>4/4</td><td>100%</td><td>2/3</td><td>3:53</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paddy Pimblett</td><td>6/15</td><td>40%</td><td>0/2</td><td>0:35</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Leonardo Santos</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 278: Usman vs. Edwards &bull; Aug 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">116/174</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:55</span></div><div class="totals-line"><span class="totals-name opponent">Leonardo Santos</span><span class="totals-stat">36/81</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:54</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>37/60</td><td>62%</td><td>0/0</td><td>0:49</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Leonardo Santos</td><td>10/22</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>29/43</td><td>67%</td><td>0/0</td><td>1:54</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Leonardo Santos</td><td>13/24</td><td>54%</td><td>0/2</td><td>0:29</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>50/71</td><td>70%</td><td>0/0</td><td>1:12</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Leonardo Santos</td><td>13/35</td><td>37%</td><td>0/1</td><td>0:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Grant Dawson</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 4:11 &bull; UFC Fight Night: Font vs. Vera &bull; Apr 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">77/119</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:12</span></div><div class="totals-line"><span class="totals-name opponent">Grant Dawson</span><span class="totals-stat">54/111</span><span class="totals-pct">49%</span><span class="totals-stat">TD 7/17</span><span class="totals-stat">Ctrl 7:11</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>20/28</td><td>71%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Grant Dawson</td><td>15/32</td><td>47%</td><td>1/4</td><td>2:42</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>14/27</td><td>52%</td><td>0/0</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Grant Dawson</td><td>10/28</td><td>36%</td><td>3/7</td><td>3:42</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>43/64</td><td>67%</td><td>0/0</td><td>0:53</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Grant Dawson</td><td>29/51</td><td>57%</td><td>3/6</td><td>0:47</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Joe Solecki</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Santos vs. Walker &bull; Oct 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">51/86</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:07</span></div><div class="totals-line"><span class="totals-name opponent">Joe Solecki</span><span class="totals-stat">38/69</span><span class="totals-pct">55%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 6:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>1/1</td><td>100%</td><td>0/0</td><td>0:45</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joe Solecki</td><td>10/10</td><td>100%</td><td>1/1</td><td>3:58</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>16/16</td><td>100%</td><td>0/0</td><td>2:38</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joe Solecki</td><td>3/3</td><td>100%</td><td>3/5</td><td>2:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>34/69</td><td>49%</td><td>1/2</td><td>0:44</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joe Solecki</td><td>25/56</td><td>45%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Danny Chavez</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Lewis &bull; Feb 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">82/131</span><span class="totals-pct">63%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 6:07</span></div><div class="totals-line"><span class="totals-name opponent">Danny Chavez</span><span class="totals-stat">39/113</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:10</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>36/61</td><td>59%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Chavez</td><td>20/49</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>19/32</td><td>59%</td><td>1/1</td><td>3:32</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Chavez</td><td>8/20</td><td>40%</td><td>1/1</td><td>0:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>27/38</td><td>71%</td><td>1/6</td><td>2:29</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Chavez</td><td>11/44</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Chris Fishgold</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Kattar vs. Ige &bull; Jul 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">44/69</span><span class="totals-pct">64%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 10:22</span></div><div class="totals-line"><span class="totals-name opponent">Chris Fishgold</span><span class="totals-stat">20/58</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:43</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>13/23</td><td>57%</td><td>1/2</td><td>2:11</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Chris Fishgold</td><td>12/23</td><td>52%</td><td>0/0</td><td>0:43</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>2/8</td><td>25%</td><td>1/1</td><td>4:31</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Chris Fishgold</td><td>2/9</td><td>22%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>29/38</td><td>76%</td><td>1/3</td><td>3:40</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Chris Fishgold</td><td>6/26</td><td>23%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Charles Oliveira</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:26 &bull; UFC Fight Night: Blachowicz vs. Jacare &bull; Nov 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">7/18</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Charles Oliveira</span><span class="totals-stat">10/16</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>7/18</td><td>39%</td><td>0/0</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Charles Oliveira</td><td>10/16</td><td>62%</td><td>0/1</td><td>0:02</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Dan Moret</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Ngannou vs. Dos Santos &bull; Jun 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">48/79</span><span class="totals-pct">61%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 9:41</span></div><div class="totals-line"><span class="totals-name opponent">Dan Moret</span><span class="totals-stat">34/73</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:10</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>19/30</td><td>63%</td><td>1/3</td><td>2:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Moret</td><td>24/52</td><td>46%</td><td>1/1</td><td>0:56</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>25/40</td><td>62%</td><td>0/0</td><td>3:27</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Moret</td><td>7/14</td><td>50%</td><td>1/1</td><td>0:59</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>4/9</td><td>44%</td><td>1/3</td><td>4:12</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Moret</td><td>3/7</td><td>43%</td><td>0/0</td><td>0:15</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-13')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Joaquim Silva</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:39 &bull; UFC Fight Night: Lee vs. Iaquinta &bull; Dec 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">116/194</span><span class="totals-pct">60%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 4:24</span></div><div class="totals-line"><span class="totals-name opponent">Joaquim Silva</span><span class="totals-stat">95/191</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:38</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>37/55</td><td>67%</td><td>2/3</td><td>2:39</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joaquim Silva</td><td>19/37</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>37/56</td><td>66%</td><td>1/4</td><td>1:45</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joaquim Silva</td><td>25/51</td><td>49%</td><td>1/1</td><td>0:38</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>42/83</td><td>51%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Joaquim Silva</td><td>51/103</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-14')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Diego Ferreira</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:58 &bull; UFC Fight Night: Cerrone vs. Medeiros &bull; Feb 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">8/17</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Diego Ferreira</span><span class="totals-stat">29/60</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:18</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>8/17</td><td>47%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Diego Ferreira</td><td>29/60</td><td>48%</td><td>0/0</td><td>0:18</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-15')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Hacran Dias</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brunson vs. Machida &bull; Oct 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">101/210</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 6:04</span></div><div class="totals-line"><span class="totals-name opponent">Hacran Dias</span><span class="totals-stat">32/106</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:37</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>14/55</td><td>25%</td><td>1/1</td><td>0:33</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hacran Dias</td><td>21/58</td><td>36%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>56/99</td><td>57%</td><td>1/2</td><td>2:37</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hacran Dias</td><td>3/22</td><td>14%</td><td>0/1</td><td>0:30</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Jared Gordon</td><td>31/56</td><td>55%</td><td>0/4</td><td>2:54</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Hacran Dias</td><td>8/26</td><td>31%</td><td>0/0</td><td>0:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-16')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Michel Quinones</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:24 &bull; UFC Fight Night: Chiesa vs. Lee &bull; Jun 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jared Gordon</span><span class="totals-stat">67/121</span><span class="totals-pct">55%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 4:40</span></div><div class="totals-line"><span class="totals-name opponent">Michel Quinones</span><span class="totals-stat">16/78</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Jared Gordon</td><td>23/49</td><td>47%</td><td>1/1</td><td>1:17</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Michel Quinones</td><td>14/58</td><td>24%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Jared Gordon</td><td>44/72</td><td>61%</td><td>3/5</td><td>3:23</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Michel Quinones</td><td>2/20</td><td>10%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 23:00:19 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

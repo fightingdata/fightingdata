@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edson Barboza - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Edson Barboza UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Edson Barboza</h1>
+            <div class="profile-division">Lightweight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">24-14-0</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">18-14-0 (32 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Dec 2025</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">40 (Jan 21, 1986)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'11"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">155 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">75"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Edson Barboza</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">44.7%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.1</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.7</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">-0.5/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">50.0%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">73.1%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">0.4</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">0.1</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">0:57</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">50.0%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">0.0%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">50.0%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">11:58</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.6</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.0</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">46.7%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">4.9</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">7.3</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">75.0%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">58.3%</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">1:28</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Jalin Turner</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:24 &bull; UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">10/20</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Jalin Turner</span><span class="totals-stat">39/66</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:38</span><span class="totals-kd">KD 2</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>10/20</td><td>50%</td><td>0/0</td><td>0:07</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jalin Turner</td><td>39/66</td><td>59%</td><td>0/0</td><td>0:38</td><td>2</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Drakkar Klose</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 319: Du Plessis vs. Chimaev &bull; Aug 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">71/120</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:50</span></div><div class="totals-line"><span class="totals-name opponent">Drakkar Klose</span><span class="totals-stat">53/102</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 2:33</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>24/36</td><td>67%</td><td>0/0</td><td>1:26</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Drakkar Klose</td><td>15/29</td><td>52%</td><td>0/1</td><td>0:33</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>18/38</td><td>47%</td><td>0/0</td><td>1:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Drakkar Klose</td><td>25/44</td><td>57%</td><td>0/0</td><td>1:40</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>29/46</td><td>63%</td><td>0/0</td><td>1:22</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Drakkar Klose</td><td>13/29</td><td>45%</td><td>0/1</td><td>0:20</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Lerone Murphy</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Barboza vs. Murphy &bull; May 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">79/242</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Lerone Murphy</span><span class="totals-stat">220/364</span><span class="totals-pct">60%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 5:19</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>25/53</td><td>47%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Lerone Murphy</td><td>34/62</td><td>55%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>17/44</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Lerone Murphy</td><td>41/75</td><td>55%</td><td>1/1</td><td>1:26</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>11/42</td><td>26%</td><td>0/0</td><td>0:17</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Lerone Murphy</td><td>48/79</td><td>61%</td><td>1/3</td><td>1:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Edson Barboza</td><td>15/56</td><td>27%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Lerone Murphy</td><td>59/93</td><td>63%</td><td>0/0</td><td>0:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Edson Barboza</td><td>11/47</td><td>23%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Lerone Murphy</td><td>38/55</td><td>69%</td><td>2/2</td><td>1:49</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Sodiq Yusuff</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Yusuff vs. Barboza &bull; Oct 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">164/324</span><span class="totals-pct">51%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 3:04</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Sodiq Yusuff</span><span class="totals-stat">178/351</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:56</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>13/25</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sodiq Yusuff</td><td>42/80</td><td>52%</td><td>1/1</td><td>3:15</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>31/65</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sodiq Yusuff</td><td>42/79</td><td>53%</td><td>0/0</td><td>0:29</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>32/68</td><td>47%</td><td>0/0</td><td>1:04</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sodiq Yusuff</td><td>29/58</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Edson Barboza</td><td>47/90</td><td>52%</td><td>0/0</td><td>0:22</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sodiq Yusuff</td><td>35/79</td><td>44%</td><td>0/1</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Edson Barboza</td><td>41/76</td><td>54%</td><td>3/4</td><td>1:38</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sodiq Yusuff</td><td>30/55</td><td>55%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Billy Quarantillo</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 2:37 &bull; UFC Fight Night: Holloway vs. Allen &bull; Apr 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">21/33</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Billy Quarantillo</span><span class="totals-stat">19/42</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:39</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>21/33</td><td>64%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Billy Quarantillo</td><td>19/42</td><td>45%</td><td>0/2</td><td>0:39</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Bryce Mitchell</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 272: Covington vs. Masvidal &bull; Mar 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">16/37</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Bryce Mitchell</span><span class="totals-stat">34/47</span><span class="totals-pct">72%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 11:28</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>11/19</td><td>58%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Bryce Mitchell</td><td>14/18</td><td>78%</td><td>1/1</td><td>2:48</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>3/4</td><td>75%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Bryce Mitchell</td><td>7/9</td><td>78%</td><td>2/2</td><td>4:41</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>2/14</td><td>14%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Bryce Mitchell</td><td>13/20</td><td>65%</td><td>1/1</td><td>3:59</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Giga Chikadze</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:44 &bull; UFC Fight Night: Barboza vs. Chikadze &bull; Aug 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">33/95</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Giga Chikadze</span><span class="totals-stat">60/117</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:41</span><span class="totals-kd">KD 2</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>10/26</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Giga Chikadze</td><td>17/43</td><td>40%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>19/56</td><td>34%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Giga Chikadze</td><td>22/47</td><td>47%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>4/13</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Giga Chikadze</td><td>21/27</td><td>78%</td><td>0/0</td><td>0:41</td><td>2</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Shane Burgos</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:16 &bull; UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">98/191</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Shane Burgos</span><span class="totals-stat">80/180</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>41/83</td><td>49%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Shane Burgos</td><td>33/79</td><td>42%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>39/82</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Shane Burgos</td><td>40/83</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>18/26</td><td>69%</td><td>0/0</td><td>0:03</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Shane Burgos</td><td>7/18</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Makwan Amirkhani</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Moraes vs. Sandhagen &bull; Oct 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">32/74</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:38</span><span class="totals-kd">KD 2</span></div><div class="totals-line"><span class="totals-name opponent">Makwan Amirkhani</span><span class="totals-stat">11/39</span><span class="totals-pct">28%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 3:13</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>13/31</td><td>42%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Makwan Amirkhani</td><td>4/13</td><td>31%</td><td>1/2</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>12/26</td><td>46%</td><td>0/0</td><td>1:35</td><td>2</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Makwan Amirkhani</td><td>3/15</td><td>20%</td><td>1/2</td><td>0:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>7/17</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Makwan Amirkhani</td><td>4/11</td><td>36%</td><td>1/2</td><td>2:51</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Dan Ige</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Overeem vs. Harris &bull; May 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">80/144</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:55</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Dan Ige</span><span class="totals-stat">79/164</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:06</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>31/53</td><td>58%</td><td>0/0</td><td>0:58</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Ige</td><td>23/54</td><td>43%</td><td>0/0</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>30/52</td><td>58%</td><td>0/0</td><td>0:49</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Ige</td><td>31/63</td><td>49%</td><td>0/2</td><td>0:36</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>19/39</td><td>49%</td><td>0/0</td><td>0:08</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Ige</td><td>25/47</td><td>53%</td><td>1/2</td><td>1:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Paul Felder</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 242: Khabib vs. Poirier &bull; Sep 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">60/114</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:50</span></div><div class="totals-line"><span class="totals-name opponent">Paul Felder</span><span class="totals-stat">56/154</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 2:03</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>24/54</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Felder</td><td>13/51</td><td>25%</td><td>0/0</td><td>0:45</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>21/34</td><td>62%</td><td>1/1</td><td>1:29</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Felder</td><td>20/46</td><td>43%</td><td>0/2</td><td>0:45</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>15/26</td><td>58%</td><td>0/2</td><td>0:21</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Felder</td><td>23/57</td><td>40%</td><td>0/0</td><td>0:33</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Justin Gaethje</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:30 &bull; UFC Fight Night: Barboza vs. Gaethje &bull; Mar 2019</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">13/32</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Justin Gaethje</span><span class="totals-stat">20/35</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:44</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>13/32</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Justin Gaethje</td><td>20/35</td><td>57%</td><td>0/0</td><td>0:44</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Dan Hooker</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:19 &bull; UFC Fight Night: Lee vs. Iaquinta &bull; Dec 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">126/226</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:43</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Dan Hooker</span><span class="totals-stat">81/204</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:05</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>34/73</td><td>47%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Hooker</td><td>26/75</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>63/106</td><td>59%</td><td>0/1</td><td>1:12</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Hooker</td><td>40/96</td><td>42%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>29/47</td><td>62%</td><td>0/0</td><td>0:31</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dan Hooker</td><td>15/33</td><td>45%</td><td>0/1</td><td>0:01</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-13')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Kevin Lee</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 5, 2:18 &bull; UFC Fight Night: Barboza vs. Lee &bull; Apr 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">51/106</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Lee</span><span class="totals-stat">142/241</span><span class="totals-pct">59%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 15:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>4/12</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kevin Lee</td><td>40/64</td><td>62%</td><td>1/1</td><td>4:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>7/15</td><td>47%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kevin Lee</td><td>34/46</td><td>74%</td><td>1/2</td><td>4:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>19/34</td><td>56%</td><td>0/0</td><td>0:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kevin Lee</td><td>16/48</td><td>33%</td><td>1/3</td><td>1:11</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Edson Barboza</td><td>5/15</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kevin Lee</td><td>38/56</td><td>68%</td><td>1/1</td><td>4:33</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Edson Barboza</td><td>16/30</td><td>53%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kevin Lee</td><td>14/27</td><td>52%</td><td>0/2</td><td>0:46</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-14')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Khabib Nurmagomedov</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 219: Cyborg vs. Holm &bull; Dec 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">25/76</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Khabib Nurmagomedov</span><span class="totals-stat">89/177</span><span class="totals-pct">50%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 10:31</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>10/19</td><td>53%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Khabib Nurmagomedov</td><td>36/68</td><td>53%</td><td>1/3</td><td>3:43</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>9/26</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Khabib Nurmagomedov</td><td>31/60</td><td>52%</td><td>1/4</td><td>3:28</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>6/31</td><td>19%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Khabib Nurmagomedov</td><td>22/49</td><td>45%</td><td>2/6</td><td>3:20</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-15')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Beneil Dariush</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 2, 3:35 &bull; UFC Fight Night: Belfort vs. Gastelum &bull; Mar 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">30/82</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Beneil Dariush</span><span class="totals-stat">51/121</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>16/45</td><td>36%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Beneil Dariush</td><td>28/67</td><td>42%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>14/37</td><td>38%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Beneil Dariush</td><td>23/54</td><td>43%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-16')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Gilbert Melendez</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Holm vs. Shevchenko &bull; Jul 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">56/136</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:39</span></div><div class="totals-line"><span class="totals-name opponent">Gilbert Melendez</span><span class="totals-stat">39/129</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:04</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>21/41</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Gilbert Melendez</td><td>10/49</td><td>20%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>17/55</td><td>31%</td><td>1/1</td><td>0:39</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Gilbert Melendez</td><td>15/41</td><td>37%</td><td>0/2</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>18/40</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Gilbert Melendez</td><td>14/39</td><td>36%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-17')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Anthony Pettis</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 197: Jones vs Saint Preux &bull; Apr 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">73/164</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">48/131</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>20/45</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Pettis</td><td>14/34</td><td>41%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>22/57</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Pettis</td><td>22/50</td><td>44%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>31/62</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Pettis</td><td>12/47</td><td>26%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-18')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Tony Ferguson</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 2:54 &bull; The Ultimate Fighter: Team McGregor vs. Team Faber Finale &bull; Dec 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">41/85</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:57</span></div><div class="totals-line"><span class="totals-name opponent">Tony Ferguson</span><span class="totals-stat">61/116</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:20</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>30/58</td><td>52%</td><td>1/1</td><td>1:21</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tony Ferguson</td><td>36/75</td><td>48%</td><td>0/1</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>11/27</td><td>41%</td><td>1/2</td><td>0:36</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tony Ferguson</td><td>25/41</td><td>61%</td><td>0/1</td><td>0:16</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-19')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Paul Felder</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Dillashaw vs. Barao II &bull; Jul 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">64/135</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Paul Felder</span><span class="totals-stat">47/150</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:18</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>21/45</td><td>47%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Felder</td><td>14/50</td><td>28%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>23/54</td><td>43%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Felder</td><td>24/59</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>20/36</td><td>56%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paul Felder</td><td>9/41</td><td>22%</td><td>0/1</td><td>0:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-20')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Michael Johnson</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bigfoot vs Mir &bull; Feb 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">31/98</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Michael Johnson</span><span class="totals-stat">38/187</span><span class="totals-pct">20%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:01</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>13/33</td><td>39%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Michael Johnson</td><td>14/73</td><td>19%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>7/33</td><td>21%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Michael Johnson</td><td>14/60</td><td>23%</td><td>0/0</td><td>0:35</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>11/32</td><td>34%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Michael Johnson</td><td>10/54</td><td>19%</td><td>1/1</td><td>0:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-21')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. King Green</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Edgar vs Swanson &bull; Nov 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">54/133</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">King Green</span><span class="totals-stat">50/123</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>24/52</td><td>46%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">King Green</td><td>17/40</td><td>42%</td><td>0/1</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>16/41</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">King Green</td><td>17/43</td><td>40%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>14/40</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">King Green</td><td>16/40</td><td>40%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-22')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Evan Dunham</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 3:06 &bull; UFC Fight Night: Cowboy vs Miller &bull; Jul 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">10/17</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Evan Dunham</span><span class="totals-stat">10/27</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>10/17</td><td>59%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Evan Dunham</td><td>10/27</td><td>37%</td><td>0/1</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-23')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Donald Cerrone</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:15 &bull; UFC on FOX: Werdum vs Browne &bull; Apr 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">28/54</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">11/20</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:22</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>28/54</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Donald Cerrone</td><td>11/20</td><td>55%</td><td>0/1</td><td>0:22</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-24')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Danny Castillo</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">43/123</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:54</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Danny Castillo</span><span class="totals-stat">55/125</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 3:02</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>5/30</td><td>17%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Castillo</td><td>41/72</td><td>57%</td><td>1/3</td><td>3:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>22/46</td><td>48%</td><td>0/0</td><td>0:53</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Castillo</td><td>5/20</td><td>25%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>16/47</td><td>34%</td><td>0/1</td><td>0:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Danny Castillo</td><td>9/33</td><td>27%</td><td>0/5</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-25')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Rafaello Oliveira</div>
+                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 2, 1:44 &bull; UFC 162: Silva vs Weidman &bull; Jul 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">49/89</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:12</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Rafaello Oliveira</span><span class="totals-stat">19/42</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-25">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-25" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>37/71</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rafaello Oliveira</td><td>15/33</td><td>45%</td><td>0/4</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>12/18</td><td>67%</td><td>0/0</td><td>0:12</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Rafaello Oliveira</td><td>4/9</td><td>44%</td><td>0/1</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-26')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Lucas Martins</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:38 &bull; UFC on FX: Belfort vs Bisping &bull; Jan 2013</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">26/45</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Lucas Martins</span><span class="totals-stat">12/31</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-26">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-26" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>26/45</td><td>58%</td><td>0/0</td><td>0:10</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Lucas Martins</td><td>12/31</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-27')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Jamie Varner</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:23 &bull; UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">11/17</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jamie Varner</span><span class="totals-stat">20/35</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:09</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-27">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-27" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>11/17</td><td>65%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jamie Varner</td><td>20/35</td><td>57%</td><td>2/2</td><td>1:09</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-28')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Terry Etim</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 2:02 &bull; UFC 142: Aldo vs Mendes &bull; Jan 2012</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">47/129</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Terry Etim</span><span class="totals-stat">26/105</span><span class="totals-pct">25%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 0:16</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-28">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-28" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>18/45</td><td>40%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Terry Etim</td><td>9/37</td><td>24%</td><td>1/3</td><td>0:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>23/61</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Terry Etim</td><td>11/49</td><td>22%</td><td>1/2</td><td>0:11</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>6/23</td><td>26%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Terry Etim</td><td>6/19</td><td>32%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-29')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Ross Pearson</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 134: Silva vs Okami &bull; Aug 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">55/190</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:01</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Ross Pearson</span><span class="totals-stat">60/186</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:39</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-29">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-29" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>17/68</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ross Pearson</td><td>21/67</td><td>31%</td><td>0/2</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>22/68</td><td>32%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ross Pearson</td><td>19/60</td><td>32%</td><td>0/2</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>16/54</td><td>30%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ross Pearson</td><td>20/59</td><td>34%</td><td>0/2</td><td>0:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-30')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Anthony Njokuani</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 128: Shogun vs Jones &bull; Mar 2011</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">46/151</span><span class="totals-pct">30%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:46</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Njokuani</span><span class="totals-stat">72/188</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:27</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-30">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-30" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>16/44</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Njokuani</td><td>18/61</td><td>30%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>13/55</td><td>24%</td><td>1/1</td><td>0:25</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Njokuani</td><td>23/65</td><td>35%</td><td>1/1</td><td>0:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>17/52</td><td>33%</td><td>1/1</td><td>0:21</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Njokuani</td><td>31/62</td><td>50%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-31')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Mike Lullo</div>
+                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 3, 0:26 &bull; UFC 123: Rampage vs Machida &bull; Nov 2010</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edson Barboza</span><span class="totals-stat">43/69</span><span class="totals-pct">62%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:13</span><span class="totals-kd">KD 2</span></div><div class="totals-line"><span class="totals-name opponent">Mike Lullo</span><span class="totals-stat">12/45</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:10</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-31">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-31" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edson Barboza</td><td>19/33</td><td>58%</td><td>2/2</td><td>2:15</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mike Lullo</td><td>6/27</td><td>22%</td><td>0/2</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edson Barboza</td><td>21/33</td><td>64%</td><td>0/0</td><td>2:51</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mike Lullo</td><td>5/16</td><td>31%</td><td>0/3</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edson Barboza</td><td>3/3</td><td>100%</td><td>0/0</td><td>0:07</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Mike Lullo</td><td>1/2</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 23:00:13 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

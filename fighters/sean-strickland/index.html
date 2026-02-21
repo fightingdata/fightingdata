@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Strickland - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Sean Strickland UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Profile Header */
+        .profile-header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 3px solid #dc2626; }
+        .profile-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .profile-division { font-size: 1.1rem; color: #9ca3af; margin-bottom: 1rem; }
+        .profile-records { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .record-block { text-align: center; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .record-pro { font-size: 1.25rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 1rem; color: #9ca3af; margin: 2px 0; }
+        .profile-last-fought { font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem; }
+
+        /* Single Bio Card (centered) */
+        .profile-bio-section { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+        .profile-bio-section .bio-card { max-width: 400px; width: 100%;
+            background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Profile Stats Tables (no edge column) */
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #111827;
+            margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 10px 12px; border-bottom: 1px solid #1f2937; }
+        .profile-stats-table th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        .profile-stats-table tr:hover { background: #1a2332; }
+        .pstat-name { font-weight: 600; width: 55%; color: #d1d5db; font-size: 1.05rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .profile-stats-table th.pstat-val { text-align: center; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Fight History — reuses fight-card, round styles */
+        .fight-history { margin-top: 1rem; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Footer + Back link */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af;
+            text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .profile-name { font-size: 1.5rem; }
+            .profile-records { gap: 1rem; }
+            .pstat-name { width: 50%; font-size: 0.85rem; }
+            .pstat-val { width: 50%; font-size: 0.85rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div class="profile-header">
+            <h1 class="profile-name">Sean Strickland</h1>
+            <div class="profile-division">Middleweight</div>
+            <div class="profile-records">
+                <div class="record-block">
+                    <div class="record-label">Pro Record</div>
+                    <div class="record-pro">29-7-0</div>
+                </div>
+                <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">16-7-0 (23 fights)</div></div>
+            </div>
+            <div class="profile-last-fought">Last fought: Feb 2025</div>
+        </div>
+
+        <h2>Fighter Profile</h2>
+        <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">34 (Feb 27, 1991)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">6'1"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">185 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">76"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Sean Strickland</th>
+            </tr>
+        </thead>
+        <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
+<tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">42.5%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">5.9</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">4.6</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">1.4/min</td></tr>
+<tr><td colspan="2" class="section-header">Grappling</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">64.3%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">76.2%</td></tr>
+<tr><td class="pstat-name">Takedowns Landed/15min</td><td class="pstat-val">0.7</td></tr>
+<tr><td class="pstat-name">Submission Attempts/15min</td><td class="pstat-val">0.2</td></tr>
+<tr><td class="pstat-name">Control Time/15min</td><td class="pstat-val">1:14</td></tr>
+<tr><td colspan="2" class="section-header">Finishing Ability</td></tr>
+<tr><td class="pstat-name">KO/TKO % of Wins</td><td class="pstat-val">25.0%</td></tr>
+<tr><td class="pstat-name">Submission % of Wins</td><td class="pstat-val">6.2%</td></tr>
+<tr><td class="pstat-name">Decision % of Wins</td><td class="pstat-val">68.8%</td></tr>
+<tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">16:03</td></tr>
+<tr><td colspan="2" class="section-header">Secondary Stats</td></tr>
+<tr><td class="pstat-name">Knockdowns/15min</td><td class="pstat-val">0.2</td></tr>
+<tr><td class="pstat-name">Reversals/15min</td><td class="pstat-val">0.0</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 5 Fights (Averages)</h2>
+    <table class="profile-stats-table">
+        <thead>
+            <tr>
+                <th class="pstat-name">Statistic</th>
+                <th class="pstat-val">Last 5 Fights</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">46.1%</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">6.4</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">5.3</td></tr>
+<tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">0.0%</td></tr>
+<tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">46.7%</td></tr>
+<tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">0:05</td></tr>
+</tbody>
+    </table>
+
+        <h2>Fight History</h2>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Dricus Du Plessis</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 312: Du Plessis vs. Strickland 2 &bull; Feb 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">128/263</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dricus Du Plessis</span><span class="totals-stat">147/314</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:05</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>16/49</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>20/45</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>29/54</td><td>54%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>31/60</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>24/47</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>39/79</td><td>49%</td><td>1/1</td><td>0:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Sean Strickland</td><td>28/51</td><td>55%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>21/66</td><td>32%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Sean Strickland</td><td>31/62</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>36/64</td><td>56%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Paulo Costa</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 302: Makhachev vs. Poirier &bull; Jun 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">182/402</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Paulo Costa</span><span class="totals-stat">158/266</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>24/56</td><td>43%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paulo Costa</td><td>31/43</td><td>72%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>25/70</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paulo Costa</td><td>32/49</td><td>65%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>45/83</td><td>54%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paulo Costa</td><td>34/54</td><td>63%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Sean Strickland</td><td>39/88</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paulo Costa</td><td>29/53</td><td>55%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Sean Strickland</td><td>49/105</td><td>47%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Paulo Costa</td><td>32/67</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Dricus Du Plessis</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 297: Strickland vs. Du Plessis &bull; Jan 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">173/408</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dricus Du Plessis</span><span class="totals-stat">137/354</span><span class="totals-pct">39%</span><span class="totals-stat">TD 6/11</span><span class="totals-stat">Ctrl 2:08</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>34/75</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>18/51</td><td>35%</td><td>2/3</td><td>0:28</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>22/62</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>26/60</td><td>43%</td><td>1/1</td><td>0:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>31/87</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>29/84</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Sean Strickland</td><td>33/85</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>29/73</td><td>40%</td><td>3/5</td><td>1:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Sean Strickland</td><td>53/99</td><td>54%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dricus Du Plessis</td><td>35/86</td><td>41%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Israel Adesanya</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 293: Adesanya vs. Strickland &bull; Sep 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">137/259</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Israel Adesanya</span><span class="totals-stat">94/271</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>27/52</td><td>52%</td><td>0/0</td><td>0:14</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Israel Adesanya</td><td>12/39</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>16/32</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Israel Adesanya</td><td>20/64</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>20/41</td><td>49%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Israel Adesanya</td><td>21/57</td><td>37%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Sean Strickland</td><td>38/63</td><td>60%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Israel Adesanya</td><td>20/51</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Sean Strickland</td><td>36/71</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Israel Adesanya</td><td>21/60</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Abus Magomedov</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:20 &bull; UFC Fight Night: Strickland vs. Magomedov &bull; Jul 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">81/188</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Abus Magomedov</span><span class="totals-stat">47/101</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:23</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>11/48</td><td>23%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Abus Magomedov</td><td>32/60</td><td>53%</td><td>1/2</td><td>0:23</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>70/140</td><td>50%</td><td>0/0</td><td>0:10</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Abus Magomedov</td><td>15/41</td><td>37%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Nassourdine Imavov</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Strickland vs. Imavov &bull; Jan 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">182/405</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:12</span></div><div class="totals-line"><span class="totals-name opponent">Nassourdine Imavov</span><span class="totals-stat">123/269</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:12</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>24/74</td><td>32%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nassourdine Imavov</td><td>19/50</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>22/72</td><td>31%</td><td>1/1</td><td>1:49</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nassourdine Imavov</td><td>22/58</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>47/78</td><td>60%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nassourdine Imavov</td><td>24/45</td><td>53%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Sean Strickland</td><td>57/100</td><td>57%</td><td>0/0</td><td>0:50</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nassourdine Imavov</td><td>23/51</td><td>45%</td><td>0/0</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Sean Strickland</td><td>32/81</td><td>40%</td><td>0/0</td><td>1:19</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nassourdine Imavov</td><td>35/65</td><td>54%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Jared Cannonier</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Cannonier vs. Strickland &bull; Dec 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">152/400</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:48</span></div><div class="totals-line"><span class="totals-name opponent">Jared Cannonier</span><span class="totals-stat">141/310</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>13/48</td><td>27%</td><td>1/1</td><td>0:43</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jared Cannonier</td><td>16/43</td><td>37%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>28/73</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jared Cannonier</td><td>25/58</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>35/81</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jared Cannonier</td><td>33/69</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Sean Strickland</td><td>33/87</td><td>38%</td><td>0/0</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jared Cannonier</td><td>27/61</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Sean Strickland</td><td>43/111</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jared Cannonier</td><td>40/79</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Alex Pereira</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:36 &bull; UFC 276: Adesanya vs. Cannonier &bull; Jul 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">15/29</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alex Pereira</span><span class="totals-stat">25/40</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>15/29</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Alex Pereira</td><td>25/40</td><td>62%</td><td>0/0</td><td>0:03</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Jack Hermansson</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Hermansson vs. Strickland &bull; Feb 2022</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">153/330</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jack Hermansson</span><span class="totals-stat">137/353</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/8</span><span class="totals-stat">Ctrl 0:31</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>22/51</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jack Hermansson</td><td>26/47</td><td>55%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>32/77</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jack Hermansson</td><td>32/70</td><td>46%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>27/59</td><td>46%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jack Hermansson</td><td>26/75</td><td>35%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Sean Strickland</td><td>34/67</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jack Hermansson</td><td>27/78</td><td>35%</td><td>0/1</td><td>0:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Sean Strickland</td><td>38/76</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jack Hermansson</td><td>26/83</td><td>31%</td><td>0/2</td><td>0:13</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Uriah Hall</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Hall vs. Strickland &bull; Jul 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">186/428</span><span class="totals-pct">43%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 7:02</span></div><div class="totals-line"><span class="totals-name opponent">Uriah Hall</span><span class="totals-stat">107/258</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>38/129</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Uriah Hall</td><td>23/55</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>43/81</td><td>53%</td><td>0/1</td><td>1:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Uriah Hall</td><td>22/52</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>18/40</td><td>45%</td><td>3/3</td><td>3:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Uriah Hall</td><td>12/27</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R4</td><td class="fighter-label">Sean Strickland</td><td>34/83</td><td>41%</td><td>1/1</td><td>0:35</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Uriah Hall</td><td>24/62</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R5</td><td class="fighter-label">Sean Strickland</td><td>53/95</td><td>56%</td><td>0/1</td><td>2:23</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Uriah Hall</td><td>26/62</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Krzysztof Jotko</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Reyes vs. Prochazka &bull; May 2021</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">84/182</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Krzysztof Jotko</span><span class="totals-stat">37/196</span><span class="totals-pct">19%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>26/54</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Krzysztof Jotko</td><td>14/65</td><td>22%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>23/50</td><td>46%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Krzysztof Jotko</td><td>11/66</td><td>17%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>35/78</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Krzysztof Jotko</td><td>12/65</td><td>18%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Brendan Allen</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:32 &bull; UFC Fight Night: Felder vs. Dos Anjos &bull; Nov 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">94/161</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:34</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Brendan Allen</span><span class="totals-stat">51/90</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>56/97</td><td>58%</td><td>1/1</td><td>1:34</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brendan Allen</td><td>31/59</td><td>53%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>38/64</td><td>59%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brendan Allen</td><td>20/31</td><td>65%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Jack Marshman</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hall vs. Silva &bull; Oct 2020</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">106/227</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jack Marshman</span><span class="totals-stat">48/252</span><span class="totals-pct">19%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>39/84</td><td>46%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jack Marshman</td><td>20/81</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>27/60</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jack Marshman</td><td>10/69</td><td>14%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>40/83</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jack Marshman</td><td>18/102</td><td>18%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-13')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Nordine Taleb</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:10 &bull; UFC Fight Night: Oezdemir vs. Smith &bull; Oct 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">65/177</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:37</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Nordine Taleb</span><span class="totals-stat">48/95</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>23/93</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nordine Taleb</td><td>35/62</td><td>56%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>42/84</td><td>50%</td><td>0/0</td><td>0:37</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Nordine Taleb</td><td>13/33</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-14')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Elizeu Zaleski dos Santos</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 3:40 &bull; UFC 224: Nunes vs. Pennington &bull; May 2018</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">14/36</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Elizeu Zaleski dos Santos</span><span class="totals-stat">15/58</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:07</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>14/36</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Elizeu Zaleski dos Santos</td><td>15/58</td><td>26%</td><td>0/1</td><td>0:07</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-15')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Court McGee</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Poirier vs. Pettis &bull; Nov 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">78/254</span><span class="totals-pct">31%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 2:42</span></div><div class="totals-line"><span class="totals-name opponent">Court McGee</span><span class="totals-stat">62/260</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/11</span><span class="totals-stat">Ctrl 1:41</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>25/109</td><td>23%</td><td>1/1</td><td>0:25</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Court McGee</td><td>24/107</td><td>22%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>31/85</td><td>36%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Court McGee</td><td>22/107</td><td>21%</td><td>0/6</td><td>0:38</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>22/60</td><td>37%</td><td>2/2</td><td>2:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Court McGee</td><td>16/46</td><td>35%</td><td>0/5</td><td>1:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-16')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Kamaru Usman</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 210: Cormier vs. Johnson 2 &bull; Apr 2017</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">27/103</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kamaru Usman</span><span class="totals-stat">90/171</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 8:08</span><span class="totals-kd">KD 1</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>5/15</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kamaru Usman</td><td>24/37</td><td>65%</td><td>1/5</td><td>4:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>5/34</td><td>15%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kamaru Usman</td><td>29/65</td><td>45%</td><td>0/2</td><td>2:25</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>17/54</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Kamaru Usman</td><td>37/69</td><td>54%</td><td>1/1</td><td>1:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-17')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Tom Breese</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">73/207</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:18</span></div><div class="totals-line"><span class="totals-name opponent">Tom Breese</span><span class="totals-stat">62/153</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:12</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>15/50</td><td>30%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tom Breese</td><td>21/57</td><td>37%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>29/81</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tom Breese</td><td>23/50</td><td>46%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>29/76</td><td>38%</td><td>0/2</td><td>0:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tom Breese</td><td>18/46</td><td>39%</td><td>0/3</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-18')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Alex Garcia</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:25 &bull; UFC Fight Night: Cowboy vs Cowboy &bull; Feb 2016</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">84/173</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:48</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Alex Garcia</span><span class="totals-stat">23/67</span><span class="totals-pct">34%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 3:31</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>19/34</td><td>56%</td><td>1/2</td><td>2:48</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Alex Garcia</td><td>7/14</td><td>50%</td><td>1/2</td><td>1:52</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>31/62</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Alex Garcia</td><td>10/30</td><td>33%</td><td>1/1</td><td>0:56</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>34/77</td><td>44%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Alex Garcia</td><td>6/23</td><td>26%</td><td>1/4</td><td>0:43</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-19')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Igor Araujo</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Mir vs Duffee &bull; Jul 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">71/169</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 5:29</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Igor Araujo</span><span class="totals-stat">39/82</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:18</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>40/81</td><td>49%</td><td>1/1</td><td>2:30</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Igor Araujo</td><td>14/29</td><td>48%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>13/30</td><td>43%</td><td>1/1</td><td>2:27</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Igor Araujo</td><td>9/15</td><td>60%</td><td>0/2</td><td>0:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>18/58</td><td>31%</td><td>1/1</td><td>0:32</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Igor Araujo</td><td>16/38</td><td>42%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-20')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Santiago Ponzinibbio</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bigfoot vs Mir &bull; Feb 2015</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">44/167</span><span class="totals-pct">26%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:23</span></div><div class="totals-line"><span class="totals-name opponent">Santiago Ponzinibbio</span><span class="totals-stat">50/162</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:28</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>14/56</td><td>25%</td><td>1/2</td><td>0:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Santiago Ponzinibbio</td><td>20/58</td><td>34%</td><td>1/1</td><td>0:24</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>17/59</td><td>29%</td><td>0/1</td><td>0:22</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Santiago Ponzinibbio</td><td>15/47</td><td>32%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>13/52</td><td>25%</td><td>1/1</td><td>0:43</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Santiago Ponzinibbio</td><td>15/57</td><td>26%</td><td>0/2</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-21')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Luke Barnatt</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Munoz vs Mousasi &bull; May 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">48/161</span><span class="totals-pct">30%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Luke Barnatt</span><span class="totals-stat">44/187</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:28</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>19/60</td><td>32%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Luke Barnatt</td><td>13/64</td><td>20%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sean Strickland</td><td>15/46</td><td>33%</td><td>1/2</td><td>0:36</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Luke Barnatt</td><td>21/65</td><td>32%</td><td>0/0</td><td>0:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sean Strickland</td><td>14/55</td><td>25%</td><td>0/1</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Luke Barnatt</td><td>10/58</td><td>17%</td><td>0/1</td><td>0:23</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-22')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Robert McDaniel</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:33 &bull; UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Strickland</span><span class="totals-stat">20/35</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:34</span></div><div class="totals-line"><span class="totals-name opponent">Robert McDaniel</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:26</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sean Strickland</td><td>20/35</td><td>57%</td><td>1/2</td><td>2:34</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Robert McDaniel</td><td>4/10</td><td>40%</td><td>1/1</td><td>0:26</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+
+        <div class="timestamp">
+            Profile generated: 2026-02-20 23:00:42 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>
