@@ -3,8 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   
 eleventyConfig.addPassthroughCopy("events");
-  eleventyConfig.addPassthroughCopy("compare");
-  eleventyConfig.addPassthroughCopy("fighters");    
+  eleventyConfig.addPassthroughCopy("compare");    
 
   // Add limit filter (like Liquid)
   eleventyConfig.addFilter("limit", function(array, limit) {
