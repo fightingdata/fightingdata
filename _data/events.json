@@ -1,98 +1,5 @@
 [
   {
-    "id": 762,
-    "name": "UFC Fight Night: Strickland vs. Hernandez",
-    "date": "Saturday, February 21, 2026",
-    "location": "Houston, Texas, USA",
-    "slug": "ufc-fight-night-strickland-vs-hernandez",
-    "matchups": [
-      {
-        "fighter_a": "Sean Strickland",
-        "fighter_b": "Anthony Hernandez",
-        "weight_class": "Middleweight",
-        "slug": "sean-strickland-vs-anthony-hernandez"
-      },
-      {
-        "fighter_a": "Uros Medic",
-        "fighter_b": "Geoff Neal",
-        "weight_class": "Welterweight",
-        "slug": "uros-medic-vs-geoff-neal"
-      },
-      {
-        "fighter_a": "Dan Ige",
-        "fighter_b": "Melquizael Costa",
-        "weight_class": "Featherweight",
-        "slug": "dan-ige-vs-melquizael-costa"
-      },
-      {
-        "fighter_a": "Serghei Spivac",
-        "fighter_b": "Ante Delija",
-        "weight_class": "Heavyweight",
-        "slug": "serghei-spivac-vs-ante-delija"
-      },
-      {
-        "fighter_a": "Jacobe Smith",
-        "fighter_b": "Josiah Harrell",
-        "weight_class": "Welterweight",
-        "slug": "jacobe-smith-vs-josiah-harrell"
-      },
-      {
-        "fighter_a": "Zach Reese",
-        "fighter_b": "Michel Pereira",
-        "weight_class": "Middleweight",
-        "slug": "zach-reese-vs-michel-pereira"
-      },
-      {
-        "fighter_a": "Chidi Njokuani",
-        "fighter_b": "Carlos Leal",
-        "weight_class": "Welterweight",
-        "slug": "chidi-njokuani-vs-carlos-leal"
-      },
-      {
-        "fighter_a": "Ode Osbourne",
-        "fighter_b": "Alibi Idiris",
-        "weight_class": "Flyweight",
-        "slug": "ode-osbourne-vs-alibi-idiris"
-      },
-      {
-        "fighter_a": "Alden Coria",
-        "fighter_b": "Luis Gurule",
-        "weight_class": "Flyweight",
-        "slug": "alden-coria-vs-luis-gurule"
-      },
-      {
-        "fighter_a": "Nora Cornolle",
-        "fighter_b": "Joselyne Edwards",
-        "weight_class": "Women's Bantamweight",
-        "slug": "nora-cornolle-vs-joselyne-edwards"
-      },
-      {
-        "fighter_a": "Punahele Soriano",
-        "fighter_b": "Ramiz Brahimaj",
-        "weight_class": "Welterweight",
-        "slug": "punahele-soriano-vs-ramiz-brahimaj"
-      },
-      {
-        "fighter_a": "Jean-Paul Lebosnoyani",
-        "fighter_b": "Phil Rowe",
-        "weight_class": "Welterweight",
-        "slug": "jean-paul-lebosnoyani-vs-phil-rowe"
-      },
-      {
-        "fighter_a": "Jordan Leavitt",
-        "fighter_b": "Yadier del Valle",
-        "weight_class": "Featherweight",
-        "slug": "jordan-leavitt-vs-yadier-del-valle"
-      },
-      {
-        "fighter_a": "Juliana Miller",
-        "fighter_b": "Carli Judice",
-        "weight_class": "Women's Flyweight",
-        "slug": "juliana-miller-vs-carli-judice"
-      }
-    ]
-  },
-  {
     "id": 763,
     "name": "UFC Fight Night: Moreno vs. Kavanagh",
     "date": "Saturday, February 28, 2026",
@@ -128,6 +35,12 @@
         "fighter_b": "Kevin Borjas",
         "weight_class": "Flyweight",
         "slug": "imanol-rodriguez-vs-kevin-borjas"
+      },
+      {
+        "fighter_a": "Santiago Luna",
+        "fighter_b": "Angel Pacheco",
+        "weight_class": "Bantamweight",
+        "slug": "santiago-luna-vs-angel-pacheco"
       },
       {
         "fighter_a": "Ryan Gandra",
@@ -170,12 +83,6 @@
         "fighter_b": "Wes Schultz",
         "weight_class": "Middleweight",
         "slug": "damian-pinas-vs-wes-schultz"
-      },
-      {
-        "fighter_a": "Santiago Luna",
-        "fighter_b": "Angel Pacheco",
-        "weight_class": "Bantamweight",
-        "slug": "santiago-luna-vs-angel-pacheco"
       }
     ]
   },
@@ -247,10 +154,10 @@
         "slug": "luke-fernandez-vs-rodolfo-bellato"
       },
       {
-        "fighter_a": "Brian Ortega",
-        "fighter_b": "Renato Moicano",
-        "weight_class": "Lightweight",
-        "slug": "brian-ortega-vs-renato-moicano"
+        "fighter_a": "Ricky Turcios",
+        "fighter_b": "Alberto Montes",
+        "weight_class": "Featherweight",
+        "slug": "ricky-turcios-vs-alberto-montes"
       }
     ]
   },
@@ -326,6 +233,12 @@
         "fighter_b": "Vitor Petrino",
         "weight_class": "Heavyweight",
         "slug": "steven-asplund-vs-vitor-petrino"
+      },
+      {
+        "fighter_a": "Jose Delgado",
+        "fighter_b": "Andre Fili",
+        "weight_class": "Featherweight",
+        "slug": "jose-delgado-vs-andre-fili"
       }
     ]
   },
@@ -500,6 +413,126 @@
         "fighter_b": "Kyle Nelson",
         "weight_class": "Lightweight",
         "slug": "terrance-mckinney-vs-kyle-nelson"
+      }
+    ]
+  },
+  {
+    "id": 768,
+    "name": "UFC Fight Night: Moicano vs. Duncan",
+    "date": "Saturday, April 4, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-moicano-vs-duncan",
+    "matchups": [
+      {
+        "fighter_a": "Renato Moicano",
+        "fighter_b": "Chris Duncan",
+        "weight_class": "Lightweight",
+        "slug": "renato-moicano-vs-chris-duncan"
+      },
+      {
+        "fighter_a": "Robert Ruchala",
+        "fighter_b": "Jose Delano",
+        "weight_class": "Featherweight",
+        "slug": "robert-ruchala-vs-jose-delano"
+      },
+      {
+        "fighter_a": "Tofiq Musayev",
+        "fighter_b": "Samuel Sanches",
+        "weight_class": "Lightweight",
+        "slug": "tofiq-musayev-vs-samuel-sanches"
+      },
+      {
+        "fighter_a": "JunYong Park",
+        "fighter_b": "Edmen Shahbazyan",
+        "weight_class": "Middleweight",
+        "slug": "junyong-park-vs-edmen-shahbazyan"
+      },
+      {
+        "fighter_a": "Stewart Nicoll",
+        "fighter_b": "Alessandro Costa",
+        "weight_class": "Flyweight",
+        "slug": "stewart-nicoll-vs-alessandro-costa"
+      },
+      {
+        "fighter_a": "Virna Jandiroba",
+        "fighter_b": "Tabatha Ricci",
+        "weight_class": "Women's Strawweight",
+        "slug": "virna-jandiroba-vs-tabatha-ricci"
+      },
+      {
+        "fighter_a": "Ethyn Ewing",
+        "fighter_b": "Rafael Estevam",
+        "weight_class": "Bantamweight",
+        "slug": "ethyn-ewing-vs-rafael-estevam"
+      },
+      {
+        "fighter_a": "Guilherme Pat",
+        "fighter_b": "Thomas Petersen",
+        "weight_class": "Light Heavyweight",
+        "slug": "guilherme-pat-vs-thomas-petersen"
+      },
+      {
+        "fighter_a": "Alice Pereira",
+        "fighter_b": "Hailey Cowan",
+        "weight_class": "Women's Bantamweight",
+        "slug": "alice-pereira-vs-hailey-cowan"
+      },
+      {
+        "fighter_a": "Dione Barbosa",
+        "fighter_b": "Melissa Gatto",
+        "weight_class": "Women's Flyweight",
+        "slug": "dione-barbosa-vs-melissa-gatto"
+      }
+    ]
+  },
+  {
+    "id": 769,
+    "name": "UFC 327",
+    "date": "Saturday, April 11, 2026",
+    "location": "Miami, Florida, USA",
+    "slug": "ufc-327",
+    "matchups": [
+      {
+        "fighter_a": "Joshua Van",
+        "fighter_b": "Tatsuro Taira",
+        "weight_class": "Flyweight",
+        "slug": "joshua-van-vs-tatsuro-taira"
+      },
+      {
+        "fighter_a": "Benoit Saint Denis",
+        "fighter_b": "Beneil Dariush",
+        "weight_class": "Lightweight",
+        "slug": "benoit-saint-denis-vs-beneil-dariush"
+      }
+    ]
+  },
+  {
+    "id": 770,
+    "name": "UFC Fight Night: Burns vs. Malott",
+    "date": "Saturday, April 18, 2026",
+    "location": "Winnipeg, Manitoba, Canada",
+    "slug": "ufc-fight-night-burns-vs-malott",
+    "matchups": [
+      {
+        "fighter_a": "Mike Malott",
+        "fighter_b": "Gilbert Burns",
+        "weight_class": "Welterweight",
+        "slug": "mike-malott-vs-gilbert-burns"
+      }
+    ]
+  },
+  {
+    "id": 771,
+    "name": "UFC Fight Night: Brady vs. Buckley",
+    "date": "Saturday, April 25, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-brady-vs-buckley",
+    "matchups": [
+      {
+        "fighter_a": "Sean Brady",
+        "fighter_b": "Joaquin Buckley",
+        "weight_class": "Welterweight",
+        "slug": "sean-brady-vs-joaquin-buckley"
       }
     ]
   }

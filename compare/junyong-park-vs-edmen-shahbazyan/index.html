@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JunYong Park vs Edmen Shahbazyan - Fight Analysis | FightingData.com</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+        h1 { text-align: center; color: #fff; border-bottom: 3px solid #dc2626;
+             padding-bottom: 15px; margin-bottom: 1.5rem; font-size: 2rem; }
+        h2 { color: #dc2626; margin-top: 2rem; margin-bottom: 1rem;
+             border-bottom: 2px solid #1f2937; padding-bottom: 8px; font-size: 1.5rem; }
+        .fighter-header { display: flex; justify-content: space-around; align-items: center;
+            margin: 1.5rem 0; background: #111827; padding: 1.5rem;
+            border-radius: 8px; border: 1px solid #1f2937; }
+        .fighter-info { text-align: center; }
+        .fighter-info h3 { margin: 0; color: #fff; font-size: 1.5rem; }
+        .record-pro { font-size: 1.125rem; font-weight: bold; color: #fff; margin: 2px 0; }
+        .record-ufc { font-size: 0.9rem; color: #9ca3af; margin: 0 0 4px; }
+        .record-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+        .vs-divider { font-size: 2.5rem; color: #dc2626; font-weight: 700; }
+
+        /* Bio Section */
+        .bio-section { display: flex; gap: 2px; margin: 1rem 0 2rem; }
+        .bio-card { flex: 1; background: #111827; border: 1px solid #1f2937;
+            border-radius: 8px; padding: 1.25rem 1.5rem; }
+        .bio-divider { width: 2px; background: #1f2937; }
+        .bio-name { font-size: 1rem; font-weight: 700; color: #fff;
+            margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1f2937; }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 4px 0; border-bottom: 1px solid #0d1117; }
+        .bio-label { font-size: 0.8rem; color: #6b7280; text-transform: uppercase;
+            letter-spacing: 0.05em; }
+        .bio-value { font-size: 0.9rem; color: #d1d5db; font-weight: 500; }
+
+        /* Stats Tables */
+        table { width: 100%; border-collapse: collapse; background: #111827;
+                margin: 1rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #1f2937; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #1f2937; }
+        th { background: #1f2937; color: #fff; font-weight: 600; font-size: 1.1rem; }
+        tr:hover { background: #1a2332; }
+        .stat-name { font-weight: 600; width: 40%; color: #d1d5db; font-size: 1.05rem; }
+        .stat-a, .stat-b { width: 20%; text-align: center;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #fff; font-size: 1.05rem; }
+        .edge { width: 20%; text-align: center; font-weight: bold; font-size: 1.1rem; }
+        .edge-a { color: #16a34a; }
+        .edge-b { color: #dc2626; }
+        .edge-even { color: #6b7280; }
+        .section-header { background: #1f2937; color: #9ca3af; padding: 8px 12px;
+            font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .edge-summary-row td { border-top: 2px solid #374151; background: #0d1117; }
+
+        /* Warnings */
+        .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+        .sample-warning strong { color: #f59e0b; }
+
+        /* Narrative */
+        .narrative { background: #111827; padding: 1.5rem; border-radius: 8px;
+            margin: 1rem 0; border: 1px solid #1f2937; line-height: 1.7; color: #d1d5db; }
+        .narrative p { margin-bottom: 0.75rem; }
+        .narrative p:last-child { margin-bottom: 0; }
+        .narrative strong { color: #fff; }
+
+        /* Last 3 Fights */
+        .last3-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0; }
+        .last3-name { color: #fff; font-size: 1.1rem; font-weight: 700;
+            margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #1f2937; }
+        .fight-card { background: #111827; border: 1px solid #1f2937;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header:hover { background: #1a2332; }
+        .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+        .result-win  { background: rgba(22,163,74,0.2);  color: #16a34a; border: 1px solid rgba(22,163,74,0.4); }
+        .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+        .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
+        .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .totals-name.featured { color: #d1d5db; }
+        .totals-name.opponent { color: #9ca3af; }
+        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.8rem; }
+        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
+        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .fight-totals { display: flex; flex-wrap: wrap; gap: 0.75rem;
+            font-size: 0.85rem; color: #d1d5db; margin-bottom: 0.4rem; }
+        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+        .rounds-detail { border-top: 1px solid #1f2937; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117;
+            margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db;
+            font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #111827; }
+        .round-num { color: #9ca3af; font-weight: 600; }
+        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
+        .featured-row td { color: #fff; }
+        .featured-row .fighter-label { color: #dc2626; font-weight: 600; }
+        .opponent-row td { color: #9ca3af; }
+        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+        .no-fight-data { color: #6b7280; font-size: 0.9rem; padding: 1rem 0; }
+
+        /* Common Opponents */
+        .common-opponents { margin: 1rem 0; }
+        .no-common { color: #6b7280; font-size: 0.95rem; padding: 1rem;
+            background: #111827; border: 1px solid #1f2937; border-radius: 8px; }
+        .co-block { margin-bottom: 1.5rem; }
+        .co-opponent-name { font-size: 1.05rem; font-weight: 700; color: #fff;
+            margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #1f2937; }
+        .co-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .co-fighter-card { margin-bottom: 0; }
+        .co-fighter-name-label { font-size: 0.9rem; font-weight: 700; color: #d1d5db;
+            margin-bottom: 0.3rem; }
+
+        /* Limited data */
+        .limited-data-banner { background: rgba(245,158,11,0.08);
+            border: 1px solid rgba(245,158,11,0.25); color: #f59e0b;
+            padding: 1rem 1.25rem; border-radius: 6px; margin: 1rem 0; font-size: 0.9rem; }
+        .limited-data-banner strong { color: #f59e0b; }
+
+        /* Footer */
+        .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
+            margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
+        .site-footer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem;
+            text-align: center; color: #6b7280; font-size: 0.875rem; border-top: 1px solid #1f2937; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.5rem; }
+            .fighter-info h3 { font-size: 1.125rem; }
+            .vs-divider { font-size: 1.75rem; }
+            .fighter-header { flex-direction: column; gap: 1rem; }
+            .stat-name { width: 35%; font-size: 0.8rem; }
+            .stat-a, .stat-b { width: 22%; font-size: 0.8rem; }
+            .edge { width: 21%; font-size: 0.75rem; }
+            .last3-grid { grid-template-columns: 1fr; }
+            .bio-section { flex-direction: column; }
+            .co-grid { grid-template-columns: 1fr; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div style="max-width:1200px;margin:0 auto;padding:0.75rem 1rem 0;"><a href="/events/ufc-fight-night-moicano-vs-duncan/" style="color:#9ca3af;text-decoration:none;font-size:0.875rem;">&#8592; Back to UFC Fight Night: Moicano vs. Duncan</a></div>
+    <div class="container">
+        <h1>JunYong Park vs Edmen Shahbazyan</h1>
+
+        <div class="fighter-header">
+            <div class="fighter-info">
+                <h3>JunYong Park</h3>
+                <div class="record-label">Pro Record</div>
+                <div class="record-pro">19-7-0</div>
+                <div class="record-label">UFC Record</div>
+                <div class="record-ufc">9-4-0 (13 fights)</div>
+            </div>
+            <div class="vs-divider">VS</div>
+            <div class="fighter-info">
+                <h3>Edmen Shahbazyan</h3>
+                <div class="record-label">Pro Record</div>
+                <div class="record-pro">16-5-0</div>
+                <div class="record-label">UFC Record</div>
+                <div class="record-ufc">9-5-0 (14 fights)</div>
+            </div>
+        </div>
+
+        <h2>Fighter Profiles</h2>
+        <div class="bio-section"><div class="bio-card"><div class="bio-name">JunYong Park</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">34</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'10"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">185 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">73"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div><div class="bio-divider"></div><div class="bio-card"><div class="bio-name">Edmen Shahbazyan</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">28</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">6'2"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">185 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">75"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
+
+        
+
+        <h2>Career Statistics</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="stat-name">Statistic</th>
+                    <th class="stat-a">JunYong Park</th>
+                    <th class="stat-b">Edmen Shahbazyan</th>
+                    <th class="edge">Edge</th>
+                </tr>
+            </thead>
+            <tbody><tr><td colspan="4" class="section-header">Striking</td></tr>
+<tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">51.6%</td><td class="stat-b">48.3%</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">4.6</td><td class="stat-b">3.6</td><td class="edge edge-a">A</td></tr>
+<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">3.8</td><td class="stat-b">3.6</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Strike Differential</td><td class="stat-a">0.8/min</td><td class="stat-b">0.1/min</td><td class="edge edge-even">-</td></tr>
+<tr><td colspan="4" class="section-header">Grappling</td></tr>
+<tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">42.9%</td><td class="stat-b">37.5%</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Takedown Defense</td><td class="stat-a">54.5%</td><td class="stat-b">66.0%</td><td class="edge edge-b">B</td></tr>
+<tr><td class="stat-name">Takedowns Landed/15min</td><td class="stat-a">1.7</td><td class="stat-b">1.6</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Submission Attempts/15min</td><td class="stat-a">0.8</td><td class="stat-b">0.4</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Control Time/15min</td><td class="stat-a">4:28</td><td class="stat-b">2:50</td><td class="edge edge-a">A</td></tr>
+<tr><td colspan="4" class="section-header">Finishing Ability</td></tr>
+<tr><td class="stat-name">KO/TKO % of Wins</td><td class="stat-a">0.0%</td><td class="stat-b">66.7%</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Submission % of Wins</td><td class="stat-a">33.3%</td><td class="stat-b">11.1%</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Decision % of Wins</td><td class="stat-a">66.7%</td><td class="stat-b">22.2%</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Avg Fight Time</td><td class="stat-a">12:17</td><td class="stat-b">7:53</td><td class="edge edge-even">—</td></tr>
+<tr><td colspan="4" class="section-header">Secondary Stats</td></tr>
+<tr><td class="stat-name">Knockdowns/15min</td><td class="stat-a">0.1</td><td class="stat-b">0.9</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Reversals/15min</td><td class="stat-a">0.3</td><td class="stat-b">0.1</td><td class="edge edge-even">—</td></tr>
+<tr class="edge-summary-row"><td class="stat-name" style="color:#9ca3af;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;">Edges</td><td class="stat-a" style="color:#16a34a;font-weight:700;">2</td><td class="stat-b" style="color:#dc2626;font-weight:700;">1</td><td class="edge edge-even" style="font-size:0.85rem;">6 even</td></tr>
+</tbody>
+        </table>
+
+        
+    <h2>Last 5 Fights (Averages)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="stat-name">Statistic</th>
+                <th class="stat-a">JunYong Park</th>
+                <th class="stat-b">Edmen Shahbazyan</th>
+                <th class="edge">Edge</th>
+            </tr>
+        </thead>
+        <tbody><tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">52.1%</td><td class="stat-b">44.8%</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">4.3</td><td class="stat-b">4.5</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">4.0</td><td class="stat-b">2.4</td><td class="edge edge-b">B</td></tr>
+<tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">26.7%</td><td class="stat-b">25.0%</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Takedown Defense</td><td class="stat-a">28.0%</td><td class="stat-b">73.3%</td><td class="edge edge-b">B</td></tr>
+<tr><td class="stat-name">Control Time/Fight</td><td class="stat-a">3:41</td><td class="stat-b">0:49</td><td class="edge edge-a">A</td></tr>
+<tr class="edge-summary-row"><td class="stat-name" style="color:#9ca3af;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;">Edges</td><td class="stat-a" style="color:#16a34a;font-weight:700;">1</td><td class="stat-b" style="color:#dc2626;font-weight:700;">2</td><td class="edge edge-even" style="font-size:0.85rem;">3 even</td></tr>
+</tbody>
+    </table>
+
+        <h2>Last 3 Fights</h2>
+        <div class="last3-grid">
+            <div class="last3-fighter"><h3 class="last3-name">JunYong Park</h3>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('a-f0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Ikram Aliskerov</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Oct 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">JunYong Park</span><span class="totals-stat">78/132</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Ikram Aliskerov</span><span class="totals-stat">91/134</span><span class="totals-pct">68%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 6:07</span></div></div>
+                <div class="expand-toggle" id="toggle-a-f0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-a-f0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">JunYong Park</td><td>17/43</td><td>40%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ikram Aliskerov</td><td>35/46</td><td>76%</td><td>2/2</td><td>0:36</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">JunYong Park</td><td>38/55</td><td>69%</td><td>0/0</td><td>0:05</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ikram Aliskerov</td><td>35/52</td><td>67%</td><td>1/2</td><td>2:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">JunYong Park</td><td>23/34</td><td>68%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ikram Aliskerov</td><td>21/36</td><td>58%</td><td>2/3</td><td>3:26</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('a-f1')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Ismail Naurdiev</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Jun 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">JunYong Park</span><span class="totals-stat">45/109</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 6:39</span></div><div class="totals-line"><span class="totals-name opponent">Ismail Naurdiev</span><span class="totals-stat">76/153</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:25</span></div></div>
+                <div class="expand-toggle" id="toggle-a-f1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-a-f1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">JunYong Park</td><td>26/77</td><td>34%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ismail Naurdiev</td><td>52/105</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">JunYong Park</td><td>9/13</td><td>69%</td><td>1/6</td><td>2:06</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ismail Naurdiev</td><td>19/37</td><td>51%</td><td>1/2</td><td>1:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">JunYong Park</td><td>10/19</td><td>53%</td><td>1/2</td><td>4:31</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Ismail Naurdiev</td><td>5/11</td><td>45%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('a-f2')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Brad Tavares</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; Oct 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">JunYong Park</span><span class="totals-stat">99/177</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 6:32</span></div><div class="totals-line"><span class="totals-name opponent">Brad Tavares</span><span class="totals-stat">65/149</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div></div>
+                <div class="expand-toggle" id="toggle-a-f2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-a-f2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">JunYong Park</td><td>19/46</td><td>41%</td><td>0/2</td><td>1:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brad Tavares</td><td>26/57</td><td>46%</td><td>0/0</td><td>0:42</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">JunYong Park</td><td>67/108</td><td>62%</td><td>1/1</td><td>0:35</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brad Tavares</td><td>31/80</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">JunYong Park</td><td>13/23</td><td>57%</td><td>1/3</td><td>4:39</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brad Tavares</td><td>8/12</td><td>67%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+            <div class="last3-fighter"><h3 class="last3-name">Edmen Shahbazyan</h3>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('b-f0')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Andre Muniz</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 4:58 &bull; Oct 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edmen Shahbazyan</span><span class="totals-stat">25/50</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:39</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Andre Muniz</span><span class="totals-stat">15/38</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:18</span></div></div>
+                <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edmen Shahbazyan</td><td>25/50</td><td>50%</td><td>0/0</td><td>0:39</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Muniz</td><td>15/38</td><td>39%</td><td>1/3</td><td>0:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('b-f1')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Andre Petroski</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Jun 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edmen Shahbazyan</span><span class="totals-stat">53/136</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:15</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Andre Petroski</span><span class="totals-stat">34/84</span><span class="totals-pct">40%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 0:23</span></div></div>
+                <div class="expand-toggle" id="toggle-b-f1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-b-f1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edmen Shahbazyan</td><td>15/41</td><td>37%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Petroski</td><td>13/27</td><td>48%</td><td>0/3</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edmen Shahbazyan</td><td>18/50</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Petroski</td><td>12/34</td><td>35%</td><td>1/1</td><td>0:15</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edmen Shahbazyan</td><td>20/45</td><td>44%</td><td>0/0</td><td>0:15</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Petroski</td><td>9/23</td><td>39%</td><td>1/2</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('b-f2')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Dylan Budka</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:35 &bull; Feb 2025</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edmen Shahbazyan</span><span class="totals-stat">7/15</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Dylan Budka</span><span class="totals-stat">1/16</span><span class="totals-pct">6%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-b-f2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-b-f2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edmen Shahbazyan</td><td>7/15</td><td>47%</td><td>0/0</td><td>0:03</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Dylan Budka</td><td>1/16</td><td>6%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
+        </div>
+
+        <h2>Common Opponents</h2>
+        <div class="common-opponents"><div class="co-block"><div class="co-opponent-name">vs. Andre Muniz</div><div class="co-grid"><div class="fight-card co-fighter-card"><div class="fight-card-header" onclick="toggleRounds(&quot;co0-a&quot;)"><div class="co-fighter-name-label">JunYong Park</div><div class="fight-result-badge result-loss">LOSS</div><div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; Dec 2023</div><div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">JunYong Park</span><span class="totals-stat">27/60</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:58</span></div><div class="totals-line"><span class="totals-name opponent">Andre Muniz</span><span class="totals-stat">14/30</span><span class="totals-pct">47%</span><span class="totals-stat">TD 11/14</span><span class="totals-stat">Ctrl 9:34</span></div></div><div class="expand-toggle" id="toggle-co0-a">&#9660; Rounds</div></div><div class="rounds-detail" id="rounds-co0-a" style="display:none;"><table class="rounds-table"><thead><tr><th>Rnd</th><th>Fighter</th><th>Sig Str</th><th>Acc</th><th>TD</th><th>Ctrl</th><th>KD</th></tr></thead><tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">JunYong Park</td><td>13/17</td><td>76%</td><td>0/0</td><td>0:45</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Muniz</td><td>3/4</td><td>75%</td><td>5/6</td><td>3:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">JunYong Park</td><td>6/12</td><td>50%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Muniz</td><td>9/16</td><td>56%</td><td>4/4</td><td>4:16</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">JunYong Park</td><td>8/31</td><td>26%</td><td>0/0</td><td>2:10</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Muniz</td><td>2/10</td><td>20%</td><td>2/4</td><td>2:11</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div><div class="fight-card co-fighter-card"><div class="fight-card-header" onclick="toggleRounds(&quot;co0-b&quot;)"><div class="co-fighter-name-label">Edmen Shahbazyan</div><div class="fight-result-badge result-win">WIN</div><div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 4:58 &bull; Oct 2025</div><div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edmen Shahbazyan</span><span class="totals-stat">25/50</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:39</span><span class="totals-kd">KD 1</span></div><div class="totals-line"><span class="totals-name opponent">Andre Muniz</span><span class="totals-stat">15/38</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:18</span></div></div><div class="expand-toggle" id="toggle-co0-b">&#9660; Rounds</div></div><div class="rounds-detail" id="rounds-co0-b" style="display:none;"><table class="rounds-table"><thead><tr><th>Rnd</th><th>Fighter</th><th>Sig Str</th><th>Acc</th><th>TD</th><th>Ctrl</th><th>KD</th></tr></thead><tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edmen Shahbazyan</td><td>25/50</td><td>50%</td><td>0/0</td><td>0:39</td><td>1</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Andre Muniz</td><td>15/38</td><td>39%</td><td>1/3</td><td>0:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div></div><div class="co-block"><div class="co-opponent-name">vs. Brad Tavares</div><div class="co-grid"><div class="fight-card co-fighter-card"><div class="fight-card-header" onclick="toggleRounds(&quot;co1-a&quot;)"><div class="co-fighter-name-label">JunYong Park</div><div class="fight-result-badge result-win">WIN</div><div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; Oct 2024</div><div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">JunYong Park</span><span class="totals-stat">99/177</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 6:32</span></div><div class="totals-line"><span class="totals-name opponent">Brad Tavares</span><span class="totals-stat">65/149</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div></div><div class="expand-toggle" id="toggle-co1-a">&#9660; Rounds</div></div><div class="rounds-detail" id="rounds-co1-a" style="display:none;"><table class="rounds-table"><thead><tr><th>Rnd</th><th>Fighter</th><th>Sig Str</th><th>Acc</th><th>TD</th><th>Ctrl</th><th>KD</th></tr></thead><tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">JunYong Park</td><td>19/46</td><td>41%</td><td>0/2</td><td>1:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brad Tavares</td><td>26/57</td><td>46%</td><td>0/0</td><td>0:42</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">JunYong Park</td><td>67/108</td><td>62%</td><td>1/1</td><td>0:35</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brad Tavares</td><td>31/80</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">JunYong Park</td><td>13/23</td><td>57%</td><td>1/3</td><td>4:39</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brad Tavares</td><td>8/12</td><td>67%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div><div class="fight-card co-fighter-card"><div class="fight-card-header" onclick="toggleRounds(&quot;co1-b&quot;)"><div class="co-fighter-name-label">Edmen Shahbazyan</div><div class="fight-result-badge result-win">WIN</div><div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:27 &bull; Nov 2019</div><div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edmen Shahbazyan</span><span class="totals-stat">14/38</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span><span class="totals-kd">KD 2</span></div><div class="totals-line"><span class="totals-name opponent">Brad Tavares</span><span class="totals-stat">3/23</span><span class="totals-pct">13%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div><div class="expand-toggle" id="toggle-co1-b">&#9660; Rounds</div></div><div class="rounds-detail" id="rounds-co1-b" style="display:none;"><table class="rounds-table"><thead><tr><th>Rnd</th><th>Fighter</th><th>Sig Str</th><th>Acc</th><th>TD</th><th>Ctrl</th><th>KD</th></tr></thead><tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edmen Shahbazyan</td><td>14/38</td><td>37%</td><td>0/0</td><td>0:04</td><td>2</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Brad Tavares</td><td>3/23</td><td>13%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div></div><div class="co-block"><div class="co-opponent-name">vs. Anthony Hernandez</div><div class="co-grid"><div class="fight-card co-fighter-card"><div class="fight-card-header" onclick="toggleRounds(&quot;co2-a&quot;)"><div class="co-fighter-name-label">JunYong Park</div><div class="fight-result-badge result-loss">LOSS</div><div class="fight-meta">Submission (Anaconda Choke) &bull; Rd 2, 4:39 &bull; Aug 2019</div><div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">JunYong Park</span><span class="totals-stat">81/148</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Hernandez</span><span class="totals-stat">59/110</span><span class="totals-pct">54%</span><span class="totals-stat">TD 6/9</span><span class="totals-stat">Ctrl 4:33</span></div></div><div class="expand-toggle" id="toggle-co2-a">&#9660; Rounds</div></div><div class="rounds-detail" id="rounds-co2-a" style="display:none;"><table class="rounds-table"><thead><tr><th>Rnd</th><th>Fighter</th><th>Sig Str</th><th>Acc</th><th>TD</th><th>Ctrl</th><th>KD</th></tr></thead><tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">JunYong Park</td><td>45/96</td><td>47%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Hernandez</td><td>27/67</td><td>40%</td><td>3/4</td><td>1:55</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">JunYong Park</td><td>36/52</td><td>69%</td><td>0/0</td><td>0:12</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Hernandez</td><td>32/43</td><td>74%</td><td>3/5</td><td>2:38</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div><div class="fight-card co-fighter-card"><div class="fight-card-header" onclick="toggleRounds(&quot;co2-b&quot;)"><div class="co-fighter-name-label">Edmen Shahbazyan</div><div class="fight-result-badge result-loss">LOSS</div><div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 1:01 &bull; May 2023</div><div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Edmen Shahbazyan</span><span class="totals-stat">30/51</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Hernandez</span><span class="totals-stat">63/88</span><span class="totals-pct">72%</span><span class="totals-stat">TD 6/15</span><span class="totals-stat">Ctrl 7:11</span></div></div><div class="expand-toggle" id="toggle-co2-b">&#9660; Rounds</div></div><div class="rounds-detail" id="rounds-co2-b" style="display:none;"><table class="rounds-table"><thead><tr><th>Rnd</th><th>Fighter</th><th>Sig Str</th><th>Acc</th><th>TD</th><th>Ctrl</th><th>KD</th></tr></thead><tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Edmen Shahbazyan</td><td>25/42</td><td>60%</td><td>1/1</td><td>0:23</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Hernandez</td><td>15/27</td><td>56%</td><td>2/8</td><td>2:29</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Edmen Shahbazyan</td><td>4/8</td><td>50%</td><td>0/0</td><td>0:18</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Hernandez</td><td>28/39</td><td>72%</td><td>3/6</td><td>3:54</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Edmen Shahbazyan</td><td>1/1</td><td>100%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Anthony Hernandez</td><td>20/22</td><td>91%</td><td>1/1</td><td>0:48</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div></div></div>
+
+        <h2>Analysis Summary</h2>
+        <div class="narrative">
+            <p><strong>Striking Volume:</strong> JunYong Park is the busier striker, landing 4.6 significant strikes per minute vs 3.6. Their opponent absorbs 3.6 strikes per minute on average — JunYong Park's output should find a target.</p>
+<p><strong>Grappling:</strong> JunYong Park shoots at 43% accuracy but Edmen Shahbazyan stops 66% of attempts — the takedown path looks difficult. Edmen Shahbazyan shoots at 38% accuracy against JunYong Park's 54% defense — JunYong Park should keep it standing.</p>
+<p><strong>Control:</strong> JunYong Park controls 3:40 per fight on average vs 1:30 — sustained control shifts rounds and drains cardio.</p>
+<p><strong>Finish Threat:</strong> Edmen Shahbazyan finishes 78% of wins (67% KO/TKO, 11% sub).</p>
+<p><strong>Fight Length:</strong> JunYong Park's fights average 12:17 vs 7:53 for Edmen Shahbazyan. If this reaches the championship rounds, JunYong Park's conditioning history becomes a factor.</p>
+        </div>
+
+        <div class="timestamp">
+            Report generated: 2026-02-22 18:09:46 | Data source: UFCStats.com
+        </div>
+    </div>
+        <div class="site-footer">
+        <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+    </div>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

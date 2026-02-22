@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC Fight Night: Moicano vs. Duncan - FightingData.com</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+        .event-header { margin-bottom: 2rem; border-bottom: 2px solid #dc2626; padding-bottom: 1.5rem; }
+        .event-status { display: inline-block; background: #dc2626; color: #fff; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+        .event-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .event-meta { color: #9ca3af; font-size: 1rem; }
+        .event-meta strong { color: #fff; }
+        .matchups { display: grid; gap: 1rem; }
+        .matchup-card { display: block; background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1.25rem 1.5rem; transition: all 0.2s; text-decoration: none; color: #fff; }
+        .matchup-card:hover { border-color: #dc2626; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3); }
+        .weight-class { color: #9ca3af; font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .fighters { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .fighter-name { font-size: 1.35rem; font-weight: 600; }
+        .fighter-record { font-size: 0.9rem; font-weight: 400; color: #9ca3af; }
+        .vs { color: #dc2626; font-weight: 700; font-size: 1.1rem; }
+        .compare-cta { color: #dc2626; font-weight: 600; font-size: 0.875rem; }
+        .no-matchups { background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 2rem; text-align: center; color: #9ca3af; }
+        .site-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1f2937; color: #6b7280; text-align: center; font-size: 0.875rem; }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+        @media (max-width: 768px) { .event-title { font-size: 1.5rem; } .fighter-name { font-size: 1.125rem; } .fighters { flex-direction: column; text-align: center; gap: 0.25rem; } }
+    </style>
+</head>
+<body>
+    <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
+            <nav style="display:flex;gap:1.5rem;">
+                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
+                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
+                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
+                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="event-header">
+            <div class="event-status">IN 41 DAYS</div>
+            <h1 class="event-title">UFC Fight Night: Moicano vs. Duncan</h1>
+            <div class="event-meta"><strong>Saturday, April 04, 2026</strong> &bull; Las Vegas, Nevada, USA</div>
+        </div>
+        <div class="matchups">
+            <a href="/compare/renato-moicano-vs-chris-duncan/" class="matchup-card">
+                <div class="weight-class">Lightweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Renato Moicano <span class="fighter-record">(20-7-1)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Chris Duncan <span class="fighter-record">(15-2-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/jose-delano-vs-robert-ruchala/" class="matchup-card">
+                <div class="weight-class">Featherweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Jose Delano <span class="fighter-record">(16-3-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Robert Ruchala <span class="fighter-record">(11-2-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/tofiq-musayev-vs-samuel-sanches/" class="matchup-card">
+                <div class="weight-class">Lightweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Tofiq Musayev <span class="fighter-record">(22-6-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Samuel Sanches <span class="fighter-record">(11-1-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/edmen-shahbazyan-vs-junyong-park/" class="matchup-card">
+                <div class="weight-class">Middleweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Edmen Shahbazyan <span class="fighter-record">(16-5-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">JunYong Park <span class="fighter-record">(19-7-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/alessandro-costa-vs-stewart-nicoll/" class="matchup-card">
+                <div class="weight-class">Flyweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Alessandro Costa <span class="fighter-record">(14-5-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Stewart Nicoll <span class="fighter-record">(8-2-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/virna-jandiroba-vs-tabatha-ricci/" class="matchup-card">
+                <div class="weight-class">Women's Strawweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Virna Jandiroba <span class="fighter-record">(22-4-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Tabatha Ricci <span class="fighter-record">(12-3-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/ethyn-ewing-vs-rafael-estevam/" class="matchup-card">
+                <div class="weight-class">Bantamweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Ethyn Ewing <span class="fighter-record">(9-2-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Rafael Estevam <span class="fighter-record">(14-0-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/guilherme-pat-vs-thomas-petersen/" class="matchup-card">
+                <div class="weight-class">Light Heavyweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Guilherme Pat <span class="fighter-record">(6-0-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Thomas Petersen <span class="fighter-record">(10-4-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/alice-pereira-vs-hailey-cowan/" class="matchup-card">
+                <div class="weight-class">Women's Bantamweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Alice Pereira <span class="fighter-record">(6-1-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Hailey Cowan <span class="fighter-record">(7-4-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/dione-barbosa-vs-melissa-gatto/" class="matchup-card">
+                <div class="weight-class">Women's Flyweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Dione Barbosa <span class="fighter-record">(8-4-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Melissa Gatto <span class="fighter-record">(9-2-2)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+        </div>
+        <div class="site-footer">
+            <p>&copy; 2026 <a href="/">FightingData.com</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -132,15 +132,15 @@
 
         <div class="profile-header">
             <h1 class="profile-name">Josiah Harrell</h1>
-            
+            <div class="profile-division">Welterweight</div>
             <div class="profile-records">
                 <div class="record-block">
                     <div class="record-label">Pro Record</div>
-                    <div class="record-pro">11-0-0</div>
+                    <div class="record-pro">11-1-0</div>
                 </div>
                 
             </div>
-            
+            <div class="profile-last-fought">Last fought: Feb 2026</div>
         </div>
 
         <h2>Fighter Profile</h2>
@@ -153,10 +153,34 @@
         
 
         <h2>Fight History</h2>
-        <p style="color:#6b7280;">No completed fight data available.</p>
+        <div class="fight-history">
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-0')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Jacobe Smith</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:01 &bull; UFC Fight Night: Strickland vs. Hernandez &bull; Feb 2026</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josiah Harrell</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Josiah Harrell</td><td>7/14</td><td>50%</td><td>0/2</td><td>0:01</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Jacobe Smith</td><td>33/47</td><td>70%</td><td>2/2</td><td>0:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-02-20 23:00:24 | Data source: UFCStats.com
+            Profile generated: 2026-02-22 18:10:13 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">
