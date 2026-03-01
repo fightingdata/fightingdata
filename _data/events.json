@@ -1,92 +1,5 @@
 [
   {
-    "id": 763,
-    "name": "UFC Fight Night: Moreno vs. Kavanagh",
-    "date": "Saturday, February 28, 2026",
-    "location": "Mexico City, Distrito Federal, Mexico",
-    "slug": "ufc-fight-night-moreno-vs-kavanagh",
-    "matchups": [
-      {
-        "fighter_a": "Brandon Moreno",
-        "fighter_b": "Lone'er Kavanagh",
-        "weight_class": "Flyweight",
-        "slug": "brandon-moreno-vs-loneer-kavanagh"
-      },
-      {
-        "fighter_a": "Marlon Vera",
-        "fighter_b": "David Martinez",
-        "weight_class": "Bantamweight",
-        "slug": "marlon-vera-vs-david-martinez"
-      },
-      {
-        "fighter_a": "King Green",
-        "fighter_b": "Daniel Zellhuber",
-        "weight_class": "Lightweight",
-        "slug": "king-green-vs-daniel-zellhuber"
-      },
-      {
-        "fighter_a": "Edgar Chairez",
-        "fighter_b": "Felipe Bunes",
-        "weight_class": "Flyweight",
-        "slug": "edgar-chairez-vs-felipe-bunes"
-      },
-      {
-        "fighter_a": "Imanol Rodriguez",
-        "fighter_b": "Kevin Borjas",
-        "weight_class": "Flyweight",
-        "slug": "imanol-rodriguez-vs-kevin-borjas"
-      },
-      {
-        "fighter_a": "Santiago Luna",
-        "fighter_b": "Angel Pacheco",
-        "weight_class": "Bantamweight",
-        "slug": "santiago-luna-vs-angel-pacheco"
-      },
-      {
-        "fighter_a": "Ryan Gandra",
-        "fighter_b": "Jose Daniel Medina",
-        "weight_class": "Middleweight",
-        "slug": "ryan-gandra-vs-jose-daniel-medina"
-      },
-      {
-        "fighter_a": "Ailin Perez",
-        "fighter_b": "Macy Chiasson",
-        "weight_class": "Women's Bantamweight",
-        "slug": "ailin-perez-vs-macy-chiasson"
-      },
-      {
-        "fighter_a": "Cristian Quinonez",
-        "fighter_b": "Kris Moutinho",
-        "weight_class": "Bantamweight",
-        "slug": "cristian-quinonez-vs-kris-moutinho"
-      },
-      {
-        "fighter_a": "Douglas Silva de Andrade",
-        "fighter_b": "Javier Reyes",
-        "weight_class": "Featherweight",
-        "slug": "douglas-silva-de-andrade-vs-javier-reyes"
-      },
-      {
-        "fighter_a": "Sofia Montenegro",
-        "fighter_b": "Ernesta Kareckaite",
-        "weight_class": "Women's Flyweight",
-        "slug": "sofia-montenegro-vs-ernesta-kareckaite"
-      },
-      {
-        "fighter_a": "Erik Silva",
-        "fighter_b": "Francis Marshall",
-        "weight_class": "Featherweight",
-        "slug": "erik-silva-vs-francis-marshall"
-      },
-      {
-        "fighter_a": "Damian Pinas",
-        "fighter_b": "Wes Schultz",
-        "weight_class": "Middleweight",
-        "slug": "damian-pinas-vs-wes-schultz"
-      }
-    ]
-  },
-  {
     "id": 764,
     "name": "UFC 326: Holloway vs. Oliveira 2",
     "date": "Saturday, March 7, 2026",
@@ -112,6 +25,12 @@
         "slug": "rob-font-vs-raul-rosas-jr"
       },
       {
+        "fighter_a": "Drew Dober",
+        "fighter_b": "Michael Johnson",
+        "weight_class": "Lightweight",
+        "slug": "drew-dober-vs-michael-johnson"
+      },
+      {
         "fighter_a": "Gregory Rodrigues",
         "fighter_b": "Brunno Ferreira",
         "weight_class": "Middleweight",
@@ -128,6 +47,12 @@
         "fighter_b": "Dusko Todorovic",
         "weight_class": "Middleweight",
         "slug": "donte-johnson-vs-dusko-todorovic"
+      },
+      {
+        "fighter_a": "Ricky Turcios",
+        "fighter_b": "Alberto Montes",
+        "weight_class": "Featherweight",
+        "slug": "ricky-turcios-vs-alberto-montes"
       },
       {
         "fighter_a": "Cody Durden",
@@ -152,12 +77,6 @@
         "fighter_b": "Rodolfo Bellato",
         "weight_class": "Light Heavyweight",
         "slug": "luke-fernandez-vs-rodolfo-bellato"
-      },
-      {
-        "fighter_a": "Ricky Turcios",
-        "fighter_b": "Alberto Montes",
-        "weight_class": "Featherweight",
-        "slug": "ricky-turcios-vs-alberto-montes"
       }
     ]
   },
@@ -310,12 +229,6 @@
         "slug": "mantas-kondratavicius-vs-antonio-trocoli"
       },
       {
-        "fighter_a": "Mick Parkin",
-        "fighter_b": "Mario Pinto",
-        "weight_class": "Heavyweight",
-        "slug": "mick-parkin-vs-mario-pinto"
-      },
-      {
         "fighter_a": "Shem Rock",
         "fighter_b": "Abdul-Kareem Al-Selwady",
         "weight_class": "Lightweight",
@@ -332,6 +245,12 @@
         "fighter_b": "Luana Carolina",
         "weight_class": "Women's Bantamweight",
         "slug": "melissa-mullins-vs-luana-carolina"
+      },
+      {
+        "fighter_a": "Mario Pinto",
+        "fighter_b": "Felipe Franco",
+        "weight_class": "Heavyweight",
+        "slug": "mario-pinto-vs-felipe-franco"
       }
     ]
   },
@@ -493,10 +412,82 @@
     "slug": "ufc-327",
     "matchups": [
       {
+        "fighter_a": "Jiri Prochazka",
+        "fighter_b": "Carlos Ulberg",
+        "weight_class": "Light Heavyweight",
+        "slug": "jiri-prochazka-vs-carlos-ulberg"
+      },
+      {
         "fighter_a": "Joshua Van",
         "fighter_b": "Tatsuro Taira",
         "weight_class": "Flyweight",
         "slug": "joshua-van-vs-tatsuro-taira"
+      },
+      {
+        "fighter_a": "Josh Hokit",
+        "fighter_b": "Curtis Blaydes",
+        "weight_class": "Heavyweight",
+        "slug": "josh-hokit-vs-curtis-blaydes"
+      },
+      {
+        "fighter_a": "Beneil Dariush",
+        "fighter_b": "Manuel Torres",
+        "weight_class": "Lightweight",
+        "slug": "beneil-dariush-vs-manuel-torres"
+      },
+      {
+        "fighter_a": "Dominick Reyes",
+        "fighter_b": "Johnny Walker",
+        "weight_class": "Light Heavyweight",
+        "slug": "dominick-reyes-vs-johnny-walker"
+      },
+      {
+        "fighter_a": "Kyle Daukaus",
+        "fighter_b": "Vicente Luque",
+        "weight_class": "Middleweight",
+        "slug": "kyle-daukaus-vs-vicente-luque"
+      },
+      {
+        "fighter_a": "Azamat Murzakanov",
+        "fighter_b": "Paulo Costa",
+        "weight_class": "Light Heavyweight",
+        "slug": "azamat-murzakanov-vs-paulo-costa"
+      },
+      {
+        "fighter_a": "Aaron Pico",
+        "fighter_b": "Patricio Freire",
+        "weight_class": "Featherweight",
+        "slug": "aaron-pico-vs-patricio-freire"
+      },
+      {
+        "fighter_a": "Mateusz Gamrot",
+        "fighter_b": "Esteban Ribovics",
+        "weight_class": "Lightweight",
+        "slug": "mateusz-gamrot-vs-esteban-ribovics"
+      },
+      {
+        "fighter_a": "Nate Landwehr",
+        "fighter_b": "Cub Swanson",
+        "weight_class": "Featherweight",
+        "slug": "nate-landwehr-vs-cub-swanson"
+      },
+      {
+        "fighter_a": "Randy Brown",
+        "fighter_b": "Kevin Holland",
+        "weight_class": "Welterweight",
+        "slug": "randy-brown-vs-kevin-holland"
+      },
+      {
+        "fighter_a": "Tatiana Suarez",
+        "fighter_b": "Loopy Godinez",
+        "weight_class": "Women's Strawweight",
+        "slug": "tatiana-suarez-vs-loopy-godinez"
+      },
+      {
+        "fighter_a": "Francisco Prado",
+        "fighter_b": "Christopher Alvidrez",
+        "weight_class": "Welterweight",
+        "slug": "francisco-prado-vs-christopher-alvidrez"
       },
       {
         "fighter_a": "Benoit Saint Denis",
@@ -518,6 +509,18 @@
         "fighter_b": "Gilbert Burns",
         "weight_class": "Welterweight",
         "slug": "mike-malott-vs-gilbert-burns"
+      },
+      {
+        "fighter_a": "Karine Silva",
+        "fighter_b": "Jasmine Jasudavicius",
+        "weight_class": "Women's Flyweight",
+        "slug": "karine-silva-vs-jasmine-jasudavicius"
+      },
+      {
+        "fighter_a": "Melissa Croden",
+        "fighter_b": "Daria Zhelezniakova",
+        "weight_class": "Women's Bantamweight",
+        "slug": "melissa-croden-vs-daria-zhelezniakova"
       }
     ]
   },
@@ -533,6 +536,21 @@
         "fighter_b": "Joaquin Buckley",
         "weight_class": "Welterweight",
         "slug": "sean-brady-vs-joaquin-buckley"
+      }
+    ]
+  },
+  {
+    "id": 772,
+    "name": "UFC Fight Night: Della Maddalena vs. Prates",
+    "date": "Saturday, May 2, 2026",
+    "location": "Perth, Western Australia, Australia",
+    "slug": "ufc-fight-night-della-maddalena-vs-prates",
+    "matchups": [
+      {
+        "fighter_a": "Jack Della Maddalena",
+        "fighter_b": "Carlos Prates",
+        "weight_class": "Welterweight",
+        "slug": "jack-della-maddalena-vs-carlos-prates"
       }
     ]
   }

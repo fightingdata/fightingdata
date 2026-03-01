@@ -43,7 +43,7 @@
 
     <div class="container">
         <div class="event-header">
-            <div class="event-status">IN 52 DAYS</div>
+            <div class="event-status" id="event-badge" data-event-date="2026-04-18"></div>
             <h1 class="event-title">UFC Fight Night: Burns vs. Malott</h1>
             <div class="event-meta"><strong>Saturday, April 18, 2026</strong> &bull; Winnipeg, Manitoba, Canada</div>
         </div>
@@ -57,10 +57,46 @@
                 </div>
                 <div class="compare-cta">View Fighter Comparison &rarr;</div>
             </a>
+            <a href="/compare/karine-silva-vs-jasmine-jasudavicius/" class="matchup-card">
+                <div class="weight-class">Women's Flyweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Karine Silva <span class="fighter-record">(19-6-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Jasmine Jasudavicius <span class="fighter-record">(14-4-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
+            <a href="/compare/melissa-croden-vs-daria-zhelezniakova/" class="matchup-card">
+                <div class="weight-class">Women's Bantamweight</div>
+                <div class="fighters">
+                    <div class="fighter-name">Melissa Croden <span class="fighter-record">(7-3-0)</span></div>
+                    <div class="vs">vs</div>
+                    <div class="fighter-name">Daria Zhelezniakova <span class="fighter-record">(10-2-0)</span></div>
+                </div>
+                <div class="compare-cta">View Fighter Comparison &rarr;</div>
+            </a>
         </div>
         <div class="site-footer">
             <p>&copy; 2026 <a href="/">FightingData.com</a></p>
         </div>
     </div>
+    <script>
+    (function() {
+        var badge = document.getElementById('event-badge');
+        if (!badge) return;
+        var eventDate = badge.getAttribute('data-event-date');
+        if (!eventDate) { badge.style.display = 'none'; return; }
+        var parts = eventDate.split('-');
+        var evtDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+        evtDate.setHours(0, 0, 0, 0);
+        var diff = Math.round((evtDate - today) / (1000 * 60 * 60 * 24));
+        if (diff === 0) badge.textContent = 'TONIGHT';
+        else if (diff === 1) badge.textContent = 'TOMORROW';
+        else if (diff > 1) badge.textContent = 'IN ' + diff + ' DAYS';
+        else badge.style.display = 'none';
+    })();
+    </script>
 </body>
 </html>

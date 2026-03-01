@@ -43,7 +43,7 @@
 
     <div class="container">
         <div class="event-header">
-            <div class="event-status">IN 59 DAYS</div>
+            <div class="event-status" id="event-badge" data-event-date="2026-04-25"></div>
             <h1 class="event-title">UFC Fight Night: Brady vs. Buckley</h1>
             <div class="event-meta"><strong>Saturday, April 25, 2026</strong> &bull; Las Vegas, Nevada, USA</div>
         </div>
@@ -62,5 +62,23 @@
             <p>&copy; 2026 <a href="/">FightingData.com</a></p>
         </div>
     </div>
+    <script>
+    (function() {
+        var badge = document.getElementById('event-badge');
+        if (!badge) return;
+        var eventDate = badge.getAttribute('data-event-date');
+        if (!eventDate) { badge.style.display = 'none'; return; }
+        var parts = eventDate.split('-');
+        var evtDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+        evtDate.setHours(0, 0, 0, 0);
+        var diff = Math.round((evtDate - today) / (1000 * 60 * 60 * 24));
+        if (diff === 0) badge.textContent = 'TONIGHT';
+        else if (diff === 1) badge.textContent = 'TOMORROW';
+        else if (diff > 1) badge.textContent = 'IN ' + diff + ' DAYS';
+        else badge.style.display = 'none';
+    })();
+    </script>
 </body>
 </html>
