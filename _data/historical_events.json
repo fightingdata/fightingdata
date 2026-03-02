@@ -104,11 +104,27 @@
     "year": "2025"
   },
   {
+    "id": 1145,
+    "name": "DWCS 9.10",
+    "date": "Tuesday, October 14, 2025",
+    "location": "",
+    "slug": "dwcs-910",
+    "year": "2025"
+  },
+  {
     "id": 750,
     "name": "UFC Fight Night: Oliveira vs. Gamrot",
     "date": "Saturday, October 11, 2025",
     "location": "Rio de Janeiro, Rio de Janeiro, Brazil",
     "slug": "ufc-fight-night-oliveira-vs-gamrot",
+    "year": "2025"
+  },
+  {
+    "id": 1093,
+    "name": "DWCS 9.9",
+    "date": "Tuesday, October 7, 2025",
+    "location": "",
+    "slug": "dwcs-99",
     "year": "2025"
   },
   {
@@ -120,11 +136,35 @@
     "year": "2025"
   },
   {
+    "id": 1018,
+    "name": "DWCS 9.8",
+    "date": "Tuesday, September 30, 2025",
+    "location": "",
+    "slug": "dwcs-98",
+    "year": "2025"
+  },
+  {
     "id": 748,
     "name": "UFC Fight Night: Ulberg vs. Reyes",
     "date": "Saturday, September 27, 2025",
     "location": "Perth, Western Australia, Australia",
     "slug": "ufc-fight-night-ulberg-vs-reyes",
+    "year": "2025"
+  },
+  {
+    "id": 1104,
+    "name": "DWCS 9.7",
+    "date": "Tuesday, September 23, 2025",
+    "location": "",
+    "slug": "dwcs-97",
+    "year": "2025"
+  },
+  {
+    "id": 1089,
+    "name": "DWCS 9.6",
+    "date": "Tuesday, September 16, 2025",
+    "location": "",
+    "slug": "dwcs-96",
     "year": "2025"
   },
   {
@@ -136,11 +176,35 @@
     "year": "2025"
   },
   {
+    "id": 995,
+    "name": "DWCS 9.5",
+    "date": "Tuesday, September 9, 2025",
+    "location": "",
+    "slug": "dwcs-95",
+    "year": "2025"
+  },
+  {
     "id": 746,
     "name": "UFC Fight Night: Imavov vs. Borralho",
     "date": "Saturday, September 6, 2025",
     "location": "Paris, Ile-de-France, France",
     "slug": "ufc-fight-night-imavov-vs-borralho",
+    "year": "2025"
+  },
+  {
+    "id": 1001,
+    "name": "DWCS 9.4",
+    "date": "Tuesday, September 2, 2025",
+    "location": "",
+    "slug": "dwcs-94",
+    "year": "2025"
+  },
+  {
+    "id": 781,
+    "name": "DWCS 9.3",
+    "date": "Tuesday, August 26, 2025",
+    "location": "",
+    "slug": "dwcs-93",
     "year": "2025"
   },
   {
@@ -152,6 +216,14 @@
     "year": "2025"
   },
   {
+    "id": 1049,
+    "name": "Road to UFC 4.5 + 4.6",
+    "date": "Friday, August 22, 2025",
+    "location": "",
+    "slug": "road-to-ufc-45-46",
+    "year": "2025"
+  },
+  {
     "id": 744,
     "name": "UFC - Road to UFC 4.6",
     "date": "Friday, August 22, 2025",
@@ -160,11 +232,27 @@
     "year": "2025"
   },
   {
+    "id": 984,
+    "name": "DWCS 9.2",
+    "date": "Tuesday, August 19, 2025",
+    "location": "",
+    "slug": "dwcs-92",
+    "year": "2025"
+  },
+  {
     "id": 743,
     "name": "UFC 319: Du Plessis vs. Chimaev",
     "date": "Saturday, August 16, 2025",
     "location": "Chicago, Illinois, USA",
     "slug": "ufc-319-du-plessis-vs-chimaev",
+    "year": "2025"
+  },
+  {
+    "id": 935,
+    "name": "DWCS 9.1",
+    "date": "Tuesday, August 12, 2025",
+    "location": "",
+    "slug": "dwcs-91",
     "year": "2025"
   },
   {
@@ -448,11 +536,27 @@
     "year": "2024"
   },
   {
+    "id": 1119,
+    "name": "DWCS 8.10",
+    "date": "Tuesday, October 15, 2024",
+    "location": "",
+    "slug": "dwcs-810",
+    "year": "2024"
+  },
+  {
     "id": 707,
     "name": "UFC Fight Night: Royval vs. Taira",
     "date": "Saturday, October 12, 2024",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-royval-vs-taira",
+    "year": "2024"
+  },
+  {
+    "id": 1094,
+    "name": "DWCS 8.9",
+    "date": "Tuesday, October 8, 2024",
+    "location": "",
+    "slug": "dwcs-89",
     "year": "2024"
   },
   {
@@ -464,11 +568,35 @@
     "year": "2024"
   },
   {
+    "id": 799,
+    "name": "DWCS 8.8",
+    "date": "Tuesday, October 1, 2024",
+    "location": "",
+    "slug": "dwcs-88",
+    "year": "2024"
+  },
+  {
     "id": 705,
     "name": "UFC Fight Night: Moicano vs. Saint Denis",
     "date": "Saturday, September 28, 2024",
     "location": "Paris, Ile-de-France, France",
     "slug": "ufc-fight-night-moicano-vs-saint-denis",
+    "year": "2024"
+  },
+  {
+    "id": 818,
+    "name": "DWCS 8.7",
+    "date": "Tuesday, September 24, 2024",
+    "location": "",
+    "slug": "dwcs-87",
+    "year": "2024"
+  },
+  {
+    "id": 924,
+    "name": "DWCS 8.6",
+    "date": "Tuesday, September 17, 2024",
+    "location": "",
+    "slug": "dwcs-86",
     "year": "2024"
   },
   {
@@ -480,11 +608,35 @@
     "year": "2024"
   },
   {
+    "id": 1125,
+    "name": "DWCS 8.5",
+    "date": "Tuesday, September 10, 2024",
+    "location": "",
+    "slug": "dwcs-85",
+    "year": "2024"
+  },
+  {
     "id": 703,
     "name": "UFC Fight Night: Burns vs. Brady",
     "date": "Saturday, September 7, 2024",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-burns-vs-brady",
+    "year": "2024"
+  },
+  {
+    "id": 927,
+    "name": "DWCS 8.4",
+    "date": "Tuesday, September 3, 2024",
+    "location": "",
+    "slug": "dwcs-84",
+    "year": "2024"
+  },
+  {
+    "id": 880,
+    "name": "DWCS 8.3",
+    "date": "Tuesday, August 27, 2024",
+    "location": "",
+    "slug": "dwcs-83",
     "year": "2024"
   },
   {
@@ -496,11 +648,35 @@
     "year": "2024"
   },
   {
+    "id": 934,
+    "name": "Road to UFC 3.5 + 3.6",
+    "date": "Friday, August 23, 2024",
+    "location": "",
+    "slug": "road-to-ufc-35-36",
+    "year": "2024"
+  },
+  {
+    "id": 873,
+    "name": "DWCS 8.2",
+    "date": "Tuesday, August 20, 2024",
+    "location": "",
+    "slug": "dwcs-82",
+    "year": "2024"
+  },
+  {
     "id": 701,
     "name": "UFC 305: Du Plessis vs. Adesanya",
     "date": "Saturday, August 17, 2024",
     "location": "Perth, Western Australia, Australia",
     "slug": "ufc-305-du-plessis-vs-adesanya",
+    "year": "2024"
+  },
+  {
+    "id": 978,
+    "name": "DWCS 8.1",
+    "date": "Tuesday, August 13, 2024",
+    "location": "",
+    "slug": "dwcs-81",
     "year": "2024"
   },
   {
@@ -696,6 +872,14 @@
     "year": "2024"
   },
   {
+    "id": 1165,
+    "name": "Road to UFC 2.7",
+    "date": "Saturday, February 3, 2024",
+    "location": "",
+    "slug": "road-to-ufc-27",
+    "year": "2024"
+  },
+  {
     "id": 676,
     "name": "UFC Fight Night: Dolidze vs. Imavov",
     "date": "Saturday, February 3, 2024",
@@ -784,11 +968,35 @@
     "year": "2023"
   },
   {
+    "id": 870,
+    "name": "DWCS 7.10",
+    "date": "Tuesday, October 10, 2023",
+    "location": "",
+    "slug": "dwcs-710",
+    "year": "2023"
+  },
+  {
     "id": 665,
     "name": "UFC Fight Night: Dawson vs. Green",
     "date": "Saturday, October 7, 2023",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-dawson-vs-green",
+    "year": "2023"
+  },
+  {
+    "id": 1120,
+    "name": "DWCS 7.9",
+    "date": "Tuesday, October 3, 2023",
+    "location": "",
+    "slug": "dwcs-79",
+    "year": "2023"
+  },
+  {
+    "id": 881,
+    "name": "DWCS 7.8",
+    "date": "Tuesday, September 26, 2023",
+    "location": "",
+    "slug": "dwcs-78",
     "year": "2023"
   },
   {
@@ -800,11 +1008,27 @@
     "year": "2023"
   },
   {
+    "id": 1092,
+    "name": "DWCS 7.7",
+    "date": "Tuesday, September 19, 2023",
+    "location": "",
+    "slug": "dwcs-77",
+    "year": "2023"
+  },
+  {
     "id": 663,
     "name": "UFC Fight Night: Grasso vs. Shevchenko 2",
     "date": "Saturday, September 16, 2023",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-grasso-vs-shevchenko-2",
+    "year": "2023"
+  },
+  {
+    "id": 773,
+    "name": "DWCS 7.6",
+    "date": "Tuesday, September 12, 2023",
+    "location": "",
+    "slug": "dwcs-76",
     "year": "2023"
   },
   {
@@ -816,11 +1040,35 @@
     "year": "2023"
   },
   {
+    "id": 966,
+    "name": "DWCS 7.5",
+    "date": "Tuesday, September 5, 2023",
+    "location": "",
+    "slug": "dwcs-75",
+    "year": "2023"
+  },
+  {
     "id": 661,
     "name": "UFC Fight Night: Gane vs. Spivac",
     "date": "Saturday, September 2, 2023",
     "location": "Paris, Ile-de-France, France",
     "slug": "ufc-fight-night-gane-vs-spivac",
+    "year": "2023"
+  },
+  {
+    "id": 963,
+    "name": "DWCS 7.4",
+    "date": "Tuesday, August 29, 2023",
+    "location": "",
+    "slug": "dwcs-74",
+    "year": "2023"
+  },
+  {
+    "id": 1004,
+    "name": "Road to UFC 2.5 + 2.6",
+    "date": "Sunday, August 27, 2023",
+    "location": "",
+    "slug": "road-to-ufc-25-26",
     "year": "2023"
   },
   {
@@ -832,6 +1080,14 @@
     "year": "2023"
   },
   {
+    "id": 1121,
+    "name": "DWCS 7.3",
+    "date": "Tuesday, August 22, 2023",
+    "location": "",
+    "slug": "dwcs-73",
+    "year": "2023"
+  },
+  {
     "id": 659,
     "name": "UFC 292: Sterling vs. O'Malley",
     "date": "Saturday, August 19, 2023",
@@ -840,11 +1096,27 @@
     "year": "2023"
   },
   {
+    "id": 782,
+    "name": "DWCS 7.2",
+    "date": "Tuesday, August 15, 2023",
+    "location": "",
+    "slug": "dwcs-72",
+    "year": "2023"
+  },
+  {
     "id": 658,
     "name": "UFC Fight Night: Luque vs. Dos Anjos",
     "date": "Saturday, August 12, 2023",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-luque-vs-dos-anjos",
+    "year": "2023"
+  },
+  {
+    "id": 962,
+    "name": "DWCS 7.1",
+    "date": "Tuesday, August 8, 2023",
+    "location": "",
+    "slug": "dwcs-71",
     "year": "2023"
   },
   {
@@ -1120,6 +1392,22 @@
     "year": "2022"
   },
   {
+    "id": 1107,
+    "name": "Road to UFC 1.5",
+    "date": "Sunday, October 23, 2022",
+    "location": "",
+    "slug": "road-to-ufc-15",
+    "year": "2022"
+  },
+  {
+    "id": 882,
+    "name": "Road to UFC 1.6",
+    "date": "Sunday, October 23, 2022",
+    "location": "",
+    "slug": "road-to-ufc-16",
+    "year": "2022"
+  },
+  {
     "id": 623,
     "name": "UFC 280: Oliveira vs. Makhachev",
     "date": "Saturday, October 22, 2022",
@@ -1144,11 +1432,35 @@
     "year": "2022"
   },
   {
+    "id": 953,
+    "name": "DWCS 6.10",
+    "date": "Tuesday, September 27, 2022",
+    "location": "",
+    "slug": "dwcs-610",
+    "year": "2022"
+  },
+  {
+    "id": 925,
+    "name": "DWCS 6.9",
+    "date": "Tuesday, September 20, 2022",
+    "location": "",
+    "slug": "dwcs-69",
+    "year": "2022"
+  },
+  {
     "id": 620,
     "name": "UFC Fight Night: Sandhagen vs. Song",
     "date": "Saturday, September 17, 2022",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-sandhagen-vs-song",
+    "year": "2022"
+  },
+  {
+    "id": 976,
+    "name": "DWCS 6.8",
+    "date": "Tuesday, September 13, 2022",
+    "location": "",
+    "slug": "dwcs-68",
     "year": "2022"
   },
   {
@@ -1160,11 +1472,35 @@
     "year": "2022"
   },
   {
+    "id": 1062,
+    "name": "DWCS 6.7",
+    "date": "Tuesday, September 6, 2022",
+    "location": "",
+    "slug": "dwcs-67",
+    "year": "2022"
+  },
+  {
     "id": 618,
     "name": "UFC Fight Night: Gane vs. Tuivasa",
     "date": "Saturday, September 3, 2022",
     "location": "Paris, Ile-de-France, France",
     "slug": "ufc-fight-night-gane-vs-tuivasa",
+    "year": "2022"
+  },
+  {
+    "id": 952,
+    "name": "DWCS 6.6",
+    "date": "Tuesday, August 30, 2022",
+    "location": "",
+    "slug": "dwcs-66",
+    "year": "2022"
+  },
+  {
+    "id": 985,
+    "name": "DWCS 6.5",
+    "date": "Tuesday, August 23, 2022",
+    "location": "",
+    "slug": "dwcs-65",
     "year": "2022"
   },
   {
@@ -1176,11 +1512,27 @@
     "year": "2022"
   },
   {
+    "id": 1019,
+    "name": "DWCS 6.4",
+    "date": "Tuesday, August 16, 2022",
+    "location": "",
+    "slug": "dwcs-64",
+    "year": "2022"
+  },
+  {
     "id": 616,
     "name": "UFC Fight Night: Vera vs. Cruz",
     "date": "Saturday, August 13, 2022",
     "location": "San Diego, California, USA",
     "slug": "ufc-fight-night-vera-vs-cruz",
+    "year": "2022"
+  },
+  {
+    "id": 954,
+    "name": "DWCS 6.3",
+    "date": "Tuesday, August 9, 2022",
+    "location": "",
+    "slug": "dwcs-63",
     "year": "2022"
   },
   {
@@ -1192,11 +1544,27 @@
     "year": "2022"
   },
   {
+    "id": 951,
+    "name": "DWCS 6.2",
+    "date": "Tuesday, August 2, 2022",
+    "location": "",
+    "slug": "dwcs-62",
+    "year": "2022"
+  },
+  {
     "id": 614,
     "name": "UFC 277: Pena vs. Nunes 2",
     "date": "Saturday, July 30, 2022",
     "location": "Dallas, Texas, USA",
     "slug": "ufc-277-pena-vs-nunes-2",
+    "year": "2022"
+  },
+  {
+    "id": 800,
+    "name": "DWCS 6.1",
+    "date": "Tuesday, July 26, 2022",
+    "location": "",
+    "slug": "dwcs-61",
     "year": "2022"
   },
   {
@@ -1253,6 +1621,38 @@
     "date": "Saturday, June 11, 2022",
     "location": "Kallang, Singapore",
     "slug": "ufc-275-teixeira-vs-prochazka",
+    "year": "2022"
+  },
+  {
+    "id": 1110,
+    "name": "Road to UFC 1.3",
+    "date": "Friday, June 10, 2022",
+    "location": "",
+    "slug": "road-to-ufc-13",
+    "year": "2022"
+  },
+  {
+    "id": 1091,
+    "name": "Road to UFC 1.4",
+    "date": "Friday, June 10, 2022",
+    "location": "",
+    "slug": "road-to-ufc-14",
+    "year": "2022"
+  },
+  {
+    "id": 1182,
+    "name": "Road to UFC 1.1",
+    "date": "Thursday, June 9, 2022",
+    "location": "",
+    "slug": "road-to-ufc-11",
+    "year": "2022"
+  },
+  {
+    "id": 1108,
+    "name": "Road to UFC 1.2",
+    "date": "Thursday, June 9, 2022",
+    "location": "",
+    "slug": "road-to-ufc-12",
     "year": "2022"
   },
   {
@@ -1448,11 +1848,27 @@
     "year": "2021"
   },
   {
+    "id": 1142,
+    "name": "DWCS 5.10",
+    "date": "Tuesday, November 2, 2021",
+    "location": "",
+    "slug": "dwcs-510",
+    "year": "2021"
+  },
+  {
     "id": 582,
     "name": "UFC 267: Blachowicz vs. Teixeira",
     "date": "Saturday, October 30, 2021",
     "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
     "slug": "ufc-267-blachowicz-vs-teixeira",
+    "year": "2021"
+  },
+  {
+    "id": 1026,
+    "name": "DWCS 5.9",
+    "date": "Tuesday, October 26, 2021",
+    "location": "",
+    "slug": "dwcs-59",
     "year": "2021"
   },
   {
@@ -1464,11 +1880,27 @@
     "year": "2021"
   },
   {
+    "id": 922,
+    "name": "DWCS 5.8",
+    "date": "Tuesday, October 19, 2021",
+    "location": "",
+    "slug": "dwcs-58",
+    "year": "2021"
+  },
+  {
     "id": 580,
     "name": "UFC Fight Night: Ladd vs. Dumont",
     "date": "Saturday, October 16, 2021",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-ladd-vs-dumont",
+    "year": "2021"
+  },
+  {
+    "id": 1013,
+    "name": "DWCS 5.7",
+    "date": "Tuesday, October 12, 2021",
+    "location": "",
+    "slug": "dwcs-57",
     "year": "2021"
   },
   {
@@ -1480,11 +1912,27 @@
     "year": "2021"
   },
   {
+    "id": 988,
+    "name": "DWCS 5.6",
+    "date": "Tuesday, October 5, 2021",
+    "location": "",
+    "slug": "dwcs-56",
+    "year": "2021"
+  },
+  {
     "id": 578,
     "name": "UFC Fight Night: Santos vs. Walker",
     "date": "Saturday, October 2, 2021",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-santos-vs-walker",
+    "year": "2021"
+  },
+  {
+    "id": 982,
+    "name": "DWCS 5.5",
+    "date": "Tuesday, September 28, 2021",
+    "location": "",
+    "slug": "dwcs-55",
     "year": "2021"
   },
   {
@@ -1496,6 +1944,14 @@
     "year": "2021"
   },
   {
+    "id": 774,
+    "name": "DWCS 5.4",
+    "date": "Tuesday, September 21, 2021",
+    "location": "",
+    "slug": "dwcs-54",
+    "year": "2021"
+  },
+  {
     "id": 576,
     "name": "UFC Fight Night: Smith vs. Spann",
     "date": "Saturday, September 18, 2021",
@@ -1504,11 +1960,35 @@
     "year": "2021"
   },
   {
+    "id": 798,
+    "name": "DWCS 5.3",
+    "date": "Tuesday, September 14, 2021",
+    "location": "",
+    "slug": "dwcs-53",
+    "year": "2021"
+  },
+  {
+    "id": 977,
+    "name": "DWCS 5.2",
+    "date": "Tuesday, September 7, 2021",
+    "location": "",
+    "slug": "dwcs-52",
+    "year": "2021"
+  },
+  {
     "id": 575,
     "name": "UFC Fight Night: Brunson vs. Till",
     "date": "Saturday, September 4, 2021",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-brunson-vs-till",
+    "year": "2021"
+  },
+  {
+    "id": 775,
+    "name": "DWCS 5.1",
+    "date": "Tuesday, August 31, 2021",
+    "location": "",
+    "slug": "dwcs-51",
     "year": "2021"
   },
   {
@@ -1784,6 +2264,14 @@
     "year": "2020"
   },
   {
+    "id": 1084,
+    "name": "DWCS 4.10",
+    "date": "Tuesday, November 17, 2020",
+    "location": "",
+    "slug": "dwcs-410",
+    "year": "2020"
+  },
+  {
     "id": 540,
     "name": "UFC Fight Night: Felder vs. Dos Anjos",
     "date": "Saturday, November 14, 2020",
@@ -1792,11 +2280,27 @@
     "year": "2020"
   },
   {
+    "id": 1138,
+    "name": "DWCS 4.9",
+    "date": "Tuesday, November 10, 2020",
+    "location": "",
+    "slug": "dwcs-49",
+    "year": "2020"
+  },
+  {
     "id": 539,
     "name": "UFC Fight Night: Santos vs. Teixeira",
     "date": "Saturday, November 7, 2020",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-santos-vs-teixeira",
+    "year": "2020"
+  },
+  {
+    "id": 994,
+    "name": "DWCS 4.8",
+    "date": "Wednesday, November 4, 2020",
+    "location": "",
+    "slug": "dwcs-48",
     "year": "2020"
   },
   {
@@ -1856,11 +2360,27 @@
     "year": "2020"
   },
   {
+    "id": 1025,
+    "name": "DWCS 4.7",
+    "date": "Tuesday, September 15, 2020",
+    "location": "",
+    "slug": "dwcs-47",
+    "year": "2020"
+  },
+  {
     "id": 531,
     "name": "UFC Fight Night: Waterson vs. Hill",
     "date": "Saturday, September 12, 2020",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-waterson-vs-hill",
+    "year": "2020"
+  },
+  {
+    "id": 822,
+    "name": "DWCS 4.6",
+    "date": "Tuesday, September 8, 2020",
+    "location": "",
+    "slug": "dwcs-46",
     "year": "2020"
   },
   {
@@ -1872,11 +2392,27 @@
     "year": "2020"
   },
   {
+    "id": 1020,
+    "name": "DWCS 4.5",
+    "date": "Tuesday, September 1, 2020",
+    "location": "",
+    "slug": "dwcs-45",
+    "year": "2020"
+  },
+  {
     "id": 529,
     "name": "UFC Fight Night: Smith vs. Rakic",
     "date": "Saturday, August 29, 2020",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-smith-vs-rakic",
+    "year": "2020"
+  },
+  {
+    "id": 1101,
+    "name": "DWCS 4.4",
+    "date": "Tuesday, August 25, 2020",
+    "location": "",
+    "slug": "dwcs-44",
     "year": "2020"
   },
   {
@@ -1888,6 +2424,14 @@
     "year": "2020"
   },
   {
+    "id": 1007,
+    "name": "DWCS 4.3",
+    "date": "Tuesday, August 18, 2020",
+    "location": "",
+    "slug": "dwcs-43",
+    "year": "2020"
+  },
+  {
     "id": 527,
     "name": "UFC 252: Miocic vs. Cormier 3",
     "date": "Saturday, August 15, 2020",
@@ -1896,11 +2440,27 @@
     "year": "2020"
   },
   {
+    "id": 787,
+    "name": "DWCS 4.2",
+    "date": "Tuesday, August 11, 2020",
+    "location": "",
+    "slug": "dwcs-42",
+    "year": "2020"
+  },
+  {
     "id": 526,
     "name": "UFC Fight Night: Lewis vs. Oleinik",
     "date": "Saturday, August 8, 2020",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-lewis-vs-oleinik",
+    "year": "2020"
+  },
+  {
+    "id": 1053,
+    "name": "DWCS 4.1",
+    "date": "Tuesday, August 4, 2020",
+    "location": "",
+    "slug": "dwcs-41",
     "year": "2020"
   },
   {
@@ -2192,11 +2752,35 @@
     "year": "2019"
   },
   {
+    "id": 943,
+    "name": "DWCS 3.10",
+    "date": "Tuesday, August 27, 2019",
+    "location": "",
+    "slug": "dwcs-310",
+    "year": "2019"
+  },
+  {
+    "id": 1099,
+    "name": "DWCS 3.9",
+    "date": "Tuesday, August 20, 2019",
+    "location": "",
+    "slug": "dwcs-39",
+    "year": "2019"
+  },
+  {
     "id": 489,
     "name": "UFC 241: Cormier vs. Miocic 2",
     "date": "Saturday, August 17, 2019",
     "location": "Anaheim, California, USA",
     "slug": "ufc-241-cormier-vs-miocic-2",
+    "year": "2019"
+  },
+  {
+    "id": 975,
+    "name": "DWCS 3.8",
+    "date": "Tuesday, August 13, 2019",
+    "location": "",
+    "slug": "dwcs-38",
     "year": "2019"
   },
   {
@@ -2208,11 +2792,27 @@
     "year": "2019"
   },
   {
+    "id": 871,
+    "name": "DWCS 3.7",
+    "date": "Tuesday, August 6, 2019",
+    "location": "",
+    "slug": "dwcs-37",
+    "year": "2019"
+  },
+  {
     "id": 487,
     "name": "UFC Fight Night: Covington vs. Lawler",
     "date": "Saturday, August 3, 2019",
     "location": "Newark, New Jersey, USA",
     "slug": "ufc-fight-night-covington-vs-lawler",
+    "year": "2019"
+  },
+  {
+    "id": 776,
+    "name": "DWCS 3.6",
+    "date": "Tuesday, July 30, 2019",
+    "location": "",
+    "slug": "dwcs-36",
     "year": "2019"
   },
   {
@@ -2224,6 +2824,14 @@
     "year": "2019"
   },
   {
+    "id": 950,
+    "name": "DWCS 3.5",
+    "date": "Tuesday, July 23, 2019",
+    "location": "",
+    "slug": "dwcs-35",
+    "year": "2019"
+  },
+  {
     "id": 485,
     "name": "UFC Fight Night: Dos Anjos vs. Edwards",
     "date": "Saturday, July 20, 2019",
@@ -2232,11 +2840,27 @@
     "year": "2019"
   },
   {
+    "id": 894,
+    "name": "DWCS 3.4",
+    "date": "Tuesday, July 16, 2019",
+    "location": "",
+    "slug": "dwcs-34",
+    "year": "2019"
+  },
+  {
     "id": 484,
     "name": "UFC Fight Night: De Randamie vs. Ladd",
     "date": "Saturday, July 13, 2019",
     "location": "Sacramento, California, USA",
     "slug": "ufc-fight-night-de-randamie-vs-ladd",
+    "year": "2019"
+  },
+  {
+    "id": 921,
+    "name": "DWCS 3.3",
+    "date": "Tuesday, July 9, 2019",
+    "location": "",
+    "slug": "dwcs-33",
     "year": "2019"
   },
   {
@@ -2256,11 +2880,27 @@
     "year": "2019"
   },
   {
+    "id": 1137,
+    "name": "DWCS 3.2",
+    "date": "Tuesday, June 25, 2019",
+    "location": "",
+    "slug": "dwcs-32",
+    "year": "2019"
+  },
+  {
     "id": 481,
     "name": "UFC Fight Night: Moicano vs. The Korean Zombie",
     "date": "Saturday, June 22, 2019",
     "location": "Greenville, South Carolina, USA",
     "slug": "ufc-fight-night-moicano-vs-the-korean-zombie",
+    "year": "2019"
+  },
+  {
+    "id": 948,
+    "name": "DWCS 3.1",
+    "date": "Tuesday, June 18, 2019",
+    "location": "",
+    "slug": "dwcs-31",
     "year": "2019"
   },
   {
@@ -2528,11 +3168,51 @@
     "year": "2018"
   },
   {
+    "id": 849,
+    "name": "DWCS Brazil 1.3",
+    "date": "Sunday, August 12, 2018",
+    "location": "",
+    "slug": "dwcs-brazil-13",
+    "year": "2018"
+  },
+  {
+    "id": 872,
+    "name": "DWCS Brazil 1.2",
+    "date": "Saturday, August 11, 2018",
+    "location": "",
+    "slug": "dwcs-brazil-12",
+    "year": "2018"
+  },
+  {
+    "id": 895,
+    "name": "DWCS Brazil 1.1",
+    "date": "Friday, August 10, 2018",
+    "location": "",
+    "slug": "dwcs-brazil-11",
+    "year": "2018"
+  },
+  {
+    "id": 955,
+    "name": "DWCS 2.8",
+    "date": "Tuesday, August 7, 2018",
+    "location": "",
+    "slug": "dwcs-28",
+    "year": "2018"
+  },
+  {
     "id": 447,
     "name": "UFC 227: Dillashaw vs. Garbrandt 2",
     "date": "Saturday, August 4, 2018",
     "location": "Los Angeles, California, USA",
     "slug": "ufc-227-dillashaw-vs-garbrandt-2",
+    "year": "2018"
+  },
+  {
+    "id": 1050,
+    "name": "DWCS 2.7",
+    "date": "Tuesday, July 31, 2018",
+    "location": "",
+    "slug": "dwcs-27",
     "year": "2018"
   },
   {
@@ -2544,6 +3224,14 @@
     "year": "2018"
   },
   {
+    "id": 817,
+    "name": "DWCS 2.6",
+    "date": "Tuesday, July 24, 2018",
+    "location": "",
+    "slug": "dwcs-26",
+    "year": "2018"
+  },
+  {
     "id": 445,
     "name": "UFC Fight Night: Shogun vs. Smith",
     "date": "Sunday, July 22, 2018",
@@ -2552,11 +3240,27 @@
     "year": "2018"
   },
   {
+    "id": 928,
+    "name": "DWCS 2.5",
+    "date": "Tuesday, July 17, 2018",
+    "location": "",
+    "slug": "dwcs-25",
+    "year": "2018"
+  },
+  {
     "id": 444,
     "name": "UFC Fight Night: Dos Santos vs. Ivanov",
     "date": "Saturday, July 14, 2018",
     "location": "Boise, Idaho, USA",
     "slug": "ufc-fight-night-dos-santos-vs-ivanov",
+    "year": "2018"
+  },
+  {
+    "id": 947,
+    "name": "DWCS 2.4",
+    "date": "Tuesday, July 10, 2018",
+    "location": "",
+    "slug": "dwcs-24",
     "year": "2018"
   },
   {
@@ -2576,11 +3280,35 @@
     "year": "2018"
   },
   {
+    "id": 893,
+    "name": "DWCS 2.3",
+    "date": "Tuesday, June 26, 2018",
+    "location": "",
+    "slug": "dwcs-23",
+    "year": "2018"
+  },
+  {
     "id": 441,
     "name": "UFC Fight Night: Cowboy vs. Edwards",
     "date": "Saturday, June 23, 2018",
     "location": "Kallang, Singapore",
     "slug": "ufc-fight-night-cowboy-vs-edwards",
+    "year": "2018"
+  },
+  {
+    "id": 883,
+    "name": "DWCS 2.2",
+    "date": "Tuesday, June 19, 2018",
+    "location": "",
+    "slug": "dwcs-22",
+    "year": "2018"
+  },
+  {
+    "id": 851,
+    "name": "DWCS 2.1",
+    "date": "Tuesday, June 12, 2018",
+    "location": "",
+    "slug": "dwcs-21",
     "year": "2018"
   },
   {
@@ -2848,11 +3576,51 @@
     "year": "2017"
   },
   {
+    "id": 850,
+    "name": "DWCS 1.8",
+    "date": "Tuesday, August 29, 2017",
+    "location": "",
+    "slug": "dwcs-18",
+    "year": "2017"
+  },
+  {
+    "id": 944,
+    "name": "DWCS 1.7",
+    "date": "Tuesday, August 22, 2017",
+    "location": "",
+    "slug": "dwcs-17",
+    "year": "2017"
+  },
+  {
+    "id": 1005,
+    "name": "DWCS 1.6",
+    "date": "Tuesday, August 15, 2017",
+    "location": "",
+    "slug": "dwcs-16",
+    "year": "2017"
+  },
+  {
+    "id": 808,
+    "name": "DWCS 1.5",
+    "date": "Tuesday, August 8, 2017",
+    "location": "",
+    "slug": "dwcs-15",
+    "year": "2017"
+  },
+  {
     "id": 407,
     "name": "UFC Fight Night: Pettis vs. Moreno",
     "date": "Saturday, August 5, 2017",
     "location": "Mexico City, Distrito Federal, Mexico",
     "slug": "ufc-fight-night-pettis-vs-moreno",
+    "year": "2017"
+  },
+  {
+    "id": 926,
+    "name": "DWCS 1.4",
+    "date": "Tuesday, August 1, 2017",
+    "location": "",
+    "slug": "dwcs-14",
     "year": "2017"
   },
   {
@@ -2864,6 +3632,14 @@
     "year": "2017"
   },
   {
+    "id": 852,
+    "name": "DWCS 1.3",
+    "date": "Tuesday, July 25, 2017",
+    "location": "",
+    "slug": "dwcs-13",
+    "year": "2017"
+  },
+  {
     "id": 405,
     "name": "UFC Fight Night: Weidman vs. Gastelum",
     "date": "Saturday, July 22, 2017",
@@ -2872,11 +3648,27 @@
     "year": "2017"
   },
   {
+    "id": 1000,
+    "name": "DWCS 1.2",
+    "date": "Tuesday, July 18, 2017",
+    "location": "",
+    "slug": "dwcs-12",
+    "year": "2017"
+  },
+  {
     "id": 404,
     "name": "UFC Fight Night: Nelson vs. Ponzinibbio",
     "date": "Sunday, July 16, 2017",
     "location": "Glasgow, Scotland, United Kingdom",
     "slug": "ufc-fight-night-nelson-vs-ponzinibbio",
+    "year": "2017"
+  },
+  {
+    "id": 929,
+    "name": "DWCS 1.1",
+    "date": "Tuesday, July 11, 2017",
+    "location": "",
+    "slug": "dwcs-11",
     "year": "2017"
   },
   {
@@ -4192,6 +4984,14 @@
     "year": "2013"
   },
   {
+    "id": 1112,
+    "name": "Invicta FC 6: Coenen vs. Cyborg",
+    "date": "Saturday, July 13, 2013",
+    "location": "",
+    "slug": "invicta-fc-6-coenen-vs-cyborg",
+    "year": "2013"
+  },
+  {
     "id": 239,
     "name": "UFC 162: Silva vs Weidman",
     "date": "Saturday, July 6, 2013",
@@ -4264,6 +5064,14 @@
     "year": "2013"
   },
   {
+    "id": 1113,
+    "name": "Invicta FC 5: Penne vs. Waterson",
+    "date": "Friday, April 5, 2013",
+    "location": "",
+    "slug": "invicta-fc-5-penne-vs-waterson",
+    "year": "2013"
+  },
+  {
     "id": 230,
     "name": "UFC 158: St-Pierre vs Diaz",
     "date": "Saturday, March 16, 2013",
@@ -4318,6 +5126,22 @@
     "location": "Sao Paulo, Brazil",
     "slug": "ufc-on-fx-belfort-vs-bisping",
     "year": "2013"
+  },
+  {
+    "id": 788,
+    "name": "Strikeforce - Marquardt vs Saffiedine",
+    "date": "Saturday, January 12, 2013",
+    "location": "",
+    "slug": "strikeforce-marquardt-vs-saffiedine",
+    "year": "2013"
+  },
+  {
+    "id": 903,
+    "name": "DREAM 18",
+    "date": "Monday, December 31, 2012",
+    "location": "",
+    "slug": "dream-18",
+    "year": "2012"
   },
   {
     "id": 223,
@@ -4376,6 +5200,14 @@
     "year": "2012"
   },
   {
+    "id": 1114,
+    "name": "Invicta FC 3: Penne vs. Sugiyuma",
+    "date": "Saturday, October 6, 2012",
+    "location": "",
+    "slug": "invicta-fc-3-penne-vs-sugiyuma",
+    "year": "2012"
+  },
+  {
     "id": 216,
     "name": "UFC on FX: Browne vs Bigfoot",
     "date": "Friday, October 5, 2012",
@@ -4400,6 +5232,14 @@
     "year": "2012"
   },
   {
+    "id": 783,
+    "name": "Strikeforce - Rousey vs Kaufman",
+    "date": "Saturday, August 18, 2012",
+    "location": "",
+    "slug": "strikeforce-rousey-vs-kaufman",
+    "year": "2012"
+  },
+  {
     "id": 213,
     "name": "UFC 150: Henderson vs Edgar II",
     "date": "Saturday, August 11, 2012",
@@ -4416,11 +5256,27 @@
     "year": "2012"
   },
   {
+    "id": 1178,
+    "name": "Invicta FC 2: McMann vs. Baszler",
+    "date": "Saturday, July 28, 2012",
+    "location": "",
+    "slug": "invicta-fc-2-mcmann-vs-baszler",
+    "year": "2012"
+  },
+  {
     "id": 211,
     "name": "UFC 149: Faber vs Barao",
     "date": "Saturday, July 21, 2012",
     "location": "Calgary, Alberta, Canada",
     "slug": "ufc-149-faber-vs-barao",
+    "year": "2012"
+  },
+  {
+    "id": 1103,
+    "name": "Strikeforce - Rockhold vs Kennedy",
+    "date": "Saturday, July 14, 2012",
+    "location": "",
+    "slug": "strikeforce-rockhold-vs-kennedy",
     "year": "2012"
   },
   {
@@ -4453,6 +5309,14 @@
     "date": "Friday, June 22, 2012",
     "location": "Atlantic City, New Jersey, USA",
     "slug": "ufc-on-fx-maynard-vs-guida",
+    "year": "2012"
+  },
+  {
+    "id": 1161,
+    "name": "M-1 Global - Fedor vs. Rizzo",
+    "date": "Thursday, June 21, 2012",
+    "location": "",
+    "slug": "m-1-global-fedor-vs-rizzo",
     "year": "2012"
   },
   {
@@ -4496,6 +5360,14 @@
     "year": "2012"
   },
   {
+    "id": 1115,
+    "name": "Invicta FC 1: Coenen vs. Ruyssen",
+    "date": "Saturday, April 28, 2012",
+    "location": "",
+    "slug": "invicta-fc-1-coenen-vs-ruyssen",
+    "year": "2012"
+  },
+  {
     "id": 201,
     "name": "UFC 145: Jones vs Evans",
     "date": "Saturday, April 21, 2012",
@@ -4509,6 +5381,22 @@
     "date": "Saturday, April 14, 2012",
     "location": "Stockholm, Sweden",
     "slug": "ufc-on-fuel-tv-gustafsson-vs-silva",
+    "year": "2012"
+  },
+  {
+    "id": 1183,
+    "name": "ONE FC 3: War of the Lions",
+    "date": "Saturday, March 31, 2012",
+    "location": "",
+    "slug": "one-fc-3-war-of-the-lions",
+    "year": "2012"
+  },
+  {
+    "id": 819,
+    "name": "Strikeforce - Tate vs. Rousey",
+    "date": "Saturday, March 3, 2012",
+    "location": "",
+    "slug": "strikeforce-tate-vs-rousey",
     "year": "2012"
   },
   {
@@ -4552,6 +5440,14 @@
     "year": "2012"
   },
   {
+    "id": 1179,
+    "name": "ProElite 3: Da Spyder vs. Minowaman",
+    "date": "Saturday, January 21, 2012",
+    "location": "",
+    "slug": "proelite-3-da-spyder-vs-minowaman",
+    "year": "2012"
+  },
+  {
     "id": 194,
     "name": "UFC on FX: Guillard vs Miller",
     "date": "Friday, January 20, 2012",
@@ -4568,11 +5464,35 @@
     "year": "2012"
   },
   {
+    "id": 784,
+    "name": "Strikeforce - Rockhold vs. Jardine",
+    "date": "Saturday, January 7, 2012",
+    "location": "",
+    "slug": "strikeforce-rockhold-vs-jardine",
+    "year": "2012"
+  },
+  {
+    "id": 896,
+    "name": "DREAM - New Year! 2011",
+    "date": "Saturday, December 31, 2011",
+    "location": "",
+    "slug": "dream-new-year-2011",
+    "year": "2011"
+  },
+  {
     "id": 192,
     "name": "UFC 141: Lesnar vs Overeem",
     "date": "Friday, December 30, 2011",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-141-lesnar-vs-overeem",
+    "year": "2011"
+  },
+  {
+    "id": 996,
+    "name": "Strikeforce - Melendez vs. Masvidal",
+    "date": "Saturday, December 17, 2011",
+    "location": "",
+    "slug": "strikeforce-melendez-vs-masvidal",
     "year": "2011"
   },
   {
@@ -4592,11 +5512,27 @@
     "year": "2011"
   },
   {
+    "id": 1106,
+    "name": "M-1 Global - Fedor vs. Monson",
+    "date": "Sunday, November 20, 2011",
+    "location": "",
+    "slug": "m-1-global-fedor-vs-monson",
+    "year": "2011"
+  },
+  {
     "id": 189,
     "name": "UFC 139: Shogun vs Henderson",
     "date": "Saturday, November 19, 2011",
     "location": "San Jose, California, USA",
     "slug": "ufc-139-shogun-vs-henderson",
+    "year": "2011"
+  },
+  {
+    "id": 785,
+    "name": "Strikeforce Challengers 20",
+    "date": "Friday, November 18, 2011",
+    "location": "",
+    "slug": "strikeforce-challengers-20",
     "year": "2011"
   },
   {
@@ -4640,6 +5576,14 @@
     "year": "2011"
   },
   {
+    "id": 897,
+    "name": "DREAM 17",
+    "date": "Saturday, September 24, 2011",
+    "location": "",
+    "slug": "dream-17",
+    "year": "2011"
+  },
+  {
     "id": 183,
     "name": "UFC 135: Jones vs Rampage",
     "date": "Saturday, September 24, 2011",
@@ -4648,11 +5592,35 @@
     "year": "2011"
   },
   {
+    "id": 970,
+    "name": "Strikeforce Challengers 19",
+    "date": "Friday, September 23, 2011",
+    "location": "",
+    "slug": "strikeforce-challengers-19",
+    "year": "2011"
+  },
+  {
     "id": 182,
     "name": "UFC Fight Night: Shields vs Ellenberger",
     "date": "Saturday, September 17, 2011",
     "location": "New Orleans, Louisiana, USA",
     "slug": "ufc-fight-night-shields-vs-ellenberger",
+    "year": "2011"
+  },
+  {
+    "id": 820,
+    "name": "Strikeforce - Barnett vs. Kharitonov",
+    "date": "Saturday, September 10, 2011",
+    "location": "",
+    "slug": "strikeforce-barnett-vs-kharitonov",
+    "year": "2011"
+  },
+  {
+    "id": 1180,
+    "name": "ProElite 1: Arlovski vs. Lopez",
+    "date": "Saturday, August 27, 2011",
+    "location": "",
+    "slug": "proelite-1-arlovski-vs-lopez",
     "year": "2011"
   },
   {
@@ -4672,11 +5640,51 @@
     "year": "2011"
   },
   {
+    "id": 1040,
+    "name": "Strikeforce Challengers 18",
+    "date": "Friday, August 12, 2011",
+    "location": "",
+    "slug": "strikeforce-challengers-18",
+    "year": "2011"
+  },
+  {
     "id": 179,
     "name": "UFC 133: Evans vs Ortiz 2",
     "date": "Saturday, August 6, 2011",
     "location": "Philadelphia, Pennsylvania, USA",
     "slug": "ufc-133-evans-vs-ortiz-2",
+    "year": "2011"
+  },
+  {
+    "id": 821,
+    "name": "Strikeforce - Fedor vs. Henderson",
+    "date": "Saturday, July 30, 2011",
+    "location": "",
+    "slug": "strikeforce-fedor-vs-henderson",
+    "year": "2011"
+  },
+  {
+    "id": 1181,
+    "name": "Titan Fighting Championship 19",
+    "date": "Friday, July 29, 2011",
+    "location": "",
+    "slug": "titan-fighting-championship-19",
+    "year": "2011"
+  },
+  {
+    "id": 786,
+    "name": "Strikeforce Challengers 17",
+    "date": "Friday, July 22, 2011",
+    "location": "",
+    "slug": "strikeforce-challengers-17",
+    "year": "2011"
+  },
+  {
+    "id": 1052,
+    "name": "DREAM - Japan GP Final",
+    "date": "Saturday, July 16, 2011",
+    "location": "",
+    "slug": "dream-japan-gp-final",
     "year": "2011"
   },
   {
@@ -4693,6 +5701,22 @@
     "date": "Sunday, June 26, 2011",
     "location": "Pittsburgh, Pennsylvania, USA",
     "slug": "ufc-live-kongo-vs-barry",
+    "year": "2011"
+  },
+  {
+    "id": 997,
+    "name": "Strikeforce Challengers 16",
+    "date": "Friday, June 24, 2011",
+    "location": "",
+    "slug": "strikeforce-challengers-16",
+    "year": "2011"
+  },
+  {
+    "id": 823,
+    "name": "Strikeforce - Overeem vs. Werdum",
+    "date": "Saturday, June 18, 2011",
+    "location": "",
+    "slug": "strikeforce-overeem-vs-werdum",
     "year": "2011"
   },
   {
@@ -4728,6 +5752,22 @@
     "year": "2011"
   },
   {
+    "id": 1064,
+    "name": "Strikeforce - Diaz vs. Daley",
+    "date": "Saturday, April 9, 2011",
+    "location": "",
+    "slug": "strikeforce-diaz-vs-daley",
+    "year": "2011"
+  },
+  {
+    "id": 998,
+    "name": "Strikeforce Challengers 15",
+    "date": "Friday, April 1, 2011",
+    "location": "",
+    "slug": "strikeforce-challengers-15",
+    "year": "2011"
+  },
+  {
     "id": 172,
     "name": "UFC Fight Night: Nogueira vs Davis",
     "date": "Saturday, March 26, 2011",
@@ -4741,6 +5781,14 @@
     "date": "Saturday, March 19, 2011",
     "location": "Newark, New Jersey, USA",
     "slug": "ufc-128-shogun-vs-jones",
+    "year": "2011"
+  },
+  {
+    "id": 1033,
+    "name": "Strikeforce - Feijao vs. Henderson",
+    "date": "Saturday, March 5, 2011",
+    "location": "",
+    "slug": "strikeforce-feijao-vs-henderson",
     "year": "2011"
   },
   {
@@ -4760,11 +5808,35 @@
     "year": "2011"
   },
   {
+    "id": 986,
+    "name": "Strikeforce Challengers 14",
+    "date": "Friday, February 18, 2011",
+    "location": "",
+    "slug": "strikeforce-challengers-14",
+    "year": "2011"
+  },
+  {
+    "id": 874,
+    "name": "Strikeforce - Fedor vs. Silva",
+    "date": "Saturday, February 12, 2011",
+    "location": "",
+    "slug": "strikeforce-fedor-vs-silva",
+    "year": "2011"
+  },
+  {
     "id": 168,
     "name": "UFC 126: Silva vs Belfort",
     "date": "Saturday, February 5, 2011",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-126-silva-vs-belfort",
+    "year": "2011"
+  },
+  {
+    "id": 1077,
+    "name": "Strikeforce - Diaz vs. Cyborg",
+    "date": "Saturday, January 29, 2011",
+    "location": "",
+    "slug": "strikeforce-diaz-vs-cyborg",
     "year": "2011"
   },
   {
@@ -4776,6 +5848,14 @@
     "year": "2011"
   },
   {
+    "id": 853,
+    "name": "Strikeforce Challengers 13",
+    "date": "Friday, January 7, 2011",
+    "location": "",
+    "slug": "strikeforce-challengers-13",
+    "year": "2011"
+  },
+  {
     "id": 166,
     "name": "UFC 125: Resolution",
     "date": "Saturday, January 1, 2011",
@@ -4784,11 +5864,35 @@
     "year": "2011"
   },
   {
+    "id": 824,
+    "name": "Dynamite!! 2010",
+    "date": "Friday, December 31, 2010",
+    "location": "",
+    "slug": "dynamite-2010",
+    "year": "2010"
+  },
+  {
+    "id": 890,
+    "name": "WEC 53: Henderson vs. Pettis",
+    "date": "Thursday, December 16, 2010",
+    "location": "",
+    "slug": "wec-53-henderson-vs-pettis",
+    "year": "2010"
+  },
+  {
     "id": 165,
     "name": "UFC 124: St-Pierre vs Koscheck 2",
     "date": "Saturday, December 11, 2010",
     "location": "Montreal, Quebec, Canada",
     "slug": "ufc-124-st-pierre-vs-koscheck-2",
+    "year": "2010"
+  },
+  {
+    "id": 915,
+    "name": "Strikeforce - Henderson vs. Babalu",
+    "date": "Saturday, December 4, 2010",
+    "location": "",
+    "slug": "strikeforce-henderson-vs-babalu",
     "year": "2010"
   },
   {
@@ -4808,11 +5912,27 @@
     "year": "2010"
   },
   {
+    "id": 999,
+    "name": "Strikeforce Challengers 12",
+    "date": "Friday, November 19, 2010",
+    "location": "",
+    "slug": "strikeforce-challengers-12",
+    "year": "2010"
+  },
+  {
     "id": 162,
     "name": "UFC 122: Marquardt vs Okami",
     "date": "Saturday, November 13, 2010",
     "location": "Oberhausen, North Rhine-Westphalia, Germany",
     "slug": "ufc-122-marquardt-vs-okami",
+    "year": "2010"
+  },
+  {
+    "id": 884,
+    "name": "WEC 52: Faber vs. Mizugaki",
+    "date": "Thursday, November 11, 2010",
+    "location": "",
+    "slug": "wec-52-faber-vs-mizugaki",
     "year": "2010"
   },
   {
@@ -4824,11 +5944,43 @@
     "year": "2010"
   },
   {
+    "id": 960,
+    "name": "Strikeforce Challengers 11",
+    "date": "Friday, October 22, 2010",
+    "location": "",
+    "slug": "strikeforce-challengers-11",
+    "year": "2010"
+  },
+  {
     "id": 160,
     "name": "UFC 120: Bisping vs Akiyama",
     "date": "Saturday, October 16, 2010",
     "location": "London, England, United Kingdom",
     "slug": "ufc-120-bisping-vs-akiyama",
+    "year": "2010"
+  },
+  {
+    "id": 1124,
+    "name": "Strikeforce - Diaz vs. Noons 2",
+    "date": "Saturday, October 9, 2010",
+    "location": "",
+    "slug": "strikeforce-diaz-vs-noons-2",
+    "year": "2010"
+  },
+  {
+    "id": 898,
+    "name": "WEC 51: Aldo vs. Gamburyan",
+    "date": "Thursday, September 30, 2010",
+    "location": "",
+    "slug": "wec-51-aldo-vs-gamburyan",
+    "year": "2010"
+  },
+  {
+    "id": 1021,
+    "name": "DREAM 16",
+    "date": "Saturday, September 25, 2010",
+    "location": "",
+    "slug": "dream-16",
     "year": "2010"
   },
   {
@@ -4856,6 +6008,30 @@
     "year": "2010"
   },
   {
+    "id": 1002,
+    "name": "Strikeforce - Houston",
+    "date": "Saturday, August 21, 2010",
+    "location": "",
+    "slug": "strikeforce-houston",
+    "year": "2010"
+  },
+  {
+    "id": 885,
+    "name": "WEC 50: Cruz vs. Benavidez",
+    "date": "Wednesday, August 18, 2010",
+    "location": "",
+    "slug": "wec-50-cruz-vs-benavidez",
+    "year": "2010"
+  },
+  {
+    "id": 1014,
+    "name": "Strikeforce Challengers 10",
+    "date": "Friday, August 13, 2010",
+    "location": "",
+    "slug": "strikeforce-challengers-10",
+    "year": "2010"
+  },
+  {
     "id": 156,
     "name": "UFC 117: Silva vs Sonnen",
     "date": "Saturday, August 7, 2010",
@@ -4872,6 +6048,30 @@
     "year": "2010"
   },
   {
+    "id": 961,
+    "name": "Strikeforce Challengers 9",
+    "date": "Friday, July 23, 2010",
+    "location": "",
+    "slug": "strikeforce-challengers-9",
+    "year": "2010"
+  },
+  {
+    "id": 1122,
+    "name": "Impact FC 1",
+    "date": "Saturday, July 10, 2010",
+    "location": "",
+    "slug": "impact-fc-1",
+    "year": "2010"
+  },
+  {
+    "id": 1065,
+    "name": "DREAM 15",
+    "date": "Saturday, July 10, 2010",
+    "location": "",
+    "slug": "dream-15",
+    "year": "2010"
+  },
+  {
     "id": 154,
     "name": "UFC 116: Lesnar vs Carwin",
     "date": "Saturday, July 3, 2010",
@@ -4880,11 +6080,35 @@
     "year": "2010"
   },
   {
+    "id": 1012,
+    "name": "Strikeforce - Fedor vs. Werdum",
+    "date": "Saturday, June 26, 2010",
+    "location": "",
+    "slug": "strikeforce-fedor-vs-werdum",
+    "year": "2010"
+  },
+  {
+    "id": 1009,
+    "name": "WEC 49: Varner vs. Shalorus",
+    "date": "Sunday, June 20, 2010",
+    "location": "",
+    "slug": "wec-49-varner-vs-shalorus",
+    "year": "2010"
+  },
+  {
     "id": 153,
     "name": "The Ultimate Fighter: Team Liddell vs Team Ortiz Finale",
     "date": "Saturday, June 19, 2010",
     "location": "Las Vegas, Nevada, USA",
     "slug": "the-ultimate-fighter-team-liddell-vs-team-ortiz-finale",
+    "year": "2010"
+  },
+  {
+    "id": 1127,
+    "name": "Strikeforce - Los Angeles",
+    "date": "Wednesday, June 16, 2010",
+    "location": "",
+    "slug": "strikeforce-los-angeles",
     "year": "2010"
   },
   {
@@ -4912,6 +6136,22 @@
     "year": "2010"
   },
   {
+    "id": 801,
+    "name": "WEC 48: Aldo vs. Faber",
+    "date": "Saturday, April 24, 2010",
+    "location": "",
+    "slug": "wec-48-aldo-vs-faber",
+    "year": "2010"
+  },
+  {
+    "id": 983,
+    "name": "Strikeforce - Nashville",
+    "date": "Saturday, April 17, 2010",
+    "location": "",
+    "slug": "strikeforce-nashville",
+    "year": "2010"
+  },
+  {
     "id": 149,
     "name": "UFC 112: Invincible",
     "date": "Saturday, April 10, 2010",
@@ -4936,11 +6176,43 @@
     "year": "2010"
   },
   {
+    "id": 1038,
+    "name": "Strikeforce Challengers 7",
+    "date": "Friday, March 26, 2010",
+    "location": "",
+    "slug": "strikeforce-challengers-7",
+    "year": "2010"
+  },
+  {
+    "id": 1022,
+    "name": "DREAM 13",
+    "date": "Monday, March 22, 2010",
+    "location": "",
+    "slug": "dream-13",
+    "year": "2010"
+  },
+  {
     "id": 146,
     "name": "UFC Live: Vera vs Jones",
     "date": "Sunday, March 21, 2010",
     "location": "Broomfield, Colorado, USA",
     "slug": "ufc-live-vera-vs-jones",
+    "year": "2010"
+  },
+  {
+    "id": 891,
+    "name": "WEC 47: Bowles vs. Cruz",
+    "date": "Saturday, March 6, 2010",
+    "location": "",
+    "slug": "wec-47-bowles-vs-cruz",
+    "year": "2010"
+  },
+  {
+    "id": 1139,
+    "name": "Strikeforce Challengers 6",
+    "date": "Friday, February 26, 2010",
+    "location": "",
+    "slug": "strikeforce-challengers-6",
     "year": "2010"
   },
   {
@@ -4960,11 +6232,27 @@
     "year": "2010"
   },
   {
+    "id": 1027,
+    "name": "Strikeforce - Miami",
+    "date": "Saturday, January 30, 2010",
+    "location": "",
+    "slug": "strikeforce-miami",
+    "year": "2010"
+  },
+  {
     "id": 143,
     "name": "UFC Fight Night: Maynard vs Diaz",
     "date": "Monday, January 11, 2010",
     "location": "Fairfax, Virginia, USA",
     "slug": "ufc-fight-night-maynard-vs-diaz",
+    "year": "2010"
+  },
+  {
+    "id": 946,
+    "name": "WEC 46: Varner vs. Henderson",
+    "date": "Sunday, January 10, 2010",
+    "location": "",
+    "slug": "wec-46-varner-vs-henderson",
     "year": "2010"
   },
   {
@@ -4974,6 +6262,30 @@
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-108-evans-vs-silva",
     "year": "2010"
+  },
+  {
+    "id": 790,
+    "name": "Dynamite!! 2009",
+    "date": "Thursday, December 31, 2009",
+    "location": "",
+    "slug": "dynamite-2009",
+    "year": "2009"
+  },
+  {
+    "id": 1029,
+    "name": "Strikeforce - Evolution",
+    "date": "Saturday, December 19, 2009",
+    "location": "",
+    "slug": "strikeforce-evolution",
+    "year": "2009"
+  },
+  {
+    "id": 886,
+    "name": "WEC 45: Cerrone vs. Ratcliff",
+    "date": "Saturday, December 19, 2009",
+    "location": "",
+    "slug": "wec-45-cerrone-vs-ratcliff",
+    "year": "2009"
   },
   {
     "id": 141,
@@ -5000,6 +6312,22 @@
     "year": "2009"
   },
   {
+    "id": 779,
+    "name": "Strikeforce Challengers 5",
+    "date": "Friday, November 20, 2009",
+    "location": "",
+    "slug": "strikeforce-challengers-5",
+    "year": "2009"
+  },
+  {
+    "id": 899,
+    "name": "WEC 44: Brown vs. Aldo",
+    "date": "Wednesday, November 18, 2009",
+    "location": "",
+    "slug": "wec-44-brown-vs-aldo",
+    "year": "2009"
+  },
+  {
     "id": 138,
     "name": "UFC 105: Couture vs Vera",
     "date": "Saturday, November 14, 2009",
@@ -5008,11 +6336,67 @@
     "year": "2009"
   },
   {
+    "id": 916,
+    "name": "Strikeforce - Fedor vs. Rogers",
+    "date": "Saturday, November 7, 2009",
+    "location": "",
+    "slug": "strikeforce-fedor-vs-rogers",
+    "year": "2009"
+  },
+  {
+    "id": 1023,
+    "name": "Strikeforce Challengers 4",
+    "date": "Friday, November 6, 2009",
+    "location": "",
+    "slug": "strikeforce-challengers-4",
+    "year": "2009"
+  },
+  {
+    "id": 825,
+    "name": "DREAM 12",
+    "date": "Sunday, October 25, 2009",
+    "location": "",
+    "slug": "dream-12",
+    "year": "2009"
+  },
+  {
     "id": 137,
     "name": "UFC 104: Machida vs Shogun",
     "date": "Saturday, October 24, 2009",
     "location": "Los Angeles, California, USA",
     "slug": "ufc-104-machida-vs-shogun",
+    "year": "2009"
+  },
+  {
+    "id": 826,
+    "name": "Ultimate Glory 11: A Decade of Fights",
+    "date": "Saturday, October 17, 2009",
+    "location": "",
+    "slug": "ultimate-glory-11-a-decade-of-fights",
+    "year": "2009"
+  },
+  {
+    "id": 887,
+    "name": "WEC 43: Cerrone vs. Henderson",
+    "date": "Saturday, October 10, 2009",
+    "location": "",
+    "slug": "wec-43-cerrone-vs-henderson",
+    "year": "2009"
+  },
+  {
+    "id": 1162,
+    "name": "DREAM 11: Featherweight Grand Prix 2009 Final Round",
+    "date": "Tuesday, October 6, 2009",
+    "location": "",
+    "slug": "dream-11-featherweight-grand-prix-2009-final-round",
+    "year": "2009"
+  },
+  {
+    "id": 1039,
+    "name": "Strikeforce Challengers 3",
+    "date": "Friday, September 25, 2009",
+    "location": "",
+    "slug": "strikeforce-challengers-3",
     "year": "2009"
   },
   {
@@ -5040,11 +6424,35 @@
     "year": "2009"
   },
   {
+    "id": 1028,
+    "name": "Strikeforce - Carano vs. Cyborg",
+    "date": "Saturday, August 15, 2009",
+    "location": "",
+    "slug": "strikeforce-carano-vs-cyborg",
+    "year": "2009"
+  },
+  {
+    "id": 967,
+    "name": "WEC 42: Torres vs. Bowles",
+    "date": "Sunday, August 9, 2009",
+    "location": "",
+    "slug": "wec-42-torres-vs-bowles",
+    "year": "2009"
+  },
+  {
     "id": 133,
     "name": "UFC 101: Declaration",
     "date": "Saturday, August 8, 2009",
     "location": "Philadelphia, Pennsylvania, USA",
     "slug": "ufc-101-declaration",
+    "year": "2009"
+  },
+  {
+    "id": 1087,
+    "name": "DREAM 10: Welterweight Grand Prix 2009 Final Round",
+    "date": "Monday, July 20, 2009",
+    "location": "",
+    "slug": "dream-10-welterweight-grand-prix-2009-final-round",
     "year": "2009"
   },
   {
@@ -5064,11 +6472,35 @@
     "year": "2009"
   },
   {
+    "id": 979,
+    "name": "Strikeforce Challengers 2",
+    "date": "Friday, June 19, 2009",
+    "location": "",
+    "slug": "strikeforce-challengers-2",
+    "year": "2009"
+  },
+  {
     "id": 130,
     "name": "UFC 99: The Comeback",
     "date": "Saturday, June 13, 2009",
     "location": "Cologne, North Rhine-Westphalia, Germany",
     "slug": "ufc-99-the-comeback",
+    "year": "2009"
+  },
+  {
+    "id": 892,
+    "name": "WEC 41: Brown vs. Faber 2",
+    "date": "Sunday, June 7, 2009",
+    "location": "",
+    "slug": "wec-41-brown-vs-faber-2",
+    "year": "2009"
+  },
+  {
+    "id": 875,
+    "name": "Strikeforce - Lawler vs. Shields",
+    "date": "Saturday, June 6, 2009",
+    "location": "",
+    "slug": "strikeforce-lawler-vs-shields",
     "year": "2009"
   },
   {
@@ -5080,11 +6512,43 @@
     "year": "2009"
   },
   {
+    "id": 1158,
+    "name": "WFC 8: D-Day",
+    "date": "Saturday, April 18, 2009",
+    "location": "",
+    "slug": "wfc-8-d-day",
+    "year": "2009"
+  },
+  {
     "id": 128,
     "name": "UFC 97: Redemption",
     "date": "Saturday, April 18, 2009",
     "location": "Montreal, Quebec, Canada",
     "slug": "ufc-97-redemption",
+    "year": "2009"
+  },
+  {
+    "id": 945,
+    "name": "Strikeforce - Shamrock vs. Diaz",
+    "date": "Saturday, April 11, 2009",
+    "location": "",
+    "slug": "strikeforce-shamrock-vs-diaz",
+    "year": "2009"
+  },
+  {
+    "id": 1088,
+    "name": "DREAM 8: Welterweight Grand Prix 2009 1st Round",
+    "date": "Sunday, April 5, 2009",
+    "location": "",
+    "slug": "dream-8-welterweight-grand-prix-2009-1st-round",
+    "year": "2009"
+  },
+  {
+    "id": 888,
+    "name": "WEC 40: Torres vs. Mizugaki",
+    "date": "Sunday, April 5, 2009",
+    "location": "",
+    "slug": "wec-40-torres-vs-mizugaki",
     "year": "2009"
   },
   {
@@ -5096,11 +6560,35 @@
     "year": "2009"
   },
   {
+    "id": 1159,
+    "name": "Ultimate Gladiators",
+    "date": "Sunday, March 29, 2009",
+    "location": "",
+    "slug": "ultimate-gladiators",
+    "year": "2009"
+  },
+  {
+    "id": 1184,
+    "name": "DREAM 7: Featherweight Grand Prix 2009 1st Round",
+    "date": "Sunday, March 8, 2009",
+    "location": "",
+    "slug": "dream-7-featherweight-grand-prix-2009-1st-round",
+    "year": "2009"
+  },
+  {
     "id": 126,
     "name": "UFC 96: Jackson vs Jardine",
     "date": "Saturday, March 7, 2009",
     "location": "Columbus, Ohio, USA",
     "slug": "ufc-96-jackson-vs-jardine",
+    "year": "2009"
+  },
+  {
+    "id": 802,
+    "name": "WEC 39: Brown vs. Garcia",
+    "date": "Sunday, March 1, 2009",
+    "location": "",
+    "slug": "wec-39-brown-vs-garcia",
     "year": "2009"
   },
   {
@@ -5128,12 +6616,36 @@
     "year": "2009"
   },
   {
+    "id": 889,
+    "name": "WEC 38: Varner vs. Cerrone",
+    "date": "Sunday, January 25, 2009",
+    "location": "",
+    "slug": "wec-38-varner-vs-cerrone",
+    "year": "2009"
+  },
+  {
+    "id": 876,
+    "name": "Affliction - Day of Reckoning",
+    "date": "Saturday, January 24, 2009",
+    "location": "",
+    "slug": "affliction-day-of-reckoning",
+    "year": "2009"
+  },
+  {
     "id": 122,
     "name": "UFC 93: Franklin vs Henderson",
     "date": "Saturday, January 17, 2009",
     "location": "Dublin, Leinster, Ireland",
     "slug": "ufc-93-franklin-vs-henderson",
     "year": "2009"
+  },
+  {
+    "id": 1054,
+    "name": "Dynamite!! 2008",
+    "date": "Wednesday, December 31, 2008",
+    "location": "",
+    "slug": "dynamite-2008",
+    "year": "2008"
   },
   {
     "id": 121,
@@ -5152,6 +6664,14 @@
     "year": "2008"
   },
   {
+    "id": 936,
+    "name": "Adrenaline MMA 2: Miletich vs. Denny",
+    "date": "Thursday, December 11, 2008",
+    "location": "",
+    "slug": "adrenaline-mma-2-miletich-vs-denny",
+    "year": "2008"
+  },
+  {
     "id": 119,
     "name": "UFC Fight Night - Fight for the Troops",
     "date": "Wednesday, December 10, 2008",
@@ -5160,11 +6680,51 @@
     "year": "2008"
   },
   {
+    "id": 803,
+    "name": "WEC 37: Torres vs. Tapia",
+    "date": "Wednesday, December 3, 2008",
+    "location": "",
+    "slug": "wec-37-torres-vs-tapia",
+    "year": "2008"
+  },
+  {
+    "id": 956,
+    "name": "Strikeforce - Destruction",
+    "date": "Friday, November 21, 2008",
+    "location": "",
+    "slug": "strikeforce-destruction",
+    "year": "2008"
+  },
+  {
     "id": 118,
     "name": "UFC 91: Couture vs Lesnar",
     "date": "Saturday, November 15, 2008",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-91-couture-vs-lesnar",
+    "year": "2008"
+  },
+  {
+    "id": 827,
+    "name": "Ultimate Glory 10: The Battle of Arnhem",
+    "date": "Sunday, November 9, 2008",
+    "location": "",
+    "slug": "ultimate-glory-10-the-battle-of-arnhem",
+    "year": "2008"
+  },
+  {
+    "id": 780,
+    "name": "WEC 36: Faber vs. Brown",
+    "date": "Wednesday, November 5, 2008",
+    "location": "",
+    "slug": "wec-36-faber-vs-brown",
+    "year": "2008"
+  },
+  {
+    "id": 1172,
+    "name": "Sengoku - Sixth Battle",
+    "date": "Saturday, November 1, 2008",
+    "location": "",
+    "slug": "sengoku-sixth-battle",
     "year": "2008"
   },
   {
@@ -5181,6 +6741,46 @@
     "date": "Saturday, October 18, 2008",
     "location": "Birmingham, England, United Kingdom",
     "slug": "ufc-89-bisping-vs-leben",
+    "year": "2008"
+  },
+  {
+    "id": 877,
+    "name": "EliteXC - Heat",
+    "date": "Saturday, October 4, 2008",
+    "location": "",
+    "slug": "elitexc-heat",
+    "year": "2008"
+  },
+  {
+    "id": 1051,
+    "name": "Strikeforce - Payback",
+    "date": "Friday, October 3, 2008",
+    "location": "",
+    "slug": "strikeforce-payback",
+    "year": "2008"
+  },
+  {
+    "id": 1191,
+    "name": "Sengoku - Fifth Battle",
+    "date": "Sunday, September 28, 2008",
+    "location": "",
+    "slug": "sengoku-fifth-battle",
+    "year": "2008"
+  },
+  {
+    "id": 789,
+    "name": "DREAM 6: Middleweight Grand Prix 2008 Final Round",
+    "date": "Tuesday, September 23, 2008",
+    "location": "",
+    "slug": "dream-6-middleweight-grand-prix-2008-final-round",
+    "year": "2008"
+  },
+  {
+    "id": 964,
+    "name": "Strikeforce - At the Mansion 2",
+    "date": "Saturday, September 20, 2008",
+    "location": "",
+    "slug": "strikeforce-at-the-mansion-2",
     "year": "2008"
   },
   {
@@ -5208,6 +6808,38 @@
     "year": "2008"
   },
   {
+    "id": 968,
+    "name": "WEC 35: Condit vs. Miura",
+    "date": "Sunday, August 3, 2008",
+    "location": "",
+    "slug": "wec-35-condit-vs-miura",
+    "year": "2008"
+  },
+  {
+    "id": 917,
+    "name": "EliteXC - Unfinished Business",
+    "date": "Saturday, July 26, 2008",
+    "location": "",
+    "slug": "elitexc-unfinished-business",
+    "year": "2008"
+  },
+  {
+    "id": 828,
+    "name": "DREAM 5: Lightweight Grand Prix 2008 Final Round",
+    "date": "Monday, July 21, 2008",
+    "location": "",
+    "slug": "dream-5-lightweight-grand-prix-2008-final-round",
+    "year": "2008"
+  },
+  {
+    "id": 878,
+    "name": "Affliction - Banned",
+    "date": "Saturday, July 19, 2008",
+    "location": "",
+    "slug": "affliction-banned",
+    "year": "2008"
+  },
+  {
     "id": 112,
     "name": "UFC: Silva vs Irvin",
     "date": "Saturday, July 19, 2008",
@@ -5224,11 +6856,35 @@
     "year": "2008"
   },
   {
+    "id": 957,
+    "name": "Strikeforce - Melendez vs. Thomson",
+    "date": "Friday, June 27, 2008",
+    "location": "",
+    "slug": "strikeforce-melendez-vs-thomson",
+    "year": "2008"
+  },
+  {
     "id": 110,
     "name": "The Ultimate Fighter: Team Rampage vs Team Forrest Finale",
     "date": "Saturday, June 21, 2008",
     "location": "Las Vegas, Nevada, USA",
     "slug": "the-ultimate-fighter-team-rampage-vs-team-forrest-finale",
+    "year": "2008"
+  },
+  {
+    "id": 829,
+    "name": "DREAM 4: Middleweight Grand Prix 2008 2nd Round",
+    "date": "Sunday, June 15, 2008",
+    "location": "",
+    "slug": "dream-4-middleweight-grand-prix-2008-2nd-round",
+    "year": "2008"
+  },
+  {
+    "id": 1042,
+    "name": "EliteXC - Return of the King",
+    "date": "Saturday, June 14, 2008",
+    "location": "",
+    "slug": "elitexc-return-of-the-king",
     "year": "2008"
   },
   {
@@ -5240,11 +6896,27 @@
     "year": "2008"
   },
   {
+    "id": 1006,
+    "name": "WEC 34: Faber vs. Pulver",
+    "date": "Sunday, June 1, 2008",
+    "location": "",
+    "slug": "wec-34-faber-vs-pulver",
+    "year": "2008"
+  },
+  {
     "id": 108,
     "name": "UFC 84: Ill Will",
     "date": "Saturday, May 24, 2008",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-84-ill-will",
+    "year": "2008"
+  },
+  {
+    "id": 1044,
+    "name": "DREAM 2: Middleweight Grand Prix 2008 1st Round",
+    "date": "Tuesday, April 29, 2008",
+    "location": "",
+    "slug": "dream-2-middleweight-grand-prix-2008-1st-round",
     "year": "2008"
   },
   {
@@ -5264,6 +6936,46 @@
     "year": "2008"
   },
   {
+    "id": 1030,
+    "name": "Strikeforce - Shamrock vs. Le",
+    "date": "Saturday, March 29, 2008",
+    "location": "",
+    "slug": "strikeforce-shamrock-vs-le",
+    "year": "2008"
+  },
+  {
+    "id": 971,
+    "name": "WEC 33: Marshall vs. Stann",
+    "date": "Wednesday, March 26, 2008",
+    "location": "",
+    "slug": "wec-33-marshall-vs-stann",
+    "year": "2008"
+  },
+  {
+    "id": 1055,
+    "name": "DREAM 1: Lightweight Grand Prix 2008 1st Round",
+    "date": "Saturday, March 15, 2008",
+    "location": "",
+    "slug": "dream-1-lightweight-grand-prix-2008-1st-round",
+    "year": "2008"
+  },
+  {
+    "id": 1123,
+    "name": "Sengoku - First Battle",
+    "date": "Wednesday, March 5, 2008",
+    "location": "",
+    "slug": "sengoku-first-battle",
+    "year": "2008"
+  },
+  {
+    "id": 1066,
+    "name": "M-1 - Slamm",
+    "date": "Sunday, March 2, 2008",
+    "location": "",
+    "slug": "m-1-slamm",
+    "year": "2008"
+  },
+  {
     "id": 105,
     "name": "UFC 82: Pride of a Champion",
     "date": "Saturday, March 1, 2008",
@@ -5272,11 +6984,59 @@
     "year": "2008"
   },
   {
+    "id": 1116,
+    "name": "Strikeforce - At the Dome",
+    "date": "Saturday, February 23, 2008",
+    "location": "",
+    "slug": "strikeforce-at-the-dome",
+    "year": "2008"
+  },
+  {
+    "id": 918,
+    "name": "EliteXC - Street Certified",
+    "date": "Saturday, February 16, 2008",
+    "location": "",
+    "slug": "elitexc-street-certified",
+    "year": "2008"
+  },
+  {
+    "id": 900,
+    "name": "WEC 32: Condit vs. Prater",
+    "date": "Wednesday, February 13, 2008",
+    "location": "",
+    "slug": "wec-32-condit-vs-prater",
+    "year": "2008"
+  },
+  {
     "id": 104,
     "name": "UFC 81: Breaking Point",
     "date": "Saturday, February 2, 2008",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-81-breaking-point",
+    "year": "2008"
+  },
+  {
+    "id": 1067,
+    "name": "HCF - Destiny",
+    "date": "Friday, February 1, 2008",
+    "location": "",
+    "slug": "hcf-destiny",
+    "year": "2008"
+  },
+  {
+    "id": 1041,
+    "name": "Strikeforce - Young Guns 2",
+    "date": "Friday, February 1, 2008",
+    "location": "",
+    "slug": "strikeforce-young-guns-2",
+    "year": "2008"
+  },
+  {
+    "id": 1160,
+    "name": "EliteXC - ShoXC 4",
+    "date": "Friday, January 25, 2008",
+    "location": "",
+    "slug": "elitexc-shoxc-4",
     "year": "2008"
   },
   {
@@ -5296,11 +7056,27 @@
     "year": "2008"
   },
   {
+    "id": 1078,
+    "name": "Yarrenoka! - New Year's Eve 2007",
+    "date": "Monday, December 31, 2007",
+    "location": "",
+    "slug": "yarrenoka-new-years-eve-2007",
+    "year": "2007"
+  },
+  {
     "id": 101,
     "name": "UFC 79: Nemesis",
     "date": "Saturday, December 29, 2007",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-79-nemesis",
+    "year": "2007"
+  },
+  {
+    "id": 804,
+    "name": "WEC 31: Faber vs. Curran",
+    "date": "Wednesday, December 12, 2007",
+    "location": "",
+    "slug": "wec-31-faber-vs-curran",
     "year": "2007"
   },
   {
@@ -5312,11 +7088,51 @@
     "year": "2007"
   },
   {
+    "id": 1174,
+    "name": "Fury FC 5: Final Conflict",
+    "date": "Thursday, December 6, 2007",
+    "location": "",
+    "slug": "fury-fc-5-final-conflict",
+    "year": "2007"
+  },
+  {
     "id": 99,
     "name": "UFC 78: Validation",
     "date": "Saturday, November 17, 2007",
     "location": "Newark, New Jersey, USA",
     "slug": "ufc-78-validation",
+    "year": "2007"
+  },
+  {
+    "id": 830,
+    "name": "Strikeforce - Four Men Enter, One Man Survives",
+    "date": "Friday, November 16, 2007",
+    "location": "",
+    "slug": "strikeforce-four-men-enter-one-man-survives",
+    "year": "2007"
+  },
+  {
+    "id": 919,
+    "name": "EliteXC - Renegade",
+    "date": "Saturday, November 10, 2007",
+    "location": "",
+    "slug": "elitexc-renegade",
+    "year": "2007"
+  },
+  {
+    "id": 809,
+    "name": "IFL - World Grand Prix Semifinals",
+    "date": "Saturday, November 3, 2007",
+    "location": "",
+    "slug": "ifl-world-grand-prix-semifinals",
+    "year": "2007"
+  },
+  {
+    "id": 1045,
+    "name": "K-1 Hero's Korea 2007",
+    "date": "Sunday, October 28, 2007",
+    "location": "",
+    "slug": "k-1-heros-korea-2007",
     "year": "2007"
   },
   {
@@ -5328,11 +7144,43 @@
     "year": "2007"
   },
   {
+    "id": 1068,
+    "name": "HCF - Title Wave",
+    "date": "Friday, October 19, 2007",
+    "location": "",
+    "slug": "hcf-title-wave",
+    "year": "2007"
+  },
+  {
+    "id": 949,
+    "name": "Strikeforce - Playboy Mansion",
+    "date": "Saturday, September 29, 2007",
+    "location": "",
+    "slug": "strikeforce-playboy-mansion",
+    "year": "2007"
+  },
+  {
+    "id": 1100,
+    "name": "Cage Rage 23: Unbelievable",
+    "date": "Saturday, September 22, 2007",
+    "location": "",
+    "slug": "cage-rage-23-unbelievable",
+    "year": "2007"
+  },
+  {
     "id": 97,
     "name": "UFC 76: Knockout",
     "date": "Saturday, September 22, 2007",
     "location": "Anaheim, California, USA",
     "slug": "ufc-76-knockout",
+    "year": "2007"
+  },
+  {
+    "id": 937,
+    "name": "IFL - 2007 Team Championship Final",
+    "date": "Thursday, September 20, 2007",
+    "location": "",
+    "slug": "ifl-2007-team-championship-final",
     "year": "2007"
   },
   {
@@ -5344,11 +7192,35 @@
     "year": "2007"
   },
   {
+    "id": 831,
+    "name": "K-1 Hero's 10",
+    "date": "Monday, September 17, 2007",
+    "location": "",
+    "slug": "k-1-heros-10",
+    "year": "2007"
+  },
+  {
+    "id": 1097,
+    "name": "EliteXC - Uprising",
+    "date": "Saturday, September 15, 2007",
+    "location": "",
+    "slug": "elitexc-uprising",
+    "year": "2007"
+  },
+  {
     "id": 95,
     "name": "UFC 75: Champion vs Champion",
     "date": "Saturday, September 8, 2007",
     "location": "London, England, United Kingdom",
     "slug": "ufc-75-champion-vs-champion",
+    "year": "2007"
+  },
+  {
+    "id": 972,
+    "name": "WEC 30: McCullough vs. Crunkilton",
+    "date": "Wednesday, September 5, 2007",
+    "location": "",
+    "slug": "wec-30-mccullough-vs-crunkilton",
     "year": "2007"
   },
   {
@@ -5360,6 +7232,38 @@
     "year": "2007"
   },
   {
+    "id": 901,
+    "name": "WEC 29: Condit vs. Larson",
+    "date": "Sunday, August 5, 2007",
+    "location": "",
+    "slug": "wec-29-condit-vs-larson",
+    "year": "2007"
+  },
+  {
+    "id": 1175,
+    "name": "Fury FC 4: High Voltage",
+    "date": "Saturday, August 4, 2007",
+    "location": "",
+    "slug": "fury-fc-4-high-voltage",
+    "year": "2007"
+  },
+  {
+    "id": 938,
+    "name": "IFL - 2007 Semifinals",
+    "date": "Thursday, August 2, 2007",
+    "location": "",
+    "slug": "ifl-2007-semifinals",
+    "year": "2007"
+  },
+  {
+    "id": 1128,
+    "name": "EliteXC - ShoXC 1",
+    "date": "Friday, July 27, 2007",
+    "location": "",
+    "slug": "elitexc-shoxc-1",
+    "year": "2007"
+  },
+  {
     "id": 93,
     "name": "UFC 73: Stacked",
     "date": "Saturday, July 7, 2007",
@@ -5368,11 +7272,27 @@
     "year": "2007"
   },
   {
+    "id": 832,
+    "name": "K-1 - World GP 2007 in Amsterdam",
+    "date": "Saturday, June 23, 2007",
+    "location": "",
+    "slug": "k-1-world-gp-2007-in-amsterdam",
+    "year": "2007"
+  },
+  {
     "id": 92,
     "name": "The Ultimate Fighter: Team Pulver vs. Team Penn Finale",
     "date": "Saturday, June 23, 2007",
     "location": "Las Vegas, Nevada, USA",
     "slug": "the-ultimate-fighter-team-pulver-vs-team-penn-finale",
+    "year": "2007"
+  },
+  {
+    "id": 1010,
+    "name": "Strikeforce - Shamrock vs. Baroni",
+    "date": "Friday, June 22, 2007",
+    "location": "",
+    "slug": "strikeforce-shamrock-vs-baroni",
     "year": "2007"
   },
   {
@@ -5392,6 +7312,30 @@
     "year": "2007"
   },
   {
+    "id": 805,
+    "name": "WEC 28: Faber vs. Farrar",
+    "date": "Sunday, June 3, 2007",
+    "location": "",
+    "slug": "wec-28-faber-vs-farrar",
+    "year": "2007"
+  },
+  {
+    "id": 974,
+    "name": "K-1 Dynamite!! USA",
+    "date": "Saturday, June 2, 2007",
+    "location": "",
+    "slug": "k-1-dynamite-usa",
+    "year": "2007"
+  },
+  {
+    "id": 1102,
+    "name": "TKO 29",
+    "date": "Friday, June 1, 2007",
+    "location": "",
+    "slug": "tko-29",
+    "year": "2007"
+  },
+  {
     "id": 89,
     "name": "UFC 71: Liddell vs Jackson",
     "date": "Saturday, May 26, 2007",
@@ -5400,11 +7344,43 @@
     "year": "2007"
   },
   {
+    "id": 1096,
+    "name": "Cage Rage 21: Judgement Day",
+    "date": "Saturday, April 21, 2007",
+    "location": "",
+    "slug": "cage-rage-21-judgement-day",
+    "year": "2007"
+  },
+  {
     "id": 88,
     "name": "UFC 70: Nations Collide",
     "date": "Saturday, April 21, 2007",
     "location": "Manchester, England, United Kingdom",
     "slug": "ufc-70-nations-collide",
+    "year": "2007"
+  },
+  {
+    "id": 1146,
+    "name": "BodogFight - Clash of Nations",
+    "date": "Saturday, April 14, 2007",
+    "location": "",
+    "slug": "bodogfight-clash-of-nations",
+    "year": "2007"
+  },
+  {
+    "id": 1081,
+    "name": "PRIDE 34: Kamikaze",
+    "date": "Sunday, April 8, 2007",
+    "location": "",
+    "slug": "pride-34-kamikaze",
+    "year": "2007"
+  },
+  {
+    "id": 939,
+    "name": "IFL - Moline",
+    "date": "Saturday, April 7, 2007",
+    "location": "",
+    "slug": "ifl-moline",
     "year": "2007"
   },
   {
@@ -5424,11 +7400,67 @@
     "year": "2007"
   },
   {
+    "id": 902,
+    "name": "WEC 26: Condit vs. Alessio",
+    "date": "Saturday, March 24, 2007",
+    "location": "",
+    "slug": "wec-26-condit-vs-alessio",
+    "year": "2007"
+  },
+  {
+    "id": 1176,
+    "name": "Floripa Fight 4",
+    "date": "Saturday, March 10, 2007",
+    "location": "",
+    "slug": "floripa-fight-4",
+    "year": "2007"
+  },
+  {
     "id": 85,
     "name": "UFC 68: The Uprising",
     "date": "Saturday, March 3, 2007",
     "location": "Columbus, Ohio, USA",
     "slug": "ufc-68-the-uprising",
+    "year": "2007"
+  },
+  {
+    "id": 1185,
+    "name": "Pancrase - Rising 2",
+    "date": "Wednesday, February 28, 2007",
+    "location": "",
+    "slug": "pancrase-rising-2",
+    "year": "2007"
+  },
+  {
+    "id": 833,
+    "name": "PRIDE 33: The Second Coming",
+    "date": "Saturday, February 24, 2007",
+    "location": "",
+    "slug": "pride-33-the-second-coming",
+    "year": "2007"
+  },
+  {
+    "id": 1098,
+    "name": "BodogFight - Costa Rica 2/18",
+    "date": "Sunday, February 18, 2007",
+    "location": "",
+    "slug": "bodogfight-costa-rica-218",
+    "year": "2007"
+  },
+  {
+    "id": 1011,
+    "name": "Strikeforce - Young Guns",
+    "date": "Saturday, February 10, 2007",
+    "location": "",
+    "slug": "strikeforce-young-guns",
+    "year": "2007"
+  },
+  {
+    "id": 920,
+    "name": "EliteXC - Destiny",
+    "date": "Saturday, February 10, 2007",
+    "location": "",
+    "slug": "elitexc-destiny",
     "year": "2007"
   },
   {
@@ -5448,11 +7480,51 @@
     "year": "2007"
   },
   {
+    "id": 806,
+    "name": "WEC 25: McCullough vs. Cope",
+    "date": "Saturday, January 20, 2007",
+    "location": "",
+    "slug": "wec-25-mccullough-vs-cope",
+    "year": "2007"
+  },
+  {
+    "id": 1192,
+    "name": "K-1 Dynamite!! 2006",
+    "date": "Sunday, December 31, 2006",
+    "location": "",
+    "slug": "k-1-dynamite-2006",
+    "year": "2006"
+  },
+  {
+    "id": 791,
+    "name": "PRIDE Shockwave 2006",
+    "date": "Sunday, December 31, 2006",
+    "location": "",
+    "slug": "pride-shockwave-2006",
+    "year": "2006"
+  },
+  {
     "id": 82,
     "name": "UFC 66: Liddell vs Ortiz 2",
     "date": "Saturday, December 30, 2006",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-66-liddell-vs-ortiz-2",
+    "year": "2006"
+  },
+  {
+    "id": 940,
+    "name": "IFL - Championship Final",
+    "date": "Friday, December 29, 2006",
+    "location": "",
+    "slug": "ifl-championship-final",
+    "year": "2006"
+  },
+  {
+    "id": 980,
+    "name": "BodogFight - St. Petersburg",
+    "date": "Saturday, December 16, 2006",
+    "location": "",
+    "slug": "bodogfight-st-petersburg",
     "year": "2006"
   },
   {
@@ -5464,11 +7536,43 @@
     "year": "2006"
   },
   {
+    "id": 958,
+    "name": "Strikeforce - Triple Threat",
+    "date": "Friday, December 8, 2006",
+    "location": "",
+    "slug": "strikeforce-triple-threat",
+    "year": "2006"
+  },
+  {
+    "id": 1186,
+    "name": "Fury FC 2",
+    "date": "Thursday, November 30, 2006",
+    "location": "",
+    "slug": "fury-fc-2",
+    "year": "2006"
+  },
+  {
+    "id": 1177,
+    "name": "Storm Samurai 12",
+    "date": "Saturday, November 25, 2006",
+    "location": "",
+    "slug": "storm-samurai-12",
+    "year": "2006"
+  },
+  {
     "id": 80,
     "name": "UFC 65: Bad Intentions",
     "date": "Saturday, November 18, 2006",
     "location": "Sacramento, California, USA",
     "slug": "ufc-65-bad-intentions",
+    "year": "2006"
+  },
+  {
+    "id": 1057,
+    "name": "2H2H - Pride & Honor",
+    "date": "Sunday, November 12, 2006",
+    "location": "",
+    "slug": "2h2h-pride-honor",
     "year": "2006"
   },
   {
@@ -5480,11 +7584,51 @@
     "year": "2006"
   },
   {
+    "id": 1187,
+    "name": "Show Fight 5",
+    "date": "Thursday, November 9, 2006",
+    "location": "",
+    "slug": "show-fight-5",
+    "year": "2006"
+  },
+  {
+    "id": 792,
+    "name": "PRIDE Bushido 13",
+    "date": "Sunday, November 5, 2006",
+    "location": "",
+    "slug": "pride-bushido-13",
+    "year": "2006"
+  },
+  {
+    "id": 1034,
+    "name": "PRIDE 32: The Real Deal",
+    "date": "Saturday, October 21, 2006",
+    "location": "",
+    "slug": "pride-32-the-real-deal",
+    "year": "2006"
+  },
+  {
+    "id": 1071,
+    "name": "Shooto - Champion Carnival",
+    "date": "Saturday, October 14, 2006",
+    "location": "",
+    "slug": "shooto-champion-carnival",
+    "year": "2006"
+  },
+  {
     "id": 78,
     "name": "UFC 64: Unstoppable",
     "date": "Saturday, October 14, 2006",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-64-unstoppable",
+    "year": "2006"
+  },
+  {
+    "id": 1085,
+    "name": "WEC 24: Full Force",
+    "date": "Thursday, October 12, 2006",
+    "location": "",
+    "slug": "wec-24-full-force",
     "year": "2006"
   },
   {
@@ -5496,11 +7640,67 @@
     "year": "2006"
   },
   {
+    "id": 1193,
+    "name": "K-1 Hero's 7",
+    "date": "Monday, October 9, 2006",
+    "location": "",
+    "slug": "k-1-heros-7",
+    "year": "2006"
+  },
+  {
+    "id": 981,
+    "name": "Strikeforce - Tank vs. Buentello",
+    "date": "Saturday, October 7, 2006",
+    "location": "",
+    "slug": "strikeforce-tank-vs-buentello",
+    "year": "2006"
+  },
+  {
+    "id": 1188,
+    "name": "Fury FC 1",
+    "date": "Wednesday, September 27, 2006",
+    "location": "",
+    "slug": "fury-fc-1",
+    "year": "2006"
+  },
+  {
+    "id": 941,
+    "name": "IFL - Gracie vs. Miletich",
+    "date": "Saturday, September 23, 2006",
+    "location": "",
+    "slug": "ifl-gracie-vs-miletich",
+    "year": "2006"
+  },
+  {
     "id": 76,
     "name": "UFC 63: Hughes vs Penn",
     "date": "Saturday, September 23, 2006",
     "location": "Anaheim, California, USA",
     "slug": "ufc-63-hughes-vs-penn",
+    "year": "2006"
+  },
+  {
+    "id": 1173,
+    "name": "WPFC 1",
+    "date": "Friday, September 15, 2006",
+    "location": "",
+    "slug": "wpfc-1",
+    "year": "2006"
+  },
+  {
+    "id": 834,
+    "name": "PRIDE Final Conflict Absolute",
+    "date": "Sunday, September 10, 2006",
+    "location": "",
+    "slug": "pride-final-conflict-absolute",
+    "year": "2006"
+  },
+  {
+    "id": 793,
+    "name": "PRIDE Bushido 12",
+    "date": "Sunday, August 27, 2006",
+    "location": "",
+    "slug": "pride-bushido-12",
     "year": "2006"
   },
   {
@@ -5512,6 +7712,14 @@
     "year": "2006"
   },
   {
+    "id": 807,
+    "name": "WEC 23: Hot August Fights",
+    "date": "Thursday, August 17, 2006",
+    "location": "",
+    "slug": "wec-23-hot-august-fights",
+    "year": "2006"
+  },
+  {
     "id": 74,
     "name": "UFC Fight Night 6",
     "date": "Thursday, August 17, 2006",
@@ -5520,11 +7728,43 @@
     "year": "2006"
   },
   {
+    "id": 1194,
+    "name": "K-1 Hero's 6",
+    "date": "Saturday, August 5, 2006",
+    "location": "",
+    "slug": "k-1-heros-6",
+    "year": "2006"
+  },
+  {
+    "id": 810,
+    "name": "WEC 22: The Hitmen",
+    "date": "Friday, July 28, 2006",
+    "location": "",
+    "slug": "wec-22-the-hitmen",
+    "year": "2006"
+  },
+  {
+    "id": 1095,
+    "name": "WFA - King of the Streets",
+    "date": "Saturday, July 22, 2006",
+    "location": "",
+    "slug": "wfa-king-of-the-streets",
+    "year": "2006"
+  },
+  {
     "id": 73,
     "name": "UFC 61: Bitter Rivals",
     "date": "Saturday, July 8, 2006",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-61-bitter-rivals",
+    "year": "2006"
+  },
+  {
+    "id": 835,
+    "name": "PRIDE Critical Countdown Absolute",
+    "date": "Saturday, July 1, 2006",
+    "location": "",
+    "slug": "pride-critical-countdown-absolute",
     "year": "2006"
   },
   {
@@ -5544,11 +7784,67 @@
     "year": "2006"
   },
   {
+    "id": 973,
+    "name": "WEC 21: Tapout",
+    "date": "Thursday, June 15, 2006",
+    "location": "",
+    "slug": "wec-21-tapout",
+    "year": "2006"
+  },
+  {
+    "id": 836,
+    "name": "Strikeforce - Revenge",
+    "date": "Friday, June 9, 2006",
+    "location": "",
+    "slug": "strikeforce-revenge",
+    "year": "2006"
+  },
+  {
+    "id": 794,
+    "name": "PRIDE Bushido 11",
+    "date": "Sunday, June 4, 2006",
+    "location": "",
+    "slug": "pride-bushido-11",
+    "year": "2006"
+  },
+  {
     "id": 70,
     "name": "UFC 60: Hughes vs Gracie",
     "date": "Saturday, May 27, 2006",
     "location": "Los Angeles, California, USA",
     "slug": "ufc-60-hughes-vs-gracie",
+    "year": "2006"
+  },
+  {
+    "id": 1140,
+    "name": "Jungle Fight 6",
+    "date": "Saturday, April 29, 2006",
+    "location": "",
+    "slug": "jungle-fight-6",
+    "year": "2006"
+  },
+  {
+    "id": 942,
+    "name": "IFL - Legends Championship 2006",
+    "date": "Saturday, April 29, 2006",
+    "location": "",
+    "slug": "ifl-legends-championship-2006",
+    "year": "2006"
+  },
+  {
+    "id": 856,
+    "name": "Cage Rage 16: Critical Condition",
+    "date": "Saturday, April 22, 2006",
+    "location": "",
+    "slug": "cage-rage-16-critical-condition",
+    "year": "2006"
+  },
+  {
+    "id": 987,
+    "name": "ROTR 9",
+    "date": "Friday, April 21, 2006",
+    "location": "",
+    "slug": "rotr-9",
     "year": "2006"
   },
   {
@@ -5568,11 +7864,59 @@
     "year": "2006"
   },
   {
+    "id": 795,
+    "name": "PRIDE Bushido 10",
+    "date": "Sunday, April 2, 2006",
+    "location": "",
+    "slug": "pride-bushido-10",
+    "year": "2006"
+  },
+  {
+    "id": 837,
+    "name": "WCFC - No Guts, No Glory",
+    "date": "Saturday, March 18, 2006",
+    "location": "",
+    "slug": "wcfc-no-guts-no-glory",
+    "year": "2006"
+  },
+  {
+    "id": 1024,
+    "name": "WEC 19: Undisputed",
+    "date": "Friday, March 17, 2006",
+    "location": "",
+    "slug": "wec-19-undisputed",
+    "year": "2006"
+  },
+  {
+    "id": 1195,
+    "name": "K-1 Hero's 4",
+    "date": "Wednesday, March 15, 2006",
+    "location": "",
+    "slug": "k-1-heros-4",
+    "year": "2006"
+  },
+  {
+    "id": 969,
+    "name": "Strikeforce - Shamrock vs. Gracie",
+    "date": "Friday, March 10, 2006",
+    "location": "",
+    "slug": "strikeforce-shamrock-vs-gracie",
+    "year": "2006"
+  },
+  {
     "id": 67,
     "name": "UFC 58: USA vs Canada",
     "date": "Saturday, March 4, 2006",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-58-usa-vs-canada",
+    "year": "2006"
+  },
+  {
+    "id": 838,
+    "name": "PRIDE 31: Unbreakable",
+    "date": "Sunday, February 26, 2006",
+    "location": "",
+    "slug": "pride-31-unbreakable",
     "year": "2006"
   },
   {
@@ -5584,12 +7928,68 @@
     "year": "2006"
   },
   {
+    "id": 857,
+    "name": "ROTR 8",
+    "date": "Friday, January 20, 2006",
+    "location": "",
+    "slug": "rotr-8",
+    "year": "2006"
+  },
+  {
     "id": 65,
     "name": "UFC Fight Night 3",
     "date": "Monday, January 16, 2006",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night-3",
     "year": "2006"
+  },
+  {
+    "id": 1017,
+    "name": "WEC 18: Unfinished Business",
+    "date": "Friday, January 13, 2006",
+    "location": "",
+    "slug": "wec-18-unfinished-business",
+    "year": "2006"
+  },
+  {
+    "id": 1035,
+    "name": "PRIDE Shockwave 2005",
+    "date": "Saturday, December 31, 2005",
+    "location": "",
+    "slug": "pride-shockwave-2005",
+    "year": "2005"
+  },
+  {
+    "id": 1189,
+    "name": "Shooto Brazil 9",
+    "date": "Saturday, December 3, 2005",
+    "location": "",
+    "slug": "shooto-brazil-9",
+    "year": "2005"
+  },
+  {
+    "id": 858,
+    "name": "Cage Rage 14: Punishment",
+    "date": "Saturday, December 3, 2005",
+    "location": "",
+    "slug": "cage-rage-14-punishment",
+    "year": "2005"
+  },
+  {
+    "id": 1069,
+    "name": "DEEP 22",
+    "date": "Friday, December 2, 2005",
+    "location": "",
+    "slug": "deep-22",
+    "year": "2005"
+  },
+  {
+    "id": 1150,
+    "name": "CWFC - Strike Force 4",
+    "date": "Saturday, November 26, 2005",
+    "location": "",
+    "slug": "cwfc-strike-force-4",
+    "year": "2005"
   },
   {
     "id": 64,
@@ -5600,11 +8000,59 @@
     "year": "2005"
   },
   {
+    "id": 1135,
+    "name": "Shooto 2005 11/6",
+    "date": "Sunday, November 6, 2005",
+    "location": "",
+    "slug": "shooto-2005-116",
+    "year": "2005"
+  },
+  {
+    "id": 1196,
+    "name": "K-1 Hero's Seoul",
+    "date": "Saturday, November 5, 2005",
+    "location": "",
+    "slug": "k-1-heros-seoul",
+    "year": "2005"
+  },
+  {
     "id": 63,
     "name": "The Ultimate Fighter: Team Hughes vs. Team Franklin Finale",
     "date": "Saturday, November 5, 2005",
     "location": "Las Vegas, Nevada, USA",
     "slug": "the-ultimate-fighter-team-hughes-vs-team-franklin-finale",
+    "year": "2005"
+  },
+  {
+    "id": 1058,
+    "name": "PRIDE 30: Fully Loaded",
+    "date": "Sunday, October 23, 2005",
+    "location": "",
+    "slug": "pride-30-fully-loaded",
+    "year": "2005"
+  },
+  {
+    "id": 1153,
+    "name": "WEC 17: Halloween Fury 4",
+    "date": "Friday, October 14, 2005",
+    "location": "",
+    "slug": "wec-17-halloween-fury-4",
+    "year": "2005"
+  },
+  {
+    "id": 1197,
+    "name": "K-1 World MAX 2005 Champions Challenge",
+    "date": "Wednesday, October 12, 2005",
+    "location": "",
+    "slug": "k-1-world-max-2005-champions-challenge",
+    "year": "2005"
+  },
+  {
+    "id": 1070,
+    "name": "Bushido Europe - Rotterdam Rumble",
+    "date": "Sunday, October 9, 2005",
+    "location": "",
+    "slug": "bushido-europe-rotterdam-rumble",
     "year": "2005"
   },
   {
@@ -5624,11 +8072,51 @@
     "year": "2005"
   },
   {
+    "id": 1151,
+    "name": "CWFC - Strike Force 3",
+    "date": "Saturday, October 1, 2005",
+    "location": "",
+    "slug": "cwfc-strike-force-3",
+    "year": "2005"
+  },
+  {
+    "id": 796,
+    "name": "PRIDE Bushido 9: The Tournament",
+    "date": "Sunday, September 25, 2005",
+    "location": "",
+    "slug": "pride-bushido-9-the-tournament",
+    "year": "2005"
+  },
+  {
+    "id": 1190,
+    "name": "Predator FC 1",
+    "date": "Saturday, September 10, 2005",
+    "location": "",
+    "slug": "predator-fc-1",
+    "year": "2005"
+  },
+  {
+    "id": 839,
+    "name": "PRIDE Final Conflict 2005",
+    "date": "Sunday, August 28, 2005",
+    "location": "",
+    "slug": "pride-final-conflict-2005",
+    "year": "2005"
+  },
+  {
     "id": 60,
     "name": "UFC 54: Boiling Point",
     "date": "Saturday, August 20, 2005",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-54-boiling-point",
+    "year": "2005"
+  },
+  {
+    "id": 1167,
+    "name": "WEC 16: Clash of the Titans 2",
+    "date": "Thursday, August 18, 2005",
+    "location": "",
+    "slug": "wec-16-clash-of-the-titans-2",
     "year": "2005"
   },
   {
@@ -5640,11 +8128,75 @@
     "year": "2005"
   },
   {
+    "id": 879,
+    "name": "PRIDE Bushido 8",
+    "date": "Sunday, July 17, 2005",
+    "location": "",
+    "slug": "pride-bushido-8",
+    "year": "2005"
+  },
+  {
+    "id": 1152,
+    "name": "CWFC - Strike Force 2",
+    "date": "Saturday, July 16, 2005",
+    "location": "",
+    "slug": "cwfc-strike-force-2",
+    "year": "2005"
+  },
+  {
+    "id": 1105,
+    "name": "Freedom Fight - Canada vs. USA",
+    "date": "Saturday, July 9, 2005",
+    "location": "",
+    "slug": "freedom-fight-canada-vs-usa",
+    "year": "2005"
+  },
+  {
+    "id": 930,
+    "name": "K-1 World Grand Prix Hawaii",
+    "date": "Saturday, July 9, 2005",
+    "location": "",
+    "slug": "k-1-world-grand-prix-hawaii",
+    "year": "2005"
+  },
+  {
+    "id": 1198,
+    "name": "K-1 Hero's 2",
+    "date": "Wednesday, July 6, 2005",
+    "location": "",
+    "slug": "k-1-heros-2",
+    "year": "2005"
+  },
+  {
+    "id": 840,
+    "name": "PRIDE Critical Countdown 2005",
+    "date": "Sunday, June 26, 2005",
+    "location": "",
+    "slug": "pride-critical-countdown-2005",
+    "year": "2005"
+  },
+  {
     "id": 58,
     "name": "UFC 53: Heavy Hitters",
     "date": "Saturday, June 4, 2005",
     "location": "Atlantic City, New Jersey, USA",
     "slug": "ufc-53-heavy-hitters",
+    "year": "2005"
+  },
+  {
+    "id": 859,
+    "name": "Cage Rage 11: Face Off",
+    "date": "Saturday, April 30, 2005",
+    "location": "",
+    "slug": "cage-rage-11-face-off",
+    "year": "2005"
+  },
+  {
+    "id": 841,
+    "name": "PRIDE Total Elimination 2005",
+    "date": "Saturday, April 23, 2005",
+    "location": "",
+    "slug": "pride-total-elimination-2005",
     "year": "2005"
   },
   {
@@ -5664,6 +8216,30 @@
     "year": "2005"
   },
   {
+    "id": 854,
+    "name": "PRIDE Bushido 6",
+    "date": "Sunday, April 3, 2005",
+    "location": "",
+    "slug": "pride-bushido-6",
+    "year": "2005"
+  },
+  {
+    "id": 931,
+    "name": "K-1 Hero's 1",
+    "date": "Saturday, March 26, 2005",
+    "location": "",
+    "slug": "k-1-heros-1",
+    "year": "2005"
+  },
+  {
+    "id": 842,
+    "name": "PRIDE 29: Fists Of Fire",
+    "date": "Sunday, February 20, 2005",
+    "location": "",
+    "slug": "pride-29-fists-of-fire",
+    "year": "2005"
+  },
+  {
     "id": 55,
     "name": "UFC 51: Super Saturday",
     "date": "Saturday, February 5, 2005",
@@ -5672,11 +8248,107 @@
     "year": "2005"
   },
   {
+    "id": 1131,
+    "name": "Shooto 2005 1/29",
+    "date": "Saturday, January 29, 2005",
+    "location": "",
+    "slug": "shooto-2005-129",
+    "year": "2005"
+  },
+  {
+    "id": 1043,
+    "name": "TKO 19",
+    "date": "Saturday, January 29, 2005",
+    "location": "",
+    "slug": "tko-19",
+    "year": "2005"
+  },
+  {
+    "id": 965,
+    "name": "WEC 13: Heavyweight Explosion",
+    "date": "Saturday, January 22, 2005",
+    "location": "",
+    "slug": "wec-13-heavyweight-explosion",
+    "year": "2005"
+  },
+  {
+    "id": 1199,
+    "name": "K-1 Dynamite!! 2004",
+    "date": "Friday, December 31, 2004",
+    "location": "",
+    "slug": "k-1-dynamite-2004",
+    "year": "2004"
+  },
+  {
+    "id": 860,
+    "name": "PRIDE Shockwave 2004",
+    "date": "Friday, December 31, 2004",
+    "location": "",
+    "slug": "pride-shockwave-2004",
+    "year": "2004"
+  },
+  {
+    "id": 1031,
+    "name": "SuperBrawl 38",
+    "date": "Sunday, December 12, 2004",
+    "location": "",
+    "slug": "superbrawl-38",
+    "year": "2004"
+  },
+  {
+    "id": 932,
+    "name": "ROTR 6",
+    "date": "Saturday, November 20, 2004",
+    "location": "",
+    "slug": "rotr-6",
+    "year": "2004"
+  },
+  {
+    "id": 843,
+    "name": "PRIDE 28: High Octane",
+    "date": "Sunday, October 31, 2004",
+    "location": "",
+    "slug": "pride-28-high-octane",
+    "year": "2004"
+  },
+  {
+    "id": 1126,
+    "name": "DEEP 16",
+    "date": "Saturday, October 30, 2004",
+    "location": "",
+    "slug": "deep-16",
+    "year": "2004"
+  },
+  {
     "id": 54,
     "name": "UFC 50: The War Of '04",
     "date": "Friday, October 22, 2004",
     "location": "Atlantic City, New Jersey, USA",
     "slug": "ufc-50-the-war-of-04",
+    "year": "2004"
+  },
+  {
+    "id": 811,
+    "name": "WEC 12: Halloween Fury 3",
+    "date": "Thursday, October 21, 2004",
+    "location": "",
+    "slug": "wec-12-halloween-fury-3",
+    "year": "2004"
+  },
+  {
+    "id": 989,
+    "name": "PRIDE Bushido 5",
+    "date": "Thursday, October 14, 2004",
+    "location": "",
+    "slug": "pride-bushido-5",
+    "year": "2004"
+  },
+  {
+    "id": 861,
+    "name": "Cage Rage 8: Knights of the Octagon",
+    "date": "Saturday, September 11, 2004",
+    "location": "",
+    "slug": "cage-rage-8-knights-of-the-octagon",
     "year": "2004"
   },
   {
@@ -5688,11 +8360,99 @@
     "year": "2004"
   },
   {
+    "id": 1157,
+    "name": "WEC 11: Evolution",
+    "date": "Friday, August 20, 2004",
+    "location": "",
+    "slug": "wec-11-evolution",
+    "year": "2004"
+  },
+  {
+    "id": 905,
+    "name": "PRIDE Final Conflict 2004",
+    "date": "Sunday, August 15, 2004",
+    "location": "",
+    "slug": "pride-final-conflict-2004",
+    "year": "2004"
+  },
+  {
+    "id": 855,
+    "name": "PRIDE Bushido 4",
+    "date": "Monday, July 19, 2004",
+    "location": "",
+    "slug": "pride-bushido-4",
+    "year": "2004"
+  },
+  {
+    "id": 1168,
+    "name": "AFC 1",
+    "date": "Wednesday, July 14, 2004",
+    "location": "",
+    "slug": "afc-1",
+    "year": "2004"
+  },
+  {
+    "id": 862,
+    "name": "Gladiator FC - Day 2",
+    "date": "Sunday, June 27, 2004",
+    "location": "",
+    "slug": "gladiator-fc-day-2",
+    "year": "2004"
+  },
+  {
+    "id": 906,
+    "name": "PRIDE Critical Countdown 2004",
+    "date": "Sunday, June 20, 2004",
+    "location": "",
+    "slug": "pride-critical-countdown-2004",
+    "year": "2004"
+  },
+  {
     "id": 52,
     "name": "UFC 48: Payback",
     "date": "Saturday, June 19, 2004",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-48-payback",
+    "year": "2004"
+  },
+  {
+    "id": 1046,
+    "name": "KOTC 36: Unfinished Business",
+    "date": "Saturday, June 12, 2004",
+    "location": "",
+    "slug": "kotc-36-unfinished-business",
+    "year": "2004"
+  },
+  {
+    "id": 1090,
+    "name": "GC 27",
+    "date": "Thursday, June 3, 2004",
+    "location": "",
+    "slug": "gc-27",
+    "year": "2004"
+  },
+  {
+    "id": 1164,
+    "name": "GC 26",
+    "date": "Wednesday, June 2, 2004",
+    "location": "",
+    "slug": "gc-26",
+    "year": "2004"
+  },
+  {
+    "id": 907,
+    "name": "PRIDE Total Elimination 2004",
+    "date": "Sunday, April 25, 2004",
+    "location": "",
+    "slug": "pride-total-elimination-2004",
+    "year": "2004"
+  },
+  {
+    "id": 1169,
+    "name": "SuperBrawl 35",
+    "date": "Friday, April 16, 2004",
+    "location": "",
+    "slug": "superbrawl-35",
     "year": "2004"
   },
   {
@@ -5704,12 +8464,92 @@
     "year": "2004"
   },
   {
+    "id": 1141,
+    "name": "K-1 Beast 2004",
+    "date": "Sunday, March 14, 2004",
+    "location": "",
+    "slug": "k-1-beast-2004",
+    "year": "2004"
+  },
+  {
+    "id": 1133,
+    "name": "Mass Destruction 15",
+    "date": "Saturday, February 21, 2004",
+    "location": "",
+    "slug": "mass-destruction-15",
+    "year": "2004"
+  },
+  {
+    "id": 1117,
+    "name": "KOTC 33: After Shock",
+    "date": "Friday, February 20, 2004",
+    "location": "",
+    "slug": "kotc-33-after-shock",
+    "year": "2004"
+  },
+  {
+    "id": 797,
+    "name": "PRIDE Bushido 2",
+    "date": "Sunday, February 15, 2004",
+    "location": "",
+    "slug": "pride-bushido-2",
+    "year": "2004"
+  },
+  {
+    "id": 1063,
+    "name": "PRIDE 27: Inferno",
+    "date": "Sunday, February 1, 2004",
+    "location": "",
+    "slug": "pride-27-inferno",
+    "year": "2004"
+  },
+  {
     "id": 50,
     "name": "UFC 46: Supernatural",
     "date": "Saturday, January 31, 2004",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-46-supernatural",
     "year": "2004"
+  },
+  {
+    "id": 1015,
+    "name": "WEC 9: Cold Blooded",
+    "date": "Friday, January 16, 2004",
+    "location": "",
+    "slug": "wec-9-cold-blooded",
+    "year": "2004"
+  },
+  {
+    "id": 1032,
+    "name": "PRIDE Shockwave 2003",
+    "date": "Wednesday, December 31, 2003",
+    "location": "",
+    "slug": "pride-shockwave-2003",
+    "year": "2003"
+  },
+  {
+    "id": 844,
+    "name": "Inoki Bom-Ba-Ye 2003",
+    "date": "Wednesday, December 31, 2003",
+    "location": "",
+    "slug": "inoki-bom-ba-ye-2003",
+    "year": "2003"
+  },
+  {
+    "id": 1061,
+    "name": "Heat FC 2",
+    "date": "Thursday, December 18, 2003",
+    "location": "",
+    "slug": "heat-fc-2",
+    "year": "2003"
+  },
+  {
+    "id": 1072,
+    "name": "TKO 14",
+    "date": "Saturday, November 29, 2003",
+    "location": "",
+    "slug": "tko-14",
+    "year": "2003"
   },
   {
     "id": 49,
@@ -5720,11 +8560,91 @@
     "year": "2003"
   },
   {
+    "id": 908,
+    "name": "PRIDE Final Conflict 2003",
+    "date": "Sunday, November 9, 2003",
+    "location": "",
+    "slug": "pride-final-conflict-2003",
+    "year": "2003"
+  },
+  {
+    "id": 1016,
+    "name": "WEC 8: Halloween Fury 2",
+    "date": "Friday, October 17, 2003",
+    "location": "",
+    "slug": "wec-8-halloween-fury-2",
+    "year": "2003"
+  },
+  {
+    "id": 933,
+    "name": "ROTR 4",
+    "date": "Friday, October 10, 2003",
+    "location": "",
+    "slug": "rotr-4",
+    "year": "2003"
+  },
+  {
+    "id": 923,
+    "name": "PRIDE Bushido 1",
+    "date": "Sunday, October 5, 2003",
+    "location": "",
+    "slug": "pride-bushido-1",
+    "year": "2003"
+  },
+  {
     "id": 48,
     "name": "UFC 44: Undisputed",
     "date": "Friday, September 26, 2003",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-44-undisputed",
+    "year": "2003"
+  },
+  {
+    "id": 1059,
+    "name": "Jungle Fight 1",
+    "date": "Saturday, September 13, 2003",
+    "location": "",
+    "slug": "jungle-fight-1",
+    "year": "2003"
+  },
+  {
+    "id": 1003,
+    "name": "IFC - Global Domination",
+    "date": "Saturday, September 6, 2003",
+    "location": "",
+    "slug": "ifc-global-domination",
+    "year": "2003"
+  },
+  {
+    "id": 845,
+    "name": "PRIDE Total Elimination 2003",
+    "date": "Sunday, August 10, 2003",
+    "location": "",
+    "slug": "pride-total-elimination-2003",
+    "year": "2003"
+  },
+  {
+    "id": 1148,
+    "name": "Meca 9",
+    "date": "Friday, August 1, 2003",
+    "location": "",
+    "slug": "meca-9",
+    "year": "2003"
+  },
+  {
+    "id": 1047,
+    "name": "KOTC 24: Mayhem",
+    "date": "Saturday, June 14, 2003",
+    "location": "",
+    "slug": "kotc-24-mayhem",
+    "year": "2003"
+  },
+  {
+    "id": 846,
+    "name": "PRIDE 26: Bad to the Bone",
+    "date": "Sunday, June 8, 2003",
+    "location": "",
+    "slug": "pride-26-bad-to-the-bone",
     "year": "2003"
   },
   {
@@ -5744,6 +8664,30 @@
     "year": "2003"
   },
   {
+    "id": 1079,
+    "name": "WEC 6: Return of a Legend",
+    "date": "Thursday, March 27, 2003",
+    "location": "",
+    "slug": "wec-6-return-of-a-legend",
+    "year": "2003"
+  },
+  {
+    "id": 1060,
+    "name": "WAFF 2",
+    "date": "Saturday, March 22, 2003",
+    "location": "",
+    "slug": "waff-2",
+    "year": "2003"
+  },
+  {
+    "id": 812,
+    "name": "PRIDE 25: Body Blow",
+    "date": "Sunday, March 16, 2003",
+    "location": "",
+    "slug": "pride-25-body-blow",
+    "year": "2003"
+  },
+  {
     "id": 45,
     "name": "UFC 41: Onslaught",
     "date": "Friday, February 28, 2003",
@@ -5752,11 +8696,99 @@
     "year": "2003"
   },
   {
+    "id": 1073,
+    "name": "UCC 12",
+    "date": "Saturday, January 25, 2003",
+    "location": "",
+    "slug": "ucc-12",
+    "year": "2003"
+  },
+  {
+    "id": 1154,
+    "name": "Inoki Bom-Ba-Ye 2002",
+    "date": "Tuesday, December 31, 2002",
+    "location": "",
+    "slug": "inoki-bom-ba-ye-2002",
+    "year": "2002"
+  },
+  {
+    "id": 847,
+    "name": "PRIDE 24: Cold Fury 3",
+    "date": "Monday, December 23, 2002",
+    "location": "",
+    "slug": "pride-24-cold-fury-3",
+    "year": "2002"
+  },
+  {
+    "id": 1048,
+    "name": "KOTC 20: Crossroads",
+    "date": "Sunday, December 15, 2002",
+    "location": "",
+    "slug": "kotc-20-crossroads",
+    "year": "2002"
+  },
+  {
+    "id": 909,
+    "name": "PRIDE 23: Championship Chaos 2",
+    "date": "Sunday, November 24, 2002",
+    "location": "",
+    "slug": "pride-23-championship-chaos-2",
+    "year": "2002"
+  },
+  {
+    "id": 813,
+    "name": "WFA 3",
+    "date": "Saturday, November 23, 2002",
+    "location": "",
+    "slug": "wfa-3",
+    "year": "2002"
+  },
+  {
     "id": 44,
     "name": "UFC 40: Vendetta",
     "date": "Friday, November 22, 2002",
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-40-vendetta",
+    "year": "2002"
+  },
+  {
+    "id": 1149,
+    "name": "Meca 7",
+    "date": "Friday, November 8, 2002",
+    "location": "",
+    "slug": "meca-7",
+    "year": "2002"
+  },
+  {
+    "id": 1118,
+    "name": "KOTC 17: San Jacinto",
+    "date": "Saturday, October 19, 2002",
+    "location": "",
+    "slug": "kotc-17-san-jacinto",
+    "year": "2002"
+  },
+  {
+    "id": 1080,
+    "name": "WEC 5: Halloween Fury",
+    "date": "Friday, October 18, 2002",
+    "location": "",
+    "slug": "wec-5-halloween-fury",
+    "year": "2002"
+  },
+  {
+    "id": 1074,
+    "name": "UCC 11",
+    "date": "Friday, October 11, 2002",
+    "location": "",
+    "slug": "ucc-11",
+    "year": "2002"
+  },
+  {
+    "id": 863,
+    "name": "PRIDE 22: Beasts from the East 2",
+    "date": "Sunday, September 29, 2002",
+    "location": "",
+    "slug": "pride-22-beasts-from-the-east-2",
     "year": "2002"
   },
   {
@@ -5768,11 +8800,75 @@
     "year": "2002"
   },
   {
+    "id": 1170,
+    "name": "UCC Hawaii",
+    "date": "Tuesday, September 17, 2002",
+    "location": "",
+    "slug": "ucc-hawaii",
+    "year": "2002"
+  },
+  {
+    "id": 1136,
+    "name": "WEC 4: Rumble Under the Sun",
+    "date": "Saturday, August 31, 2002",
+    "location": "",
+    "slug": "wec-4-rumble-under-the-sun",
+    "year": "2002"
+  },
+  {
+    "id": 910,
+    "name": "PRIDE Shockwave 2002",
+    "date": "Wednesday, August 28, 2002",
+    "location": "",
+    "slug": "pride-shockwave-2002",
+    "year": "2002"
+  },
+  {
+    "id": 911,
+    "name": "UFO - Legend",
+    "date": "Thursday, August 8, 2002",
+    "location": "",
+    "slug": "ufo-legend",
+    "year": "2002"
+  },
+  {
+    "id": 848,
+    "name": "PRIDE The Best Vol.2",
+    "date": "Saturday, July 20, 2002",
+    "location": "",
+    "slug": "pride-the-best-vol2",
+    "year": "2002"
+  },
+  {
     "id": 42,
     "name": "UFC 38: Brawl at the Hall",
     "date": "Saturday, July 13, 2002",
     "location": "London, England, United Kingdom",
     "slug": "ufc-38-brawl-at-the-hall",
+    "year": "2002"
+  },
+  {
+    "id": 777,
+    "name": "WFA 2",
+    "date": "Friday, July 5, 2002",
+    "location": "",
+    "slug": "wfa-2",
+    "year": "2002"
+  },
+  {
+    "id": 814,
+    "name": "PRIDE 21: Demolition",
+    "date": "Sunday, June 23, 2002",
+    "location": "",
+    "slug": "pride-21-demolition",
+    "year": "2002"
+  },
+  {
+    "id": 1111,
+    "name": "KOTC 15: Bad Intentions",
+    "date": "Saturday, June 22, 2002",
+    "location": "",
+    "slug": "kotc-15-bad-intentions",
     "year": "2002"
   },
   {
@@ -5784,11 +8880,43 @@
     "year": "2002"
   },
   {
+    "id": 1129,
+    "name": "KOTC 14",
+    "date": "Wednesday, June 19, 2002",
+    "location": "",
+    "slug": "kotc-14",
+    "year": "2002"
+  },
+  {
+    "id": 1075,
+    "name": "UCC 10",
+    "date": "Saturday, June 15, 2002",
+    "location": "",
+    "slug": "ucc-10",
+    "year": "2002"
+  },
+  {
+    "id": 1086,
+    "name": "WEC 3: All or Nothing",
+    "date": "Friday, June 7, 2002",
+    "location": "",
+    "slug": "wec-3-all-or-nothing",
+    "year": "2002"
+  },
+  {
     "id": 40,
     "name": "UFC 37: High Impact",
     "date": "Friday, May 10, 2002",
     "location": "Bossier City, Louisiana, USA",
     "slug": "ufc-37-high-impact",
+    "year": "2002"
+  },
+  {
+    "id": 1036,
+    "name": "PRIDE 20: Armed and Ready",
+    "date": "Sunday, April 28, 2002",
+    "location": "",
+    "slug": "pride-20-armed-and-ready",
     "year": "2002"
   },
   {
@@ -5800,12 +8928,68 @@
     "year": "2002"
   },
   {
+    "id": 815,
+    "name": "PRIDE 19: Bad Blood",
+    "date": "Sunday, February 24, 2002",
+    "location": "",
+    "slug": "pride-19-bad-blood",
+    "year": "2002"
+  },
+  {
+    "id": 864,
+    "name": "Meca 6",
+    "date": "Thursday, January 31, 2002",
+    "location": "",
+    "slug": "meca-6",
+    "year": "2002"
+  },
+  {
+    "id": 1076,
+    "name": "UCC 7",
+    "date": "Friday, January 25, 2002",
+    "location": "",
+    "slug": "ucc-7",
+    "year": "2002"
+  },
+  {
     "id": 38,
     "name": "UFC 35: Throwdown",
     "date": "Friday, January 11, 2002",
     "location": "Uncasville, Connecticut, USA",
     "slug": "ufc-35-throwdown",
     "year": "2002"
+  },
+  {
+    "id": 1155,
+    "name": "Inoki Bom-Ba-Ye 2001",
+    "date": "Monday, December 31, 2001",
+    "location": "",
+    "slug": "inoki-bom-ba-ye-2001",
+    "year": "2001"
+  },
+  {
+    "id": 816,
+    "name": "PRIDE 18: Cold Fury 2",
+    "date": "Sunday, December 23, 2001",
+    "location": "",
+    "slug": "pride-18-cold-fury-2",
+    "year": "2001"
+  },
+  {
+    "id": 912,
+    "name": "PRIDE 17: Championship Chaos",
+    "date": "Saturday, November 3, 2001",
+    "location": "",
+    "slug": "pride-17-championship-chaos",
+    "year": "2001"
+  },
+  {
+    "id": 904,
+    "name": "WFA 1",
+    "date": "Saturday, November 3, 2001",
+    "location": "",
+    "slug": "wfa-1",
+    "year": "2001"
   },
   {
     "id": 37,
@@ -5824,11 +9008,59 @@
     "year": "2001"
   },
   {
+    "id": 913,
+    "name": "PRIDE 16: Beasts from the East",
+    "date": "Monday, September 24, 2001",
+    "location": "",
+    "slug": "pride-16-beasts-from-the-east",
+    "year": "2001"
+  },
+  {
+    "id": 865,
+    "name": "Shooto - To the Top 7",
+    "date": "Sunday, August 26, 2001",
+    "location": "",
+    "slug": "shooto-to-the-top-7",
+    "year": "2001"
+  },
+  {
+    "id": 1156,
+    "name": "K-1 2001 Japan GP Final",
+    "date": "Sunday, August 19, 2001",
+    "location": "",
+    "slug": "k-1-2001-japan-gp-final",
+    "year": "2001"
+  },
+  {
+    "id": 1130,
+    "name": "GC 5",
+    "date": "Sunday, August 19, 2001",
+    "location": "",
+    "slug": "gc-5",
+    "year": "2001"
+  },
+  {
+    "id": 914,
+    "name": "PRIDE 15: Raging Rumble",
+    "date": "Sunday, July 29, 2001",
+    "location": "",
+    "slug": "pride-15-raging-rumble",
+    "year": "2001"
+  },
+  {
     "id": 35,
     "name": "UFC 32: Showdown in the Meadowlands",
     "date": "Friday, June 29, 2001",
     "location": "East Rutherford, New Jersey, USA",
     "slug": "ufc-32-showdown-in-the-meadowlands",
+    "year": "2001"
+  },
+  {
+    "id": 866,
+    "name": "Meca 5",
+    "date": "Saturday, June 9, 2001",
+    "location": "",
+    "slug": "meca-5",
     "year": "2001"
   },
   {
@@ -5840,12 +9072,44 @@
     "year": "2001"
   },
   {
+    "id": 959,
+    "name": "PRIDE 13: Collision Course",
+    "date": "Sunday, March 25, 2001",
+    "location": "",
+    "slug": "pride-13-collision-course",
+    "year": "2001"
+  },
+  {
+    "id": 867,
+    "name": "Shooto - To the Top 2",
+    "date": "Friday, March 2, 2001",
+    "location": "",
+    "slug": "shooto-to-the-top-2",
+    "year": "2001"
+  },
+  {
     "id": 33,
     "name": "UFC 30: Battle on the Boardwalk",
     "date": "Friday, February 23, 2001",
     "location": "Atlantic City, New Jersey, USA",
     "slug": "ufc-30-battle-on-the-boardwalk",
     "year": "2001"
+  },
+  {
+    "id": 778,
+    "name": "IFC - Warriors Challenge 11",
+    "date": "Saturday, January 13, 2001",
+    "location": "",
+    "slug": "ifc-warriors-challenge-11",
+    "year": "2001"
+  },
+  {
+    "id": 868,
+    "name": "Meca 4",
+    "date": "Saturday, December 16, 2000",
+    "location": "",
+    "slug": "meca-4",
+    "year": "2000"
   },
   {
     "id": 32,
@@ -5856,11 +9120,371 @@
     "year": "2000"
   },
   {
+    "id": 990,
+    "name": "PRIDE 12: Cold Fury",
+    "date": "Saturday, December 9, 2000",
+    "location": "",
+    "slug": "pride-12-cold-fury",
+    "year": "2000"
+  },
+  {
     "id": 31,
     "name": "UFC 28: High Stakes",
     "date": "Friday, November 17, 2000",
     "location": "Atlantic City, New Jersey, USA",
     "slug": "ufc-28-high-stakes",
     "year": "2000"
+  },
+  {
+    "id": 1082,
+    "name": "PRIDE 11: Battle of the Rising Sun",
+    "date": "Tuesday, October 31, 2000",
+    "location": "",
+    "slug": "pride-11-battle-of-the-rising-sun",
+    "year": "2000"
+  },
+  {
+    "id": 30,
+    "name": "UFC 27: Ultimate Bad Boyz",
+    "date": "Friday, September 22, 2000",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-27-ultimate-bad-boyz",
+    "year": "2000"
+  },
+  {
+    "id": 1083,
+    "name": "PRIDE 10: Return of the Warriors",
+    "date": "Sunday, August 27, 2000",
+    "location": "",
+    "slug": "pride-10-return-of-the-warriors",
+    "year": "2000"
+  },
+  {
+    "id": 869,
+    "name": "Meca 2",
+    "date": "Saturday, August 12, 2000",
+    "location": "",
+    "slug": "meca-2",
+    "year": "2000"
+  },
+  {
+    "id": 1171,
+    "name": "EC 35",
+    "date": "Thursday, June 29, 2000",
+    "location": "",
+    "slug": "ec-35",
+    "year": "2000"
+  },
+  {
+    "id": 29,
+    "name": "UFC 26: Ultimate Field Of Dreams",
+    "date": "Friday, June 9, 2000",
+    "location": "Cedar Rapids, Iowa, USA",
+    "slug": "ufc-26-ultimate-field-of-dreams",
+    "year": "2000"
+  },
+  {
+    "id": 991,
+    "name": "PRIDE 9: New Blood",
+    "date": "Sunday, June 4, 2000",
+    "location": "",
+    "slug": "pride-9-new-blood",
+    "year": "2000"
+  },
+  {
+    "id": 28,
+    "name": "UFC 25: Ultimate Japan 3",
+    "date": "Friday, April 14, 2000",
+    "location": "Tokyo, Japan",
+    "slug": "ufc-25-ultimate-japan-3",
+    "year": "2000"
+  },
+  {
+    "id": 27,
+    "name": "UFC 24: First Defense",
+    "date": "Friday, March 10, 2000",
+    "location": "Lake Charles, Louisiana, USA",
+    "slug": "ufc-24-first-defense",
+    "year": "2000"
+  },
+  {
+    "id": 1143,
+    "name": "PRIDE Grand Prix 2000 Opening Round",
+    "date": "Sunday, January 30, 2000",
+    "location": "",
+    "slug": "pride-grand-prix-2000-opening-round",
+    "year": "2000"
+  },
+  {
+    "id": 1056,
+    "name": "PRIDE 8",
+    "date": "Sunday, November 21, 1999",
+    "location": "",
+    "slug": "pride-8",
+    "year": "1999"
+  },
+  {
+    "id": 26,
+    "name": "UFC 23: Ultimate Japan 2",
+    "date": "Friday, November 19, 1999",
+    "location": "Chiba, Japan",
+    "slug": "ufc-23-ultimate-japan-2",
+    "year": "1999"
+  },
+  {
+    "id": 1008,
+    "name": "KOTC 1",
+    "date": "Saturday, October 30, 1999",
+    "location": "",
+    "slug": "kotc-1",
+    "year": "1999"
+  },
+  {
+    "id": 25,
+    "name": "UFC 22: Only One Can be Champion",
+    "date": "Friday, September 24, 1999",
+    "location": "Lake Charles, Louisiana, USA",
+    "slug": "ufc-22-only-one-can-be-champion",
+    "year": "1999"
+  },
+  {
+    "id": 1147,
+    "name": "PRIDE 7",
+    "date": "Sunday, September 12, 1999",
+    "location": "",
+    "slug": "pride-7",
+    "year": "1999"
+  },
+  {
+    "id": 24,
+    "name": "UFC 21: Return of the Champions",
+    "date": "Friday, July 16, 1999",
+    "location": "Cedar Rapids, Iowa, USA",
+    "slug": "ufc-21-return-of-the-champions",
+    "year": "1999"
+  },
+  {
+    "id": 992,
+    "name": "PRIDE 6",
+    "date": "Sunday, July 4, 1999",
+    "location": "",
+    "slug": "pride-6",
+    "year": "1999"
+  },
+  {
+    "id": 1109,
+    "name": "BRI 3",
+    "date": "Tuesday, June 1, 1999",
+    "location": "",
+    "slug": "bri-3",
+    "year": "1999"
+  },
+  {
+    "id": 1144,
+    "name": "PRIDE 5",
+    "date": "Thursday, April 29, 1999",
+    "location": "",
+    "slug": "pride-5",
+    "year": "1999"
+  },
+  {
+    "id": 22,
+    "name": "UFC 19: Ultimate Young Guns",
+    "date": "Friday, March 5, 1999",
+    "location": "Bay St. Louis, Mississippi, USA",
+    "slug": "ufc-19-ultimate-young-guns",
+    "year": "1999"
+  },
+  {
+    "id": 21,
+    "name": "UFC 18: The Road to the Heavyweight Title",
+    "date": "Friday, January 8, 1999",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-18-the-road-to-the-heavyweight-title",
+    "year": "1999"
+  },
+  {
+    "id": 1163,
+    "name": "Vale Tudo Japan 1998",
+    "date": "Sunday, October 25, 1998",
+    "location": "",
+    "slug": "vale-tudo-japan-1998",
+    "year": "1998"
+  },
+  {
+    "id": 20,
+    "name": "UFC - Ultimate Brazil",
+    "date": "Friday, October 16, 1998",
+    "location": "Sao Paulo, Brazil",
+    "slug": "ufc-ultimate-brazil",
+    "year": "1998"
+  },
+  {
+    "id": 993,
+    "name": "PRIDE 3",
+    "date": "Wednesday, June 24, 1998",
+    "location": "",
+    "slug": "pride-3",
+    "year": "1998"
+  },
+  {
+    "id": 18,
+    "name": "UFC 16: Battle in the Bayou",
+    "date": "Friday, March 13, 1998",
+    "location": "New Orleans, Louisiana, USA",
+    "slug": "ufc-16-battle-in-the-bayou",
+    "year": "1998"
+  },
+  {
+    "id": 1166,
+    "name": "PRIDE 2",
+    "date": "Thursday, March 5, 1998",
+    "location": "",
+    "slug": "pride-2",
+    "year": "1998"
+  },
+  {
+    "id": 17,
+    "name": "UFC - Ultimate Japan",
+    "date": "Sunday, December 21, 1997",
+    "location": "Yokohama, Kanagawa, Japan",
+    "slug": "ufc-ultimate-japan",
+    "year": "1997"
+  },
+  {
+    "id": 16,
+    "name": "UFC 15: Collision Course",
+    "date": "Friday, October 17, 1997",
+    "location": "Bay St. Louis, Mississippi, USA",
+    "slug": "ufc-15-collision-course",
+    "year": "1997"
+  },
+  {
+    "id": 1134,
+    "name": "PRIDE 1",
+    "date": "Saturday, October 11, 1997",
+    "location": "",
+    "slug": "pride-1",
+    "year": "1997"
+  },
+  {
+    "id": 15,
+    "name": "UFC 14: Showdown",
+    "date": "Sunday, July 27, 1997",
+    "location": "Birmingham, Alabama, USA",
+    "slug": "ufc-14-showdown",
+    "year": "1997"
+  },
+  {
+    "id": 1037,
+    "name": "Brazil Open '97",
+    "date": "Sunday, June 15, 1997",
+    "location": "",
+    "slug": "brazil-open-97",
+    "year": "1997"
+  },
+  {
+    "id": 13,
+    "name": "UFC 12: Judgement Day",
+    "date": "Friday, February 7, 1997",
+    "location": "Dothan, Alabama, USA",
+    "slug": "ufc-12-judgement-day",
+    "year": "1997"
+  },
+  {
+    "id": 12,
+    "name": "UFC - Ultimate Ultimate '96",
+    "date": "Saturday, December 7, 1996",
+    "location": "Birmingham, Alabama, USA",
+    "slug": "ufc-ultimate-ultimate-96",
+    "year": "1996"
+  },
+  {
+    "id": 11,
+    "name": "UFC 11: The Proving Ground",
+    "date": "Friday, September 20, 1996",
+    "location": "Augusta, Georgia, USA",
+    "slug": "ufc-11-the-proving-ground",
+    "year": "1996"
+  },
+  {
+    "id": 10,
+    "name": "UFC 10: The Tournament",
+    "date": "Friday, July 12, 1996",
+    "location": "Birmingham, Alabama, USA",
+    "slug": "ufc-10-the-tournament",
+    "year": "1996"
+  },
+  {
+    "id": 8,
+    "name": "UFC 8: David vs Goliath",
+    "date": "Friday, February 16, 1996",
+    "location": "San Juan, Puerto Rico",
+    "slug": "ufc-8-david-vs-goliath",
+    "year": "1996"
+  },
+  {
+    "id": 7,
+    "name": "UFC - Ultimate Ultimate '95",
+    "date": "Saturday, December 16, 1995",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-ultimate-ultimate-95",
+    "year": "1995"
+  },
+  {
+    "id": 6,
+    "name": "UFC 7: The Brawl in Buffalo",
+    "date": "Friday, September 8, 1995",
+    "location": "Buffalo, New York, USA",
+    "slug": "ufc-7-the-brawl-in-buffalo",
+    "year": "1995"
+  },
+  {
+    "id": 5,
+    "name": "UFC 6: Clash of the Titans",
+    "date": "Friday, July 14, 1995",
+    "location": "Casper, Wyoming, USA",
+    "slug": "ufc-6-clash-of-the-titans",
+    "year": "1995"
+  },
+  {
+    "id": 4,
+    "name": "UFC 5: The Return of the Beast",
+    "date": "Friday, April 7, 1995",
+    "location": "Charlotte, North Carolina, USA",
+    "slug": "ufc-5-the-return-of-the-beast",
+    "year": "1995"
+  },
+  {
+    "id": 3,
+    "name": "UFC 4: Revenge of the Warriors",
+    "date": "Friday, December 16, 1994",
+    "location": "Tulsa, Oklahoma, USA",
+    "slug": "ufc-4-revenge-of-the-warriors",
+    "year": "1994"
+  },
+  {
+    "id": 2,
+    "name": "UFC 3: The American Dream",
+    "date": "Friday, September 9, 1994",
+    "location": "Charlotte, North Carolina, USA",
+    "slug": "ufc-3-the-american-dream",
+    "year": "1994"
+  },
+  {
+    "id": 1,
+    "name": "UFC 2: No Way Out",
+    "date": "Friday, March 11, 1994",
+    "location": "Denver, Colorado, USA",
+    "slug": "ufc-2-no-way-out",
+    "year": "1994"
+  },
+  {
+    "id": 1132,
+    "name": "UFC 1: The Beginning",
+    "date": "Friday, November 12, 1993",
+    "location": "",
+    "slug": "ufc-1-the-beginning",
+    "year": "1993"
   }
 ]

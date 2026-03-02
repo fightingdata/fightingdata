@@ -96,6 +96,12 @@
             color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
         .sample-warning strong { color: #f59e0b; }
 
+        /* Debut fighter disclaimer (Session I) */
+        .debut-disclaimer { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+            color: #93c5fd; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px;
+            line-height: 1.5; }
+        .debut-disclaimer strong { color: #60a5fa; }
+
         /* Footer + Back link */
         .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
             margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
@@ -247,10 +253,18 @@
                     <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Bobby Hoffman</td><td>20/23</td><td>87%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Mark Robinson</td><td>0/1</td><td>0%</td><td>0/0</td><td>3:05</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Maurice Smith</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 27: Ultimate Bad Boyz &bull; Sep 2000</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bobby Hoffman</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-01 13:43:04 | Data source: UFCStats.com
+            Profile generated: 2026-03-01 19:18:37 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

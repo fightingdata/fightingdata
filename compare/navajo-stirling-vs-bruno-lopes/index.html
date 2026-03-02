@@ -58,6 +58,12 @@
         .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
             color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
         .sample-warning strong { color: #f59e0b; }
+        /* Debut fighter disclaimer (Session I) */
+        .debut-disclaimer { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+            color: #93c5fd; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px;
+            line-height: 1.5; }
+        .debut-disclaimer strong { color: #60a5fa; }
+
 
         /* Narrative */
         .narrative { background: #111827; padding: 1.5rem; border-radius: 8px;
@@ -201,8 +207,8 @@
             <tbody><tr><td colspan="4" class="section-header">Striking</td></tr>
 <tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">50.0%</td><td class="stat-b">45.6%</td><td class="edge edge-even">-</td></tr>
 <tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">6.0</td><td class="stat-b">2.1</td><td class="edge edge-a">A</td></tr>
-<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">0.0</td><td class="stat-b">0.0</td><td class="edge edge-even">-</td></tr>
-<tr><td class="stat-name">Strike Differential</td><td class="stat-a">6.0/min</td><td class="stat-b">2.1/min</td><td class="edge edge-a">A</td></tr>
+<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">2.5</td><td class="stat-b">2.9</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Strike Differential</td><td class="stat-a">3.5/min</td><td class="stat-b">-0.7/min</td><td class="edge edge-a">A</td></tr>
 <tr><td colspan="4" class="section-header">Grappling</td></tr>
 <tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">44.4%</td><td class="stat-b">35.7%</td><td class="edge edge-even">-</td></tr>
 <tr><td class="stat-name">Takedown Defense</td><td class="stat-a">72.2%</td><td class="stat-b">100.0%</td><td class="edge edge-b">B</td></tr>
@@ -234,7 +240,7 @@
         </thead>
         <tbody><tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">50.0%</td><td class="stat-b">45.6%</td><td class="edge edge-even">-</td></tr>
 <tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">6.0</td><td class="stat-b">2.1</td><td class="edge edge-a">A</td></tr>
-<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">0.0</td><td class="stat-b">0.0</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">2.5</td><td class="stat-b">2.9</td><td class="edge edge-even">-</td></tr>
 <tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">44.4%</td><td class="stat-b">35.7%</td><td class="edge edge-even">-</td></tr>
 <tr><td class="stat-name">Takedown Defense</td><td class="stat-a">72.2%</td><td class="stat-b">100.0%</td><td class="edge edge-b">B</td></tr>
 <tr><td class="stat-name">Control Time/Fight</td><td class="stat-a">2:36</td><td class="stat-b">4:39</td><td class="edge edge-b">B</td></tr>
@@ -389,7 +395,15 @@
 <tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Bruno Lopes</td><td>12/18</td><td>67%</td><td>3/8</td><td>3:15</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Magomed Gadzhiyasulov</td><td>7/17</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('b-f2')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Mikheil Sazhiniani</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:14 &bull; Aug 2024</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bruno Lopes</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-b-f2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-b-f2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
         </div>
 
         <h2>Common Opponents</h2>
@@ -397,7 +411,7 @@
 
         <h2>Analysis Summary</h2>
         <div class="narrative">
-            <p><strong>Striking Volume:</strong> Navajo Stirling is the busier striker, landing 6.0 significant strikes per minute vs 2.1. Their opponent absorbs 0.0 strikes per minute on average — Navajo Stirling's output should find a target.</p>
+            <p><strong>Striking Volume:</strong> Navajo Stirling is the busier striker, landing 6.0 significant strikes per minute vs 2.1. Their opponent absorbs 2.9 strikes per minute on average — Navajo Stirling's output should find a target.</p>
 <p><strong>Grappling:</strong> Navajo Stirling shoots at 44% accuracy but Bruno Lopes stops 100% of attempts — the takedown path looks difficult. Bruno Lopes shoots at 36% accuracy against Navajo Stirling's 72% defense — Navajo Stirling should keep it standing.</p>
 <p><strong>Control:</strong> Bruno Lopes controls 4:39 per fight on average vs 2:36 — sustained control shifts rounds and drains cardio.</p>
 <p><strong>Finish Threat:</strong> Both fighters trend toward decisions — Navajo Stirling (100% of wins) and Bruno Lopes (100%).</p>
@@ -405,7 +419,7 @@
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-01 13:42:41 | Data source: UFCStats.com
+            Report generated: 2026-03-01 19:18:12 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

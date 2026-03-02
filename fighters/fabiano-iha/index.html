@@ -96,6 +96,12 @@
             color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
         .sample-warning strong { color: #f59e0b; }
 
+        /* Debut fighter disclaimer (Session I) */
+        .debut-disclaimer { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+            color: #93c5fd; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px;
+            line-height: 1.5; }
+        .debut-disclaimer strong { color: #60a5fa; }
+
         /* Footer + Back link */
         .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
             margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
@@ -159,8 +165,8 @@
         <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
 <tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">47.4%</td></tr>
 <tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">1.7</td></tr>
-<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">0.0</td></tr>
-<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">1.7/min</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">2.1</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">-0.4/min</td></tr>
 <tr><td colspan="2" class="section-header">Grappling</td></tr>
 <tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">40.0%</td></tr>
 <tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">50.0%</td></tr>
@@ -188,7 +194,7 @@
         </thead>
         <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">47.4%</td></tr>
 <tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">1.7</td></tr>
-<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">0.0</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">2.1</td></tr>
 <tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">40.0%</td></tr>
 <tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">50.0%</td></tr>
 <tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">2:08</td></tr>
@@ -298,10 +304,26 @@
                     <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Fabiano Iha</td><td>8/12</td><td>67%</td><td>1/1</td><td>1:56</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Daiju Takase</td><td>0/2</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Laverne Clark</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 1:21 &bull; UFC 27: Ultimate Bad Boyz &bull; Sep 2000</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Fabiano Iha</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Dave Menne</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 24: First Defense &bull; Mar 2000</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Fabiano Iha</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-01 13:43:13 | Data source: UFCStats.com
+            Profile generated: 2026-03-01 19:18:52 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

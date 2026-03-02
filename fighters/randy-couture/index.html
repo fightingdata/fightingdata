@@ -96,6 +96,12 @@
             color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
         .sample-warning strong { color: #f59e0b; }
 
+        /* Debut fighter disclaimer (Session I) */
+        .debut-disclaimer { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+            color: #93c5fd; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px;
+            line-height: 1.5; }
+        .debut-disclaimer strong { color: #60a5fa; }
+
         /* Footer + Back link */
         .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
             margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
@@ -159,8 +165,8 @@
         <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
 <tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">57.9%</td></tr>
 <tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">2.7</td></tr>
-<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">0.0</td></tr>
-<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">2.7/min</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">1.0</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">1.8/min</td></tr>
 <tr><td colspan="2" class="section-header">Grappling</td></tr>
 <tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">51.8%</td></tr>
 <tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">73.9%</td></tr>
@@ -188,7 +194,7 @@
         </thead>
         <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">49.8%</td></tr>
 <tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">3.0</td></tr>
-<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">0.0</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">1.7</td></tr>
 <tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">18.8%</td></tr>
 <tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">50.0%</td></tr>
 <tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">3:50</td></tr>
@@ -751,10 +757,42 @@
 <tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Randy Couture</td><td>22/29</td><td>76%</td><td>1/1</td><td>2:55</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Kevin Randleman</td><td>2/3</td><td>67%</td><td>0/0</td><td>0:28</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-19')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Maurice Smith</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 3:00 &bull; UFC - Ultimate Japan &bull; Dec 1997</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Randy Couture</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-20')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Vitor Belfort</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 8:16 &bull; UFC 15: Collision Course &bull; Oct 1997</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Randy Couture</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-21')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Tony Halme</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:56 &bull; UFC 13: The Ultimate Force &bull; </div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Randy Couture</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-22')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Steven Graham</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:13 &bull; UFC 13: The Ultimate Force &bull; </div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Randy Couture</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-01 13:43:37 | Data source: UFCStats.com
+            Profile generated: 2026-03-01 19:19:25 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

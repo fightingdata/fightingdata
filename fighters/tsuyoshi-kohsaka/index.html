@@ -96,6 +96,12 @@
             color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
         .sample-warning strong { color: #f59e0b; }
 
+        /* Debut fighter disclaimer (Session I) */
+        .debut-disclaimer { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+            color: #93c5fd; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px;
+            line-height: 1.5; }
+        .debut-disclaimer strong { color: #60a5fa; }
+
         /* Footer + Back link */
         .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
             margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
@@ -140,7 +146,7 @@
                 </div>
                 
             </div>
-            <div class="profile-last-fought">Last fought: May 2002</div>
+            <div class="profile-last-fought">Last fought: Feb 2006</div>
         </div>
 
         <h2>Fighter Profile</h2>
@@ -180,10 +186,50 @@
 <tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Tsuyoshi Kohsaka</td><td>4/6</td><td>67%</td><td>0/0</td><td>0:15</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Ricco Rodriguez</td><td>14/25</td><td>56%</td><td>2/3</td><td>2:54</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-1')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Pedro Rizzo</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:17 &bull; UFC 23: Ultimate Japan 2 &bull; Nov 1999</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Tim Lajcik</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC 21: Return of the Champions &bull; Jul 1999</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Bas Rutten</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:15 &bull; UFC 18: The Road to the Heavyweight Title &bull; Jan 1999</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Pete Williams</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00 &bull; UFC - Ultimate Brazil &bull; Oct 1998</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Kimo Leopoldo</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00 &bull; UFC 16: Battle in the Bayou &bull; Mar 1998</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-01 13:43:45 | Data source: UFCStats.com
+            Profile generated: 2026-03-01 19:19:36 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

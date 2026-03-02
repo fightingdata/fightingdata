@@ -58,6 +58,12 @@
         .sample-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
             color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
         .sample-warning strong { color: #f59e0b; }
+        /* Debut fighter disclaimer (Session I) */
+        .debut-disclaimer { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+            color: #93c5fd; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px;
+            line-height: 1.5; }
+        .debut-disclaimer strong { color: #60a5fa; }
+
 
         /* Narrative */
         .narrative { background: #111827; padding: 1.5rem; border-radius: 8px;
@@ -201,8 +207,8 @@
             <tbody><tr><td colspan="4" class="section-header">Striking</td></tr>
 <tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">42.3%</td><td class="stat-b">55.9%</td><td class="edge edge-b">B</td></tr>
 <tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">2.9</td><td class="stat-b">3.5</td><td class="edge edge-even">-</td></tr>
-<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">0.0</td><td class="stat-b">0.0</td><td class="edge edge-even">-</td></tr>
-<tr><td class="stat-name">Strike Differential</td><td class="stat-a">2.9/min</td><td class="stat-b">3.5/min</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">3.4</td><td class="stat-b">3.6</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Strike Differential</td><td class="stat-a">-0.5/min</td><td class="stat-b">-0.1/min</td><td class="edge edge-even">-</td></tr>
 <tr><td colspan="4" class="section-header">Grappling</td></tr>
 <tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">11.1%</td><td class="stat-b">42.9%</td><td class="edge edge-b">B</td></tr>
 <tr><td class="stat-name">Takedown Defense</td><td class="stat-a">80.0%</td><td class="stat-b">20.0%</td><td class="edge edge-a">A</td></tr>
@@ -234,7 +240,7 @@
         </thead>
         <tbody><tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">42.3%</td><td class="stat-b">55.9%</td><td class="edge edge-b">B</td></tr>
 <tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">2.9</td><td class="stat-b">3.5</td><td class="edge edge-even">-</td></tr>
-<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">0.0</td><td class="stat-b">0.0</td><td class="edge edge-even">-</td></tr>
+<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">3.4</td><td class="stat-b">3.6</td><td class="edge edge-even">-</td></tr>
 <tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">11.1%</td><td class="stat-b">42.9%</td><td class="edge edge-b">B</td></tr>
 <tr><td class="stat-name">Takedown Defense</td><td class="stat-a">80.0%</td><td class="stat-b">20.0%</td><td class="edge edge-a">A</td></tr>
 <tr><td class="stat-name">Control Time/Fight</td><td class="stat-a">0:32</td><td class="stat-b">2:44</td><td class="edge edge-b">B</td></tr>
@@ -305,7 +311,15 @@
 <tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Abdul-Kareem Al-Selwady</td><td>4/9</td><td>44%</td><td>1/1</td><td>0:04</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Loik Radzhabov</td><td>13/21</td><td>62%</td><td>0/1</td><td>0:08</td><td>1</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('b-f1')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. George Hardwick</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Aug 2023</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Abdul-Kareem Al-Selwady</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-b-f1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-b-f1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
         </div>
 
         <h2>Common Opponents</h2>
@@ -322,7 +336,7 @@
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-01 13:42:41 | Data source: UFCStats.com
+            Report generated: 2026-03-01 19:18:11 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

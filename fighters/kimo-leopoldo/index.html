@@ -96,6 +96,12 @@
             color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
         .sample-warning strong { color: #f59e0b; }
 
+        /* Debut fighter disclaimer (Session I) */
+        .debut-disclaimer { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+            color: #93c5fd; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px;
+            line-height: 1.5; }
+        .debut-disclaimer strong { color: #60a5fa; }
+
         /* Footer + Back link */
         .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
             margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
@@ -140,7 +146,7 @@
                 </div>
                 <div class="record-block"><div class="record-label">UFC Record</div><div class="record-ufc">0-1-0 (1 fights)</div></div>
             </div>
-            <div class="profile-last-fought">Last fought: Jun 2004</div>
+            <div class="profile-last-fought">Last fought: Jul 2005</div>
         </div>
 
         <h2>Fighter Profile</h2>
@@ -159,8 +165,8 @@
         <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
 <tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">80.0%</td></tr>
 <tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">2.8</td></tr>
-<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">0.0</td></tr>
-<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">2.8/min</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">8.4</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">-5.6/min</td></tr>
 <tr><td colspan="2" class="section-header">Grappling</td></tr>
 <tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">0.0%</td></tr>
 <tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">—</td></tr>
@@ -188,7 +194,7 @@
         </thead>
         <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">80.0%</td></tr>
 <tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">2.8</td></tr>
-<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">0.0</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">8.4</td></tr>
 <tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">0.0%</td></tr>
 <tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">—</td></tr>
 <tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">0:06</td></tr>
@@ -244,10 +250,34 @@
                     <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Kimo Leopoldo</td><td>1/1</td><td>100%</td><td>1/1</td><td>1:52</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">David Abbott</td><td>0/0</td><td>—</td><td>0/0</td><td>0:01</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Tsuyoshi Kohsaka</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00 &bull; UFC 16: Battle in the Bayou &bull; Mar 1998</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kimo Leopoldo</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-3')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Paul Varelans</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 9:08 &bull; UFC - Ultimate Ultimate '96 &bull; Dec 1996</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kimo Leopoldo</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-4')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Ken Shamrock</div>
+                <div class="fight-meta">Submission (Kneebar) &bull; Rd 1, 4:24 &bull; UFC 8: David vs Goliath &bull; Feb 1996</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kimo Leopoldo</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-01 13:43:26 | Data source: UFCStats.com
+            Profile generated: 2026-03-01 19:19:10 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

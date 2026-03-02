@@ -96,6 +96,12 @@
             color: #f59e0b; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
         .sample-warning strong { color: #f59e0b; }
 
+        /* Debut fighter disclaimer (Session I) */
+        .debut-disclaimer { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+            color: #93c5fd; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px;
+            line-height: 1.5; }
+        .debut-disclaimer strong { color: #60a5fa; }
+
         /* Footer + Back link */
         .timestamp { text-align: center; color: #6b7280; font-size: 0.75rem;
             margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1f2937; }
@@ -159,8 +165,8 @@
         <tbody><tr><td colspan="2" class="section-header">Striking</td></tr>
 <tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">54.5%</td></tr>
 <tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">1.5</td></tr>
-<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">0.0</td></tr>
-<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">1.5/min</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">7.2</td></tr>
+<tr><td class="pstat-name">Strike Differential</td><td class="pstat-val">-5.6/min</td></tr>
 <tr><td colspan="2" class="section-header">Grappling</td></tr>
 <tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">100.0%</td></tr>
 <tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">50.0%</td></tr>
@@ -188,7 +194,7 @@
         </thead>
         <tbody><tr><td class="pstat-name">Sig. Strike Accuracy</td><td class="pstat-val">54.5%</td></tr>
 <tr><td class="pstat-name">Sig. Strikes Landed/min</td><td class="pstat-val">1.5</td></tr>
-<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">0.0</td></tr>
+<tr><td class="pstat-name">Sig. Strikes Absorbed/min</td><td class="pstat-val">7.2</td></tr>
 <tr><td class="pstat-name">Takedown Accuracy</td><td class="pstat-val">100.0%</td></tr>
 <tr><td class="pstat-name">Takedown Defense</td><td class="pstat-val">50.0%</td></tr>
 <tr><td class="pstat-name">Control Time/Fight</td><td class="pstat-val">0:09</td></tr>
@@ -322,10 +328,74 @@
 <tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Ken Shamrock</td><td>5/19</td><td>26%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Tito Ortiz</td><td>34/57</td><td>60%</td><td>1/1</td><td>2:43</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-5')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Brian Johnston</div>
+                <div class="fight-meta">Submission (Forearm Choke) &bull; Rd 1, 5:48 &bull; UFC - Ultimate Ultimate '96 &bull; Dec 1996</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-6')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Kimo Leopoldo</div>
+                <div class="fight-meta">Submission (Kneebar) &bull; Rd 1, 4:24 &bull; UFC 8: David vs Goliath &bull; Feb 1996</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-7')">
+                <div class="fight-result-badge result-nc">D</div>
+                <div class="fight-opponent">vs. Oleg Taktarov</div>
+                <div class="fight-meta">Other &bull; Rd 2, 3:00 &bull; UFC 7: The Brawl in Buffalo &bull; Sep 1995</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-8')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Dan Severn</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:14 &bull; UFC 6: Clash of the Titans &bull; Jul 1995</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-9')">
+                <div class="fight-result-badge result-nc">D</div>
+                <div class="fight-opponent">vs. Royce Gracie</div>
+                <div class="fight-meta">Other &bull; Rd 2, 5:00 &bull; UFC 5: The Return of the Beast &bull; Apr 1995</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-10')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Patrick Smith</div>
+                <div class="fight-meta">Submission (Heel Hook) &bull; Rd 1, 1:49 &bull; UFC 1: The Beginning &bull; Nov 1993</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-11')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Royce Gracie</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:57 &bull; UFC 1: The Beginning &bull; Nov 1993</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header" onclick="toggleRounds('prof-12')">
+                <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Dan Severn</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 3:00 &bull; UFC 9: Motor City Madness &bull; </div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-01 13:43:25 | Data source: UFCStats.com
+            Profile generated: 2026-03-01 19:19:09 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">
