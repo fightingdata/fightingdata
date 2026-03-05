@@ -78,7 +78,7 @@
             margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #1f2937; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -86,6 +86,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -192,7 +194,7 @@
         <h2>Fighter Profiles</h2>
         <div class="bio-section"><div class="bio-card"><div class="bio-name">Ethyn Ewing</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">28</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'6"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">135 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">69"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div><div class="bio-divider"></div><div class="bio-card"><div class="bio-name">Rafael Estevam</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">29</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'8"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">135 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">69"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="sample-warning">&#9888;&#65039; <strong>Ethyn Ewing</strong> has only 1 fights in our database — stats may not be fully representative.</div><div class="sample-warning">&#9888;&#65039; <strong>Rafael Estevam</strong> has only 3 fights in our database — stats may not be fully representative.</div>
+        
 
         <h2>Career Statistics</h2>
         <table>
@@ -255,7 +257,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Malcolm Wellmaker</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Nov 2025</div>
+                <div class="fight-event-label">UFC 322: Della Maddalena vs. Makhachev &bull; Nov 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ethyn Ewing</span><span class="totals-stat">85/163</span><span class="totals-pct">52%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 1:19</span></div><div class="totals-line"><span class="totals-name opponent">Malcolm Wellmaker</span><span class="totals-stat">77/146</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:11</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f0" style="display:none;">
@@ -286,7 +289,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Felipe Bunes</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Aug 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Taira vs. Park &bull; Aug 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Estevam</span><span class="totals-stat">33/70</span><span class="totals-pct">47%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 10:42</span></div><div class="totals-line"><span class="totals-name opponent">Felipe Bunes</span><span class="totals-stat">26/56</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
@@ -316,7 +320,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jesus Aguilar</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Feb 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Cannonier vs. Rodrigues &bull; Feb 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Estevam</span><span class="totals-stat">11/30</span><span class="totals-pct">37%</span><span class="totals-stat">TD 11/19</span><span class="totals-stat">Ctrl 9:22</span></div><div class="totals-line"><span class="totals-name opponent">Jesus Aguilar</span><span class="totals-stat">35/87</span><span class="totals-pct">40%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:14</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f1" style="display:none;">
@@ -346,7 +351,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Charles Johnson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Nov 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Allen vs. Craig &bull; Nov 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Estevam</span><span class="totals-stat">18/43</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/22</span><span class="totals-stat">Ctrl 9:23</span></div><div class="totals-line"><span class="totals-name opponent">Charles Johnson</span><span class="totals-stat">72/109</span><span class="totals-pct">66%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:43</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f2" style="display:none;">
@@ -387,7 +393,7 @@
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-05 11:19:18 | Data source: UFCStats.com
+            Report generated: 2026-03-05 13:18:09 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

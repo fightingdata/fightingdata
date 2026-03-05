@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Manel Kape</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:18 &bull; UFC Fight Night: Royval vs. Kape &bull; Dec 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Royval vs. Kape &bull; Dec 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">17/26</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Manel Kape</span><span class="totals-stat">17/23</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joshua Van</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 317: Topuria vs. Oliveira &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC 317: Topuria vs. Oliveira &bull; Jun 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">215/467</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joshua Van</span><span class="totals-stat">204/305</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tatsuro Taira</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Royval vs. Taira &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Royval vs. Taira &bull; Oct 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">124/232</span><span class="totals-pct">53%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 2:23</span></div><div class="totals-line"><span class="totals-name opponent">Tatsuro Taira</span><span class="totals-stat">42/99</span><span class="totals-pct">42%</span><span class="totals-stat">TD 6/15</span><span class="totals-stat">Ctrl 12:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brandon Moreno</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Moreno vs. Royval 2 &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Moreno vs. Royval 2 &bull; Feb 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">145/510</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:35</span></div><div class="totals-line"><span class="totals-name opponent">Brandon Moreno</span><span class="totals-stat">112/211</span><span class="totals-pct">53%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 2:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -333,7 +339,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexandre Pantoja</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 296: Edwards vs. Covington &bull; Dec 2023</div>
+                <div class="fight-event-label">UFC 296: Edwards vs. Covington &bull; Dec 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">111/204</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:47</span></div><div class="totals-line"><span class="totals-name opponent">Alexandre Pantoja</span><span class="totals-stat">95/156</span><span class="totals-pct">61%</span><span class="totals-stat">TD 8/14</span><span class="totals-stat">Ctrl 15:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -369,7 +376,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matheus Nicolau</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 2:09 &bull; UFC Fight Night: Holloway vs. Allen &bull; Apr 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Holloway vs. Allen &bull; Apr 2023</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 2:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">13/22</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Matheus Nicolau</span><span class="totals-stat">2/5</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -393,7 +401,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Schnell</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:14 &bull; UFC 274: Oliveira vs. Gaethje &bull; May 2022</div>
+                <div class="fight-event-label">UFC 274: Oliveira vs. Gaethje &bull; May 2022</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">14/39</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">Matt Schnell</span><span class="totals-stat">12/33</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -417,7 +426,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rogerio Bontorin</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Kattar vs. Chikadze &bull; Jan 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Kattar vs. Chikadze &bull; Jan 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">40/132</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:43</span></div><div class="totals-line"><span class="totals-name opponent">Rogerio Bontorin</span><span class="totals-stat">28/58</span><span class="totals-pct">48%</span><span class="totals-stat">TD 8/9</span><span class="totals-stat">Ctrl 7:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -447,7 +457,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexandre Pantoja</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:46 &bull; UFC Fight Night: Cannonier vs. Gastelum &bull; Aug 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Cannonier vs. Gastelum &bull; Aug 2021</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">17/61</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Alexandre Pantoja</span><span class="totals-stat">22/40</span><span class="totals-pct">55%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 2:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -474,7 +485,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brandon Moreno</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59 &bull; UFC 255: Figueiredo vs. Perez &bull; Nov 2020</div>
+                <div class="fight-event-label">UFC 255: Figueiredo vs. Perez &bull; Nov 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">17/52</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Brandon Moreno</span><span class="totals-stat">16/34</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -498,7 +510,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kai Kara-France</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 0:48 &bull; UFC 253: Adesanya vs. Costa &bull; Sep 2020</div>
+                <div class="fight-event-label">UFC 253: Adesanya vs. Costa &bull; Sep 2020</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 0:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">39/71</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:31</span></div><div class="totals-line"><span class="totals-name opponent">Kai Kara-France</span><span class="totals-stat">22/38</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -525,7 +538,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Elliott</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 3:18 &bull; UFC Fight Night: Woodley vs. Burns &bull; May 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Woodley vs. Burns &bull; May 2020</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 3:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brandon Royval</span><span class="totals-stat">16/33</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:04</span></div><div class="totals-line"><span class="totals-name opponent">Tim Elliott</span><span class="totals-stat">17/32</span><span class="totals-pct">53%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 4:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -550,7 +564,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:58 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:46 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

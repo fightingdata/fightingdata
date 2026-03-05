@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jonathan Pearce</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:33 &bull; UFC Fight Night: Reyes vs. Weidman &bull; Oct 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Reyes vs. Weidman &bull; Oct 2019</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">25/36</span><span class="totals-pct">69%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Jonathan Pearce</span><span class="totals-stat">8/19</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chris Gruetzemacher</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC 223: Khabib vs. Iaquinta &bull; Apr 2018</div>
+                <div class="fight-event-label">UFC 223: Khabib vs. Iaquinta &bull; Apr 2018</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">48/137</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chris Gruetzemacher</span><span class="totals-stat">128/196</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Clay Guida</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:07 &bull; UFC Fight Night: Poirier vs. Pettis &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Poirier vs. Pettis &bull; Nov 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">1/7</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Clay Guida</span><span class="totals-stat">24/40</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -282,7 +287,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Stevie Ray</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Swanson vs. Lobov &bull; Apr 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Swanson vs. Lobov &bull; Apr 2017</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">46/76</span><span class="totals-pct">61%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 8:12</span></div><div class="totals-line"><span class="totals-name opponent">Stevie Ray</span><span class="totals-stat">109/196</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcin Held</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rodriguez vs. Penn &bull; Jan 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Rodriguez vs. Penn &bull; Jan 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">20/62</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:37</span></div><div class="totals-line"><span class="totals-name opponent">Marcin Held</span><span class="totals-stat">23/78</span><span class="totals-pct">29%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 8:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jim Miller</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FOX: Maia vs. Condit &bull; Aug 2016</div>
+                <div class="fight-event-label">UFC on FOX: Maia vs. Condit &bull; Aug 2016</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">54/136</span><span class="totals-pct">40%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 6:11</span></div><div class="totals-line"><span class="totals-name opponent">Jim Miller</span><span class="totals-stat">80/166</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Diego Sanchez</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:26 &bull; UFC 200: Tate vs Nunes &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC 200: Tate vs Nunes &bull; Jul 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">22/33</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Diego Sanchez</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Takanori Gomi</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:37 &bull; UFC on FOX: Dillashaw vs. Barao II &bull; Jul 2015</div>
+                <div class="fight-event-label">UFC on FOX: Dillashaw vs. Barao II &bull; Jul 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">15/26</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name opponent">Takanori Gomi</span><span class="totals-stat">7/24</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -420,7 +430,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Al Iaquinta</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:34 &bull; UFC 183: Silva vs Diaz &bull; Jan 2015</div>
+                <div class="fight-event-label">UFC 183: Silva vs Diaz &bull; Jan 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">32/86</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Al Iaquinta</span><span class="totals-stat">59/154</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -447,7 +458,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michael Chiesa</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 2:14 &bull; UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 2:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">21/41</span><span class="totals-pct">51%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 2:43</span></div><div class="totals-line"><span class="totals-name opponent">Michael Chiesa</span><span class="totals-stat">30/57</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -474,7 +486,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mac Danzig</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">43/75</span><span class="totals-pct">57%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 6:56</span></div><div class="totals-line"><span class="totals-name opponent">Mac Danzig</span><span class="totals-stat">52/92</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -504,7 +517,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michael Johnson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Shogun vs Sonnen &bull; Aug 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Shogun vs Sonnen &bull; Aug 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">25/109</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Michael Johnson</span><span class="totals-stat">116/255</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -534,7 +548,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jim Miller</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 155: Dos Santos vs Velasquez II &bull; Dec 2012</div>
+                <div class="fight-event-label">UFC 155: Dos Santos vs Velasquez II &bull; Dec 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">35/123</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:06</span></div><div class="totals-line"><span class="totals-name opponent">Jim Miller</span><span class="totals-stat">91/204</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -564,7 +579,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jamie Varner</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 2:44 &bull; UFC on FOX: Shogun vs Vera &bull; Aug 2012</div>
+                <div class="fight-event-label">UFC on FOX: Shogun vs Vera &bull; Aug 2012</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 2:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">44/118</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:09</span></div><div class="totals-line"><span class="totals-name opponent">Jamie Varner</span><span class="totals-stat">82/177</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -594,7 +610,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anthony Pettis</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 1:21 &bull; UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 1:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">0/8</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">9/20</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -618,7 +635,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Melvin Guillard</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:47 &bull; UFC 136: Edgar vs Maynard 3 &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC 136: Edgar vs Maynard 3 &bull; Oct 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Melvin Guillard</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -642,7 +660,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Curt Warburton</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 1:58 &bull; UFC Live: Kongo vs Barry &bull; Jun 2011</div>
+                <div class="fight-event-label">UFC Live: Kongo vs Barry &bull; Jun 2011</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 1:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">12/33</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Curt Warburton</span><span class="totals-stat">5/23</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -666,7 +685,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. George Sotiropoulos</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 2, 2:43 &bull; UFC 123: Rampage vs Machida &bull; Nov 2010</div>
+                <div class="fight-event-label">UFC 123: Rampage vs Machida &bull; Nov 2010</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 2, 2:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">16/79</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:45</span></div><div class="totals-line"><span class="totals-name opponent">George Sotiropoulos</span><span class="totals-stat">19/70</span><span class="totals-pct">27%</span><span class="totals-stat">TD 3/11</span><span class="totals-stat">Ctrl 3:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -693,7 +713,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gabe Ruediger</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:01 &bull; UFC 118: Edgar vs Penn 2 &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC 118: Edgar vs Penn 2 &bull; Aug 2010</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">19/28</span><span class="totals-pct">68%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:33</span></div><div class="totals-line"><span class="totals-name opponent">Gabe Ruediger</span><span class="totals-stat">1/8</span><span class="totals-pct">12%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -717,7 +738,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sam Stout</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 108: Evans vs Silva &bull; Jan 2010</div>
+                <div class="fight-event-label">UFC 108: Evans vs Silva &bull; Jan 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">26/81</span><span class="totals-pct">32%</span><span class="totals-stat">TD 4/16</span><span class="totals-stat">Ctrl 2:39</span></div><div class="totals-line"><span class="totals-name opponent">Sam Stout</span><span class="totals-stat">94/264</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -747,7 +769,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jeremy Stephens</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:43 &bull; UFC Fight Night: Lauzon vs Stephens &bull; Feb 2009</div>
+                <div class="fight-event-label">UFC Fight Night: Lauzon vs Stephens &bull; Feb 2009</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">11/17</span><span class="totals-pct">65%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:11</span></div><div class="totals-line"><span class="totals-name opponent">Jeremy Stephens</span><span class="totals-stat">15/37</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -774,7 +797,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kyle Bradley</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:34 &bull; UFC Fight Night: Diaz vs Neer &bull; Sep 2008</div>
+                <div class="fight-event-label">UFC Fight Night: Diaz vs Neer &bull; Sep 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">23/54</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Kyle Bradley</span><span class="totals-stat">18/48</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -801,7 +825,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kenny Florian</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:28 &bull; UFC Fight Night: Florian vs Lauzon &bull; Apr 2008</div>
+                <div class="fight-event-label">UFC Fight Night: Florian vs Lauzon &bull; Apr 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">5/12</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:51</span></div><div class="totals-line"><span class="totals-name opponent">Kenny Florian</span><span class="totals-stat">35/74</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 3:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -828,7 +853,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason Reinhardt</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:14 &bull; UFC 78: Validation &bull; Nov 2007</div>
+                <div class="fight-event-label">UFC 78: Validation &bull; Nov 2007</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">5/7</span><span class="totals-pct">71%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Jason Reinhardt</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -852,7 +878,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-24')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jens Pulver</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:48 &bull; UFC 63: Hughes vs Penn &bull; Sep 2006</div>
+                <div class="fight-event-label">UFC 63: Hughes vs Penn &bull; Sep 2006</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">9/11</span><span class="totals-pct">82%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jens Pulver</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
@@ -876,7 +903,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Evan Dunham</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team McGregor vs. Team Faber Finale &bull; Dec 2015</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team McGregor vs. Team Faber Finale &bull; Dec 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">42/113</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Evan Dunham</span><span class="totals-stat">127/291</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:50</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -906,7 +934,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brandon Melendez</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 2:09 &bull; The Ultimate Fighter: Team Pulver vs. Team Penn Finale &bull; Jun 2007</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Pulver vs. Team Penn Finale &bull; Jun 2007</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 2:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Lauzon</span><span class="totals-stat">4/11</span><span class="totals-pct">36%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 4:35</span></div><div class="totals-line"><span class="totals-name opponent">Brandon Melendez</span><span class="totals-stat">6/23</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:22</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -931,7 +960,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:27 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:13 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

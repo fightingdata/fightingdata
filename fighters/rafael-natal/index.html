@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Eryk Anders</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:54 &bull; UFC Fight Night: Weidman vs. Gastelum &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Weidman vs. Gastelum &bull; Jul 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">14/23</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Eryk Anders</span><span class="totals-stat">23/29</span><span class="totals-pct">79%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tim Boetsch</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:22 &bull; UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">5/18</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tim Boetsch</span><span class="totals-stat">14/25</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Robert Whittaker</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 197: Jones vs Saint Preux &bull; Apr 2016</div>
+                <div class="fight-event-label">UFC 197: Jones vs Saint Preux &bull; Apr 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">62/137</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Robert Whittaker</span><span class="totals-stat">89/176</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Casey</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 3:37 &bull; UFC on FOX: Johnson vs. Bader &bull; Jan 2016</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs. Bader &bull; Jan 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 3:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">54/87</span><span class="totals-pct">62%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 5:31</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Casey</span><span class="totals-stat">16/49</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 2:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Uriah Hall</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 187: Johnson vs Cormier &bull; May 2015</div>
+                <div class="fight-event-label">UFC 187: Johnson vs Cormier &bull; May 2015</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">45/103</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/11</span><span class="totals-stat">Ctrl 2:55</span></div><div class="totals-line"><span class="totals-name opponent">Uriah Hall</span><span class="totals-stat">43/74</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tom Watson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 183: Silva vs Diaz &bull; Jan 2015</div>
+                <div class="fight-event-label">UFC 183: Silva vs Diaz &bull; Jan 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">67/152</span><span class="totals-pct">44%</span><span class="totals-stat">TD 8/13</span><span class="totals-stat">Ctrl 3:30</span></div><div class="totals-line"><span class="totals-name opponent">Tom Watson</span><span class="totals-stat">29/150</span><span class="totals-pct">19%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Camozzi</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">36/73</span><span class="totals-pct">49%</span><span class="totals-stat">TD 2/12</span><span class="totals-stat">Ctrl 2:44</span></div><div class="totals-line"><span class="totals-name opponent">Chris Camozzi</span><span class="totals-stat">67/112</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -405,7 +414,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ed Herman</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brown vs Silva &bull; May 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Brown vs Silva &bull; May 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">35/73</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 4:46</span></div><div class="totals-line"><span class="totals-name opponent">Ed Herman</span><span class="totals-stat">51/87</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:57</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -435,7 +445,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tim Kennedy</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:40 &bull; UFC Fight Night: Fight for the Troops 3 &bull; Nov 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Fight for the Troops 3 &bull; Nov 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">13/35</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tim Kennedy</span><span class="totals-stat">13/31</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -459,7 +470,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tor Troeng</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Teixeira vs Bader &bull; Sep 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Teixeira vs Bader &bull; Sep 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">39/62</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 8:03</span></div><div class="totals-line"><span class="totals-name opponent">Tor Troeng</span><span class="totals-stat">9/17</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 5:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -489,7 +501,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joao Zeferino</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FX: Belfort vs. Rockhold &bull; May 2013</div>
+                <div class="fight-event-label">UFC on FX: Belfort vs. Rockhold &bull; May 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">29/67</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:52</span></div><div class="totals-line"><span class="totals-name opponent">Joao Zeferino</span><span class="totals-stat">14/40</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -519,7 +532,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sean Spencer</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 2:13 &bull; UFC on FOX: Johnson vs Dodson &bull; Jan 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs Dodson &bull; Jan 2013</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 2:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">64/111</span><span class="totals-pct">58%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 5:42</span></div><div class="totals-line"><span class="totals-name opponent">Sean Spencer</span><span class="totals-stat">12/84</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -549,7 +563,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Andrew Craig</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:52 &bull; UFC on FUEL TV: Munoz vs Weidman &bull; Jul 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Munoz vs Weidman &bull; Jul 2012</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">73/109</span><span class="totals-pct">67%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:30</span></div><div class="totals-line"><span class="totals-name opponent">Andrew Craig</span><span class="totals-stat">23/72</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -576,7 +591,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michael Kuiper</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 143: Diaz vs Condit &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC 143: Diaz vs Condit &bull; Feb 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">36/72</span><span class="totals-pct">50%</span><span class="totals-stat">TD 6/16</span><span class="totals-stat">Ctrl 6:24</span></div><div class="totals-line"><span class="totals-name opponent">Michael Kuiper</span><span class="totals-stat">30/62</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -606,7 +622,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Bradley</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 133: Evans vs Ortiz 2 &bull; Aug 2011</div>
+                <div class="fight-event-label">UFC 133: Evans vs Ortiz 2 &bull; Aug 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">43/123</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Paul Bradley</span><span class="totals-stat">13/67</span><span class="totals-pct">19%</span><span class="totals-stat">TD 3/12</span><span class="totals-stat">Ctrl 2:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -636,7 +653,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Jesse Bongfeldt</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC 124: St-Pierre vs Koscheck 2 &bull; Dec 2010</div>
+                <div class="fight-event-label">UFC 124: St-Pierre vs Koscheck 2 &bull; Dec 2010</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">13/23</span><span class="totals-pct">57%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 6:03</span></div><div class="totals-line"><span class="totals-name opponent">Jesse Bongfeldt</span><span class="totals-stat">53/81</span><span class="totals-pct">65%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 5:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -666,7 +684,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rich Attonito</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Marquardt vs Palhares &bull; Sep 2010</div>
+                <div class="fight-event-label">UFC Fight Night: Marquardt vs Palhares &bull; Sep 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rafael Natal</span><span class="totals-stat">28/102</span><span class="totals-pct">27%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 1:36</span></div><div class="totals-line"><span class="totals-name opponent">Rich Attonito</span><span class="totals-stat">25/80</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -694,7 +713,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:54 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:38 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

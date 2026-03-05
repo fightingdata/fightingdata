@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michal Oleksiejczuk</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bautista vs. Oliveira &bull; Feb 2026</div>
+                <div class="fight-event-label">UFC Fight Night: Bautista vs. Oliveira &bull; Feb 2026</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">77/201</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Michal Oleksiejczuk</span><span class="totals-stat">140/221</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shara Magomedov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Whittaker vs. De Ridder &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. De Ridder &bull; Jul 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">39/77</span><span class="totals-pct">51%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 4:30</span></div><div class="totals-line"><span class="totals-name opponent">Shara Magomedov</span><span class="totals-stat">93/142</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:57</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bruno Silva</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 1:27 &bull; UFC 315: Muhammad vs. Della Maddalena &bull; May 2025</div>
+                <div class="fight-event-label">UFC 315: Muhammad vs. Della Maddalena &bull; May 2025</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 1:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">14/24</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dustin Stoltzfus</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:28 &bull; UFC Fight Night: Moreno vs. Albazi &bull; Nov 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Moreno vs. Albazi &bull; Nov 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">7/11</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Stoltzfus</span><span class="totals-stat">13/20</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joe Pyfer</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:25 &bull; UFC 303: Pereira vs. Prochazka 2 &bull; Jun 2024</div>
+                <div class="fight-event-label">UFC 303: Pereira vs. Prochazka 2 &bull; Jun 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">0/5</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joe Pyfer</span><span class="totals-stat">8/10</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -339,7 +346,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chris Curtis</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 297: Strickland vs. Du Plessis &bull; Jan 2024</div>
+                <div class="fight-event-label">UFC 297: Strickland vs. Du Plessis &bull; Jan 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">122/243</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chris Curtis</span><span class="totals-stat">140/258</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -369,7 +377,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eryk Anders</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 289: Nunes vs. Aldana &bull; Jun 2023</div>
+                <div class="fight-event-label">UFC 289: Nunes vs. Aldana &bull; Jun 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">95/192</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div><div class="totals-line"><span class="totals-name opponent">Eryk Anders</span><span class="totals-stat">83/169</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/11</span><span class="totals-stat">Ctrl 3:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -399,7 +408,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Julian Marquez</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:12 &bull; UFC 285: Jones vs. Gane &bull; Mar 2023</div>
+                <div class="fight-event-label">UFC 285: Jones vs. Gane &bull; Mar 2023</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">109/222</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:29</span></div><div class="totals-line"><span class="totals-name opponent">Julian Marquez</span><span class="totals-stat">82/171</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -426,7 +436,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anthony Hernandez</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 1:53 &bull; UFC Fight Night: Sandhagen vs. Song &bull; Sep 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Song &bull; Sep 2022</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 1:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">25/53</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Hernandez</span><span class="totals-stat">39/60</span><span class="totals-pct">65%</span><span class="totals-stat">TD 8/14</span><span class="totals-stat">Ctrl 8:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -456,7 +467,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jordan Wright</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:36 &bull; UFC Fight Night: Lemos vs. Andrade &bull; Apr 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Lemos vs. Andrade &bull; Apr 2022</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">13/17</span><span class="totals-pct">76%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Jordan Wright</span><span class="totals-stat">12/13</span><span class="totals-pct">92%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -480,7 +492,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chidi Njokuani</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:16 &bull; UFC Fight Night: Hermansson vs. Strickland &bull; Feb 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Hermansson vs. Strickland &bull; Feb 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:16</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chidi Njokuani</span><span class="totals-stat">11/11</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -504,7 +517,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dalcha Lungiambula</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brunson vs. Till &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Brunson vs. Till &bull; Sep 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">118/289</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:31</span></div><div class="totals-line"><span class="totals-name opponent">Dalcha Lungiambula</span><span class="totals-stat">85/217</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -534,7 +548,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Abu Azaitar</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:56 &bull; UFC 260: Miocic vs. Ngannou &bull; Mar 2021</div>
+                <div class="fight-event-label">UFC 260: Miocic vs. Ngannou &bull; Mar 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">141/275</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 6:00</span></div><div class="totals-line"><span class="totals-name opponent">Abu Azaitar</span><span class="totals-stat">108/219</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -564,7 +579,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Oskar Piechota</div>
-                <div class="fight-meta">Overturned (Punches) &bull; Rd 2, 4:50 &bull; UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-meta">Overturned (Punches) &bull; Rd 2, 4:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">74/137</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:45</span></div><div class="totals-line"><span class="totals-name opponent">Oskar Piechota</span><span class="totals-stat">37/84</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -591,7 +607,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. JunYong Park</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Edgar vs. The Korean Zombie &bull; Dec 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Edgar vs. The Korean Zombie &bull; Dec 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">51/160</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">JunYong Park</span><span class="totals-stat">77/187</span><span class="totals-pct">41%</span><span class="totals-stat">TD 5/10</span><span class="totals-stat">Ctrl 3:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -621,7 +638,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Krzysztof Jotko</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 240: Holloway vs. Edgar &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC 240: Holloway vs. Edgar &bull; Jul 2019</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">39/77</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:15</span></div><div class="totals-line"><span class="totals-name opponent">Krzysztof Jotko</span><span class="totals-stat">40/117</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 4:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -651,7 +669,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Andrew Sanchez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Iaquinta vs. Cowboy &bull; May 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Iaquinta vs. Cowboy &bull; May 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marc-Andre Barriault</span><span class="totals-stat">69/130</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Andrew Sanchez</span><span class="totals-stat">72/148</span><span class="totals-pct">49%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 6:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -679,7 +698,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:41 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:26 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -78,7 +78,7 @@
             margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #1f2937; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -86,6 +86,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -255,7 +257,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nassourdine Imavov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Sep 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Imavov vs. Borralho &bull; Sep 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Caio Borralho</span><span class="totals-stat">66/166</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 1:20</span></div><div class="totals-line"><span class="totals-name opponent">Nassourdine Imavov</span><span class="totals-stat">81/162</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:29</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f0" style="display:none;">
@@ -291,7 +294,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jared Cannonier</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Cannonier vs. Borralho &bull; Aug 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Caio Borralho</span><span class="totals-stat">153/255</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:59</span></div><div class="totals-line"><span class="totals-name opponent">Jared Cannonier</span><span class="totals-stat">83/254</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f1" style="display:none;">
@@ -327,7 +331,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Craig</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:10 &bull; May 2024</div>
+                <div class="fight-event-label">UFC 301: Pantoja vs. Erceg &bull; May 2024</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Caio Borralho</span><span class="totals-stat">36/50</span><span class="totals-pct">72%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Paul Craig</span><span class="totals-stat">22/48</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f2" style="display:none;">
@@ -355,7 +360,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brendan Allen</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 4, 5:00 &bull; Oct 2025</div>
+                <div class="fight-event-label">UFC Fight Night: De Ridder vs. Allen &bull; Oct 2025</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 4, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Reinier de Ridder</span><span class="totals-stat">9/13</span><span class="totals-pct">69%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 7:05</span></div><div class="totals-line"><span class="totals-name opponent">Brendan Allen</span><span class="totals-stat">22/37</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 11:39</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
@@ -388,7 +394,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Robert Whittaker</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. De Ridder &bull; Jul 2025</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Reinier de Ridder</span><span class="totals-stat">67/145</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/15</span><span class="totals-stat">Ctrl 9:06</span></div><div class="totals-line"><span class="totals-name opponent">Robert Whittaker</span><span class="totals-stat">66/142</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:36</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f1" style="display:none;">
@@ -424,7 +431,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bo Nickal</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 1:53 &bull; May 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Figueiredo &bull; May 2025</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 1:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Reinier de Ridder</span><span class="totals-stat">22/32</span><span class="totals-pct">69%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:09</span></div><div class="totals-line"><span class="totals-name opponent">Bo Nickal</span><span class="totals-stat">8/21</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:24</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f2" style="display:none;">
@@ -461,7 +469,7 @@
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-05 11:19:15 | Data source: UFCStats.com
+            Report generated: 2026-03-05 13:18:06 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

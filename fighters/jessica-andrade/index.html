@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Loopy Godinez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 319: Du Plessis vs. Chimaev &bull; Aug 2025</div>
+                <div class="fight-event-label">UFC 319: Du Plessis vs. Chimaev &bull; Aug 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">90/287</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Loopy Godinez</span><span class="totals-stat">107/213</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/14</span><span class="totals-stat">Ctrl 1:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jasmine Jasudavicius</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:40 &bull; UFC 315: Muhammad vs. Della Maddalena &bull; May 2025</div>
+                <div class="fight-event-label">UFC 315: Muhammad vs. Della Maddalena &bull; May 2025</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jasmine Jasudavicius</span><span class="totals-stat">11/18</span><span class="totals-pct">61%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Natalia Silva</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Burns vs. Brady &bull; Sep 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Burns vs. Brady &bull; Sep 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">50/140</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:11</span></div><div class="totals-line"><span class="totals-name opponent">Natalia Silva</span><span class="totals-stat">117/208</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marina Rodriguez</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 300: Pereira vs. Hill &bull; Apr 2024</div>
+                <div class="fight-event-label">UFC 300: Pereira vs. Hill &bull; Apr 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">89/180</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:53</span></div><div class="totals-line"><span class="totals-name opponent">Marina Rodriguez</span><span class="totals-stat">82/228</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mackenzie Dern</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:15 &bull; UFC 295: Prochazka vs. Pereira &bull; Nov 2023</div>
+                <div class="fight-event-label">UFC 295: Prochazka vs. Pereira &bull; Nov 2023</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">53/107</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">Mackenzie Dern</span><span class="totals-stat">49/114</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -348,7 +355,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tatiana Suarez</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 1:31 &bull; UFC Fight Night: Sandhagen vs. Font &bull; Aug 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Font &bull; Aug 2023</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 1:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">11/29</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Tatiana Suarez</span><span class="totals-stat">23/49</span><span class="totals-pct">47%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 2:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yan Xiaonan</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:20 &bull; UFC 288: Sterling vs. Cejudo &bull; May 2023</div>
+                <div class="fight-event-label">UFC 288: Sterling vs. Cejudo &bull; May 2023</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">12/32</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yan Xiaonan</span><span class="totals-stat">26/36</span><span class="totals-pct">72%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -399,7 +408,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Erin Blanchfield</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:37 &bull; UFC Fight Night: Andrade vs. Blanchfield &bull; Feb 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Andrade vs. Blanchfield &bull; Feb 2023</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">53/143</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Erin Blanchfield</span><span class="totals-stat">51/120</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -426,7 +436,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lauren Murphy</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 283: Teixeira vs. Hill &bull; Jan 2023</div>
+                <div class="fight-event-label">UFC 283: Teixeira vs. Hill &bull; Jan 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">231/369</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:11</span></div><div class="totals-line"><span class="totals-name opponent">Lauren Murphy</span><span class="totals-stat">100/293</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/15</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -456,7 +467,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Amanda Lemos</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 3:13 &bull; UFC Fight Night: Lemos vs. Andrade &bull; Apr 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Lemos vs. Andrade &bull; Apr 2022</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 3:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">3/9</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Amanda Lemos</span><span class="totals-stat">7/17</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -480,7 +492,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cynthia Calvillo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:54 &bull; UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">48/86</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cynthia Calvillo</span><span class="totals-stat">27/75</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -504,7 +517,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Valentina Shevchenko</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:19 &bull; UFC 261: Usman vs. Masvidal 2 &bull; Apr 2021</div>
+                <div class="fight-event-label">UFC 261: Usman vs. Masvidal 2 &bull; Apr 2021</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">10/15</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:57</span></div><div class="totals-line"><span class="totals-name opponent">Valentina Shevchenko</span><span class="totals-stat">32/39</span><span class="totals-pct">82%</span><span class="totals-stat">TD 7/7</span><span class="totals-stat">Ctrl 5:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -531,7 +545,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Katlyn Cerminara</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:55 &bull; UFC Fight Night: Ortega vs. The Korean Zombie &bull; Oct 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Ortega vs. The Korean Zombie &bull; Oct 2020</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">28/43</span><span class="totals-pct">65%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:26</span></div><div class="totals-line"><span class="totals-name opponent">Katlyn Cerminara</span><span class="totals-stat">19/53</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -555,7 +570,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rose Namajunas</div>
-                <div class="fight-meta">KO/TKO (Slam) &bull; Rd 2, 2:58 &bull; UFC 251: Usman vs. Masvidal &bull; Jul 2020</div>
+                <div class="fight-event-label">UFC 251: Usman vs. Masvidal &bull; Jul 2020</div>
+                <div class="fight-meta">KO/TKO (Slam) &bull; Rd 2, 2:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">71/205</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:29</span></div><div class="totals-line"><span class="totals-name opponent">Rose Namajunas</span><span class="totals-stat">82/235</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -585,7 +601,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zhang Weili</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:42 &bull; UFC Fight Night: Andrade vs. Zhang &bull; Aug 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Andrade vs. Zhang &bull; Aug 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">4/12</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Zhang Weili</span><span class="totals-stat">29/38</span><span class="totals-pct">76%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -609,7 +626,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Karolina Kowalkiewicz</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:58 &bull; UFC 228: Woodley vs. Till &bull; Sep 2018</div>
+                <div class="fight-event-label">UFC 228: Woodley vs. Till &bull; Sep 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">38/73</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Karolina Kowalkiewicz</span><span class="totals-stat">24/56</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -633,7 +651,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tecia Pennington</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Emmett vs. Stephens &bull; Feb 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Emmett vs. Stephens &bull; Feb 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">92/178</span><span class="totals-pct">52%</span><span class="totals-stat">TD 10/12</span><span class="totals-stat">Ctrl 7:14</span></div><div class="totals-line"><span class="totals-name opponent">Tecia Pennington</span><span class="totals-stat">69/150</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -663,7 +682,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Claudia Gadelha</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Saint Preux vs. Okami &bull; Sep 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Saint Preux vs. Okami &bull; Sep 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">141/241</span><span class="totals-pct">59%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 8:35</span></div><div class="totals-line"><span class="totals-name opponent">Claudia Gadelha</span><span class="totals-stat">42/91</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -693,7 +713,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joanna Jedrzejczyk</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 211: Miocic vs. Dos Santos &bull; May 2017</div>
+                <div class="fight-event-label">UFC 211: Miocic vs. Dos Santos &bull; May 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">83/218</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/10</span><span class="totals-stat">Ctrl 3:29</span></div><div class="totals-line"><span class="totals-name opponent">Joanna Jedrzejczyk</span><span class="totals-stat">225/352</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -729,7 +750,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Angela Hill</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">131/322</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:35</span></div><div class="totals-line"><span class="totals-name opponent">Angela Hill</span><span class="totals-stat">89/209</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -759,7 +781,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joanne Wood</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:38 &bull; UFC 203: Miocic vs. Overeem &bull; Sep 2016</div>
+                <div class="fight-event-label">UFC 203: Miocic vs. Overeem &bull; Sep 2016</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">20/28</span><span class="totals-pct">71%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 3:31</span></div><div class="totals-line"><span class="totals-name opponent">Joanne Wood</span><span class="totals-stat">13/26</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -783,7 +806,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jessica Penne</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:56 &bull; UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-event-label">UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">117/205</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:33</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Penne</span><span class="totals-stat">27/91</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -810,7 +834,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Raquel Pennington</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 4:58 &bull; UFC 191: Johnson vs Dodson 2 &bull; Sep 2015</div>
+                <div class="fight-event-label">UFC 191: Johnson vs Dodson 2 &bull; Sep 2015</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 4:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">41/66</span><span class="totals-pct">62%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 3:27</span></div><div class="totals-line"><span class="totals-name opponent">Raquel Pennington</span><span class="totals-stat">41/68</span><span class="totals-pct">60%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -837,7 +862,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sarah Moras</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Mir vs Duffee &bull; Jul 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Mir vs Duffee &bull; Jul 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">50/90</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 9:05</span></div><div class="totals-line"><span class="totals-name opponent">Sarah Moras</span><span class="totals-stat">18/56</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/8</span><span class="totals-stat">Ctrl 0:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -867,7 +893,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-24')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marion Reneau</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:54 &bull; UFC Fight Night: Bigfoot vs Mir &bull; Feb 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Bigfoot vs Mir &bull; Feb 2015</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">6/15</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:01</span></div><div class="totals-line"><span class="totals-name opponent">Marion Reneau</span><span class="totals-stat">6/16</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
@@ -891,7 +918,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-25')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Larissa Pacheco</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:33 &bull; UFC Fight Night: Bigfoot vs Arlovski &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Bigfoot vs Arlovski &bull; Sep 2014</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">19/24</span><span class="totals-pct">79%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:23</span></div><div class="totals-line"><span class="totals-name opponent">Larissa Pacheco</span><span class="totals-stat">6/13</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-25">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-25" style="display:none;">
@@ -915,7 +943,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-26')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Raquel Pennington</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-event-label">UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">66/158</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 6:22</span></div><div class="totals-line"><span class="totals-name opponent">Raquel Pennington</span><span class="totals-stat">82/167</span><span class="totals-pct">49%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-26">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-26" style="display:none;">
@@ -945,7 +974,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-27')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rosi Sexton</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Machida vs Munoz &bull; Oct 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Machida vs Munoz &bull; Oct 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">206/344</span><span class="totals-pct">60%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:42</span></div><div class="totals-line"><span class="totals-name opponent">Rosi Sexton</span><span class="totals-stat">88/245</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 0:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-27">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-27" style="display:none;">
@@ -975,7 +1005,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-28')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Liz Carmouche</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:57 &bull; UFC on FOX: Johnson vs Moraga &bull; Jul 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs Moraga &bull; Jul 2013</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jessica Andrade</span><span class="totals-stat">10/15</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Liz Carmouche</span><span class="totals-stat">50/83</span><span class="totals-pct">60%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 7:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-28">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-28" style="display:none;">
@@ -1000,7 +1031,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:26 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:12 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

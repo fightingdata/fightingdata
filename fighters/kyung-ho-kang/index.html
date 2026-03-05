@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Muin Gafurov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Whittaker vs. Aliskerov &bull; Jun 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. Aliskerov &bull; Jun 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">12/35</span><span class="totals-pct">34%</span><span class="totals-stat">TD 3/11</span><span class="totals-stat">Ctrl 4:56</span></div><div class="totals-line"><span class="totals-name opponent">Muin Gafurov</span><span class="totals-stat">47/71</span><span class="totals-pct">66%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 6:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. John Castaneda</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 295: Prochazka vs. Pereira &bull; Nov 2023</div>
+                <div class="fight-event-label">UFC 295: Prochazka vs. Pereira &bull; Nov 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">88/202</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">John Castaneda</span><span class="totals-stat">111/179</span><span class="totals-pct">62%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 2:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cristian Quinonez</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:25 &bull; UFC Fight Night: Vettori vs. Cannonier &bull; Jun 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Vettori vs. Cannonier &bull; Jun 2023</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">22/37</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:40</span></div><div class="totals-line"><span class="totals-name opponent">Cristian Quinonez</span><span class="totals-stat">13/29</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Batgerel Danaa</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 275: Teixeira vs. Prochazka &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC 275: Teixeira vs. Prochazka &bull; Jun 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">100/155</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Batgerel Danaa</span><span class="totals-stat">109/284</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rani Yahya</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Vieira vs. Tate &bull; Nov 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Vieira vs. Tate &bull; Nov 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">43/82</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:05</span></div><div class="totals-line"><span class="totals-name opponent">Rani Yahya</span><span class="totals-stat">27/48</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 10:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pingyuan Liu</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Edgar vs. The Korean Zombie &bull; Dec 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Edgar vs. The Korean Zombie &bull; Dec 2019</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">20/40</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 12:23</span></div><div class="totals-line"><span class="totals-name opponent">Pingyuan Liu</span><span class="totals-stat">25/53</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brandon Davis</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 241: Cormier vs. Miocic 2 &bull; Aug 2019</div>
+                <div class="fight-event-label">UFC 241: Cormier vs. Miocic 2 &bull; Aug 2019</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">50/101</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 6:20</span></div><div class="totals-line"><span class="totals-name opponent">Brandon Davis</span><span class="totals-stat">77/187</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Teruto Ishihara</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:59 &bull; UFC 234: Adesanya vs. Silva &bull; Feb 2019</div>
+                <div class="fight-event-label">UFC 234: Adesanya vs. Silva &bull; Feb 2019</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">26/58</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:14</span></div><div class="totals-line"><span class="totals-name opponent">Teruto Ishihara</span><span class="totals-stat">17/47</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -435,7 +445,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ricardo Ramos</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 227: Dillashaw vs. Garbrandt 2 &bull; Aug 2018</div>
+                <div class="fight-event-label">UFC 227: Dillashaw vs. Garbrandt 2 &bull; Aug 2018</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">65/157</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:07</span></div><div class="totals-line"><span class="totals-name opponent">Ricardo Ramos</span><span class="totals-stat">54/146</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -465,7 +476,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Guido Cannetti</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 4:53 &bull; UFC Fight Night: Stephens vs. Choi &bull; Jan 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Stephens vs. Choi &bull; Jan 2018</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 4:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">3/11</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Guido Cannetti</span><span class="totals-stat">19/39</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -489,7 +501,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michinori Tanaka</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hunt vs Nelson &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Hunt vs Nelson &bull; Sep 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">21/66</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 5:26</span></div><div class="totals-line"><span class="totals-name opponent">Michinori Tanaka</span><span class="totals-stat">22/61</span><span class="totals-pct">36%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 5:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -519,7 +532,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Shunichi Shimizu</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 3:53 &bull; UFC Fight Night: Saffiedine vs Lim &bull; Jan 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Saffiedine vs Lim &bull; Jan 2014</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 3:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">65/94</span><span class="totals-pct">69%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 8:14</span></div><div class="totals-line"><span class="totals-name opponent">Shunichi Shimizu</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 1:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -549,7 +563,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chico Camus</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 164: Henderson vs Pettis 2 &bull; Aug 2013</div>
+                <div class="fight-event-label">UFC 164: Henderson vs Pettis 2 &bull; Aug 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">18/70</span><span class="totals-pct">26%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 9:16</span></div><div class="totals-line"><span class="totals-name opponent">Chico Camus</span><span class="totals-stat">28/69</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -579,7 +594,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Alex Caceres</div>
-                <div class="fight-meta">Overturned &bull; Rd 3, 5:00 &bull; UFC on FUEL TV: Silva vs. Stann &bull; Mar 2013</div>
+                <div class="fight-event-label">UFC on FUEL TV: Silva vs. Stann &bull; Mar 2013</div>
+                <div class="fight-meta">Overturned &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kyung Ho Kang</span><span class="totals-stat">16/43</span><span class="totals-pct">37%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 6:17</span></div><div class="totals-line"><span class="totals-name opponent">Alex Caceres</span><span class="totals-stat">30/56</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -607,7 +623,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:37 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:22 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

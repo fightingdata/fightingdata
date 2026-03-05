@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. King Green</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs. Reis &bull; Apr 2017</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs. Reis &bull; Apr 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rashid Magomedov</span><span class="totals-stat">75/189</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">King Green</span><span class="totals-stat">75/143</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 2:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Beneil Dariush</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dos Anjos vs. Ferguson &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Ferguson &bull; Nov 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rashid Magomedov</span><span class="totals-stat">41/78</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:41</span></div><div class="totals-line"><span class="totals-name opponent">Beneil Dariush</span><span class="totals-stat">60/120</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 4:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gilbert Burns</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Belfort vs Henderson 3 &bull; Nov 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Belfort vs Henderson 3 &bull; Nov 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rashid Magomedov</span><span class="totals-stat">80/145</span><span class="totals-pct">55%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:10</span></div><div class="totals-line"><span class="totals-name opponent">Gilbert Burns</span><span class="totals-stat">28/77</span><span class="totals-pct">36%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Elias Silverio</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:57 &bull; UFC Fight Night: Machida vs Dollaway &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Machida vs Dollaway &bull; Dec 2014</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rashid Magomedov</span><span class="totals-stat">91/161</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:59</span></div><div class="totals-line"><span class="totals-name opponent">Elias Silverio</span><span class="totals-stat">56/118</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rodrigo Damm</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Miocic vs Maldonado &bull; May 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Miocic vs Maldonado &bull; May 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rashid Magomedov</span><span class="totals-stat">63/161</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div><div class="totals-line"><span class="totals-name opponent">Rodrigo Damm</span><span class="totals-stat">37/104</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 1:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anthony Rocco Martin</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 169: Barao vs Faber 2 &bull; Feb 2014</div>
+                <div class="fight-event-label">UFC 169: Barao vs Faber 2 &bull; Feb 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rashid Magomedov</span><span class="totals-stat">46/73</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:07</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Rocco Martin</span><span class="totals-stat">18/42</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 6:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -385,7 +393,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:55 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:38 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

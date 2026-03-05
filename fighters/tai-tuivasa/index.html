@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tallison Teixeira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 325: Volkanovski vs. Lopes 2 &bull; Jan 2026</div>
+                <div class="fight-event-label">UFC 325: Volkanovski vs. Lopes 2 &bull; Jan 2026</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">42/58</span><span class="totals-pct">72%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:58</span></div><div class="totals-line"><span class="totals-name opponent">Tallison Teixeira</span><span class="totals-stat">51/74</span><span class="totals-pct">69%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 7:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jairzinho Rozenstruik</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 305: Du Plessis vs. Adesanya &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC 305: Du Plessis vs. Adesanya &bull; Aug 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">37/126</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Jairzinho Rozenstruik</span><span class="totals-stat">91/184</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marcin Tybura</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:08 &bull; UFC Fight Night: Tuivasa vs. Tybura &bull; Mar 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Tuivasa vs. Tybura &bull; Mar 2024</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">15/24</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Marcin Tybura</span><span class="totals-stat">27/41</span><span class="totals-pct">66%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Volkov</div>
-                <div class="fight-meta">Submission (Ezekiel Choke) &bull; Rd 2, 4:37 &bull; UFC 293: Adesanya vs. Strickland &bull; Sep 2023</div>
+                <div class="fight-event-label">UFC 293: Adesanya vs. Strickland &bull; Sep 2023</div>
+                <div class="fight-meta">Submission (Ezekiel Choke) &bull; Rd 2, 4:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">28/67</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkov</span><span class="totals-stat">93/143</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sergei Pavlovich</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:54 &bull; UFC Fight Night: Thompson vs. Holland &bull; Dec 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Thompson vs. Holland &bull; Dec 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">2/10</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Sergei Pavlovich</span><span class="totals-stat">23/44</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ciryl Gane</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:23 &bull; UFC Fight Night: Gane vs. Tuivasa &bull; Sep 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Gane vs. Tuivasa &bull; Sep 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">29/89</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Ciryl Gane</span><span class="totals-stat">110/168</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Derrick Lewis</div>
-                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 2, 1:40 &bull; UFC 271: Adesanya vs. Whittaker 2 &bull; Feb 2022</div>
+                <div class="fight-event-label">UFC 271: Adesanya vs. Whittaker 2 &bull; Feb 2022</div>
+                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 2, 1:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">24/36</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:06</span></div><div class="totals-line"><span class="totals-name opponent">Derrick Lewis</span><span class="totals-stat">27/43</span><span class="totals-pct">63%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -399,7 +408,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Augusto Sakai</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 0:26 &bull; UFC 269: Oliveira vs. Poirier &bull; Dec 2021</div>
+                <div class="fight-event-label">UFC 269: Oliveira vs. Poirier &bull; Dec 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 0:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">34/52</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:58</span></div><div class="totals-line"><span class="totals-name opponent">Augusto Sakai</span><span class="totals-stat">21/29</span><span class="totals-pct">72%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -426,7 +436,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Greg Hardy</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:07 &bull; UFC 264: Poirier vs. McGregor 3 &bull; Jul 2021</div>
+                <div class="fight-event-label">UFC 264: Poirier vs. McGregor 3 &bull; Jul 2021</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">11/23</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Greg Hardy</span><span class="totals-stat">6/15</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -450,7 +461,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Harry Hunsucker</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:49 &bull; UFC Fight Night: Brunson vs. Holland &bull; Mar 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Brunson vs. Holland &bull; Mar 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">14/18</span><span class="totals-pct">78%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Harry Hunsucker</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -474,7 +486,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Stefan Struve</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59 &bull; UFC 254: Khabib vs. Gaethje &bull; Oct 2020</div>
+                <div class="fight-event-label">UFC 254: Khabib vs. Gaethje &bull; Oct 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">27/42</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:44</span></div><div class="totals-line"><span class="totals-name opponent">Stefan Struve</span><span class="totals-stat">13/19</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -498,7 +511,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Serghei Spivac</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 3:14 &bull; UFC 243: Whittaker vs. Adesanya &bull; Oct 2019</div>
+                <div class="fight-event-label">UFC 243: Whittaker vs. Adesanya &bull; Oct 2019</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 3:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">21/50</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Serghei Spivac</span><span class="totals-stat">23/42</span><span class="totals-pct">55%</span><span class="totals-stat">TD 6/8</span><span class="totals-stat">Ctrl 4:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -525,7 +539,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Blagoy Ivanov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 238: Cejudo vs. Moraes &bull; Jun 2019</div>
+                <div class="fight-event-label">UFC 238: Cejudo vs. Moraes &bull; Jun 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">64/144</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:38</span></div><div class="totals-line"><span class="totals-name opponent">Blagoy Ivanov</span><span class="totals-stat">73/123</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -555,7 +570,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Junior Dos Santos</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:30 &bull; UFC Fight Night: Dos Santos vs. Tuivasa &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Santos vs. Tuivasa &bull; Dec 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">16/42</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:16</span></div><div class="totals-line"><span class="totals-name opponent">Junior Dos Santos</span><span class="totals-stat">26/65</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -582,7 +598,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Andrei Arlovski</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 225: Whittaker vs. Romero 2 &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC 225: Whittaker vs. Romero 2 &bull; Jun 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">54/120</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:39</span></div><div class="totals-line"><span class="totals-name opponent">Andrei Arlovski</span><span class="totals-stat">51/125</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -612,7 +629,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cyril Asker</div>
-                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 1, 2:18 &bull; UFC 221: Romero vs. Rockhold &bull; Feb 2018</div>
+                <div class="fight-event-label">UFC 221: Romero vs. Rockhold &bull; Feb 2018</div>
+                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 1, 2:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">38/51</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div><div class="totals-line"><span class="totals-name opponent">Cyril Asker</span><span class="totals-stat">3/11</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -636,7 +654,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rashad Coulter</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 4:35 &bull; UFC Fight Night: Werdum vs. Tybura &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Werdum vs. Tybura &bull; Nov 2017</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 4:35</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tai Tuivasa</span><span class="totals-stat">22/36</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:15</span></div><div class="totals-line"><span class="totals-name opponent">Rashad Coulter</span><span class="totals-stat">10/19</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -658,7 +677,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:06 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:48 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

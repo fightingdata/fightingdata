@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Petr Yan</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-event-label">UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">134/383</span><span class="totals-pct">35%</span><span class="totals-stat">TD 2/29</span><span class="totals-stat">Ctrl 5:12</span></div><div class="totals-line"><span class="totals-name opponent">Petr Yan</span><span class="totals-stat">139/230</span><span class="totals-pct">60%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 2:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -243,7 +246,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cory Sandhagen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 320: Ankalaev vs. Pereira 2 &bull; Oct 2025</div>
+                <div class="fight-event-label">UFC 320: Ankalaev vs. Pereira 2 &bull; Oct 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">114/265</span><span class="totals-pct">43%</span><span class="totals-stat">TD 20/37</span><span class="totals-stat">Ctrl 10:02</span></div><div class="totals-line"><span class="totals-name opponent">Cory Sandhagen</span><span class="totals-stat">80/184</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -279,7 +283,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sean O'Malley</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 4:42 &bull; UFC 316: Dvalishvili vs. O'Malley 2 &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC 316: Dvalishvili vs. O'Malley 2 &bull; Jun 2025</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 4:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">52/115</span><span class="totals-pct">45%</span><span class="totals-stat">TD 5/12</span><span class="totals-stat">Ctrl 6:29</span></div><div class="totals-line"><span class="totals-name opponent">Sean O'Malley</span><span class="totals-stat">31/57</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -309,7 +314,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Umar Nurmagomedov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 311: Makhachev vs. Moicano &bull; Jan 2025</div>
+                <div class="fight-event-label">UFC 311: Makhachev vs. Moicano &bull; Jan 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">111/259</span><span class="totals-pct">43%</span><span class="totals-stat">TD 7/30</span><span class="totals-stat">Ctrl 2:22</span></div><div class="totals-line"><span class="totals-name opponent">Umar Nurmagomedov</span><span class="totals-stat">104/237</span><span class="totals-pct">44%</span><span class="totals-stat">TD 2/15</span><span class="totals-stat">Ctrl 1:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -345,7 +351,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sean O'Malley</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 306: Riyadh Season Noche UFC &bull; Sep 2024</div>
+                <div class="fight-event-label">UFC 306: Riyadh Season Noche UFC &bull; Sep 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">82/164</span><span class="totals-pct">50%</span><span class="totals-stat">TD 6/15</span><span class="totals-stat">Ctrl 10:03</span></div><div class="totals-line"><span class="totals-name opponent">Sean O'Malley</span><span class="totals-stat">47/89</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -381,7 +388,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Henry Cejudo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 298: Volkanovski vs. Topuria &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC 298: Volkanovski vs. Topuria &bull; Feb 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">74/172</span><span class="totals-pct">43%</span><span class="totals-stat">TD 5/11</span><span class="totals-stat">Ctrl 4:23</span></div><div class="totals-line"><span class="totals-name opponent">Henry Cejudo</span><span class="totals-stat">29/78</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 2:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -411,7 +419,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Petr Yan</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Yan vs. Dvalishvili &bull; Mar 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Yan vs. Dvalishvili &bull; Mar 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">147/338</span><span class="totals-pct">43%</span><span class="totals-stat">TD 11/49</span><span class="totals-stat">Ctrl 6:53</span></div><div class="totals-line"><span class="totals-name opponent">Petr Yan</span><span class="totals-stat">75/143</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:50</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -447,7 +456,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jose Aldo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 278: Usman vs. Edwards &bull; Aug 2022</div>
+                <div class="fight-event-label">UFC 278: Usman vs. Edwards &bull; Aug 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">57/147</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/16</span><span class="totals-stat">Ctrl 5:06</span></div><div class="totals-line"><span class="totals-name opponent">Jose Aldo</span><span class="totals-stat">38/67</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -477,7 +487,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marlon Moraes</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:25 &bull; UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">69/109</span><span class="totals-pct">63%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 6:00</span></div><div class="totals-line"><span class="totals-name opponent">Marlon Moraes</span><span class="totals-stat">29/44</span><span class="totals-pct">66%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -504,7 +515,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cody Stamann</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Reyes vs. Prochazka &bull; May 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Reyes vs. Prochazka &bull; May 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">71/192</span><span class="totals-pct">37%</span><span class="totals-stat">TD 5/11</span><span class="totals-stat">Ctrl 1:42</span></div><div class="totals-line"><span class="totals-name opponent">Cody Stamann</span><span class="totals-stat">48/134</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:57</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -534,7 +546,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. John Dodson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 252: Miocic vs. Cormier 3 &bull; Aug 2020</div>
+                <div class="fight-event-label">UFC 252: Miocic vs. Cormier 3 &bull; Aug 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">50/133</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/20</span><span class="totals-stat">Ctrl 3:44</span></div><div class="totals-line"><span class="totals-name opponent">John Dodson</span><span class="totals-stat">27/86</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -564,7 +577,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gustavo Lopez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Eye vs. Calvillo &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Eye vs. Calvillo &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">73/128</span><span class="totals-pct">57%</span><span class="totals-stat">TD 13/18</span><span class="totals-stat">Ctrl 9:15</span></div><div class="totals-line"><span class="totals-name opponent">Gustavo Lopez</span><span class="totals-stat">14/57</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -594,7 +608,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Casey Kenney</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Anderson vs. Blachowicz &bull; Feb 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Anderson vs. Blachowicz &bull; Feb 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">63/181</span><span class="totals-pct">35%</span><span class="totals-stat">TD 12/24</span><span class="totals-stat">Ctrl 5:42</span></div><div class="totals-line"><span class="totals-name opponent">Casey Kenney</span><span class="totals-stat">45/118</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -624,7 +639,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brad Katona</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Iaquinta vs. Cowboy &bull; May 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Iaquinta vs. Cowboy &bull; May 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">55/102</span><span class="totals-pct">54%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 8:31</span></div><div class="totals-line"><span class="totals-name opponent">Brad Katona</span><span class="totals-stat">32/56</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -654,7 +670,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Terrion Ware</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hunt vs. Oleinik &bull; Sep 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Hunt vs. Oleinik &bull; Sep 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">62/165</span><span class="totals-pct">38%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 11:32</span></div><div class="totals-line"><span class="totals-name opponent">Terrion Ware</span><span class="totals-stat">8/34</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -684,7 +701,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ricky Simon</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Barboza vs. Lee &bull; Apr 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Barboza vs. Lee &bull; Apr 2018</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">61/210</span><span class="totals-pct">29%</span><span class="totals-stat">TD 6/22</span><span class="totals-stat">Ctrl 2:43</span></div><div class="totals-line"><span class="totals-name opponent">Ricky Simon</span><span class="totals-stat">34/103</span><span class="totals-pct">33%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 2:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -714,7 +732,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Frankie Saenz</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Swanson vs. Ortega &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Swanson vs. Ortega &bull; Dec 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Merab Dvalishvili</span><span class="totals-stat">47/118</span><span class="totals-pct">40%</span><span class="totals-stat">TD 11/23</span><span class="totals-stat">Ctrl 7:46</span></div><div class="totals-line"><span class="totals-name opponent">Frankie Saenz</span><span class="totals-stat">58/106</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -742,7 +761,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:46 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:30 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

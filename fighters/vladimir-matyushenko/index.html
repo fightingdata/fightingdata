@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ryan Bader</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 0:50 &bull; UFC on FOX: Johnson vs Dodson &bull; Jan 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs Dodson &bull; Jan 2013</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 0:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">0/4</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Ryan Bader</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Gustafsson</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:13 &bull; UFC 141: Lesnar vs Overeem &bull; Dec 2011</div>
+                <div class="fight-event-label">UFC 141: Lesnar vs Overeem &bull; Dec 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">5/8</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Gustafsson</span><span class="totals-stat">10/21</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason Brilz</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:20 &bull; UFC 129: St-Pierre vs Shields &bull; Apr 2011</div>
+                <div class="fight-event-label">UFC 129: St-Pierre vs Shields &bull; Apr 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">8/9</span><span class="totals-pct">89%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Jason Brilz</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -279,7 +284,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alexandre Ferreira</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 2:20 &bull; UFC 122: Marquardt vs Okami &bull; Nov 2010</div>
+                <div class="fight-event-label">UFC 122: Marquardt vs Okami &bull; Nov 2010</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 2:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">19/33</span><span class="totals-pct">58%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Alexandre Ferreira</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -303,7 +309,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jon Jones</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 1:52 &bull; UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 1:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">0/5</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jon Jones</span><span class="totals-stat">15/16</span><span class="totals-pct">94%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -327,7 +334,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eliot Marshall</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Live: Vera vs Jones &bull; Mar 2010</div>
+                <div class="fight-event-label">UFC Live: Vera vs Jones &bull; Mar 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">28/91</span><span class="totals-pct">31%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:30</span></div><div class="totals-line"><span class="totals-name opponent">Eliot Marshall</span><span class="totals-stat">19/97</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -357,7 +365,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Igor Pokrajac</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-event-label">UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">44/106</span><span class="totals-pct">42%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 6:43</span></div><div class="totals-line"><span class="totals-name opponent">Igor Pokrajac</span><span class="totals-stat">17/65</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -387,7 +396,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Andrei Arlovski</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:59 &bull; UFC 44: Undisputed &bull; Sep 2003</div>
+                <div class="fight-event-label">UFC 44: Undisputed &bull; Sep 2003</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">5/17</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Andrei Arlovski</span><span class="totals-stat">9/20</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -411,7 +421,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pedro Rizzo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 41: Onslaught &bull; Feb 2003</div>
+                <div class="fight-event-label">UFC 41: Onslaught &bull; Feb 2003</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">24/38</span><span class="totals-pct">63%</span><span class="totals-stat">TD 5/19</span><span class="totals-stat">Ctrl 7:10</span></div><div class="totals-line"><span class="totals-name opponent">Pedro Rizzo</span><span class="totals-stat">12/37</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -441,7 +452,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Travis Wiuff</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:10 &bull; UFC 40: Vendetta &bull; Nov 2002</div>
+                <div class="fight-event-label">UFC 40: Vendetta &bull; Nov 2002</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">24/32</span><span class="totals-pct">75%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 3:17</span></div><div class="totals-line"><span class="totals-name opponent">Travis Wiuff</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -465,7 +477,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tito Ortiz</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 33: Victory in Vegas &bull; Sep 2001</div>
+                <div class="fight-event-label">UFC 33: Victory in Vegas &bull; Sep 2001</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">19/49</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 1:10</span></div><div class="totals-line"><span class="totals-name opponent">Tito Ortiz</span><span class="totals-stat">64/84</span><span class="totals-pct">76%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 21:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -501,7 +514,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yuki Kondo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 32: Showdown in the Meadowlands &bull; Jun 2001</div>
+                <div class="fight-event-label">UFC 32: Showdown in the Meadowlands &bull; Jun 2001</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">17/28</span><span class="totals-pct">61%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 14:14</span></div><div class="totals-line"><span class="totals-name opponent">Yuki Kondo</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -531,7 +545,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-affliction-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rogerio Nogueira</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 4:26 &bull; Affliction - Day of Reckoning &bull; Jan 2009</div>
+                <div class="fight-event-label">Affliction - Day of Reckoning &bull; Jan 2009</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 4:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">14/60</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rogerio Nogueira</span><span class="totals-stat">24/90</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-affliction-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-affliction-0" style="display:none;">
@@ -558,7 +573,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alex Schoenauer</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 4:00 &bull; IFL - World Grand Prix Semifinals &bull; Nov 2007</div>
+                <div class="fight-event-label">IFL - World Grand Prix Semifinals &bull; Nov 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 4:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vladimir Matyushenko</span><span class="totals-stat">21/36</span><span class="totals-pct">58%</span><span class="totals-stat">TD 7/9</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alex Schoenauer</span><span class="totals-stat">14/33</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -586,7 +602,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:12 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:53 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

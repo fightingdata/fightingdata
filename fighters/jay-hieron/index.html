@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tyron Woodley</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:36 &bull; UFC 156: Aldo vs Edgar &bull; Feb 2013</div>
+                <div class="fight-event-label">UFC 156: Aldo vs Edgar &bull; Feb 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jay Hieron</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tyron Woodley</span><span class="totals-stat">15/22</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jake Ellenberger</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FX: Browne vs Bigfoot &bull; Oct 2012</div>
+                <div class="fight-event-label">UFC on FX: Browne vs Bigfoot &bull; Oct 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jay Hieron</span><span class="totals-stat">32/127</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jake Ellenberger</span><span class="totals-stat">25/81</span><span class="totals-pct">31%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jonathan Goulet</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 3, 1:05 &bull; UFC Fight Night 2 &bull; Oct 2005</div>
+                <div class="fight-event-label">UFC Fight Night 2 &bull; Oct 2005</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 3, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jay Hieron</span><span class="totals-stat">10/26</span><span class="totals-pct">38%</span><span class="totals-stat">TD 9/12</span><span class="totals-stat">Ctrl 7:19</span></div><div class="totals-line"><span class="totals-name opponent">Jonathan Goulet</span><span class="totals-stat">14/42</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Georges St-Pierre</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:42 &bull; UFC 48: Payback &bull; Jun 2004</div>
+                <div class="fight-event-label">UFC 48: Payback &bull; Jun 2004</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jay Hieron</span><span class="totals-stat">5/9</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Georges St-Pierre</span><span class="totals-stat">24/33</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joe Riggs</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Miami &bull; Jan 2010</div>
+                <div class="fight-event-label">Strikeforce - Miami &bull; Jan 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jay Hieron</span><span class="totals-stat">21/53</span><span class="totals-pct">40%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 8:08</span></div><div class="totals-line"><span class="totals-name opponent">Joe Riggs</span><span class="totals-stat">6/35</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jesse Taylor</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Carano vs. Cyborg &bull; Aug 2009</div>
+                <div class="fight-event-label">Strikeforce - Carano vs. Cyborg &bull; Aug 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jay Hieron</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div><div style="color:#6b7280;font-size:0.85rem;margin-bottom:0.75rem;font-style:italic;">Affliction (1 fight)</div>
@@ -353,7 +361,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-affliction-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason High</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:04 &bull; Affliction - Day of Reckoning &bull; Jan 2009</div>
+                <div class="fight-event-label">Affliction - Day of Reckoning &bull; Jan 2009</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:04</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jay Hieron</span><span class="totals-stat">6/9</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jason High</span><span class="totals-stat">0/8</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-affliction-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-affliction-0" style="display:none;">
@@ -377,13 +386,14 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Adam Lynn</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WEC 15: Judgment Day &bull; </div>
+                <div class="fight-event-label">WEC 15: Judgment Day &bull; </div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jay Hieron</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:25 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:11 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

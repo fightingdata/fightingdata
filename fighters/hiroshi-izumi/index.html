@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -152,7 +154,7 @@
         <h2>Fighter Profile</h2>
         <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">43 (Jun 22, 1982)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">205 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="sample-warning">&#9888;&#65039; <strong>Hiroshi Izumi</strong> has only 3 fights in our database — stats may not be fully representative.</div>
+        
 
         <h2>Career Statistics</h2>
     <table class="profile-stats-table">
@@ -202,12 +204,13 @@
     </table>
 
         <h2>Fight History</h2>
-        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing DREAM, Other fight data.</div>
+        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing Other, DREAM fight data.</div>
         <div class="fight-card">
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gegard Mousasi</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:29 &bull; DREAM - Japan GP Final &bull; Jul 2011</div>
+                <div class="fight-event-label">DREAM - Japan GP Final &bull; Jul 2011</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hiroshi Izumi</span><span class="totals-stat">1/16</span><span class="totals-pct">6%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gegard Mousasi</span><span class="totals-stat">29/53</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ikuhisa Minowa</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:50 &bull; Dynamite!! 2010 &bull; Dec 2010</div>
+                <div class="fight-event-label">Dynamite!! 2010 &bull; Dec 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hiroshi Izumi</span><span class="totals-stat">28/44</span><span class="totals-pct">64%</span><span class="totals-stat">TD 6/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ikuhisa Minowa</span><span class="totals-stat">8/35</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Katsuyori Shibata</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Dynamite!! 2009 &bull; Dec 2009</div>
+                <div class="fight-event-label">Dynamite!! 2009 &bull; Dec 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hiroshi Izumi</span><span class="totals-stat">32/102</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Katsuyori Shibata</span><span class="totals-stat">46/157</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -289,7 +294,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:19 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:06 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

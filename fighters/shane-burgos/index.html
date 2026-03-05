@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Charles Jourdain</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Ortega vs. Rodriguez &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Ortega vs. Rodriguez &bull; Jul 2022</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">42/80</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 6:25</span></div><div class="totals-line"><span class="totals-name opponent">Charles Jourdain</span><span class="totals-stat">113/188</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Billy Quarantillo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 268: Usman vs. Covington 2 &bull; Nov 2021</div>
+                <div class="fight-event-label">UFC 268: Usman vs. Covington 2 &bull; Nov 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">193/288</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:26</span></div><div class="totals-line"><span class="totals-name opponent">Billy Quarantillo</span><span class="totals-stat">164/349</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/14</span><span class="totals-stat">Ctrl 2:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Edson Barboza</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:16 &bull; UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-event-label">UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:16</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">80/180</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Edson Barboza</span><span class="totals-stat">98/191</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Josh Emmett</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">128/250</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Josh Emmett</span><span class="totals-stat">127/266</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Makwan Amirkhani</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 4:32 &bull; UFC 244: Masvidal vs. Diaz &bull; Nov 2019</div>
+                <div class="fight-event-label">UFC 244: Masvidal vs. Diaz &bull; Nov 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 4:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">105/155</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:31</span></div><div class="totals-line"><span class="totals-name opponent">Makwan Amirkhani</span><span class="totals-stat">22/48</span><span class="totals-pct">46%</span><span class="totals-stat">TD 3/19</span><span class="totals-stat">Ctrl 4:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cub Swanson</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Iaquinta vs. Cowboy &bull; May 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Iaquinta vs. Cowboy &bull; May 2019</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">134/268</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cub Swanson</span><span class="totals-stat">129/256</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -387,7 +395,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kurt Holobaugh</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:11 &bull; UFC 230: Cormier vs. Lewis &bull; Nov 2018</div>
+                <div class="fight-event-label">UFC 230: Cormier vs. Lewis &bull; Nov 2018</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:11</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">17/24</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kurt Holobaugh</span><span class="totals-stat">21/51</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Calvin Kattar</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:32 &bull; UFC 220: Miocic vs. Ngannou &bull; Jan 2018</div>
+                <div class="fight-event-label">UFC 220: Miocic vs. Ngannou &bull; Jan 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">89/186</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Calvin Kattar</span><span class="totals-stat">85/194</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -441,7 +451,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Godofredo Pepey</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Weidman vs. Gastelum &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Weidman vs. Gastelum &bull; Jul 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">102/197</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:57</span></div><div class="totals-line"><span class="totals-name opponent">Godofredo Pepey</span><span class="totals-stat">51/177</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/14</span><span class="totals-stat">Ctrl 1:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -471,7 +482,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Charles Rosa</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:59 &bull; UFC 210: Cormier vs. Johnson 2 &bull; Apr 2017</div>
+                <div class="fight-event-label">UFC 210: Cormier vs. Johnson 2 &bull; Apr 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">77/167</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Charles Rosa</span><span class="totals-stat">86/261</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 0:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -501,7 +513,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tiago dos Santos e Silva</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Lewis vs. Abdurakhimov &bull; Dec 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Abdurakhimov &bull; Dec 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Burgos</span><span class="totals-stat">73/189</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:26</span></div><div class="totals-line"><span class="totals-name opponent">Tiago dos Santos e Silva</span><span class="totals-stat">56/200</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/12</span><span class="totals-stat">Ctrl 1:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -529,7 +542,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:03 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:46 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

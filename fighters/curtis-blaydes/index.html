@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rizvan Kuniev</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hill vs. Rountree Jr. &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Hill vs. Rountree Jr. &bull; Jun 2025</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">56/95</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/15</span><span class="totals-stat">Ctrl 5:21</span></div><div class="totals-line"><span class="totals-name opponent">Rizvan Kuniev</span><span class="totals-stat">45/108</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tom Aspinall</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:00 &bull; UFC 304: Edwards vs. Muhammad 2 &bull; Jul 2024</div>
+                <div class="fight-event-label">UFC 304: Edwards vs. Muhammad 2 &bull; Jul 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">5/11</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tom Aspinall</span><span class="totals-stat">14/19</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jailton Almeida</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 0:36 &bull; UFC 299: O'Malley vs. Vera 2 &bull; Mar 2024</div>
+                <div class="fight-event-label">UFC 299: O'Malley vs. Vera 2 &bull; Mar 2024</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 0:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">16/25</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Jailton Almeida</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 9/13</span><span class="totals-stat">Ctrl 4:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sergei Pavlovich</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:08 &bull; UFC Fight Night: Pavlovich vs. Blaydes &bull; Apr 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Pavlovich vs. Blaydes &bull; Apr 2023</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">14/56</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Sergei Pavlovich</span><span class="totals-stat">36/85</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tom Aspinall</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:15 &bull; UFC Fight Night: Blaydes vs. Aspinall &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Aspinall &bull; Jul 2022</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Tom Aspinall</span><span class="totals-stat">3/5</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -336,7 +343,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Daukaus</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:17 &bull; UFC Fight Night: Blaydes vs. Daukaus &bull; Mar 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Daukaus &bull; Mar 2022</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">30/63</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Chris Daukaus</span><span class="totals-stat">13/38</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -363,7 +371,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jairzinho Rozenstruik</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">32/96</span><span class="totals-pct">33%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 6:19</span></div><div class="totals-line"><span class="totals-name opponent">Jairzinho Rozenstruik</span><span class="totals-stat">18/68</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -393,7 +402,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Derrick Lewis</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:26 &bull; UFC Fight Night: Blaydes vs. Lewis &bull; Feb 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Lewis &bull; Feb 2021</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">28/52</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Derrick Lewis</span><span class="totals-stat">7/23</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -420,7 +430,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alexander Volkov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">69/99</span><span class="totals-pct">70%</span><span class="totals-stat">TD 14/25</span><span class="totals-stat">Ctrl 19:52</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkov</span><span class="totals-stat">31/77</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -456,7 +467,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Junior Dos Santos</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:06 &bull; UFC Fight Night: Blaydes vs. Dos Santos &bull; Jan 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Dos Santos &bull; Jan 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">28/60</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Junior Dos Santos</span><span class="totals-stat">7/30</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -483,7 +495,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Shamil Abdurakhimov</div>
-                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 2, 2:22 &bull; UFC 242: Khabib vs. Poirier &bull; Sep 2019</div>
+                <div class="fight-event-label">UFC 242: Khabib vs. Poirier &bull; Sep 2019</div>
+                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 2, 2:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">25/43</span><span class="totals-pct">58%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 6:08</span></div><div class="totals-line"><span class="totals-name opponent">Shamil Abdurakhimov</span><span class="totals-stat">3/8</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -510,7 +523,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Justin Willis</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Thompson vs. Pettis &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Thompson vs. Pettis &bull; Mar 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">22/33</span><span class="totals-pct">67%</span><span class="totals-stat">TD 7/11</span><span class="totals-stat">Ctrl 11:44</span></div><div class="totals-line"><span class="totals-name opponent">Justin Willis</span><span class="totals-stat">2/9</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -540,7 +554,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Francis Ngannou</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:45 &bull; UFC Fight Night: Blaydes vs. Ngannou 2 &bull; Nov 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Ngannou 2 &bull; Nov 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">1/8</span><span class="totals-pct">12%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Francis Ngannou</span><span class="totals-stat">13/17</span><span class="totals-pct">76%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -564,7 +579,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alistair Overeem</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 2:56 &bull; UFC 225: Whittaker vs. Romero 2 &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC 225: Whittaker vs. Romero 2 &bull; Jun 2018</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 2:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">37/53</span><span class="totals-pct">70%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 7:47</span></div><div class="totals-line"><span class="totals-name opponent">Alistair Overeem</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -594,7 +610,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mark Hunt</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 221: Romero vs. Rockhold &bull; Feb 2018</div>
+                <div class="fight-event-label">UFC 221: Romero vs. Rockhold &bull; Feb 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">56/105</span><span class="totals-pct">53%</span><span class="totals-stat">TD 10/14</span><span class="totals-stat">Ctrl 9:35</span></div><div class="totals-line"><span class="totals-name opponent">Mark Hunt</span><span class="totals-stat">14/32</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -624,7 +641,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Aleksei Oleinik</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 1:39 &bull; UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 1:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">39/101</span><span class="totals-pct">39%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 1:54</span></div><div class="totals-line"><span class="totals-name opponent">Aleksei Oleinik</span><span class="totals-stat">34/68</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -651,7 +669,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Daniel Omielanczuk</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 213: Romero vs. Whittaker &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC 213: Romero vs. Whittaker &bull; Jul 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">72/168</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/13</span><span class="totals-stat">Ctrl 5:34</span></div><div class="totals-line"><span class="totals-name opponent">Daniel Omielanczuk</span><span class="totals-stat">51/132</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -681,7 +700,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Adam Milstead</div>
-                <div class="fight-meta">Overturned &bull; Rd 2, 0:59 &bull; UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-meta">Overturned &bull; Rd 2, 0:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">25/33</span><span class="totals-pct">76%</span><span class="totals-stat">TD 8/10</span><span class="totals-stat">Ctrl 5:04</span></div><div class="totals-line"><span class="totals-name opponent">Adam Milstead</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -708,7 +728,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cody East</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 2:02 &bull; UFC Fight Night: Lineker vs. Dodson &bull; Oct 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Lineker vs. Dodson &bull; Oct 2016</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 2:02</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">52/81</span><span class="totals-pct">64%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 4:27</span></div><div class="totals-line"><span class="totals-name opponent">Cody East</span><span class="totals-stat">21/47</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -735,7 +756,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Francis Ngannou</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC Fight Night: Rothwell vs Dos Santos &bull; Apr 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Rothwell vs Dos Santos &bull; Apr 2016</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Curtis Blaydes</span><span class="totals-stat">24/58</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 1:05</span></div><div class="totals-line"><span class="totals-name opponent">Francis Ngannou</span><span class="totals-stat">36/84</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -760,7 +782,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:06 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:53 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

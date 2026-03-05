@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Merab Dvalishvili</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-event-label">UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">139/230</span><span class="totals-pct">60%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 2:55</span></div><div class="totals-line"><span class="totals-name opponent">Merab Dvalishvili</span><span class="totals-stat">134/383</span><span class="totals-pct">35%</span><span class="totals-stat">TD 2/29</span><span class="totals-stat">Ctrl 5:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -243,7 +246,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcus McGhee</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Whittaker vs. De Ridder &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. De Ridder &bull; Jul 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">81/146</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 3:11</span></div><div class="totals-line"><span class="totals-name opponent">Marcus McGhee</span><span class="totals-stat">64/170</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -273,7 +277,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Deiveson Figueiredo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Yan vs. Figueiredo &bull; Nov 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Yan vs. Figueiredo &bull; Nov 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">121/193</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 3:21</span></div><div class="totals-line"><span class="totals-name opponent">Deiveson Figueiredo</span><span class="totals-stat">53/119</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 3:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -309,7 +314,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Song Yadong</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 299: O'Malley vs. Vera 2 &bull; Mar 2024</div>
+                <div class="fight-event-label">UFC 299: O'Malley vs. Vera 2 &bull; Mar 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">99/183</span><span class="totals-pct">54%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:47</span></div><div class="totals-line"><span class="totals-name opponent">Song Yadong</span><span class="totals-stat">86/172</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 1:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -339,7 +345,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Merab Dvalishvili</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Yan vs. Dvalishvili &bull; Mar 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Yan vs. Dvalishvili &bull; Mar 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">75/143</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:50</span></div><div class="totals-line"><span class="totals-name opponent">Merab Dvalishvili</span><span class="totals-stat">147/338</span><span class="totals-pct">43%</span><span class="totals-stat">TD 11/49</span><span class="totals-stat">Ctrl 6:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -375,7 +382,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sean O'Malley</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 280: Oliveira vs. Makhachev &bull; Oct 2022</div>
+                <div class="fight-event-label">UFC 280: Oliveira vs. Makhachev &bull; Oct 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">58/96</span><span class="totals-pct">60%</span><span class="totals-stat">TD 6/13</span><span class="totals-stat">Ctrl 5:44</span></div><div class="totals-line"><span class="totals-name opponent">Sean O'Malley</span><span class="totals-stat">84/163</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -405,7 +413,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Aljamain Sterling</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 273: Volkanovski vs. The Korean Zombie &bull; Apr 2022</div>
+                <div class="fight-event-label">UFC 273: Volkanovski vs. The Korean Zombie &bull; Apr 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">63/103</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 5:52</span></div><div class="totals-line"><span class="totals-name opponent">Aljamain Sterling</span><span class="totals-stat">62/110</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/22</span><span class="totals-stat">Ctrl 8:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -441,7 +450,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cory Sandhagen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 267: Blachowicz vs. Teixeira &bull; Oct 2021</div>
+                <div class="fight-event-label">UFC 267: Blachowicz vs. Teixeira &bull; Oct 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">149/270</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:09</span></div><div class="totals-line"><span class="totals-name opponent">Cory Sandhagen</span><span class="totals-stat">169/445</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 0:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -477,7 +487,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Aljamain Sterling</div>
-                <div class="fight-meta">DQ &bull; Rd 4, 4:29 &bull; UFC 259: Blachowicz vs. Adesanya &bull; Mar 2021</div>
+                <div class="fight-event-label">UFC 259: Blachowicz vs. Adesanya &bull; Mar 2021</div>
+                <div class="fight-meta">DQ &bull; Rd 4, 4:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">86/137</span><span class="totals-pct">63%</span><span class="totals-stat">TD 7/7</span><span class="totals-stat">Ctrl 4:12</span></div><div class="totals-line"><span class="totals-name opponent">Aljamain Sterling</span><span class="totals-stat">97/230</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/17</span><span class="totals-stat">Ctrl 3:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -510,7 +521,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jose Aldo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 5, 3:24 &bull; UFC 251: Usman vs. Masvidal &bull; Jul 2020</div>
+                <div class="fight-event-label">UFC 251: Usman vs. Masvidal &bull; Jul 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 5, 3:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">194/309</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:50</span></div><div class="totals-line"><span class="totals-name opponent">Jose Aldo</span><span class="totals-stat">83/157</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -546,7 +558,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Urijah Faber</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 0:43 &bull; UFC 245: Usman vs. Covington &bull; Dec 2019</div>
+                <div class="fight-event-label">UFC 245: Usman vs. Covington &bull; Dec 2019</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 0:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">54/108</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:27</span></div><div class="totals-line"><span class="totals-name opponent">Urijah Faber</span><span class="totals-stat">18/76</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -576,7 +589,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jimmie Rivera</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 238: Cejudo vs. Moraes &bull; Jun 2019</div>
+                <div class="fight-event-label">UFC 238: Cejudo vs. Moraes &bull; Jun 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">56/189</span><span class="totals-pct">30%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:39</span></div><div class="totals-line"><span class="totals-name opponent">Jimmie Rivera</span><span class="totals-stat">73/192</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -606,7 +620,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. John Dodson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blachowicz vs. Santos &bull; Feb 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Blachowicz vs. Santos &bull; Feb 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">80/155</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:30</span></div><div class="totals-line"><span class="totals-name opponent">John Dodson</span><span class="totals-stat">30/81</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -636,7 +651,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Douglas Silva de Andrade</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC 232: Jones vs. Gustafsson 2 &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC 232: Jones vs. Gustafsson 2 &bull; Dec 2018</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">76/118</span><span class="totals-pct">64%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 3:35</span></div><div class="totals-line"><span class="totals-name opponent">Douglas Silva de Andrade</span><span class="totals-stat">28/77</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -663,7 +679,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jin Soo Son</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hunt vs. Oleinik &bull; Sep 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Hunt vs. Oleinik &bull; Sep 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">100/232</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">Jin Soo Son</span><span class="totals-stat">58/220</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 2:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -693,7 +710,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Teruto Ishihara</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:28 &bull; UFC Fight Night: Cowboy vs. Edwards &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Cowboy vs. Edwards &bull; Jun 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Petr Yan</span><span class="totals-stat">25/40</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Teruto Ishihara</span><span class="totals-stat">11/30</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -715,7 +733,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:53 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:37 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

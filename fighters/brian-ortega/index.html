@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Aljamain Sterling</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Walker vs. Zhang &bull; Aug 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Walker vs. Zhang &bull; Aug 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">55/174</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Aljamain Sterling</span><span class="totals-stat">124/227</span><span class="totals-pct">55%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 3:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -243,7 +246,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Diego Lopes</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 306 &bull; Sep 2024</div>
+                <div class="fight-event-label">UFC 306 &bull; Sep 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">63/195</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Diego Lopes</span><span class="totals-stat">106/206</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -273,7 +277,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yair Rodriguez</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 0:58 &bull; UFC Fight Night: Moreno vs. Royval 2 &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Moreno vs. Royval 2 &bull; Feb 2024</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 0:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">28/73</span><span class="totals-pct">38%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 5:21</span></div><div class="totals-line"><span class="totals-name opponent">Yair Rodriguez</span><span class="totals-stat">55/115</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -303,7 +308,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yair Rodriguez</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 4:11 &bull; UFC Fight Night: Ortega vs. Rodriguez &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Ortega vs. Rodriguez &bull; Jul 2022</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 4:11</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">22/35</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 2:24</span></div><div class="totals-line"><span class="totals-name opponent">Yair Rodriguez</span><span class="totals-stat">23/46</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Volkanovski</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">88/234</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:54</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkanovski</span><span class="totals-stat">214/353</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -363,7 +370,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chan Sung Jung</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Ortega vs. The Korean Zombie &bull; Oct 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Ortega vs. The Korean Zombie &bull; Oct 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">127/212</span><span class="totals-pct">60%</span><span class="totals-stat">TD 3/10</span><span class="totals-stat">Ctrl 0:57</span></div><div class="totals-line"><span class="totals-name opponent">Chan Sung Jung</span><span class="totals-stat">62/163</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -399,7 +407,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Max Holloway</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 4, 5:00 &bull; UFC 231: Holloway vs. Ortega &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC 231: Holloway vs. Ortega &bull; Dec 2018</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 4, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">110/292</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 2:25</span></div><div class="totals-line"><span class="totals-name opponent">Max Holloway</span><span class="totals-stat">290/490</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -432,7 +441,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Frankie Edgar</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:44 &bull; UFC 222: Cyborg vs. Kunitskaya &bull; Mar 2018</div>
+                <div class="fight-event-label">UFC 222: Cyborg vs. Kunitskaya &bull; Mar 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">25/76</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Frankie Edgar</span><span class="totals-stat">27/77</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -456,7 +466,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cub Swanson</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 3:22 &bull; UFC Fight Night: Swanson vs. Ortega &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Swanson vs. Ortega &bull; Dec 2017</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 3:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">24/70</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:30</span></div><div class="totals-line"><span class="totals-name opponent">Cub Swanson</span><span class="totals-stat">60/97</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -483,7 +494,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Renato Moicano</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 2:59 &bull; UFC 214: Cormier vs. Jones 2 &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC 214: Cormier vs. Jones 2 &bull; Jul 2017</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 2:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">65/220</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Renato Moicano</span><span class="totals-stat">109/252</span><span class="totals-pct">43%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -513,7 +525,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Clay Guida</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 3, 4:40 &bull; UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-event-label">UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 3, 4:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">62/189</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Clay Guida</span><span class="totals-stat">62/192</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -543,7 +556,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Diego Brandao</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 1:37 &bull; UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-event-label">UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 1:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">29/110</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:41</span></div><div class="totals-line"><span class="totals-name opponent">Diego Brandao</span><span class="totals-stat">56/108</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -573,7 +587,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Thiago Tavares</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 4:10 &bull; UFC Fight Night: Boetsch vs Henderson &bull; Jun 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Boetsch vs Henderson &bull; Jun 2015</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 4:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">41/101</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:54</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Tavares</span><span class="totals-stat">39/94</span><span class="totals-pct">41%</span><span class="totals-stat">TD 6/11</span><span class="totals-stat">Ctrl 8:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -603,7 +618,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Mike de la Torre</div>
-                <div class="fight-meta">Overturned &bull; Rd 1, 1:39 &bull; UFC on FOX: Lawler vs Brown &bull; Jul 2014</div>
+                <div class="fight-event-label">UFC on FOX: Lawler vs Brown &bull; Jul 2014</div>
+                <div class="fight-meta">Overturned &bull; Rd 1, 1:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brian Ortega</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:13</span></div><div class="totals-line"><span class="totals-name opponent">Mike de la Torre</span><span class="totals-stat">6/11</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -625,7 +641,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:58 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:47 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

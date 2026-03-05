@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tyson Griffin</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:26 &bull; UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-event-label">UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">11/71</span><span class="totals-pct">15%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tyson Griffin</span><span class="totals-stat">67/149</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcus Aurelio</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 90: Silva vs Cote &bull; Oct 2008</div>
+                <div class="fight-event-label">UFC 90: Silva vs Cote &bull; Oct 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">60/122</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Aurelio</span><span class="totals-stat">40/104</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 1:50</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Frankie Edgar</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC: Silva vs Irvin &bull; Jul 2008</div>
+                <div class="fight-event-label">UFC: Silva vs Irvin &bull; Jul 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">18/38</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Frankie Edgar</span><span class="totals-stat">69/112</span><span class="totals-pct">62%</span><span class="totals-stat">TD 10/11</span><span class="totals-stat">Ctrl 12:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -294,7 +299,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sean Sherk</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 73: Stacked &bull; Jul 2007</div>
+                <div class="fight-event-label">UFC 73: Stacked &bull; Jul 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">6/23</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Sean Sherk</span><span class="totals-stat">35/55</span><span class="totals-pct">64%</span><span class="totals-stat">TD 16/19</span><span class="totals-stat">Ctrl 22:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -330,7 +336,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Spencer Fisher</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:03 &bull; UFC Fight Night: Evans vs Salmon &bull; Jan 2007</div>
+                <div class="fight-event-label">UFC Fight Night: Evans vs Salmon &bull; Jan 2007</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:03</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">25/80</span><span class="totals-pct">31%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 3:53</span></div><div class="totals-line"><span class="totals-name opponent">Spencer Fisher</span><span class="totals-stat">24/61</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jamie Varner</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 3, 3:31 &bull; UFC 62: Liddell vs Sobral &bull; Aug 2006</div>
+                <div class="fight-event-label">UFC 62: Liddell vs Sobral &bull; Aug 2006</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 3, 3:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">22/46</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name opponent">Jamie Varner</span><span class="totals-stat">18/106</span><span class="totals-pct">17%</span><span class="totals-stat">TD 9/15</span><span class="totals-stat">Ctrl 7:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -387,7 +395,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joe Jordan</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 0:47 &bull; UFC 61: Bitter Rivals &bull; Jul 2006</div>
+                <div class="fight-event-label">UFC 61: Bitter Rivals &bull; Jul 2006</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 0:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">46/113</span><span class="totals-pct">41%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 1:22</span></div><div class="totals-line"><span class="totals-name opponent">Joe Jordan</span><span class="totals-stat">20/78</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -417,7 +426,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yves Edwards</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 47: It's On! &bull; Apr 2004</div>
+                <div class="fight-event-label">UFC 47: It's On! &bull; Apr 2004</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">8/44</span><span class="totals-pct">18%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 3:46</span></div><div class="totals-line"><span class="totals-name opponent">Yves Edwards</span><span class="totals-stat">21/43</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -447,7 +457,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Josh Thomson</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC 46: Supernatural &bull; Jan 2004</div>
+                <div class="fight-event-label">UFC 46: Supernatural &bull; Jan 2004</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">22/46</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 5:19</span></div><div class="totals-line"><span class="totals-name opponent">Josh Thomson</span><span class="totals-stat">40/68</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 4:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -477,7 +488,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Caol Uno</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:46 &bull; UFC 44: Undisputed &bull; Sep 2003</div>
+                <div class="fight-event-label">UFC 44: Undisputed &bull; Sep 2003</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">13/22</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:26</span></div><div class="totals-line"><span class="totals-name opponent">Caol Uno</span><span class="totals-stat">32/49</span><span class="totals-pct">65%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 4:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -504,7 +516,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Richard Crunkilton</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 42: Sudden Impact &bull; Apr 2003</div>
+                <div class="fight-event-label">UFC 42: Sudden Impact &bull; Apr 2003</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">27/54</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 0:44</span></div><div class="totals-line"><span class="totals-name opponent">Richard Crunkilton</span><span class="totals-stat">29/89</span><span class="totals-pct">33%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 7:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -534,7 +547,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nate Diaz</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 2:46 &bull; WEC 24: Full Force &bull; Oct 2006</div>
+                <div class="fight-event-label">WEC 24: Full Force &bull; Oct 2006</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 2:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Hermes Franca</span><span class="totals-stat">22/49</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Nate Diaz</span><span class="totals-stat">54/91</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;">
@@ -559,7 +573,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:19 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:06 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

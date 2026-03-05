@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joel Alvarez</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:25 &bull; UFC Fight Night: Figueiredo vs. Benavidez 2 &bull; Jul 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Figueiredo vs. Benavidez 2 &bull; Jul 2020</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Duffy</span><span class="totals-stat">14/26</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Joel Alvarez</span><span class="totals-stat">18/37</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marc Diakiese</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Till vs. Masvidal &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Till vs. Masvidal &bull; Mar 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Duffy</span><span class="totals-stat">15/60</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:35</span></div><div class="totals-line"><span class="totals-name opponent">Marc Diakiese</span><span class="totals-stat">63/106</span><span class="totals-pct">59%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 4:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. James Vick</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:59 &bull; UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Duffy</span><span class="totals-stat">25/66</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:30</span></div><div class="totals-line"><span class="totals-name opponent">James Vick</span><span class="totals-stat">42/137</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Reza Madadi</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Manuwa vs. Anderson &bull; Mar 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Manuwa vs. Anderson &bull; Mar 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Duffy</span><span class="totals-stat">51/161</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:20</span></div><div class="totals-line"><span class="totals-name opponent">Reza Madadi</span><span class="totals-stat">28/63</span><span class="totals-pct">44%</span><span class="totals-stat">TD 2/12</span><span class="totals-stat">Ctrl 0:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mitch Clarke</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:25 &bull; UFC Fight Night: Dos Anjos vs. Alvarez &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Alvarez &bull; Jul 2016</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Duffy</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Mitch Clarke</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dustin Poirier</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-event-label">UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Duffy</span><span class="totals-stat">37/100</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Poirier</span><span class="totals-stat">72/137</span><span class="totals-pct">53%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 9:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ivan Jorge</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 3:05 &bull; UFC Fight Night: Bisping vs Leites &bull; Jul 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Bisping vs Leites &bull; Jul 2015</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 3:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Duffy</span><span class="totals-stat">8/29</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ivan Jorge</span><span class="totals-stat">7/15</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jake Lindsey</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:47 &bull; UFC 185: Pettis vs Dos Anjos &bull; Mar 2015</div>
+                <div class="fight-event-label">UFC 185: Pettis vs Dos Anjos &bull; Mar 2015</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Duffy</span><span class="totals-stat">15/40</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Jake Lindsey</span><span class="totals-stat">6/23</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -418,7 +428,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:27 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:13 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

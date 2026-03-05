@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Hamill</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Maia vs Shields &bull; Oct 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Maia vs Shields &bull; Oct 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">96/205</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:46</span></div><div class="totals-line"><span class="totals-name opponent">Matt Hamill</span><span class="totals-stat">70/181</span><span class="totals-pct">39%</span><span class="totals-stat">TD 3/14</span><span class="totals-stat">Ctrl 1:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rafael Cavalcante</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:29 &bull; UFC on FUEL TV: Nogueira vs. Werdum &bull; Jun 2013</div>
+                <div class="fight-event-label">UFC on FUEL TV: Nogueira vs. Werdum &bull; Jun 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">37/75</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Rafael Cavalcante</span><span class="totals-stat">24/61</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Stanislav Nedkov</div>
-                <div class="fight-meta">Overturned &bull; Rd 3, 1:45 &bull; UFC Macao: Franklin vs Le &bull; Nov 2012</div>
+                <div class="fight-event-label">UFC Macao: Franklin vs Le &bull; Nov 2012</div>
+                <div class="fight-meta">Overturned &bull; Rd 3, 1:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">62/95</span><span class="totals-pct">65%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:58</span></div><div class="totals-line"><span class="totals-name opponent">Stanislav Nedkov</span><span class="totals-stat">18/70</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 6:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Gustafsson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FUEL TV: Gustafsson vs Silva &bull; Apr 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Gustafsson vs Silva &bull; Apr 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">38/108</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Gustafsson</span><span class="totals-stat">76/283</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Brandon Vera</div>
-                <div class="fight-meta">Overturned &bull; Rd 3, 5:00 &bull; UFC 125: Resolution &bull; Jan 2011</div>
+                <div class="fight-event-label">UFC 125: Resolution &bull; Jan 2011</div>
+                <div class="fight-meta">Overturned &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">51/100</span><span class="totals-pct">51%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 12:55</span></div><div class="totals-line"><span class="totals-name opponent">Brandon Vera</span><span class="totals-stat">19/44</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rashad Evans</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 108: Evans vs Silva &bull; Jan 2010</div>
+                <div class="fight-event-label">UFC 108: Evans vs Silva &bull; Jan 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">31/84</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Rashad Evans</span><span class="totals-stat">12/66</span><span class="totals-pct">18%</span><span class="totals-stat">TD 8/16</span><span class="totals-stat">Ctrl 7:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Keith Jardine</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:35 &bull; UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-event-label">UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:35</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">5/8</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Keith Jardine</span><span class="totals-stat">3/17</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -405,7 +414,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lyoto Machida</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:59 &bull; UFC 94: St-Pierre vs Penn 2 &bull; Jan 2009</div>
+                <div class="fight-event-label">UFC 94: St-Pierre vs Penn 2 &bull; Jan 2009</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">2/10</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:24</span></div><div class="totals-line"><span class="totals-name opponent">Lyoto Machida</span><span class="totals-stat">24/40</span><span class="totals-pct">60%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -429,7 +439,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Antonio Mendes</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:24 &bull; UFC 84: Ill Will &bull; May 2008</div>
+                <div class="fight-event-label">UFC 84: Ill Will &bull; May 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">19/23</span><span class="totals-pct">83%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:26</span></div><div class="totals-line"><span class="totals-name opponent">Antonio Mendes</span><span class="totals-stat">5/12</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Houston Alexander</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:25 &bull; UFC 78: Validation &bull; Nov 2007</div>
+                <div class="fight-event-label">UFC 78: Validation &bull; Nov 2007</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">22/35</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:56</span></div><div class="totals-line"><span class="totals-name opponent">Houston Alexander</span><span class="totals-stat">2/8</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -477,7 +489,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tomasz Drwal</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:23 &bull; UFC 75: Champion vs Champion &bull; Sep 2007</div>
+                <div class="fight-event-label">UFC 75: Champion vs Champion &bull; Sep 2007</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">48/105</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Tomasz Drwal</span><span class="totals-stat">43/127</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -504,7 +517,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. James Irvin</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 1:06 &bull; UFC 71: Liddell vs Jackson &bull; May 2007</div>
+                <div class="fight-event-label">UFC 71: Liddell vs Jackson &bull; May 2007</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 1:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:36</span></div><div class="totals-line"><span class="totals-name opponent">James Irvin</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -528,7 +542,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tatsuya Mizuno</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 4:29 &bull; Pancrase - Rising 2 &bull; Feb 2007</div>
+                <div class="fight-event-label">Pancrase - Rising 2 &bull; Feb 2007</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 4:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">19/36</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tatsuya Mizuno</span><span class="totals-stat">14/36</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -552,7 +567,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Vitor Vianna</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:58 &bull; Fury FC 2 &bull; Nov 2006</div>
+                <div class="fight-event-label">Fury FC 2 &bull; Nov 2006</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">8/17</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Vitor Vianna</span><span class="totals-stat">3/10</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -576,7 +592,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dino Pezao</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:34 &bull; Show Fight 5 &bull; Nov 2006</div>
+                <div class="fight-event-label">Show Fight 5 &bull; Nov 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">15/22</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dino Pezao</span><span class="totals-stat">3/10</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/8</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-2" style="display:none;">
@@ -600,7 +617,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dave Dalgliesh</div>
-                <div class="fight-meta">Submission (Heel Hook) &bull; Rd 1, 1:05 &bull; Fury FC 1 &bull; Sep 2006</div>
+                <div class="fight-event-label">Fury FC 1 &bull; Sep 2006</div>
+                <div class="fight-meta">Submission (Heel Hook) &bull; Rd 1, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dave Dalgliesh</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-3" style="display:none;">
@@ -624,7 +642,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rodrigo Gripp de Sousa</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 1:14 &bull; Shooto Brazil 9 &bull; Dec 2005</div>
+                <div class="fight-event-label">Shooto Brazil 9 &bull; Dec 2005</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 1:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">30/63</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rodrigo Gripp de Sousa</span><span class="totals-stat">3/13</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-4" style="display:none;">
@@ -651,7 +670,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rubens Xavier</div>
-                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 2, 4:17 &bull; Predator FC 1 &bull; Sep 2005</div>
+                <div class="fight-event-label">Predator FC 1 &bull; Sep 2005</div>
+                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 2, 4:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Thiago Silva</span><span class="totals-stat">26/33</span><span class="totals-pct">79%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rubens Xavier</span><span class="totals-stat">11/26</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-5" style="display:none;">
@@ -676,7 +696,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:08 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:49 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

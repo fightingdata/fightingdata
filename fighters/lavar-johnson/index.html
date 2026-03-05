@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brendan Schaub</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 157: Rousey vs Carmouche &bull; Feb 2013</div>
+                <div class="fight-event-label">UFC 157: Rousey vs Carmouche &bull; Feb 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">36/52</span><span class="totals-pct">69%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Brendan Schaub</span><span class="totals-stat">18/31</span><span class="totals-pct">58%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 12:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Stefan Struve</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:05 &bull; UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-event-label">UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">4/7</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:53</span></div><div class="totals-line"><span class="totals-name opponent">Stefan Struve</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pat Barry</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:38 &bull; UFC on FOX: Diaz vs Miller &bull; May 2012</div>
+                <div class="fight-event-label">UFC on FOX: Diaz vs Miller &bull; May 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">39/71</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div><div class="totals-line"><span class="totals-name opponent">Pat Barry</span><span class="totals-stat">15/22</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joey Beltran</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:24 &bull; UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-event-label">UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">65/92</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:05</span></div><div class="totals-line"><span class="totals-name opponent">Joey Beltran</span><span class="totals-stat">22/71</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -309,7 +315,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shawn Jordan</div>
-                <div class="fight-meta">Submission (Keylock) &bull; Rd 2, 3:08 &bull; Strikeforce Challengers 19 &bull; Sep 2011</div>
+                <div class="fight-event-label">Strikeforce Challengers 19 &bull; Sep 2011</div>
+                <div class="fight-meta">Submission (Keylock) &bull; Rd 2, 3:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">23/57</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Shawn Jordan</span><span class="totals-stat">10/16</span><span class="totals-pct">62%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -336,7 +343,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shane del Rosario</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:31 &bull; Strikeforce - Fedor vs. Silva &bull; Feb 2011</div>
+                <div class="fight-event-label">Strikeforce - Fedor vs. Silva &bull; Feb 2011</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">10/27</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Shane del Rosario</span><span class="totals-stat">24/49</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:27</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -360,7 +368,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Virgil Zwicker</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:17 &bull; Strikeforce Challengers 11 &bull; Oct 2010</div>
+                <div class="fight-event-label">Strikeforce Challengers 11 &bull; Oct 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">26/60</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Virgil Zwicker</span><span class="totals-stat">19/32</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-2" style="display:none;">
@@ -384,7 +393,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lolohea Mahe</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:29 &bull; Strikeforce Challengers 7 &bull; Mar 2010</div>
+                <div class="fight-event-label">Strikeforce Challengers 7 &bull; Mar 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">59/106</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Lolohea Mahe</span><span class="totals-stat">16/55</span><span class="totals-pct">29%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-3" style="display:none;">
@@ -411,7 +421,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Carl Seumanutafa</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:18 &bull; Strikeforce Challengers 1 &bull; </div>
+                <div class="fight-event-label">Strikeforce Challengers 1 &bull; </div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Lavar Johnson</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Carl Seumanutafa</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-4" style="display:none;">
@@ -433,7 +444,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:37 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:22 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

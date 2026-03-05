@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Benoit Saint Denis</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:45 &bull; UFC 325: Volkanovski vs. Lopes 2 &bull; Jan 2026</div>
+                <div class="fight-event-label">UFC 325: Volkanovski vs. Lopes 2 &bull; Jan 2026</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">30/47</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Benoit Saint Denis</span><span class="totals-stat">97/127</span><span class="totals-pct">76%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 6:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Arman Tsarukyan</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 3:34 &bull; UFC Fight Night: Tsarukyan vs. Hooker &bull; Nov 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Tsarukyan vs. Hooker &bull; Nov 2025</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 3:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">10/33</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Arman Tsarukyan</span><span class="totals-stat">42/60</span><span class="totals-pct">70%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 6:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mateusz Gamrot</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 305 &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC 305 &bull; Aug 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">65/143</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:28</span></div><div class="totals-line"><span class="totals-name opponent">Mateusz Gamrot</span><span class="totals-stat">64/129</span><span class="totals-pct">50%</span><span class="totals-stat">TD 5/15</span><span class="totals-stat">Ctrl 4:59</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Arman Tsarukyan</div>
-                <div class="fight-meta">Submission (Arm Triangle From Mount) &bull; Rd 2, 3:34 &bull; UFC Fight Night &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC Fight Night &bull; Aug 2024</div>
+                <div class="fight-meta">Submission (Arm Triangle From Mount) &bull; Rd 2, 3:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">10/33</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Arman Tsarukyan</span><span class="totals-stat">42/60</span><span class="totals-pct">70%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 6:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jalin Turner</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 290 &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC 290 &bull; Jul 2023</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">125/197</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 3:09</span></div><div class="totals-line"><span class="totals-name opponent">Jalin Turner</span><span class="totals-stat">100/177</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -348,7 +355,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Claudio Puelles</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:06 &bull; UFC 281 &bull; Nov 2022</div>
+                <div class="fight-event-label">UFC 281 &bull; Nov 2022</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">29/63</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:08</span></div><div class="totals-line"><span class="totals-name opponent">Claudio Puelles</span><span class="totals-stat">5/18</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/8</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Arnold Allen</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:33 &bull; UFC Fight Night &bull; Mar 2022</div>
+                <div class="fight-event-label">UFC Fight Night &bull; Mar 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">14/49</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Arnold Allen</span><span class="totals-stat">49/84</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -399,7 +408,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Islam Makhachev</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 2:25 &bull; UFC 267: Blachowicz vs. Teixeira &bull; Oct 2021</div>
+                <div class="fight-event-label">UFC 267: Blachowicz vs. Teixeira &bull; Oct 2021</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 2:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">4/13</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Islam Makhachev</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -423,7 +433,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nasrat Haqparast</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">73/153</span><span class="totals-pct">48%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 7:04</span></div><div class="totals-line"><span class="totals-name opponent">Nasrat Haqparast</span><span class="totals-stat">27/69</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michael Chandler</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:30 &bull; UFC 257: Poirier vs. McGregor &bull; Jan 2021</div>
+                <div class="fight-event-label">UFC 257: Poirier vs. McGregor &bull; Jan 2021</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">8/19</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Michael Chandler</span><span class="totals-stat">17/24</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -477,7 +489,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dustin Poirier</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Poirier vs. Hooker &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Poirier vs. Hooker &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">155/253</span><span class="totals-pct">61%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 6:02</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Poirier</span><span class="totals-stat">153/231</span><span class="totals-pct">66%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 2:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -513,7 +526,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Felder</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Felder vs. Hooker &bull; Feb 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Felder vs. Hooker &bull; Feb 2020</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">122/221</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 5:05</span></div><div class="totals-line"><span class="totals-name opponent">Paul Felder</span><span class="totals-stat">110/230</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -549,7 +563,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Al Iaquinta</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 243: Whittaker vs. Adesanya &bull; Oct 2019</div>
+                <div class="fight-event-label">UFC 243: Whittaker vs. Adesanya &bull; Oct 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">98/207</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:30</span></div><div class="totals-line"><span class="totals-name opponent">Al Iaquinta</span><span class="totals-stat">37/116</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -579,7 +594,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. James Vick</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:33 &bull; UFC Fight Night: Dos Anjos vs. Edwards &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Edwards &bull; Jul 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">22/41</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">James Vick</span><span class="totals-stat">7/23</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -603,7 +619,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Edson Barboza</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:19 &bull; UFC Fight Night: Lee vs. Iaquinta &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Lee vs. Iaquinta &bull; Dec 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">81/204</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Edson Barboza</span><span class="totals-stat">126/226</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -633,7 +650,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gilbert Burns</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:28 &bull; UFC 226: Miocic vs. Cormier &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC 226: Miocic vs. Cormier &bull; Jul 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">22/34</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Gilbert Burns</span><span class="totals-stat">13/28</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -657,7 +675,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jim Miller</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 3:00 &bull; UFC Fight Night: Barboza vs. Lee &bull; Apr 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Barboza vs. Lee &bull; Apr 2018</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">24/44</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Jim Miller</span><span class="totals-stat">10/20</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -681,7 +700,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marc Diakiese</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 0:42 &bull; UFC 219: Cyborg vs. Holm &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC 219: Cyborg vs. Holm &bull; Dec 2017</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 0:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">17/40</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 3:14</span></div><div class="totals-line"><span class="totals-name opponent">Marc Diakiese</span><span class="totals-stat">24/69</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -711,7 +731,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ross Pearson</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 3:02 &bull; UFC Fight Night: Lewis vs. Hunt &bull; Jun 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Hunt &bull; Jun 2017</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 3:02</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">69/141</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Ross Pearson</span><span class="totals-stat">38/88</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -738,7 +759,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jason Knight</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Whittaker vs. Brunson &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. Brunson &bull; Nov 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">47/100</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div><div class="totals-line"><span class="totals-name opponent">Jason Knight</span><span class="totals-stat">59/185</span><span class="totals-pct">32%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 4:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -768,7 +790,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mark Eddiva</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:24 &bull; UFC Fight Night: Hunt vs Mir &bull; Mar 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Hunt vs Mir &bull; Mar 2016</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">5/9</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">Mark Eddiva</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -792,7 +815,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yair Rodriguez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 192: Cormier vs Gustafsson &bull; Oct 2015</div>
+                <div class="fight-event-label">UFC 192: Cormier vs Gustafsson &bull; Oct 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">19/79</span><span class="totals-pct">24%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 6:01</span></div><div class="totals-line"><span class="totals-name opponent">Yair Rodriguez</span><span class="totals-stat">52/104</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 0:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -822,7 +846,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Hatsu Hioki</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:13 &bull; UFC Fight Night: Miocic vs Hunt &bull; May 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Miocic vs Hunt &bull; May 2015</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">21/61</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Hatsu Hioki</span><span class="totals-stat">32/92</span><span class="totals-pct">35%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -849,7 +874,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Maximo Blanco</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hunt vs Nelson &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Hunt vs Nelson &bull; Sep 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">99/236</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:44</span></div><div class="totals-line"><span class="totals-name opponent">Maximo Blanco</span><span class="totals-stat">132/240</span><span class="totals-pct">55%</span><span class="totals-stat">TD 3/13</span><span class="totals-stat">Ctrl 2:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -879,7 +905,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-24')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ian Entwistle</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 3:34 &bull; UFC Fight Night: Te Huna vs Marquardt &bull; Jun 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Te Huna vs Marquardt &bull; Jun 2014</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 3:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dan Hooker</span><span class="totals-stat">12/18</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:54</span></div><div class="totals-line"><span class="totals-name opponent">Ian Entwistle</span><span class="totals-stat">1/9</span><span class="totals-pct">11%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
@@ -901,7 +928,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:06 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:54 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

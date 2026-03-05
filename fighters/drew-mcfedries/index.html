@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tomasz Drwal</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:03 &bull; UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-event-label">UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:03</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">17/46</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tomasz Drwal</span><span class="totals-stat">31/73</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 2:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Xavier Foupa-Pokam</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:37 &bull; UFC 98: Evans vs Machida &bull; May 2009</div>
+                <div class="fight-event-label">UFC 98: Evans vs Machida &bull; May 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">8/12</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Xavier Foupa-Pokam</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Thales Leites</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:18 &bull; UFC 90: Silva vs Cote &bull; Oct 2008</div>
+                <div class="fight-event-label">UFC 90: Silva vs Cote &bull; Oct 2008</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Thales Leites</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -282,7 +287,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mike Massenzio</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 1:28 &bull; UFC Fight Night: Diaz vs Neer &bull; Sep 2008</div>
+                <div class="fight-event-label">UFC Fight Night: Diaz vs Neer &bull; Sep 2008</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 1:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mike Massenzio</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -306,7 +312,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Patrick Cote</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:44 &bull; UFC Fight Night: Swick vs Burkman &bull; Jan 2008</div>
+                <div class="fight-event-label">UFC Fight Night: Swick vs Burkman &bull; Jan 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">8/15</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Patrick Cote</span><span class="totals-stat">14/31</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -330,7 +337,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jordan Radev</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:33 &bull; UFC Fight Night: Stout vs Fisher &bull; Jun 2007</div>
+                <div class="fight-event-label">UFC Fight Night: Stout vs Fisher &bull; Jun 2007</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Jordan Radev</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -354,7 +362,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Martin Kampmann</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:06 &bull; UFC 68: The Uprising &bull; Mar 2007</div>
+                <div class="fight-event-label">UFC 68: The Uprising &bull; Mar 2007</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">16/33</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Martin Kampmann</span><span class="totals-stat">15/32</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -378,7 +387,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alessio Sakara</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:07 &bull; UFC 65: Bad Intentions &bull; Nov 2006</div>
+                <div class="fight-event-label">UFC 65: Bad Intentions &bull; Nov 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">30/57</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:33</span></div><div class="totals-line"><span class="totals-name opponent">Alessio Sakara</span><span class="totals-stat">32/58</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -402,7 +412,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marvin Eastman</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:08 &bull; The Ultimate Fighter: Team Rampage vs Team Forrest Finale &bull; Jun 2008</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Rampage vs Team Forrest Finale &bull; Jun 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Drew McFedries</span><span class="totals-stat">19/32</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Marvin Eastman</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:12</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -424,7 +435,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:11 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:58 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

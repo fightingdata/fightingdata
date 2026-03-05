@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joaquim Silva</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 2, 3:08 &bull; UFC Fight Night: Dern vs. Yan &bull; Oct 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Dern vs. Yan &bull; Oct 2022</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 2, 3:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jesse Ronson</span><span class="totals-stat">39/83</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joaquim Silva</span><span class="totals-stat">45/90</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rafa Garcia</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 4:50 &bull; UFC Fight Night: Luque vs. Muhammad &bull; Apr 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Luque vs. Muhammad &bull; Apr 2022</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 4:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jesse Ronson</span><span class="totals-stat">25/61</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Rafa Garcia</span><span class="totals-stat">35/80</span><span class="totals-pct">44%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 4:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Nicolas Dalby</div>
-                <div class="fight-meta">Overturned (Rear Naked Choke) &bull; Rd 1, 2:48 &bull; UFC Fight Night: Whittaker vs. Till &bull; Jul 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. Till &bull; Jul 2020</div>
+                <div class="fight-meta">Overturned (Rear Naked Choke) &bull; Rd 1, 2:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jesse Ronson</span><span class="totals-stat">30/45</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Nicolas Dalby</span><span class="totals-stat">20/50</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Francisco Trinaldo</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Machida vs Mousasi &bull; Feb 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Machida vs Mousasi &bull; Feb 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jesse Ronson</span><span class="totals-stat">53/126</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:36</span></div><div class="totals-line"><span class="totals-name opponent">Francisco Trinaldo</span><span class="totals-stat">55/148</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michel Prazeres</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 165: Jones vs Gustafsson &bull; Sep 2013</div>
+                <div class="fight-event-label">UFC 165: Jones vs Gustafsson &bull; Sep 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jesse Ronson</span><span class="totals-stat">38/73</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:47</span></div><div class="totals-line"><span class="totals-name opponent">Michel Prazeres</span><span class="totals-stat">19/43</span><span class="totals-pct">44%</span><span class="totals-stat">TD 7/15</span><span class="totals-stat">Ctrl 8:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kevin Lee</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Edgar vs. Team Penn Finale &bull; Jul 2014</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Edgar vs. Team Penn Finale &bull; Jul 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jesse Ronson</span><span class="totals-stat">48/100</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Lee</span><span class="totals-stat">49/110</span><span class="totals-pct">45%</span><span class="totals-stat">TD 4/12</span><span class="totals-stat">Ctrl 7:04</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -373,7 +381,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:26 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:12 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

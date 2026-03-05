@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jean Matsumoto</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bautista vs. Oliveira &bull; Feb 2026</div>
+                <div class="fight-event-label">UFC Fight Night: Bautista vs. Oliveira &bull; Feb 2026</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Farid Basharat</span><span class="totals-stat">80/152</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 2:23</span></div><div class="totals-line"><span class="totals-name opponent">Jean Matsumoto</span><span class="totals-stat">76/220</span><span class="totals-pct">35%</span><span class="totals-stat">TD 7/11</span><span class="totals-stat">Ctrl 4:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Gutierrez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 320: Ankalaev vs. Pereira 2 &bull; Oct 2025</div>
+                <div class="fight-event-label">UFC 320: Ankalaev vs. Pereira 2 &bull; Oct 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Farid Basharat</span><span class="totals-stat">41/110</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:27</span></div><div class="totals-line"><span class="totals-name opponent">Chris Gutierrez</span><span class="totals-stat">31/86</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Victor Hugo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 308: Topuria vs. Holloway &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC 308: Topuria vs. Holloway &bull; Oct 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Farid Basharat</span><span class="totals-stat">60/126</span><span class="totals-pct">48%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 4:37</span></div><div class="totals-line"><span class="totals-name opponent">Victor Hugo</span><span class="totals-stat">45/125</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Taylor Lapilus</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Ankalaev vs. Walker 2 &bull; Jan 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Ankalaev vs. Walker 2 &bull; Jan 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Farid Basharat</span><span class="totals-stat">42/100</span><span class="totals-pct">42%</span><span class="totals-stat">TD 5/16</span><span class="totals-stat">Ctrl 6:58</span></div><div class="totals-line"><span class="totals-name opponent">Taylor Lapilus</span><span class="totals-stat">40/93</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kleydson Rodrigues</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:15 &bull; UFC Fight Night: Gane vs. Spivac &bull; Sep 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Gane vs. Spivac &bull; Sep 2023</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Farid Basharat</span><span class="totals-stat">4/6</span><span class="totals-pct">67%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 3:15</span></div><div class="totals-line"><span class="totals-name opponent">Kleydson Rodrigues</span><span class="totals-stat">7/8</span><span class="totals-pct">88%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Da'Mon Blackshear</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 285: Jones vs. Gane &bull; Mar 2023</div>
+                <div class="fight-event-label">UFC 285: Jones vs. Gane &bull; Mar 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Farid Basharat</span><span class="totals-stat">58/96</span><span class="totals-pct">60%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 5:28</span></div><div class="totals-line"><span class="totals-name opponent">Da'Mon Blackshear</span><span class="totals-stat">46/117</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Allan Begosso</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; DWCS 6.8 &bull; Sep 2022</div>
+                <div class="fight-event-label">DWCS 6.8 &bull; Sep 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Farid Basharat</span><span class="totals-stat">116/177</span><span class="totals-pct">66%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 9:05</span></div><div class="totals-line"><span class="totals-name opponent">Allan Begosso</span><span class="totals-stat">27/67</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -409,7 +418,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:15 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:01 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

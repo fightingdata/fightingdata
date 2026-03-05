@@ -78,7 +78,7 @@
             margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #1f2937; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -86,6 +86,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -185,14 +187,14 @@
                 <div class="record-label">Pro Record</div>
                 <div class="record-pro">13-1-0</div>
                 <div class="record-label">UFC Record</div>
-                <div class="record-ufc">1-0-0 (1 fights)</div>
+                <div class="record-ufc">0-0-0 (1 fights)</div>
             </div>
         </div>
 
         <h2>Fighter Profiles</h2>
         <div class="bio-section"><div class="bio-card"><div class="bio-name">Bolaji Oki</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">30</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'10"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">155 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">73"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div><div class="bio-divider"></div><div class="bio-card"><div class="bio-name">Manoel Sousa</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">28</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'9"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">155 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">70"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="debut-disclaimer"><strong>Manoel Sousa</strong> is making their UFC debut. Statistics shown are from DWCS data. UFC Record: 0-0-0</div><div class="sample-warning">&#9888;&#65039; <strong>Manoel Sousa</strong> has only 1 fights in our database — stats may not be fully representative.</div>
+        <div class="debut-disclaimer"><strong>Manoel Sousa</strong> is making their UFC debut. Statistics shown are from DWCS data. UFC Record: 0-0-0</div>
 
         <h2>Career Statistics</h2>
         <table>
@@ -255,7 +257,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mason Jones</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:18 &bull; Sep 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Imavov vs. Borralho &bull; Sep 2025</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bolaji Oki</span><span class="totals-stat">38/99</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Mason Jones</span><span class="totals-stat">57/136</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:41</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f0" style="display:none;">
@@ -282,7 +285,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michael Aswell Jr.</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; May 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Blanchfield vs. Barber &bull; May 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bolaji Oki</span><span class="totals-stat">136/303</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Michael Aswell Jr.</span><span class="totals-stat">118/309</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f1" style="display:none;">
@@ -312,7 +316,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chris Duncan</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 3:34 &bull; Sep 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Moicano vs. Saint Denis &bull; Sep 2024</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 3:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bolaji Oki</span><span class="totals-stat">28/50</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:11</span></div><div class="totals-line"><span class="totals-name opponent">Chris Duncan</span><span class="totals-stat">10/25</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f2" style="display:none;">
@@ -337,7 +342,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cristian Perez</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 3:00 &bull; Aug 2025</div>
+                <div class="fight-event-label">DWCS 9.3 &bull; Aug 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Manoel Sousa</span><span class="totals-stat">42/72</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:50</span></div><div class="totals-line"><span class="totals-name opponent">Cristian Perez</span><span class="totals-stat">17/38</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 7:46</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
@@ -378,7 +384,7 @@
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-05 11:19:16 | Data source: UFCStats.com
+            Report generated: 2026-03-05 13:18:07 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jan Blachowicz</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:08 &bull; UFC Fight Night: Anderson vs. Blachowicz &bull; Feb 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Anderson vs. Blachowicz &bull; Feb 2020</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">11/27</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Jan Blachowicz</span><span class="totals-stat">13/31</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Johnny Walker</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:07 &bull; UFC 244: Masvidal vs. Diaz &bull; Nov 2019</div>
+                <div class="fight-event-label">UFC 244: Masvidal vs. Diaz &bull; Nov 2019</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">22/39</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Johnny Walker</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ilir Latifi</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 232: Jones vs. Gustafsson 2 &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC 232: Jones vs. Gustafsson 2 &bull; Dec 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">40/121</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:24</span></div><div class="totals-line"><span class="totals-name opponent">Ilir Latifi</span><span class="totals-stat">33/78</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Glover Teixeira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Shogun vs. Smith &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Shogun vs. Smith &bull; Jul 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">48/97</span><span class="totals-pct">49%</span><span class="totals-stat">TD 7/19</span><span class="totals-stat">Ctrl 7:26</span></div><div class="totals-line"><span class="totals-name opponent">Glover Teixeira</span><span class="totals-stat">20/46</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Patrick Cummins</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Barboza vs. Lee &bull; Apr 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Barboza vs. Lee &bull; Apr 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">64/119</span><span class="totals-pct">54%</span><span class="totals-stat">TD 12/13</span><span class="totals-stat">Ctrl 8:02</span></div><div class="totals-line"><span class="totals-name opponent">Patrick Cummins</span><span class="totals-stat">31/99</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ovince Saint Preux</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 1:25 &bull; UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 1:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">30/45</span><span class="totals-pct">67%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 7:08</span></div><div class="totals-line"><span class="totals-name opponent">Ovince Saint Preux</span><span class="totals-stat">23/49</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jimi Manuwa</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:05 &bull; UFC Fight Night: Manuwa vs. Anderson &bull; Mar 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Manuwa vs. Anderson &bull; Mar 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">6/27</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jimi Manuwa</span><span class="totals-stat">6/13</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -399,7 +408,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sean O'Connell</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:36 &bull; UFC Fight Night: Lewis vs. Abdurakhimov &bull; Dec 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Abdurakhimov &bull; Dec 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">66/103</span><span class="totals-pct">64%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 6:48</span></div><div class="totals-line"><span class="totals-name opponent">Sean O'Connell</span><span class="totals-stat">9/22</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -426,7 +436,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mauricio Rua</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 198: Werdum vs Miocic &bull; May 2016</div>
+                <div class="fight-event-label">UFC 198: Werdum vs Miocic &bull; May 2016</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">55/138</span><span class="totals-pct">40%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 5:41</span></div><div class="totals-line"><span class="totals-name opponent">Mauricio Rua</span><span class="totals-stat">48/101</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -456,7 +467,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tom Lawlor</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 196: McGregor vs Diaz &bull; Mar 2016</div>
+                <div class="fight-event-label">UFC 196: McGregor vs Diaz &bull; Mar 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">55/153</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:44</span></div><div class="totals-line"><span class="totals-name opponent">Tom Lawlor</span><span class="totals-stat">31/99</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -486,7 +498,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Fabio Maldonado</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Belfort vs Henderson 3 &bull; Nov 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Belfort vs Henderson 3 &bull; Nov 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">60/134</span><span class="totals-pct">45%</span><span class="totals-stat">TD 6/15</span><span class="totals-stat">Ctrl 8:32</span></div><div class="totals-line"><span class="totals-name opponent">Fabio Maldonado</span><span class="totals-stat">26/54</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -516,7 +529,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jan Blachowicz</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 191: Johnson vs Dodson 2 &bull; Sep 2015</div>
+                <div class="fight-event-label">UFC 191: Johnson vs Dodson 2 &bull; Sep 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">84/150</span><span class="totals-pct">56%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 10:39</span></div><div class="totals-line"><span class="totals-name opponent">Jan Blachowicz</span><span class="totals-stat">20/43</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -546,7 +560,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gian Villante</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 4:18 &bull; UFC on FOX: Machida vs Rockhold &bull; Apr 2015</div>
+                <div class="fight-event-label">UFC on FOX: Machida vs Rockhold &bull; Apr 2015</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 4:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">111/279</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gian Villante</span><span class="totals-stat">70/168</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -576,7 +591,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Justin Jones</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 181: Hendricks vs Lawler II &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC 181: Hendricks vs Lawler II &bull; Dec 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">45/89</span><span class="totals-pct">51%</span><span class="totals-stat">TD 7/13</span><span class="totals-stat">Ctrl 8:45</span></div><div class="totals-line"><span class="totals-name opponent">Justin Jones</span><span class="totals-stat">28/69</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -606,7 +622,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Van Buren</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:01 &bull; The Ultimate Fighter: Team Edgar vs. Team Penn Finale &bull; Jul 2014</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Edgar vs. Team Penn Finale &bull; Jul 2014</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Corey Anderson</span><span class="totals-stat">24/37</span><span class="totals-pct">65%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Matt Van Buren</span><span class="totals-stat">2/10</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -628,7 +645,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:05 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:52 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

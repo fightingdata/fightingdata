@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Matt Hughes</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:39 &bull; UFC 60: Hughes vs Gracie &bull; May 2006</div>
+                <div class="fight-event-label">UFC 60: Hughes vs Gracie &bull; May 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">7/11</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Matt Hughes</span><span class="totals-stat">32/40</span><span class="totals-pct">80%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Ken Shamrock</div>
-                <div class="fight-meta">Other &bull; Rd 2, 5:00 &bull; UFC 5: The Return of the Beast &bull; Apr 1995</div>
+                <div class="fight-event-label">UFC 5: The Return of the Beast &bull; Apr 1995</div>
+                <div class="fight-meta">Other &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">3/12</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ken Shamrock</span><span class="totals-stat">10/22</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ron van Clief</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:49 &bull; UFC 4: Revenge of the Warriors &bull; Dec 1994</div>
+                <div class="fight-event-label">UFC 4: Revenge of the Warriors &bull; Dec 1994</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">7/11</span><span class="totals-pct">64%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ron van Clief</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -282,7 +287,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Keith Hackney</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 5:32 &bull; UFC 4: Revenge of the Warriors &bull; Dec 1994</div>
+                <div class="fight-event-label">UFC 4: Revenge of the Warriors &bull; Dec 1994</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 5:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">11/23</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Keith Hackney</span><span class="totals-stat">4/13</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -306,7 +312,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dan Severn</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 15:49 &bull; UFC 4: Revenge of the Warriors &bull; Dec 1994</div>
+                <div class="fight-event-label">UFC 4: Revenge of the Warriors &bull; Dec 1994</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 15:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">0/4</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dan Severn</span><span class="totals-stat">4/7</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -330,7 +337,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kimo Leopoldo</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:40 &bull; UFC 3: The American Dream &bull; Sep 1994</div>
+                <div class="fight-event-label">UFC 3: The American Dream &bull; Sep 1994</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kimo Leopoldo</span><span class="totals-stat">6/9</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -354,7 +362,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Minoki Ichihara</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 5:08 &bull; UFC 2: No Way Out &bull; Mar 1994</div>
+                <div class="fight-event-label">UFC 2: No Way Out &bull; Mar 1994</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 5:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Minoki Ichihara</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -378,7 +387,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason DeLucia</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:07 &bull; UFC 2: No Way Out &bull; Mar 1994</div>
+                <div class="fight-event-label">UFC 2: No Way Out &bull; Mar 1994</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jason DeLucia</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -402,7 +412,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Remco Pardoel</div>
-                <div class="fight-meta">Submission (Gi Choke) &bull; Rd 1, 1:31 &bull; UFC 2: No Way Out &bull; Mar 1994</div>
+                <div class="fight-event-label">UFC 2: No Way Out &bull; Mar 1994</div>
+                <div class="fight-meta">Submission (Gi Choke) &bull; Rd 1, 1:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Remco Pardoel</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -426,7 +437,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Patrick Smith</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:17 &bull; UFC 2: No Way Out &bull; Mar 1994</div>
+                <div class="fight-event-label">UFC 2: No Way Out &bull; Mar 1994</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">4/4</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Patrick Smith</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -450,7 +462,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Art Jimmerson</div>
-                <div class="fight-meta">Submission (Other) &bull; Rd 1, 2:18 &bull; UFC 1: The Beginning &bull; Nov 1993</div>
+                <div class="fight-event-label">UFC 1: The Beginning &bull; Nov 1993</div>
+                <div class="fight-meta">Submission (Other) &bull; Rd 1, 2:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Art Jimmerson</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -474,7 +487,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gerard Gordeau</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:44 &bull; UFC 1: The Beginning &bull; Nov 1993</div>
+                <div class="fight-event-label">UFC 1: The Beginning &bull; Nov 1993</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gerard Gordeau</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -498,7 +512,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ken Shamrock</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:57 &bull; UFC 1: The Beginning &bull; Nov 1993</div>
+                <div class="fight-event-label">UFC 1: The Beginning &bull; Nov 1993</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ken Shamrock</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -522,7 +537,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kazushi Sakuraba</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 6, 15:00 &bull; K-1 Dynamite!! USA &bull; Jun 2007</div>
+                <div class="fight-event-label">K-1 Dynamite!! USA &bull; Jun 2007</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 6, 15:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">19/56</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kazushi Sakuraba</span><span class="totals-stat">10/23</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -552,7 +568,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-1')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Hidehiko Yoshida</div>
-                <div class="fight-meta">Other &bull; Rd 2, 10:00 &bull; PRIDE Shockwave 2003 &bull; Dec 2003</div>
+                <div class="fight-event-label">PRIDE Shockwave 2003 &bull; Dec 2003</div>
+                <div class="fight-meta">Other &bull; Rd 2, 10:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">9/18</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Hidehiko Yoshida</span><span class="totals-stat">3/9</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-1" style="display:none;">
@@ -579,7 +596,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nobuhiko Takada</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 1, 15:00 &bull; PRIDE Grand Prix 2000 Opening Round &bull; Jan 2000</div>
+                <div class="fight-event-label">PRIDE Grand Prix 2000 Opening Round &bull; Jan 2000</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 1, 15:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Royce Gracie</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Nobuhiko Takada</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-2" style="display:none;">
@@ -601,7 +619,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:59 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:42 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Fabio Maldonado</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 186: Johnson vs Horiguchi &bull; Apr 2015</div>
+                <div class="fight-event-label">UFC 186: Johnson vs Horiguchi &bull; Apr 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">99/211</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:11</span></div><div class="totals-line"><span class="totals-name opponent">Fabio Maldonado</span><span class="totals-stat">67/134</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Glover Teixeira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs Dodson &bull; Jan 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs Dodson &bull; Jan 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">53/169</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Glover Teixeira</span><span class="totals-stat">80/179</span><span class="totals-pct">45%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 3:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ryan Bader</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">16/39</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Ryan Bader</span><span class="totals-stat">55/101</span><span class="totals-pct">54%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 8:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jon Jones</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 4, 1:14 &bull; UFC 135: Jones vs Rampage &bull; Sep 2011</div>
+                <div class="fight-event-label">UFC 135: Jones vs Rampage &bull; Sep 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 4, 1:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">16/44</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Jon Jones</span><span class="totals-stat">61/117</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 3:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -330,7 +336,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Hamill</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 130: Rampage vs Hamill &bull; May 2011</div>
+                <div class="fight-event-label">UFC 130: Rampage vs Hamill &bull; May 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">55/128</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:01</span></div><div class="totals-line"><span class="totals-name opponent">Matt Hamill</span><span class="totals-stat">32/85</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/17</span><span class="totals-stat">Ctrl 1:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -360,7 +367,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lyoto Machida</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 123: Rampage vs Machida &bull; Nov 2010</div>
+                <div class="fight-event-label">UFC 123: Rampage vs Machida &bull; Nov 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">16/49</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:22</span></div><div class="totals-line"><span class="totals-name opponent">Lyoto Machida</span><span class="totals-stat">33/51</span><span class="totals-pct">65%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 4:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -390,7 +398,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rashad Evans</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 114: Rampage vs Evans &bull; May 2010</div>
+                <div class="fight-event-label">UFC 114: Rampage vs Evans &bull; May 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">17/47</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Rashad Evans</span><span class="totals-stat">29/52</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/12</span><span class="totals-stat">Ctrl 7:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -420,7 +429,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Keith Jardine</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 96: Jackson vs Jardine &bull; Mar 2009</div>
+                <div class="fight-event-label">UFC 96: Jackson vs Jardine &bull; Mar 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">56/151</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:54</span></div><div class="totals-line"><span class="totals-name opponent">Keith Jardine</span><span class="totals-stat">64/184</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -450,7 +460,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Wanderlei Silva</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:21 &bull; UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-event-label">UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">11/20</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Wanderlei Silva</span><span class="totals-stat">7/26</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -474,7 +485,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Forrest Griffin</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 86: Jackson vs Griffin &bull; Jul 2008</div>
+                <div class="fight-event-label">UFC 86: Jackson vs Griffin &bull; Jul 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">50/138</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:10</span></div><div class="totals-line"><span class="totals-name opponent">Forrest Griffin</span><span class="totals-stat">77/276</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 4:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -510,7 +522,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dan Henderson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 75: Champion vs Champion &bull; Sep 2007</div>
+                <div class="fight-event-label">UFC 75: Champion vs Champion &bull; Sep 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">74/108</span><span class="totals-pct">69%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 9:38</span></div><div class="totals-line"><span class="totals-name opponent">Dan Henderson</span><span class="totals-stat">60/95</span><span class="totals-pct">63%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 9:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -546,7 +559,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chuck Liddell</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:53 &bull; UFC 71: Liddell vs Jackson &bull; May 2007</div>
+                <div class="fight-event-label">UFC 71: Liddell vs Jackson &bull; May 2007</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">6/8</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Chuck Liddell</span><span class="totals-stat">4/11</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -570,7 +584,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marvin Eastman</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:49 &bull; UFC 67: All or Nothing &bull; Feb 2007</div>
+                <div class="fight-event-label">UFC 67: All or Nothing &bull; Feb 2007</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">45/74</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:01</span></div><div class="totals-line"><span class="totals-name opponent">Marvin Eastman</span><span class="totals-stat">15/54</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -597,7 +612,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Lindland</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; WFA - King of the Streets &bull; Jul 2006</div>
+                <div class="fight-event-label">WFA - King of the Streets &bull; Jul 2006</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">37/46</span><span class="totals-pct">80%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Matt Lindland</span><span class="totals-stat">21/39</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -627,7 +643,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dong Sik Yoon</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; PRIDE 31: Unbreakable &bull; Feb 2006</div>
+                <div class="fight-event-label">PRIDE 31: Unbreakable &bull; Feb 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">67/98</span><span class="totals-pct">68%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dong Sik Yoon</span><span class="totals-stat">23/35</span><span class="totals-pct">66%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -657,7 +674,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Hirotaka Yokoi</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 4:05 &bull; PRIDE 30: Fully Loaded &bull; Oct 2005</div>
+                <div class="fight-event-label">PRIDE 30: Fully Loaded &bull; Oct 2005</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 4:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">25/29</span><span class="totals-pct">86%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Hirotaka Yokoi</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-1" style="display:none;">
@@ -681,7 +699,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mauricio Rua</div>
-                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 1, 4:47 &bull; PRIDE Total Elimination 2005 &bull; Apr 2005</div>
+                <div class="fight-event-label">PRIDE Total Elimination 2005 &bull; Apr 2005</div>
+                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 1, 4:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">8/16</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mauricio Rua</span><span class="totals-stat">48/70</span><span class="totals-pct">69%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-2" style="display:none;">
@@ -705,7 +724,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Murilo Rua</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; PRIDE 29: Fists Of Fire &bull; Feb 2005</div>
+                <div class="fight-event-label">PRIDE 29: Fists Of Fire &bull; Feb 2005</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">46/66</span><span class="totals-pct">70%</span><span class="totals-stat">TD 6/9</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Murilo Rua</span><span class="totals-stat">43/78</span><span class="totals-pct">55%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-3" style="display:none;">
@@ -735,7 +755,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Wanderlei Silva</div>
-                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 2, 3:26 &bull; PRIDE 28: High Octane &bull; Oct 2004</div>
+                <div class="fight-event-label">PRIDE 28: High Octane &bull; Oct 2004</div>
+                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 2, 3:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">39/68</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Wanderlei Silva</span><span class="totals-stat">56/104</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-4" style="display:none;">
@@ -762,7 +783,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ricardo Arona</div>
-                <div class="fight-meta">KO/TKO (Slam) &bull; Rd 1, 7:32 &bull; PRIDE Critical Countdown 2004 &bull; Jun 2004</div>
+                <div class="fight-event-label">PRIDE Critical Countdown 2004 &bull; Jun 2004</div>
+                <div class="fight-meta">KO/TKO (Slam) &bull; Rd 1, 7:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">9/22</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ricardo Arona</span><span class="totals-stat">8/14</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-5" style="display:none;">
@@ -786,7 +808,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ikuhisa Minowa</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 1:05 &bull; PRIDE Shockwave 2003 &bull; Dec 2003</div>
+                <div class="fight-event-label">PRIDE Shockwave 2003 &bull; Dec 2003</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">65/80</span><span class="totals-pct">81%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ikuhisa Minowa</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-6" style="display:none;">
@@ -813,7 +836,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Wanderlei Silva</div>
-                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 1, 6:28 &bull; PRIDE Final Conflict 2003 &bull; Nov 2003</div>
+                <div class="fight-event-label">PRIDE Final Conflict 2003 &bull; Nov 2003</div>
+                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 1, 6:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">14/23</span><span class="totals-pct">61%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Wanderlei Silva</span><span class="totals-stat">29/34</span><span class="totals-pct">85%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-7" style="display:none;">
@@ -837,7 +861,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chuck Liddell</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 3:10 &bull; PRIDE Final Conflict 2003 &bull; Nov 2003</div>
+                <div class="fight-event-label">PRIDE Final Conflict 2003 &bull; Nov 2003</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 3:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">100/155</span><span class="totals-pct">65%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chuck Liddell</span><span class="totals-stat">26/98</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-8" style="display:none;">
@@ -864,7 +889,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Murilo Bustamante</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; PRIDE Total Elimination 2003 &bull; Aug 2003</div>
+                <div class="fight-event-label">PRIDE Total Elimination 2003 &bull; Aug 2003</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">56/121</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Murilo Bustamante</span><span class="totals-stat">15/84</span><span class="totals-pct">18%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-9" style="display:none;">
@@ -894,7 +920,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mikhail Iloukhine</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 6:26 &bull; PRIDE 26: Bad to the Bone &bull; Jun 2003</div>
+                <div class="fight-event-label">PRIDE 26: Bad to the Bone &bull; Jun 2003</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 6:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">19/26</span><span class="totals-pct">73%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mikhail Iloukhine</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-10" style="display:none;">
@@ -918,7 +945,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Randleman</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 6:58 &bull; PRIDE 25: Body Blow &bull; Mar 2003</div>
+                <div class="fight-event-label">PRIDE 25: Body Blow &bull; Mar 2003</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 6:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">36/45</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Randleman</span><span class="totals-stat">8/16</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-11" style="display:none;">
@@ -942,7 +970,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Igor Vovchanchyn</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 7:17 &bull; PRIDE 22: Beasts from the East 2 &bull; Sep 2002</div>
+                <div class="fight-event-label">PRIDE 22: Beasts from the East 2 &bull; Sep 2002</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 7:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">33/49</span><span class="totals-pct">67%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Igor Vovchanchyn</span><span class="totals-stat">10/16</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-12" style="display:none;">
@@ -966,7 +995,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Masaaki Satake</div>
-                <div class="fight-meta">KO/TKO (Slam) &bull; Rd 1, 7:07 &bull; PRIDE 20: Armed and Ready &bull; Apr 2002</div>
+                <div class="fight-event-label">PRIDE 20: Armed and Ready &bull; Apr 2002</div>
+                <div class="fight-meta">KO/TKO (Slam) &bull; Rd 1, 7:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">63/77</span><span class="totals-pct">82%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Masaaki Satake</span><span class="totals-stat">14/17</span><span class="totals-pct">82%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-13" style="display:none;">
@@ -990,7 +1020,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Daijiro Matsui</div>
-                <div class="fight-meta">DQ &bull; Rd 1, 0:14 &bull; PRIDE 18: Cold Fury 2 &bull; Dec 2001</div>
+                <div class="fight-event-label">PRIDE 18: Cold Fury 2 &bull; Dec 2001</div>
+                <div class="fight-meta">DQ &bull; Rd 1, 0:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Daijiro Matsui</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-14" style="display:none;">
@@ -1014,7 +1045,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yuki Ishikawa</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:52 &bull; PRIDE 17: Championship Chaos &bull; Nov 2001</div>
+                <div class="fight-event-label">PRIDE 17: Championship Chaos &bull; Nov 2001</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">16/18</span><span class="totals-pct">89%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yuki Ishikawa</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-15" style="display:none;">
@@ -1038,7 +1070,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-16')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kazushi Sakuraba</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 5:41 &bull; PRIDE 15: Raging Rumble &bull; Jul 2001</div>
+                <div class="fight-event-label">PRIDE 15: Raging Rumble &bull; Jul 2001</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 5:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Quinton Jackson</span><span class="totals-stat">9/13</span><span class="totals-pct">69%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kazushi Sakuraba</span><span class="totals-stat">3/3</span><span class="totals-pct">100%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-16" style="display:none;">
@@ -1060,7 +1093,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:54 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:37 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

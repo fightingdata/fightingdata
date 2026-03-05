@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ricco Rodriguez</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:25 &bull; UFC 37: High Impact &bull; May 2002</div>
+                <div class="fight-event-label">UFC 37: High Impact &bull; May 2002</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">6/11</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:33</span></div><div class="totals-line"><span class="totals-name opponent">Ricco Rodriguez</span><span class="totals-stat">19/33</span><span class="totals-pct">58%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 7:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Pedro Rizzo</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:17 &bull; UFC 23: Ultimate Japan 2 &bull; Nov 1999</div>
+                <div class="fight-event-label">UFC 23: Ultimate Japan 2 &bull; Nov 1999</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">14/33</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Pedro Rizzo</span><span class="totals-stat">14/47</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Lajcik</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC 21: Return of the Champions &bull; Jul 1999</div>
+                <div class="fight-event-label">UFC 21: Return of the Champions &bull; Jul 1999</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">11/14</span><span class="totals-pct">79%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:15</span></div><div class="totals-line"><span class="totals-name opponent">Tim Lajcik</span><span class="totals-stat">12/31</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 6:59</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Bas Rutten</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:15 &bull; UFC 18: The Road to the Heavyweight Title &bull; Jan 1999</div>
+                <div class="fight-event-label">UFC 18: The Road to the Heavyweight Title &bull; Jan 1999</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">23/47</span><span class="totals-pct">49%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Bas Rutten</span><span class="totals-stat">31/61</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pete Williams</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00 &bull; UFC - Ultimate Brazil &bull; Oct 1998</div>
+                <div class="fight-event-label">UFC - Ultimate Brazil &bull; Oct 1998</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">14/40</span><span class="totals-pct">35%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Pete Williams</span><span class="totals-stat">13/67</span><span class="totals-pct">19%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kimo Leopoldo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00 &bull; UFC 16: Battle in the Bayou &bull; Mar 1998</div>
+                <div class="fight-event-label">UFC 16: Battle in the Bayou &bull; Mar 1998</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">45/75</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kimo Leopoldo</span><span class="totals-stat">13/46</span><span class="totals-pct">28%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mario Sperry</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:20 &bull; PRIDE 31: Unbreakable &bull; Feb 2006</div>
+                <div class="fight-event-label">PRIDE 31: Unbreakable &bull; Feb 2006</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">10/20</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mario Sperry</span><span class="totals-stat">14/31</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Fedor Emelianenko</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 10:00 &bull; PRIDE Bushido 6 &bull; Apr 2005</div>
+                <div class="fight-event-label">PRIDE Bushido 6 &bull; Apr 2005</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 10:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">3/8</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Fedor Emelianenko</span><span class="totals-stat">31/74</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-1" style="display:none;">
@@ -420,7 +430,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mark Hunt</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:15 &bull; PRIDE Total Elimination Absolute &bull; </div>
+                <div class="fight-event-label">PRIDE Total Elimination Absolute &bull; </div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tsuyoshi Kohsaka</span><span class="totals-stat">45/126</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mark Hunt</span><span class="totals-stat">86/189</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-2" style="display:none;">
@@ -445,7 +456,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:10 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:51 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

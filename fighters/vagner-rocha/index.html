@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jake Matthews</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:52 &bull; UFC Fight Night: Rockhold vs Bisping &bull; Nov 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Rockhold vs Bisping &bull; Nov 2014</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vagner Rocha</span><span class="totals-stat">14/30</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Jake Matthews</span><span class="totals-stat">26/63</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jonathan Brookins</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:32 &bull; UFC on FUEL TV: Sanchez vs Ellenberger &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Sanchez vs Ellenberger &bull; Feb 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vagner Rocha</span><span class="totals-stat">7/16</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jonathan Brookins</span><span class="totals-stat">18/28</span><span class="totals-pct">64%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cody McKenzie</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 3:49 &bull; UFC Fight Night: Shields vs Ellenberger &bull; Sep 2011</div>
+                <div class="fight-event-label">UFC Fight Night: Shields vs Ellenberger &bull; Sep 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 3:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vagner Rocha</span><span class="totals-stat">18/48</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:38</span></div><div class="totals-line"><span class="totals-name opponent">Cody McKenzie</span><span class="totals-stat">15/43</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-event-label">UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vagner Rocha</span><span class="totals-stat">46/106</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">86/145</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,13 +321,14 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Bret Bergmark</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Fedor vs. Werdum &bull; Jun 2010</div>
+                <div class="fight-event-label">Strikeforce - Fedor vs. Werdum &bull; Jun 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vagner Rocha</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:11 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:52 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kaan Ofli</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:02 &bull; UFC Fight Night: Oliveira vs. Gamrot &bull; Oct 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Oliveira vs. Gamrot &bull; Oct 2025</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:02</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kaan Ofli</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chepe Mariscal</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Kape vs. Almabayev &bull; Mar 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Kape vs. Almabayev &bull; Mar 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">37/91</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Chepe Mariscal</span><span class="totals-stat">85/162</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Culibao</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 305: Du Plessis vs. Adesanya &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC 305: Du Plessis vs. Adesanya &bull; Aug 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">27/118</span><span class="totals-pct">23%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:09</span></div><div class="totals-line"><span class="totals-name opponent">Josh Culibao</span><span class="totals-stat">70/127</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Julian Erosa</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:15 &bull; UFC Fight Night: Ribas vs. Namajunas &bull; Mar 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Ribas vs. Namajunas &bull; Mar 2024</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">7/17</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:27</span></div><div class="totals-line"><span class="totals-name opponent">Julian Erosa</span><span class="totals-stat">4/11</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Charles Jourdain</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 3:12 &bull; UFC Fight Night: Fiziev vs. Gamrot &bull; Sep 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Fiziev vs. Gamrot &bull; Sep 2023</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 3:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">0/9</span><span class="totals-pct">0%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:58</span></div><div class="totals-line"><span class="totals-name opponent">Charles Jourdain</span><span class="totals-stat">8/9</span><span class="totals-pct">89%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -339,7 +346,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Danny Chavez</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Elbow) &bull; Rd 1, 1:12 &bull; UFC Fight Night: Kattar vs. Emmett &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Kattar vs. Emmett &bull; Jun 2022</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Elbow) &bull; Rd 1, 1:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">4/14</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Danny Chavez</span><span class="totals-stat">3/9</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -363,7 +371,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zubaira Tukhugov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 267: Blachowicz vs. Teixeira &bull; Oct 2021</div>
+                <div class="fight-event-label">UFC 267: Blachowicz vs. Teixeira &bull; Oct 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">68/224</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Zubaira Tukhugov</span><span class="totals-stat">77/181</span><span class="totals-pct">43%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 0:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -393,7 +402,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bill Algeo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Font vs. Garbrandt &bull; May 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Font vs. Garbrandt &bull; May 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">53/102</span><span class="totals-pct">52%</span><span class="totals-stat">TD 8/13</span><span class="totals-stat">Ctrl 3:26</span></div><div class="totals-line"><span class="totals-name opponent">Bill Algeo</span><span class="totals-stat">76/170</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -423,7 +433,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lerone Murphy</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:18 &bull; UFC Fight Night: Kattar vs. Ige &bull; Jul 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Kattar vs. Ige &bull; Jul 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">10/29</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:57</span></div><div class="totals-line"><span class="totals-name opponent">Lerone Murphy</span><span class="totals-stat">22/40</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -447,7 +458,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eduardo Garagorri</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:57 &bull; UFC Fight Night: Blachowicz vs. Jacare &bull; Nov 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Blachowicz vs. Jacare &bull; Nov 2019</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">10/34</span><span class="totals-pct">29%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:06</span></div><div class="totals-line"><span class="totals-name opponent">Eduardo Garagorri</span><span class="totals-stat">6/16</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -471,7 +483,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Journey Newson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Ngannou vs. Dos Santos &bull; Jun 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Ngannou vs. Dos Santos &bull; Jun 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">40/120</span><span class="totals-pct">33%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 2:45</span></div><div class="totals-line"><span class="totals-name opponent">Journey Newson</span><span class="totals-stat">38/123</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -501,7 +514,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Said Nurmagomedov</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Kick) &bull; Rd 1, 2:28 &bull; UFC Fight Night: Assuncao vs. Moraes 2 &bull; Feb 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Assuncao vs. Moraes 2 &bull; Feb 2019</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Kick) &bull; Rd 1, 2:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">2/8</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Said Nurmagomedov</span><span class="totals-stat">17/24</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -525,7 +539,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kyung Ho Kang</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 227: Dillashaw vs. Garbrandt 2 &bull; Aug 2018</div>
+                <div class="fight-event-label">UFC 227: Dillashaw vs. Garbrandt 2 &bull; Aug 2018</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">54/146</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:58</span></div><div class="totals-line"><span class="totals-name opponent">Kyung Ho Kang</span><span class="totals-stat">65/157</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -555,7 +570,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Aiemann Zahabi</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Elbow) &bull; Rd 3, 1:58 &bull; UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Elbow) &bull; Rd 3, 1:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">42/94</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 0:37</span></div><div class="totals-line"><span class="totals-name opponent">Aiemann Zahabi</span><span class="totals-stat">46/105</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -585,7 +601,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michinori Tanaka</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricardo Ramos</span><span class="totals-stat">45/88</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:42</span></div><div class="totals-line"><span class="totals-name opponent">Michinori Tanaka</span><span class="totals-stat">28/73</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 3:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -613,7 +630,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:56 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:40 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

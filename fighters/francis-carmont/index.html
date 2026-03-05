@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Thales Leites</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:20 &bull; UFC Fight Night: Henderson vs Dos Anjos &bull; Aug 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Henderson vs Dos Anjos &bull; Aug 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">18/51</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Thales Leites</span><span class="totals-stat">18/43</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. CB Dollaway</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Munoz vs Mousasi &bull; May 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Munoz vs Mousasi &bull; May 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">29/86</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:26</span></div><div class="totals-line"><span class="totals-name opponent">CB Dollaway</span><span class="totals-stat">44/79</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 6:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jacare Souza</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Machida vs Mousasi &bull; Feb 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Machida vs Mousasi &bull; Feb 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">19/71</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Jacare Souza</span><span class="totals-stat">16/47</span><span class="totals-pct">34%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 8:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -294,7 +299,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Constantinos Philippou</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 165: Jones vs Gustafsson &bull; Sep 2013</div>
+                <div class="fight-event-label">UFC 165: Jones vs Gustafsson &bull; Sep 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">29/64</span><span class="totals-pct">45%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 12:29</span></div><div class="totals-line"><span class="totals-name opponent">Constantinos Philippou</span><span class="totals-stat">7/25</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -324,7 +330,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lorenz Larkin</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Henderson vs Melendez &bull; Apr 2013</div>
+                <div class="fight-event-label">UFC on FOX: Henderson vs Melendez &bull; Apr 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">12/75</span><span class="totals-pct">16%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 5:16</span></div><div class="totals-line"><span class="totals-name opponent">Lorenz Larkin</span><span class="totals-stat">32/82</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -354,7 +361,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tom Lawlor</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 154: St-Pierre vs Condit &bull; Nov 2012</div>
+                <div class="fight-event-label">UFC 154: St-Pierre vs Condit &bull; Nov 2012</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">34/84</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:32</span></div><div class="totals-line"><span class="totals-name opponent">Tom Lawlor</span><span class="totals-stat">20/75</span><span class="totals-pct">27%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 6:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -384,7 +392,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Karlos Vemola</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:39 &bull; UFC on FUEL TV: Munoz vs Weidman &bull; Jul 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Munoz vs Weidman &bull; Jul 2012</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:38</span></div><div class="totals-line"><span class="totals-name opponent">Karlos Vemola</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 2:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Magnus Cedenblad</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:42 &bull; UFC on FUEL TV: Gustafsson vs Silva &bull; Apr 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Gustafsson vs Silva &bull; Apr 2012</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">28/30</span><span class="totals-pct">93%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:38</span></div><div class="totals-line"><span class="totals-name opponent">Magnus Cedenblad</span><span class="totals-stat">11/14</span><span class="totals-pct">79%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -438,7 +448,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Camozzi</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 137: Penn vs Diaz &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC 137: Penn vs Diaz &bull; Oct 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francis Carmont</span><span class="totals-stat">51/74</span><span class="totals-pct">69%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 4:43</span></div><div class="totals-line"><span class="totals-name opponent">Chris Camozzi</span><span class="totals-stat">22/47</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 5:59</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -466,7 +477,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:15 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:02 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

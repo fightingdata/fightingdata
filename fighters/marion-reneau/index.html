@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Miesha Tate</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 1:53 &bull; UFC Fight Night: Makhachev vs. Moises &bull; Jul 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Makhachev vs. Moises &bull; Jul 2021</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 1:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">25/64</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Miesha Tate</span><span class="totals-stat">65/120</span><span class="totals-pct">54%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 5:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Macy Chiasson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brunson vs. Holland &bull; Mar 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Brunson vs. Holland &bull; Mar 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">30/63</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:15</span></div><div class="totals-line"><span class="totals-name opponent">Macy Chiasson</span><span class="totals-stat">51/138</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Raquel Pennington</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">46/117</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 3:48</span></div><div class="totals-line"><span class="totals-name opponent">Raquel Pennington</span><span class="totals-stat">107/154</span><span class="totals-pct">69%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 5:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yana Santos</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Lewis vs. Dos Santos &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Dos Santos &bull; Mar 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">58/142</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:20</span></div><div class="totals-line"><span class="totals-name opponent">Yana Santos</span><span class="totals-stat">98/223</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cat Zingano</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dos Santos vs. Ivanov &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Santos vs. Ivanov &bull; Jul 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">14/39</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:16</span></div><div class="totals-line"><span class="totals-name opponent">Cat Zingano</span><span class="totals-stat">33/57</span><span class="totals-pct">58%</span><span class="totals-stat">TD 6/10</span><span class="totals-stat">Ctrl 8:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sara McMann</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 3:40 &bull; UFC Fight Night: Emmett vs. Stephens &bull; Feb 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Emmett vs. Stephens &bull; Feb 2018</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 3:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">23/39</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Sara McMann</span><span class="totals-stat">9/49</span><span class="totals-pct">18%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 5:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -384,7 +392,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Talita Bernardo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:54 &bull; UFC Fight Night: Volkov vs. Struve &bull; Sep 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Volkov vs. Struve &bull; Sep 2017</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">57/127</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:28</span></div><div class="totals-line"><span class="totals-name opponent">Talita Bernardo</span><span class="totals-stat">22/88</span><span class="totals-pct">25%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 6:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -414,7 +423,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Bethe Correia</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Belfort vs. Gastelum &bull; Mar 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Belfort vs. Gastelum &bull; Mar 2017</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">75/132</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:00</span></div><div class="totals-line"><span class="totals-name opponent">Bethe Correia</span><span class="totals-stat">43/95</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 3:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -444,7 +454,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Milana Dudieva</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 3:03 &bull; UFC Fight Night: Mousasi vs. Hall 2 &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Mousasi vs. Hall 2 &bull; Nov 2016</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 3:03</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">48/136</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:20</span></div><div class="totals-line"><span class="totals-name opponent">Milana Dudieva</span><span class="totals-stat">17/47</span><span class="totals-pct">36%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -474,7 +485,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ashlee Evans-Smith</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Cowboy vs Cowboy &bull; Feb 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Cowboy vs Cowboy &bull; Feb 2016</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">53/140</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">Ashlee Evans-Smith</span><span class="totals-stat">55/213</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -504,7 +516,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Holly Holm</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Mir vs Duffee &bull; Jul 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Mir vs Duffee &bull; Jul 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">26/75</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Holly Holm</span><span class="totals-stat">65/178</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:50</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -534,7 +547,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jessica Andrade</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:54 &bull; UFC Fight Night: Bigfoot vs Mir &bull; Feb 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Bigfoot vs Mir &bull; Feb 2015</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">6/16</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Andrade</span><span class="totals-stat">6/15</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -558,7 +572,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alexis Dufresne</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 182: Jones vs Cormier &bull; Jan 2015</div>
+                <div class="fight-event-label">UFC 182: Jones vs Cormier &bull; Jan 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marion Reneau</span><span class="totals-stat">85/221</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Alexis Dufresne</span><span class="totals-stat">28/116</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -586,7 +601,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:42 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:27 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

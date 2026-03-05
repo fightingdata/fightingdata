@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Aleksei Kunchenko</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dos Santos vs. Tuivasa &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Santos vs. Tuivasa &bull; Dec 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">10/56</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/15</span><span class="totals-stat">Ctrl 2:47</span></div><div class="totals-line"><span class="totals-name opponent">Aleksei Kunchenko</span><span class="totals-stat">72/129</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dhiego Lima</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Poirier vs. Gaethje &bull; Apr 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Poirier vs. Gaethje &bull; Apr 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">15/19</span><span class="totals-pct">79%</span><span class="totals-stat">TD 6/13</span><span class="totals-stat">Ctrl 12:30</span></div><div class="totals-line"><span class="totals-name opponent">Dhiego Lima</span><span class="totals-stat">11/24</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ovince Saint Preux</div>
-                <div class="fight-meta">Submission (Von Flue Choke) &bull; Rd 1, 1:50 &bull; UFC Fight Night: Saint Preux vs. Okami &bull; Sep 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Saint Preux vs. Okami &bull; Sep 2017</div>
+                <div class="fight-meta">Submission (Von Flue Choke) &bull; Rd 1, 1:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ovince Saint Preux</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jacare Souza</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:47 &bull; UFC Fight Night: Teixeira vs Bader &bull; Sep 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Teixeira vs Bader &bull; Sep 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">1/11</span><span class="totals-pct">9%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jacare Souza</span><span class="totals-stat">28/48</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Hector Lombard</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FUEL TV: Silva vs. Stann &bull; Mar 2013</div>
+                <div class="fight-event-label">UFC on FUEL TV: Silva vs. Stann &bull; Mar 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">37/89</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 4:21</span></div><div class="totals-line"><span class="totals-name opponent">Hector Lombard</span><span class="totals-stat">45/89</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 3:50</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alan Belcher</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 155: Dos Santos vs Velasquez II &bull; Dec 2012</div>
+                <div class="fight-event-label">UFC 155: Dos Santos vs Velasquez II &bull; Dec 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">20/44</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 8:01</span></div><div class="totals-line"><span class="totals-name opponent">Alan Belcher</span><span class="totals-stat">6/28</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Buddy Roberts</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:05 &bull; UFC 150: Henderson vs Edgar II &bull; Aug 2012</div>
+                <div class="fight-event-label">UFC 150: Henderson vs Edgar II &bull; Aug 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">26/68</span><span class="totals-pct">38%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 5:29</span></div><div class="totals-line"><span class="totals-name opponent">Buddy Roberts</span><span class="totals-stat">15/35</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -402,7 +411,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tim Boetsch</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:54 &bull; UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">29/75</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:02</span></div><div class="totals-line"><span class="totals-name opponent">Tim Boetsch</span><span class="totals-stat">42/93</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -432,7 +442,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anderson Silva</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:04 &bull; UFC 134: Silva vs Okami &bull; Aug 2011</div>
+                <div class="fight-event-label">UFC 134: Silva vs Okami &bull; Aug 2011</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:04</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">16/43</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:51</span></div><div class="totals-line"><span class="totals-name opponent">Anderson Silva</span><span class="totals-stat">43/61</span><span class="totals-pct">70%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -459,7 +470,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nate Marquardt</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 122: Marquardt vs Okami &bull; Nov 2010</div>
+                <div class="fight-event-label">UFC 122: Marquardt vs Okami &bull; Nov 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">25/83</span><span class="totals-pct">30%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 4:09</span></div><div class="totals-line"><span class="totals-name opponent">Nate Marquardt</span><span class="totals-stat">21/61</span><span class="totals-pct">34%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 2:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -489,7 +501,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mark Munoz</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">22/83</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 5:02</span></div><div class="totals-line"><span class="totals-name opponent">Mark Munoz</span><span class="totals-stat">16/44</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/15</span><span class="totals-stat">Ctrl 1:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -519,7 +532,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lucio Linhares</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 2:47 &bull; UFC Fight Night: Florian vs Gomi &bull; Mar 2010</div>
+                <div class="fight-event-label">UFC Fight Night: Florian vs Gomi &bull; Mar 2010</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 2:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">50/72</span><span class="totals-pct">69%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:31</span></div><div class="totals-line"><span class="totals-name opponent">Lucio Linhares</span><span class="totals-stat">8/44</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -546,7 +560,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chael Sonnen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 104: Machida vs Shogun &bull; Oct 2009</div>
+                <div class="fight-event-label">UFC 104: Machida vs Shogun &bull; Oct 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">25/154</span><span class="totals-pct">16%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Chael Sonnen</span><span class="totals-stat">91/281</span><span class="totals-pct">32%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 5:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -576,7 +591,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dean Lister</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-event-label">UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">39/77</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 8:54</span></div><div class="totals-line"><span class="totals-name opponent">Dean Lister</span><span class="totals-stat">6/39</span><span class="totals-pct">15%</span><span class="totals-stat">TD 0/11</span><span class="totals-stat">Ctrl 0:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -606,7 +622,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Evan Tanner</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 3:00 &bull; UFC 82: Pride of a Champion &bull; Mar 2008</div>
+                <div class="fight-event-label">UFC 82: Pride of a Champion &bull; Mar 2008</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">26/58</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:36</span></div><div class="totals-line"><span class="totals-name opponent">Evan Tanner</span><span class="totals-stat">19/44</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -633,7 +650,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason MacDonald</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 77: Hostile Territory &bull; Oct 2007</div>
+                <div class="fight-event-label">UFC 77: Hostile Territory &bull; Oct 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">41/82</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 8:51</span></div><div class="totals-line"><span class="totals-name opponent">Jason MacDonald</span><span class="totals-stat">25/49</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/9</span><span class="totals-stat">Ctrl 2:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -663,7 +681,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rich Franklin</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 72: Victory &bull; Jun 2007</div>
+                <div class="fight-event-label">UFC 72: Victory &bull; Jun 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">17/59</span><span class="totals-pct">29%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:57</span></div><div class="totals-line"><span class="totals-name opponent">Rich Franklin</span><span class="totals-stat">36/102</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -693,7 +712,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Swick</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 69: Shootout &bull; Apr 2007</div>
+                <div class="fight-event-label">UFC 69: Shootout &bull; Apr 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">28/55</span><span class="totals-pct">51%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 7:11</span></div><div class="totals-line"><span class="totals-name opponent">Mike Swick</span><span class="totals-stat">28/99</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -723,7 +743,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rory Singer</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:03 &bull; UFC 66: Liddell vs Ortiz 2 &bull; Dec 2006</div>
+                <div class="fight-event-label">UFC 66: Liddell vs Ortiz 2 &bull; Dec 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:03</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">35/83</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 6:49</span></div><div class="totals-line"><span class="totals-name opponent">Rory Singer</span><span class="totals-stat">28/93</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -753,7 +774,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kalib Starnes</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 1:40 &bull; UFC 64: Unstoppable &bull; Oct 2006</div>
+                <div class="fight-event-label">UFC 64: Unstoppable &bull; Oct 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 1:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">39/76</span><span class="totals-pct">51%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 4:08</span></div><div class="totals-line"><span class="totals-name opponent">Kalib Starnes</span><span class="totals-stat">19/36</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 2:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -783,7 +805,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alan Belcher</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 62: Liddell vs Sobral &bull; Aug 2006</div>
+                <div class="fight-event-label">UFC 62: Liddell vs Sobral &bull; Aug 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">12/47</span><span class="totals-pct">26%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 6:27</span></div><div class="totals-line"><span class="totals-name opponent">Alan Belcher</span><span class="totals-stat">8/55</span><span class="totals-pct">15%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -813,7 +836,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jake Shields</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; ROTR 9 &bull; Apr 2006</div>
+                <div class="fight-event-label">ROTR 9 &bull; Apr 2006</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">22/61</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jake Shields</span><span class="totals-stat">23/93</span><span class="totals-pct">25%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -843,7 +867,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anderson Silva</div>
-                <div class="fight-meta">DQ &bull; Rd 1, 2:33 &bull; ROTR 8 &bull; Jan 2006</div>
+                <div class="fight-event-label">ROTR 8 &bull; Jan 2006</div>
+                <div class="fight-meta">DQ &bull; Rd 1, 2:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">0/8</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Anderson Silva</span><span class="totals-stat">16/20</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -867,7 +892,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ryuta Sakurai</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; PRIDE Bushido 2 &bull; Feb 2004</div>
+                <div class="fight-event-label">PRIDE Bushido 2 &bull; Feb 2004</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Yushin Okami</span><span class="totals-stat">42/98</span><span class="totals-pct">43%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ryuta Sakurai</span><span class="totals-stat">22/31</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -892,7 +918,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:15 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:55 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

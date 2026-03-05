@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jacob Volkmann</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:38 &bull; UFC on FX: Browne vs Bigfoot &bull; Oct 2012</div>
+                <div class="fight-event-label">UFC on FX: Browne vs Bigfoot &bull; Oct 2012</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">0/7</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jacob Volkmann</span><span class="totals-stat">8/25</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. John Alessio</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 148: Silva vs Sonnen 2 &bull; Jul 2012</div>
+                <div class="fight-event-label">UFC 148: Silva vs Sonnen 2 &bull; Jul 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">31/69</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 7:59</span></div><div class="totals-line"><span class="totals-name opponent">John Alessio</span><span class="totals-stat">35/103</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michael Johnson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-event-label">UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">56/92</span><span class="totals-pct">61%</span><span class="totals-stat">TD 1/12</span><span class="totals-stat">Ctrl 3:53</span></div><div class="totals-line"><span class="totals-name opponent">Michael Johnson</span><span class="totals-stat">64/136</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. TJ Grant</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 3, 2:12 &bull; UFC Live: Cruz vs Johnson &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC Live: Cruz vs Johnson &bull; Oct 2011</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 3, 2:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">10/60</span><span class="totals-pct">17%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:45</span></div><div class="totals-line"><span class="totals-name opponent">TJ Grant</span><span class="totals-stat">24/64</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 4:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Melvin Guillard</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:12 &bull; UFC 132: Cruz vs Faber &bull; Jul 2011</div>
+                <div class="fight-event-label">UFC 132: Cruz vs Faber &bull; Jul 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">1/13</span><span class="totals-pct">8%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Melvin Guillard</span><span class="totals-stat">17/42</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Thiago Tavares</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:28 &bull; UFC Live: Sanchez vs Kampmann &bull; Mar 2011</div>
+                <div class="fight-event-label">UFC Live: Sanchez vs Kampmann &bull; Mar 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">26/106</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Tavares</span><span class="totals-stat">22/70</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jamie Varner</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:55 &bull; WEC 53: Henderson vs. Pettis &bull; Dec 2010</div>
+                <div class="fight-event-label">WEC 53: Henderson vs. Pettis &bull; Dec 2010</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">3/24</span><span class="totals-pct">12%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:15</span></div><div class="totals-line"><span class="totals-name opponent">Jamie Varner</span><span class="totals-stat">5/33</span><span class="totals-pct">15%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anthony Pettis</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 4:51 &bull; WEC 50: Cruz vs. Benavidez &bull; Aug 2010</div>
+                <div class="fight-event-label">WEC 50: Cruz vs. Benavidez &bull; Aug 2010</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 4:51</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">16/54</span><span class="totals-pct">30%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 4:20</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">37/71</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 4:26</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-1" style="display:none;">
@@ -426,7 +436,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anthony Njokuani</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:07 &bull; WEC 48: Aldo vs. Faber &bull; Apr 2010</div>
+                <div class="fight-event-label">WEC 48: Aldo vs. Faber &bull; Apr 2010</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:50</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Njokuani</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-2" style="display:none;">
@@ -450,7 +461,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Danny Castillo</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 3:32 &bull; WEC 44: Brown vs. Aldo &bull; Nov 2009</div>
+                <div class="fight-event-label">WEC 44: Brown vs. Aldo &bull; Nov 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 3:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">24/74</span><span class="totals-pct">32%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 3:18</span></div><div class="totals-line"><span class="totals-name opponent">Danny Castillo</span><span class="totals-stat">19/68</span><span class="totals-pct">28%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 4:29</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-3" style="display:none;">
@@ -480,7 +492,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcus Hicks</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WEC 42: Torres vs. Bowles &bull; Aug 2009</div>
+                <div class="fight-event-label">WEC 42: Torres vs. Bowles &bull; Aug 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">54/144</span><span class="totals-pct">38%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 7:47</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Hicks</span><span class="totals-stat">32/61</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-4" style="display:none;">
@@ -510,7 +523,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Benson Henderson</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:41 &bull; WEC 40: Torres vs. Mizugaki &bull; Apr 2009</div>
+                <div class="fight-event-label">WEC 40: Torres vs. Mizugaki &bull; Apr 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div><div class="totals-line"><span class="totals-name opponent">Benson Henderson</span><span class="totals-stat">14/20</span><span class="totals-pct">70%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-5" style="display:none;">
@@ -534,7 +548,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Budnik</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:01 &bull; WEC 37: Torres vs. Tapia &bull; Dec 2008</div>
+                <div class="fight-event-label">WEC 37: Torres vs. Tapia &bull; Dec 2008</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:45</span></div><div class="totals-line"><span class="totals-name opponent">Mike Budnik</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-6" style="display:none;">
@@ -558,7 +573,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Todd Moore</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 3:00 &bull; WEC 35: Condit vs. Miura &bull; Aug 2008</div>
+                <div class="fight-event-label">WEC 35: Condit vs. Miura &bull; Aug 2008</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shane Roller</span><span class="totals-stat">0/6</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Todd Moore</span><span class="totals-stat">10/35</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:04</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-7" style="display:none;">
@@ -580,7 +596,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:03 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:46 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Melvin Manhoef</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:36 &bull; DREAM 10: Welterweight Grand Prix 2009 Final Round &bull; Jul 2009</div>
+                <div class="fight-event-label">DREAM 10: Welterweight Grand Prix 2009 Final Round &bull; Jul 2009</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Melvin Manhoef</span><span class="totals-stat">22/40</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chael Sonnen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WEC 36: Faber vs. Brown &bull; Nov 2008</div>
+                <div class="fight-event-label">WEC 36: Faber vs. Brown &bull; Nov 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">5/21</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Chael Sonnen</span><span class="totals-stat">53/190</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 6:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chael Sonnen</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:55 &bull; WEC 31: Faber vs. Curran &bull; Dec 2007</div>
+                <div class="fight-event-label">WEC 31: Faber vs. Curran &bull; Dec 2007</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">3/14</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name opponent">Chael Sonnen</span><span class="totals-stat">32/83</span><span class="totals-pct">39%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 6:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joe Doerksen</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:07 &bull; WEC 29: Condit vs. Larson &bull; Aug 2007</div>
+                <div class="fight-event-label">WEC 29: Condit vs. Larson &bull; Aug 2007</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">13/26</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 1:31</span></div><div class="totals-line"><span class="totals-name opponent">Joe Doerksen</span><span class="totals-stat">3/21</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kazuo Misaki</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 9:43 &bull; PRIDE Bushido 13 &bull; Nov 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 13 &bull; Nov 2006</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 9:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">23/51</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kazuo Misaki</span><span class="totals-stat">1/7</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -336,7 +343,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ryo Chonan</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:30 &bull; PRIDE Bushido 12 &bull; Aug 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 12 &bull; Aug 2006</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ryo Chonan</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -360,7 +368,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gregory Bouchelaghem</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; PRIDE Bushido 11 &bull; Jun 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 11 &bull; Jun 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">23/36</span><span class="totals-pct">64%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gregory Bouchelaghem</span><span class="totals-stat">4/19</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -387,7 +396,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Murilo Rua</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; PRIDE Bushido 10 &bull; Apr 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 10 &bull; Apr 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">30/48</span><span class="totals-pct">62%</span><span class="totals-stat">TD 6/8</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Murilo Rua</span><span class="totals-stat">4/16</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -414,7 +424,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ryuta Sakurai</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 3:49 &bull; PRIDE Bushido 9: The Tournament &bull; Sep 2005</div>
+                <div class="fight-event-label">PRIDE Bushido 9: The Tournament &bull; Sep 2005</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 3:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">7/8</span><span class="totals-pct">88%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ryuta Sakurai</span><span class="totals-stat">5/10</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -438,7 +449,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Amar Suloev</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:22 &bull; PRIDE Bushido 6 &bull; Apr 2005</div>
+                <div class="fight-event-label">PRIDE Bushido 6 &bull; Apr 2005</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">7/22</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Amar Suloev</span><span class="totals-stat">3/13</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -462,7 +474,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Akira Shoji</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 2, 5:00 &bull; PRIDE Bushido 4 &bull; Jul 2004</div>
+                <div class="fight-event-label">PRIDE Bushido 4 &bull; Jul 2004</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">61/139</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Akira Shoji</span><span class="totals-stat">38/98</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -489,7 +502,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Akira Shoji</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:48 &bull; PRIDE 22: Beasts from the East 2 &bull; Sep 2002</div>
+                <div class="fight-event-label">PRIDE 22: Beasts from the East 2 &bull; Sep 2002</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Filho</span><span class="totals-stat">11/16</span><span class="totals-pct">69%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Akira Shoji</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -511,7 +525,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:53 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:36 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

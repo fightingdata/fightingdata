@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brian Foster</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:25 &bull; UFC 106: Ortiz vs Griffin 2 &bull; Nov 2009</div>
+                <div class="fight-event-label">UFC 106: Ortiz vs Griffin 2 &bull; Nov 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">6/14</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:59</span></div><div class="totals-line"><span class="totals-name opponent">Brian Foster</span><span class="totals-stat">28/63</span><span class="totals-pct">44%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:57</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mike Pierce</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Diaz vs Guillard &bull; Sep 2009</div>
+                <div class="fight-event-label">UFC Fight Night: Diaz vs Guillard &bull; Sep 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">11/33</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:49</span></div><div class="totals-line"><span class="totals-name opponent">Mike Pierce</span><span class="totals-stat">27/54</span><span class="totals-pct">50%</span><span class="totals-stat">TD 6/11</span><span class="totals-stat">Ctrl 11:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Pyle</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 3:06 &bull; UFC 98: Evans vs Machida &bull; May 2009</div>
+                <div class="fight-event-label">UFC 98: Evans vs Machida &bull; May 2009</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 3:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:08</span></div><div class="totals-line"><span class="totals-name opponent">Mike Pyle</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jesse Sanders</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:01 &bull; UFC Fight Night: Condit vs Kampmann &bull; Apr 2009</div>
+                <div class="fight-event-label">UFC Fight Night: Condit vs Kampmann &bull; Apr 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">13/20</span><span class="totals-pct">65%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:27</span></div><div class="totals-line"><span class="totals-name opponent">Jesse Sanders</span><span class="totals-stat">0/3</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Keita Nakamura</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Sanchez vs Riggs &bull; Dec 2006</div>
+                <div class="fight-event-label">UFC Fight Night: Sanchez vs Riggs &bull; Dec 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">22/55</span><span class="totals-pct">40%</span><span class="totals-stat">TD 5/20</span><span class="totals-stat">Ctrl 10:01</span></div><div class="totals-line"><span class="totals-name opponent">Keita Nakamura</span><span class="totals-stat">16/44</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jon Fitch</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night 2 &bull; Oct 2005</div>
+                <div class="fight-event-label">UFC Fight Night 2 &bull; Oct 2005</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">14/20</span><span class="totals-pct">70%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:56</span></div><div class="totals-line"><span class="totals-name opponent">Jon Fitch</span><span class="totals-stat">25/49</span><span class="totals-pct">51%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 10:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Carlo Prater</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:37 &bull; WEC 35: Condit vs. Miura &bull; Aug 2008</div>
+                <div class="fight-event-label">WEC 35: Condit vs. Miura &bull; Aug 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">8/11</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Carlo Prater</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. John Alessio</div>
-                <div class="fight-meta">DQ &bull; Rd 1, 1:50 &bull; WEC 33: Marshall vs. Stann &bull; Mar 2008</div>
+                <div class="fight-event-label">WEC 33: Marshall vs. Stann &bull; Mar 2008</div>
+                <div class="fight-meta">DQ &bull; Rd 1, 1:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:59</span></div><div class="totals-line"><span class="totals-name opponent">John Alessio</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-1" style="display:none;">
@@ -420,7 +430,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Carlos Condit</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:21 &bull; WEC 29: Condit vs. Larson &bull; Aug 2007</div>
+                <div class="fight-event-label">WEC 29: Condit vs. Larson &bull; Aug 2007</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">1/9</span><span class="totals-pct">11%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:32</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Condit</span><span class="totals-stat">3/5</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-2" style="display:none;">
@@ -444,7 +455,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Knabjian</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 0:27 &bull; WEC 28: Faber vs. Farrar &bull; Jun 2007</div>
+                <div class="fight-event-label">WEC 28: Faber vs. Farrar &bull; Jun 2007</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 0:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">7/9</span><span class="totals-pct">78%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Knabjian</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-3" style="display:none;">
@@ -468,7 +480,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Erik Apple</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:43 &bull; WEC 26: Condit vs. Alessio &bull; Mar 2007</div>
+                <div class="fight-event-label">WEC 26: Condit vs. Alessio &bull; Mar 2007</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Brock Larson</span><span class="totals-stat">2/11</span><span class="totals-pct">18%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:09</span></div><div class="totals-line"><span class="totals-name opponent">Erik Apple</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-4" style="display:none;">
@@ -490,7 +503,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:59 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:47 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

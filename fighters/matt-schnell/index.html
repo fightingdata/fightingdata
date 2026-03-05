@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joseph Morales</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:54 &bull; UFC Fight Night: Bonfim vs. Brown &bull; Nov 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Bonfim vs. Brown &bull; Nov 2025</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">4/11</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Joseph Morales</span><span class="totals-stat">5/11</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jimmy Flick</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Machado Garry vs. Prates &bull; Apr 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Machado Garry vs. Prates &bull; Apr 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">35/61</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:53</span></div><div class="totals-line"><span class="totals-name opponent">Jimmy Flick</span><span class="totals-stat">12/20</span><span class="totals-pct">60%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 8:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cody Durden</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 0:29 &bull; UFC Fight Night: Burns vs. Brady &bull; Sep 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Burns vs. Brady &bull; Sep 2024</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 0:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">40/83</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cody Durden</span><span class="totals-stat">34/78</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Steve Erceg</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:26 &bull; UFC Fight Night: Rozenstruik vs. Gaziev &bull; Mar 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Rozenstruik vs. Gaziev &bull; Mar 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">22/78</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Steve Erceg</span><span class="totals-stat">34/72</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Matheus Nicolau</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:44 &bull; UFC Fight Night: Thompson vs. Holland &bull; Dec 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Thompson vs. Holland &bull; Dec 2022</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">20/59</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Matheus Nicolau</span><span class="totals-stat">32/42</span><span class="totals-pct">76%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sumudaerji</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 4:24 &bull; UFC Fight Night: Ortega vs. Rodriguez &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Ortega vs. Rodriguez &bull; Jul 2022</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 4:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">47/81</span><span class="totals-pct">58%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:40</span></div><div class="totals-line"><span class="totals-name opponent">Sumudaerji</span><span class="totals-stat">58/83</span><span class="totals-pct">70%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -369,7 +377,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brandon Royval</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:14 &bull; UFC 274: Oliveira vs. Gaethje &bull; May 2022</div>
+                <div class="fight-event-label">UFC 274: Oliveira vs. Gaethje &bull; May 2022</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">12/33</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:54</span></div><div class="totals-line"><span class="totals-name opponent">Brandon Royval</span><span class="totals-stat">14/39</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -393,7 +402,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Rogerio Bontorin</div>
-                <div class="fight-meta">Overturned &bull; Rd 3, 5:00 &bull; UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-event-label">UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-meta">Overturned &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">65/135</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rogerio Bontorin</span><span class="totals-stat">72/124</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -423,7 +433,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tyson Nam</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Chiesa vs. Magny &bull; Jan 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Chiesa vs. Magny &bull; Jan 2021</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">85/214</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tyson Nam</span><span class="totals-stat">58/193</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexandre Pantoja</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:17 &bull; UFC Fight Night: Edgar vs. The Korean Zombie &bull; Dec 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Edgar vs. The Korean Zombie &bull; Dec 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">20/52</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alexandre Pantoja</span><span class="totals-stat">34/62</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -477,7 +489,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jordan Espinosa</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:23 &bull; UFC Fight Night: Covington vs. Lawler &bull; Aug 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Covington vs. Lawler &bull; Aug 2019</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">3/12</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jordan Espinosa</span><span class="totals-stat">5/6</span><span class="totals-pct">83%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -501,7 +514,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Louis Smolka</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 3:18 &bull; UFC Fight Night: Lewis vs. Dos Santos &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Dos Santos &bull; Mar 2019</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 3:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">14/40</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Louis Smolka</span><span class="totals-stat">13/24</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -525,7 +539,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Naoki Inoue</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Cowboy vs. Edwards &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Cowboy vs. Edwards &bull; Jun 2018</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">71/183</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Naoki Inoue</span><span class="totals-stat">48/196</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -555,7 +570,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marco Beltran</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 216: Ferguson vs. Lee &bull; Oct 2017</div>
+                <div class="fight-event-label">UFC 216: Ferguson vs. Lee &bull; Oct 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">38/140</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Marco Beltran</span><span class="totals-stat">34/109</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -585,7 +601,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Hector Sandoval</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:24 &bull; UFC Fight Night: Swanson vs. Lobov &bull; Apr 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Swanson vs. Lobov &bull; Apr 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">16/40</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Hector Sandoval</span><span class="totals-stat">32/50</span><span class="totals-pct">64%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 0:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -609,7 +626,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rob Font</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:47 &bull; The Ultimate Fighter: Tournament of Champions Finale &bull; Dec 2016</div>
+                <div class="fight-event-label">The Ultimate Fighter: Tournament of Champions Finale &bull; Dec 2016</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Matt Schnell</span><span class="totals-stat">14/33</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rob Font</span><span class="totals-stat">26/33</span><span class="totals-pct">79%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:08</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -631,7 +649,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:44 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:29 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

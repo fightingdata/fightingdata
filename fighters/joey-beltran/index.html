@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Fabio Maldonado</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Maia vs Shields &bull; Oct 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Maia vs Shields &bull; Oct 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">57/200</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 6:05</span></div><div class="totals-line"><span class="totals-name opponent">Fabio Maldonado</span><span class="totals-stat">87/168</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Igor Pokrajac</div>
-                <div class="fight-meta">Overturned &bull; Rd 3, 5:00 &bull; UFC on FX: Sotiropoulos vs Pearson &bull; Dec 2012</div>
+                <div class="fight-event-label">UFC on FX: Sotiropoulos vs Pearson &bull; Dec 2012</div>
+                <div class="fight-meta">Overturned &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">65/139</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 9:25</span></div><div class="totals-line"><span class="totals-name opponent">Igor Pokrajac</span><span class="totals-stat">48/94</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. James Te Huna</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FUEL TV: Munoz vs Weidman &bull; Jul 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Munoz vs Weidman &bull; Jul 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">73/278</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:50</span></div><div class="totals-line"><span class="totals-name opponent">James Te Huna</span><span class="totals-stat">122/249</span><span class="totals-pct">49%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 2:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lavar Johnson</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:24 &bull; UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-event-label">UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">22/71</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Lavar Johnson</span><span class="totals-stat">65/92</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Stipe Miocic</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 136: Edgar vs Maynard 3 &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC 136: Edgar vs Maynard 3 &bull; Oct 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">52/152</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Stipe Miocic</span><span class="totals-stat">68/142</span><span class="totals-pct">48%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 6:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Aaron Rosa</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 1:26 &bull; UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-event-label">UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 1:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">88/188</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 5:19</span></div><div class="totals-line"><span class="totals-name opponent">Aaron Rosa</span><span class="totals-stat">73/179</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Pat Barry</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Fight for the Troops 2 &bull; Jan 2011</div>
+                <div class="fight-event-label">UFC Fight Night: Fight for the Troops 2 &bull; Jan 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">55/177</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 4:24</span></div><div class="totals-line"><span class="totals-name opponent">Pat Barry</span><span class="totals-stat">46/90</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Matt Mitrione</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 119: Mir vs Cro Cop &bull; Sep 2010</div>
+                <div class="fight-event-label">UFC 119: Mir vs Cro Cop &bull; Sep 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">52/157</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 5:00</span></div><div class="totals-line"><span class="totals-name opponent">Matt Mitrione</span><span class="totals-stat">76/152</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -441,7 +451,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Hague</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 113: Machida vs Shogun 2 &bull; May 2010</div>
+                <div class="fight-event-label">UFC 113: Machida vs Shogun 2 &bull; May 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">97/161</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Tim Hague</span><span class="totals-stat">60/120</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 2:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -471,7 +482,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rolles Gracie</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:31 &bull; UFC 109: Relentless &bull; Feb 2010</div>
+                <div class="fight-event-label">UFC 109: Relentless &bull; Feb 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">22/49</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:24</span></div><div class="totals-line"><span class="totals-name opponent">Rolles Gracie</span><span class="totals-stat">15/46</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 1:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -498,13 +510,14 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yohan Banks</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 3:00 &bull; Strikeforce - Young Guns &bull; Feb 2007</div>
+                <div class="fight-event-label">Strikeforce - Young Guns &bull; Feb 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joey Beltran</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:28 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:13 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

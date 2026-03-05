@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -202,12 +204,13 @@
     </table>
 
         <h2>Fight History</h2>
-        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing PRIDE, EliteXC fight data.</div>
+        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing EliteXC, PRIDE fight data.</div>
         <div class="fight-card">
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. KJ Noons</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:43 &bull; EliteXC - Destiny &bull; Feb 2007</div>
+                <div class="fight-event-label">EliteXC - Destiny &bull; Feb 2007</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Bennett</span><span class="totals-stat">7/24</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">KJ Noons</span><span class="totals-stat">6/16</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tatsuya Kawajiri</div>
-                <div class="fight-meta">Submission (Kneebar) &bull; Rd 1, 2:30 &bull; PRIDE Bushido 11 &bull; Jun 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 11 &bull; Jun 2006</div>
+                <div class="fight-meta">Submission (Kneebar) &bull; Rd 1, 2:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Bennett</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tatsuya Kawajiri</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ken Kaneko</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:14 &bull; PRIDE Shockwave 2005 &bull; Dec 2005</div>
+                <div class="fight-event-label">PRIDE Shockwave 2005 &bull; Dec 2005</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Bennett</span><span class="totals-stat">4/7</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ken Kaneko</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -279,7 +284,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dokonjonosuke Mishima</div>
-                <div class="fight-meta">Submission (Ankle Lock) &bull; Rd 1, 4:04 &bull; PRIDE Bushido 9: The Tournament &bull; Sep 2005</div>
+                <div class="fight-event-label">PRIDE Bushido 9: The Tournament &bull; Sep 2005</div>
+                <div class="fight-meta">Submission (Ankle Lock) &bull; Rd 1, 4:04</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Bennett</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dokonjonosuke Mishima</span><span class="totals-stat">8/22</span><span class="totals-pct">36%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -303,7 +309,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Takanori Gomi</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 5:52 &bull; PRIDE Bushido 5 &bull; Oct 2004</div>
+                <div class="fight-event-label">PRIDE Bushido 5 &bull; Oct 2004</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 5:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Bennett</span><span class="totals-stat">5/20</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Takanori Gomi</span><span class="totals-stat">13/26</span><span class="totals-pct">50%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -327,7 +334,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yoshiro Maeda</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:55 &bull; PRIDE Bushido 7 &bull; </div>
+                <div class="fight-event-label">PRIDE Bushido 7 &bull; </div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Bennett</span><span class="totals-stat">10/21</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yoshiro Maeda</span><span class="totals-stat">3/20</span><span class="totals-pct">15%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -349,7 +357,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:02 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:49 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

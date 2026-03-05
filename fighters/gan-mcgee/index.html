@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tim Sylvia</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:54 &bull; UFC 44: Undisputed &bull; Sep 2003</div>
+                <div class="fight-event-label">UFC 44: Undisputed &bull; Sep 2003</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gan McGee</span><span class="totals-stat">7/25</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tim Sylvia</span><span class="totals-stat">10/34</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alexandre Dantas</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:49 &bull; UFC 41: Onslaught &bull; Feb 2003</div>
+                <div class="fight-event-label">UFC 41: Onslaught &bull; Feb 2003</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gan McGee</span><span class="totals-stat">9/23</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:22</span></div><div class="totals-line"><span class="totals-name opponent">Alexandre Dantas</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 1:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pedro Rizzo</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00 &bull; UFC 39: The Warriors Return &bull; Sep 2002</div>
+                <div class="fight-event-label">UFC 39: The Warriors Return &bull; Sep 2002</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gan McGee</span><span class="totals-stat">17/58</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Pedro Rizzo</span><span class="totals-stat">14/28</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -279,7 +284,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Josh Barnett</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 4:34 &bull; UFC 28: High Stakes &bull; Nov 2000</div>
+                <div class="fight-event-label">UFC 28: High Stakes &bull; Nov 2000</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 4:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gan McGee</span><span class="totals-stat">10/21</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 7:23</span></div><div class="totals-line"><span class="totals-name opponent">Josh Barnett</span><span class="totals-stat">17/24</span><span class="totals-pct">71%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -306,7 +312,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Semmy Schilt</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 5:02 &bull; PRIDE Total Elimination 2004 &bull; Apr 2004</div>
+                <div class="fight-event-label">PRIDE Total Elimination 2004 &bull; Apr 2004</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 5:02</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gan McGee</span><span class="totals-stat">4/12</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Semmy Schilt</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -330,7 +337,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Heath Herring</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; PRIDE 27: Inferno &bull; Feb 2004</div>
+                <div class="fight-event-label">PRIDE 27: Inferno &bull; Feb 2004</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gan McGee</span><span class="totals-stat">55/203</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Heath Herring</span><span class="totals-stat">64/169</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-1" style="display:none;">
@@ -358,7 +366,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:16 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:03 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

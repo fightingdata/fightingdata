@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Holland</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">77/149</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:34</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Holland</span><span class="totals-stat">82/173</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Santiago Ponzinibbio</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:12 &bull; UFC Fight Night: Sandhagen vs. Figueiredo &bull; May 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Figueiredo &bull; May 2025</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">66/166</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Santiago Ponzinibbio</span><span class="totals-stat">49/111</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 0:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alex Morono</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Royval vs. Taira &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Royval vs. Taira &bull; Oct 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">123/257</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Alex Morono</span><span class="totals-stat">74/257</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kelvin Gastelum</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Whittaker vs. Aliskerov &bull; Jun 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. Aliskerov &bull; Jun 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">127/265</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kelvin Gastelum</span><span class="totals-stat">112/238</span><span class="totals-pct">47%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 2:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ian Machado Garry</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:57 &bull; UFC Fight Night: Rozenstruik vs. Almeida &bull; May 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Rozenstruik vs. Almeida &bull; May 2023</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">7/25</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ian Machado Garry</span><span class="totals-stat">23/46</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Neil Magny</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 3, 3:33 &bull; UFC Fight Night: Rodriguez vs. Lemos &bull; Nov 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Rodriguez vs. Lemos &bull; Nov 2022</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 3, 3:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">66/108</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:16</span></div><div class="totals-line"><span class="totals-name opponent">Neil Magny</span><span class="totals-stat">57/109</span><span class="totals-pct">52%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 4:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Li Jingliang</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 279: Diaz vs. Ferguson &bull; Sep 2022</div>
+                <div class="fight-event-label">UFC 279: Diaz vs. Ferguson &bull; Sep 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">88/185</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Li Jingliang</span><span class="totals-stat">78/175</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Lee</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Barboza vs. Chikadze &bull; Aug 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Barboza vs. Chikadze &bull; Aug 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">120/210</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:45</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Lee</span><span class="totals-stat">56/160</span><span class="totals-pct">35%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 3:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -441,7 +451,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Preston Parsons</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:47 &bull; UFC Fight Night: Makhachev vs. Moises &bull; Jul 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Makhachev vs. Moises &bull; Jul 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">45/83</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Preston Parsons</span><span class="totals-stat">23/43</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -465,7 +476,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Perry</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Vettori vs. Holland &bull; Apr 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Vettori vs. Holland &bull; Apr 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">129/235</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mike Perry</span><span class="totals-stat">61/132</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -495,7 +507,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nicolas Dalby</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 255: Figueiredo vs. Perez &bull; Nov 2020</div>
+                <div class="fight-event-label">UFC 255: Figueiredo vs. Perez &bull; Nov 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">83/199</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Nicolas Dalby</span><span class="totals-stat">50/147</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 1:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -525,7 +538,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dwight Grant</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:24 &bull; UFC Fight Night: Munhoz vs. Edgar &bull; Aug 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Munhoz vs. Edgar &bull; Aug 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">15/32</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Dwight Grant</span><span class="totals-stat">30/68</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -549,7 +563,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gabe Green</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Woodley vs. Burns &bull; May 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Woodley vs. Burns &bull; May 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">175/344</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Gabe Green</span><span class="totals-stat">127/273</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -579,7 +594,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Means</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 3:37 &bull; UFC Fight Night: Anderson vs. Blachowicz &bull; Feb 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Anderson vs. Blachowicz &bull; Feb 2020</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 3:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">49/121</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Tim Means</span><span class="totals-stat">41/95</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -606,7 +622,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rico Farrington</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; DWCS 3.6 &bull; Jul 2019</div>
+                <div class="fight-event-label">DWCS 3.6 &bull; Jul 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Rodriguez</span><span class="totals-stat">108/223</span><span class="totals-pct">48%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rico Farrington</span><span class="totals-stat">95/227</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -634,7 +651,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:07 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:54 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

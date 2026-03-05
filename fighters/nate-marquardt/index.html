@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cezar Ferreira</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Poirier vs. Pettis &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Poirier vs. Pettis &bull; Nov 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">36/65</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Cezar Ferreira</span><span class="totals-stat">47/81</span><span class="totals-pct">58%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 4:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Vitor Belfort</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 212: Aldo vs. Holloway &bull; Jun 2017</div>
+                <div class="fight-event-label">UFC 212: Aldo vs. Holloway &bull; Jun 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">57/113</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:03</span></div><div class="totals-line"><span class="totals-name opponent">Vitor Belfort</span><span class="totals-stat">37/78</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sam Alvey</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Shevchenko vs. Pena &bull; Jan 2017</div>
+                <div class="fight-event-label">UFC on FOX: Shevchenko vs. Pena &bull; Jan 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">28/65</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:52</span></div><div class="totals-line"><span class="totals-name opponent">Sam Alvey</span><span class="totals-stat">36/84</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tamdan McCrory</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:44 &bull; UFC Fight Night: Lineker vs. Dodson &bull; Oct 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Lineker vs. Dodson &bull; Oct 2016</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">24/39</span><span class="totals-pct">62%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:00</span></div><div class="totals-line"><span class="totals-name opponent">Tamdan McCrory</span><span class="totals-stat">16/52</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -324,7 +330,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Thiago Santos</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:39 &bull; UFC 198: Werdum vs Miocic &bull; May 2016</div>
+                <div class="fight-event-label">UFC 198: Werdum vs Miocic &bull; May 2016</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">7/13</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Santos</span><span class="totals-stat">16/30</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -348,7 +355,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. CB Dollaway</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:28 &bull; UFC on FOX: Dos Anjos vs. Cowboy 2 &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC on FOX: Dos Anjos vs. Cowboy 2 &bull; Dec 2015</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">16/27</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">CB Dollaway</span><span class="totals-stat">15/35</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kelvin Gastelum</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC 188: Velasquez vs Werdum &bull; Jun 2015</div>
+                <div class="fight-event-label">UFC 188: Velasquez vs Werdum &bull; Jun 2015</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">18/49</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">Kelvin Gastelum</span><span class="totals-stat">59/110</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -402,7 +411,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brad Tavares</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 182: Jones vs Cormier &bull; Jan 2015</div>
+                <div class="fight-event-label">UFC 182: Jones vs Cormier &bull; Jan 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">30/64</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 1:27</span></div><div class="totals-line"><span class="totals-name opponent">Brad Tavares</span><span class="totals-stat">50/119</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -432,7 +442,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. James Te Huna</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:34 &bull; UFC Fight Night: Te Huna vs Marquardt &bull; Jun 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Te Huna vs Marquardt &bull; Jun 2014</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">17/27</span><span class="totals-pct">63%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:14</span></div><div class="totals-line"><span class="totals-name opponent">James Te Huna</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -456,7 +467,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Hector Lombard</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:48 &bull; UFC 166: Velasquez vs Dos Santos 3 &bull; Oct 2013</div>
+                <div class="fight-event-label">UFC 166: Velasquez vs Dos Santos 3 &bull; Oct 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Hector Lombard</span><span class="totals-stat">10/22</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -480,7 +492,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jake Ellenberger</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:00 &bull; UFC 158: St-Pierre vs Diaz &bull; Mar 2013</div>
+                <div class="fight-event-label">UFC 158: St-Pierre vs Diaz &bull; Mar 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">13/23</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jake Ellenberger</span><span class="totals-stat">13/25</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -504,7 +517,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dan Miller</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 128: Shogun vs Jones &bull; Mar 2011</div>
+                <div class="fight-event-label">UFC 128: Shogun vs Jones &bull; Mar 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">47/78</span><span class="totals-pct">60%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 7:19</span></div><div class="totals-line"><span class="totals-name opponent">Dan Miller</span><span class="totals-stat">10/38</span><span class="totals-pct">26%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 2:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -534,7 +548,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yushin Okami</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 122: Marquardt vs Okami &bull; Nov 2010</div>
+                <div class="fight-event-label">UFC 122: Marquardt vs Okami &bull; Nov 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">21/61</span><span class="totals-pct">34%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 2:53</span></div><div class="totals-line"><span class="totals-name opponent">Yushin Okami</span><span class="totals-stat">25/83</span><span class="totals-pct">30%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 4:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -564,7 +579,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rousimar Palhares</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:28 &bull; UFC Fight Night: Marquardt vs Palhares &bull; Sep 2010</div>
+                <div class="fight-event-label">UFC Fight Night: Marquardt vs Palhares &bull; Sep 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">13/35</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Rousimar Palhares</span><span class="totals-stat">1/6</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -588,7 +604,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chael Sonnen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 109: Relentless &bull; Feb 2010</div>
+                <div class="fight-event-label">UFC 109: Relentless &bull; Feb 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">11/24</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:57</span></div><div class="totals-line"><span class="totals-name opponent">Chael Sonnen</span><span class="totals-stat">39/56</span><span class="totals-pct">70%</span><span class="totals-stat">TD 6/6</span><span class="totals-stat">Ctrl 13:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -618,7 +635,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Demian Maia</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:21 &bull; UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-event-label">UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Demian Maia</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -642,7 +660,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Wilson Gouveia</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 3, 3:10 &bull; UFC 95: Sanchez vs Stevenson &bull; Feb 2009</div>
+                <div class="fight-event-label">UFC 95: Sanchez vs Stevenson &bull; Feb 2009</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 3, 3:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">67/102</span><span class="totals-pct">66%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 4:19</span></div><div class="totals-line"><span class="totals-name opponent">Wilson Gouveia</span><span class="totals-stat">16/74</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -672,7 +691,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Martin Kampmann</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:22 &bull; UFC 88: Breakthrough &bull; Sep 2008</div>
+                <div class="fight-event-label">UFC 88: Breakthrough &bull; Sep 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">22/36</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Martin Kampmann</span><span class="totals-stat">1/7</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -696,7 +716,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Thales Leites</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 85: Bedlam &bull; Jun 2008</div>
+                <div class="fight-event-label">UFC 85: Bedlam &bull; Jun 2008</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">35/72</span><span class="totals-pct">49%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 7:04</span></div><div class="totals-line"><span class="totals-name opponent">Thales Leites</span><span class="totals-stat">13/45</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -726,7 +747,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jeremy Horn</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 1:37 &bull; UFC 81: Breaking Point &bull; Feb 2008</div>
+                <div class="fight-event-label">UFC 81: Breaking Point &bull; Feb 2008</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 1:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">22/30</span><span class="totals-pct">73%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:57</span></div><div class="totals-line"><span class="totals-name opponent">Jeremy Horn</span><span class="totals-stat">5/11</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -753,7 +775,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anderson Silva</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:50 &bull; UFC 73: Stacked &bull; Jul 2007</div>
+                <div class="fight-event-label">UFC 73: Stacked &bull; Jul 2007</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">3/11</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:24</span></div><div class="totals-line"><span class="totals-name opponent">Anderson Silva</span><span class="totals-stat">10/15</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -777,7 +800,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dean Lister</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Evans vs Salmon &bull; Jan 2007</div>
+                <div class="fight-event-label">UFC Fight Night: Evans vs Salmon &bull; Jan 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">53/98</span><span class="totals-pct">54%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 8:23</span></div><div class="totals-line"><span class="totals-name opponent">Dean Lister</span><span class="totals-stat">18/43</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/11</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -807,7 +831,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joe Doerksen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 58: USA vs Canada &bull; Mar 2006</div>
+                <div class="fight-event-label">UFC 58: USA vs Canada &bull; Mar 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">56/103</span><span class="totals-pct">54%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 6:45</span></div><div class="totals-line"><span class="totals-name opponent">Joe Doerksen</span><span class="totals-stat">26/80</span><span class="totals-pct">32%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 1:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -837,7 +862,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ivan Salaverry</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night 1 &bull; Aug 2005</div>
+                <div class="fight-event-label">UFC Fight Night 1 &bull; Aug 2005</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">21/63</span><span class="totals-pct">33%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:01</span></div><div class="totals-line"><span class="totals-name opponent">Ivan Salaverry</span><span class="totals-stat">23/66</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -867,7 +893,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tarec Saffiedine</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Strikeforce - Marquardt vs Saffiedine &bull; Jan 2013</div>
+                <div class="fight-event-label">Strikeforce - Marquardt vs Saffiedine &bull; Jan 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">68/205</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 3:10</span></div><div class="totals-line"><span class="totals-name opponent">Tarec Saffiedine</span><span class="totals-stat">116/201</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 4:18</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -903,7 +930,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tyron Woodley</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 4, 1:39 &bull; Strikeforce - Rockhold vs Kennedy &bull; Jul 2012</div>
+                <div class="fight-event-label">Strikeforce - Rockhold vs Kennedy &bull; Jul 2012</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 4, 1:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">59/102</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:23</span></div><div class="totals-line"><span class="totals-name opponent">Tyron Woodley</span><span class="totals-stat">41/77</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:53</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -936,7 +964,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Crafton Wallace</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:14 &bull; Ortiz vs Shamrock 3: The Final Chapter &bull; Oct 2006</div>
+                <div class="fight-event-label">Ortiz vs Shamrock 3: The Final Chapter &bull; Oct 2006</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Nate Marquardt</span><span class="totals-stat">13/27</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 3:35</span></div><div class="totals-line"><span class="totals-name opponent">Crafton Wallace</span><span class="totals-stat">4/18</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:45</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -961,7 +990,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:50 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:34 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

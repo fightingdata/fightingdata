@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 2:02 &bull; UFC 202: Diaz vs. McGregor 2 &bull; Aug 2016</div>
+                <div class="fight-event-label">UFC 202: Diaz vs. McGregor 2 &bull; Aug 2016</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 2:02</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">17/51</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:42</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">45/73</span><span class="totals-pct">62%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tarec Saffiedine</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Almeida vs Garbrandt &bull; May 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Almeida vs Garbrandt &bull; May 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">58/111</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 6:53</span></div><div class="totals-line"><span class="totals-name opponent">Tarec Saffiedine</span><span class="totals-stat">32/71</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gunnar Nelson</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Nelson vs Story &bull; Oct 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Nelson vs Story &bull; Oct 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">168/315</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:36</span></div><div class="totals-line"><span class="totals-name opponent">Gunnar Nelson</span><span class="totals-stat">53/107</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -300,7 +305,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Leonardo Mafra</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 2:12 &bull; UFC Fight Night: Cowboy vs Miller &bull; Jul 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Cowboy vs Miller &bull; Jul 2014</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 2:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">24/39</span><span class="totals-pct">62%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 5:45</span></div><div class="totals-line"><span class="totals-name opponent">Leonardo Mafra</span><span class="totals-stat">11/20</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kelvin Gastelum</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-event-label">UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">45/163</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:20</span></div><div class="totals-line"><span class="totals-name opponent">Kelvin Gastelum</span><span class="totals-stat">59/137</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brian Ebersole</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 167: St-Pierre vs Hendricks &bull; Nov 2013</div>
+                <div class="fight-event-label">UFC 167: St-Pierre vs Hendricks &bull; Nov 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">71/199</span><span class="totals-pct">36%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:03</span></div><div class="totals-line"><span class="totals-name opponent">Brian Ebersole</span><span class="totals-stat">42/114</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 0:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -387,7 +395,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mike Pyle</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 160: Velasquez vs Silva 2 &bull; May 2013</div>
+                <div class="fight-event-label">UFC 160: Velasquez vs Silva 2 &bull; May 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">57/111</span><span class="totals-pct">51%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 9:29</span></div><div class="totals-line"><span class="totals-name opponent">Mike Pyle</span><span class="totals-stat">33/74</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -417,7 +426,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Quinn Mulhern</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:05 &bull; UFC 158: St-Pierre vs Diaz &bull; Mar 2013</div>
+                <div class="fight-event-label">UFC 158: St-Pierre vs Diaz &bull; Mar 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">20/49</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Quinn Mulhern</span><span class="totals-stat">9/50</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -441,7 +451,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Demian Maia</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:30 &bull; UFC 153: Silva vs Bonnar &bull; Oct 2012</div>
+                <div class="fight-event-label">UFC 153: Silva vs Bonnar &bull; Oct 2012</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">3/5</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Demian Maia</span><span class="totals-stat">5/8</span><span class="totals-pct">62%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 2:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -465,7 +476,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brock Jardine</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FX: Maynard vs Guida &bull; Jun 2012</div>
+                <div class="fight-event-label">UFC on FX: Maynard vs Guida &bull; Jun 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">51/125</span><span class="totals-pct">41%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 5:15</span></div><div class="totals-line"><span class="totals-name opponent">Brock Jardine</span><span class="totals-stat">18/60</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -495,7 +507,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Martin Kampmann</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 139: Shogun vs Henderson &bull; Nov 2011</div>
+                <div class="fight-event-label">UFC 139: Shogun vs Henderson &bull; Nov 2011</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">61/170</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:36</span></div><div class="totals-line"><span class="totals-name opponent">Martin Kampmann</span><span class="totals-stat">38/147</span><span class="totals-pct">26%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 4:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -525,7 +538,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Charlie Brenneman</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Live: Kongo vs Barry &bull; Jun 2011</div>
+                <div class="fight-event-label">UFC Live: Kongo vs Barry &bull; Jun 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">17/46</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:46</span></div><div class="totals-line"><span class="totals-name opponent">Charlie Brenneman</span><span class="totals-stat">11/26</span><span class="totals-pct">42%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 9:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -555,7 +569,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Thiago Alves</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 130: Rampage vs Hamill &bull; May 2011</div>
+                <div class="fight-event-label">UFC 130: Rampage vs Hamill &bull; May 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">62/169</span><span class="totals-pct">37%</span><span class="totals-stat">TD 4/14</span><span class="totals-stat">Ctrl 7:36</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Alves</span><span class="totals-stat">41/111</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -585,7 +600,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dustin Hazelett</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:15 &bull; UFC 117: Silva vs Sonnen &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC 117: Silva vs Sonnen &bull; Aug 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">75/110</span><span class="totals-pct">68%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 5:08</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Hazelett</span><span class="totals-stat">7/17</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -612,7 +628,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nick Osipczak</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 112: Invincible &bull; Apr 2010</div>
+                <div class="fight-event-label">UFC 112: Invincible &bull; Apr 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">31/72</span><span class="totals-pct">43%</span><span class="totals-stat">TD 3/10</span><span class="totals-stat">Ctrl 9:54</span></div><div class="totals-line"><span class="totals-name opponent">Nick Osipczak</span><span class="totals-stat">28/41</span><span class="totals-pct">68%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -642,7 +659,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jesse Lennox</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Maynard vs Diaz &bull; Jan 2010</div>
+                <div class="fight-event-label">UFC Fight Night: Maynard vs Diaz &bull; Jan 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">47/172</span><span class="totals-pct">27%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 4:23</span></div><div class="totals-line"><span class="totals-name opponent">Jesse Lennox</span><span class="totals-stat">22/128</span><span class="totals-pct">17%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -672,7 +690,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brian Foster</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 1:09 &bull; UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-event-label">UFC 103: Franklin vs Belfort &bull; Sep 2009</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 1:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">18/59</span><span class="totals-pct">31%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 4:22</span></div><div class="totals-line"><span class="totals-name opponent">Brian Foster</span><span class="totals-stat">6/47</span><span class="totals-pct">13%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -699,7 +718,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. John Hathaway</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 99: The Comeback &bull; Jun 2009</div>
+                <div class="fight-event-label">UFC 99: The Comeback &bull; Jun 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">21/67</span><span class="totals-pct">31%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 4:08</span></div><div class="totals-line"><span class="totals-name opponent">John Hathaway</span><span class="totals-stat">31/85</span><span class="totals-pct">36%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 6:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -729,7 +749,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Johny Hendricks</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team GSP vs Team Koscheck Finale &bull; Dec 2010</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team GSP vs Team Koscheck Finale &bull; Dec 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rick Story</span><span class="totals-stat">55/125</span><span class="totals-pct">44%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:51</span></div><div class="totals-line"><span class="totals-name opponent">Johny Hendricks</span><span class="totals-stat">24/58</span><span class="totals-pct">41%</span><span class="totals-stat">TD 6/13</span><span class="totals-stat">Ctrl 6:17</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -757,7 +778,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:57 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:40 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

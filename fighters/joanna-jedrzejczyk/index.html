@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zhang Weili</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Fist) &bull; Rd 2, 2:28 &bull; UFC 275: Teixeira vs. Prochazka &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC 275: Teixeira vs. Prochazka &bull; Jun 2022</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Fist) &bull; Rd 2, 2:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">43/85</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Zhang Weili</span><span class="totals-stat">69/102</span><span class="totals-pct">68%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 2:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zhang Weili</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 248: Adesanya vs. Romero &bull; Mar 2020</div>
+                <div class="fight-event-label">UFC 248: Adesanya vs. Romero &bull; Mar 2020</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">186/360</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:01</span></div><div class="totals-line"><span class="totals-name opponent">Zhang Weili</span><span class="totals-stat">165/408</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 1:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -270,7 +274,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michelle Waterson-Gomez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Joanna vs. Waterson &bull; Oct 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Joanna vs. Waterson &bull; Oct 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">180/300</span><span class="totals-pct">60%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 5:34</span></div><div class="totals-line"><span class="totals-name opponent">Michelle Waterson-Gomez</span><span class="totals-stat">58/160</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 4:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -306,7 +311,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Valentina Shevchenko</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 231: Holloway vs. Ortega &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC 231: Holloway vs. Ortega &bull; Dec 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">78/250</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Valentina Shevchenko</span><span class="totals-stat">89/191</span><span class="totals-pct">47%</span><span class="totals-stat">TD 5/14</span><span class="totals-stat">Ctrl 8:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -342,7 +348,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tecia Pennington</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Alvarez vs. Poirier 2 &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Alvarez vs. Poirier 2 &bull; Jul 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">62/166</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:15</span></div><div class="totals-line"><span class="totals-name opponent">Tecia Pennington</span><span class="totals-stat">33/78</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/10</span><span class="totals-stat">Ctrl 4:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -372,7 +379,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rose Namajunas</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 223: Khabib vs. Iaquinta &bull; Apr 2018</div>
+                <div class="fight-event-label">UFC 223: Khabib vs. Iaquinta &bull; Apr 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">145/356</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rose Namajunas</span><span class="totals-stat">105/301</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -408,7 +416,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rose Namajunas</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:03 &bull; UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:03</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">5/42</span><span class="totals-pct">12%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rose Namajunas</span><span class="totals-stat">15/34</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -432,7 +441,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jessica Andrade</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 211: Miocic vs. Dos Santos &bull; May 2017</div>
+                <div class="fight-event-label">UFC 211: Miocic vs. Dos Santos &bull; May 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">225/352</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Andrade</span><span class="totals-stat">83/218</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/10</span><span class="totals-stat">Ctrl 3:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -468,7 +478,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Karolina Kowalkiewicz</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">171/360</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:30</span></div><div class="totals-line"><span class="totals-name opponent">Karolina Kowalkiewicz</span><span class="totals-stat">50/220</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -504,7 +515,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Valerie Letourneau</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 193: Rousey vs Holm &bull; Nov 2015</div>
+                <div class="fight-event-label">UFC 193: Rousey vs Holm &bull; Nov 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">220/441</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:06</span></div><div class="totals-line"><span class="totals-name opponent">Valerie Letourneau</span><span class="totals-stat">103/321</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -540,7 +552,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jessica Penne</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:22 &bull; UFC Fight Night: Jedrzejczyk vs Penne &bull; Jun 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Jedrzejczyk vs Penne &bull; Jun 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">126/204</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:46</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Penne</span><span class="totals-stat">25/88</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/11</span><span class="totals-stat">Ctrl 2:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -570,7 +583,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Carla Esparza</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:17 &bull; UFC 185: Pettis vs Dos Anjos &bull; Mar 2015</div>
+                <div class="fight-event-label">UFC 185: Pettis vs Dos Anjos &bull; Mar 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">53/105</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:29</span></div><div class="totals-line"><span class="totals-name opponent">Carla Esparza</span><span class="totals-stat">4/22</span><span class="totals-pct">18%</span><span class="totals-stat">TD 1/17</span><span class="totals-stat">Ctrl 1:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -597,7 +611,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Claudia Gadelha</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">38/125</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name opponent">Claudia Gadelha</span><span class="totals-stat">27/70</span><span class="totals-pct">39%</span><span class="totals-stat">TD 7/16</span><span class="totals-stat">Ctrl 8:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -627,7 +642,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Juliana Lima</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Lawler vs Brown &bull; Jul 2014</div>
+                <div class="fight-event-label">UFC on FOX: Lawler vs Brown &bull; Jul 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">46/168</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Juliana Lima</span><span class="totals-stat">18/77</span><span class="totals-pct">23%</span><span class="totals-stat">TD 1/14</span><span class="totals-stat">Ctrl 6:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -657,7 +673,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Claudia Gadelha</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; The Ultimate Fighter: Team Joanna vs. Team Cláudia Finale &bull; Jul 2016</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Joanna vs. Team Cláudia Finale &bull; Jul 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joanna Jedrzejczyk</span><span class="totals-stat">176/330</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:33</span></div><div class="totals-line"><span class="totals-name opponent">Claudia Gadelha</span><span class="totals-stat">63/150</span><span class="totals-pct">42%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 9:30</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -691,7 +708,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:27 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:13 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

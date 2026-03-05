@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ivana Petrovic</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 1:29 &bull; UFC Fight Night: Nicolau vs. Perez &bull; Apr 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Nicolau vs. Perez &bull; Apr 2024</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 1:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Liang Na</span><span class="totals-stat">24/52</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:51</span></div><div class="totals-line"><span class="totals-name opponent">Ivana Petrovic</span><span class="totals-stat">36/73</span><span class="totals-pct">49%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 5:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. JJ Aldrich</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 4:49 &bull; UFC Fight Night: Holloway vs. The Korean Zombie &bull; Aug 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Holloway vs. The Korean Zombie &bull; Aug 2023</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 4:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Liang Na</span><span class="totals-stat">11/41</span><span class="totals-pct">27%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 1:38</span></div><div class="totals-line"><span class="totals-name opponent">JJ Aldrich</span><span class="totals-stat">47/65</span><span class="totals-pct">72%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 5:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Silvana Gomez Juarez</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:22 &bull; UFC 275: Teixeira vs. Prochazka &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC 275: Teixeira vs. Prochazka &bull; Jun 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Liang Na</span><span class="totals-stat">4/17</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Silvana Gomez Juarez</span><span class="totals-stat">8/12</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ariane Carnelossi</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:28 &bull; UFC 261: Usman vs. Masvidal 2 &bull; Apr 2021</div>
+                <div class="fight-event-label">UFC 261: Usman vs. Masvidal 2 &bull; Apr 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Liang Na</span><span class="totals-stat">19/27</span><span class="totals-pct">70%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 2:48</span></div><div class="totals-line"><span class="totals-name opponent">Ariane Carnelossi</span><span class="totals-stat">24/32</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -313,7 +319,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:38 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:23 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

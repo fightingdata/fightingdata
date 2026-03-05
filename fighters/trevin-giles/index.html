@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mike Malott</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Moreno vs. Albazi &bull; Nov 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Moreno vs. Albazi &bull; Nov 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">34/78</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mike Malott</span><span class="totals-stat">59/130</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Carlos Prates</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:03 &bull; UFC Fight Night: Hermansson vs. Pyfer &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Hermansson vs. Pyfer &bull; Feb 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:03</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">68/102</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:28</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Prates</span><span class="totals-stat">37/72</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gabriel Bonfim</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:13 &bull; UFC 291: Poirier vs. Gaethje 2 &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC 291: Poirier vs. Gaethje 2 &bull; Jul 2023</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Gabriel Bonfim</span><span class="totals-stat">3/11</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Preston Parsons</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Vera vs. Sandhagen &bull; Mar 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Vera vs. Sandhagen &bull; Mar 2023</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">55/108</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 4:14</span></div><div class="totals-line"><span class="totals-name opponent">Preston Parsons</span><span class="totals-stat">42/95</span><span class="totals-pct">44%</span><span class="totals-stat">TD 3/11</span><span class="totals-stat">Ctrl 5:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Louis Cosce</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Sandhagen vs. Song &bull; Sep 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Song &bull; Sep 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">25/46</span><span class="totals-pct">54%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:09</span></div><div class="totals-line"><span class="totals-name opponent">Louis Cosce</span><span class="totals-stat">10/38</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -348,7 +355,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michael Morales</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:06 &bull; UFC 270: Ngannou vs. Gane &bull; Jan 2022</div>
+                <div class="fight-event-label">UFC 270: Ngannou vs. Gane &bull; Jan 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">8/15</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:12</span></div><div class="totals-line"><span class="totals-name opponent">Michael Morales</span><span class="totals-stat">26/42</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dricus Du Plessis</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:41 &bull; UFC 264: Poirier vs. McGregor 3 &bull; Jul 2021</div>
+                <div class="fight-event-label">UFC 264: Poirier vs. McGregor 3 &bull; Jul 2021</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">10/32</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">Dricus Du Plessis</span><span class="totals-stat">25/48</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -399,7 +408,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Roman Dolidze</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brunson vs. Holland &bull; Mar 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Brunson vs. Holland &bull; Mar 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">27/57</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:15</span></div><div class="totals-line"><span class="totals-name opponent">Roman Dolidze</span><span class="totals-stat">32/67</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 4:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -429,7 +439,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bevon Lewis</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 1:26 &bull; UFC Fight Night: Santos vs. Teixeira &bull; Nov 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Santos vs. Teixeira &bull; Nov 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 1:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">38/59</span><span class="totals-pct">64%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:33</span></div><div class="totals-line"><span class="totals-name opponent">Bevon Lewis</span><span class="totals-stat">26/75</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 1:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -459,7 +470,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. James Krause</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 247: Jones vs. Reyes &bull; Feb 2020</div>
+                <div class="fight-event-label">UFC 247: Jones vs. Reyes &bull; Feb 2020</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">71/148</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:39</span></div><div class="totals-line"><span class="totals-name opponent">James Krause</span><span class="totals-stat">44/80</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 3:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -489,7 +501,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gerald Meerschaert</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 1:49 &bull; UFC Fight Night: Covington vs. Lawler &bull; Aug 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Covington vs. Lawler &bull; Aug 2019</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 1:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">8/15</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:18</span></div><div class="totals-line"><span class="totals-name opponent">Gerald Meerschaert</span><span class="totals-stat">6/19</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 5:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -519,7 +532,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zak Cummings</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 4:01 &bull; UFC Fight Night: Dos Anjos vs. Lee &bull; May 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Lee &bull; May 2019</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 4:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">31/64</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div><div class="totals-line"><span class="totals-name opponent">Zak Cummings</span><span class="totals-stat">34/100</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -549,7 +563,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Antonio Braga Neto</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:27 &bull; UFC Fight Night: Swanson vs. Ortega &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Swanson vs. Ortega &bull; Dec 2017</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">70/113</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Antonio Braga Neto</span><span class="totals-stat">18/73</span><span class="totals-pct">25%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 3:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -579,7 +594,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. James Bochnovic</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:54 &bull; UFC 213: Romero vs. Whittaker &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC 213: Romero vs. Whittaker &bull; Jul 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Trevin Giles</span><span class="totals-stat">41/53</span><span class="totals-pct">77%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 5:43</span></div><div class="totals-line"><span class="totals-name opponent">James Bochnovic</span><span class="totals-stat">5/24</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -604,7 +620,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:10 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:51 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

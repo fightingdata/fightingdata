@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gauge Young</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Walker vs. Zhang &bull; Aug 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Walker vs. Zhang &bull; Aug 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Maheshate</span><span class="totals-stat">66/150</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">Gauge Young</span><span class="totals-stat">112/200</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 3:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nikolas Motta</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Yan vs. Figueiredo &bull; Nov 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Yan vs. Figueiredo &bull; Nov 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Maheshate</span><span class="totals-stat">56/169</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Nikolas Motta</span><span class="totals-stat">78/166</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gabriel Benitez</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Nicolau vs. Perez &bull; Apr 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Nicolau vs. Perez &bull; Apr 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Maheshate</span><span class="totals-stat">97/312</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Gabriel Benitez</span><span class="totals-stat">121/295</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Viacheslav Borshchev</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:37 &bull; UFC Fight Night: Dern vs. Hill &bull; May 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Dern vs. Hill &bull; May 2023</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Maheshate</span><span class="totals-stat">32/109</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Viacheslav Borshchev</span><span class="totals-stat">85/148</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -324,7 +330,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rafa Garcia</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Cannonier vs. Strickland &bull; Dec 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Cannonier vs. Strickland &bull; Dec 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Maheshate</span><span class="totals-stat">25/141</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rafa Garcia</span><span class="totals-stat">49/98</span><span class="totals-pct">50%</span><span class="totals-stat">TD 6/11</span><span class="totals-stat">Ctrl 6:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -354,7 +361,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Steve Garcia</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:14 &bull; UFC 275: Teixeira vs. Prochazka &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC 275: Teixeira vs. Prochazka &bull; Jun 2022</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Maheshate</span><span class="totals-stat">7/10</span><span class="totals-pct">70%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Steve Garcia</span><span class="totals-stat">7/19</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -378,7 +386,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Achilles Estremadura</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; DWCS 5.10 &bull; Nov 2021</div>
+                <div class="fight-event-label">DWCS 5.10 &bull; Nov 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Maheshate</span><span class="totals-stat">49/166</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Achilles Estremadura</span><span class="totals-stat">48/111</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:18</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -406,7 +415,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:40 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:25 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

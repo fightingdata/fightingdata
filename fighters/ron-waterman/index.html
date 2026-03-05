@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Satoshi Honma</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 25: Ultimate Japan 3 &bull; Apr 2000</div>
+                <div class="fight-event-label">UFC 25: Ultimate Japan 3 &bull; Apr 2000</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">51/62</span><span class="totals-pct">82%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 11:57</span></div><div class="totals-line"><span class="totals-name opponent">Satoshi Honma</span><span class="totals-stat">6/13</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Tim Lajcik</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 22: Only One Can be Champion &bull; Sep 1999</div>
+                <div class="fight-event-label">UFC 22: Only One Can be Champion &bull; Sep 1999</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">14/25</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/10</span><span class="totals-stat">Ctrl 8:35</span></div><div class="totals-line"><span class="totals-name opponent">Tim Lajcik</span><span class="totals-stat">12/30</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Andre Roberts</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:51 &bull; UFC 21: Return of the Champions &bull; Jul 1999</div>
+                <div class="fight-event-label">UFC 21: Return of the Champions &bull; Jul 1999</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:51</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">22/48</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Andre Roberts</span><span class="totals-stat">10/20</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Condo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:28 &bull; UFC 20: Battle for the Gold &bull; </div>
+                <div class="fight-event-label">UFC 20: Battle for the Gold &bull; </div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">6/8</span><span class="totals-pct">75%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chris Condo</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-elitexc-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dave Herman</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:19 &bull; EliteXC - Return of the King &bull; Jun 2008</div>
+                <div class="fight-event-label">EliteXC - Return of the King &bull; Jun 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">8/15</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dave Herman</span><span class="totals-stat">25/34</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-elitexc-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-elitexc-0" style="display:none;">
@@ -339,7 +346,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ricco Rodriguez</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00 &bull; WFA - King of the Streets &bull; Jul 2006</div>
+                <div class="fight-event-label">WFA - King of the Streets &bull; Jul 2006</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">15/28</span><span class="totals-pct">54%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ricco Rodriguez</span><span class="totals-stat">10/28</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -369,7 +377,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ricco Rodriguez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WEC 16: Clash of the Titans 2 &bull; Aug 2005</div>
+                <div class="fight-event-label">WEC 16: Clash of the Titans 2 &bull; Aug 2005</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div><div style="color:#6b7280;font-size:0.85rem;margin-bottom:0.75rem;font-style:italic;">PRIDE (3 fights)</div>
@@ -377,7 +386,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Randleman</div>
-                <div class="fight-meta">Submission (Keylock) &bull; Rd 1, 7:44 &bull; PRIDE Final Conflict 2004 &bull; Aug 2004</div>
+                <div class="fight-event-label">PRIDE Final Conflict 2004 &bull; Aug 2004</div>
+                <div class="fight-meta">Submission (Keylock) &bull; Rd 1, 7:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">3/5</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Randleman</span><span class="totals-stat">5/7</span><span class="totals-pct">71%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -401,7 +411,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mirko Filipovic</div>
-                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 1, 4:53 &bull; PRIDE 27: Inferno &bull; Feb 2004</div>
+                <div class="fight-event-label">PRIDE 27: Inferno &bull; Feb 2004</div>
+                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 1, 4:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mirko Filipovic</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-1" style="display:none;">
@@ -425,7 +436,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Valentijn Overeem</div>
-                <div class="fight-meta">Submission (Keylock) &bull; Rd 1, 2:18 &bull; PRIDE 24: Cold Fury 3 &bull; Dec 2002</div>
+                <div class="fight-event-label">PRIDE 24: Cold Fury 3 &bull; Dec 2002</div>
+                <div class="fight-meta">Submission (Keylock) &bull; Rd 1, 2:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ron Waterman</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Valentijn Overeem</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-2" style="display:none;">
@@ -447,7 +459,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:59 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:42 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

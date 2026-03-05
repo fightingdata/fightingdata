@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Pat Barry</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:30 &bull; UFC 104: Machida vs Shogun &bull; Oct 2009</div>
+                <div class="fight-event-label">UFC 104: Machida vs Shogun &bull; Oct 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antoni Hardonk</span><span class="totals-stat">29/72</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Pat Barry</span><span class="totals-stat">29/64</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cheick Kongo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:29 &bull; UFC 97: Redemption &bull; Apr 2009</div>
+                <div class="fight-event-label">UFC 97: Redemption &bull; Apr 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antoni Hardonk</span><span class="totals-stat">9/20</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cheick Kongo</span><span class="totals-stat">53/84</span><span class="totals-pct">63%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 5:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Wessel</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:09 &bull; UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-event-label">UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antoni Hardonk</span><span class="totals-stat">46/59</span><span class="totals-pct">78%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:35</span></div><div class="totals-line"><span class="totals-name opponent">Mike Wessel</span><span class="totals-stat">13/23</span><span class="totals-pct">57%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 3:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eddie Sanchez</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:15 &bull; UFC 85: Bedlam &bull; Jun 2008</div>
+                <div class="fight-event-label">UFC 85: Bedlam &bull; Jun 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antoni Hardonk</span><span class="totals-stat">48/75</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:43</span></div><div class="totals-line"><span class="totals-name opponent">Eddie Sanchez</span><span class="totals-stat">33/67</span><span class="totals-pct">49%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 4:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Colin Robinson</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:17 &bull; UFC 80: Rapid Fire &bull; Jan 2008</div>
+                <div class="fight-event-label">UFC 80: Rapid Fire &bull; Jan 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antoni Hardonk</span><span class="totals-stat">5/7</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Colin Robinson</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -339,7 +346,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Frank Mir</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 1:17 &bull; UFC 74: Respect &bull; Aug 2007</div>
+                <div class="fight-event-label">UFC 74: Respect &bull; Aug 2007</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 1:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antoni Hardonk</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Frank Mir</span><span class="totals-stat">4/5</span><span class="totals-pct">80%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -363,7 +371,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Justin McCully</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Stevenson vs Guillard &bull; Apr 2007</div>
+                <div class="fight-event-label">UFC Fight Night: Stevenson vs Guillard &bull; Apr 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antoni Hardonk</span><span class="totals-stat">26/35</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Justin McCully</span><span class="totals-stat">21/40</span><span class="totals-pct">52%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 13:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -393,7 +402,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sherman Pendergarst</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:15 &bull; UFC 65: Bad Intentions &bull; Nov 2006</div>
+                <div class="fight-event-label">UFC 65: Bad Intentions &bull; Nov 2006</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antoni Hardonk</span><span class="totals-stat">10/12</span><span class="totals-pct">83%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Sherman Pendergarst</span><span class="totals-stat">4/11</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -415,7 +425,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:54 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:43 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

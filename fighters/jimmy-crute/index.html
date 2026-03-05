@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ivan Erslan</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:19 &bull; UFC Fight Night: Ulberg vs. Reyes &bull; Sep 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Ulberg vs. Reyes &bull; Sep 2025</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">12/16</span><span class="totals-pct">75%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:08</span></div><div class="totals-line"><span class="totals-name opponent">Ivan Erslan</span><span class="totals-stat">10/14</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcin Prachnio</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:42 &bull; UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">5/18</span><span class="totals-pct">28%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 2:18</span></div><div class="totals-line"><span class="totals-name opponent">Marcin Prachnio</span><span class="totals-stat">21/36</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Rodolfo Bellato</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC 312: Du Plessis vs. Strickland 2 &bull; Feb 2025</div>
+                <div class="fight-event-label">UFC 312: Du Plessis vs. Strickland 2 &bull; Feb 2025</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">106/209</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 3:52</span></div><div class="totals-line"><span class="totals-name opponent">Rodolfo Bellato</span><span class="totals-stat">89/141</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alonzo Menifield</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 1:55 &bull; UFC 290: Volkanovski vs. Rodriguez &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC 290: Volkanovski vs. Rodriguez &bull; Jul 2023</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 1:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">26/53</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:12</span></div><div class="totals-line"><span class="totals-name opponent">Alonzo Menifield</span><span class="totals-stat">21/36</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Alonzo Menifield</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC 284: Makhachev vs. Volkanovski &bull; Feb 2023</div>
+                <div class="fight-event-label">UFC 284: Makhachev vs. Volkanovski &bull; Feb 2023</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">31/62</span><span class="totals-pct">50%</span><span class="totals-stat">TD 6/12</span><span class="totals-stat">Ctrl 7:55</span></div><div class="totals-line"><span class="totals-name opponent">Alonzo Menifield</span><span class="totals-stat">56/83</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jamahal Hill</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:48 &bull; UFC Fight Night: Font vs. Aldo &bull; Dec 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Font vs. Aldo &bull; Dec 2021</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">6/12</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jamahal Hill</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -366,7 +374,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anthony Smith</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00 &bull; UFC 261: Usman vs. Masvidal 2 &bull; Apr 2021</div>
+                <div class="fight-event-label">UFC 261: Usman vs. Masvidal 2 &bull; Apr 2021</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">18/35</span><span class="totals-pct">51%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:57</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Smith</span><span class="totals-stat">26/39</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -390,7 +399,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Modestas Bukauskas</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:01 &bull; UFC Fight Night: Ortega vs. The Korean Zombie &bull; Oct 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Ortega vs. The Korean Zombie &bull; Oct 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">17/24</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Modestas Bukauskas</span><span class="totals-stat">7/17</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -414,7 +424,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michal Oleksiejczuk</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:29 &bull; UFC Fight Night: Felder vs. Hooker &bull; Feb 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Felder vs. Hooker &bull; Feb 2020</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">2/8</span><span class="totals-pct">25%</span><span class="totals-stat">TD 8/10</span><span class="totals-stat">Ctrl 3:01</span></div><div class="totals-line"><span class="totals-name opponent">Michal Oleksiejczuk</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -438,7 +449,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Misha Cirkunov</div>
-                <div class="fight-meta">Submission (Peruvian Necktie) &bull; Rd 1, 3:38 &bull; UFC Fight Night: Cowboy vs. Gaethje &bull; Sep 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Cowboy vs. Gaethje &bull; Sep 2019</div>
+                <div class="fight-meta">Submission (Peruvian Necktie) &bull; Rd 1, 3:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">21/35</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:43</span></div><div class="totals-line"><span class="totals-name opponent">Misha Cirkunov</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -462,7 +474,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sam Alvey</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:49 &bull; UFC 234: Adesanya vs. Silva &bull; Feb 2019</div>
+                <div class="fight-event-label">UFC 234: Adesanya vs. Silva &bull; Feb 2019</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">14/32</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Sam Alvey</span><span class="totals-stat">3/14</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -486,7 +499,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Craig</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 3, 4:51 &bull; UFC Fight Night: Dos Santos vs. Tuivasa &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Santos vs. Tuivasa &bull; Dec 2018</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 3, 4:51</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">17/38</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 8:27</span></div><div class="totals-line"><span class="totals-name opponent">Paul Craig</span><span class="totals-stat">12/22</span><span class="totals-pct">55%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 4:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -516,7 +530,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Birchler</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:23 &bull; DWCS 2.6 &bull; Jul 2018</div>
+                <div class="fight-event-label">DWCS 2.6 &bull; Jul 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jimmy Crute</span><span class="totals-stat">65/100</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chris Birchler</span><span class="totals-stat">41/88</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -538,7 +553,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:26 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:12 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -78,7 +78,7 @@
             margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #1f2937; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -86,6 +86,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -185,14 +187,14 @@
                 <div class="record-label">Pro Record</div>
                 <div class="record-pro">11-1-0</div>
                 <div class="record-label">UFC Record</div>
-                <div class="record-ufc">1-0-0 (1 fights)</div>
+                <div class="record-ufc">0-0-0 (1 fights)</div>
             </div>
         </div>
 
         <h2>Fighter Profiles</h2>
         <div class="bio-section"><div class="bio-card"><div class="bio-name">Ricky Turcios</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">32</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'9"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">145 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">71"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div><div class="bio-divider"></div><div class="bio-card"><div class="bio-name">Alberto Montes</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">31</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'7"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">145 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">69"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="debut-disclaimer"><strong>Alberto Montes</strong> is making their UFC debut. Statistics shown are from DWCS data. UFC Record: 0-0-0</div><div class="sample-warning">&#9888;&#65039; <strong>Alberto Montes</strong> has only 1 fights in our database — stats may not be fully representative.</div>
+        <div class="debut-disclaimer"><strong>Alberto Montes</strong> is making their UFC debut. Statistics shown are from DWCS data. UFC Record: 0-0-0</div>
 
         <h2>Career Statistics</h2>
         <table>
@@ -255,7 +257,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Benardo Sopaj</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Jan 2025</div>
+                <div class="fight-event-label">UFC 311: Makhachev vs. Moicano &bull; Jan 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricky Turcios</span><span class="totals-stat">78/144</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 1:56</span></div><div class="totals-line"><span class="totals-name opponent">Benardo Sopaj</span><span class="totals-stat">81/139</span><span class="totals-pct">58%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:30</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f0" style="display:none;">
@@ -285,7 +288,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Raul Rosas Jr.</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:22 &bull; Jun 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Cannonier vs. Imavov &bull; Jun 2024</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricky Turcios</span><span class="totals-stat">7/15</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:52</span></div><div class="totals-line"><span class="totals-name opponent">Raul Rosas Jr.</span><span class="totals-stat">3/9</span><span class="totals-pct">33%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 5:49</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f1" style="display:none;">
@@ -312,7 +316,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Natividad</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; Nov 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Nzechukwu vs. Cutelaba &bull; Nov 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ricky Turcios</span><span class="totals-stat">68/115</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 6:17</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Natividad</span><span class="totals-stat">41/81</span><span class="totals-pct">51%</span><span class="totals-stat">TD 7/13</span><span class="totals-stat">Ctrl 5:00</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f2" style="display:none;">
@@ -343,7 +348,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Carlos Calderon</div>
-                <div class="fight-meta">Submission (Anaconda Choke) &bull; Rd 2, 2:38 &bull; Oct 2024</div>
+                <div class="fight-event-label">DWCS 8.8 &bull; Oct 2024</div>
+                <div class="fight-meta">Submission (Anaconda Choke) &bull; Rd 2, 2:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alberto Montes</span><span class="totals-stat">38/57</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:33</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Calderon</span><span class="totals-stat">37/88</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 2:39</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
@@ -381,7 +387,7 @@
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-05 11:19:15 | Data source: UFCStats.com
+            Report generated: 2026-03-05 13:18:07 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

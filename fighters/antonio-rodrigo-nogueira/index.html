@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Stefan Struve</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 190: Rousey vs Correia &bull; Aug 2015</div>
+                <div class="fight-event-label">UFC 190: Rousey vs Correia &bull; Aug 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">59/113</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/14</span><span class="totals-stat">Ctrl 5:22</span></div><div class="totals-line"><span class="totals-name opponent">Stefan Struve</span><span class="totals-stat">93/156</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Roy Nelson</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:37 &bull; UFC Fight Night: Minotauro vs Nelson &bull; Apr 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Minotauro vs Nelson &bull; Apr 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">12/37</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Roy Nelson</span><span class="totals-stat">19/35</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Fabricio Werdum</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 2:41 &bull; UFC on FUEL TV: Nogueira vs. Werdum &bull; Jun 2013</div>
+                <div class="fight-event-label">UFC on FUEL TV: Nogueira vs. Werdum &bull; Jun 2013</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 2:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">14/40</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:02</span></div><div class="totals-line"><span class="totals-name opponent">Fabricio Werdum</span><span class="totals-stat">32/37</span><span class="totals-pct">86%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dave Herman</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:31 &bull; UFC 153: Silva vs Bonnar &bull; Oct 2012</div>
+                <div class="fight-event-label">UFC 153: Silva vs Bonnar &bull; Oct 2012</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">20/49</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 4:06</span></div><div class="totals-line"><span class="totals-name opponent">Dave Herman</span><span class="totals-stat">13/32</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Frank Mir</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:38 &bull; UFC 140: Jones vs Machida &bull; Dec 2011</div>
+                <div class="fight-event-label">UFC 140: Jones vs Machida &bull; Dec 2011</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">21/27</span><span class="totals-pct">78%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:50</span></div><div class="totals-line"><span class="totals-name opponent">Frank Mir</span><span class="totals-stat">6/8</span><span class="totals-pct">75%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -339,7 +346,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brendan Schaub</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:09 &bull; UFC 134: Silva vs Okami &bull; Aug 2011</div>
+                <div class="fight-event-label">UFC 134: Silva vs Okami &bull; Aug 2011</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">15/35</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Brendan Schaub</span><span class="totals-stat">11/45</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -363,7 +371,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cain Velasquez</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:20 &bull; UFC 110: Nogueira vs Velasquez &bull; Feb 2010</div>
+                <div class="fight-event-label">UFC 110: Nogueira vs Velasquez &bull; Feb 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">3/22</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cain Velasquez</span><span class="totals-stat">23/45</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -387,7 +396,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Randy Couture</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-event-label">UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">27/96</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 5:36</span></div><div class="totals-line"><span class="totals-name opponent">Randy Couture</span><span class="totals-stat">42/103</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -417,7 +427,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Frank Mir</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:54 &bull; UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-event-label">UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">10/38</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Frank Mir</span><span class="totals-stat">37/101</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -444,7 +455,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Sylvia</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 1:28 &bull; UFC 81: Breaking Point &bull; Feb 2008</div>
+                <div class="fight-event-label">UFC 81: Breaking Point &bull; Feb 2008</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 1:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">28/70</span><span class="totals-pct">40%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 0:31</span></div><div class="totals-line"><span class="totals-name opponent">Tim Sylvia</span><span class="totals-stat">53/131</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -474,7 +486,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Heath Herring</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 73: Stacked &bull; Jul 2007</div>
+                <div class="fight-event-label">UFC 73: Stacked &bull; Jul 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">55/120</span><span class="totals-pct">46%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 3:41</span></div><div class="totals-line"><span class="totals-name opponent">Heath Herring</span><span class="totals-stat">31/127</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -504,7 +517,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Barnett</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; PRIDE Shockwave 2006 &bull; Dec 2006</div>
+                <div class="fight-event-label">PRIDE Shockwave 2006 &bull; Dec 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">69/157</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Josh Barnett</span><span class="totals-stat">49/126</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -534,7 +548,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Josh Barnett</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 2, 5:00 &bull; PRIDE Final Conflict Absolute &bull; Sep 2006</div>
+                <div class="fight-event-label">PRIDE Final Conflict Absolute &bull; Sep 2006</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">20/44</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Josh Barnett</span><span class="totals-stat">30/63</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-1" style="display:none;">
@@ -561,7 +576,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Fabricio Werdum</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; PRIDE Critical Countdown Absolute &bull; Jul 2006</div>
+                <div class="fight-event-label">PRIDE Critical Countdown Absolute &bull; Jul 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">44/111</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Fabricio Werdum</span><span class="totals-stat">23/79</span><span class="totals-pct">29%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-2" style="display:none;">
@@ -591,7 +607,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kiyoshi Tamura</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:24 &bull; PRIDE 31: Unbreakable &bull; Feb 2006</div>
+                <div class="fight-event-label">PRIDE 31: Unbreakable &bull; Feb 2006</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">2/8</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kiyoshi Tamura</span><span class="totals-stat">0/6</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-3" style="display:none;">
@@ -615,7 +632,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pawel Nastula</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 8:38 &bull; PRIDE Critical Countdown 2005 &bull; Jun 2005</div>
+                <div class="fight-event-label">PRIDE Critical Countdown 2005 &bull; Jun 2005</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 8:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">20/37</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Pawel Nastula</span><span class="totals-stat">6/23</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-4" style="display:none;">
@@ -639,7 +657,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Fedor Emelianenko</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; PRIDE Shockwave 2004 &bull; Dec 2004</div>
+                <div class="fight-event-label">PRIDE Shockwave 2004 &bull; Dec 2004</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">20/104</span><span class="totals-pct">19%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Fedor Emelianenko</span><span class="totals-stat">65/144</span><span class="totals-pct">45%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-5" style="display:none;">
@@ -669,7 +688,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sergei Kharitonov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; PRIDE Final Conflict 2004 &bull; Aug 2004</div>
+                <div class="fight-event-label">PRIDE Final Conflict 2004 &bull; Aug 2004</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">46/109</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Sergei Kharitonov</span><span class="totals-stat">38/113</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-6" style="display:none;">
@@ -696,7 +716,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-7')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Fedor Emelianenko</div>
-                <div class="fight-meta">CNC &bull; Rd 1, 3:52 &bull; PRIDE Final Conflict 2004 &bull; Aug 2004</div>
+                <div class="fight-event-label">PRIDE Final Conflict 2004 &bull; Aug 2004</div>
+                <div class="fight-meta">CNC &bull; Rd 1, 3:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Fedor Emelianenko</span><span class="totals-stat">14/27</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-7" style="display:none;">
@@ -720,7 +741,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Heath Herring</div>
-                <div class="fight-meta">Submission (Anaconda Choke) &bull; Rd 2, 0:30 &bull; PRIDE Critical Countdown 2004 &bull; Jun 2004</div>
+                <div class="fight-event-label">PRIDE Critical Countdown 2004 &bull; Jun 2004</div>
+                <div class="fight-meta">Submission (Anaconda Choke) &bull; Rd 2, 0:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">14/42</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Heath Herring</span><span class="totals-stat">26/44</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-8" style="display:none;">
@@ -747,7 +769,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Hirotaka Yokoi</div>
-                <div class="fight-meta">Submission (Anaconda Choke) &bull; Rd 2, 1:25 &bull; PRIDE Total Elimination 2004 &bull; Apr 2004</div>
+                <div class="fight-event-label">PRIDE Total Elimination 2004 &bull; Apr 2004</div>
+                <div class="fight-meta">Submission (Anaconda Choke) &bull; Rd 2, 1:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">26/54</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Hirotaka Yokoi</span><span class="totals-stat">12/47</span><span class="totals-pct">26%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-9" style="display:none;">
@@ -774,7 +797,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mirko Filipovic</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 1:45 &bull; PRIDE Final Conflict 2003 &bull; Nov 2003</div>
+                <div class="fight-event-label">PRIDE Final Conflict 2003 &bull; Nov 2003</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 1:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">10/22</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mirko Filipovic</span><span class="totals-stat">25/40</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-10" style="display:none;">
@@ -801,7 +825,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ricco Rodriguez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; PRIDE Total Elimination 2003 &bull; Aug 2003</div>
+                <div class="fight-event-label">PRIDE Total Elimination 2003 &bull; Aug 2003</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">14/40</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ricco Rodriguez</span><span class="totals-stat">21/63</span><span class="totals-pct">33%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-11" style="display:none;">
@@ -831,7 +856,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Fedor Emelianenko</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; PRIDE 25: Body Blow &bull; Mar 2003</div>
+                <div class="fight-event-label">PRIDE 25: Body Blow &bull; Mar 2003</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">3/10</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Fedor Emelianenko</span><span class="totals-stat">79/114</span><span class="totals-pct">69%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-12" style="display:none;">
@@ -861,7 +887,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dan Henderson</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 3, 1:49 &bull; PRIDE 24: Cold Fury 3 &bull; Dec 2002</div>
+                <div class="fight-event-label">PRIDE 24: Cold Fury 3 &bull; Dec 2002</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 3, 1:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">30/57</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dan Henderson</span><span class="totals-stat">18/35</span><span class="totals-pct">51%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-13" style="display:none;">
@@ -891,7 +918,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Semmy Schilt</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 6:36 &bull; PRIDE 23: Championship Chaos 2 &bull; Nov 2002</div>
+                <div class="fight-event-label">PRIDE 23: Championship Chaos 2 &bull; Nov 2002</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 6:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Semmy Schilt</span><span class="totals-stat">5/7</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-14" style="display:none;">
@@ -915,7 +943,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bob Sapp</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:03 &bull; PRIDE Shockwave 2002 &bull; Aug 2002</div>
+                <div class="fight-event-label">PRIDE Shockwave 2002 &bull; Aug 2002</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:03</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">16/33</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Bob Sapp</span><span class="totals-stat">40/70</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-15" style="display:none;">
@@ -942,7 +971,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Enson Inoue</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 6:17 &bull; PRIDE 19: Bad Blood &bull; Feb 2002</div>
+                <div class="fight-event-label">PRIDE 19: Bad Blood &bull; Feb 2002</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 6:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Enson Inoue</span><span class="totals-stat">15/18</span><span class="totals-pct">83%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-16" style="display:none;">
@@ -966,7 +996,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Heath Herring</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; PRIDE 17: Championship Chaos &bull; Nov 2001</div>
+                <div class="fight-event-label">PRIDE 17: Championship Chaos &bull; Nov 2001</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">53/93</span><span class="totals-pct">57%</span><span class="totals-stat">TD 6/7</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Heath Herring</span><span class="totals-stat">21/57</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-17" style="display:none;">
@@ -996,7 +1027,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mark Coleman</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 6:10 &bull; PRIDE 16: Beasts from the East &bull; Sep 2001</div>
+                <div class="fight-event-label">PRIDE 16: Beasts from the East &bull; Sep 2001</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 6:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">16/20</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mark Coleman</span><span class="totals-stat">6/12</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-18" style="display:none;">
@@ -1020,7 +1052,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gary Goodridge</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:37 &bull; PRIDE 15: Raging Rumble &bull; Jul 2001</div>
+                <div class="fight-event-label">PRIDE 15: Raging Rumble &bull; Jul 2001</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gary Goodridge</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-19" style="display:none;">
@@ -1044,7 +1077,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Wagner da Conceicao Martins</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:17 &bull; PRIDE Total Elimination Absolute &bull; </div>
+                <div class="fight-event-label">PRIDE Total Elimination Absolute &bull; </div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">8/11</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Wagner da Conceicao Martins</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-20" style="display:none;">
@@ -1068,7 +1102,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sanae Kikuta</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:29 &bull; UFO - Legend &bull; Aug 2002</div>
+                <div class="fight-event-label">UFO - Legend &bull; Aug 2002</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Antonio Rodrigo Nogueira</span><span class="totals-stat">12/21</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Sanae Kikuta</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -1093,7 +1128,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:54 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:43 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

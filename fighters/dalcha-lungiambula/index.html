@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Edmen Shahbazyan</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:41 &bull; UFC 282: Blachowicz vs. Ankalaev &bull; Dec 2022</div>
+                <div class="fight-event-label">UFC 282: Blachowicz vs. Ankalaev &bull; Dec 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dalcha Lungiambula</span><span class="totals-stat">23/48</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Edmen Shahbazyan</span><span class="totals-stat">54/107</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Punahele Soriano</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:28 &bull; UFC Fight Night: Ortega vs. Rodriguez &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Ortega vs. Rodriguez &bull; Jul 2022</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dalcha Lungiambula</span><span class="totals-stat">11/22</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:39</span></div><div class="totals-line"><span class="totals-name opponent">Punahele Soriano</span><span class="totals-stat">17/35</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cody Brundage</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 3:41 &bull; UFC Fight Night: Santos vs. Ankalaev &bull; Mar 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Santos vs. Ankalaev &bull; Mar 2022</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 3:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dalcha Lungiambula</span><span class="totals-stat">29/56</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:52</span></div><div class="totals-line"><span class="totals-name opponent">Cody Brundage</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marc-Andre Barriault</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brunson vs. Till &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Brunson vs. Till &bull; Sep 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dalcha Lungiambula</span><span class="totals-stat">85/217</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:32</span></div><div class="totals-line"><span class="totals-name opponent">Marc-Andre Barriault</span><span class="totals-stat">118/289</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Markus Perez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Chiesa vs. Magny &bull; Jan 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Chiesa vs. Magny &bull; Jan 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dalcha Lungiambula</span><span class="totals-stat">29/65</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 6:46</span></div><div class="totals-line"><span class="totals-name opponent">Markus Perez</span><span class="totals-stat">25/49</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 4:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Magomed Ankalaev</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 0:29 &bull; UFC Fight Night: Zabit vs. Kattar &bull; Nov 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Zabit vs. Kattar &bull; Nov 2019</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 0:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dalcha Lungiambula</span><span class="totals-stat">6/26</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:20</span></div><div class="totals-line"><span class="totals-name opponent">Magomed Ankalaev</span><span class="totals-stat">44/67</span><span class="totals-pct">66%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 5:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dequan Townsend</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:42 &bull; UFC Fight Night: Ngannou vs. Dos Santos &bull; Jun 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Ngannou vs. Dos Santos &bull; Jun 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Dalcha Lungiambula</span><span class="totals-stat">32/43</span><span class="totals-pct">74%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 7:45</span></div><div class="totals-line"><span class="totals-name opponent">Dequan Townsend</span><span class="totals-stat">13/30</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -403,7 +412,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:06 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:53 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

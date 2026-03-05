@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michael Chiesa</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:44 &bull; UFC Fight Night: Sandhagen vs. Nurmagomedov &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Nurmagomedov &bull; Aug 2024</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">10/18</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Michael Chiesa</span><span class="totals-stat">4/25</span><span class="totals-pct">16%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Paddy Pimblett</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 296: Edwards vs. Covington &bull; Dec 2023</div>
+                <div class="fight-event-label">UFC 296: Edwards vs. Covington &bull; Dec 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">62/105</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Paddy Pimblett</span><span class="totals-stat">106/165</span><span class="totals-pct">64%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 8:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. King Green</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 4:54 &bull; UFC 291: Poirier vs. Gaethje 2 &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC 291: Poirier vs. Gaethje 2 &bull; Jul 2023</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 4:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">54/123</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">King Green</span><span class="totals-stat">137/217</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nate Diaz</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 4, 2:52 &bull; UFC 279: Diaz vs. Ferguson &bull; Sep 2022</div>
+                <div class="fight-event-label">UFC 279: Diaz vs. Ferguson &bull; Sep 2022</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 4, 2:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">80/172</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Nate Diaz</span><span class="totals-stat">101/217</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -324,7 +330,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michael Chandler</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 0:17 &bull; UFC 274: Oliveira vs. Gaethje &bull; May 2022</div>
+                <div class="fight-event-label">UFC 274: Oliveira vs. Gaethje &bull; May 2022</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 0:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">20/50</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Michael Chandler</span><span class="totals-stat">27/53</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Beneil Dariush</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-event-label">UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">15/34</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Beneil Dariush</span><span class="totals-stat">23/55</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 12:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Charles Oliveira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 256: Figueiredo vs. Moreno &bull; Dec 2020</div>
+                <div class="fight-event-label">UFC 256: Figueiredo vs. Moreno &bull; Dec 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">19/42</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Charles Oliveira</span><span class="totals-stat">41/63</span><span class="totals-pct">65%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 11:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Justin Gaethje</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 5, 3:39 &bull; UFC 249: Ferguson vs. Gaethje &bull; May 2020</div>
+                <div class="fight-event-label">UFC 249: Ferguson vs. Gaethje &bull; May 2020</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 5, 3:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">136/296</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Justin Gaethje</span><span class="totals-stat">143/197</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -447,7 +457,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC 238: Cejudo vs. Moraes &bull; Jun 2019</div>
+                <div class="fight-event-label">UFC 238: Cejudo vs. Moraes &bull; Jun 2019</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">104/200</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">68/185</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -474,7 +485,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anthony Pettis</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC 229: Khabib vs. McGregor &bull; Oct 2018</div>
+                <div class="fight-event-label">UFC 229: Khabib vs. McGregor &bull; Oct 2018</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">114/194</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">45/99</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -501,7 +513,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Lee</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 4:02 &bull; UFC 216: Ferguson vs. Lee &bull; Oct 2017</div>
+                <div class="fight-event-label">UFC 216: Ferguson vs. Lee &bull; Oct 2017</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 4:02</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">54/103</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Lee</span><span class="totals-stat">55/119</span><span class="totals-pct">46%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 4:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -531,7 +544,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rafael Dos Anjos</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Dos Anjos vs. Ferguson &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Ferguson &bull; Nov 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">199/401</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rafael Dos Anjos</span><span class="totals-stat">121/276</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -567,7 +581,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lando Vannata</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 2:22 &bull; UFC Fight Night: McDonald vs. Lineker &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC Fight Night: McDonald vs. Lineker &bull; Jul 2016</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 2:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">66/119</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Lando Vannata</span><span class="totals-stat">40/110</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -594,7 +609,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Thomson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Mir vs Duffee &bull; Jul 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Mir vs Duffee &bull; Jul 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">83/149</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:46</span></div><div class="totals-line"><span class="totals-name opponent">Josh Thomson</span><span class="totals-stat">33/100</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -624,7 +640,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gleison Tibau</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:37 &bull; UFC 184: Rousey vs Zingano &bull; Feb 2015</div>
+                <div class="fight-event-label">UFC 184: Rousey vs Zingano &bull; Feb 2015</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">11/38</span><span class="totals-pct">29%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:46</span></div><div class="totals-line"><span class="totals-name opponent">Gleison Tibau</span><span class="totals-stat">2/20</span><span class="totals-pct">10%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -648,7 +665,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Abel Trujillo</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 4:19 &bull; UFC 181: Hendricks vs Lawler II &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC 181: Hendricks vs Lawler II &bull; Dec 2014</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 4:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">20/55</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:02</span></div><div class="totals-line"><span class="totals-name opponent">Abel Trujillo</span><span class="totals-stat">15/76</span><span class="totals-pct">20%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -675,7 +693,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Danny Castillo</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 177: Dillashaw vs Soto &bull; Aug 2014</div>
+                <div class="fight-event-label">UFC 177: Dillashaw vs Soto &bull; Aug 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">23/80</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Danny Castillo</span><span class="totals-stat">23/105</span><span class="totals-pct">22%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 9:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -705,7 +724,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Katsunori Kikuno</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:06 &bull; UFC 173: Barao vs Dillashaw &bull; May 2014</div>
+                <div class="fight-event-label">UFC 173: Barao vs Dillashaw &bull; May 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">38/67</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:37</span></div><div class="totals-line"><span class="totals-name opponent">Katsunori Kikuno</span><span class="totals-stat">22/44</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -729,7 +749,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Rio</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 1, 1:52 &bull; UFC 166: Velasquez vs Dos Santos 3 &bull; Oct 2013</div>
+                <div class="fight-event-label">UFC 166: Velasquez vs Dos Santos 3 &bull; Oct 2013</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 1, 1:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">5/15</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:18</span></div><div class="totals-line"><span class="totals-name opponent">Mike Rio</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -753,7 +774,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michael Johnson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Diaz vs Miller &bull; May 2012</div>
+                <div class="fight-event-label">UFC on FOX: Diaz vs Miller &bull; May 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">45/176</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Michael Johnson</span><span class="totals-stat">67/183</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -783,7 +805,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Aaron Riley</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00 &bull; UFC 135: Jones vs Rampage &bull; Sep 2011</div>
+                <div class="fight-event-label">UFC 135: Jones vs Rampage &bull; Sep 2011</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">31/82</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Aaron Riley</span><span class="totals-stat">11/49</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -807,7 +830,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Edson Barboza</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 2:54 &bull; The Ultimate Fighter: Team McGregor vs. Team Faber Finale &bull; Dec 2015</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team McGregor vs. Team Faber Finale &bull; Dec 2015</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 2:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">61/116</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:20</span></div><div class="totals-line"><span class="totals-name opponent">Edson Barboza</span><span class="totals-stat">41/85</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:57</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -834,7 +858,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yves Edwards</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Bisping vs Team Miller Finale &bull; Dec 2011</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Bisping vs Team Miller Finale &bull; Dec 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">61/232</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Yves Edwards</span><span class="totals-stat">45/150</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -864,7 +889,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ramsey Nijem</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:54 &bull; The Ultimate Fighter: Team Lesnar vs Team dos Santos Finale &bull; Jun 2011</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Lesnar vs Team dos Santos Finale &bull; Jun 2011</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tony Ferguson</span><span class="totals-stat">21/38</span><span class="totals-pct">55%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:15</span></div><div class="totals-line"><span class="totals-name opponent">Ramsey Nijem</span><span class="totals-stat">12/57</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-2" style="display:none;">
@@ -886,7 +912,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:09 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:51 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

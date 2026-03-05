@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tecia Pennington</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 307: Pereira vs. Rountree Jr. &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC 307: Pereira vs. Rountree Jr. &bull; Oct 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">39/123</span><span class="totals-pct">32%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 3:40</span></div><div class="totals-line"><span class="totals-name opponent">Tecia Pennington</span><span class="totals-stat">80/150</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zhang Weili</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:05 &bull; UFC 281: Adesanya vs. Pereira &bull; Nov 2022</div>
+                <div class="fight-event-label">UFC 281: Adesanya vs. Pereira &bull; Nov 2022</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">6/32</span><span class="totals-pct">19%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:55</span></div><div class="totals-line"><span class="totals-name opponent">Zhang Weili</span><span class="totals-stat">37/78</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rose Namajunas</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 274: Oliveira vs. Gaethje &bull; May 2022</div>
+                <div class="fight-event-label">UFC 274: Oliveira vs. Gaethje &bull; May 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">30/133</span><span class="totals-pct">23%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Rose Namajunas</span><span class="totals-stat">37/136</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -300,7 +305,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yan Xiaonan</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:58 &bull; UFC Fight Night: Font vs. Garbrandt &bull; May 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Font vs. Garbrandt &bull; May 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">27/33</span><span class="totals-pct">82%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 7:18</span></div><div class="totals-line"><span class="totals-name opponent">Yan Xiaonan</span><span class="totals-stat">5/11</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marina Rodriguez</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Whittaker vs. Till &bull; Jul 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. Till &bull; Jul 2020</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">33/60</span><span class="totals-pct">55%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 8:54</span></div><div class="totals-line"><span class="totals-name opponent">Marina Rodriguez</span><span class="totals-stat">40/76</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michelle Waterson-Gomez</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 249: Ferguson vs. Gaethje &bull; May 2020</div>
+                <div class="fight-event-label">UFC 249: Ferguson vs. Gaethje &bull; May 2020</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">45/103</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 0:46</span></div><div class="totals-line"><span class="totals-name opponent">Michelle Waterson-Gomez</span><span class="totals-stat">44/98</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -387,7 +395,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alexa Grasso</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rodriguez vs. Stephens &bull; Sep 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Rodriguez vs. Stephens &bull; Sep 2019</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">44/80</span><span class="totals-pct">55%</span><span class="totals-stat">TD 4/11</span><span class="totals-stat">Ctrl 7:12</span></div><div class="totals-line"><span class="totals-name opponent">Alexa Grasso</span><span class="totals-stat">45/103</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -417,7 +426,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Virna Jandiroba</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Jacare vs. Hermansson &bull; Apr 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Jacare vs. Hermansson &bull; Apr 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">25/51</span><span class="totals-pct">49%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 5:25</span></div><div class="totals-line"><span class="totals-name opponent">Virna Jandiroba</span><span class="totals-stat">17/37</span><span class="totals-pct">46%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 3:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -447,7 +457,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tatiana Suarez</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:33 &bull; UFC 228: Woodley vs. Till &bull; Sep 2018</div>
+                <div class="fight-event-label">UFC 228: Woodley vs. Till &bull; Sep 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Tatiana Suarez</span><span class="totals-stat">82/98</span><span class="totals-pct">84%</span><span class="totals-stat">TD 9/11</span><span class="totals-stat">Ctrl 12:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -477,7 +488,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Claudia Gadelha</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 225: Whittaker vs. Romero 2 &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC 225: Whittaker vs. Romero 2 &bull; Jun 2018</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">43/103</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 3:36</span></div><div class="totals-line"><span class="totals-name opponent">Claudia Gadelha</span><span class="totals-stat">26/64</span><span class="totals-pct">41%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 5:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -507,7 +519,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cynthia Calvillo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 219: Cyborg vs. Holm &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC 219: Cyborg vs. Holm &bull; Dec 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">48/138</span><span class="totals-pct">35%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Cynthia Calvillo</span><span class="totals-stat">38/112</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 4:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -537,7 +550,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Maryna Moroz</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Chiesa vs. Lee &bull; Jun 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Chiesa vs. Lee &bull; Jun 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">40/95</span><span class="totals-pct">42%</span><span class="totals-stat">TD 6/14</span><span class="totals-stat">Ctrl 6:22</span></div><div class="totals-line"><span class="totals-name opponent">Maryna Moroz</span><span class="totals-stat">38/119</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -567,7 +581,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Randa Markos</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Lewis vs. Browne &bull; Feb 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Browne &bull; Feb 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">32/132</span><span class="totals-pct">24%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 2:45</span></div><div class="totals-line"><span class="totals-name opponent">Randa Markos</span><span class="totals-stat">48/110</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -597,7 +612,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Juliana Lima</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 197: Jones vs Saint Preux &bull; Apr 2016</div>
+                <div class="fight-event-label">UFC 197: Jones vs Saint Preux &bull; Apr 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">28/42</span><span class="totals-pct">67%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 9:35</span></div><div class="totals-line"><span class="totals-name opponent">Juliana Lima</span><span class="totals-stat">26/43</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -627,7 +643,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joanna Jedrzejczyk</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:17 &bull; UFC 185: Pettis vs Dos Anjos &bull; Mar 2015</div>
+                <div class="fight-event-label">UFC 185: Pettis vs Dos Anjos &bull; Mar 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">4/22</span><span class="totals-pct">18%</span><span class="totals-stat">TD 1/17</span><span class="totals-stat">Ctrl 1:09</span></div><div class="totals-line"><span class="totals-name opponent">Joanna Jedrzejczyk</span><span class="totals-stat">53/105</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -654,7 +671,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rose Namajunas</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 1:26 &bull; The Ultimate Fighter: A Champion Will Be Crowned Finale &bull; Dec 2014</div>
+                <div class="fight-event-label">The Ultimate Fighter: A Champion Will Be Crowned Finale &bull; Dec 2014</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 1:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Carla Esparza</span><span class="totals-stat">42/90</span><span class="totals-pct">47%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 5:03</span></div><div class="totals-line"><span class="totals-name opponent">Rose Namajunas</span><span class="totals-stat">28/72</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:23</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -682,7 +700,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:00 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:48 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

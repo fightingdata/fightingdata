@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mitch Raposo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 321: Aspinall vs. Gane &bull; Oct 2025</div>
+                <div class="fight-event-label">UFC 321: Aspinall vs. Gane &bull; Oct 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Azat Maksum</span><span class="totals-stat">19/88</span><span class="totals-pct">22%</span><span class="totals-stat">TD 7/19</span><span class="totals-stat">Ctrl 5:27</span></div><div class="totals-line"><span class="totals-name opponent">Mitch Raposo</span><span class="totals-stat">30/66</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tagir Ulanbekov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hill vs. Rountree Jr. &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Hill vs. Rountree Jr. &bull; Jun 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Azat Maksum</span><span class="totals-stat">62/159</span><span class="totals-pct">39%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Tagir Ulanbekov</span><span class="totals-stat">68/118</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/8</span><span class="totals-stat">Ctrl 3:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Charles Johnson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dolidze vs. Imavov &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Dolidze vs. Imavov &bull; Feb 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Azat Maksum</span><span class="totals-stat">38/163</span><span class="totals-pct">23%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 2:29</span></div><div class="totals-line"><span class="totals-name opponent">Charles Johnson</span><span class="totals-stat">76/140</span><span class="totals-pct">54%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 0:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tyson Nam</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Holm vs. Bueno Silva &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Holm vs. Bueno Silva &bull; Jul 2023</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Azat Maksum</span><span class="totals-stat">46/189</span><span class="totals-pct">24%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Tyson Nam</span><span class="totals-stat">81/213</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -325,7 +331,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:55 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:44 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

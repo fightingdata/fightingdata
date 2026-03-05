@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Soa Palelei</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:09 &bull; UFC Fight Night: Hunt vs Bigfoot &bull; Dec 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Hunt vs Bigfoot &bull; Dec 2013</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Soa Palelei</span><span class="totals-stat">12/14</span><span class="totals-pct">86%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shawn Jordan</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:59 &bull; UFC 161: Evans vs Henderson &bull; Jun 2013</div>
+                <div class="fight-event-label">UFC 161: Evans vs Henderson &bull; Jun 2013</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Shawn Jordan</span><span class="totals-stat">10/15</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lavar Johnson</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:38 &bull; UFC on FOX: Diaz vs Miller &bull; May 2012</div>
+                <div class="fight-event-label">UFC on FOX: Diaz vs Miller &bull; May 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">15/22</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:26</span></div><div class="totals-line"><span class="totals-name opponent">Lavar Johnson</span><span class="totals-stat">39/71</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -279,7 +284,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Christian Morecraft</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:38 &bull; UFC on FX: Guillard vs Miller &bull; Jan 2012</div>
+                <div class="fight-event-label">UFC on FX: Guillard vs Miller &bull; Jan 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">12/13</span><span class="totals-pct">92%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Christian Morecraft</span><span class="totals-stat">3/19</span><span class="totals-pct">16%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -303,7 +309,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Stefan Struve</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 3:22 &bull; UFC Live: Cruz vs Johnson &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC Live: Cruz vs Johnson &bull; Oct 2011</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 3:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">30/45</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div><div class="totals-line"><span class="totals-name opponent">Stefan Struve</span><span class="totals-stat">31/82</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -330,7 +337,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cheick Kongo</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:39 &bull; UFC Live: Kongo vs Barry &bull; Jun 2011</div>
+                <div class="fight-event-label">UFC Live: Kongo vs Barry &bull; Jun 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">8/16</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Cheick Kongo</span><span class="totals-stat">10/16</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -354,7 +362,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joey Beltran</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Fight for the Troops 2 &bull; Jan 2011</div>
+                <div class="fight-event-label">UFC Fight Night: Fight for the Troops 2 &bull; Jan 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">46/90</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:53</span></div><div class="totals-line"><span class="totals-name opponent">Joey Beltran</span><span class="totals-stat">55/177</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 4:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -384,7 +393,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mirko Filipovic</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 4:30 &bull; UFC 115: Liddell vs Franklin &bull; Jun 2010</div>
+                <div class="fight-event-label">UFC 115: Liddell vs Franklin &bull; Jun 2010</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 4:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">25/66</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Mirko Filipovic</span><span class="totals-stat">42/100</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 4:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -414,7 +424,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Antoni Hardonk</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:30 &bull; UFC 104: Machida vs Shogun &bull; Oct 2009</div>
+                <div class="fight-event-label">UFC 104: Machida vs Shogun &bull; Oct 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">29/64</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:09</span></div><div class="totals-line"><span class="totals-name opponent">Antoni Hardonk</span><span class="totals-stat">29/72</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -441,7 +452,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tim Hague</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:42 &bull; UFC 98: Evans vs Machida &bull; May 2009</div>
+                <div class="fight-event-label">UFC 98: Evans vs Machida &bull; May 2009</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">3/11</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tim Hague</span><span class="totals-stat">0/5</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -465,7 +477,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dan Evensen</div>
-                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 1, 2:36 &bull; UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-event-label">UFC 92: The Ultimate 2008 &bull; Dec 2008</div>
+                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 1, 2:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">6/13</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div><div class="totals-line"><span class="totals-name opponent">Dan Evensen</span><span class="totals-stat">0/10</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -489,7 +502,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Shane del Rosario</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:26 &bull; The Ultimate Fighter: Team Carwin vs. Team Nelson Finale &bull; Dec 2012</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Carwin vs. Team Nelson Finale &bull; Dec 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pat Barry</span><span class="totals-stat">11/15</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:20</span></div><div class="totals-line"><span class="totals-name opponent">Shane del Rosario</span><span class="totals-stat">14/25</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 3:17</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -514,7 +528,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:52 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:36 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

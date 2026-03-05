@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nate Marquardt</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:44 &bull; UFC Fight Night: Lineker vs. Dodson &bull; Oct 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Lineker vs. Dodson &bull; Oct 2016</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 4:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">16/52</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Nate Marquardt</span><span class="totals-stat">24/39</span><span class="totals-pct">62%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Krzysztof Jotko</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:59 &bull; UFC Fight Night: MacDonald vs Thompson &bull; Jun 2016</div>
+                <div class="fight-event-label">UFC Fight Night: MacDonald vs Thompson &bull; Jun 2016</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Krzysztof Jotko</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Samman</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 4:10 &bull; UFC on FOX: Dos Anjos vs. Cowboy 2 &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC on FOX: Dos Anjos vs. Cowboy 2 &bull; Dec 2015</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 4:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">39/53</span><span class="totals-pct">74%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 7:17</span></div><div class="totals-line"><span class="totals-name opponent">Josh Samman</span><span class="totals-stat">10/19</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 6:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. John Howard</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 101: Declaration &bull; Aug 2009</div>
+                <div class="fight-event-label">UFC 101: Declaration &bull; Aug 2009</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">11/46</span><span class="totals-pct">24%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 3:03</span></div><div class="totals-line"><span class="totals-name opponent">John Howard</span><span class="totals-stat">19/37</span><span class="totals-pct">51%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 8:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ryan Madigan</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 3:35 &bull; UFC 96: Jackson vs Jardine &bull; Mar 2009</div>
+                <div class="fight-event-label">UFC 96: Jackson vs Jardine &bull; Mar 2009</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 3:35</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">12/23</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:21</span></div><div class="totals-line"><span class="totals-name opponent">Ryan Madigan</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dustin Hazelett</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 3:59 &bull; UFC 91: Couture vs Lesnar &bull; Nov 2008</div>
+                <div class="fight-event-label">UFC 91: Couture vs Lesnar &bull; Nov 2008</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 3:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">15/28</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:14</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Hazelett</span><span class="totals-stat">10/21</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -366,7 +374,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Luke Cummo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 87: Seek And Destroy &bull; Aug 2008</div>
+                <div class="fight-event-label">UFC 87: Seek And Destroy &bull; Aug 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">26/44</span><span class="totals-pct">59%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 10:17</span></div><div class="totals-line"><span class="totals-name opponent">Luke Cummo</span><span class="totals-stat">11/25</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Akihiro Gono</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 3:19 &bull; UFC 78: Validation &bull; Nov 2007</div>
+                <div class="fight-event-label">UFC 78: Validation &bull; Nov 2007</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 3:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">31/62</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:08</span></div><div class="totals-line"><span class="totals-name opponent">Akihiro Gono</span><span class="totals-stat">27/44</span><span class="totals-pct">61%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -423,7 +433,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pete Spratt</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 2:04 &bull; UFC Fight Night: Stout vs Fisher &bull; Jun 2007</div>
+                <div class="fight-event-label">UFC Fight Night: Stout vs Fisher &bull; Jun 2007</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 2:04</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tamdan McCrory</span><span class="totals-stat">8/14</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:39</span></div><div class="totals-line"><span class="totals-name opponent">Pete Spratt</span><span class="totals-stat">19/34</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -448,7 +459,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:07 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:48 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

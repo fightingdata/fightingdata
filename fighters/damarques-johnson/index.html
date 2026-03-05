@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gunnar Nelson</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:34 &bull; UFC on FUEL TV: Struve vs Miocic &bull; Sep 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Struve vs Miocic &bull; Sep 2012</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gunnar Nelson</span><span class="totals-stat">9/10</span><span class="totals-pct">90%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mike Swick</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:20 &bull; UFC on FOX: Shogun vs Vera &bull; Aug 2012</div>
+                <div class="fight-event-label">UFC on FOX: Shogun vs Vera &bull; Aug 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">17/53</span><span class="totals-pct">32%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:23</span></div><div class="totals-line"><span class="totals-name opponent">Mike Swick</span><span class="totals-stat">19/41</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. John Maguire</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:40 &bull; UFC on FUEL TV: Gustafsson vs Silva &bull; Apr 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Gustafsson vs Silva &bull; Apr 2012</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">15/25</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:45</span></div><div class="totals-line"><span class="totals-name opponent">John Maguire</span><span class="totals-stat">6/7</span><span class="totals-pct">86%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 6:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Clay Harvison</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:34 &bull; UFC on FOX: Velasquez vs Dos Santos &bull; Nov 2011</div>
+                <div class="fight-event-label">UFC on FOX: Velasquez vs Dos Santos &bull; Nov 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">6/20</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Clay Harvison</span><span class="totals-stat">6/21</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -309,7 +315,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Amir Sadollah</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:27 &bull; UFC Fight Night: Nogueira vs Davis &bull; Mar 2011</div>
+                <div class="fight-event-label">UFC Fight Night: Nogueira vs Davis &bull; Mar 2011</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">27/57</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:36</span></div><div class="totals-line"><span class="totals-name opponent">Amir Sadollah</span><span class="totals-stat">62/117</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -336,7 +343,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Guymon</div>
-                <div class="fight-meta">Submission (Injury) &bull; Rd 1, 3:22 &bull; UFC Fight Night: Fight for the Troops 2 &bull; Jan 2011</div>
+                <div class="fight-event-label">UFC Fight Night: Fight for the Troops 2 &bull; Jan 2011</div>
+                <div class="fight-meta">Submission (Injury) &bull; Rd 1, 3:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:06</span></div><div class="totals-line"><span class="totals-name opponent">Mike Guymon</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -360,7 +368,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Matthew Riddle</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:29 &bull; UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">9/27</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:47</span></div><div class="totals-line"><span class="totals-name opponent">Matthew Riddle</span><span class="totals-stat">42/83</span><span class="totals-pct">51%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 6:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -387,7 +396,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brad Blackburn</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 2:08 &bull; UFC 112: Invincible &bull; Apr 2010</div>
+                <div class="fight-event-label">UFC 112: Invincible &bull; Apr 2010</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 2:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">34/108</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:39</span></div><div class="totals-line"><span class="totals-name opponent">Brad Blackburn</span><span class="totals-stat">59/132</span><span class="totals-pct">45%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 3:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -417,7 +427,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Edgar Garcia</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 4:03 &bull; UFC 107: Penn vs Sanchez &bull; Dec 2009</div>
+                <div class="fight-event-label">UFC 107: Penn vs Sanchez &bull; Dec 2009</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 4:03</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">10/36</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Edgar Garcia</span><span class="totals-stat">17/48</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -441,7 +452,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. James Wilks</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:54 &bull; The Ultimate Fighter: United States vs. United Kingdom Finale &bull; Jun 2009</div>
+                <div class="fight-event-label">The Ultimate Fighter: United States vs. United Kingdom Finale &bull; Jun 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">DaMarques Johnson</span><span class="totals-stat">13/21</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:16</span></div><div class="totals-line"><span class="totals-name opponent">James Wilks</span><span class="totals-stat">17/29</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:15</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -463,7 +475,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:06 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:53 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

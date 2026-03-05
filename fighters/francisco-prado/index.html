@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nikolay Veretennikov</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francisco Prado</span><span class="totals-stat">47/77</span><span class="totals-pct">61%</span><span class="totals-stat">TD 3/10</span><span class="totals-stat">Ctrl 6:49</span></div><div class="totals-line"><span class="totals-name opponent">Nikolay Veretennikov</span><span class="totals-stat">56/105</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 2:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jake Matthews</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 312: Du Plessis vs. Strickland 2 &bull; Feb 2025</div>
+                <div class="fight-event-label">UFC 312: Du Plessis vs. Strickland 2 &bull; Feb 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francisco Prado</span><span class="totals-stat">59/146</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:16</span></div><div class="totals-line"><span class="totals-name opponent">Jake Matthews</span><span class="totals-stat">68/184</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Daniel Zellhuber</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Moreno vs. Royval 2 &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Moreno vs. Royval 2 &bull; Feb 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francisco Prado</span><span class="totals-stat">90/246</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Daniel Zellhuber</span><span class="totals-stat">120/272</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ottman Azaitar</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:05 &bull; UFC Fight Night: Holm vs. Bueno Silva &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Holm vs. Bueno Silva &bull; Jul 2023</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francisco Prado</span><span class="totals-stat">38/57</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:49</span></div><div class="totals-line"><span class="totals-name opponent">Ottman Azaitar</span><span class="totals-stat">14/33</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jamie Mullarkey</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 284: Makhachev vs. Volkanovski &bull; Feb 2023</div>
+                <div class="fight-event-label">UFC 284: Makhachev vs. Volkanovski &bull; Feb 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Francisco Prado</span><span class="totals-stat">28/75</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Jamie Mullarkey</span><span class="totals-stat">59/104</span><span class="totals-pct">57%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 4:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -349,7 +356,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:16 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:02 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -78,7 +78,7 @@
             margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #1f2937; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -86,6 +86,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -192,7 +194,7 @@
         <h2>Fighter Profiles</h2>
         <div class="bio-section"><div class="bio-card"><div class="bio-name">Josh Emmett</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">41</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'6"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">145 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">70"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div><div class="bio-divider"></div><div class="bio-card"><div class="bio-name">Kevin Vallejos</div><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">24</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'7"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">145 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">68"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Switch</span></div></div></div>
 
-        <div class="sample-warning">&#9888;&#65039; <strong>Kevin Vallejos</strong> has only 3 fights in our database — stats may not be fully representative.</div>
+        
 
         <h2>Career Statistics</h2>
         <table>
@@ -255,7 +257,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Youssef Zalal</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:38 &bull; Oct 2025</div>
+                <div class="fight-event-label">UFC 320: Ankalaev vs. Pereira 2 &bull; Oct 2025</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Emmett</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Youssef Zalal</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:48</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f0" style="display:none;">
@@ -279,7 +282,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lerone Murphy</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Apr 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Emmett vs. Murphy &bull; Apr 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Emmett</span><span class="totals-stat">41/143</span><span class="totals-pct">29%</span><span class="totals-stat">TD 4/11</span><span class="totals-stat">Ctrl 3:39</span></div><div class="totals-line"><span class="totals-name opponent">Lerone Murphy</span><span class="totals-stat">84/157</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f1" style="display:none;">
@@ -315,7 +319,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bryce Mitchell</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:57 &bull; Dec 2023</div>
+                <div class="fight-event-label">UFC 296: Edwards vs. Covington &bull; Dec 2023</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Josh Emmett</span><span class="totals-stat">2/10</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Bryce Mitchell</span><span class="totals-stat">0/3</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f2" style="display:none;">
@@ -340,7 +345,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Giga Chikadze</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Fist) &bull; Rd 2, 1:29 &bull; Dec 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Royval vs. Kape &bull; Dec 2025</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Fist) &bull; Rd 2, 1:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kevin Vallejos</span><span class="totals-stat">20/32</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:28</span></div><div class="totals-line"><span class="totals-name opponent">Giga Chikadze</span><span class="totals-stat">12/22</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
@@ -367,7 +373,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Danny Silva</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Aug 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Taira vs. Park &bull; Aug 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kevin Vallejos</span><span class="totals-stat">90/229</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:14</span></div><div class="totals-line"><span class="totals-name opponent">Danny Silva</span><span class="totals-stat">69/164</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f1" style="display:none;">
@@ -397,7 +404,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. SeungWoo Choi</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:09 &bull; Mar 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Vettori vs. Dolidze 2 &bull; Mar 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Kevin Vallejos</span><span class="totals-stat">14/27</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">SeungWoo Choi</span><span class="totals-stat">16/44</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f2" style="display:none;">
@@ -431,7 +439,7 @@
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-05 11:19:15 | Data source: UFCStats.com
+            Report generated: 2026-03-05 13:18:07 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

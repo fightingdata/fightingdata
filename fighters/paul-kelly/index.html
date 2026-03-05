@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 3:48 &bull; UFC 126: Silva vs Belfort &bull; Feb 2011</div>
+                <div class="fight-event-label">UFC 126: Silva vs Belfort &bull; Feb 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 3:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">22/75</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">37/74</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 3:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. TJ O'Brien</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:16 &bull; UFC 123: Rampage vs Machida &bull; Nov 2010</div>
+                <div class="fight-event-label">UFC 123: Rampage vs Machida &bull; Nov 2010</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:16</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">44/104</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:54</span></div><div class="totals-line"><span class="totals-name opponent">TJ O'Brien</span><span class="totals-stat">32/69</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jacob Volkmann</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">24/61</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:55</span></div><div class="totals-line"><span class="totals-name opponent">Jacob Volkmann</span><span class="totals-stat">32/79</span><span class="totals-pct">41%</span><span class="totals-stat">TD 6/7</span><span class="totals-stat">Ctrl 7:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Veach</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 3:41 &bull; UFC 112: Invincible &bull; Apr 2010</div>
+                <div class="fight-event-label">UFC 112: Invincible &bull; Apr 2010</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 3:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">47/73</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 5:25</span></div><div class="totals-line"><span class="totals-name opponent">Matt Veach</span><span class="totals-stat">4/9</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dennis Siver</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:53 &bull; UFC 105: Couture vs Vera &bull; Nov 2009</div>
+                <div class="fight-event-label">UFC 105: Couture vs Vera &bull; Nov 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">12/84</span><span class="totals-pct">14%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:56</span></div><div class="totals-line"><span class="totals-name opponent">Dennis Siver</span><span class="totals-stat">38/165</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rolando Delgado</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 99: The Comeback &bull; Jun 2009</div>
+                <div class="fight-event-label">UFC 99: The Comeback &bull; Jun 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">32/74</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 7:55</span></div><div class="totals-line"><span class="totals-name opponent">Rolando Delgado</span><span class="totals-stat">14/28</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 4:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Troy Mandaloniz</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 95: Sanchez vs Stevenson &bull; Feb 2009</div>
+                <div class="fight-event-label">UFC 95: Sanchez vs Stevenson &bull; Feb 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">71/190</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 6:23</span></div><div class="totals-line"><span class="totals-name opponent">Troy Mandaloniz</span><span class="totals-stat">38/82</span><span class="totals-pct">46%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 2:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -405,7 +414,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marcus Davis</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 2:16 &bull; UFC 89: Bisping vs Leben &bull; Oct 2008</div>
+                <div class="fight-event-label">UFC 89: Bisping vs Leben &bull; Oct 2008</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 2:16</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">3/56</span><span class="totals-pct">5%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:23</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Davis</span><span class="totals-stat">25/63</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -432,7 +442,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Taylor</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 80: Rapid Fire &bull; Jan 2008</div>
+                <div class="fight-event-label">UFC 80: Rapid Fire &bull; Jan 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paul Kelly</span><span class="totals-stat">70/139</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 12:07</span></div><div class="totals-line"><span class="totals-name opponent">Paul Taylor</span><span class="totals-stat">43/81</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -460,7 +471,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:53 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:36 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

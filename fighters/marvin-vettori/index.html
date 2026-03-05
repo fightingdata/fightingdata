@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brunno Ferreira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-event-label">UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">88/186</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:08</span></div><div class="totals-line"><span class="totals-name opponent">Brunno Ferreira</span><span class="totals-stat">77/149</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brendan Allen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">109/253</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:17</span></div><div class="totals-line"><span class="totals-name opponent">Brendan Allen</span><span class="totals-stat">111/224</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 1:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Roman Dolidze</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Vettori vs. Dolidze 2 &bull; Mar 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Vettori vs. Dolidze 2 &bull; Mar 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">111/220</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Roman Dolidze</span><span class="totals-stat">141/338</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -303,7 +308,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jared Cannonier</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Vettori vs. Cannonier &bull; Jun 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Vettori vs. Cannonier &bull; Jun 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">153/301</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Jared Cannonier</span><span class="totals-stat">241/411</span><span class="totals-pct">59%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 3:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -339,7 +345,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Roman Dolidze</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 286: Edwards vs. Usman 3 &bull; Mar 2023</div>
+                <div class="fight-event-label">UFC 286: Edwards vs. Usman 3 &bull; Mar 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">106/218</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Roman Dolidze</span><span class="totals-stat">71/192</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -369,7 +376,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Robert Whittaker</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Gane vs. Tuivasa &bull; Sep 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Gane vs. Tuivasa &bull; Sep 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">33/116</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Robert Whittaker</span><span class="totals-stat">74/166</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -399,7 +407,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paulo Costa</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Costa vs. Vettori &bull; Oct 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Costa vs. Vettori &bull; Oct 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">190/346</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 3:27</span></div><div class="totals-line"><span class="totals-name opponent">Paulo Costa</span><span class="totals-stat">163/260</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -435,7 +444,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Israel Adesanya</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 263: Adesanya vs. Vettori 2 &bull; Jun 2021</div>
+                <div class="fight-event-label">UFC 263: Adesanya vs. Vettori 2 &bull; Jun 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">58/176</span><span class="totals-pct">33%</span><span class="totals-stat">TD 4/14</span><span class="totals-stat">Ctrl 6:55</span></div><div class="totals-line"><span class="totals-name opponent">Israel Adesanya</span><span class="totals-stat">96/181</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -471,7 +481,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Holland</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Vettori vs. Holland &bull; Apr 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Vettori vs. Holland &bull; Apr 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">24/64</span><span class="totals-pct">38%</span><span class="totals-stat">TD 11/17</span><span class="totals-stat">Ctrl 20:01</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Holland</span><span class="totals-stat">37/103</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -507,7 +518,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jack Hermansson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Hermansson vs. Vettori &bull; Dec 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Hermansson vs. Vettori &bull; Dec 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">164/334</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 5:47</span></div><div class="totals-line"><span class="totals-name opponent">Jack Hermansson</span><span class="totals-stat">122/346</span><span class="totals-pct">35%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 0:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -543,7 +555,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Karl Roberson</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:17 &bull; UFC Fight Night: Eye vs. Calvillo &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Eye vs. Calvillo &bull; Jun 2020</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">45/64</span><span class="totals-pct">70%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:05</span></div><div class="totals-line"><span class="totals-name opponent">Karl Roberson</span><span class="totals-stat">4/16</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -567,7 +580,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Andrew Sanchez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Joanna vs. Waterson &bull; Oct 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Joanna vs. Waterson &bull; Oct 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">85/205</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:20</span></div><div class="totals-line"><span class="totals-name opponent">Andrew Sanchez</span><span class="totals-stat">39/185</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -597,7 +611,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cezar Ferreira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: De Randamie vs. Ladd &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC Fight Night: De Randamie vs. Ladd &bull; Jul 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">78/148</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:34</span></div><div class="totals-line"><span class="totals-name opponent">Cezar Ferreira</span><span class="totals-stat">39/88</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -627,7 +642,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Israel Adesanya</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Poirier vs. Gaethje &bull; Apr 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Poirier vs. Gaethje &bull; Apr 2018</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">46/154</span><span class="totals-pct">30%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 3:19</span></div><div class="totals-line"><span class="totals-name opponent">Israel Adesanya</span><span class="totals-stat">57/123</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -657,7 +673,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Omari Akhmedov</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC 219: Cyborg vs. Holm &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC 219: Cyborg vs. Holm &bull; Dec 2017</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">66/161</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:03</span></div><div class="totals-line"><span class="totals-name opponent">Omari Akhmedov</span><span class="totals-stat">51/174</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -687,7 +704,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Vitor Miranda</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Chiesa vs. Lee &bull; Jun 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Chiesa vs. Lee &bull; Jun 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">69/161</span><span class="totals-pct">43%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 3:44</span></div><div class="totals-line"><span class="totals-name opponent">Vitor Miranda</span><span class="totals-stat">51/161</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -717,7 +735,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Antonio Carlos Junior</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 207: Nunes vs. Rousey &bull; Dec 2016</div>
+                <div class="fight-event-label">UFC 207: Nunes vs. Rousey &bull; Dec 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">29/70</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:59</span></div><div class="totals-line"><span class="totals-name opponent">Antonio Carlos Junior</span><span class="totals-stat">28/75</span><span class="totals-pct">37%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 5:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -747,7 +766,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alberto Uda</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:30 &bull; UFC 202: Diaz vs. McGregor 2 &bull; Aug 2016</div>
+                <div class="fight-event-label">UFC 202: Diaz vs. McGregor 2 &bull; Aug 2016</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Marvin Vettori</span><span class="totals-stat">10/14</span><span class="totals-pct">71%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:26</span></div><div class="totals-line"><span class="totals-name opponent">Alberto Uda</span><span class="totals-stat">4/9</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -769,7 +789,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:43 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:28 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

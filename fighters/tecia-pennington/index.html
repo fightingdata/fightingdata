@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Denise Gomes</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bonfim vs. Brown &bull; Nov 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Bonfim vs. Brown &bull; Nov 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">58/125</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:32</span></div><div class="totals-line"><span class="totals-name opponent">Denise Gomes</span><span class="totals-stat">53/138</span><span class="totals-pct">38%</span><span class="totals-stat">TD 3/10</span><span class="totals-stat">Ctrl 3:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Luana Pinheiro</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Burns vs. Morales &bull; May 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Burns vs. Morales &bull; May 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">63/127</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:44</span></div><div class="totals-line"><span class="totals-name opponent">Luana Pinheiro</span><span class="totals-stat">40/110</span><span class="totals-pct">36%</span><span class="totals-stat">TD 5/10</span><span class="totals-stat">Ctrl 1:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Carla Esparza</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 307: Pereira vs. Rountree Jr. &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC 307: Pereira vs. Rountree Jr. &bull; Oct 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">80/150</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Carla Esparza</span><span class="totals-stat">39/123</span><span class="totals-pct">32%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 3:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tabatha Ricci</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Lewis vs. Nascimento &bull; May 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Nascimento &bull; May 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">80/219</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Tabatha Ricci</span><span class="totals-stat">54/143</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 5:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mackenzie Dern</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 273: Volkanovski vs. The Korean Zombie &bull; Apr 2022</div>
+                <div class="fight-event-label">UFC 273: Volkanovski vs. The Korean Zombie &bull; Apr 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">76/124</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 2:54</span></div><div class="totals-line"><span class="totals-name opponent">Mackenzie Dern</span><span class="totals-stat">50/156</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 2:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Angela Hill</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 265: Lewis vs. Gane &bull; Aug 2021</div>
+                <div class="fight-event-label">UFC 265: Lewis vs. Gane &bull; Aug 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">144/298</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Angela Hill</span><span class="totals-stat">96/188</span><span class="totals-pct">51%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 1:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -387,7 +395,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sam Hughes</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00 &bull; UFC 256: Figueiredo vs. Moreno &bull; Dec 2020</div>
+                <div class="fight-event-label">UFC 256: Figueiredo vs. Moreno &bull; Dec 2020</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">52/103</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Sam Hughes</span><span class="totals-stat">20/53</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brianna Fortino</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">74/160</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:09</span></div><div class="totals-line"><span class="totals-name opponent">Brianna Fortino</span><span class="totals-stat">34/68</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 4:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -441,7 +451,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marina Rodriguez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Shevchenko vs. Carmouche 2 &bull; Aug 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Shevchenko vs. Carmouche 2 &bull; Aug 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">41/108</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 1:28</span></div><div class="totals-line"><span class="totals-name opponent">Marina Rodriguez</span><span class="totals-stat">84/167</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -471,7 +482,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zhang Weili</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 235: Jones vs. Smith &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC 235: Jones vs. Smith &bull; Mar 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">30/62</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:09</span></div><div class="totals-line"><span class="totals-name opponent">Zhang Weili</span><span class="totals-stat">63/142</span><span class="totals-pct">44%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 4:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -501,7 +513,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joanna Jedrzejczyk</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Alvarez vs. Poirier 2 &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Alvarez vs. Poirier 2 &bull; Jul 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">33/78</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/10</span><span class="totals-stat">Ctrl 4:44</span></div><div class="totals-line"><span class="totals-name opponent">Joanna Jedrzejczyk</span><span class="totals-stat">62/166</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -531,7 +544,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jessica Andrade</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Emmett vs. Stephens &bull; Feb 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Emmett vs. Stephens &bull; Feb 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">69/150</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:23</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Andrade</span><span class="totals-stat">92/178</span><span class="totals-pct">52%</span><span class="totals-stat">TD 10/12</span><span class="totals-stat">Ctrl 7:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -561,7 +575,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michelle Waterson-Gomez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 218: Holloway vs. Aldo 2 &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC 218: Holloway vs. Aldo 2 &bull; Dec 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">95/173</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:55</span></div><div class="totals-line"><span class="totals-name opponent">Michelle Waterson-Gomez</span><span class="totals-stat">56/138</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 4:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -591,7 +606,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bec Rawlings</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Bermudez vs. The Korean Zombie &bull; Feb 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">81/189</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:10</span></div><div class="totals-line"><span class="totals-name opponent">Bec Rawlings</span><span class="totals-stat">37/151</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:50</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -621,7 +637,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rose Namajunas</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Teixeira vs Evans &bull; Apr 2016</div>
+                <div class="fight-event-label">UFC on FOX: Teixeira vs Evans &bull; Apr 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">61/121</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:45</span></div><div class="totals-line"><span class="totals-name opponent">Rose Namajunas</span><span class="totals-stat">46/156</span><span class="totals-pct">29%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -651,7 +668,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jocelyn Jones-Lybarger</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">77/133</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 5:36</span></div><div class="totals-line"><span class="totals-name opponent">Jocelyn Jones-Lybarger</span><span class="totals-stat">29/106</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 2:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -681,7 +699,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Angela Hill</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 188: Velasquez vs Werdum &bull; Jun 2015</div>
+                <div class="fight-event-label">UFC 188: Velasquez vs Werdum &bull; Jun 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">32/80</span><span class="totals-pct">40%</span><span class="totals-stat">TD 2/12</span><span class="totals-stat">Ctrl 9:04</span></div><div class="totals-line"><span class="totals-name opponent">Angela Hill</span><span class="totals-stat">27/68</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -711,7 +730,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Juliana Lima</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 0:53 &bull; The Ultimate Fighter: Redemption Finale &bull; Jul 2017</div>
+                <div class="fight-event-label">The Ultimate Fighter: Redemption Finale &bull; Jul 2017</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 0:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">15/23</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 3:07</span></div><div class="totals-line"><span class="totals-name opponent">Juliana Lima</span><span class="totals-stat">6/31</span><span class="totals-pct">19%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:48</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -738,7 +758,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Angela Magana</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: A Champion Will Be Crowned Finale &bull; Dec 2014</div>
+                <div class="fight-event-label">The Ultimate Fighter: A Champion Will Be Crowned Finale &bull; Dec 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tecia Pennington</span><span class="totals-stat">96/196</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Angela Magana</span><span class="totals-stat">37/145</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -766,7 +787,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:07 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:49 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

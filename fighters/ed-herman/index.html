@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zak Cummings</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:13 &bull; UFC Fight Night: Holloway vs. Allen &bull; Apr 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Holloway vs. Allen &bull; Apr 2023</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">54/117</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Zak Cummings</span><span class="totals-stat">100/175</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alonzo Menifield</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 265: Lewis vs. Gane &bull; Aug 2021</div>
+                <div class="fight-event-label">UFC 265: Lewis vs. Gane &bull; Aug 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">41/126</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Alonzo Menifield</span><span class="totals-stat">93/140</span><span class="totals-pct">66%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Rodriguez</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 3, 2:41 &bull; UFC Fight Night: Waterson vs. Hill &bull; Sep 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Waterson vs. Hill &bull; Sep 2020</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 3, 2:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">40/73</span><span class="totals-pct">55%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 4:09</span></div><div class="totals-line"><span class="totals-name opponent">Mike Rodriguez</span><span class="totals-stat">89/124</span><span class="totals-pct">72%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Khadis Ibragimov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Zabit vs. Kattar &bull; Nov 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Zabit vs. Kattar &bull; Nov 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">81/140</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 2:19</span></div><div class="totals-line"><span class="totals-name opponent">Khadis Ibragimov</span><span class="totals-stat">53/102</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 6:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Patrick Cummins</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 3:39 &bull; UFC Fight Night: Dos Anjos vs. Lee &bull; May 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Lee &bull; May 2019</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 3:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">11/35</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Patrick Cummins</span><span class="totals-stat">22/33</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gian Villante</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Oezdemir vs. Smith &bull; Oct 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Oezdemir vs. Smith &bull; Oct 2018</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">84/223</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Gian Villante</span><span class="totals-stat">81/217</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nikita Krylov</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 0:40 &bull; UFC 201: Lawler vs. Woodley &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC 201: Lawler vs. Woodley &bull; Jul 2016</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 0:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">26/55</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Nikita Krylov</span><span class="totals-stat">60/118</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -408,7 +417,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Boetsch</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 1:39 &bull; UFC Fight Night: Dillashaw vs Cruz &bull; Jan 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Dillashaw vs Cruz &bull; Jan 2016</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 1:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">47/82</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Tim Boetsch</span><span class="totals-stat">27/64</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -435,7 +445,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Derek Brunson</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:36 &bull; UFC 183: Silva vs Diaz &bull; Jan 2015</div>
+                <div class="fight-event-label">UFC 183: Silva vs Diaz &bull; Jan 2015</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">0/4</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Derek Brunson</span><span class="totals-stat">11/18</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -459,7 +470,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rafael Natal</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Brown vs Silva &bull; May 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Brown vs Silva &bull; May 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">51/87</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:57</span></div><div class="totals-line"><span class="totals-name opponent">Rafael Natal</span><span class="totals-stat">35/73</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 4:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -489,7 +501,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Thales Leites</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 167: St-Pierre vs Hendricks &bull; Nov 2013</div>
+                <div class="fight-event-label">UFC 167: St-Pierre vs Hendricks &bull; Nov 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">14/37</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:15</span></div><div class="totals-line"><span class="totals-name opponent">Thales Leites</span><span class="totals-stat">20/35</span><span class="totals-pct">57%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 11:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -519,7 +532,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Trevor Smith</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs Moraga &bull; Jul 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs Moraga &bull; Jul 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">73/129</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 3:17</span></div><div class="totals-line"><span class="totals-name opponent">Trevor Smith</span><span class="totals-stat">87/108</span><span class="totals-pct">81%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 3:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -549,7 +563,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Jake Shields</div>
-                <div class="fight-meta">Overturned &bull; Rd 3, 5:00 &bull; UFC 150: Henderson vs Edgar II &bull; Aug 2012</div>
+                <div class="fight-event-label">UFC 150: Henderson vs Edgar II &bull; Aug 2012</div>
+                <div class="fight-meta">Overturned &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">21/50</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:57</span></div><div class="totals-line"><span class="totals-name opponent">Jake Shields</span><span class="totals-stat">33/47</span><span class="totals-pct">70%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 9:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -579,7 +594,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Clifford Starks</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:43 &bull; UFC 143: Diaz vs Condit &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC 143: Diaz vs Condit &bull; Feb 2012</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">28/57</span><span class="totals-pct">49%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:23</span></div><div class="totals-line"><span class="totals-name opponent">Clifford Starks</span><span class="totals-stat">16/36</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -606,7 +622,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kyle Noke</div>
-                <div class="fight-meta">Submission (Heel Hook) &bull; Rd 1, 4:15 &bull; UFC Live: Hardy vs Lytle &bull; Aug 2011</div>
+                <div class="fight-event-label">UFC Live: Hardy vs Lytle &bull; Aug 2011</div>
+                <div class="fight-meta">Submission (Heel Hook) &bull; Rd 1, 4:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">Kyle Noke</span><span class="totals-stat">12/13</span><span class="totals-pct">92%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 3:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -630,7 +647,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Aaron Simpson</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 0:17 &bull; UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-event-label">UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 0:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">7/32</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Aaron Simpson</span><span class="totals-stat">25/50</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 3:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -657,7 +675,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. David Loiseau</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 97: Redemption &bull; Apr 2009</div>
+                <div class="fight-event-label">UFC 97: Redemption &bull; Apr 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">71/84</span><span class="totals-pct">85%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 11:56</span></div><div class="totals-line"><span class="totals-name opponent">David Loiseau</span><span class="totals-stat">6/16</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -687,7 +706,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alan Belcher</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Diaz vs Neer &bull; Sep 2008</div>
+                <div class="fight-event-label">UFC Fight Night: Diaz vs Neer &bull; Sep 2008</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">43/130</span><span class="totals-pct">33%</span><span class="totals-stat">TD 5/12</span><span class="totals-stat">Ctrl 4:47</span></div><div class="totals-line"><span class="totals-name opponent">Alan Belcher</span><span class="totals-stat">54/90</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -717,7 +737,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Demian Maia</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 2:27 &bull; UFC 83: Serra vs St-Pierre 2 &bull; Apr 2008</div>
+                <div class="fight-event-label">UFC 83: Serra vs St-Pierre 2 &bull; Apr 2008</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 2:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">15/32</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:47</span></div><div class="totals-line"><span class="totals-name opponent">Demian Maia</span><span class="totals-stat">15/21</span><span class="totals-pct">71%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 3:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -744,7 +765,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joe Doerksen</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:39 &bull; UFC 78: Validation &bull; Nov 2007</div>
+                <div class="fight-event-label">UFC 78: Validation &bull; Nov 2007</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">43/74</span><span class="totals-pct">58%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 6:33</span></div><div class="totals-line"><span class="totals-name opponent">Joe Doerksen</span><span class="totals-stat">9/19</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -774,7 +796,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Scott Smith</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:25 &bull; UFC 72: Victory &bull; Jun 2007</div>
+                <div class="fight-event-label">UFC 72: Victory &bull; Jun 2007</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">24/43</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 6:22</span></div><div class="totals-line"><span class="totals-name opponent">Scott Smith</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -801,7 +824,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Price</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:58 &bull; UFC Fight Night: Evans vs Salmon &bull; Jan 2007</div>
+                <div class="fight-event-label">UFC Fight Night: Evans vs Salmon &bull; Jan 2007</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">5/9</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:43</span></div><div class="totals-line"><span class="totals-name opponent">Chris Price</span><span class="totals-stat">5/5</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -825,7 +849,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. CB Dollaway</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Redemption Finale &bull; Jul 2017</div>
+                <div class="fight-event-label">The Ultimate Fighter: Redemption Finale &bull; Jul 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">24/41</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:45</span></div><div class="totals-line"><span class="totals-name opponent">CB Dollaway</span><span class="totals-stat">54/72</span><span class="totals-pct">75%</span><span class="totals-stat">TD 6/6</span><span class="totals-stat">Ctrl 9:33</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -855,7 +880,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Credeur</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:48 &bull; The Ultimate Fighter: Team Lesnar vs Team dos Santos Finale &bull; Jun 2011</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Lesnar vs Team dos Santos Finale &bull; Jun 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">11/19</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Tim Credeur</span><span class="totals-stat">11/24</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -879,7 +905,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jason MacDonald</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:43 &bull; Ortiz vs Shamrock 3: The Final Chapter &bull; Oct 2006</div>
+                <div class="fight-event-label">Ortiz vs Shamrock 3: The Final Chapter &bull; Oct 2006</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:18</span></div><div class="totals-line"><span class="totals-name opponent">Jason MacDonald</span><span class="totals-stat">5/7</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:57</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-2" style="display:none;">
@@ -903,7 +930,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kendall Grove</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Ortiz vs. Team Shamrock Finale &bull; Jun 2006</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Ortiz vs. Team Shamrock Finale &bull; Jun 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">33/57</span><span class="totals-pct">58%</span><span class="totals-stat">TD 5/10</span><span class="totals-stat">Ctrl 9:43</span></div><div class="totals-line"><span class="totals-name opponent">Kendall Grove</span><span class="totals-stat">25/39</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:23</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-3" style="display:none;">
@@ -933,7 +961,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jacare Souza</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:10 &bull; Strikeforce - Marquardt vs Saffiedine &bull; Jan 2013</div>
+                <div class="fight-event-label">Strikeforce - Marquardt vs Saffiedine &bull; Jan 2013</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Ed Herman</span><span class="totals-stat">10/34</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jacare Souza</span><span class="totals-stat">14/27</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:14</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -955,7 +984,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:12 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:59 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

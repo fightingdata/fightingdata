@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Matt Wiman</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Edgar vs Swanson &bull; Nov 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Edgar vs Swanson &bull; Nov 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Isaac Vallie-Flagg</span><span class="totals-stat">80/121</span><span class="totals-pct">66%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 5:36</span></div><div class="totals-line"><span class="totals-name opponent">Matt Wiman</span><span class="totals-stat">68/101</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 5:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Takanori Gomi</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 172: Jones vs Teixeira &bull; Apr 2014</div>
+                <div class="fight-event-label">UFC 172: Jones vs Teixeira &bull; Apr 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Isaac Vallie-Flagg</span><span class="totals-stat">107/217</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:11</span></div><div class="totals-line"><span class="totals-name opponent">Takanori Gomi</span><span class="totals-stat">130/240</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Elias Silverio</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rockhold vs Philippou &bull; Jan 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Rockhold vs Philippou &bull; Jan 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Isaac Vallie-Flagg</span><span class="totals-stat">21/59</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Elias Silverio</span><span class="totals-stat">81/133</span><span class="totals-pct">61%</span><span class="totals-stat">TD 4/4</span><span class="totals-stat">Ctrl 11:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yves Edwards</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 156: Aldo vs Edgar &bull; Feb 2013</div>
+                <div class="fight-event-label">UFC 156: Aldo vs Edgar &bull; Feb 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Isaac Vallie-Flagg</span><span class="totals-stat">76/222</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:14</span></div><div class="totals-line"><span class="totals-name opponent">Yves Edwards</span><span class="totals-stat">58/115</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brian Melancon</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; Strikeforce - Overeem vs. Werdum &bull; Jun 2011</div>
+                <div class="fight-event-label">Strikeforce - Overeem vs. Werdum &bull; Jun 2011</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Isaac Vallie-Flagg</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -335,7 +342,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gesias Cavalcante</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; Strikeforce - Barnett vs Cormier &bull; </div>
+                <div class="fight-event-label">Strikeforce - Barnett vs Cormier &bull; </div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Isaac Vallie-Flagg</span><span class="totals-stat">133/252</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:53</span></div><div class="totals-line"><span class="totals-name opponent">Gesias Cavalcante</span><span class="totals-stat">83/179</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 2:39</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -363,7 +371,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:21 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:07 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

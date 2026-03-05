@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nathaniel Wood</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Aspinall &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Aspinall &bull; Jul 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">51/167</span><span class="totals-pct">31%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 0:52</span></div><div class="totals-line"><span class="totals-name opponent">Nathaniel Wood</span><span class="totals-stat">97/159</span><span class="totals-pct">61%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. TJ Brown</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Kattar vs. Chikadze &bull; Jan 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Kattar vs. Chikadze &bull; Jan 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">46/107</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:42</span></div><div class="totals-line"><span class="totals-name opponent">TJ Brown</span><span class="totals-stat">58/99</span><span class="totals-pct">59%</span><span class="totals-stat">TD 6/8</span><span class="totals-stat">Ctrl 7:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Damon Jackson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dern vs. Rodriguez &bull; Oct 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Dern vs. Rodriguez &bull; Oct 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">34/87</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:18</span></div><div class="totals-line"><span class="totals-name opponent">Damon Jackson</span><span class="totals-stat">41/87</span><span class="totals-pct">47%</span><span class="totals-stat">TD 6/12</span><span class="totals-stat">Ctrl 10:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Justin Jaynes</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Gane vs. Volkov &bull; Jun 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Gane vs. Volkov &bull; Jun 2021</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">51/182</span><span class="totals-pct">28%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:37</span></div><div class="totals-line"><span class="totals-name opponent">Justin Jaynes</span><span class="totals-stat">44/92</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Darrick Minner</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Lewis &bull; Feb 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Lewis &bull; Feb 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">15/25</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Darrick Minner</span><span class="totals-stat">45/60</span><span class="totals-pct">75%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 12:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kevin Aguilar</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Eye vs. Calvillo &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Eye vs. Calvillo &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">69/173</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Aguilar</span><span class="totals-stat">53/135</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -387,7 +395,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Bryce Mitchell</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 249: Ferguson vs. Gaethje &bull; May 2020</div>
+                <div class="fight-event-label">UFC 249: Ferguson vs. Gaethje &bull; May 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">5/10</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Bryce Mitchell</span><span class="totals-stat">40/49</span><span class="totals-pct">82%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 12:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -417,7 +426,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Manny Bermudez</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:46 &bull; UFC Fight Night: Reyes vs. Weidman &bull; Oct 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Reyes vs. Weidman &bull; Oct 2019</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">6/8</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Manny Bermudez</span><span class="totals-stat">27/38</span><span class="totals-pct">71%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -441,7 +451,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shane Burgos</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:59 &bull; UFC 210: Cormier vs. Johnson 2 &bull; Apr 2017</div>
+                <div class="fight-event-label">UFC 210: Cormier vs. Johnson 2 &bull; Apr 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">86/261</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 0:44</span></div><div class="totals-line"><span class="totals-name opponent">Shane Burgos</span><span class="totals-stat">77/167</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -471,7 +482,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kyle Bochniak</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dillashaw vs Cruz &bull; Jan 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Dillashaw vs Cruz &bull; Jan 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">92/232</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 1:03</span></div><div class="totals-line"><span class="totals-name opponent">Kyle Bochniak</span><span class="totals-stat">52/129</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -501,7 +513,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yair Rodriguez</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 188: Velasquez vs Werdum &bull; Jun 2015</div>
+                <div class="fight-event-label">UFC 188: Velasquez vs Werdum &bull; Jun 2015</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">39/79</span><span class="totals-pct">49%</span><span class="totals-stat">TD 5/14</span><span class="totals-stat">Ctrl 8:45</span></div><div class="totals-line"><span class="totals-name opponent">Yair Rodriguez</span><span class="totals-stat">56/100</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -531,7 +544,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sean Soriano</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 3, 4:43 &bull; UFC Fight Night: McGregor vs Siver &bull; Jan 2015</div>
+                <div class="fight-event-label">UFC Fight Night: McGregor vs Siver &bull; Jan 2015</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 3, 4:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">37/102</span><span class="totals-pct">36%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 5:36</span></div><div class="totals-line"><span class="totals-name opponent">Sean Soriano</span><span class="totals-stat">69/109</span><span class="totals-pct">63%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 3:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -561,7 +575,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dennis Siver</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Nelson vs Story &bull; Oct 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Nelson vs Story &bull; Oct 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Charles Rosa</span><span class="totals-stat">22/91</span><span class="totals-pct">24%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:55</span></div><div class="totals-line"><span class="totals-name opponent">Dennis Siver</span><span class="totals-stat">33/86</span><span class="totals-pct">38%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 8:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -589,7 +604,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:02 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:50 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

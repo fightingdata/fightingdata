@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kayla Harrison</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 2, 4:55 &bull; UFC 316: Dvalishvili vs. O'Malley 2 &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC 316: Dvalishvili vs. O'Malley 2 &bull; Jun 2025</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 2, 4:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">9/30</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kayla Harrison</span><span class="totals-stat">30/54</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 6:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Raquel Pennington</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 307: Pereira vs. Rountree Jr. &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC 307: Pereira vs. Rountree Jr. &bull; Oct 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">92/260</span><span class="totals-pct">35%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 5:40</span></div><div class="totals-line"><span class="totals-name opponent">Raquel Pennington</span><span class="totals-stat">92/317</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -270,7 +274,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Amanda Nunes</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 277: Pena vs. Nunes 2 &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC 277: Pena vs. Nunes 2 &bull; Jul 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">60/154</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Amanda Nunes</span><span class="totals-stat">85/152</span><span class="totals-pct">56%</span><span class="totals-stat">TD 6/8</span><span class="totals-stat">Ctrl 11:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -306,7 +311,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Amanda Nunes</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 3:26 &bull; UFC 269: Oliveira vs. Poirier &bull; Dec 2021</div>
+                <div class="fight-event-label">UFC 269: Oliveira vs. Poirier &bull; Dec 2021</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 3:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">79/135</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Amanda Nunes</span><span class="totals-stat">46/99</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -333,7 +339,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sara McMann</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 3:39 &bull; UFC 257: Poirier vs. McGregor &bull; Jan 2021</div>
+                <div class="fight-event-label">UFC 257: Poirier vs. McGregor &bull; Jan 2021</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 3:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">38/76</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:55</span></div><div class="totals-line"><span class="totals-name opponent">Sara McMann</span><span class="totals-stat">21/54</span><span class="totals-pct">39%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 7:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -363,7 +370,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Germaine de Randamie</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 3:25 &bull; UFC Fight Night: Holm vs. Aldana &bull; Oct 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Holm vs. Aldana &bull; Oct 2020</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 3:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">27/91</span><span class="totals-pct">30%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 5:55</span></div><div class="totals-line"><span class="totals-name opponent">Germaine de Randamie</span><span class="totals-stat">37/91</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -393,7 +401,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nicco Montano</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: De Randamie vs. Ladd &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC Fight Night: De Randamie vs. Ladd &bull; Jul 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">45/90</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 4:36</span></div><div class="totals-line"><span class="totals-name opponent">Nicco Montano</span><span class="totals-stat">38/79</span><span class="totals-pct">48%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 6:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -423,7 +432,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Valentina Shevchenko</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:29 &bull; UFC on FOX: Shevchenko vs. Pena &bull; Jan 2017</div>
+                <div class="fight-event-label">UFC on FOX: Shevchenko vs. Pena &bull; Jan 2017</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">27/35</span><span class="totals-pct">77%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 6:01</span></div><div class="totals-line"><span class="totals-name opponent">Valentina Shevchenko</span><span class="totals-stat">13/17</span><span class="totals-pct">76%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -450,7 +460,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cat Zingano</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 200: Tate vs Nunes &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC 200: Tate vs Nunes &bull; Jul 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">12/21</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 4:52</span></div><div class="totals-line"><span class="totals-name opponent">Cat Zingano</span><span class="totals-stat">11/23</span><span class="totals-pct">48%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 9:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -480,7 +491,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jessica Eye</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 192: Cormier vs Gustafsson &bull; Oct 2015</div>
+                <div class="fight-event-label">UFC 192: Cormier vs Gustafsson &bull; Oct 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">34/68</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 7:19</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Eye</span><span class="totals-stat">30/54</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 5:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -510,7 +522,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Milana Dudieva</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 3:59 &bull; UFC Fight Night: Mendes vs Lamas &bull; Apr 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Mendes vs Lamas &bull; Apr 2015</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 3:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">37/73</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:55</span></div><div class="totals-line"><span class="totals-name opponent">Milana Dudieva</span><span class="totals-stat">0/5</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -534,7 +547,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jessica Rakoczy</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59 &bull; The Ultimate Fighter: Team Rousey vs. Team Tate Finale &bull; Nov 2013</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Rousey vs. Team Tate Finale &bull; Nov 2013</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Julianna Pena</span><span class="totals-stat">33/76</span><span class="totals-pct">43%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 4:29</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Rakoczy</span><span class="totals-stat">4/5</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -556,7 +570,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:32 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:17 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

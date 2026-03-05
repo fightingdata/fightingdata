@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jamey-Lyn Horth</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Usman vs. Buckley &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Usman vs. Buckley &bull; Jun 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">36/119</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name opponent">Jamey-Lyn Horth</span><span class="totals-stat">101/167</span><span class="totals-pct">60%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Talita Alencar</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Emmett vs. Murphy &bull; Apr 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Emmett vs. Murphy &bull; Apr 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">10/34</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Talita Alencar</span><span class="totals-stat">45/75</span><span class="totals-pct">60%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 12:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jaqueline Amorim</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 3:28 &bull; UFC Fight Night: Burns vs. Brady &bull; Sep 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Burns vs. Brady &bull; Sep 2024</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 3:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jaqueline Amorim</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Emily Ducote</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Barboza vs. Murphy &bull; May 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Barboza vs. Murphy &bull; May 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">109/293</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Emily Ducote</span><span class="totals-stat">143/214</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kanako Murata</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dawson vs. Green &bull; Oct 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Dawson vs. Green &bull; Oct 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">31/65</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:42</span></div><div class="totals-line"><span class="totals-name opponent">Kanako Murata</span><span class="totals-stat">34/64</span><span class="totals-pct">53%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 10:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Karolina Kowalkiewicz</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dern vs. Hill &bull; May 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Dern vs. Hill &bull; May 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">68/221</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Karolina Kowalkiewicz</span><span class="totals-stat">139/237</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Maria Oliveira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Nzechukwu vs. Cutelaba &bull; Nov 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Nzechukwu vs. Cutelaba &bull; Nov 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">55/80</span><span class="totals-pct">69%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 7:59</span></div><div class="totals-line"><span class="totals-name opponent">Maria Oliveira</span><span class="totals-stat">83/154</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jinh Yu Frey</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Tsarukyan vs. Gamrot &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Tsarukyan vs. Gamrot &bull; Jun 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">66/139</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 4:14</span></div><div class="totals-line"><span class="totals-name opponent">Jinh Yu Frey</span><span class="totals-stat">62/133</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -441,7 +451,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Silvana Gomez Juarez</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:25 &bull; UFC 270: Ngannou vs. Gane &bull; Jan 2022</div>
+                <div class="fight-event-label">UFC 270: Ngannou vs. Gane &bull; Jan 2022</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">4/12</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Silvana Gomez Juarez</span><span class="totals-stat">10/18</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -465,7 +476,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. JJ Aldrich</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Barboza vs. Chikadze &bull; Aug 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Barboza vs. Chikadze &bull; Aug 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">70/162</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 1:53</span></div><div class="totals-line"><span class="totals-name opponent">JJ Aldrich</span><span class="totals-stat">93/134</span><span class="totals-pct">69%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -495,7 +507,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cory McKenna</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; DWCS 4.2 &bull; Aug 2020</div>
+                <div class="fight-event-label">DWCS 4.2 &bull; Aug 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vanessa Demopoulos</span><span class="totals-stat">24/58</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">Cory McKenna</span><span class="totals-stat">47/95</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 11:07</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -523,7 +536,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:11 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:52 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

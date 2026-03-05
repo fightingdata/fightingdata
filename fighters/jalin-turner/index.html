@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Edson Barboza</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:24 &bull; UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-event-label">UFC 323: Dvalishvili vs. Yan 2 &bull; Dec 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">39/66</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Edson Barboza</span><span class="totals-stat">10/20</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ignacio Bahamondes</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:29 &bull; UFC 313: Pereira vs. Ankalaev &bull; Mar 2025</div>
+                <div class="fight-event-label">UFC 313: Pereira vs. Ankalaev &bull; Mar 2025</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">7/20</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:43</span></div><div class="totals-line"><span class="totals-name opponent">Ignacio Bahamondes</span><span class="totals-stat">10/16</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Renato Moicano</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:11 &bull; UFC 300: Pereira vs. Hill &bull; Apr 2024</div>
+                <div class="fight-event-label">UFC 300: Pereira vs. Hill &bull; Apr 2024</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:11</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">16/40</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Renato Moicano</span><span class="totals-stat">36/67</span><span class="totals-pct">54%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 5:50</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -282,7 +287,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. King Green</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:49 &bull; UFC Fight Night: Dariush vs. Tsarukyan &bull; Dec 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Dariush vs. Tsarukyan &bull; Dec 2023</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">33/60</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">King Green</span><span class="totals-stat">15/26</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -306,7 +312,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dan Hooker</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 290 &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC 290 &bull; Jul 2023</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">100/177</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:18</span></div><div class="totals-line"><span class="totals-name opponent">Dan Hooker</span><span class="totals-stat">125/197</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 3:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -336,7 +343,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mateusz Gamrot</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 285: Jones vs. Gane &bull; Mar 2023</div>
+                <div class="fight-event-label">UFC 285: Jones vs. Gane &bull; Mar 2023</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">40/97</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:32</span></div><div class="totals-line"><span class="totals-name opponent">Mateusz Gamrot</span><span class="totals-stat">29/42</span><span class="totals-pct">69%</span><span class="totals-stat">TD 4/12</span><span class="totals-stat">Ctrl 6:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -366,7 +374,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brad Riddell</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 0:45 &bull; UFC 276: Adesanya vs. Cannonier &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC 276: Adesanya vs. Cannonier &bull; Jul 2022</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 0:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">3/5</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">Brad Riddell</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -390,7 +399,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jamie Mullarkey</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:46 &bull; UFC 272: Covington vs. Masvidal &bull; Mar 2022</div>
+                <div class="fight-event-label">UFC 272: Covington vs. Masvidal &bull; Mar 2022</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">52/111</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Jamie Mullarkey</span><span class="totals-stat">35/59</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -417,7 +427,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Uros Medic</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:01 &bull; UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">25/47</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:24</span></div><div class="totals-line"><span class="totals-name opponent">Uros Medic</span><span class="totals-stat">6/11</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -441,7 +452,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brok Weaver</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 4:20 &bull; UFC Fight Night: Waterson vs. Hill &bull; Sep 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Waterson vs. Hill &bull; Sep 2020</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 4:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">66/152</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:47</span></div><div class="totals-line"><span class="totals-name opponent">Brok Weaver</span><span class="totals-stat">56/80</span><span class="totals-pct">70%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 0:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -468,7 +480,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Culibao</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:01 &bull; UFC Fight Night: Felder vs. Hooker &bull; Feb 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Felder vs. Hooker &bull; Feb 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">55/91</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 4:21</span></div><div class="totals-line"><span class="totals-name opponent">Josh Culibao</span><span class="totals-stat">12/28</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -495,7 +508,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Matt Frevola</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 236: Holloway vs. Poirier 2 &bull; Apr 2019</div>
+                <div class="fight-event-label">UFC 236: Holloway vs. Poirier 2 &bull; Apr 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">35/116</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:06</span></div><div class="totals-line"><span class="totals-name opponent">Matt Frevola</span><span class="totals-stat">31/77</span><span class="totals-pct">40%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 5:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -525,7 +539,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Callan Potter</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 0:53 &bull; UFC 234: Adesanya vs. Silva &bull; Feb 2019</div>
+                <div class="fight-event-label">UFC 234: Adesanya vs. Silva &bull; Feb 2019</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 0:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">9/17</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Callan Potter</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -549,7 +564,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Vicente Luque</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:52 &bull; UFC 229: Khabib vs. McGregor &bull; Oct 2018</div>
+                <div class="fight-event-label">UFC 229: Khabib vs. McGregor &bull; Oct 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">31/58</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Vicente Luque</span><span class="totals-stat">41/64</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -573,7 +589,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Max Mustaki</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00 &bull; DWCS 2.4 &bull; Jul 2018</div>
+                <div class="fight-event-label">DWCS 2.4 &bull; Jul 2018</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jalin Turner</span><span class="totals-stat">65/120</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Max Mustaki</span><span class="totals-stat">41/82</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -595,7 +612,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:23 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:09 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gian Villante</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:56 &bull; UFC 193: Rousey vs Holm &bull; Nov 2015</div>
+                <div class="fight-event-label">UFC 193: Rousey vs Holm &bull; Nov 2015</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">6/32</span><span class="totals-pct">19%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gian Villante</span><span class="totals-stat">19/34</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sean O'Connell</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:56 &bull; UFC Fight Night: Miocic vs Hunt &bull; May 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Miocic vs Hunt &bull; May 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">3/5</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Sean O'Connell</span><span class="totals-stat">20/38</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Guto Inocente</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:46 &bull; UFC Fight Night: Rockhold vs Bisping &bull; Nov 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Rockhold vs Bisping &bull; Nov 2014</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">11/17</span><span class="totals-pct">65%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:41</span></div><div class="totals-line"><span class="totals-name opponent">Guto Inocente</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -279,7 +284,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ryan Bader</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hunt vs Bigfoot &bull; Dec 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Hunt vs Bigfoot &bull; Dec 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">9/37</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ryan Bader</span><span class="totals-stat">70/100</span><span class="totals-pct">70%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 12:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -309,7 +315,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Vinny Magalhaes</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:14 &bull; UFC 163: Aldo vs Jung &bull; Aug 2013</div>
+                <div class="fight-event-label">UFC 163: Aldo vs Jung &bull; Aug 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">8/13</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Vinny Magalhaes</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -333,7 +340,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ryan Jimmo</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:07 &bull; UFC 149: Faber vs Barao &bull; Jul 2012</div>
+                <div class="fight-event-label">UFC 149: Faber vs Barao &bull; Jul 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ryan Jimmo</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -357,7 +365,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nick Penner</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59 &bull; UFC on FX: Alves vs Kampmann &bull; Mar 2012</div>
+                <div class="fight-event-label">UFC on FX: Alves vs Kampmann &bull; Mar 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">25/45</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:28</span></div><div class="totals-line"><span class="totals-name opponent">Nick Penner</span><span class="totals-stat">5/22</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -381,7 +390,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cyrille Diabate</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 3:09 &bull; UFC 138: Leben vs Munoz &bull; Nov 2011</div>
+                <div class="fight-event-label">UFC 138: Leben vs Munoz &bull; Nov 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 3:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">17/38</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 4:04</span></div><div class="totals-line"><span class="totals-name opponent">Cyrille Diabate</span><span class="totals-stat">17/37</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -408,7 +418,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tom Blackledge</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:45 &bull; UFC 127: Penn vs Fitch &bull; Feb 2011</div>
+                <div class="fight-event-label">UFC 127: Penn vs Fitch &bull; Feb 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">7/13</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:08</span></div><div class="totals-line"><span class="totals-name opponent">Tom Blackledge</span><span class="totals-stat">8/13</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -432,7 +443,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mirko Filipovic</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00 &bull; UFC 110: Nogueira vs Velasquez &bull; Feb 2010</div>
+                <div class="fight-event-label">UFC 110: Nogueira vs Velasquez &bull; Feb 2010</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">9/25</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/11</span><span class="totals-stat">Ctrl 0:39</span></div><div class="totals-line"><span class="totals-name opponent">Mirko Filipovic</span><span class="totals-stat">29/63</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -459,7 +471,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Christian Wellisch</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 66: Liddell vs Ortiz 2 &bull; Dec 2006</div>
+                <div class="fight-event-label">UFC 66: Liddell vs Ortiz 2 &bull; Dec 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">48/107</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/11</span><span class="totals-stat">Ctrl 4:17</span></div><div class="totals-line"><span class="totals-name opponent">Christian Wellisch</span><span class="totals-stat">61/206</span><span class="totals-pct">30%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -489,7 +502,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jeff Monson</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:42 &bull; UFC 61: Bitter Rivals &bull; Jul 2006</div>
+                <div class="fight-event-label">UFC 61: Bitter Rivals &bull; Jul 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Anthony Perosh</span><span class="totals-stat">8/17</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Jeff Monson</span><span class="totals-stat">18/26</span><span class="totals-pct">69%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -511,7 +525,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:53 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:42 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Frank Mir</div>
-                <div class="fight-meta">Submission (Other - Lock) &bull; Rd 1, 0:46 &bull; UFC 36: Worlds Collide &bull; Mar 2002</div>
+                <div class="fight-event-label">UFC 36: Worlds Collide &bull; Mar 2002</div>
+                <div class="fight-meta">Submission (Other - Lock) &bull; Rd 1, 0:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pete Williams</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Frank Mir</span><span class="totals-stat">4/6</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ricco Rodriguez</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:02 &bull; UFC 34: High Voltage &bull; Nov 2001</div>
+                <div class="fight-event-label">UFC 34: High Voltage &bull; Nov 2001</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:02</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pete Williams</span><span class="totals-stat">4/6</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:48</span></div><div class="totals-line"><span class="totals-name opponent">Ricco Rodriguez</span><span class="totals-stat">26/43</span><span class="totals-pct">60%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 7:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Semmy Schilt</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:28 &bull; UFC 31: Locked and Loaded &bull; May 2001</div>
+                <div class="fight-event-label">UFC 31: Locked and Loaded &bull; May 2001</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pete Williams</span><span class="totals-stat">6/9</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 4:47</span></div><div class="totals-line"><span class="totals-name opponent">Semmy Schilt</span><span class="totals-stat">15/26</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kevin Randleman</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 23: Ultimate Japan 2 &bull; Nov 1999</div>
+                <div class="fight-event-label">UFC 23: Ultimate Japan 2 &bull; Nov 1999</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pete Williams</span><span class="totals-stat">8/21</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:08</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Randleman</span><span class="totals-stat">10/43</span><span class="totals-pct">23%</span><span class="totals-stat">TD 6/11</span><span class="totals-stat">Ctrl 17:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason Godsey</div>
-                <div class="fight-meta">Submission (Kneebar) &bull; Rd 1, 1:56 &bull; UFC 19: Ultimate Young Guns &bull; Mar 1999</div>
+                <div class="fight-event-label">UFC 19: Ultimate Young Guns &bull; Mar 1999</div>
+                <div class="fight-meta">Submission (Kneebar) &bull; Rd 1, 1:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pete Williams</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jason Godsey</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tsuyoshi Kohsaka</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00 &bull; UFC - Ultimate Brazil &bull; Oct 1998</div>
+                <div class="fight-event-label">UFC - Ultimate Brazil &bull; Oct 1998</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pete Williams</span><span class="totals-stat">13/67</span><span class="totals-pct">19%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tsuyoshi Kohsaka</span><span class="totals-stat">14/40</span><span class="totals-pct">35%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Travis Fulton</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 6:28 &bull; UFC 20: Battle for the Gold &bull; </div>
+                <div class="fight-event-label">UFC 20: Battle for the Gold &bull; </div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 6:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pete Williams</span><span class="totals-stat">15/27</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Travis Fulton</span><span class="totals-stat">6/22</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mark Coleman</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 0:38 &bull; UFC 17: Redemption &bull; </div>
+                <div class="fight-event-label">UFC 17: Redemption &bull; </div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 0:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Pete Williams</span><span class="totals-stat">22/42</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mark Coleman</span><span class="totals-stat">26/49</span><span class="totals-pct">53%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -421,7 +431,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:53 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:37 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ben Nguyen</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:59 &bull; UFC Fight Night: Miocic vs Hunt &bull; May 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Miocic vs Hunt &bull; May 2015</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alptekin Ozkilic</span><span class="totals-stat">15/49</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:38</span></div><div class="totals-line"><span class="totals-name opponent">Ben Nguyen</span><span class="totals-stat">27/60</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. John Lineker</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 4:51 &bull; UFC Fight Night: Cowboy vs Miller &bull; Jul 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Cowboy vs Miller &bull; Jul 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 4:51</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alptekin Ozkilic</span><span class="totals-stat">88/230</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:54</span></div><div class="totals-line"><span class="totals-name opponent">John Lineker</span><span class="totals-stat">133/327</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Louis Smolka</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rockhold vs Philippou &bull; Jan 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Rockhold vs Philippou &bull; Jan 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alptekin Ozkilic</span><span class="totals-stat">60/193</span><span class="totals-pct">31%</span><span class="totals-stat">TD 9/14</span><span class="totals-stat">Ctrl 3:35</span></div><div class="totals-line"><span class="totals-name opponent">Louis Smolka</span><span class="totals-stat">92/245</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Darren Uyenoyama</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alptekin Ozkilic</span><span class="totals-stat">27/116</span><span class="totals-pct">23%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 6:21</span></div><div class="totals-line"><span class="totals-name opponent">Darren Uyenoyama</span><span class="totals-stat">33/71</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/10</span><span class="totals-stat">Ctrl 1:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -319,7 +325,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:51 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:41 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

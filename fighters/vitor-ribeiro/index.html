@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -152,7 +154,7 @@
         <h2>Fighter Profile</h2>
         <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">47 (Feb 24, 1979)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'8"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">154 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="sample-warning">&#9888;&#65039; <strong>Vitor Ribeiro</strong> has only 3 fights in our database — stats may not be fully representative.</div>
+        
 
         <h2>Career Statistics</h2>
     <table class="profile-stats-table">
@@ -202,12 +204,13 @@
     </table>
 
         <h2>Fight History</h2>
-        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing DREAM, Other, Strikeforce fight data.</div>
+        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing Other, Strikeforce, DREAM fight data.</div>
         <div class="fight-card">
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Justin Wilcox</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce Challengers 12 &bull; Nov 2010</div>
+                <div class="fight-event-label">Strikeforce Challengers 12 &bull; Nov 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vitor Ribeiro</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -215,7 +218,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shinya Aoki</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; DREAM 10: Welterweight Grand Prix 2009 Final Round &bull; Jul 2009</div>
+                <div class="fight-event-label">DREAM 10: Welterweight Grand Prix 2009 Final Round &bull; Jul 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vitor Ribeiro</span><span class="totals-stat">11/64</span><span class="totals-pct">17%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Shinya Aoki</span><span class="totals-stat">31/64</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -242,7 +246,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Katsuhiko Nagata</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 7:58 &bull; DREAM 8: Welterweight Grand Prix 2009 1st Round &bull; Apr 2009</div>
+                <div class="fight-event-label">DREAM 8: Welterweight Grand Prix 2009 1st Round &bull; Apr 2009</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 7:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vitor Ribeiro</span><span class="totals-stat">9/18</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Katsuhiko Nagata</span><span class="totals-stat">6/13</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -266,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eddie Yagin</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 2:23 &bull; WFA 3 &bull; Nov 2002</div>
+                <div class="fight-event-label">WFA 3 &bull; Nov 2002</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 2:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vitor Ribeiro</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -274,7 +280,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joe Hurley</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 1:19 &bull; WFA 2 &bull; Jul 2002</div>
+                <div class="fight-event-label">WFA 2 &bull; Jul 2002</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 1:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vitor Ribeiro</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -282,7 +289,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Charlie Kohler</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 3:50 &bull; WFA 1 &bull; Nov 2001</div>
+                <div class="fight-event-label">WFA 1 &bull; Nov 2001</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 3:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vitor Ribeiro</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -290,7 +298,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lyle Beerbohm</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; Strikeforce - Heavy Artillery &bull; </div>
+                <div class="fight-event-label">Strikeforce - Heavy Artillery &bull; </div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Vitor Ribeiro</span><span class="totals-stat">18/53</span><span class="totals-pct">34%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Lyle Beerbohm</span><span class="totals-stat">37/67</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/9</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -318,7 +327,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:12 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:53 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

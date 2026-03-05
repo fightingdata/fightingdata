@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Andre Muniz</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 3:59 &bull; UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-event-label">UFC 262: Oliveira vs. Chandler &bull; May 2021</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 3:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">11/19</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:53</span></div><div class="totals-line"><span class="totals-name opponent">Andre Muniz</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kevin Holland</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:45 &bull; UFC 256: Figueiredo vs. Moreno &bull; Dec 2020</div>
+                <div class="fight-event-label">UFC 256: Figueiredo vs. Moreno &bull; Dec 2020</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:27</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Holland</span><span class="totals-stat">15/18</span><span class="totals-pct">83%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jan Blachowicz</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Blachowicz vs. Jacare &bull; Nov 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Blachowicz vs. Jacare &bull; Nov 2019</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">20/48</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 8:25</span></div><div class="totals-line"><span class="totals-name opponent">Jan Blachowicz</span><span class="totals-stat">71/170</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jack Hermansson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Jacare vs. Hermansson &bull; Apr 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Jacare vs. Hermansson &bull; Apr 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">90/175</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:29</span></div><div class="totals-line"><span class="totals-name opponent">Jack Hermansson</span><span class="totals-stat">148/372</span><span class="totals-pct">40%</span><span class="totals-stat">TD 3/10</span><span class="totals-stat">Ctrl 6:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Weidman</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:46 &bull; UFC 230: Cormier vs. Lewis &bull; Nov 2018</div>
+                <div class="fight-event-label">UFC 230: Cormier vs. Lewis &bull; Nov 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">74/132</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Chris Weidman</span><span class="totals-stat">68/193</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kelvin Gastelum</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 224: Nunes vs. Pennington &bull; May 2018</div>
+                <div class="fight-event-label">UFC 224: Nunes vs. Pennington &bull; May 2018</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">64/115</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 3:28</span></div><div class="totals-line"><span class="totals-name opponent">Kelvin Gastelum</span><span class="totals-stat">53/145</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -387,7 +395,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Derek Brunson</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 3:50 &bull; UFC Fight Night: Jacare vs. Brunson 2 &bull; Jan 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Jacare vs. Brunson 2 &bull; Jan 2018</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 3:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">9/21</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Derek Brunson</span><span class="totals-stat">8/34</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Robert Whittaker</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 3:28 &bull; UFC on FOX: Johnson vs. Reis &bull; Apr 2017</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs. Reis &bull; Apr 2017</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 3:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">9/36</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:48</span></div><div class="totals-line"><span class="totals-name opponent">Robert Whittaker</span><span class="totals-stat">55/110</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -438,7 +448,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Boetsch</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:41 &bull; UFC 208: Holm vs. De Randamie &bull; Feb 2017</div>
+                <div class="fight-event-label">UFC 208: Holm vs. De Randamie &bull; Feb 2017</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">7/18</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:14</span></div><div class="totals-line"><span class="totals-name opponent">Tim Boetsch</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -462,7 +473,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Vitor Belfort</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:38 &bull; UFC 198: Werdum vs Miocic &bull; May 2016</div>
+                <div class="fight-event-label">UFC 198: Werdum vs Miocic &bull; May 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">39/55</span><span class="totals-pct">71%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 3:09</span></div><div class="totals-line"><span class="totals-name opponent">Vitor Belfort</span><span class="totals-stat">4/5</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -486,7 +498,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yoel Romero</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">30/52</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 2:33</span></div><div class="totals-line"><span class="totals-name opponent">Yoel Romero</span><span class="totals-stat">46/92</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -516,7 +529,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Camozzi</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 3:37 &bull; UFC on FOX: Machida vs Rockhold &bull; Apr 2015</div>
+                <div class="fight-event-label">UFC on FOX: Machida vs Rockhold &bull; Apr 2015</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 3:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">6/9</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:29</span></div><div class="totals-line"><span class="totals-name opponent">Chris Camozzi</span><span class="totals-stat">7/14</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -540,7 +554,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gegard Mousasi</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 4:30 &bull; UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 4:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">32/56</span><span class="totals-pct">57%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 10:47</span></div><div class="totals-line"><span class="totals-name opponent">Gegard Mousasi</span><span class="totals-stat">26/56</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -570,7 +585,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Francis Carmont</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Machida vs Mousasi &bull; Feb 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Machida vs Mousasi &bull; Feb 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">16/47</span><span class="totals-pct">34%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 8:39</span></div><div class="totals-line"><span class="totals-name opponent">Francis Carmont</span><span class="totals-stat">19/71</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -600,7 +616,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yushin Okami</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:47 &bull; UFC Fight Night: Teixeira vs Bader &bull; Sep 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Teixeira vs Bader &bull; Sep 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">28/48</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Yushin Okami</span><span class="totals-stat">1/11</span><span class="totals-pct">9%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -624,7 +641,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ed Herman</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:10 &bull; Strikeforce - Marquardt vs Saffiedine &bull; Jan 2013</div>
+                <div class="fight-event-label">Strikeforce - Marquardt vs Saffiedine &bull; Jan 2013</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">14/27</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:14</span></div><div class="totals-line"><span class="totals-name opponent">Ed Herman</span><span class="totals-stat">10/34</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -648,7 +666,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Derek Brunson</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:41 &bull; Strikeforce - Rousey vs Kaufman &bull; Aug 2012</div>
+                <div class="fight-event-label">Strikeforce - Rousey vs Kaufman &bull; Aug 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">5/9</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Derek Brunson</span><span class="totals-stat">0/5</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -672,7 +691,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bristol Marunde</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 2:43 &bull; Strikeforce - Tate vs. Rousey &bull; Mar 2012</div>
+                <div class="fight-event-label">Strikeforce - Tate vs. Rousey &bull; Mar 2012</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 2:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">46/75</span><span class="totals-pct">61%</span><span class="totals-stat">TD 6/6</span><span class="totals-stat">Ctrl 5:57</span></div><div class="totals-line"><span class="totals-name opponent">Bristol Marunde</span><span class="totals-stat">19/84</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-2" style="display:none;">
@@ -702,7 +722,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Luke Rockhold</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Strikeforce - Barnett vs. Kharitonov &bull; Sep 2011</div>
+                <div class="fight-event-label">Strikeforce - Barnett vs. Kharitonov &bull; Sep 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">49/141</span><span class="totals-pct">35%</span><span class="totals-stat">TD 5/13</span><span class="totals-stat">Ctrl 6:22</span></div><div class="totals-line"><span class="totals-name opponent">Luke Rockhold</span><span class="totals-stat">97/306</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:40</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-3" style="display:none;">
@@ -738,7 +759,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Robbie Lawler</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:00 &bull; Strikeforce - Diaz vs. Cyborg &bull; Jan 2011</div>
+                <div class="fight-event-label">Strikeforce - Diaz vs. Cyborg &bull; Jan 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">12/23</span><span class="totals-pct">52%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 7:44</span></div><div class="totals-line"><span class="totals-name opponent">Robbie Lawler</span><span class="totals-stat">14/23</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:48</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-4" style="display:none;">
@@ -768,7 +790,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Kennedy</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Strikeforce - Houston &bull; Aug 2010</div>
+                <div class="fight-event-label">Strikeforce - Houston &bull; Aug 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">47/188</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Tim Kennedy</span><span class="totals-stat">69/175</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:16</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-5" style="display:none;">
@@ -804,7 +827,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Lindland</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:18 &bull; Strikeforce - Evolution &bull; Dec 2009</div>
+                <div class="fight-event-label">Strikeforce - Evolution &bull; Dec 2009</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">11/31</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:00</span></div><div class="totals-line"><span class="totals-name opponent">Matt Lindland</span><span class="totals-stat">2/11</span><span class="totals-pct">18%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:32</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-6" style="display:none;">
@@ -828,7 +852,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joey Villasenor</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Heavy Artillery &bull; </div>
+                <div class="fight-event-label">Strikeforce - Heavy Artillery &bull; </div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">45/86</span><span class="totals-pct">52%</span><span class="totals-stat">TD 8/15</span><span class="totals-stat">Ctrl 9:48</span></div><div class="totals-line"><span class="totals-name opponent">Joey Villasenor</span><span class="totals-stat">13/46</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:20</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-7" style="display:none;">
@@ -858,7 +883,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dream-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Zelg Galesic</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:27 &bull; DREAM 6: Middleweight Grand Prix 2008 Final Round &bull; Sep 2008</div>
+                <div class="fight-event-label">DREAM 6: Middleweight Grand Prix 2008 Final Round &bull; Sep 2008</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Zelg Galesic</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dream-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dream-0" style="display:none;">
@@ -882,7 +908,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dream-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gegard Mousasi</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:15 &bull; DREAM 6: Middleweight Grand Prix 2008 Final Round &bull; Sep 2008</div>
+                <div class="fight-event-label">DREAM 6: Middleweight Grand Prix 2008 Final Round &bull; Sep 2008</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gegard Mousasi</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dream-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dream-1" style="display:none;">
@@ -906,7 +933,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dream-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason Miller</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; DREAM 4: Middleweight Grand Prix 2008 2nd Round &bull; Jun 2008</div>
+                <div class="fight-event-label">DREAM 4: Middleweight Grand Prix 2008 2nd Round &bull; Jun 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">6/13</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jason Miller</span><span class="totals-stat">6/24</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dream-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dream-2" style="display:none;">
@@ -930,7 +958,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dream-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ian Murphy</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:38 &bull; DREAM 2: Middleweight Grand Prix 2008 1st Round &bull; Apr 2008</div>
+                <div class="fight-event-label">DREAM 2: Middleweight Grand Prix 2008 1st Round &bull; Apr 2008</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">7/10</span><span class="totals-pct">70%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ian Murphy</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dream-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dream-3" style="display:none;">
@@ -954,7 +983,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dream-4')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Jason Miller</div>
-                <div class="fight-meta">CNC &bull; Rd 1, 2:33 &bull; DREAM 9: Featherweight Grand Prix 2009 2nd Round &bull; </div>
+                <div class="fight-event-label">DREAM 9: Featherweight Grand Prix 2009 2nd Round &bull; </div>
+                <div class="fight-meta">CNC &bull; Rd 1, 2:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jacare Souza</span><span class="totals-stat">19/44</span><span class="totals-pct">43%</span><span class="totals-stat">TD 3/11</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jason Miller</span><span class="totals-stat">24/53</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dream-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dream-4" style="display:none;">
@@ -979,7 +1009,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:21 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:08 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

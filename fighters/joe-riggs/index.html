@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chris Camozzi</div>
-                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 1, 0:26 &bull; UFC Fight Night: Cowboy vs Cowboy &bull; Feb 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Cowboy vs Cowboy &bull; Feb 2016</div>
+                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 1, 0:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chris Camozzi</span><span class="totals-stat">11/13</span><span class="totals-pct">85%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ron Stallings</div>
-                <div class="fight-meta">DQ &bull; Rd 2, 2:28 &bull; UFC 191: Johnson vs Dodson 2 &bull; Sep 2015</div>
+                <div class="fight-event-label">UFC 191: Johnson vs Dodson 2 &bull; Sep 2015</div>
+                <div class="fight-meta">DQ &bull; Rd 2, 2:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">35/61</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:59</span></div><div class="totals-line"><span class="totals-name opponent">Ron Stallings</span><span class="totals-stat">24/36</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Patrick Cote</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 186: Johnson vs Horiguchi &bull; Apr 2015</div>
+                <div class="fight-event-label">UFC 186: Johnson vs Horiguchi &bull; Apr 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">21/35</span><span class="totals-pct">60%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 4:20</span></div><div class="totals-line"><span class="totals-name opponent">Patrick Cote</span><span class="totals-stat">21/48</span><span class="totals-pct">44%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 6:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ben Saunders</div>
-                <div class="fight-meta">Submission (Injury) &bull; Rd 1, 0:57 &bull; UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-meta">Submission (Injury) &bull; Rd 1, 0:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Ben Saunders</span><span class="totals-stat">4/7</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Diego Sanchez</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 1:45 &bull; UFC Fight Night: Sanchez vs Riggs &bull; Dec 2006</div>
+                <div class="fight-event-label">UFC Fight Night: Sanchez vs Riggs &bull; Dec 2006</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 1:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Diego Sanchez</span><span class="totals-stat">6/10</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -336,7 +343,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason Von Flue</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:01 &bull; UFC Fight Night 6 &bull; Aug 2006</div>
+                <div class="fight-event-label">UFC Fight Night 6 &bull; Aug 2006</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Jason Von Flue</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -360,7 +368,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mike Swick</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:19 &bull; UFC 60: Hughes vs Gracie &bull; May 2006</div>
+                <div class="fight-event-label">UFC 60: Hughes vs Gracie &bull; May 2006</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Mike Swick</span><span class="totals-stat">5/12</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -384,7 +393,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nick Diaz</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 57: Liddell vs Couture 3 &bull; Feb 2006</div>
+                <div class="fight-event-label">UFC 57: Liddell vs Couture 3 &bull; Feb 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">51/116</span><span class="totals-pct">44%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 2:04</span></div><div class="totals-line"><span class="totals-name opponent">Nick Diaz</span><span class="totals-stat">38/106</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 3:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -414,7 +424,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Matt Hughes</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:28 &bull; UFC 56: Full Force &bull; Nov 2005</div>
+                <div class="fight-event-label">UFC 56: Full Force &bull; Nov 2005</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Matt Hughes</span><span class="totals-stat">8/13</span><span class="totals-pct">62%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -438,7 +449,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Lytle</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 2:00 &bull; UFC 55: Fury &bull; Oct 2005</div>
+                <div class="fight-event-label">UFC 55: Fury &bull; Oct 2005</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 2:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">15/25</span><span class="totals-pct">60%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:57</span></div><div class="totals-line"><span class="totals-name opponent">Chris Lytle</span><span class="totals-stat">3/8</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -465,7 +477,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ivan Salaverry</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:42 &bull; UFC 52: Couture vs Liddell 2 &bull; Apr 2005</div>
+                <div class="fight-event-label">UFC 52: Couture vs Liddell 2 &bull; Apr 2005</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">6/11</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:20</span></div><div class="totals-line"><span class="totals-name opponent">Ivan Salaverry</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -489,7 +502,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joe Doerksen</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:39 &bull; UFC 49: Unfinished Business &bull; Aug 2004</div>
+                <div class="fight-event-label">UFC 49: Unfinished Business &bull; Aug 2004</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 3:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">29/55</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 6:04</span></div><div class="totals-line"><span class="totals-name opponent">Joe Doerksen</span><span class="totals-stat">6/7</span><span class="totals-pct">86%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 0:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -516,7 +530,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Louis Taylor</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:07 &bull; Strikeforce Challengers 10 &bull; Aug 2010</div>
+                <div class="fight-event-label">Strikeforce Challengers 10 &bull; Aug 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">15/48</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Louis Taylor</span><span class="totals-stat">25/76</span><span class="totals-pct">33%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -546,7 +561,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jay Hieron</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Miami &bull; Jan 2010</div>
+                <div class="fight-event-label">Strikeforce - Miami &bull; Jan 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">6/35</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Jay Hieron</span><span class="totals-stat">21/53</span><span class="totals-pct">40%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 8:08</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -576,7 +592,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Phil Baroni</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Lawler vs. Shields &bull; Jun 2009</div>
+                <div class="fight-event-label">Strikeforce - Lawler vs. Shields &bull; Jun 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">58/106</span><span class="totals-pct">55%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 3:43</span></div><div class="totals-line"><span class="totals-name opponent">Phil Baroni</span><span class="totals-stat">16/48</span><span class="totals-pct">33%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 3:28</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-2" style="display:none;">
@@ -606,7 +623,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Luke Stewart</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:05 &bull; Strikeforce - Destruction &bull; Nov 2008</div>
+                <div class="fight-event-label">Strikeforce - Destruction &bull; Nov 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">36/36</span><span class="totals-pct">100%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:38</span></div><div class="totals-line"><span class="totals-name opponent">Luke Stewart</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:26</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-3" style="display:none;">
@@ -633,7 +651,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kazuo Misaki</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:29 &bull; Strikeforce - At the Mansion 2 &bull; Sep 2008</div>
+                <div class="fight-event-label">Strikeforce - At the Mansion 2 &bull; Sep 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">8/29</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kazuo Misaki</span><span class="totals-stat">19/42</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-4" style="display:none;">
@@ -660,7 +679,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cory Devela</div>
-                <div class="fight-meta">KO/TKO (Slam) &bull; Rd 1, 1:22 &bull; Strikeforce - At the Dome &bull; Feb 2008</div>
+                <div class="fight-event-label">Strikeforce - At the Dome &bull; Feb 2008</div>
+                <div class="fight-meta">KO/TKO (Slam) &bull; Rd 1, 1:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cory Devela</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-5" style="display:none;">
@@ -684,7 +704,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eugene Jackson</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:56 &bull; Strikeforce - Playboy Mansion &bull; Sep 2007</div>
+                <div class="fight-event-label">Strikeforce - Playboy Mansion &bull; Sep 2007</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Joe Riggs</span><span class="totals-stat">21/22</span><span class="totals-pct">95%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Eugene Jackson</span><span class="totals-stat">3/9</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-6" style="display:none;">
@@ -706,7 +727,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:28 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:13 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

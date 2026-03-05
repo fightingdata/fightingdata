@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -202,12 +204,13 @@
     </table>
 
         <h2>Fight History</h2>
-        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing DREAM, Other, PRIDE, Strikeforce fight data.</div>
+        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing Other, Strikeforce, DREAM, PRIDE fight data.</div>
         <div class="fight-card">
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Antonio McKee</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:24 &bull; DREAM 18 &bull; Dec 2012</div>
+                <div class="fight-event-label">DREAM 18 &bull; Dec 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">5/11</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Antonio McKee</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Satoru Kitaoka</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; DREAM - New Year! 2011 &bull; Dec 2011</div>
+                <div class="fight-event-label">DREAM - New Year! 2011 &bull; Dec 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">27/37</span><span class="totals-pct">73%</span><span class="totals-stat">TD 6/9</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Satoru Kitaoka</span><span class="totals-stat">18/41</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -270,7 +274,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rob McCullough</div>
-                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 1, 4:57 &bull; DREAM 17 &bull; Sep 2011</div>
+                <div class="fight-event-label">DREAM 17 &bull; Sep 2011</div>
+                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 1, 4:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">4/5</span><span class="totals-pct">80%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rob McCullough</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -294,7 +299,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lyle Beerbohm</div>
-                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 1, 1:33 &bull; Strikeforce - Diaz vs. Daley &bull; Apr 2011</div>
+                <div class="fight-event-label">Strikeforce - Diaz vs. Daley &bull; Apr 2011</div>
+                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 1, 1:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Lyle Beerbohm</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yokthai Sithoar</div>
-                <div class="fight-meta">Submission (Keylock) &bull; Rd 1, 1:00 &bull; DEEP 50 - Impact &bull; Oct 2010</div>
+                <div class="fight-event-label">DEEP 50 - Impact &bull; Oct 2010</div>
+                <div class="fight-meta">Submission (Keylock) &bull; Rd 1, 1:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yokthai Sithoar</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcus Aurelio</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; DREAM 16 &bull; Sep 2010</div>
+                <div class="fight-event-label">DREAM 16 &bull; Sep 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">17/29</span><span class="totals-pct">59%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Aurelio</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -369,7 +377,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tatsuya Kawajiri</div>
-                <div class="fight-meta">Submission (Ankle Lock) &bull; Rd 1, 1:53 &bull; DREAM 15 &bull; Jul 2010</div>
+                <div class="fight-event-label">DREAM 15 &bull; Jul 2010</div>
+                <div class="fight-meta">Submission (Ankle Lock) &bull; Rd 1, 1:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tatsuya Kawajiri</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -393,7 +402,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gilbert Melendez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Strikeforce - Nashville &bull; Apr 2010</div>
+                <div class="fight-event-label">Strikeforce - Nashville &bull; Apr 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">11/29</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/21</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Gilbert Melendez</span><span class="totals-stat">69/206</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 8:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -429,7 +439,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mizuto Hirota</div>
-                <div class="fight-meta">Submission (Other - Lock) &bull; Rd 1, 1:17 &bull; Dynamite!! 2009 &bull; Dec 2009</div>
+                <div class="fight-event-label">Dynamite!! 2009 &bull; Dec 2009</div>
+                <div class="fight-meta">Submission (Other - Lock) &bull; Rd 1, 1:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">5/6</span><span class="totals-pct">83%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mizuto Hirota</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joachim Hansen</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:56 &bull; DREAM 11: Featherweight Grand Prix 2009 Final Round &bull; Oct 2009</div>
+                <div class="fight-event-label">DREAM 11: Featherweight Grand Prix 2009 Final Round &bull; Oct 2009</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">5/7</span><span class="totals-pct">71%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joachim Hansen</span><span class="totals-stat">15/21</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -480,7 +492,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Vitor Ribeiro</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; DREAM 10: Welterweight Grand Prix 2009 Final Round &bull; Jul 2009</div>
+                <div class="fight-event-label">DREAM 10: Welterweight Grand Prix 2009 Final Round &bull; Jul 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">31/64</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Vitor Ribeiro</span><span class="totals-stat">11/64</span><span class="totals-pct">17%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -507,7 +520,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Hayato Sakurai</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:27 &bull; DREAM 8: Welterweight Grand Prix 2009 1st Round &bull; Apr 2009</div>
+                <div class="fight-event-label">DREAM 8: Welterweight Grand Prix 2009 1st Round &bull; Apr 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Hayato Sakurai</span><span class="totals-stat">7/8</span><span class="totals-pct">88%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -531,7 +545,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. David Gardner</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 5:58 &bull; DREAM 7: Featherweight Grand Prix 2009 1st Round &bull; Mar 2009</div>
+                <div class="fight-event-label">DREAM 7: Featherweight Grand Prix 2009 1st Round &bull; Mar 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 5:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">David Gardner</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -555,7 +570,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eddie Alvarez</div>
-                <div class="fight-meta">Submission (Heel Hook) &bull; Rd 1, 1:32 &bull; Dynamite!! 2008 &bull; Dec 2008</div>
+                <div class="fight-event-label">Dynamite!! 2008 &bull; Dec 2008</div>
+                <div class="fight-meta">Submission (Heel Hook) &bull; Rd 1, 1:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Eddie Alvarez</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -579,7 +595,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Todd Moore</div>
-                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 1, 1:10 &bull; DREAM 6: Middleweight Grand Prix 2008 Final Round &bull; Sep 2008</div>
+                <div class="fight-event-label">DREAM 6: Middleweight Grand Prix 2008 Final Round &bull; Sep 2008</div>
+                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 1, 1:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Todd Moore</span><span class="totals-stat">1/11</span><span class="totals-pct">9%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -603,7 +620,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joachim Hansen</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:19 &bull; DREAM 5: Lightweight Grand Prix 2008 Final Round &bull; Jul 2008</div>
+                <div class="fight-event-label">DREAM 5: Lightweight Grand Prix 2008 Final Round &bull; Jul 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joachim Hansen</span><span class="totals-stat">12/25</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -627,7 +645,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Caol Uno</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; DREAM 5: Lightweight Grand Prix 2008 Final Round &bull; Jul 2008</div>
+                <div class="fight-event-label">DREAM 5: Lightweight Grand Prix 2008 Final Round &bull; Jul 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">4/7</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Caol Uno</span><span class="totals-stat">17/31</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -654,7 +673,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Katsuhiko Nagata</div>
-                <div class="fight-meta">Submission (Gogo Plata) &bull; Rd 1, 5:12 &bull; DREAM 4: Middleweight Grand Prix 2008 2nd Round &bull; Jun 2008</div>
+                <div class="fight-event-label">DREAM 4: Middleweight Grand Prix 2008 2nd Round &bull; Jun 2008</div>
+                <div class="fight-meta">Submission (Gogo Plata) &bull; Rd 1, 5:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">8/13</span><span class="totals-pct">62%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Katsuhiko Nagata</span><span class="totals-stat">0/4</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -678,7 +698,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gesias Cavalcante</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; DREAM 2: Middleweight Grand Prix 2008 1st Round &bull; Apr 2008</div>
+                <div class="fight-event-label">DREAM 2: Middleweight Grand Prix 2008 1st Round &bull; Apr 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">8/16</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gesias Cavalcante</span><span class="totals-stat">20/46</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -705,7 +726,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Gesias Cavalcante</div>
-                <div class="fight-meta">CNC &bull; Rd 1, 3:46 &bull; DREAM 1: Lightweight Grand Prix 2008 1st Round &bull; Mar 2008</div>
+                <div class="fight-event-label">DREAM 1: Lightweight Grand Prix 2008 1st Round &bull; Mar 2008</div>
+                <div class="fight-meta">CNC &bull; Rd 1, 3:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">4/12</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gesias Cavalcante</span><span class="totals-stat">9/29</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -729,7 +751,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bu-Kyung Jung</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; Yarrenoka! - New Year's Eve 2007 &bull; Dec 2007</div>
+                <div class="fight-event-label">Yarrenoka! - New Year's Eve 2007 &bull; Dec 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">24/41</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Bu-Kyung Jung</span><span class="totals-stat">3/10</span><span class="totals-pct">30%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -756,7 +779,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brian Lo-A-Njoe</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:33 &bull; PRIDE 34: Kamikaze &bull; Apr 2007</div>
+                <div class="fight-event-label">PRIDE 34: Kamikaze &bull; Apr 2007</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Brian Lo-A-Njoe</span><span class="totals-stat">6/14</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -780,7 +804,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Akira Kikuchi</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; Shooto - Back to Our Roots 1 &bull; Feb 2007</div>
+                <div class="fight-event-label">Shooto - Back to Our Roots 1 &bull; Feb 2007</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">6/7</span><span class="totals-pct">86%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Akira Kikuchi</span><span class="totals-stat">55/98</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -810,7 +835,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joachim Hansen</div>
-                <div class="fight-meta">Submission (Gogo Plata) &bull; Rd 1, 2:24 &bull; PRIDE Shockwave 2006 &bull; Dec 2006</div>
+                <div class="fight-event-label">PRIDE Shockwave 2006 &bull; Dec 2006</div>
+                <div class="fight-meta">Submission (Gogo Plata) &bull; Rd 1, 2:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">6/9</span><span class="totals-pct">67%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joachim Hansen</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -834,7 +860,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-24')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Clay French</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 3:57 &bull; PRIDE Bushido 13 &bull; Nov 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 13 &bull; Nov 2006</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 3:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">5/6</span><span class="totals-pct">83%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Clay French</span><span class="totals-stat">6/12</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
@@ -858,7 +885,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-25')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. George Sotiropoulos</div>
-                <div class="fight-meta">DQ &bull; Rd 2, 0:05 &bull; Shooto - Champion Carnival &bull; Oct 2006</div>
+                <div class="fight-event-label">Shooto - Champion Carnival &bull; Oct 2006</div>
+                <div class="fight-meta">DQ &bull; Rd 2, 0:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">George Sotiropoulos</span><span class="totals-stat">6/8</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-25">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-25" style="display:none;">
@@ -885,7 +913,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-26')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason Black</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:58 &bull; PRIDE Bushido 12 &bull; Aug 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 12 &bull; Aug 2006</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jason Black</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-26">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-26" style="display:none;">
@@ -909,7 +938,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-27')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kuniyoshi Hironaka</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 2:10 &bull; Shooto 2005 11/6 &bull; Nov 2005</div>
+                <div class="fight-event-label">Shooto 2005 11/6 &bull; Nov 2005</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 2:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">13/20</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kuniyoshi Hironaka</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-27">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-27" style="display:none;">
@@ -933,7 +963,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-28')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Keith Wisniewski</div>
-                <div class="fight-meta">Submission (Other - Lock) &bull; Rd 1, 2:22 &bull; Shooto 2005 1/29 &bull; Jan 2005</div>
+                <div class="fight-event-label">Shooto 2005 1/29 &bull; Jan 2005</div>
+                <div class="fight-meta">Submission (Other - Lock) &bull; Rd 1, 2:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Keith Wisniewski</span><span class="totals-stat">8/8</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-28">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-28" style="display:none;">
@@ -957,7 +988,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-29')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jutaro Nakao</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:29 &bull; DEEP 16 &bull; Oct 2004</div>
+                <div class="fight-event-label">DEEP 16 &bull; Oct 2004</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jutaro Nakao</span><span class="totals-stat">5/7</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-29">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-29" style="display:none;">
@@ -981,7 +1013,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-30')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rich Clementi</div>
-                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 2, 2:32 &bull; DREAM - Fight for Japan &bull; </div>
+                <div class="fight-event-label">DREAM - Fight for Japan &bull; </div>
+                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 2, 2:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Shinya Aoki</span><span class="totals-stat">24/29</span><span class="totals-pct">83%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rich Clementi</span><span class="totals-stat">3/8</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-30">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-30" style="display:none;">
@@ -1006,7 +1039,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:04 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:46 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

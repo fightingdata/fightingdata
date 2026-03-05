@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Court McGee</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Usman vs. Buckley &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Usman vs. Buckley &bull; Jun 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">72/160</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:32</span></div><div class="totals-line"><span class="totals-name opponent">Court McGee</span><span class="totals-stat">39/145</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Max Griffin</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 1:56 &bull; UFC 310: Pantoja vs. Asakura &bull; Dec 2024</div>
+                <div class="fight-event-label">UFC 310: Pantoja vs. Asakura &bull; Dec 2024</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 1:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">13/39</span><span class="totals-pct">33%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 3:48</span></div><div class="totals-line"><span class="totals-name opponent">Max Griffin</span><span class="totals-stat">10/34</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tony Ferguson</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:44 &bull; UFC Fight Night: Sandhagen vs. Nurmagomedov &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Nurmagomedov &bull; Aug 2024</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">4/25</span><span class="totals-pct">16%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:34</span></div><div class="totals-line"><span class="totals-name opponent">Tony Ferguson</span><span class="totals-stat">10/18</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kevin Holland</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 1, 2:39 &bull; UFC 291: Poirier vs. Gaethje 2 &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC 291: Poirier vs. Gaethje 2 &bull; Jul 2023</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 1, 2:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">4/11</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Holland</span><span class="totals-stat">9/16</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sean Brady</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Vieira vs. Tate &bull; Nov 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Vieira vs. Tate &bull; Nov 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">29/57</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:53</span></div><div class="totals-line"><span class="totals-name opponent">Sean Brady</span><span class="totals-stat">18/42</span><span class="totals-pct">43%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 7:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Vicente Luque</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 1, 3:25 &bull; UFC 265: Lewis vs. Gane &bull; Aug 2021</div>
+                <div class="fight-event-label">UFC 265: Lewis vs. Gane &bull; Aug 2021</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 1, 3:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">4/12</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:01</span></div><div class="totals-line"><span class="totals-name opponent">Vicente Luque</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -369,7 +377,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Neil Magny</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Chiesa vs. Magny &bull; Jan 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Chiesa vs. Magny &bull; Jan 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">24/52</span><span class="totals-pct">46%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 15:21</span></div><div class="totals-line"><span class="totals-name opponent">Neil Magny</span><span class="totals-stat">12/50</span><span class="totals-pct">24%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -405,7 +414,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rafael Dos Anjos</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Dos Santos &bull; Jan 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Dos Santos &bull; Jan 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">9/51</span><span class="totals-pct">18%</span><span class="totals-stat">TD 6/8</span><span class="totals-stat">Ctrl 10:13</span></div><div class="totals-line"><span class="totals-name opponent">Rafael Dos Anjos</span><span class="totals-stat">14/36</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -435,7 +445,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Diego Sanchez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 239: Jones vs. Santos &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC 239: Jones vs. Santos &bull; Jul 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">47/67</span><span class="totals-pct">70%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 11:45</span></div><div class="totals-line"><span class="totals-name opponent">Diego Sanchez</span><span class="totals-stat">7/11</span><span class="totals-pct">64%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -465,7 +476,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Carlos Condit</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 2, 0:56 &bull; UFC 232: Jones vs. Gustafsson 2 &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC 232: Jones vs. Gustafsson 2 &bull; Dec 2018</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 2, 0:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">10/22</span><span class="totals-pct">45%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 4:10</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Condit</span><span class="totals-stat">5/24</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -492,7 +504,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anthony Pettis</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 0:52 &bull; UFC 226: Miocic vs. Cormier &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC 226: Miocic vs. Cormier &bull; Jul 2018</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 0:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">12/26</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 2:39</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">9/22</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -519,7 +532,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kevin Lee</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:37 &bull; UFC Fight Night: Chiesa vs. Lee &bull; Jun 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Chiesa vs. Lee &bull; Jun 2017</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">4/9</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Kevin Lee</span><span class="totals-stat">22/30</span><span class="totals-pct">73%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -543,7 +557,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Beneil Dariush</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:20 &bull; UFC on FOX: Teixeira vs Evans &bull; Apr 2016</div>
+                <div class="fight-event-label">UFC on FOX: Teixeira vs Evans &bull; Apr 2016</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">11/52</span><span class="totals-pct">21%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:16</span></div><div class="totals-line"><span class="totals-name opponent">Beneil Dariush</span><span class="totals-stat">27/53</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -570,7 +585,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jim Miller</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:57 &bull; UFC Fight Night: Namajunas vs. VanZant &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Namajunas vs. VanZant &bull; Dec 2015</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">13/30</span><span class="totals-pct">43%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 4:13</span></div><div class="totals-line"><span class="totals-name opponent">Jim Miller</span><span class="totals-stat">7/15</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -597,7 +613,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mitch Clarke</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Mendes vs Lamas &bull; Apr 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Mendes vs Lamas &bull; Apr 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">59/128</span><span class="totals-pct">46%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 5:23</span></div><div class="totals-line"><span class="totals-name opponent">Mitch Clarke</span><span class="totals-stat">65/120</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 2:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -627,7 +644,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joe Lauzon</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 2:14 &bull; UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Jacare vs Mousasi &bull; Sep 2014</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 2:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">30/57</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:23</span></div><div class="totals-line"><span class="totals-name opponent">Joe Lauzon</span><span class="totals-stat">21/41</span><span class="totals-pct">51%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 2:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -654,7 +672,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Francisco Trinaldo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 173: Barao vs Dillashaw &bull; May 2014</div>
+                <div class="fight-event-label">UFC 173: Barao vs Dillashaw &bull; May 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">19/70</span><span class="totals-pct">27%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 8:51</span></div><div class="totals-line"><span class="totals-name opponent">Francisco Trinaldo</span><span class="totals-stat">13/34</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -684,7 +703,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Colton Smith</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:41 &bull; UFC Fight Night: Fight for the Troops 3 &bull; Nov 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Fight for the Troops 3 &bull; Nov 2013</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">7/19</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:21</span></div><div class="totals-line"><span class="totals-name opponent">Colton Smith</span><span class="totals-stat">4/18</span><span class="totals-pct">22%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 3:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -711,7 +731,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jorge Masvidal</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 4:59 &bull; UFC on FOX: Johnson vs Moraga &bull; Jul 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs Moraga &bull; Jul 2013</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">24/53</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:42</span></div><div class="totals-line"><span class="totals-name opponent">Jorge Masvidal</span><span class="totals-stat">24/38</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -738,7 +759,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anton Kuivanen</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:29 &bull; UFC 157: Rousey vs Carmouche &bull; Feb 2013</div>
+                <div class="fight-event-label">UFC 157: Rousey vs Carmouche &bull; Feb 2013</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">5/50</span><span class="totals-pct">10%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 2:07</span></div><div class="totals-line"><span class="totals-name opponent">Anton Kuivanen</span><span class="totals-stat">18/55</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:50</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -765,7 +787,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Al Iaquinta</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:47 &bull; The Ultimate Fighter: Live Finale &bull; Jun 2012</div>
+                <div class="fight-event-label">The Ultimate Fighter: Live Finale &bull; Jun 2012</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 2:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael Chiesa</span><span class="totals-stat">9/15</span><span class="totals-pct">60%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:05</span></div><div class="totals-line"><span class="totals-name opponent">Al Iaquinta</span><span class="totals-stat">8/16</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -787,7 +810,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:46 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:30 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

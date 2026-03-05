@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tai Tuivasa</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59 &bull; UFC 254: Khabib vs. Gaethje &bull; Oct 2020</div>
+                <div class="fight-event-label">UFC 254: Khabib vs. Gaethje &bull; Oct 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">13/19</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tai Tuivasa</span><span class="totals-stat">27/42</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ben Rothwell</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:57 &bull; UFC Fight Night: Overeem vs. Rozenstruik &bull; Dec 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Overeem vs. Rozenstruik &bull; Dec 2019</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">53/77</span><span class="totals-pct">69%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Ben Rothwell</span><span class="totals-stat">58/101</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 4:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcos Rogerio de Lima</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 2:21 &bull; UFC Fight Night: Blachowicz vs. Santos &bull; Feb 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Blachowicz vs. Santos &bull; Feb 2019</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 2, 2:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">0/3</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:51</span></div><div class="totals-line"><span class="totals-name opponent">Marcos Rogerio de Lima</span><span class="totals-stat">25/32</span><span class="totals-pct">78%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 5:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marcin Tybura</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Shogun vs. Smith &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Shogun vs. Smith &bull; Jul 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">31/78</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Marcin Tybura</span><span class="totals-stat">41/68</span><span class="totals-pct">60%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 7:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Andrei Arlovski</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 222: Cyborg vs. Kunitskaya &bull; Mar 2018</div>
+                <div class="fight-event-label">UFC 222: Cyborg vs. Kunitskaya &bull; Mar 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">34/74</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:17</span></div><div class="totals-line"><span class="totals-name opponent">Andrei Arlovski</span><span class="totals-stat">46/88</span><span class="totals-pct">52%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 4:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Volkov</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 3:30 &bull; UFC Fight Night: Volkov vs. Struve &bull; Sep 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Volkov vs. Struve &bull; Sep 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 3:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">41/162</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkov</span><span class="totals-stat">135/253</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:59</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Daniel Omielanczuk</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 1:41 &bull; UFC 204: Bisping vs. Henderson &bull; Oct 2016</div>
+                <div class="fight-event-label">UFC 204: Bisping vs. Henderson &bull; Oct 2016</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 2, 1:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">9/23</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:46</span></div><div class="totals-line"><span class="totals-name opponent">Daniel Omielanczuk</span><span class="totals-stat">14/30</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -402,7 +411,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Antonio Silva</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:16 &bull; UFC Fight Night: Overeem vs Arlovski &bull; May 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Overeem vs Arlovski &bull; May 2016</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:16</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">13/16</span><span class="totals-pct">81%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Antonio Silva</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -426,7 +436,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jared Rosholt</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 193: Rousey vs Holm &bull; Nov 2015</div>
+                <div class="fight-event-label">UFC 193: Rousey vs Holm &bull; Nov 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">33/58</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Jared Rosholt</span><span class="totals-stat">16/37</span><span class="totals-pct">43%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 6:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -456,7 +467,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Antonio Rodrigo Nogueira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 190: Rousey vs Correia &bull; Aug 2015</div>
+                <div class="fight-event-label">UFC 190: Rousey vs Correia &bull; Aug 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">93/156</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:38</span></div><div class="totals-line"><span class="totals-name opponent">Antonio Rodrigo Nogueira</span><span class="totals-stat">59/113</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/14</span><span class="totals-stat">Ctrl 5:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -486,7 +498,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alistair Overeem</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:13 &bull; UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">2/5</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alistair Overeem</span><span class="totals-stat">17/25</span><span class="totals-pct">68%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -510,7 +523,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mark Hunt</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:44 &bull; UFC on FUEL TV: Silva vs. Stann &bull; Mar 2013</div>
+                <div class="fight-event-label">UFC on FUEL TV: Silva vs. Stann &bull; Mar 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">24/67</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:03</span></div><div class="totals-line"><span class="totals-name opponent">Mark Hunt</span><span class="totals-stat">47/82</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:57</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -540,7 +554,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Stipe Miocic</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:50 &bull; UFC on FUEL TV: Struve vs Miocic &bull; Sep 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Struve vs Miocic &bull; Sep 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">57/128</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Stipe Miocic</span><span class="totals-stat">48/95</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -567,7 +582,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lavar Johnson</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:05 &bull; UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-event-label">UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Lavar Johnson</span><span class="totals-stat">4/7</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -591,7 +607,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dave Herman</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:52 &bull; UFC on FUEL TV: Sanchez vs Ellenberger &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Sanchez vs Ellenberger &bull; Feb 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">47/81</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:55</span></div><div class="totals-line"><span class="totals-name opponent">Dave Herman</span><span class="totals-stat">51/74</span><span class="totals-pct">69%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -618,7 +635,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pat Barry</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 3:22 &bull; UFC Live: Cruz vs Johnson &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC Live: Cruz vs Johnson &bull; Oct 2011</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 3:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">31/82</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Pat Barry</span><span class="totals-stat">30/45</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -645,7 +663,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Travis Browne</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:11 &bull; UFC 130: Rampage vs Hamill &bull; May 2011</div>
+                <div class="fight-event-label">UFC 130: Rampage vs Hamill &bull; May 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:11</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">10/23</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:39</span></div><div class="totals-line"><span class="totals-name opponent">Travis Browne</span><span class="totals-stat">17/36</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -669,7 +688,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sean McCorkle</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:55 &bull; UFC 124: St-Pierre vs Koscheck 2 &bull; Dec 2010</div>
+                <div class="fight-event-label">UFC 124: St-Pierre vs Koscheck 2 &bull; Dec 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">11/19</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Sean McCorkle</span><span class="totals-stat">4/9</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -693,7 +713,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Christian Morecraft</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:22 &bull; UFC 117: Silva vs Sonnen &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC 117: Silva vs Sonnen &bull; Aug 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">11/19</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Christian Morecraft</span><span class="totals-stat">36/72</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -720,7 +741,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Roy Nelson</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:39 &bull; UFC Fight Night: Florian vs Gomi &bull; Mar 2010</div>
+                <div class="fight-event-label">UFC Fight Night: Florian vs Gomi &bull; Mar 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">2/5</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Roy Nelson</span><span class="totals-stat">9/15</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -744,7 +766,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Buentello</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC 107: Penn vs Sanchez &bull; Dec 2009</div>
+                <div class="fight-event-label">UFC 107: Penn vs Sanchez &bull; Dec 2009</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">54/115</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 5:49</span></div><div class="totals-line"><span class="totals-name opponent">Paul Buentello</span><span class="totals-stat">37/89</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -774,7 +797,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chase Gormley</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 4:04 &bull; UFC 104: Machida vs Shogun &bull; Oct 2009</div>
+                <div class="fight-event-label">UFC 104: Machida vs Shogun &bull; Oct 2009</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 4:04</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">12/16</span><span class="totals-pct">75%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name opponent">Chase Gormley</span><span class="totals-stat">8/23</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -798,7 +822,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Denis Stojnic</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:37 &bull; UFC 99: The Comeback &bull; Jun 2009</div>
+                <div class="fight-event-label">UFC 99: The Comeback &bull; Jun 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">4/6</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:08</span></div><div class="totals-line"><span class="totals-name opponent">Denis Stojnic</span><span class="totals-stat">16/60</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:47</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -825,7 +850,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Junior Dos Santos</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:54 &bull; UFC 95: Sanchez vs Stevenson &bull; Feb 2009</div>
+                <div class="fight-event-label">UFC 95: Sanchez vs Stevenson &bull; Feb 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Stefan Struve</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Junior Dos Santos</span><span class="totals-stat">12/18</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -847,7 +873,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:05 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:47 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

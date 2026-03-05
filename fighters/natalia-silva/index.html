@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rose Namajunas</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 324: Gaethje vs. Pimblett &bull; Jan 2026</div>
+                <div class="fight-event-label">UFC 324: Gaethje vs. Pimblett &bull; Jan 2026</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Natalia Silva</span><span class="totals-stat">51/133</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:24</span></div><div class="totals-line"><span class="totals-name opponent">Rose Namajunas</span><span class="totals-stat">26/94</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 2:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alexa Grasso</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 315: Muhammad vs. Della Maddalena &bull; May 2025</div>
+                <div class="fight-event-label">UFC 315: Muhammad vs. Della Maddalena &bull; May 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Natalia Silva</span><span class="totals-stat">65/164</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Alexa Grasso</span><span class="totals-stat">45/139</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jessica Andrade</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Burns vs. Brady &bull; Sep 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Burns vs. Brady &bull; Sep 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Natalia Silva</span><span class="totals-stat">117/208</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:49</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Andrade</span><span class="totals-stat">50/140</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Viviane Araujo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dolidze vs. Imavov &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Dolidze vs. Imavov &bull; Feb 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Natalia Silva</span><span class="totals-stat">38/128</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Viviane Araujo</span><span class="totals-stat">26/67</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 6:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Andrea Lee</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 292: Sterling vs. O'Malley &bull; Aug 2023</div>
+                <div class="fight-event-label">UFC 292: Sterling vs. O'Malley &bull; Aug 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Natalia Silva</span><span class="totals-stat">70/174</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Andrea Lee</span><span class="totals-stat">43/125</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Victoria Leonardo</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:58 &bull; UFC Fight Night: Dern vs. Hill &bull; May 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Dern vs. Hill &bull; May 2023</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Natalia Silva</span><span class="totals-stat">20/45</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Victoria Leonardo</span><span class="totals-stat">7/18</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tereza Bleda</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Kick) &bull; Rd 3, 1:27 &bull; UFC Fight Night: Nzechukwu vs. Cutelaba &bull; Nov 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Nzechukwu vs. Cutelaba &bull; Nov 2022</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Kick) &bull; Rd 3, 1:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Natalia Silva</span><span class="totals-stat">45/72</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:13</span></div><div class="totals-line"><span class="totals-name opponent">Tereza Bleda</span><span class="totals-stat">18/47</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 4:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jasmine Jasudavicius</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Kattar vs. Emmett &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Kattar vs. Emmett &bull; Jun 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Natalia Silva</span><span class="totals-stat">96/185</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name opponent">Jasmine Jasudavicius</span><span class="totals-stat">31/101</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 3:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -439,7 +449,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:50 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:34 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Julian Erosa</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:15 &bull; UFC 314: Volkanovski vs. Lopes &bull; Apr 2025</div>
+                <div class="fight-event-label">UFC 314: Volkanovski vs. Lopes &bull; Apr 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">13/31</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 0:48</span></div><div class="totals-line"><span class="totals-name opponent">Julian Erosa</span><span class="totals-stat">54/73</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Daniel Pineda</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Hernandez vs. Pereira &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Hernandez vs. Pereira &bull; Oct 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">39/88</span><span class="totals-pct">44%</span><span class="totals-stat">TD 3/12</span><span class="totals-stat">Ctrl 6:33</span></div><div class="totals-line"><span class="totals-name opponent">Daniel Pineda</span><span class="totals-stat">31/53</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. TJ Brown</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:23 &bull; UFC Fight Night: Yusuff vs. Barboza &bull; Oct 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Yusuff vs. Barboza &bull; Oct 2023</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">11/33</span><span class="totals-pct">33%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 8:09</span></div><div class="totals-line"><span class="totals-name opponent">TJ Brown</span><span class="totals-stat">15/50</span><span class="totals-pct">30%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jonathan Pearce</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Thompson vs. Holland &bull; Dec 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Thompson vs. Holland &bull; Dec 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">57/193</span><span class="totals-pct">30%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:48</span></div><div class="totals-line"><span class="totals-name opponent">Jonathan Pearce</span><span class="totals-stat">110/222</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 3:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tristan Connelly</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Font vs. Vera &bull; Apr 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Font vs. Vera &bull; Apr 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">75/151</span><span class="totals-pct">50%</span><span class="totals-stat">TD 5/10</span><span class="totals-stat">Ctrl 7:52</span></div><div class="totals-line"><span class="totals-name opponent">Tristan Connelly</span><span class="totals-stat">66/117</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:58</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cub Swanson</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:12 &bull; UFC Fight Night: Lewis vs. Daukaus &bull; Dec 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Daukaus &bull; Dec 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">2/19</span><span class="totals-pct">11%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cub Swanson</span><span class="totals-stat">18/30</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Darrick Minner</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:48 &bull; UFC Fight Night: Sandhagen vs. Dillashaw &bull; Jul 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Dillashaw &bull; Jul 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">20/30</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:01</span></div><div class="totals-line"><span class="totals-name opponent">Darrick Minner</span><span class="totals-stat">19/35</span><span class="totals-pct">54%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 4:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -402,7 +411,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eduardo Garagorri</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:22 &bull; UFC Fight Night: Santos vs. Teixeira &bull; Nov 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Santos vs. Teixeira &bull; Nov 2020</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">32/72</span><span class="totals-pct">44%</span><span class="totals-stat">TD 7/21</span><span class="totals-stat">Ctrl 7:34</span></div><div class="totals-line"><span class="totals-name opponent">Eduardo Garagorri</span><span class="totals-stat">36/78</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -432,7 +442,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nate Landwehr</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Overeem vs. Harris &bull; May 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Overeem vs. Harris &bull; May 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">121/253</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/13</span><span class="totals-stat">Ctrl 1:24</span></div><div class="totals-line"><span class="totals-name opponent">Nate Landwehr</span><span class="totals-stat">118/234</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -462,7 +473,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ryan Hall</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: De Randamie vs. Ladd &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC Fight Night: De Randamie vs. Ladd &bull; Jul 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">29/126</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:49</span></div><div class="totals-line"><span class="totals-name opponent">Ryan Hall</span><span class="totals-stat">36/83</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -492,7 +504,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ricardo Lamas</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 4:09 &bull; UFC Fight Night: Magny vs. Ponzinibbio &bull; Nov 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Magny vs. Ponzinibbio &bull; Nov 2018</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 3, 4:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">62/174</span><span class="totals-pct">36%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 2:39</span></div><div class="totals-line"><span class="totals-name opponent">Ricardo Lamas</span><span class="totals-stat">70/123</span><span class="totals-pct">57%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 2:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -522,7 +535,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Volkanovski</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dos Santos vs. Ivanov &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Santos vs. Ivanov &bull; Jul 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">82/172</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 0:59</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkanovski</span><span class="totals-stat">100/144</span><span class="totals-pct">69%</span><span class="totals-stat">TD 2/12</span><span class="totals-stat">Ctrl 3:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -552,7 +566,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michael Johnson</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:22 &bull; UFC Fight Night: Stephens vs. Choi &bull; Jan 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Stephens vs. Choi &bull; Jan 2018</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">18/64</span><span class="totals-pct">28%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:01</span></div><div class="totals-line"><span class="totals-name opponent">Michael Johnson</span><span class="totals-stat">45/98</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -579,7 +594,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dennis Bermudez</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Weidman vs. Gastelum &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Weidman vs. Gastelum &bull; Jul 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">70/154</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/10</span><span class="totals-stat">Ctrl 4:04</span></div><div class="totals-line"><span class="totals-name opponent">Dennis Bermudez</span><span class="totals-stat">69/160</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -609,7 +625,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mirsad Bektic</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 3:19 &bull; UFC 209: Woodley vs. Thompson 2 &bull; Mar 2017</div>
+                <div class="fight-event-label">UFC 209: Woodley vs. Thompson 2 &bull; Mar 2017</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 3, 3:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">28/59</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:22</span></div><div class="totals-line"><span class="totals-name opponent">Mirsad Bektic</span><span class="totals-stat">60/98</span><span class="totals-pct">61%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 9:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -639,7 +656,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Godofredo Pepey</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Holm vs. Shevchenko &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC on FOX: Holm vs. Shevchenko &bull; Jul 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">33/57</span><span class="totals-pct">58%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 11:46</span></div><div class="totals-line"><span class="totals-name opponent">Godofredo Pepey</span><span class="totals-stat">20/38</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -669,7 +687,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chas Skelly</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 196: McGregor vs Diaz &bull; Mar 2016</div>
+                <div class="fight-event-label">UFC 196: McGregor vs Diaz &bull; Mar 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">104/153</span><span class="totals-pct">68%</span><span class="totals-stat">TD 7/11</span><span class="totals-stat">Ctrl 8:43</span></div><div class="totals-line"><span class="totals-name opponent">Chas Skelly</span><span class="totals-stat">27/72</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -699,7 +718,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Robert Whiteford</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Holohan vs Smolka &bull; Oct 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Holohan vs Smolka &bull; Oct 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">40/130</span><span class="totals-pct">31%</span><span class="totals-stat">TD 7/11</span><span class="totals-stat">Ctrl 8:30</span></div><div class="totals-line"><span class="totals-name opponent">Robert Whiteford</span><span class="totals-stat">23/63</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -729,7 +749,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Hacran Dias</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Machida vs Dollaway &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Machida vs Dollaway &bull; Dec 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">37/97</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:42</span></div><div class="totals-line"><span class="totals-name opponent">Hacran Dias</span><span class="totals-stat">30/52</span><span class="totals-pct">58%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 7:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -759,7 +780,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lucas Martins</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 179: Aldo vs Mendes 2 &bull; Oct 2014</div>
+                <div class="fight-event-label">UFC 179: Aldo vs Mendes 2 &bull; Oct 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">47/154</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/14</span><span class="totals-stat">Ctrl 8:03</span></div><div class="totals-line"><span class="totals-name opponent">Lucas Martins</span><span class="totals-stat">26/82</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -789,7 +811,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jeremy Stephens</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Henderson vs Thomson &bull; Jan 2014</div>
+                <div class="fight-event-label">UFC on FOX: Henderson vs Thomson &bull; Jan 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">21/137</span><span class="totals-pct">15%</span><span class="totals-stat">TD 0/9</span><span class="totals-stat">Ctrl 1:14</span></div><div class="totals-line"><span class="totals-name opponent">Jeremy Stephens</span><span class="totals-stat">40/117</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -819,7 +842,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Hatsu Hioki</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Condit vs Kampmann 2 &bull; Aug 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Condit vs Kampmann 2 &bull; Aug 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">48/144</span><span class="totals-pct">33%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 7:00</span></div><div class="totals-line"><span class="totals-name opponent">Hatsu Hioki</span><span class="totals-stat">31/69</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -849,7 +873,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chad Mendes</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:08 &bull; UFC on FOX: Henderson vs Melendez &bull; Apr 2013</div>
+                <div class="fight-event-label">UFC on FOX: Henderson vs Melendez &bull; Apr 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">2/29</span><span class="totals-pct">7%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chad Mendes</span><span class="totals-stat">7/14</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -873,7 +898,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Antonio Carvalho</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:06 &bull; UFC 158: St-Pierre vs Diaz &bull; Mar 2013</div>
+                <div class="fight-event-label">UFC 158: St-Pierre vs Diaz &bull; Mar 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">14/54</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Antonio Carvalho</span><span class="totals-stat">9/27</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -897,7 +923,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-24')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Steven Siler</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 154: St-Pierre vs Condit &bull; Nov 2012</div>
+                <div class="fight-event-label">UFC 154: St-Pierre vs Condit &bull; Nov 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">44/91</span><span class="totals-pct">48%</span><span class="totals-stat">TD 6/7</span><span class="totals-stat">Ctrl 11:19</span></div><div class="totals-line"><span class="totals-name opponent">Steven Siler</span><span class="totals-stat">15/48</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
@@ -927,7 +954,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-25')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Diego Brandao</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-event-label">UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">36/88</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 6:32</span></div><div class="totals-line"><span class="totals-name opponent">Diego Brandao</span><span class="totals-stat">23/47</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-25">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-25" style="display:none;">
@@ -957,7 +985,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-26')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Zhang Tiequan</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 136: Edgar vs Maynard 3 &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC 136: Edgar vs Maynard 3 &bull; Oct 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">27/49</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 13:06</span></div><div class="totals-line"><span class="totals-name opponent">Zhang Tiequan</span><span class="totals-stat">2/18</span><span class="totals-pct">11%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-26">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-26" style="display:none;">
@@ -987,7 +1016,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-27')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michihiro Omigawa</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-event-label">UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">78/288</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Michihiro Omigawa</span><span class="totals-stat">65/141</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-27">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-27" style="display:none;">
@@ -1017,7 +1047,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-28')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Charles Oliveira</div>
-                <div class="fight-meta">Submission (Triangle Armbar) &bull; Rd 1, 0:41 &bull; UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-meta">Submission (Triangle Armbar) &bull; Rd 1, 0:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">0/4</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Charles Oliveira</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-28">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-28" style="display:none;">
@@ -1041,7 +1072,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-29')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Duane Ludwig</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:44 &bull; UFC Live: Vera vs Jones &bull; Mar 2010</div>
+                <div class="fight-event-label">UFC Live: Vera vs Jones &bull; Mar 2010</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Darren Elkins</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Duane Ludwig</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-29">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-29" style="display:none;">
@@ -1063,7 +1095,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:08 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:55 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

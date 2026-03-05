@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ryan Bader</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 2:10 &bull; UFC 110: Nogueira vs Velasquez &bull; Feb 2010</div>
+                <div class="fight-event-label">UFC 110: Nogueira vs Velasquez &bull; Feb 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 2:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">15/74</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ryan Bader</span><span class="totals-stat">29/62</span><span class="totals-pct">47%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 4:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Thiago Silva</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:35 &bull; UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-event-label">UFC 102: Couture vs Nogueira &bull; Aug 2009</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:35</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">3/17</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Silva</span><span class="totals-stat">5/8</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Quinton Jackson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 96: Jackson vs Jardine &bull; Mar 2009</div>
+                <div class="fight-event-label">UFC 96: Jackson vs Jardine &bull; Mar 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">64/184</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Quinton Jackson</span><span class="totals-stat">56/151</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brandon Vera</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 89: Bisping vs Leben &bull; Oct 2008</div>
+                <div class="fight-event-label">UFC 89: Bisping vs Leben &bull; Oct 2008</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">50/131</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 3:40</span></div><div class="totals-line"><span class="totals-name opponent">Brandon Vera</span><span class="totals-stat">48/86</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Wanderlei Silva</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:36 &bull; UFC 84: Ill Will &bull; May 2008</div>
+                <div class="fight-event-label">UFC 84: Ill Will &bull; May 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Wanderlei Silva</span><span class="totals-stat">11/18</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chuck Liddell</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 76: Knockout &bull; Sep 2007</div>
+                <div class="fight-event-label">UFC 76: Knockout &bull; Sep 2007</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">83/176</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Chuck Liddell</span><span class="totals-stat">31/138</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Houston Alexander</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:48 &bull; UFC 71: Liddell vs Jackson &bull; May 2007</div>
+                <div class="fight-event-label">UFC 71: Liddell vs Jackson &bull; May 2007</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">5/8</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Houston Alexander</span><span class="totals-stat">17/20</span><span class="totals-pct">85%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -399,7 +408,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Forrest Griffin</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:41 &bull; UFC 66: Liddell vs Ortiz 2 &bull; Dec 2006</div>
+                <div class="fight-event-label">UFC 66: Liddell vs Ortiz 2 &bull; Dec 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">36/63</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Forrest Griffin</span><span class="totals-stat">17/56</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -423,7 +433,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Stephan Bonnar</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night 4 &bull; Apr 2006</div>
+                <div class="fight-event-label">UFC Fight Night 4 &bull; Apr 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">64/118</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:28</span></div><div class="totals-line"><span class="totals-name opponent">Stephan Bonnar</span><span class="totals-stat">33/93</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 3:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mike Whitehead</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 57: Liddell vs Couture 3 &bull; Feb 2006</div>
+                <div class="fight-event-label">UFC 57: Liddell vs Couture 3 &bull; Feb 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">44/131</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mike Whitehead</span><span class="totals-stat">27/73</span><span class="totals-pct">37%</span><span class="totals-stat">TD 5/12</span><span class="totals-stat">Ctrl 6:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -483,7 +495,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Roger Gracie</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Rockhold vs Kennedy &bull; Jul 2012</div>
+                <div class="fight-event-label">Strikeforce - Rockhold vs Kennedy &bull; Jul 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">7/45</span><span class="totals-pct">16%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Roger Gracie</span><span class="totals-stat">35/60</span><span class="totals-pct">58%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 8:23</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -513,7 +526,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Luke Rockhold</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:26 &bull; Strikeforce - Rockhold vs. Jardine &bull; Jan 2012</div>
+                <div class="fight-event-label">Strikeforce - Rockhold vs. Jardine &bull; Jan 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">14/35</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Luke Rockhold</span><span class="totals-stat">34/55</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:06</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -537,7 +551,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-2')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Gegard Mousasi</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; Strikeforce - Diaz vs. Daley &bull; Apr 2011</div>
+                <div class="fight-event-label">Strikeforce - Diaz vs. Daley &bull; Apr 2011</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">18/93</span><span class="totals-pct">19%</span><span class="totals-stat">TD 6/13</span><span class="totals-stat">Ctrl 2:55</span></div><div class="totals-line"><span class="totals-name opponent">Gegard Mousasi</span><span class="totals-stat">73/154</span><span class="totals-pct">47%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 3:17</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-2" style="display:none;">
@@ -567,7 +582,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Matt Hamill</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Liddell vs Team Ortiz Finale &bull; Jun 2010</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Liddell vs Team Ortiz Finale &bull; Jun 2010</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">65/227</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Matt Hamill</span><span class="totals-stat">77/199</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 1:30</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -597,7 +613,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Wilson Gouveia</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Ortiz vs. Team Shamrock Finale &bull; Jun 2006</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Ortiz vs. Team Shamrock Finale &bull; Jun 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">67/205</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:32</span></div><div class="totals-line"><span class="totals-name opponent">Wilson Gouveia</span><span class="totals-stat">48/115</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:29</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -627,7 +644,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kerry Schall</div>
-                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 2, 3:28 &bull; The Ultimate Fighter: Team Hughes vs. Team Franklin Finale &bull; Nov 2005</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Hughes vs. Team Franklin Finale &bull; Nov 2005</div>
+                <div class="fight-meta">KO/TKO (Kicks) &bull; Rd 2, 3:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">41/111</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kerry Schall</span><span class="totals-stat">8/68</span><span class="totals-pct">12%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-2" style="display:none;">
@@ -654,7 +672,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. George Allen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; KOTC 24: Mayhem &bull; Jun 2003</div>
+                <div class="fight-event-label">KOTC 24: Mayhem &bull; Jun 2003</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">31/55</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">George Allen</span><span class="totals-stat">8/21</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-3" style="display:none;">
@@ -681,7 +700,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bryan Pardoe</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:09 &bull; KOTC 20: Crossroads &bull; Dec 2002</div>
+                <div class="fight-event-label">KOTC 20: Crossroads &bull; Dec 2002</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">4/5</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Bryan Pardoe</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-4" style="display:none;">
@@ -705,7 +725,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Philip Preece</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; KOTC 14 &bull; Jun 2002</div>
+                <div class="fight-event-label">KOTC 14 &bull; Jun 2002</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">7/19</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Philip Preece</span><span class="totals-stat">8/11</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-5" style="display:none;">
@@ -732,7 +753,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Amir Rahnavardi</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:29 &bull; GC 5 &bull; Aug 2001</div>
+                <div class="fight-event-label">GC 5 &bull; Aug 2001</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keith Jardine</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Amir Rahnavardi</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-6" style="display:none;">
@@ -754,7 +776,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:35 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:20 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

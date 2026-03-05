@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -152,7 +154,7 @@
         <h2>Fighter Profile</h2>
         <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">43 (Mar 14, 1982)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'10"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">145 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="sample-warning">&#9888;&#65039; <strong>Estevan Payan</strong> has only 3 fights in our database — stats may not be fully representative.</div>
+        
 
         <h2>Career Statistics</h2>
     <table class="profile-stats-table">
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alex White</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:28 &bull; UFC on FOX: Werdum vs Browne &bull; Apr 2014</div>
+                <div class="fight-event-label">UFC on FOX: Werdum vs Browne &bull; Apr 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Estevan Payan</span><span class="totals-stat">10/23</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alex White</span><span class="totals-stat">20/30</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Robert Peralta</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:12 &bull; UFC 168: Weidman vs Silva 2 &bull; Dec 2013</div>
+                <div class="fight-event-label">UFC 168: Weidman vs Silva 2 &bull; Dec 2013</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Estevan Payan</span><span class="totals-stat">32/65</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:45</span></div><div class="totals-line"><span class="totals-name opponent">Robert Peralta</span><span class="totals-stat">34/68</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jeremy Stephens</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 160: Velasquez vs Silva 2 &bull; May 2013</div>
+                <div class="fight-event-label">UFC 160: Velasquez vs Silva 2 &bull; May 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Estevan Payan</span><span class="totals-stat">25/94</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Jeremy Stephens</span><span class="totals-stat">49/88</span><span class="totals-pct">56%</span><span class="totals-stat">TD 6/10</span><span class="totals-stat">Ctrl 9:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michael Bravo</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 4:01 &bull; Strikeforce - Marquardt vs Saffiedine &bull; Jan 2013</div>
+                <div class="fight-event-label">Strikeforce - Marquardt vs Saffiedine &bull; Jan 2013</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 4:01</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Estevan Payan</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -299,7 +305,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alonzo Martinez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Rockhold vs. Jardine &bull; Jan 2012</div>
+                <div class="fight-event-label">Strikeforce - Rockhold vs. Jardine &bull; Jan 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Estevan Payan</span><span class="totals-stat">110/234</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div><div class="totals-line"><span class="totals-name opponent">Alonzo Martinez</span><span class="totals-stat">46/166</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/8</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -327,7 +334,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:14 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:01 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marcin Tybura</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:06 &bull; UFC Fight Night: Rozenstruik vs. Sakai &bull; Jun 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Rozenstruik vs. Sakai &bull; Jun 2021</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">23/40</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Marcin Tybura</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Volkov</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 1:15 &bull; UFC 254: Khabib vs. Gaethje &bull; Oct 2020</div>
+                <div class="fight-event-label">UFC 254: Khabib vs. Gaethje &bull; Oct 2020</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 1:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">16/58</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkov</span><span class="totals-stat">45/73</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alistair Overeem</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:00 &bull; UFC Fight Night: Overeem vs. Harris &bull; May 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Overeem vs. Harris &bull; May 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">25/48</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:47</span></div><div class="totals-line"><span class="totals-name opponent">Alistair Overeem</span><span class="totals-stat">68/85</span><span class="totals-pct">80%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Aleksei Oleinik</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:12 &bull; UFC Fight Night: Dos Anjos vs. Edwards &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Edwards &bull; Jul 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">4/7</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Aleksei Oleinik</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -309,7 +315,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Serghei Spivac</div>
-                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 1, 0:50 &bull; UFC Fight Night: Iaquinta vs. Cowboy &bull; May 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Iaquinta vs. Cowboy &bull; May 2019</div>
+                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 1, 0:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">17/28</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Serghei Spivac</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -333,7 +340,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Andrei Arlovski</div>
-                <div class="fight-meta">Overturned &bull; Rd 3, 5:00 &bull; UFC 232: Jones vs. Gustafsson 2 &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC 232: Jones vs. Gustafsson 2 &bull; Dec 2018</div>
+                <div class="fight-meta">Overturned &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">24/93</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:34</span></div><div class="totals-line"><span class="totals-name opponent">Andrei Arlovski</span><span class="totals-stat">44/93</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -363,7 +371,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Daniel Spitz</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:59 &bull; UFC Fight Night: Rivera vs. Moraes &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Rivera vs. Moraes &bull; Jun 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">29/79</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Daniel Spitz</span><span class="totals-stat">17/42</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -390,7 +399,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mark Godbeer</div>
-                <div class="fight-meta">DQ &bull; Rd 1, 4:29 &bull; UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC 217: Bisping vs. St-Pierre &bull; Nov 2017</div>
+                <div class="fight-meta">DQ &bull; Rd 1, 4:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">21/38</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:11</span></div><div class="totals-line"><span class="totals-name opponent">Mark Godbeer</span><span class="totals-stat">3/15</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -414,7 +424,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Fabricio Werdum</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:05 &bull; UFC 216: Ferguson vs. Lee &bull; Oct 2017</div>
+                <div class="fight-event-label">UFC 216: Ferguson vs. Lee &bull; Oct 2017</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Fabricio Werdum</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -438,7 +449,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cyril Asker</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 1:44 &bull; UFC Fight Night: Holm vs. Correia &bull; Jun 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Holm vs. Correia &bull; Jun 2017</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 1:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">21/41</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Cyril Asker</span><span class="totals-stat">2/14</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -462,7 +474,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chase Sherman</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 2:41 &bull; UFC Fight Night: Rodriguez vs. Penn &bull; Jan 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Rodriguez vs. Penn &bull; Jan 2017</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 2:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">32/73</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Chase Sherman</span><span class="totals-stat">20/63</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -489,7 +502,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shamil Abdurakhimov</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Lineker vs. Dodson &bull; Oct 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Lineker vs. Dodson &bull; Oct 2016</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">33/98</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:29</span></div><div class="totals-line"><span class="totals-name opponent">Shamil Abdurakhimov</span><span class="totals-stat">47/128</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 0:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -519,7 +533,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cody East</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:18 &bull; UFC 197: Jones vs Saint Preux &bull; Apr 2016</div>
+                <div class="fight-event-label">UFC 197: Jones vs Saint Preux &bull; Apr 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">31/58</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cody East</span><span class="totals-stat">26/62</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -543,7 +558,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Soa Palelei</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:49 &bull; UFC Fight Night: Rockhold vs Bisping &bull; Nov 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Rockhold vs Bisping &bull; Nov 2014</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">22/72</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Soa Palelei</span><span class="totals-stat">24/51</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -570,7 +586,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nikita Krylov</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 0:25 &bull; UFC on FOX: Henderson vs Thomson &bull; Jan 2014</div>
+                <div class="fight-event-label">UFC on FOX: Henderson vs Thomson &bull; Jan 2014</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 0:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Nikita Krylov</span><span class="totals-stat">11/16</span><span class="totals-pct">69%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -594,7 +611,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jared Rosholt</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Rousey vs. Team Tate Finale &bull; Nov 2013</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Rousey vs. Team Tate Finale &bull; Nov 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Walt Harris</span><span class="totals-stat">18/71</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Jared Rosholt</span><span class="totals-stat">33/105</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:47</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -622,7 +640,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:12 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:53 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

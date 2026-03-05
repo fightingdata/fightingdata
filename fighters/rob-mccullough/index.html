@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -202,12 +204,13 @@
     </table>
 
         <h2>Fight History</h2>
-        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing WEC, DREAM, Other fight data.</div>
+        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing Other, WEC, DREAM fight data.</div>
         <div class="fight-card">
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shinya Aoki</div>
-                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 1, 4:57 &bull; DREAM 17 &bull; Sep 2011</div>
+                <div class="fight-event-label">DREAM 17 &bull; Sep 2011</div>
+                <div class="fight-meta">Submission (Neck Crank) &bull; Rd 1, 4:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Shinya Aoki</span><span class="totals-stat">4/5</span><span class="totals-pct">80%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Karen Darabedyan</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; WEC 44: Brown vs. Aldo &bull; Nov 2009</div>
+                <div class="fight-event-label">WEC 44: Brown vs. Aldo &bull; Nov 2009</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">47/146</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Karen Darabedyan</span><span class="totals-stat">51/97</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcus Hicks</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; WEC 39: Brown vs. Garcia &bull; Mar 2009</div>
+                <div class="fight-event-label">WEC 39: Brown vs. Garcia &bull; Mar 2009</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">42/120</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:26</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Hicks</span><span class="totals-stat">18/46</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WEC 36: Faber vs. Brown &bull; Nov 2008</div>
+                <div class="fight-event-label">WEC 36: Faber vs. Brown &bull; Nov 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">61/143</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:01</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">72/185</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 2:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kenneth Alexander</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; WEC 34: Faber vs. Pulver &bull; Jun 2008</div>
+                <div class="fight-event-label">WEC 34: Faber vs. Pulver &bull; Jun 2008</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">35/102</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:31</span></div><div class="totals-line"><span class="totals-name opponent">Kenneth Alexander</span><span class="totals-stat">14/73</span><span class="totals-pct">19%</span><span class="totals-stat">TD 4/18</span><span class="totals-stat">Ctrl 1:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jamie Varner</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:54 &bull; WEC 32: Condit vs. Prater &bull; Feb 2008</div>
+                <div class="fight-event-label">WEC 32: Condit vs. Prater &bull; Feb 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">20/78</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Jamie Varner</span><span class="totals-stat">43/161</span><span class="totals-pct">27%</span><span class="totals-stat">TD 3/14</span><span class="totals-stat">Ctrl 2:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Richard Crunkilton</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:29 &bull; WEC 30: McCullough vs. Crunkilton &bull; Sep 2007</div>
+                <div class="fight-event-label">WEC 30: McCullough vs. Crunkilton &bull; Sep 2007</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">16/33</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Richard Crunkilton</span><span class="totals-stat">5/15</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -405,7 +414,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kit Cope</div>
-                <div class="fight-meta">Submission (Injury) &bull; Rd 1, 2:53 &bull; WEC 25: McCullough vs. Cope &bull; Jan 2007</div>
+                <div class="fight-event-label">WEC 25: McCullough vs. Cope &bull; Jan 2007</div>
+                <div class="fight-meta">Submission (Injury) &bull; Rd 1, 2:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">8/8</span><span class="totals-pct">100%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:18</span></div><div class="totals-line"><span class="totals-name opponent">Kit Cope</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -429,7 +439,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Harris Sarmiento</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WFA - King of the Streets &bull; Jul 2006</div>
+                <div class="fight-event-label">WFA - King of the Streets &bull; Jul 2006</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -437,7 +448,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Josh Thomson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WFA 3 &bull; Nov 2002</div>
+                <div class="fight-event-label">WFA 3 &bull; Nov 2002</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Rob McCullough</span><span class="totals-stat">11/21</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Josh Thomson</span><span class="totals-stat">67/88</span><span class="totals-pct">76%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -465,7 +477,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:57 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:40 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

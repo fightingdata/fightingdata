@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -152,7 +154,7 @@
         <h2>Fighter Profile</h2>
         <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">46 (May 21, 1979)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">6'0"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">185 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">70"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="sample-warning">&#9888;&#65039; <strong>Scott Smith</strong> has only 3 fights in our database — stats may not be fully representative.</div>
+        
 
         <h2>Career Statistics</h2>
     <table class="profile-stats-table">
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ed Herman</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:25 &bull; UFC 72: Victory &bull; Jun 2007</div>
+                <div class="fight-event-label">UFC 72: Victory &bull; Jun 2007</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Ed Herman</span><span class="totals-stat">24/43</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 6:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Patrick Cote</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 67: All or Nothing &bull; Feb 2007</div>
+                <div class="fight-event-label">UFC 67: All or Nothing &bull; Feb 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">34/90</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:51</span></div><div class="totals-line"><span class="totals-name opponent">Patrick Cote</span><span class="totals-stat">50/86</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. David Terrell</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:08 &bull; UFC 59: Reality Check &bull; Apr 2006</div>
+                <div class="fight-event-label">UFC 59: Reality Check &bull; Apr 2006</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:24</span></div><div class="totals-line"><span class="totals-name opponent">David Terrell</span><span class="totals-stat">10/14</span><span class="totals-pct">71%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lumumba Sayers</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:34 &bull; Strikeforce - Tate vs. Rousey &bull; Mar 2012</div>
+                <div class="fight-event-label">Strikeforce - Tate vs. Rousey &bull; Mar 2012</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 1:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">2/5</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Lumumba Sayers</span><span class="totals-stat">10/14</span><span class="totals-pct">71%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:56</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tarec Saffiedine</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Fedor vs. Henderson &bull; Jul 2011</div>
+                <div class="fight-event-label">Strikeforce - Fedor vs. Henderson &bull; Jul 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">21/84</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Tarec Saffiedine</span><span class="totals-stat">113/212</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 3:41</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Paul Daley</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:09 &bull; Strikeforce - Henderson vs. Babalu &bull; Dec 2010</div>
+                <div class="fight-event-label">Strikeforce - Henderson vs. Babalu &bull; Dec 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">5/29</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Paul Daley</span><span class="totals-stat">17/35</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-2" style="display:none;">
@@ -366,7 +374,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cung Le</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Kick) &bull; Rd 2, 1:46 &bull; Strikeforce - Fedor vs. Werdum &bull; Jun 2010</div>
+                <div class="fight-event-label">Strikeforce - Fedor vs. Werdum &bull; Jun 2010</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Kick) &bull; Rd 2, 1:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">7/27</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:16</span></div><div class="totals-line"><span class="totals-name opponent">Cung Le</span><span class="totals-stat">61/92</span><span class="totals-pct">66%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:57</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-3" style="display:none;">
@@ -393,7 +402,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cung Le</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 3:25 &bull; Strikeforce - Evolution &bull; Dec 2009</div>
+                <div class="fight-event-label">Strikeforce - Evolution &bull; Dec 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 3:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">19/72</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:04</span></div><div class="totals-line"><span class="totals-name opponent">Cung Le</span><span class="totals-stat">62/116</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 3:49</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-4" style="display:none;">
@@ -423,7 +433,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nick Diaz</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 1:41 &bull; Strikeforce - Lawler vs. Shields &bull; Jun 2009</div>
+                <div class="fight-event-label">Strikeforce - Lawler vs. Shields &bull; Jun 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 1:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">22/106</span><span class="totals-pct">21%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:35</span></div><div class="totals-line"><span class="totals-name opponent">Nick Diaz</span><span class="totals-stat">150/340</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:28</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-5" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Benji Radach</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 3:24 &bull; Strikeforce - Shamrock vs. Diaz &bull; Apr 2009</div>
+                <div class="fight-event-label">Strikeforce - Shamrock vs. Diaz &bull; Apr 2009</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 3:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">27/107</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:28</span></div><div class="totals-line"><span class="totals-name opponent">Benji Radach</span><span class="totals-stat">67/146</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:23</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-6" style="display:none;">
@@ -483,7 +495,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Terry Martin</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:29 &bull; Strikeforce - Destruction &bull; Nov 2008</div>
+                <div class="fight-event-label">Strikeforce - Destruction &bull; Nov 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">1/9</span><span class="totals-pct">11%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Terry Martin</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-7" style="display:none;">
@@ -507,7 +520,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-elitexc-0')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Robbie Lawler</div>
-                <div class="fight-meta">CNC &bull; Rd 3, 3:26 &bull; EliteXC - Unfinished Business &bull; Jul 2008</div>
+                <div class="fight-event-label">EliteXC - Unfinished Business &bull; Jul 2008</div>
+                <div class="fight-meta">CNC &bull; Rd 3, 3:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">18/67</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Robbie Lawler</span><span class="totals-stat">43/83</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-elitexc-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-elitexc-0" style="display:none;">
@@ -534,7 +548,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pete Sell</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:25 &bull; The Ultimate Fighter: The Comeback Finale &bull; Nov 2006</div>
+                <div class="fight-event-label">The Ultimate Fighter: The Comeback Finale &bull; Nov 2006</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">26/93</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Pete Sell</span><span class="totals-stat">32/90</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:37</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -561,7 +576,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Justin Levens</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:58 &bull; WEC 18: Unfinished Business &bull; Jan 2006</div>
+                <div class="fight-event-label">WEC 18: Unfinished Business &bull; Jan 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Scott Smith</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Justin Levens</span><span class="totals-stat">4/5</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;">
@@ -583,7 +599,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:02 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:45 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

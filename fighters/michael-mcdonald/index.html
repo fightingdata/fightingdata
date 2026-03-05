@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. John Lineker</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:43 &bull; UFC Fight Night: McDonald vs. Lineker &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC Fight Night: McDonald vs. Lineker &bull; Jul 2016</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">14/30</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">John Lineker</span><span class="totals-stat">26/55</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Masanori Kanehara</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:09 &bull; UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-event-label">UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:09</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">5/13</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name opponent">Masanori Kanehara</span><span class="totals-stat">15/17</span><span class="totals-pct">88%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Urijah Faber</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 3:22 &bull; UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 3:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">9/27</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Urijah Faber</span><span class="totals-stat">29/46</span><span class="totals-pct">63%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brad Pickett</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 3:43 &bull; UFC Fight Night: Shogun vs Sonnen &bull; Aug 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Shogun vs Sonnen &bull; Aug 2013</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 2, 3:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">51/87</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:29</span></div><div class="totals-line"><span class="totals-name opponent">Brad Pickett</span><span class="totals-stat">17/78</span><span class="totals-pct">22%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Renan Barao</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 4, 3:57 &bull; UFC on FUEL TV: Barao vs McDonald &bull; Feb 2013</div>
+                <div class="fight-event-label">UFC on FUEL TV: Barao vs McDonald &bull; Feb 2013</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 4, 3:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">26/92</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Renan Barao</span><span class="totals-stat">36/112</span><span class="totals-pct">32%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 4:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Miguel Torres</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:18 &bull; UFC 145: Jones vs Evans &bull; Apr 2012</div>
+                <div class="fight-event-label">UFC 145: Jones vs Evans &bull; Apr 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">16/59</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Miguel Torres</span><span class="totals-stat">8/29</span><span class="totals-pct">28%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -369,7 +377,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alex Soto</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:56 &bull; UFC 139: Shogun vs Henderson &bull; Nov 2011</div>
+                <div class="fight-event-label">UFC 139: Shogun vs Henderson &bull; Nov 2011</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">12/24</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Alex Soto</span><span class="totals-stat">6/8</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -393,7 +402,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Cariaso</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 130: Rampage vs Hamill &bull; May 2011</div>
+                <div class="fight-event-label">UFC 130: Rampage vs Hamill &bull; May 2011</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">32/67</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:08</span></div><div class="totals-line"><span class="totals-name opponent">Chris Cariaso</span><span class="totals-stat">44/85</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -423,7 +433,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Edwin Figueroa</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Nogueira vs Davis &bull; Mar 2011</div>
+                <div class="fight-event-label">UFC Fight Night: Nogueira vs Davis &bull; Mar 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">51/107</span><span class="totals-pct">48%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 3:59</span></div><div class="totals-line"><span class="totals-name opponent">Edwin Figueroa</span><span class="totals-stat">45/98</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Clint Godfrey</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:42 &bull; WEC 52: Faber vs. Mizugaki &bull; Nov 2010</div>
+                <div class="fight-event-label">WEC 52: Faber vs. Mizugaki &bull; Nov 2010</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">7/15</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Clint Godfrey</span><span class="totals-stat">3/5</span><span class="totals-pct">60%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:15</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;">
@@ -477,7 +489,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lyoto Machida</div>
-                <div class="fight-meta">Submission (Forearm Choke) &bull; Rd 1, 2:30 &bull; K-1 Beast 2004 &bull; Mar 2004</div>
+                <div class="fight-event-label">K-1 Beast 2004 &bull; Mar 2004</div>
+                <div class="fight-meta">Submission (Forearm Choke) &bull; Rd 1, 2:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Michael McDonald</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Lyoto Machida</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -499,7 +512,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:46 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:31 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Zhang Mingyang</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:37 &bull; UFC Fight Night: Walker vs. Zhang &bull; Aug 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Walker vs. Zhang &bull; Aug 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">50/67</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:20</span></div><div class="totals-line"><span class="totals-name opponent">Zhang Mingyang</span><span class="totals-stat">20/47</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Volkan Oezdemir</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:28 &bull; UFC Fight Night: Whittaker vs. Aliskerov &bull; Jun 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. Aliskerov &bull; Jun 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">15/33</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Volkan Oezdemir</span><span class="totals-stat">37/67</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Magomed Ankalaev</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:42 &bull; UFC Fight Night: Ankalaev vs. Walker 2 &bull; Jan 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Ankalaev vs. Walker 2 &bull; Jan 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">24/71</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Magomed Ankalaev</span><span class="totals-stat">39/58</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Magomed Ankalaev</div>
-                <div class="fight-meta">CNC &bull; Rd 1, 3:13 &bull; UFC 294: Makhachev vs. Volkanovski 2 &bull; Oct 2023</div>
+                <div class="fight-event-label">UFC 294: Makhachev vs. Volkanovski 2 &bull; Oct 2023</div>
+                <div class="fight-meta">CNC &bull; Rd 1, 3:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">14/27</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Magomed Ankalaev</span><span class="totals-stat">13/19</span><span class="totals-pct">68%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -309,7 +315,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anthony Smith</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rozenstruik vs. Almeida &bull; May 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Rozenstruik vs. Almeida &bull; May 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">92/192</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:32</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Smith</span><span class="totals-stat">38/92</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -339,7 +346,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Craig</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:16 &bull; UFC 283: Teixeira vs. Hill &bull; Jan 2023</div>
+                <div class="fight-event-label">UFC 283: Teixeira vs. Hill &bull; Jan 2023</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:16</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">16/20</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Paul Craig</span><span class="totals-stat">3/8</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -363,7 +371,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ion Cutelaba</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:37 &bull; UFC 279: Diaz vs. Ferguson &bull; Sep 2022</div>
+                <div class="fight-event-label">UFC 279: Diaz vs. Ferguson &bull; Sep 2022</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">3/3</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:10</span></div><div class="totals-line"><span class="totals-name opponent">Ion Cutelaba</span><span class="totals-stat">3/5</span><span class="totals-pct">60%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -387,7 +396,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jamahal Hill</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:55 &bull; UFC Fight Night: Walker vs. Hill &bull; Feb 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Walker vs. Hill &bull; Feb 2022</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">12/25</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Jamahal Hill</span><span class="totals-stat">6/19</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -411,7 +421,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Thiago Santos</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Santos vs. Walker &bull; Oct 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Santos vs. Walker &bull; Oct 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">48/130</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Thiago Santos</span><span class="totals-stat">44/105</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -447,7 +458,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ryan Spann</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:43 &bull; UFC Fight Night: Covington vs. Woodley &bull; Sep 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Covington vs. Woodley &bull; Sep 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">26/30</span><span class="totals-pct">87%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div><div class="totals-line"><span class="totals-name opponent">Ryan Spann</span><span class="totals-stat">7/13</span><span class="totals-pct">54%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -471,7 +483,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nikita Krylov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Lee vs. Oliveira &bull; Mar 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Lee vs. Oliveira &bull; Mar 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">37/50</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:26</span></div><div class="totals-line"><span class="totals-name opponent">Nikita Krylov</span><span class="totals-stat">45/58</span><span class="totals-pct">78%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 11:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -501,7 +514,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Corey Anderson</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:07 &bull; UFC 244: Masvidal vs. Diaz &bull; Nov 2019</div>
+                <div class="fight-event-label">UFC 244: Masvidal vs. Diaz &bull; Nov 2019</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Corey Anderson</span><span class="totals-stat">22/39</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -525,7 +539,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Misha Cirkunov</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 0:36 &bull; UFC 235: Jones vs. Smith &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC 235: Jones vs. Smith &bull; Mar 2019</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 0:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Misha Cirkunov</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -549,7 +564,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Justin Ledet</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Fist) &bull; Rd 1, 0:15 &bull; UFC Fight Night: Assuncao vs. Moraes 2 &bull; Feb 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Assuncao vs. Moraes 2 &bull; Feb 2019</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Fist) &bull; Rd 1, 0:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">7/8</span><span class="totals-pct">88%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Justin Ledet</span><span class="totals-stat">0/4</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -573,7 +589,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Khalil Rountree Jr.</div>
-                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 1, 1:57 &bull; UFC Fight Night: Magny vs. Ponzinibbio &bull; Nov 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Magny vs. Ponzinibbio &bull; Nov 2018</div>
+                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 1, 1:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">10/11</span><span class="totals-pct">91%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Khalil Rountree Jr.</span><span class="totals-stat">4/9</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -597,7 +614,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Henrique da Silva</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; DWCS Brazil 1.2 &bull; Aug 2018</div>
+                <div class="fight-event-label">DWCS Brazil 1.2 &bull; Aug 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Johnny Walker</span><span class="totals-stat">81/119</span><span class="totals-pct">68%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Henrique da Silva</span><span class="totals-stat">53/67</span><span class="totals-pct">79%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -625,7 +643,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:29 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:14 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

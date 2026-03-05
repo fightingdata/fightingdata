@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mason Jones</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Sandhagen vs. Figueiredo &bull; May 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Figueiredo &bull; May 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">42/108</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Mason Jones</span><span class="totals-stat">81/231</span><span class="totals-pct">35%</span><span class="totals-stat">TD 8/12</span><span class="totals-stat">Ctrl 6:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mateusz Gamrot</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 1:05 &bull; UFC Fight Night: Makhachev vs. Moises &bull; Jul 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Makhachev vs. Moises &bull; Jul 2021</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Mateusz Gamrot</span><span class="totals-stat">1/1</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Calvin Kattar</div>
-                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 2, 2:49 &bull; UFC 249: Ferguson vs. Gaethje &bull; May 2020</div>
+                <div class="fight-event-label">UFC 249: Ferguson vs. Gaethje &bull; May 2020</div>
+                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 2, 2:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">57/104</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Calvin Kattar</span><span class="totals-stat">52/113</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yair Rodriguez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Reyes vs. Weidman &bull; Oct 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Reyes vs. Weidman &bull; Oct 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">50/95</span><span class="totals-pct">53%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 5:35</span></div><div class="totals-line"><span class="totals-name opponent">Yair Rodriguez</span><span class="totals-stat">96/170</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 3:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Yair Rodriguez</div>
-                <div class="fight-meta">CNC &bull; Rd 1, 0:15 &bull; UFC Fight Night: Rodriguez vs. Stephens &bull; Sep 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Rodriguez vs. Stephens &bull; Sep 2019</div>
+                <div class="fight-meta">CNC &bull; Rd 1, 0:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yair Rodriguez</span><span class="totals-stat">2/2</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Zabit Magomedsharipov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 235: Jones vs. Smith &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC 235: Jones vs. Smith &bull; Mar 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">41/121</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Zabit Magomedsharipov</span><span class="totals-stat">70/129</span><span class="totals-pct">54%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 2:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jose Aldo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:19 &bull; UFC Fight Night: Alvarez vs. Poirier 2 &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Alvarez vs. Poirier 2 &bull; Jul 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">20/60</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jose Aldo</span><span class="totals-stat">29/63</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Emmett</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:35 &bull; UFC Fight Night: Emmett vs. Stephens &bull; Feb 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Emmett vs. Stephens &bull; Feb 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:35</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">24/57</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Josh Emmett</span><span class="totals-stat">18/40</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -423,7 +433,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dooho Choi</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:36 &bull; UFC Fight Night: Stephens vs. Choi &bull; Jan 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Stephens vs. Choi &bull; Jan 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">49/133</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Dooho Choi</span><span class="totals-stat">44/79</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -450,7 +461,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gilbert Melendez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 215: Nunes vs Shevchenko 2 &bull; Sep 2017</div>
+                <div class="fight-event-label">UFC 215: Nunes vs Shevchenko 2 &bull; Sep 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">96/250</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:21</span></div><div class="totals-line"><span class="totals-name opponent">Gilbert Melendez</span><span class="totals-stat">29/129</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -480,7 +492,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Renato Moicano</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FOX: Johnson vs. Reis &bull; Apr 2017</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs. Reis &bull; Apr 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">56/207</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Renato Moicano</span><span class="totals-stat">70/116</span><span class="totals-pct">60%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -510,7 +523,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Frankie Edgar</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">33/146</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Frankie Edgar</span><span class="totals-stat">40/76</span><span class="totals-pct">53%</span><span class="totals-stat">TD 5/14</span><span class="totals-stat">Ctrl 4:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -540,7 +554,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Renan Barao</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Almeida vs Garbrandt &bull; May 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Almeida vs Garbrandt &bull; May 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">55/140</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:23</span></div><div class="totals-line"><span class="totals-name opponent">Renan Barao</span><span class="totals-stat">43/137</span><span class="totals-pct">31%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 2:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -570,7 +585,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Max Holloway</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">47/95</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/12</span><span class="totals-stat">Ctrl 2:09</span></div><div class="totals-line"><span class="totals-name opponent">Max Holloway</span><span class="totals-stat">57/99</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -600,7 +616,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dennis Bermudez</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 3, 0:32 &bull; UFC 189: Mendes vs McGregor &bull; Jul 2015</div>
+                <div class="fight-event-label">UFC 189: Mendes vs McGregor &bull; Jul 2015</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 3, 0:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">38/73</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:20</span></div><div class="totals-line"><span class="totals-name opponent">Dennis Bermudez</span><span class="totals-stat">35/82</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 4:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -630,7 +647,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cub Swanson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Swanson vs Stephens &bull; Jun 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Swanson vs Stephens &bull; Jun 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">65/228</span><span class="totals-pct">29%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 3:13</span></div><div class="totals-line"><span class="totals-name opponent">Cub Swanson</span><span class="totals-stat">87/219</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -666,7 +684,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Darren Elkins</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Henderson vs Thomson &bull; Jan 2014</div>
+                <div class="fight-event-label">UFC on FOX: Henderson vs Thomson &bull; Jan 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">40/117</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:09</span></div><div class="totals-line"><span class="totals-name opponent">Darren Elkins</span><span class="totals-stat">21/137</span><span class="totals-pct">15%</span><span class="totals-stat">TD 0/9</span><span class="totals-stat">Ctrl 1:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -696,7 +715,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rony Jason</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 0:40 &bull; UFC Fight Night: Belfort vs Henderson 2 &bull; Nov 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Belfort vs Henderson 2 &bull; Nov 2013</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 0:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">3/3</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Rony Jason</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -720,7 +740,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Estevan Payan</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 160: Velasquez vs Silva 2 &bull; May 2013</div>
+                <div class="fight-event-label">UFC 160: Velasquez vs Silva 2 &bull; May 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">49/88</span><span class="totals-pct">56%</span><span class="totals-stat">TD 6/10</span><span class="totals-stat">Ctrl 9:04</span></div><div class="totals-line"><span class="totals-name opponent">Estevan Payan</span><span class="totals-stat">25/94</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -750,7 +771,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yves Edwards</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:55 &bull; UFC on FOX: Henderson vs Diaz &bull; Dec 2012</div>
+                <div class="fight-event-label">UFC on FOX: Henderson vs Diaz &bull; Dec 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">5/21</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Yves Edwards</span><span class="totals-stat">8/21</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -774,7 +796,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FUEL TV: Korean Zombie vs Poirier &bull; May 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Korean Zombie vs Poirier &bull; May 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">46/115</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">87/192</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -804,7 +827,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anthony Pettis</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 136: Edgar vs Maynard 3 &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC 136: Edgar vs Maynard 3 &bull; Oct 2011</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">17/47</span><span class="totals-pct">36%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 3:29</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">21/47</span><span class="totals-pct">45%</span><span class="totals-stat">TD 6/9</span><span class="totals-stat">Ctrl 6:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -834,7 +858,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcus Davis</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 2:33 &bull; UFC 125: Resolution &bull; Jan 2011</div>
+                <div class="fight-event-label">UFC 125: Resolution &bull; Jan 2011</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 2:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">25/68</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 1:01</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Davis</span><span class="totals-stat">17/76</span><span class="totals-pct">22%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 4:22</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -864,7 +889,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Melvin Guillard</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 119: Mir vs Cro Cop &bull; Sep 2010</div>
+                <div class="fight-event-label">UFC 119: Mir vs Cro Cop &bull; Sep 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">62/155</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Melvin Guillard</span><span class="totals-stat">73/168</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -894,7 +920,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-24')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sam Stout</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 113: Machida vs Shogun 2 &bull; May 2010</div>
+                <div class="fight-event-label">UFC 113: Machida vs Shogun 2 &bull; May 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">55/119</span><span class="totals-pct">46%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 1:11</span></div><div class="totals-line"><span class="totals-name opponent">Sam Stout</span><span class="totals-stat">70/181</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
@@ -924,7 +951,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-25')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Justin Buchholz</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 3:23 &bull; UFC Fight Night: Diaz vs Guillard &bull; Sep 2009</div>
+                <div class="fight-event-label">UFC Fight Night: Diaz vs Guillard &bull; Sep 2009</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 3:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">28/50</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div><div class="totals-line"><span class="totals-name opponent">Justin Buchholz</span><span class="totals-stat">9/49</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-25">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-25" style="display:none;">
@@ -948,7 +976,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-26')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gleison Tibau</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Condit vs Kampmann &bull; Apr 2009</div>
+                <div class="fight-event-label">UFC Fight Night: Condit vs Kampmann &bull; Apr 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">23/40</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:43</span></div><div class="totals-line"><span class="totals-name opponent">Gleison Tibau</span><span class="totals-stat">7/20</span><span class="totals-pct">35%</span><span class="totals-stat">TD 5/13</span><span class="totals-stat">Ctrl 10:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-26">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-26" style="display:none;">
@@ -978,7 +1007,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-27')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joe Lauzon</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:43 &bull; UFC Fight Night: Lauzon vs Stephens &bull; Feb 2009</div>
+                <div class="fight-event-label">UFC Fight Night: Lauzon vs Stephens &bull; Feb 2009</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">15/37</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:43</span></div><div class="totals-line"><span class="totals-name opponent">Joe Lauzon</span><span class="totals-stat">11/17</span><span class="totals-pct">65%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-27">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-27" style="display:none;">
@@ -1005,7 +1035,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-28')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rafael Dos Anjos</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:39 &bull; UFC 91: Couture vs Lesnar &bull; Nov 2008</div>
+                <div class="fight-event-label">UFC 91: Couture vs Lesnar &bull; Nov 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">22/46</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:23</span></div><div class="totals-line"><span class="totals-name opponent">Rafael Dos Anjos</span><span class="totals-stat">9/18</span><span class="totals-pct">50%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 5:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-28">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-28" style="display:none;">
@@ -1035,7 +1066,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-29')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cole Miller</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 4:44 &bull; UFC Fight Night: Swick vs Burkman &bull; Jan 2008</div>
+                <div class="fight-event-label">UFC Fight Night: Swick vs Burkman &bull; Jan 2008</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 2, 4:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">30/54</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:19</span></div><div class="totals-line"><span class="totals-name opponent">Cole Miller</span><span class="totals-stat">5/29</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-29">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-29" style="display:none;">
@@ -1062,7 +1094,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-30')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Diego Saraiva</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 76: Knockout &bull; Sep 2007</div>
+                <div class="fight-event-label">UFC 76: Knockout &bull; Sep 2007</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">50/90</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 9:47</span></div><div class="totals-line"><span class="totals-name opponent">Diego Saraiva</span><span class="totals-stat">11/29</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-30">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-30" style="display:none;">
@@ -1092,7 +1125,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-31')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Din Thomas</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 2:44 &bull; UFC 71: Liddell vs Jackson &bull; May 2007</div>
+                <div class="fight-event-label">UFC 71: Liddell vs Jackson &bull; May 2007</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 2:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">7/35</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:06</span></div><div class="totals-line"><span class="totals-name opponent">Din Thomas</span><span class="totals-stat">10/37</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-31">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-31" style="display:none;">
@@ -1119,7 +1153,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Charles Oliveira</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: A Champion Will Be Crowned Finale &bull; Dec 2014</div>
+                <div class="fight-event-label">The Ultimate Fighter: A Champion Will Be Crowned Finale &bull; Dec 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">48/79</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 6:19</span></div><div class="totals-line"><span class="totals-name opponent">Charles Oliveira</span><span class="totals-stat">43/67</span><span class="totals-pct">64%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 5:23</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -1149,7 +1184,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Danny Downes</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Lesnar vs Team dos Santos Finale &bull; Jun 2011</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Lesnar vs Team dos Santos Finale &bull; Jun 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">55/88</span><span class="totals-pct">62%</span><span class="totals-stat">TD 6/8</span><span class="totals-stat">Ctrl 8:18</span></div><div class="totals-line"><span class="totals-name opponent">Danny Downes</span><span class="totals-stat">32/88</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:28</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -1179,7 +1215,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Spencer Fisher</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Rampage vs Team Forrest Finale &bull; Jun 2008</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Rampage vs Team Forrest Finale &bull; Jun 2008</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jeremy Stephens</span><span class="totals-stat">23/55</span><span class="totals-pct">42%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:33</span></div><div class="totals-line"><span class="totals-name opponent">Spencer Fisher</span><span class="totals-stat">56/104</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 8:38</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-2" style="display:none;">
@@ -1207,7 +1244,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:25 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:11 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

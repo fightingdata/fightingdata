@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Vitor Petrino</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rozenstruik vs. Gaziev &bull; Mar 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Rozenstruik vs. Gaziev &bull; Mar 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">30/60</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Vitor Petrino</span><span class="totals-stat">27/75</span><span class="totals-pct">36%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 5:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anton Turkalj</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:12 &bull; UFC 293: Adesanya vs. Strickland &bull; Sep 2023</div>
+                <div class="fight-event-label">UFC 293: Adesanya vs. Strickland &bull; Sep 2023</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">16/29</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Anton Turkalj</span><span class="totals-stat">8/24</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Modestas Bukauskas</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 284: Makhachev vs. Volkanovski &bull; Feb 2023</div>
+                <div class="fight-event-label">UFC 284: Makhachev vs. Volkanovski &bull; Feb 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">45/81</span><span class="totals-pct">56%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 3:01</span></div><div class="totals-line"><span class="totals-name opponent">Modestas Bukauskas</span><span class="totals-stat">44/109</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:57</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Harry Hunsucker</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 1:05 &bull; UFC 278: Usman vs. Edwards &bull; Aug 2022</div>
+                <div class="fight-event-label">UFC 278: Usman vs. Edwards &bull; Aug 2022</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 1:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">6/11</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Harry Hunsucker</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ike Villanueva</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:55 &bull; UFC Fight Night: Lemos vs. Andrade &bull; Apr 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Lemos vs. Andrade &bull; Apr 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">22/29</span><span class="totals-pct">76%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Ike Villanueva</span><span class="totals-stat">4/22</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -339,7 +346,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mauricio Rua</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:43 &bull; UFC Fight Night: Dos Santos vs. Tuivasa &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Santos vs. Tuivasa &bull; Dec 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">31/44</span><span class="totals-pct">70%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Mauricio Rua</span><span class="totals-stat">30/56</span><span class="totals-pct">54%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 5:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -369,7 +377,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ovince Saint Preux</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:54 &bull; UFC Fight Night: Cowboy vs. Edwards &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Cowboy vs. Edwards &bull; Jun 2018</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">9/12</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 1:20</span></div><div class="totals-line"><span class="totals-name opponent">Ovince Saint Preux</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -393,7 +402,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Saparbeg Safarov</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:54 &bull; UFC 221: Romero vs. Rockhold &bull; Feb 2018</div>
+                <div class="fight-event-label">UFC 221: Romero vs. Rockhold &bull; Feb 2018</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 3:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">12/23</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Saparbeg Safarov</span><span class="totals-stat">8/22</span><span class="totals-pct">36%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -417,7 +427,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ilir Latifi</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 215: Nunes vs Shevchenko 2 &bull; Sep 2017</div>
+                <div class="fight-event-label">UFC 215: Nunes vs Shevchenko 2 &bull; Sep 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">31/54</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Ilir Latifi</span><span class="totals-stat">44/79</span><span class="totals-pct">56%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 7:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -447,7 +458,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Craig</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 4:10 &bull; UFC 209: Woodley vs. Thompson 2 &bull; Mar 2017</div>
+                <div class="fight-event-label">UFC 209: Woodley vs. Thompson 2 &bull; Mar 2017</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 4:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">23/35</span><span class="totals-pct">66%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:37</span></div><div class="totals-line"><span class="totals-name opponent">Paul Craig</span><span class="totals-stat">12/24</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:06</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -471,7 +483,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Khalil Rountree Jr.</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:07 &bull; UFC Fight Night: Whittaker vs. Brunson &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Whittaker vs. Brunson &bull; Nov 2016</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Tyson Pedro</span><span class="totals-stat">4/7</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:08</span></div><div class="totals-line"><span class="totals-name opponent">Khalil Rountree Jr.</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -493,7 +506,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:10 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:52 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

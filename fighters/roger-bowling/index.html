@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -152,7 +154,7 @@
         <h2>Fighter Profile</h2>
         <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">43 (Dec 5, 1982)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'9"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">155 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">68"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="sample-warning">&#9888;&#65039; <strong>Roger Bowling</strong> has only 3 fights in our database — stats may not be fully representative.</div>
+        
 
         <h2>Career Statistics</h2>
     <table class="profile-stats-table">
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Abel Trujillo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:35 &bull; UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs. Benavidez 2 &bull; Dec 2013</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:35</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">9/33</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:42</span></div><div class="totals-line"><span class="totals-name opponent">Abel Trujillo</span><span class="totals-stat">43/64</span><span class="totals-pct">67%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 2:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Abel Trujillo</div>
-                <div class="fight-meta">CNC &bull; Rd 2, 4:57 &bull; UFC Fight Night: Condit vs Kampmann 2 &bull; Aug 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Condit vs Kampmann 2 &bull; Aug 2013</div>
+                <div class="fight-meta">CNC &bull; Rd 2, 4:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">43/104</span><span class="totals-pct">41%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 2:14</span></div><div class="totals-line"><span class="totals-name opponent">Abel Trujillo</span><span class="totals-stat">50/123</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anthony Njokuani</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:52 &bull; UFC on FOX: Henderson vs Melendez &bull; Apr 2013</div>
+                <div class="fight-event-label">UFC on FOX: Henderson vs Melendez &bull; Apr 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">27/76</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:54</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Njokuani</span><span class="totals-stat">26/46</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tarec Saffiedine</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Rousey vs Kaufman &bull; Aug 2012</div>
+                <div class="fight-event-label">Strikeforce - Rousey vs Kaufman &bull; Aug 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">53/135</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 1:13</span></div><div class="totals-line"><span class="totals-name opponent">Tarec Saffiedine</span><span class="totals-stat">67/126</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:05</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brandon Saling</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:15 &bull; Strikeforce - Tate vs. Rousey &bull; Mar 2012</div>
+                <div class="fight-event-label">Strikeforce - Tate vs. Rousey &bull; Mar 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:15</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">38/48</span><span class="totals-pct">79%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 4:22</span></div><div class="totals-line"><span class="totals-name opponent">Brandon Saling</span><span class="totals-stat">18/44</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jerron Peoples</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:42 &bull; Strikeforce - Melendez vs. Masvidal &bull; Dec 2011</div>
+                <div class="fight-event-label">Strikeforce - Melendez vs. Masvidal &bull; Dec 2011</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -353,7 +361,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bobby Voelker</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 1:38 &bull; Strikeforce Challengers 17 &bull; Jul 2011</div>
+                <div class="fight-event-label">Strikeforce Challengers 17 &bull; Jul 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 1:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">48/88</span><span class="totals-pct">55%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Bobby Voelker</span><span class="totals-stat">40/96</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-3" style="display:none;">
@@ -380,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Thornburg</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Feijao vs. Henderson &bull; Mar 2011</div>
+                <div class="fight-event-label">Strikeforce - Feijao vs. Henderson &bull; Mar 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">47/77</span><span class="totals-pct">61%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 10:30</span></div><div class="totals-line"><span class="totals-name opponent">Josh Thornburg</span><span class="totals-stat">18/36</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-4" style="display:none;">
@@ -410,13 +420,14 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Bobby Voelker</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:58 &bull; Strikeforce Challengers 11 &bull; Oct 2010</div>
+                <div class="fight-event-label">Strikeforce Challengers 11 &bull; Oct 2010</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Roger Bowling</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-5" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:58 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:41 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Niko Price</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:38 &bull; UFC 290: Volkanovski vs. Rodriguez &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC 290: Volkanovski vs. Rodriguez &bull; Jul 2023</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">8/10</span><span class="totals-pct">80%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Niko Price</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Bryan Barberena</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:47 &bull; UFC 276: Adesanya vs. Cannonier &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC 276: Adesanya vs. Cannonier &bull; Jul 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">81/141</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Bryan Barberena</span><span class="totals-stat">147/316</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -258,7 +262,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nick Diaz</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:44 &bull; UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-event-label">UFC 266: Volkanovski vs. Ortega &bull; Sep 2021</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">131/221</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Nick Diaz</span><span class="totals-stat">150/339</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Neil Magny</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Smith vs. Rakic &bull; Aug 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Smith vs. Rakic &bull; Aug 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">26/45</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:33</span></div><div class="totals-line"><span class="totals-name opponent">Neil Magny</span><span class="totals-stat">62/88</span><span class="totals-pct">70%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 8:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Colby Covington</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Covington vs. Lawler &bull; Aug 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Covington vs. Lawler &bull; Aug 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">78/167</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Colby Covington</span><span class="totals-stat">179/515</span><span class="totals-pct">35%</span><span class="totals-stat">TD 10/18</span><span class="totals-stat">Ctrl 8:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -354,7 +361,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ben Askren</div>
-                <div class="fight-meta">Submission (Bulldog Choke) &bull; Rd 1, 3:20 &bull; UFC 235: Jones vs. Smith &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC 235: Jones vs. Smith &bull; Mar 2019</div>
+                <div class="fight-meta">Submission (Bulldog Choke) &bull; Rd 1, 3:20</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">26/29</span><span class="totals-pct">90%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:33</span></div><div class="totals-line"><span class="totals-name opponent">Ben Askren</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:59</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -378,7 +386,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rafael Dos Anjos</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Lawler vs. Dos Anjos &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Lawler vs. Dos Anjos &bull; Dec 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">86/212</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 4:24</span></div><div class="totals-line"><span class="totals-name opponent">Rafael Dos Anjos</span><span class="totals-stat">172/291</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 7:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -414,7 +423,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 214: Cormier vs. Jones 2 &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC 214: Cormier vs. Jones 2 &bull; Jul 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">77/156</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">82/166</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 1:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -444,7 +454,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tyron Woodley</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:12 &bull; UFC 201: Lawler vs. Woodley &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC 201: Lawler vs. Woodley &bull; Jul 2016</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 2:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tyron Woodley</span><span class="totals-stat">8/11</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -468,7 +479,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Carlos Condit</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-event-label">UFC 195: Lawler vs Condit &bull; Jan 2016</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">92/177</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Condit</span><span class="totals-stat">176/495</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -504,7 +516,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rory MacDonald</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 5, 1:00 &bull; UFC 189: Mendes vs McGregor &bull; Jul 2015</div>
+                <div class="fight-event-label">UFC 189: Mendes vs McGregor &bull; Jul 2015</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 5, 1:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">70/156</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Rory MacDonald</span><span class="totals-stat">86/222</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -540,7 +553,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Johny Hendricks</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 181: Hendricks vs Lawler II &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC 181: Hendricks vs Lawler II &bull; Dec 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">116/201</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:02</span></div><div class="totals-line"><span class="totals-name opponent">Johny Hendricks</span><span class="totals-stat">111/228</span><span class="totals-pct">49%</span><span class="totals-stat">TD 5/17</span><span class="totals-stat">Ctrl 10:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -576,7 +590,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Brown</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC on FOX: Lawler vs Brown &bull; Jul 2014</div>
+                <div class="fight-event-label">UFC on FOX: Lawler vs Brown &bull; Jul 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">80/200</span><span class="totals-pct">40%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 3:57</span></div><div class="totals-line"><span class="totals-name opponent">Matt Brown</span><span class="totals-stat">82/242</span><span class="totals-pct">34%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 1:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -612,7 +627,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jake Ellenberger</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 3, 3:06 &bull; UFC 173: Barao vs Dillashaw &bull; May 2014</div>
+                <div class="fight-event-label">UFC 173: Barao vs Dillashaw &bull; May 2014</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 3, 3:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">68/155</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:11</span></div><div class="totals-line"><span class="totals-name opponent">Jake Ellenberger</span><span class="totals-stat">29/89</span><span class="totals-pct">33%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -642,7 +658,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Johny Hendricks</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-event-label">UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">150/331</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Johny Hendricks</span><span class="totals-stat">158/397</span><span class="totals-pct">40%</span><span class="totals-stat">TD 2/10</span><span class="totals-stat">Ctrl 4:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -678,7 +695,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rory MacDonald</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 167: St-Pierre vs Hendricks &bull; Nov 2013</div>
+                <div class="fight-event-label">UFC 167: St-Pierre vs Hendricks &bull; Nov 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">44/102</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:22</span></div><div class="totals-line"><span class="totals-name opponent">Rory MacDonald</span><span class="totals-stat">37/107</span><span class="totals-pct">35%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 3:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -708,7 +726,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bobby Voelker</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 0:24 &bull; UFC on FOX: Johnson vs Moraga &bull; Jul 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs Moraga &bull; Jul 2013</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 2, 0:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">28/46</span><span class="totals-pct">61%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:13</span></div><div class="totals-line"><span class="totals-name opponent">Bobby Voelker</span><span class="totals-stat">10/42</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -735,7 +754,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Koscheck</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:57 &bull; UFC 157: Rousey vs Carmouche &bull; Feb 2013</div>
+                <div class="fight-event-label">UFC 157: Rousey vs Carmouche &bull; Feb 2013</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">9/15</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Josh Koscheck</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 3:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -759,7 +779,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Evan Tanner</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:22 &bull; UFC 50: The War Of '04 &bull; Oct 2004</div>
+                <div class="fight-event-label">UFC 50: The War Of '04 &bull; Oct 2004</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 2:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">3/14</span><span class="totals-pct">21%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:34</span></div><div class="totals-line"><span class="totals-name opponent">Evan Tanner</span><span class="totals-stat">6/17</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -783,7 +804,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nick Diaz</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:31 &bull; UFC 47: It's On! &bull; Apr 2004</div>
+                <div class="fight-event-label">UFC 47: It's On! &bull; Apr 2004</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">16/64</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Nick Diaz</span><span class="totals-stat">22/75</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -810,7 +832,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Lytle</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 45: Revolution &bull; Nov 2003</div>
+                <div class="fight-event-label">UFC 45: Revolution &bull; Nov 2003</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">30/72</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 4:52</span></div><div class="totals-line"><span class="totals-name opponent">Chris Lytle</span><span class="totals-stat">37/97</span><span class="totals-pct">38%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -840,7 +863,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Pete Spratt</div>
-                <div class="fight-meta">Submission (Injury) &bull; Rd 2, 2:28 &bull; UFC 42: Sudden Impact &bull; Apr 2003</div>
+                <div class="fight-event-label">UFC 42: Sudden Impact &bull; Apr 2003</div>
+                <div class="fight-meta">Submission (Injury) &bull; Rd 2, 2:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">15/25</span><span class="totals-pct">60%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:16</span></div><div class="totals-line"><span class="totals-name opponent">Pete Spratt</span><span class="totals-stat">19/27</span><span class="totals-pct">70%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -867,7 +891,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tiki Ghosn</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:29 &bull; UFC 40: Vendetta &bull; Nov 2002</div>
+                <div class="fight-event-label">UFC 40: Vendetta &bull; Nov 2002</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">5/11</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Tiki Ghosn</span><span class="totals-stat">7/14</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -891,7 +916,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Steve Berger</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:27 &bull; UFC 37.5: As Real As It Gets &bull; Jun 2002</div>
+                <div class="fight-event-label">UFC 37.5: As Real As It Gets &bull; Jun 2002</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">28/51</span><span class="totals-pct">55%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:02</span></div><div class="totals-line"><span class="totals-name opponent">Steve Berger</span><span class="totals-stat">11/37</span><span class="totals-pct">30%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -918,7 +944,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-24')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Aaron Riley</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 37: High Impact &bull; May 2002</div>
+                <div class="fight-event-label">UFC 37: High Impact &bull; May 2002</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Aaron Riley</span><span class="totals-stat">55/130</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
@@ -948,7 +975,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Lorenz Larkin</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Rockhold vs Kennedy &bull; Jul 2012</div>
+                <div class="fight-event-label">Strikeforce - Rockhold vs Kennedy &bull; Jul 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">24/70</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 5:12</span></div><div class="totals-line"><span class="totals-name opponent">Lorenz Larkin</span><span class="totals-stat">50/110</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:14</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -978,7 +1006,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Adlan Amagov</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 1:48 &bull; Strikeforce - Rockhold vs. Jardine &bull; Jan 2012</div>
+                <div class="fight-event-label">Strikeforce - Rockhold vs. Jardine &bull; Jan 2012</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 1:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">6/11</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Adlan Amagov</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:55</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -1002,7 +1031,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tim Kennedy</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Fedor vs. Henderson &bull; Jul 2011</div>
+                <div class="fight-event-label">Strikeforce - Fedor vs. Henderson &bull; Jul 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">11/28</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div><div class="totals-line"><span class="totals-name opponent">Tim Kennedy</span><span class="totals-stat">32/76</span><span class="totals-pct">42%</span><span class="totals-stat">TD 5/16</span><span class="totals-stat">Ctrl 5:02</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-2" style="display:none;">
@@ -1032,7 +1062,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jacare Souza</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:00 &bull; Strikeforce - Diaz vs. Cyborg &bull; Jan 2011</div>
+                <div class="fight-event-label">Strikeforce - Diaz vs. Cyborg &bull; Jan 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">14/23</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:48</span></div><div class="totals-line"><span class="totals-name opponent">Jacare Souza</span><span class="totals-stat">12/23</span><span class="totals-pct">52%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 7:44</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-3" style="display:none;">
@@ -1062,7 +1093,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Matt Lindland</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:50 &bull; Strikeforce - Henderson vs. Babalu &bull; Dec 2010</div>
+                <div class="fight-event-label">Strikeforce - Henderson vs. Babalu &bull; Dec 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 0:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">8/28</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Matt Lindland</span><span class="totals-stat">4/19</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-4" style="display:none;">
@@ -1086,7 +1118,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Renato Sobral</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Strikeforce - Los Angeles &bull; Jun 2010</div>
+                <div class="fight-event-label">Strikeforce - Los Angeles &bull; Jun 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">33/113</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Renato Sobral</span><span class="totals-stat">54/157</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:35</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-5" style="display:none;">
@@ -1116,7 +1149,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Melvin Manhoef</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:33 &bull; Strikeforce - Miami &bull; Jan 2010</div>
+                <div class="fight-event-label">Strikeforce - Miami &bull; Jan 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Melvin Manhoef</span><span class="totals-stat">23/37</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-6" style="display:none;">
@@ -1140,7 +1174,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jake Shields</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:02 &bull; Strikeforce - Lawler vs. Shields &bull; Jun 2009</div>
+                <div class="fight-event-label">Strikeforce - Lawler vs. Shields &bull; Jun 2009</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 2:02</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">4/9</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div><div class="totals-line"><span class="totals-name opponent">Jake Shields</span><span class="totals-stat">17/25</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-7" style="display:none;">
@@ -1164,7 +1199,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-elitexc-0')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Scott Smith</div>
-                <div class="fight-meta">CNC &bull; Rd 3, 3:26 &bull; EliteXC - Unfinished Business &bull; Jul 2008</div>
+                <div class="fight-event-label">EliteXC - Unfinished Business &bull; Jul 2008</div>
+                <div class="fight-meta">CNC &bull; Rd 3, 3:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">43/83</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Scott Smith</span><span class="totals-stat">18/67</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-elitexc-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-elitexc-0" style="display:none;">
@@ -1191,7 +1227,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-elitexc-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Murilo Rua</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:04 &bull; EliteXC - Uprising &bull; Sep 2007</div>
+                <div class="fight-event-label">EliteXC - Uprising &bull; Sep 2007</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:04</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">53/130</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Murilo Rua</span><span class="totals-stat">51/211</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-elitexc-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-elitexc-1" style="display:none;">
@@ -1221,7 +1258,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joey Villasenor</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 0:22 &bull; PRIDE 32: The Real Deal &bull; Oct 2006</div>
+                <div class="fight-event-label">PRIDE 32: The Real Deal &bull; Oct 2006</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 1, 0:22</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Robbie Lawler</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joey Villasenor</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -1243,7 +1281,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:57 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:40 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

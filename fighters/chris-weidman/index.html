@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Eryk Anders</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:51 &bull; UFC 310: Pantoja vs. Asakura &bull; Dec 2024</div>
+                <div class="fight-event-label">UFC 310: Pantoja vs. Asakura &bull; Dec 2024</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:51</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">16/36</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:15</span></div><div class="totals-line"><span class="totals-name opponent">Eryk Anders</span><span class="totals-stat">62/102</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 4:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Bruno Silva</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 2:18 &bull; UFC Fight Night: Blanchfield vs. Fiorot &bull; Mar 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Blanchfield vs. Fiorot &bull; Mar 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 2:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">75/111</span><span class="totals-pct">68%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 3:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brad Tavares</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 292: Sterling vs. O'Malley &bull; Aug 2023</div>
+                <div class="fight-event-label">UFC 292: Sterling vs. O'Malley &bull; Aug 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">37/92</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/8</span><span class="totals-stat">Ctrl 1:21</span></div><div class="totals-line"><span class="totals-name opponent">Brad Tavares</span><span class="totals-stat">70/115</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -294,7 +299,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Uriah Hall</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:17 &bull; UFC 261: Usman vs. Masvidal 2 &bull; Apr 2021</div>
+                <div class="fight-event-label">UFC 261: Usman vs. Masvidal 2 &bull; Apr 2021</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 0:17</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Uriah Hall</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Omari Akhmedov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Lewis vs. Oleinik &bull; Aug 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Oleinik &bull; Aug 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">29/56</span><span class="totals-pct">52%</span><span class="totals-stat">TD 5/16</span><span class="totals-stat">Ctrl 8:17</span></div><div class="totals-line"><span class="totals-name opponent">Omari Akhmedov</span><span class="totals-stat">33/91</span><span class="totals-pct">36%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 1:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -348,7 +355,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dominick Reyes</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:43 &bull; UFC Fight Night: Reyes vs. Weidman &bull; Oct 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Reyes vs. Weidman &bull; Oct 2019</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:10</span></div><div class="totals-line"><span class="totals-name opponent">Dominick Reyes</span><span class="totals-stat">8/11</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jacare Souza</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:46 &bull; UFC 230: Cormier vs. Lewis &bull; Nov 2018</div>
+                <div class="fight-event-label">UFC 230: Cormier vs. Lewis &bull; Nov 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">68/193</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:43</span></div><div class="totals-line"><span class="totals-name opponent">Jacare Souza</span><span class="totals-stat">74/132</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -402,7 +411,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kelvin Gastelum</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 3:45 &bull; UFC Fight Night: Weidman vs. Gastelum &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Weidman vs. Gastelum &bull; Jul 2017</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 3:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">36/76</span><span class="totals-pct">47%</span><span class="totals-stat">TD 7/13</span><span class="totals-stat">Ctrl 7:35</span></div><div class="totals-line"><span class="totals-name opponent">Kelvin Gastelum</span><span class="totals-stat">26/47</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -432,7 +442,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gegard Mousasi</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 3:13 &bull; UFC 210: Cormier vs. Johnson 2 &bull; Apr 2017</div>
+                <div class="fight-event-label">UFC 210: Cormier vs. Johnson 2 &bull; Apr 2017</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 2, 3:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">13/29</span><span class="totals-pct">45%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 3:22</span></div><div class="totals-line"><span class="totals-name opponent">Gegard Mousasi</span><span class="totals-stat">49/93</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -459,7 +470,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yoel Romero</div>
-                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 3, 0:24 &bull; UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-meta">KO/TKO (Flying Knee) &bull; Rd 3, 0:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">12/47</span><span class="totals-pct">26%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 0:25</span></div><div class="totals-line"><span class="totals-name opponent">Yoel Romero</span><span class="totals-stat">18/40</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -489,7 +501,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Luke Rockhold</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 4, 3:12 &bull; UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 4, 3:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">48/75</span><span class="totals-pct">64%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 4:27</span></div><div class="totals-line"><span class="totals-name opponent">Luke Rockhold</span><span class="totals-stat">126/191</span><span class="totals-pct">66%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 5:30</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -522,7 +535,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Vitor Belfort</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:53 &bull; UFC 187: Johnson vs Cormier &bull; May 2015</div>
+                <div class="fight-event-label">UFC 187: Johnson vs Cormier &bull; May 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:53</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">46/69</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:13</span></div><div class="totals-line"><span class="totals-name opponent">Vitor Belfort</span><span class="totals-stat">18/32</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -546,7 +560,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lyoto Machida</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 175: Weidman vs Machida &bull; Jul 2014</div>
+                <div class="fight-event-label">UFC 175: Weidman vs Machida &bull; Jul 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">65/177</span><span class="totals-pct">37%</span><span class="totals-stat">TD 5/13</span><span class="totals-stat">Ctrl 4:36</span></div><div class="totals-line"><span class="totals-name opponent">Lyoto Machida</span><span class="totals-stat">58/139</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -582,7 +597,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anderson Silva</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 2, 1:16 &bull; UFC 168: Weidman vs Silva 2 &bull; Dec 2013</div>
+                <div class="fight-event-label">UFC 168: Weidman vs Silva 2 &bull; Dec 2013</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 2, 1:16</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">20/44</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:21</span></div><div class="totals-line"><span class="totals-name opponent">Anderson Silva</span><span class="totals-stat">8/15</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -609,7 +625,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anderson Silva</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:18 &bull; UFC 162: Silva vs Weidman &bull; Jul 2013</div>
+                <div class="fight-event-label">UFC 162: Silva vs Weidman &bull; Jul 2013</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">16/43</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:55</span></div><div class="totals-line"><span class="totals-name opponent">Anderson Silva</span><span class="totals-stat">14/24</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -636,7 +653,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mark Munoz</div>
-                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 2, 1:37 &bull; UFC on FUEL TV: Munoz vs Weidman &bull; Jul 2012</div>
+                <div class="fight-event-label">UFC on FUEL TV: Munoz vs Weidman &bull; Jul 2012</div>
+                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 2, 1:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">28/37</span><span class="totals-pct">76%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:12</span></div><div class="totals-line"><span class="totals-name opponent">Mark Munoz</span><span class="totals-stat">0/7</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -663,7 +681,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Demian Maia</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-event-label">UFC on FOX: Evans vs Davis &bull; Jan 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">58/166</span><span class="totals-pct">35%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 1:38</span></div><div class="totals-line"><span class="totals-name opponent">Demian Maia</span><span class="totals-stat">51/169</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -693,7 +712,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tom Lawlor</div>
-                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 1, 2:07 &bull; UFC 139: Shogun vs Henderson &bull; Nov 2011</div>
+                <div class="fight-event-label">UFC 139: Shogun vs Henderson &bull; Nov 2011</div>
+                <div class="fight-meta">Submission (D'Arce Choke) &bull; Rd 1, 2:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">3/6</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:27</span></div><div class="totals-line"><span class="totals-name opponent">Tom Lawlor</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -717,7 +737,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jesse Bongfeldt</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:54 &bull; UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-event-label">UFC 131: Dos Santos vs Carwin &bull; Jun 2011</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 1, 4:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">7/17</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:46</span></div><div class="totals-line"><span class="totals-name opponent">Jesse Bongfeldt</span><span class="totals-stat">5/12</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -741,7 +762,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alessio Sakara</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Live: Sanchez vs Kampmann &bull; Mar 2011</div>
+                <div class="fight-event-label">UFC Live: Sanchez vs Kampmann &bull; Mar 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Chris Weidman</span><span class="totals-stat">45/105</span><span class="totals-pct">43%</span><span class="totals-stat">TD 5/8</span><span class="totals-stat">Ctrl 8:00</span></div><div class="totals-line"><span class="totals-name opponent">Alessio Sakara</span><span class="totals-stat">27/71</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -769,7 +791,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:03 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:51 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

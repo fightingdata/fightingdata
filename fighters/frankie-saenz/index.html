@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jonathan Martinez</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 3, 0:57 &bull; UFC Fight Night: Brunson vs. Shahbazyan &bull; Aug 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Brunson vs. Shahbazyan &bull; Aug 2020</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 3, 0:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">39/72</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:10</span></div><div class="totals-line"><span class="totals-name opponent">Jonathan Martinez</span><span class="totals-stat">79/133</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marlon Vera</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:25 &bull; UFC Fight Night: Thompson vs. Pettis &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Thompson vs. Pettis &bull; Mar 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Marlon Vera</span><span class="totals-stat">12/16</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Henry Briones</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Maia vs. Usman &bull; May 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Maia vs. Usman &bull; May 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">66/120</span><span class="totals-pct">55%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 4:10</span></div><div class="totals-line"><span class="totals-name opponent">Henry Briones</span><span class="totals-stat">44/104</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Merab Dvalishvili</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Swanson vs. Ortega &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Swanson vs. Ortega &bull; Dec 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">58/106</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Merab Dvalishvili</span><span class="totals-stat">47/118</span><span class="totals-pct">40%</span><span class="totals-stat">TD 11/23</span><span class="totals-stat">Ctrl 7:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Augusto Mendes</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rodriguez vs. Penn &bull; Jan 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Rodriguez vs. Penn &bull; Jan 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">40/106</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 2:33</span></div><div class="totals-line"><span class="totals-name opponent">Augusto Mendes</span><span class="totals-stat">42/109</span><span class="totals-pct">39%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 2:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -351,7 +358,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Eddie Wineland</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 1:54 &bull; UFC on FOX: Holm vs. Shevchenko &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC on FOX: Holm vs. Shevchenko &bull; Jul 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 1:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">45/116</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:21</span></div><div class="totals-line"><span class="totals-name opponent">Eddie Wineland</span><span class="totals-stat">42/129</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -381,7 +389,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Urijah Faber</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">66/136</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:00</span></div><div class="totals-line"><span class="totals-name opponent">Urijah Faber</span><span class="totals-stat">75/111</span><span class="totals-pct">68%</span><span class="totals-stat">TD 2/13</span><span class="totals-stat">Ctrl 1:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -411,7 +420,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sirwan Kakai</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Teixeira vs Saint Preux &bull; Aug 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Teixeira vs Saint Preux &bull; Aug 2015</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">80/183</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:41</span></div><div class="totals-line"><span class="totals-name opponent">Sirwan Kakai</span><span class="totals-stat">55/113</span><span class="totals-pct">49%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 1:54</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -441,7 +451,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Iuri Alcantara</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bigfoot vs Mir &bull; Feb 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Bigfoot vs Mir &bull; Feb 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">44/95</span><span class="totals-pct">46%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 6:59</span></div><div class="totals-line"><span class="totals-name opponent">Iuri Alcantara</span><span class="totals-stat">31/59</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -471,7 +482,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nolan Ticman</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bader vs Saint Preux &bull; Aug 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Bader vs Saint Preux &bull; Aug 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Frankie Saenz</span><span class="totals-stat">67/129</span><span class="totals-pct">52%</span><span class="totals-stat">TD 5/9</span><span class="totals-stat">Ctrl 5:45</span></div><div class="totals-line"><span class="totals-name opponent">Nolan Ticman</span><span class="totals-stat">25/53</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -499,7 +511,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:16 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:02 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

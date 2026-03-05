@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ian Machado Garry</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Tsarukyan vs. Hooker &bull; Nov 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Tsarukyan vs. Hooker &bull; Nov 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">56/139</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 3:35</span></div><div class="totals-line"><span class="totals-name opponent">Ian Machado Garry</span><span class="totals-stat">72/141</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:39</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jack Della Maddalena</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 315: Muhammad vs. Della Maddalena &bull; May 2025</div>
+                <div class="fight-event-label">UFC 315: Muhammad vs. Della Maddalena &bull; May 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">132/318</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 3:21</span></div><div class="totals-line"><span class="totals-name opponent">Jack Della Maddalena</span><span class="totals-stat">178/342</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -273,7 +277,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Leon Edwards</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 304: Edwards vs. Muhammad 2 &bull; Jul 2024</div>
+                <div class="fight-event-label">UFC 304: Edwards vs. Muhammad 2 &bull; Jul 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">68/121</span><span class="totals-pct">56%</span><span class="totals-stat">TD 9/13</span><span class="totals-stat">Ctrl 12:02</span></div><div class="totals-line"><span class="totals-name opponent">Leon Edwards</span><span class="totals-stat">47/71</span><span class="totals-pct">66%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 7:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -309,7 +314,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gilbert Burns</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 288: Sterling vs. Cejudo &bull; May 2023</div>
+                <div class="fight-event-label">UFC 288: Sterling vs. Cejudo &bull; May 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">132/283</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gilbert Burns</span><span class="totals-stat">81/147</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -345,7 +351,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sean Brady</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:47 &bull; UFC 280: Oliveira vs. Makhachev &bull; Oct 2022</div>
+                <div class="fight-event-label">UFC 280: Oliveira vs. Makhachev &bull; Oct 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">80/209</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Sean Brady</span><span class="totals-stat">58/118</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -372,7 +379,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Vicente Luque</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Luque vs. Muhammad &bull; Apr 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Luque vs. Muhammad &bull; Apr 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">60/155</span><span class="totals-pct">39%</span><span class="totals-stat">TD 5/10</span><span class="totals-stat">Ctrl 7:29</span></div><div class="totals-line"><span class="totals-name opponent">Vicente Luque</span><span class="totals-stat">84/184</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -408,7 +416,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Stephen Thompson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Lewis vs. Daukaus &bull; Dec 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Daukaus &bull; Dec 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">58/95</span><span class="totals-pct">61%</span><span class="totals-stat">TD 7/9</span><span class="totals-stat">Ctrl 11:57</span></div><div class="totals-line"><span class="totals-name opponent">Stephen Thompson</span><span class="totals-stat">19/32</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:52</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -438,7 +447,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Demian Maia</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 263: Adesanya vs. Vettori 2 &bull; Jun 2021</div>
+                <div class="fight-event-label">UFC 263: Adesanya vs. Vettori 2 &bull; Jun 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">45/127</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Demian Maia</span><span class="totals-stat">21/53</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/21</span><span class="totals-stat">Ctrl 4:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -468,7 +478,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Leon Edwards</div>
-                <div class="fight-meta">CNC &bull; Rd 2, 0:18 &bull; UFC Fight Night: Edwards vs. Muhammad &bull; Mar 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Edwards vs. Muhammad &bull; Mar 2021</div>
+                <div class="fight-meta">CNC &bull; Rd 2, 0:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">8/26</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:33</span></div><div class="totals-line"><span class="totals-name opponent">Leon Edwards</span><span class="totals-stat">19/39</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -495,7 +506,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dhiego Lima</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 258: Usman vs. Burns &bull; Feb 2021</div>
+                <div class="fight-event-label">UFC 258: Usman vs. Burns &bull; Feb 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">129/264</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 2:42</span></div><div class="totals-line"><span class="totals-name opponent">Dhiego Lima</span><span class="totals-stat">69/203</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -525,7 +537,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lyman Good</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Volkov &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">82/172</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 1:44</span></div><div class="totals-line"><span class="totals-name opponent">Lyman Good</span><span class="totals-stat">81/172</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -555,7 +568,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Takashi Sato</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 1:55 &bull; UFC 242: Khabib vs. Poirier &bull; Sep 2019</div>
+                <div class="fight-event-label">UFC 242: Khabib vs. Poirier &bull; Sep 2019</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 1:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">49/106</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 2:30</span></div><div class="totals-line"><span class="totals-name opponent">Takashi Sato</span><span class="totals-stat">29/89</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -585,7 +599,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Curtis Millender</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 236: Holloway vs. Poirier 2 &bull; Apr 2019</div>
+                <div class="fight-event-label">UFC 236: Holloway vs. Poirier 2 &bull; Apr 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">47/107</span><span class="totals-pct">44%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 8:17</span></div><div class="totals-line"><span class="totals-name opponent">Curtis Millender</span><span class="totals-stat">48/96</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -615,7 +630,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Geoff Neal</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Cejudo vs. Dillashaw &bull; Jan 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Cejudo vs. Dillashaw &bull; Jan 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">63/204</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Geoff Neal</span><span class="totals-stat">71/190</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -645,7 +661,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chance Rencountre</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rivera vs. Moraes &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Rivera vs. Moraes &bull; Jun 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">70/130</span><span class="totals-pct">54%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 2:02</span></div><div class="totals-line"><span class="totals-name opponent">Chance Rencountre</span><span class="totals-stat">16/123</span><span class="totals-pct">13%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -675,7 +692,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Means</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Werdum vs. Tybura &bull; Nov 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Werdum vs. Tybura &bull; Nov 2017</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">88/221</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Tim Means</span><span class="totals-stat">91/234</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -705,7 +723,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jordan Mein</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 213: Romero vs. Whittaker &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC 213: Romero vs. Whittaker &bull; Jul 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">45/110</span><span class="totals-pct">41%</span><span class="totals-stat">TD 4/12</span><span class="totals-stat">Ctrl 6:54</span></div><div class="totals-line"><span class="totals-name opponent">Jordan Mein</span><span class="totals-stat">36/61</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 0:36</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -735,7 +754,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Randy Brown</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 208: Holm vs. De Randamie &bull; Feb 2017</div>
+                <div class="fight-event-label">UFC 208: Holm vs. De Randamie &bull; Feb 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">71/152</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 5:52</span></div><div class="totals-line"><span class="totals-name opponent">Randy Brown</span><span class="totals-stat">52/145</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -765,7 +785,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Vicente Luque</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:19 &bull; UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-event-label">UFC 205: Alvarez vs McGregor &bull; Nov 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">3/10</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Vicente Luque</span><span class="totals-stat">9/21</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -789,7 +810,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Augusto Montano</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:19 &bull; UFC Fight Night: Poirier vs. Johnson &bull; Sep 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Poirier vs. Johnson &bull; Sep 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">66/149</span><span class="totals-pct">44%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 3:28</span></div><div class="totals-line"><span class="totals-name opponent">Augusto Montano</span><span class="totals-stat">67/149</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -819,7 +841,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alan Jouban</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dos Anjos vs. Alvarez &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Alvarez &bull; Jul 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Belal Muhammad</span><span class="totals-stat">77/199</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 3:01</span></div><div class="totals-line"><span class="totals-name opponent">Alan Jouban</span><span class="totals-stat">86/169</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -847,7 +870,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:56 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:44 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

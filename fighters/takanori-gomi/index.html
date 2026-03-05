@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dong Hyun Ma</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:30 &bull; UFC Fight Night: Saint Preux vs. Okami &bull; Sep 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Saint Preux vs. Okami &bull; Sep 2017</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dong Hyun Ma</span><span class="totals-stat">13/20</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jon Tuck</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:12 &bull; UFC Fight Night: Holm vs. Correia &bull; Jun 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Holm vs. Correia &bull; Jun 2017</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">0/5</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jon Tuck</span><span class="totals-stat">7/13</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jim Miller</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:18 &bull; UFC 200: Tate vs Nunes &bull; Jul 2016</div>
+                <div class="fight-event-label">UFC 200: Tate vs Nunes &bull; Jul 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jim Miller</span><span class="totals-stat">8/26</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -279,7 +284,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joe Lauzon</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:37 &bull; UFC on FOX: Dillashaw vs. Barao II &bull; Jul 2015</div>
+                <div class="fight-event-label">UFC on FOX: Dillashaw vs. Barao II &bull; Jul 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:37</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">7/24</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joe Lauzon</span><span class="totals-stat">15/26</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -303,7 +309,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Myles Jury</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:32 &bull; UFC Fight Night: Hunt vs Nelson &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Hunt vs Nelson &bull; Sep 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Myles Jury</span><span class="totals-stat">10/23</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -327,7 +334,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Isaac Vallie-Flagg</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 172: Jones vs Teixeira &bull; Apr 2014</div>
+                <div class="fight-event-label">UFC 172: Jones vs Teixeira &bull; Apr 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">130/240</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:53</span></div><div class="totals-line"><span class="totals-name opponent">Isaac Vallie-Flagg</span><span class="totals-stat">107/217</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -357,7 +365,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Diego Sanchez</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC on FUEL TV: Silva vs. Stann &bull; Mar 2013</div>
+                <div class="fight-event-label">UFC on FUEL TV: Silva vs. Stann &bull; Mar 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">81/180</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Diego Sanchez</span><span class="totals-stat">65/145</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -387,7 +396,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mac Danzig</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Macao: Franklin vs Le &bull; Nov 2012</div>
+                <div class="fight-event-label">UFC Macao: Franklin vs Le &bull; Nov 2012</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">54/140</span><span class="totals-pct">39%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:21</span></div><div class="totals-line"><span class="totals-name opponent">Mac Danzig</span><span class="totals-stat">64/122</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 1:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -417,7 +427,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Eiji Mitsuoka</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:21 &bull; UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 2:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">48/107</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div><div class="totals-line"><span class="totals-name opponent">Eiji Mitsuoka</span><span class="totals-stat">32/66</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -444,7 +455,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Nate Diaz</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:27 &bull; UFC 135: Jones vs Rampage &bull; Sep 2011</div>
+                <div class="fight-event-label">UFC 135: Jones vs Rampage &bull; Sep 2011</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">4/23</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:36</span></div><div class="totals-line"><span class="totals-name opponent">Nate Diaz</span><span class="totals-stat">36/73</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -468,7 +480,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Clay Guida</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 4:27 &bull; UFC 125: Resolution &bull; Jan 2011</div>
+                <div class="fight-event-label">UFC 125: Resolution &bull; Jan 2011</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 4:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">14/81</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:32</span></div><div class="totals-line"><span class="totals-name opponent">Clay Guida</span><span class="totals-stat">12/61</span><span class="totals-pct">20%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 1:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -495,7 +508,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tyson Griffin</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:04 &bull; UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-event-label">UFC Live: Jones vs Matyushenko &bull; Aug 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:04</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">5/15</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Tyson Griffin</span><span class="totals-stat">3/14</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -519,7 +533,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kenny Florian</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:52 &bull; UFC Fight Night: Florian vs Gomi &bull; Mar 2010</div>
+                <div class="fight-event-label">UFC Fight Night: Florian vs Gomi &bull; Mar 2010</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">20/116</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Kenny Florian</span><span class="totals-stat">51/186</span><span class="totals-pct">27%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -549,7 +564,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-0')">
                 <div class="fight-result-badge result-nc">NC</div>
                 <div class="fight-opponent">vs. Nick Diaz</div>
-                <div class="fight-meta">Overturned &bull; Rd 2, 1:46 &bull; PRIDE 33: The Second Coming &bull; Feb 2007</div>
+                <div class="fight-event-label">PRIDE 33: The Second Coming &bull; Feb 2007</div>
+                <div class="fight-meta">Overturned &bull; Rd 2, 1:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">43/86</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Nick Diaz</span><span class="totals-stat">64/107</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-0" style="display:none;">
@@ -576,7 +592,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mitsuhiro Ishida</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:14 &bull; PRIDE Shockwave 2006 &bull; Dec 2006</div>
+                <div class="fight-event-label">PRIDE Shockwave 2006 &bull; Dec 2006</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:14</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">14/18</span><span class="totals-pct">78%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mitsuhiro Ishida</span><span class="totals-stat">0/6</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-1" style="display:none;">
@@ -600,7 +617,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcus Aurelio</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 2, 5:00 &bull; PRIDE Bushido 13 &bull; Nov 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 13 &bull; Nov 2006</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">29/68</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Aurelio</span><span class="totals-stat">26/105</span><span class="totals-pct">25%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-2" style="display:none;">
@@ -627,7 +645,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. David Baron</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 7:10 &bull; PRIDE Bushido 12 &bull; Aug 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 12 &bull; Aug 2006</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 7:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">28/70</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">David Baron</span><span class="totals-stat">17/63</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-3" style="display:none;">
@@ -651,7 +670,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Marcus Aurelio</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:34 &bull; PRIDE Bushido 10 &bull; Apr 2006</div>
+                <div class="fight-event-label">PRIDE Bushido 10 &bull; Apr 2006</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">0/7</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Aurelio</span><span class="totals-stat">3/9</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-4" style="display:none;">
@@ -675,7 +695,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Hayato Sakurai</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:56 &bull; PRIDE Shockwave 2005 &bull; Dec 2005</div>
+                <div class="fight-event-label">PRIDE Shockwave 2005 &bull; Dec 2005</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">21/34</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Hayato Sakurai</span><span class="totals-stat">10/33</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-5" style="display:none;">
@@ -699,7 +720,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tatsuya Kawajiri</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 7:42 &bull; PRIDE Bushido 9: The Tournament &bull; Sep 2005</div>
+                <div class="fight-event-label">PRIDE Bushido 9: The Tournament &bull; Sep 2005</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 7:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">35/81</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tatsuya Kawajiri</span><span class="totals-stat">22/68</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-6" style="display:none;">
@@ -723,7 +745,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Luiz Azeredo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:46 &bull; PRIDE Bushido 9: The Tournament &bull; Sep 2005</div>
+                <div class="fight-event-label">PRIDE Bushido 9: The Tournament &bull; Sep 2005</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:46</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">53/128</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Luiz Azeredo</span><span class="totals-stat">40/118</span><span class="totals-pct">34%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-7" style="display:none;">
@@ -750,7 +773,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jean Silva</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00 &bull; PRIDE Bushido 8 &bull; Jul 2005</div>
+                <div class="fight-event-label">PRIDE Bushido 8 &bull; Jul 2005</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">44/93</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-8" style="display:none;">
@@ -777,7 +801,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jens Pulver</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 6:21 &bull; PRIDE Shockwave 2004 &bull; Dec 2004</div>
+                <div class="fight-event-label">PRIDE Shockwave 2004 &bull; Dec 2004</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 6:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">71/177</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jens Pulver</span><span class="totals-stat">44/119</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-9" style="display:none;">
@@ -801,7 +826,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Charles Bennett</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 5:52 &bull; PRIDE Bushido 5 &bull; Oct 2004</div>
+                <div class="fight-event-label">PRIDE Bushido 5 &bull; Oct 2004</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 5:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">13/26</span><span class="totals-pct">50%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Charles Bennett</span><span class="totals-stat">5/20</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-10" style="display:none;">
@@ -825,7 +851,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Fabio Mello</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 8:07 &bull; PRIDE Bushido 4 &bull; Jul 2004</div>
+                <div class="fight-event-label">PRIDE Bushido 4 &bull; Jul 2004</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 8:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">32/65</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Fabio Mello</span><span class="totals-stat">7/20</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-11" style="display:none;">
@@ -849,7 +876,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jadson Costa</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:55 &bull; PRIDE Bushido 2 &bull; Feb 2004</div>
+                <div class="fight-event-label">PRIDE Bushido 2 &bull; Feb 2004</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">15/30</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jadson Costa</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-12" style="display:none;">
@@ -873,7 +901,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-pride-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ralph Gracie</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 0:06 &bull; PRIDE Bushido 3 &bull; </div>
+                <div class="fight-event-label">PRIDE Bushido 3 &bull; </div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 0:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">5/5</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ralph Gracie</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-pride-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-pride-13" style="display:none;">
@@ -897,7 +926,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. BJ Penn</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:35 &bull; ROTR 4 &bull; Oct 2003</div>
+                <div class="fight-event-label">ROTR 4 &bull; Oct 2003</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:35</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Takanori Gomi</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">BJ Penn</span><span class="totals-stat">42/71</span><span class="totals-pct">59%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -925,7 +955,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:06 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:48 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

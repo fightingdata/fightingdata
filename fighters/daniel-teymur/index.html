@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chase Hooper</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 4:34 &bull; UFC 245: Usman vs. Covington &bull; Dec 2019</div>
+                <div class="fight-event-label">UFC 245: Usman vs. Covington &bull; Dec 2019</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 4:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Teymur</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div><div class="totals-line"><span class="totals-name opponent">Chase Hooper</span><span class="totals-stat">20/36</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 3:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sung Bin Jo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Gustafsson vs. Smith &bull; Jun 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Gustafsson vs. Smith &bull; Jun 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Teymur</span><span class="totals-stat">40/83</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 3:55</span></div><div class="totals-line"><span class="totals-name opponent">Sung Bin Jo</span><span class="totals-stat">21/63</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chris Fishgold</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:10 &bull; UFC Fight Night: Blachowicz vs. Santos &bull; Feb 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Blachowicz vs. Santos &bull; Feb 2019</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:10</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Teymur</span><span class="totals-stat">17/33</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:18</span></div><div class="totals-line"><span class="totals-name opponent">Chris Fishgold</span><span class="totals-stat">14/32</span><span class="totals-pct">44%</span><span class="totals-stat">TD 5/10</span><span class="totals-stat">Ctrl 3:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -288,7 +293,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Julio Arce</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:55 &bull; UFC Fight Night: Rivera vs. Moraes &bull; Jun 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Rivera vs. Moraes &bull; Jun 2018</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 3, 2:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Teymur</span><span class="totals-stat">37/102</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:32</span></div><div class="totals-line"><span class="totals-name opponent">Julio Arce</span><span class="totals-stat">63/178</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Danny Henry</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Nelson vs. Ponzinibbio &bull; Jul 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Nelson vs. Ponzinibbio &bull; Jul 2017</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Daniel Teymur</span><span class="totals-stat">69/129</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 2:30</span></div><div class="totals-line"><span class="totals-name opponent">Danny Henry</span><span class="totals-stat">93/174</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 5:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -346,7 +353,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:07 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:54 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

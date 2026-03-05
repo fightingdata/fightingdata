@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -152,7 +154,7 @@
         <h2>Fighter Profile</h2>
         <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">42 (May 30, 1983)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'9"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">145 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">70"</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Orthodox</span></div></div></div>
 
-        <div class="sample-warning">&#9888;&#65039; <strong>Bart Palaszewski</strong> has only 3 fights in our database — stats may not be fully representative.</div>
+        
 
         <h2>Career Statistics</h2>
     <table class="profile-stats-table">
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Diego Nunes</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC on FX: Browne vs Bigfoot &bull; Oct 2012</div>
+                <div class="fight-event-label">UFC on FX: Browne vs Bigfoot &bull; Oct 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">37/119</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">Diego Nunes</span><span class="totals-stat">61/137</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 5:51</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Hatsu Hioki</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC 144: Edgar vs Henderson &bull; Feb 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">26/78</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name opponent">Hatsu Hioki</span><span class="totals-stat">67/111</span><span class="totals-pct">60%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 8:21</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tyson Griffin</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:45 &bull; UFC 137: Penn vs Diaz &bull; Oct 2011</div>
+                <div class="fight-event-label">UFC 137: Penn vs Diaz &bull; Oct 2011</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:45</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">17/66</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tyson Griffin</span><span class="totals-stat">6/21</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cole Miller</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:23 &bull; The Ultimate Fighter: Team Jones vs. Team Sonnen Finale &bull; Apr 2013</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Jones vs. Team Sonnen Finale &bull; Apr 2013</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">18/62</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cole Miller</span><span class="totals-stat">5/43</span><span class="totals-pct">12%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:45</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Chris Horodecki</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 4:00 &bull; IFL - World Grand Prix Semifinals &bull; Nov 2007</div>
+                <div class="fight-event-label">IFL - World Grand Prix Semifinals &bull; Nov 2007</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 4:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">42/145</span><span class="totals-pct">29%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Chris Horodecki</span><span class="totals-stat">74/144</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-1" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Kamal Shalorus</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; WEC 53: Henderson vs. Pettis &bull; Dec 2010</div>
+                <div class="fight-event-label">WEC 53: Henderson vs. Pettis &bull; Dec 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">51/142</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kamal Shalorus</span><span class="totals-stat">64/144</span><span class="totals-pct">44%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 5:41</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Zachary Micklewright</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:31 &bull; WEC 50: Cruz vs. Benavidez &bull; Aug 2010</div>
+                <div class="fight-event-label">WEC 50: Cruz vs. Benavidez &bull; Aug 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">27/90</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Zachary Micklewright</span><span class="totals-stat">28/85</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:30</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-1" style="display:none;">
@@ -402,7 +411,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Karen Darabedyan</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:40 &bull; WEC 47: Bowles vs. Cruz &bull; Mar 2010</div>
+                <div class="fight-event-label">WEC 47: Bowles vs. Cruz &bull; Mar 2010</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">3/11</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Karen Darabedyan</span><span class="totals-stat">18/38</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:31</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-2" style="display:none;">
@@ -426,7 +436,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anthony Pettis</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; WEC 45: Cerrone vs. Ratcliff &bull; Dec 2009</div>
+                <div class="fight-event-label">WEC 45: Cerrone vs. Ratcliff &bull; Dec 2009</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">29/56</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 6:31</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">39/97</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-3" style="display:none;">
@@ -456,7 +467,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Anthony Njokuani</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:27 &bull; WEC 40: Torres vs. Mizugaki &bull; Apr 2009</div>
+                <div class="fight-event-label">WEC 40: Torres vs. Mizugaki &bull; Apr 2009</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 0:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">7/27</span><span class="totals-pct">26%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:01</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Njokuani</span><span class="totals-stat">36/93</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:49</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-4" style="display:none;">
@@ -483,7 +495,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ricardo Lamas</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WEC 39: Brown vs. Garcia &bull; Mar 2009</div>
+                <div class="fight-event-label">WEC 39: Brown vs. Garcia &bull; Mar 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">27/66</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:06</span></div><div class="totals-line"><span class="totals-name opponent">Ricardo Lamas</span><span class="totals-stat">39/84</span><span class="totals-pct">46%</span><span class="totals-stat">TD 4/10</span><span class="totals-stat">Ctrl 10:19</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-5" style="display:none;">
@@ -513,7 +526,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alex Karalexis</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:11 &bull; WEC 37: Torres vs. Tapia &bull; Dec 2008</div>
+                <div class="fight-event-label">WEC 37: Torres vs. Tapia &bull; Dec 2008</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:11</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Bart Palaszewski</span><span class="totals-stat">26/81</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:30</span></div><div class="totals-line"><span class="totals-name opponent">Alex Karalexis</span><span class="totals-stat">23/88</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-6" style="display:none;">
@@ -538,7 +552,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:55 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:44 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

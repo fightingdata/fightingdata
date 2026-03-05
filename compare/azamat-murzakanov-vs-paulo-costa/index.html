@@ -78,7 +78,7 @@
             margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #1f2937; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -86,6 +86,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -255,7 +257,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Aleksandar Rakic</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:11 &bull; Oct 2025</div>
+                <div class="fight-event-label">UFC 321: Aspinall vs. Gane &bull; Oct 2025</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:11</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Azamat Murzakanov</span><span class="totals-stat">3/8</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Aleksandar Rakic</span><span class="totals-stat">9/14</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:36</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f0" style="display:none;">
@@ -279,7 +282,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brendson Ribeiro</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:25 &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC 316: Dvalishvili vs. O'Malley 2 &bull; Jun 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Azamat Murzakanov</span><span class="totals-stat">27/36</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Brendson Ribeiro</span><span class="totals-stat">8/22</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f1" style="display:none;">
@@ -303,7 +307,8 @@
             <div class="fight-card-header" onclick="toggleRounds('a-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alonzo Menifield</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:18 &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Nurmagomedov &bull; Aug 2024</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Azamat Murzakanov</span><span class="totals-stat">45/85</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:44</span></div><div class="totals-line"><span class="totals-name opponent">Alonzo Menifield</span><span class="totals-stat">15/74</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:51</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f2" style="display:none;">
@@ -331,7 +336,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Roman Kopylov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Costa</span><span class="totals-stat">99/159</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:13</span></div><div class="totals-line"><span class="totals-name opponent">Roman Kopylov</span><span class="totals-stat">48/104</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
@@ -361,7 +367,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Sean Strickland</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; Jun 2024</div>
+                <div class="fight-event-label">UFC 302: Makhachev vs. Poirier &bull; Jun 2024</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Costa</span><span class="totals-stat">158/266</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Sean Strickland</span><span class="totals-stat">182/402</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f1" style="display:none;">
@@ -397,7 +404,8 @@
             <div class="fight-card-header" onclick="toggleRounds('b-f2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Robert Whittaker</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC 298: Volkanovski vs. Topuria &bull; Feb 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Paulo Costa</span><span class="totals-stat">67/151</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Robert Whittaker</span><span class="totals-stat">95/175</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-b-f2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-b-f2" style="display:none;">
@@ -437,7 +445,7 @@
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-05 11:19:18 | Data source: UFCStats.com
+            Report generated: 2026-03-05 13:18:09 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -202,12 +204,13 @@
     </table>
 
         <h2>Fight History</h2>
-        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing DREAM, Other, Strikeforce fight data.</div>
+        <div class="fight-history"><div class="debut-disclaimer" style="margin-bottom:1rem;"><strong>No UFC fight history.</strong> Showing Other, Strikeforce, DREAM fight data.</div>
         <div class="fight-card">
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Denis Kang</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 0:50 &bull; DREAM 18 &bull; Dec 2012</div>
+                <div class="fight-event-label">DREAM 18 &bull; Dec 2012</div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 0:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Denis Kang</span><span class="totals-stat">0/12</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tim Kennedy</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:41 &bull; Strikeforce - Feijao vs. Henderson &bull; Mar 2011</div>
+                <div class="fight-event-label">Strikeforce - Feijao vs. Henderson &bull; Mar 2011</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:19</span></div><div class="totals-line"><span class="totals-name opponent">Tim Kennedy</span><span class="totals-stat">13/18</span><span class="totals-pct">72%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:17</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Tatsuya Mizuno</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 7:38 &bull; DREAM 15 &bull; Jul 2010</div>
+                <div class="fight-event-label">DREAM 15 &bull; Jul 2010</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 7:38</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">19/47</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tatsuya Mizuno</span><span class="totals-stat">20/37</span><span class="totals-pct">54%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -279,7 +284,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Robbie Lawler</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:33 &bull; Strikeforce - Miami &bull; Jan 2010</div>
+                <div class="fight-event-label">Strikeforce - Miami &bull; Jan 2010</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:33</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">23/37</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Robbie Lawler</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -303,7 +309,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kazuo Misaki</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:49 &bull; Dynamite!! 2009 &bull; Dec 2009</div>
+                <div class="fight-event-label">Dynamite!! 2009 &bull; Dec 2009</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">6/13</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kazuo Misaki</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -327,7 +334,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Paulo Filho</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:36 &bull; DREAM 10: Welterweight Grand Prix 2009 Final Round &bull; Jul 2009</div>
+                <div class="fight-event-label">DREAM 10: Welterweight Grand Prix 2009 Final Round &bull; Jul 2009</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 2:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">22/40</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Paulo Filho</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -351,7 +359,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Mark Hunt</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:18 &bull; Dynamite!! 2008 &bull; Dec 2008</div>
+                <div class="fight-event-label">Dynamite!! 2008 &bull; Dec 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">5/5</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Mark Hunt</span><span class="totals-stat">0/3</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -375,7 +384,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gegard Mousasi</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:28 &bull; DREAM 6: Middleweight Grand Prix 2008 Final Round &bull; Sep 2008</div>
+                <div class="fight-event-label">DREAM 6: Middleweight Grand Prix 2008 Final Round &bull; Sep 2008</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 1, 1:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gegard Mousasi</span><span class="totals-stat">1/5</span><span class="totals-pct">20%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -399,7 +409,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kazushi Sakuraba</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:30 &bull; DREAM 4: Middleweight Grand Prix 2008 2nd Round &bull; Jun 2008</div>
+                <div class="fight-event-label">DREAM 4: Middleweight Grand Prix 2008 2nd Round &bull; Jun 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">21/31</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kazushi Sakuraba</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -423,7 +434,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yoshihiro Akiyama</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:58 &bull; K-1 Hero's 7 &bull; Oct 2006</div>
+                <div class="fight-event-label">K-1 Hero's 7 &bull; Oct 2006</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 1:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">7/14</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yoshihiro Akiyama</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -447,7 +459,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dae Won Kim</div>
-                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 4:08 &bull; DREAM 3: Lightweight Grand Prix 2008 2nd Round &bull; </div>
+                <div class="fight-event-label">DREAM 3: Lightweight Grand Prix 2008 2nd Round &bull; </div>
+                <div class="fight-meta">KO/TKO (Knee) &bull; Rd 1, 4:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Melvin Manhoef</span><span class="totals-stat">10/18</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dae Won Kim</span><span class="totals-stat">7/14</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -469,7 +482,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:46 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:30 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

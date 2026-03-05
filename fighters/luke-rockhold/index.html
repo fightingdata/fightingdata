@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Paulo Costa</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 278: Usman vs. Edwards &bull; Aug 2022</div>
+                <div class="fight-event-label">UFC 278: Usman vs. Edwards &bull; Aug 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">51/70</span><span class="totals-pct">73%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:47</span></div><div class="totals-line"><span class="totals-name opponent">Paulo Costa</span><span class="totals-stat">73/103</span><span class="totals-pct">71%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 5:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jan Blachowicz</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:39 &bull; UFC 239: Jones vs. Santos &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC 239: Jones vs. Santos &bull; Jul 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 1:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">14/36</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 3:26</span></div><div class="totals-line"><span class="totals-name opponent">Jan Blachowicz</span><span class="totals-stat">30/42</span><span class="totals-pct">71%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yoel Romero</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:48 &bull; UFC 221: Romero vs. Rockhold &bull; Feb 2018</div>
+                <div class="fight-event-label">UFC 221: Romero vs. Rockhold &bull; Feb 2018</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">45/119</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yoel Romero</span><span class="totals-stat">45/92</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -294,7 +299,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. David Branch</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:05 &bull; UFC Fight Night: Rockhold vs. Branch &bull; Sep 2017</div>
+                <div class="fight-event-label">UFC Fight Night: Rockhold vs. Branch &bull; Sep 2017</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 4:05</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">58/85</span><span class="totals-pct">68%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 3:41</span></div><div class="totals-line"><span class="totals-name opponent">David Branch</span><span class="totals-stat">25/56</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:18</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -321,7 +327,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Michael Bisping</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:36 &bull; UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-event-label">UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:36</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">17/37</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Michael Bisping</span><span class="totals-stat">21/50</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chris Weidman</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 4, 3:12 &bull; UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 4, 3:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">126/191</span><span class="totals-pct">66%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 5:30</span></div><div class="totals-line"><span class="totals-name opponent">Chris Weidman</span><span class="totals-stat">48/75</span><span class="totals-pct">64%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 4:27</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -378,7 +386,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Lyoto Machida</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:31 &bull; UFC on FOX: Machida vs Rockhold &bull; Apr 2015</div>
+                <div class="fight-event-label">UFC on FOX: Machida vs Rockhold &bull; Apr 2015</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 2:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">23/44</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:11</span></div><div class="totals-line"><span class="totals-name opponent">Lyoto Machida</span><span class="totals-stat">13/27</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -405,7 +414,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Michael Bisping</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 0:57 &bull; UFC Fight Night: Rockhold vs Bisping &bull; Nov 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Rockhold vs Bisping &bull; Nov 2014</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 0:57</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">20/41</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Michael Bisping</span><span class="totals-stat">16/65</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -432,7 +442,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Boetsch</div>
-                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 2:08 &bull; UFC 172: Jones vs Teixeira &bull; Apr 2014</div>
+                <div class="fight-event-label">UFC 172: Jones vs Teixeira &bull; Apr 2014</div>
+                <div class="fight-meta">Submission (Kimura) &bull; Rd 1, 2:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">4/4</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:35</span></div><div class="totals-line"><span class="totals-name opponent">Tim Boetsch</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:04</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -456,7 +467,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Constantinos Philippou</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:31 &bull; UFC Fight Night: Rockhold vs Philippou &bull; Jan 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Rockhold vs Philippou &bull; Jan 2014</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">12/19</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name opponent">Constantinos Philippou</span><span class="totals-stat">4/19</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -480,7 +492,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Vitor Belfort</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:32 &bull; UFC on FX: Belfort vs. Rockhold &bull; May 2013</div>
+                <div class="fight-event-label">UFC on FX: Belfort vs. Rockhold &bull; May 2013</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 2:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">6/15</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Vitor Belfort</span><span class="totals-stat">9/20</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -504,7 +517,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Tim Kennedy</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Strikeforce - Rockhold vs Kennedy &bull; Jul 2012</div>
+                <div class="fight-event-label">Strikeforce - Rockhold vs Kennedy &bull; Jul 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">60/148</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 4:24</span></div><div class="totals-line"><span class="totals-name opponent">Tim Kennedy</span><span class="totals-stat">46/111</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/12</span><span class="totals-stat">Ctrl 5:29</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-0" style="display:none;">
@@ -540,7 +554,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Keith Jardine</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:26 &bull; Strikeforce - Rockhold vs. Jardine &bull; Jan 2012</div>
+                <div class="fight-event-label">Strikeforce - Rockhold vs. Jardine &bull; Jan 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:26</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">34/55</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:06</span></div><div class="totals-line"><span class="totals-name opponent">Keith Jardine</span><span class="totals-stat">14/35</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-1" style="display:none;">
@@ -564,7 +579,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jacare Souza</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; Strikeforce - Barnett vs. Kharitonov &bull; Sep 2011</div>
+                <div class="fight-event-label">Strikeforce - Barnett vs. Kharitonov &bull; Sep 2011</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">97/306</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 1:40</span></div><div class="totals-line"><span class="totals-name opponent">Jacare Souza</span><span class="totals-stat">49/141</span><span class="totals-pct">35%</span><span class="totals-stat">TD 5/13</span><span class="totals-stat">Ctrl 6:22</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-2" style="display:none;">
@@ -600,7 +616,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Bradley</div>
-                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 1, 2:24 &bull; Strikeforce Challengers 6 &bull; Feb 2010</div>
+                <div class="fight-event-label">Strikeforce Challengers 6 &bull; Feb 2010</div>
+                <div class="fight-meta">KO/TKO (Knees) &bull; Rd 1, 2:24</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">8/21</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Paul Bradley</span><span class="totals-stat">3/16</span><span class="totals-pct">19%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-3" style="display:none;">
@@ -624,7 +641,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jesse Taylor</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:42 &bull; Strikeforce Challengers 4 &bull; Nov 2009</div>
+                <div class="fight-event-label">Strikeforce Challengers 4 &bull; Nov 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:42</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jesse Taylor</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/6</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-4" style="display:none;">
@@ -648,7 +666,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cory Devela</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:30 &bull; Strikeforce Challengers 2 &bull; Jun 2009</div>
+                <div class="fight-event-label">Strikeforce Challengers 2 &bull; Jun 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 0:30</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">20/22</span><span class="totals-pct">91%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Cory Devela</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-5" style="display:none;">
@@ -672,7 +691,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Buck Meredith</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:07 &bull; Strikeforce - Shamrock vs. Diaz &bull; Apr 2009</div>
+                <div class="fight-event-label">Strikeforce - Shamrock vs. Diaz &bull; Apr 2009</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 4:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-6" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div>
@@ -680,7 +700,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Nik Theotikos</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:06 &bull; Strikeforce - Destruction &bull; Nov 2008</div>
+                <div class="fight-event-label">Strikeforce - Destruction &bull; Nov 2008</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:06</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">17/21</span><span class="totals-pct">81%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:52</span></div><div class="totals-line"><span class="totals-name opponent">Nik Theotikos</span><span class="totals-stat">0/3</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-7" style="display:none;">
@@ -704,13 +725,14 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-strikeforce-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josh Neal</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 1:49 &bull; Strikeforce - Young Guns 2 &bull; Feb 2008</div>
+                <div class="fight-event-label">Strikeforce - Young Guns 2 &bull; Feb 2008</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 1:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Luke Rockhold</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-strikeforce-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-strikeforce-8" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:40 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:25 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

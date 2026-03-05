@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Roman Kopylov</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 322: Della Maddalena vs. Makhachev &bull; Nov 2025</div>
+                <div class="fight-event-label">UFC 322: Della Maddalena vs. Makhachev &bull; Nov 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">90/173</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:24</span></div><div class="totals-line"><span class="totals-name opponent">Roman Kopylov</span><span class="totals-stat">52/105</span><span class="totals-pct">50%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jack Hermansson</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:21 &bull; UFC 317: Topuria vs. Oliveira &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC 317: Topuria vs. Oliveira &bull; Jun 2025</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">18/63</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Jack Hermansson</span><span class="totals-stat">30/55</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jared Cannonier</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 4, 0:21 &bull; UFC Fight Night: Cannonier vs. Rodrigues &bull; Feb 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Cannonier vs. Rodrigues &bull; Feb 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 4, 0:21</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">93/221</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:17</span></div><div class="totals-line"><span class="totals-name opponent">Jared Cannonier</span><span class="totals-stat">98/201</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 2:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -294,7 +299,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Christian Leroy Duncan</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 304: Edwards vs. Muhammad 2 &bull; Jul 2024</div>
+                <div class="fight-event-label">UFC 304: Edwards vs. Muhammad 2 &bull; Jul 2024</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">45/79</span><span class="totals-pct">57%</span><span class="totals-stat">TD 4/12</span><span class="totals-stat">Ctrl 8:20</span></div><div class="totals-line"><span class="totals-name opponent">Christian Leroy Duncan</span><span class="totals-stat">29/48</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -324,7 +330,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brad Tavares</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:55 &bull; UFC Fight Night: Hermansson vs. Pyfer &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Hermansson vs. Pyfer &bull; Feb 2024</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 0:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">71/123</span><span class="totals-pct">58%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 3:18</span></div><div class="totals-line"><span class="totals-name opponent">Brad Tavares</span><span class="totals-stat">37/84</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -354,7 +361,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Denis Tiuliulin</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 1:43 &bull; UFC 292: Sterling vs. O'Malley &bull; Aug 2023</div>
+                <div class="fight-event-label">UFC 292: Sterling vs. O'Malley &bull; Aug 2023</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 1:43</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">5/6</span><span class="totals-pct">83%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:47</span></div><div class="totals-line"><span class="totals-name opponent">Denis Tiuliulin</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -378,7 +386,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brunno Ferreira</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:13 &bull; UFC 283: Teixeira vs. Hill &bull; Jan 2023</div>
+                <div class="fight-event-label">UFC 283: Teixeira vs. Hill &bull; Jan 2023</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 4:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">21/41</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Brunno Ferreira</span><span class="totals-stat">22/45</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -402,7 +411,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chidi Njokuani</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:27 &bull; UFC Fight Night: Sandhagen vs. Song &bull; Sep 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Song &bull; Sep 2022</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 1:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">48/90</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:14</span></div><div class="totals-line"><span class="totals-name opponent">Chidi Njokuani</span><span class="totals-stat">44/65</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -429,7 +439,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Julian Marquez</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:18 &bull; UFC Fight Night: Kattar vs. Emmett &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Kattar vs. Emmett &bull; Jun 2022</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">49/72</span><span class="totals-pct">68%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:52</span></div><div class="totals-line"><span class="totals-name opponent">Julian Marquez</span><span class="totals-stat">13/42</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Armen Petrosyan</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Makhachev vs. Green &bull; Feb 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Makhachev vs. Green &bull; Feb 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">61/133</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:34</span></div><div class="totals-line"><span class="totals-name opponent">Armen Petrosyan</span><span class="totals-stat">127/231</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -483,7 +495,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. JunYong Park</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:13 &bull; UFC Fight Night: Costa vs. Vettori &bull; Oct 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Costa vs. Vettori &bull; Oct 2021</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 3:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">68/90</span><span class="totals-pct">76%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 3:20</span></div><div class="totals-line"><span class="totals-name opponent">JunYong Park</span><span class="totals-stat">56/109</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -510,7 +523,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dusko Todorovic</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Rozenstruik vs. Sakai &bull; Jun 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Rozenstruik vs. Sakai &bull; Jun 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">71/150</span><span class="totals-pct">47%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 1:25</span></div><div class="totals-line"><span class="totals-name opponent">Dusko Todorovic</span><span class="totals-stat">37/120</span><span class="totals-pct">31%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 1:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -540,7 +554,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Jordan Williams</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:19 &bull; DWCS 4.7 &bull; Sep 2020</div>
+                <div class="fight-event-label">DWCS 4.7 &bull; Sep 2020</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Gregory Rodrigues</span><span class="totals-stat">14/25</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Jordan Williams</span><span class="totals-stat">18/38</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -562,7 +577,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:18 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:04 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

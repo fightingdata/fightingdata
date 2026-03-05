@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Viviane Araujo</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Yusuff vs. Barboza &bull; Oct 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Yusuff vs. Barboza &bull; Oct 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">41/101</span><span class="totals-pct">41%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:25</span></div><div class="totals-line"><span class="totals-name opponent">Viviane Araujo</span><span class="totals-stat">24/46</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 7:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -237,7 +240,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Casey O'Neill</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 286: Edwards vs. Usman 3 &bull; Mar 2023</div>
+                <div class="fight-event-label">UFC 286: Edwards vs. Usman 3 &bull; Mar 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">145/349</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 1:23</span></div><div class="totals-line"><span class="totals-name opponent">Casey O'Neill</span><span class="totals-stat">137/264</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -267,7 +271,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Maryna Moroz</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Nzechukwu vs. Cutelaba &bull; Nov 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Nzechukwu vs. Cutelaba &bull; Nov 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">109/253</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:44</span></div><div class="totals-line"><span class="totals-name opponent">Maryna Moroz</span><span class="totals-stat">80/272</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -297,7 +302,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Manon Fiorot</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Blaydes vs. Daukaus &bull; Mar 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Blaydes vs. Daukaus &bull; Mar 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">37/121</span><span class="totals-pct">31%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:16</span></div><div class="totals-line"><span class="totals-name opponent">Manon Fiorot</span><span class="totals-stat">83/138</span><span class="totals-pct">60%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 2:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -327,7 +333,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Katlyn Cerminara</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Kattar vs. Chikadze &bull; Jan 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Kattar vs. Chikadze &bull; Jan 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">52/171</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:41</span></div><div class="totals-line"><span class="totals-name opponent">Katlyn Cerminara</span><span class="totals-stat">72/177</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 3:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -357,7 +364,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jessica Eye</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 264: Poirier vs. McGregor 3 &bull; Jul 2021</div>
+                <div class="fight-event-label">UFC 264: Poirier vs. McGregor 3 &bull; Jul 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">98/265</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Jessica Eye</span><span class="totals-stat">100/276</span><span class="totals-pct">36%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:56</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -387,7 +395,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Valentina Shevchenko</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 255: Figueiredo vs. Perez &bull; Nov 2020</div>
+                <div class="fight-event-label">UFC 255: Figueiredo vs. Perez &bull; Nov 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">36/88</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 7:51</span></div><div class="totals-line"><span class="totals-name opponent">Valentina Shevchenko</span><span class="totals-stat">62/119</span><span class="totals-pct">52%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 9:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -423,7 +432,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Joanne Wood</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:29 &bull; UFC Fight Night: Brunson vs. Shahbazyan &bull; Aug 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Brunson vs. Shahbazyan &bull; Aug 2020</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 1, 4:29</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">20/37</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Joanne Wood</span><span class="totals-stat">26/49</span><span class="totals-pct">53%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:11</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -447,7 +457,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Katlyn Cerminara</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 244: Masvidal vs. Diaz &bull; Nov 2019</div>
+                <div class="fight-event-label">UFC 244: Masvidal vs. Diaz &bull; Nov 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">58/231</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:30</span></div><div class="totals-line"><span class="totals-name opponent">Katlyn Cerminara</span><span class="totals-stat">73/180</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -477,7 +488,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Roxanne Modafferi</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dos Anjos vs. Edwards &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Edwards &bull; Jul 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">83/174</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:18</span></div><div class="totals-line"><span class="totals-name opponent">Roxanne Modafferi</span><span class="totals-stat">29/110</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/9</span><span class="totals-stat">Ctrl 3:32</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -507,7 +519,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Alexis Davis</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Thompson vs. Pettis &bull; Mar 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Thompson vs. Pettis &bull; Mar 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">60/128</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:18</span></div><div class="totals-line"><span class="totals-name opponent">Alexis Davis</span><span class="totals-stat">72/122</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 5:14</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -537,7 +550,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Liz Carmouche</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dos Santos vs. Ivanov &bull; Jul 2018</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Santos vs. Ivanov &bull; Jul 2018</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jennifer Maia</span><span class="totals-stat">42/104</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:29</span></div><div class="totals-line"><span class="totals-name opponent">Liz Carmouche</span><span class="totals-stat">53/78</span><span class="totals-pct">68%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 5:23</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -565,7 +579,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:25 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:11 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

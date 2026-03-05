@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Brunno Ferreira</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:27 &bull; UFC 313: Pereira vs. Ankalaev &bull; Mar 2025</div>
+                <div class="fight-event-label">UFC 313: Pereira vs. Ankalaev &bull; Mar 2025</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 2, 4:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Armen Petrosyan</span><span class="totals-stat">46/83</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Brunno Ferreira</span><span class="totals-stat">27/56</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 1:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shara Magomedov</div>
-                <div class="fight-meta">KO/TKO (Spinning Back Fist) &bull; Rd 2, 4:52 &bull; UFC 308: Topuria vs. Holloway &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC 308: Topuria vs. Holloway &bull; Oct 2024</div>
+                <div class="fight-meta">KO/TKO (Spinning Back Fist) &bull; Rd 2, 4:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Armen Petrosyan</span><span class="totals-stat">77/140</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:21</span></div><div class="totals-line"><span class="totals-name opponent">Shara Magomedov</span><span class="totals-stat">65/106</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rodolfo Vieira</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:48 &bull; UFC Fight Night: Hermansson vs. Pyfer &bull; Feb 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Hermansson vs. Pyfer &bull; Feb 2024</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 1, 4:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Armen Petrosyan</span><span class="totals-stat">9/20</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Rodolfo Vieira</span><span class="totals-stat">6/11</span><span class="totals-pct">55%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 2:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -285,7 +290,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Christian Leroy Duncan</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Vettori vs. Cannonier &bull; Jun 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Vettori vs. Cannonier &bull; Jun 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Armen Petrosyan</span><span class="totals-stat">89/156</span><span class="totals-pct">57%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:21</span></div><div class="totals-line"><span class="totals-name opponent">Christian Leroy Duncan</span><span class="totals-stat">59/122</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -315,7 +321,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. AJ Dobson</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 280: Oliveira vs. Makhachev &bull; Oct 2022</div>
+                <div class="fight-event-label">UFC 280: Oliveira vs. Makhachev &bull; Oct 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Armen Petrosyan</span><span class="totals-stat">118/246</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">AJ Dobson</span><span class="totals-stat">58/161</span><span class="totals-pct">36%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:49</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -345,7 +352,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Caio Borralho</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Dos Anjos vs. Fiziev &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Dos Anjos vs. Fiziev &bull; Jul 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Armen Petrosyan</span><span class="totals-stat">31/61</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:19</span></div><div class="totals-line"><span class="totals-name opponent">Caio Borralho</span><span class="totals-stat">12/25</span><span class="totals-pct">48%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 10:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -375,7 +383,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Gregory Rodrigues</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Makhachev vs. Green &bull; Feb 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Makhachev vs. Green &bull; Feb 2022</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Armen Petrosyan</span><span class="totals-stat">127/231</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Gregory Rodrigues</span><span class="totals-stat">61/133</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 1:34</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -405,7 +414,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Kaloyan Kolev</div>
-                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 4:27 &bull; DWCS 5.8 &bull; Oct 2021</div>
+                <div class="fight-event-label">DWCS 5.8 &bull; Oct 2021</div>
+                <div class="fight-meta">KO/TKO (Kick) &bull; Rd 1, 4:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Armen Petrosyan</span><span class="totals-stat">20/35</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name opponent">Kaloyan Kolev</span><span class="totals-stat">5/11</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 3:32</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -427,7 +437,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:54 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:43 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

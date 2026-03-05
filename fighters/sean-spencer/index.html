@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Yancy Medeiros</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 0:49 &bull; UFC 203: Miocic vs. Overeem &bull; Sep 2016</div>
+                <div class="fight-event-label">UFC 203: Miocic vs. Overeem &bull; Sep 2016</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 0:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Spencer</span><span class="totals-stat">17/89</span><span class="totals-pct">19%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yancy Medeiros</span><span class="totals-stat">17/57</span><span class="totals-pct">30%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -234,7 +237,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Mike Pyle</div>
-                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 3, 4:25 &bull; UFC Fight Night: Hendricks vs Thompson &bull; Feb 2016</div>
+                <div class="fight-event-label">UFC Fight Night: Hendricks vs Thompson &bull; Feb 2016</div>
+                <div class="fight-meta">KO/TKO (Elbow) &bull; Rd 3, 4:25</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Spencer</span><span class="totals-stat">50/208</span><span class="totals-pct">24%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:32</span></div><div class="totals-line"><span class="totals-name opponent">Mike Pyle</span><span class="totals-stat">75/177</span><span class="totals-pct">42%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 1:53</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -264,7 +268,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Cathal Pendred</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: McGregor vs Siver &bull; Jan 2015</div>
+                <div class="fight-event-label">UFC Fight Night: McGregor vs Siver &bull; Jan 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Spencer</span><span class="totals-stat">52/155</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Cathal Pendred</span><span class="totals-stat">49/112</span><span class="totals-pct">44%</span><span class="totals-stat">TD 4/12</span><span class="totals-stat">Ctrl 4:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -294,7 +299,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paulo Thiago</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Bigfoot vs Arlovski &bull; Sep 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Bigfoot vs Arlovski &bull; Sep 2014</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Spencer</span><span class="totals-stat">63/159</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 4:56</span></div><div class="totals-line"><span class="totals-name opponent">Paulo Thiago</span><span class="totals-stat">36/111</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 2:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -324,7 +330,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alex Garcia</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-event-label">UFC 171: Hendricks vs Lawler &bull; Mar 2014</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Spencer</span><span class="totals-stat">58/160</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:23</span></div><div class="totals-line"><span class="totals-name opponent">Alex Garcia</span><span class="totals-stat">61/135</span><span class="totals-pct">45%</span><span class="totals-stat">TD 8/11</span><span class="totals-stat">Ctrl 4:33</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -354,7 +361,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yuri Villefort</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Teixeira vs Bader &bull; Sep 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Teixeira vs Bader &bull; Sep 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Spencer</span><span class="totals-stat">99/281</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Yuri Villefort</span><span class="totals-stat">69/171</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 0:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -384,7 +392,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Rafael Natal</div>
-                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 2:13 &bull; UFC on FOX: Johnson vs Dodson &bull; Jan 2013</div>
+                <div class="fight-event-label">UFC on FOX: Johnson vs Dodson &bull; Jan 2013</div>
+                <div class="fight-meta">Submission (Arm Triangle) &bull; Rd 3, 2:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Spencer</span><span class="totals-stat">12/84</span><span class="totals-pct">14%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:11</span></div><div class="totals-line"><span class="totals-name opponent">Rafael Natal</span><span class="totals-stat">64/111</span><span class="totals-pct">58%</span><span class="totals-stat">TD 4/6</span><span class="totals-stat">Ctrl 5:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -414,7 +423,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Drew Dober</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Team Rousey vs. Team Tate Finale &bull; Nov 2013</div>
+                <div class="fight-event-label">The Ultimate Fighter: Team Rousey vs. Team Tate Finale &bull; Nov 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sean Spencer</span><span class="totals-stat">105/270</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:52</span></div><div class="totals-line"><span class="totals-name opponent">Drew Dober</span><span class="totals-stat">61/226</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/11</span><span class="totals-stat">Ctrl 3:04</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -442,7 +452,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:21:02 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:45 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

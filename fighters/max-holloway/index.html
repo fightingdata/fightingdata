@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dustin Poirier</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-event-label">UFC 318: Holloway vs. Poirier 3 &bull; Jul 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">198/375</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:32</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Poirier</span><span class="totals-stat">109/255</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -243,7 +246,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ilia Topuria</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:34 &bull; UFC 308: Topuria vs. Holloway &bull; Oct 2024</div>
+                <div class="fight-event-label">UFC 308: Topuria vs. Holloway &bull; Oct 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 1:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">79/204</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Ilia Topuria</span><span class="totals-stat">75/144</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:45</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -273,7 +277,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Justin Gaethje</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 5, 4:59 &bull; UFC 300: Pereira vs. Hill &bull; Apr 2024</div>
+                <div class="fight-event-label">UFC 300: Pereira vs. Hill &bull; Apr 2024</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 5, 4:59</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">181/309</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Justin Gaethje</span><span class="totals-stat">103/199</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -309,7 +314,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Chan Sung Jung</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:23 &bull; UFC Fight Night: Holloway vs. The Korean Zombie &bull; Aug 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Holloway vs. The Korean Zombie &bull; Aug 2023</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 3, 0:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">75/128</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:57</span></div><div class="totals-line"><span class="totals-name opponent">Chan Sung Jung</span><span class="totals-stat">34/124</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:15</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -339,7 +345,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Arnold Allen</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Holloway vs. Allen &bull; Apr 2023</div>
+                <div class="fight-event-label">UFC Fight Night: Holloway vs. Allen &bull; Apr 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">147/262</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Arnold Allen</span><span class="totals-stat">76/225</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -375,7 +382,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Volkanovski</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 276: Adesanya vs. Cannonier &bull; Jul 2022</div>
+                <div class="fight-event-label">UFC 276: Adesanya vs. Cannonier &bull; Jul 2022</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">127/301</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkanovski</span><span class="totals-stat">199/372</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:57</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -411,7 +419,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Yair Rodriguez</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Holloway vs. Rodriguez &bull; Nov 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Holloway vs. Rodriguez &bull; Nov 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">230/404</span><span class="totals-pct">57%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 6:49</span></div><div class="totals-line"><span class="totals-name opponent">Yair Rodriguez</span><span class="totals-stat">159/352</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -447,7 +456,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Calvin Kattar</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC Fight Night: Holloway vs. Kattar &bull; Jan 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Holloway vs. Kattar &bull; Jan 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">445/744</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:27</span></div><div class="totals-line"><span class="totals-name opponent">Calvin Kattar</span><span class="totals-stat">133/283</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:05</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -483,7 +493,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Volkanovski</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00 &bull; UFC 251: Usman vs. Masvidal &bull; Jul 2020</div>
+                <div class="fight-event-label">UFC 251: Usman vs. Masvidal &bull; Jul 2020</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">102/268</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkanovski</span><span class="totals-stat">137/272</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/9</span><span class="totals-stat">Ctrl 1:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -519,7 +530,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Alexander Volkanovski</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 245: Usman vs. Covington &bull; Dec 2019</div>
+                <div class="fight-event-label">UFC 245: Usman vs. Covington &bull; Dec 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">134/303</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name opponent">Alexander Volkanovski</span><span class="totals-stat">157/303</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -555,7 +567,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Frankie Edgar</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 240: Holloway vs. Edgar &bull; Jul 2019</div>
+                <div class="fight-event-label">UFC 240: Holloway vs. Edgar &bull; Jul 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">129/328</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Frankie Edgar</span><span class="totals-stat">96/264</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/15</span><span class="totals-stat">Ctrl 1:46</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -591,7 +604,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dustin Poirier</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00 &bull; UFC 236: Holloway vs. Poirier 2 &bull; Apr 2019</div>
+                <div class="fight-event-label">UFC 236: Holloway vs. Poirier 2 &bull; Apr 2019</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 5, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">181/446</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Poirier</span><span class="totals-stat">178/381</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/8</span><span class="totals-stat">Ctrl 3:35</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -627,7 +641,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Brian Ortega</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 4, 5:00 &bull; UFC 231: Holloway vs. Ortega &bull; Dec 2018</div>
+                <div class="fight-event-label">UFC 231: Holloway vs. Ortega &bull; Dec 2018</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 4, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">290/490</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Brian Ortega</span><span class="totals-stat">110/292</span><span class="totals-pct">38%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 2:25</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -660,7 +675,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jose Aldo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:51 &bull; UFC 218: Holloway vs. Aldo 2 &bull; Dec 2017</div>
+                <div class="fight-event-label">UFC 218: Holloway vs. Aldo 2 &bull; Dec 2017</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:51</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">174/397</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:46</span></div><div class="totals-line"><span class="totals-name opponent">Jose Aldo</span><span class="totals-stat">87/163</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -690,7 +706,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jose Aldo</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:13 &bull; UFC 212: Aldo vs. Holloway &bull; Jun 2017</div>
+                <div class="fight-event-label">UFC 212: Aldo vs. Holloway &bull; Jun 2017</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:13</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">104/207</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:04</span></div><div class="totals-line"><span class="totals-name opponent">Jose Aldo</span><span class="totals-stat">55/113</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -720,7 +737,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Anthony Pettis</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:50 &bull; UFC 206: Holloway vs. Pettis &bull; Dec 2016</div>
+                <div class="fight-event-label">UFC 206: Holloway vs. Pettis &bull; Dec 2016</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 4:50</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">94/208</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:37</span></div><div class="totals-line"><span class="totals-name opponent">Anthony Pettis</span><span class="totals-stat">53/158</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:24</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -750,7 +768,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ricardo Lamas</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-event-label">UFC 199: Rockhold vs. Bisping 2 &bull; Jun 2016</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">103/205</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:37</span></div><div class="totals-line"><span class="totals-name opponent">Ricardo Lamas</span><span class="totals-stat">64/135</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -780,7 +799,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-17')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jeremy Stephens</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-event-label">UFC 194: Aldo vs McGregor &bull; Dec 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">57/99</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:26</span></div><div class="totals-line"><span class="totals-name opponent">Jeremy Stephens</span><span class="totals-stat">47/95</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/12</span><span class="totals-stat">Ctrl 2:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-17">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-17" style="display:none;">
@@ -810,7 +830,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-18')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Charles Oliveira</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 1:39 &bull; UFC Fight Night: Holloway vs Oliveira &bull; Aug 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Holloway vs Oliveira &bull; Aug 2015</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 1:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">14/29</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name opponent">Charles Oliveira</span><span class="totals-stat">5/17</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-18">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-18" style="display:none;">
@@ -834,7 +855,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-19')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cub Swanson</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 3:58 &bull; UFC on FOX: Machida vs Rockhold &bull; Apr 2015</div>
+                <div class="fight-event-label">UFC on FOX: Machida vs Rockhold &bull; Apr 2015</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 3:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">82/198</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:28</span></div><div class="totals-line"><span class="totals-name opponent">Cub Swanson</span><span class="totals-stat">56/136</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-19">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-19" style="display:none;">
@@ -864,7 +886,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-20')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Cole Miller</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Henderson vs Thatch &bull; Feb 2015</div>
+                <div class="fight-event-label">UFC Fight Night: Henderson vs Thatch &bull; Feb 2015</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">57/176</span><span class="totals-pct">32%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 2:33</span></div><div class="totals-line"><span class="totals-name opponent">Cole Miller</span><span class="totals-stat">31/132</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-20">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-20" style="display:none;">
@@ -894,7 +917,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-21')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Akira Corassani</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:11 &bull; UFC Fight Night: Nelson vs Story &bull; Oct 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Nelson vs Story &bull; Oct 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:11</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">31/51</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div><div class="totals-line"><span class="totals-name opponent">Akira Corassani</span><span class="totals-stat">11/29</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:10</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-21">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-21" style="display:none;">
@@ -918,7 +942,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-22')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Clay Collard</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 3:47 &bull; UFC Fight Night: Henderson vs Dos Anjos &bull; Aug 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Henderson vs Dos Anjos &bull; Aug 2014</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 3:47</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">124/204</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:35</span></div><div class="totals-line"><span class="totals-name opponent">Clay Collard</span><span class="totals-stat">70/209</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 1:48</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-22">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-22" style="display:none;">
@@ -948,7 +973,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-23')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Andre Fili</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 3:39 &bull; UFC 172: Jones vs Teixeira &bull; Apr 2014</div>
+                <div class="fight-event-label">UFC 172: Jones vs Teixeira &bull; Apr 2014</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 3:39</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">47/149</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Andre Fili</span><span class="totals-stat">44/139</span><span class="totals-pct">32%</span><span class="totals-stat">TD 3/12</span><span class="totals-stat">Ctrl 3:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-23">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-23" style="display:none;">
@@ -978,7 +1004,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-24')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Will Chope</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:27 &bull; UFC Fight Night: Saffiedine vs Lim &bull; Jan 2014</div>
+                <div class="fight-event-label">UFC Fight Night: Saffiedine vs Lim &bull; Jan 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">74/139</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name opponent">Will Chope</span><span class="totals-stat">33/121</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 1:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-24">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-24" style="display:none;">
@@ -1005,7 +1032,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-25')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Conor McGregor</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Shogun vs Sonnen &bull; Aug 2013</div>
+                <div class="fight-event-label">UFC Fight Night: Shogun vs Sonnen &bull; Aug 2013</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">23/93</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Conor McGregor</span><span class="totals-stat">53/153</span><span class="totals-pct">35%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 6:26</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-25">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-25" style="display:none;">
@@ -1035,7 +1063,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-26')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dennis Bermudez</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 160: Velasquez vs Silva 2 &bull; May 2013</div>
+                <div class="fight-event-label">UFC 160: Velasquez vs Silva 2 &bull; May 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">75/193</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name opponent">Dennis Bermudez</span><span class="totals-stat">73/225</span><span class="totals-pct">32%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 3:29</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-26">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-26" style="display:none;">
@@ -1065,7 +1094,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-27')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Leonard Garcia</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 155: Dos Santos vs Velasquez II &bull; Dec 2012</div>
+                <div class="fight-event-label">UFC 155: Dos Santos vs Velasquez II &bull; Dec 2012</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">120/269</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name opponent">Leonard Garcia</span><span class="totals-stat">89/359</span><span class="totals-pct">25%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:37</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-27">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-27" style="display:none;">
@@ -1095,7 +1125,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-28')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Justin Lawrence</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:49 &bull; UFC 150: Henderson vs Edgar II &bull; Aug 2012</div>
+                <div class="fight-event-label">UFC 150: Henderson vs Edgar II &bull; Aug 2012</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:49</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">29/124</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name opponent">Justin Lawrence</span><span class="totals-stat">32/90</span><span class="totals-pct">36%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-28">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-28" style="display:none;">
@@ -1122,7 +1153,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-29')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Dustin Poirier</div>
-                <div class="fight-meta">Submission (Triangle Armbar) &bull; Rd 1, 3:23 &bull; UFC 143: Diaz vs Condit &bull; Feb 2012</div>
+                <div class="fight-event-label">UFC 143: Diaz vs Condit &bull; Feb 2012</div>
+                <div class="fight-meta">Submission (Triangle Armbar) &bull; Rd 1, 3:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">11/32</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:07</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Poirier</span><span class="totals-stat">11/25</span><span class="totals-pct">44%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:28</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-29">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-29" style="display:none;">
@@ -1146,7 +1178,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-other-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Pat Schilling</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; The Ultimate Fighter: Live Finale &bull; Jun 2012</div>
+                <div class="fight-event-label">The Ultimate Fighter: Live Finale &bull; Jun 2012</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Max Holloway</span><span class="totals-stat">118/267</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:57</span></div><div class="totals-line"><span class="totals-name opponent">Pat Schilling</span><span class="totals-stat">27/108</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/17</span><span class="totals-stat">Ctrl 1:01</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-other-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-other-0" style="display:none;">
@@ -1174,7 +1207,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:45 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:30 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

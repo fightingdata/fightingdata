@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Drew Dober</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:52 &bull; UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-event-label">UFC on FOX: Dos Santos vs Miocic &bull; Dec 2014</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:52</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Drew Dober</span><span class="totals-stat">5/12</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. James Krause</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00 &bull; UFC 173: Barao vs Dillashaw &bull; May 2014</div>
+                <div class="fight-event-label">UFC 173: Barao vs Dillashaw &bull; May 2014</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">7/30</span><span class="totals-pct">23%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:35</span></div><div class="totals-line"><span class="totals-name opponent">James Krause</span><span class="totals-stat">22/51</span><span class="totals-pct">43%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:19</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -255,7 +259,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Abel Trujillo</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:32 &bull; UFC 169: Barao vs Faber 2 &bull; Feb 2014</div>
+                <div class="fight-event-label">UFC 169: Barao vs Faber 2 &bull; Feb 2014</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 2:32</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">36/96</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:30</span></div><div class="totals-line"><span class="totals-name opponent">Abel Trujillo</span><span class="totals-stat">18/79</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -282,7 +287,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Gleison Tibau</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 164: Henderson vs Pettis 2 &bull; Aug 2013</div>
+                <div class="fight-event-label">UFC 164: Henderson vs Pettis 2 &bull; Aug 2013</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">37/76</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 1:58</span></div><div class="totals-line"><span class="totals-name opponent">Gleison Tibau</span><span class="totals-stat">26/55</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 5:41</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -312,7 +318,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Melvin Guillard</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC 155: Dos Santos vs Velasquez II &bull; Dec 2012</div>
+                <div class="fight-event-label">UFC 155: Dos Santos vs Velasquez II &bull; Dec 2012</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">32/97</span><span class="totals-pct">33%</span><span class="totals-stat">TD 7/10</span><span class="totals-stat">Ctrl 3:51</span></div><div class="totals-line"><span class="totals-name opponent">Melvin Guillard</span><span class="totals-stat">57/112</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:59</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Joe Lauzon</div>
-                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 2:44 &bull; UFC on FOX: Shogun vs Vera &bull; Aug 2012</div>
+                <div class="fight-event-label">UFC on FOX: Shogun vs Vera &bull; Aug 2012</div>
+                <div class="fight-meta">Submission (Triangle Choke) &bull; Rd 3, 2:44</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">82/177</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:41</span></div><div class="totals-line"><span class="totals-name opponent">Joe Lauzon</span><span class="totals-stat">44/118</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 2:09</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Edson Barboza</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:23 &bull; UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-event-label">UFC 146: Dos Santos vs Mir &bull; May 2012</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 3:23</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">20/35</span><span class="totals-pct">57%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 1:09</span></div><div class="totals-line"><span class="totals-name opponent">Edson Barboza</span><span class="totals-stat">11/17</span><span class="totals-pct">65%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -396,7 +405,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jason Gilliam</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:34 &bull; UFC 68: The Uprising &bull; Mar 2007</div>
+                <div class="fight-event-label">UFC 68: The Uprising &bull; Mar 2007</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 1:34</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">7/13</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:21</span></div><div class="totals-line"><span class="totals-name opponent">Jason Gilliam</span><span class="totals-stat">0/2</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -420,7 +430,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Hermes Franca</div>
-                <div class="fight-meta">Submission (Armbar) &bull; Rd 3, 3:31 &bull; UFC 62: Liddell vs Sobral &bull; Aug 2006</div>
+                <div class="fight-event-label">UFC 62: Liddell vs Sobral &bull; Aug 2006</div>
+                <div class="fight-meta">Submission (Armbar) &bull; Rd 3, 3:31</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">18/106</span><span class="totals-pct">17%</span><span class="totals-stat">TD 9/15</span><span class="totals-stat">Ctrl 7:08</span></div><div class="totals-line"><span class="totals-name opponent">Hermes Franca</span><span class="totals-stat">22/46</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:07</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -450,7 +461,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Shane Roller</div>
-                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:55 &bull; WEC 53: Henderson vs. Pettis &bull; Dec 2010</div>
+                <div class="fight-event-label">WEC 53: Henderson vs. Pettis &bull; Dec 2010</div>
+                <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 1, 3:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">5/33</span><span class="totals-pct">15%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name opponent">Shane Roller</span><span class="totals-stat">3/24</span><span class="totals-pct">12%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:15</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-0" style="display:none;">
@@ -474,7 +486,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; WEC 51: Aldo vs. Gamburyan &bull; Sep 2010</div>
+                <div class="fight-event-label">WEC 51: Aldo vs. Gamburyan &bull; Sep 2010</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">40/89</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">67/110</span><span class="totals-pct">61%</span><span class="totals-stat">TD 3/14</span><span class="totals-stat">Ctrl 2:22</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-1" style="display:none;">
@@ -504,7 +517,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-2')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Kamal Shalorus</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; WEC 49: Varner vs. Shalorus &bull; Jun 2010</div>
+                <div class="fight-event-label">WEC 49: Varner vs. Shalorus &bull; Jun 2010</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">40/151</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Kamal Shalorus</span><span class="totals-stat">56/130</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:35</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-2" style="display:none;">
@@ -534,7 +548,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Benson Henderson</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 2:41 &bull; WEC 46: Varner vs. Henderson &bull; Jan 2010</div>
+                <div class="fight-event-label">WEC 46: Varner vs. Henderson &bull; Jan 2010</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 3, 2:41</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">23/62</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 4:32</span></div><div class="totals-line"><span class="totals-name opponent">Benson Henderson</span><span class="totals-stat">19/40</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:46</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-3" style="display:none;">
@@ -564,7 +579,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-4')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Donald Cerrone</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 5, 1:48 &bull; WEC 38: Varner vs. Cerrone &bull; Jan 2009</div>
+                <div class="fight-event-label">WEC 38: Varner vs. Cerrone &bull; Jan 2009</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 5, 1:48</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">38/161</span><span class="totals-pct">24%</span><span class="totals-stat">TD 9/10</span><span class="totals-stat">Ctrl 8:12</span></div><div class="totals-line"><span class="totals-name opponent">Donald Cerrone</span><span class="totals-stat">44/129</span><span class="totals-pct">34%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:37</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-4" style="display:none;">
@@ -600,7 +616,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Marcus Hicks</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:08 &bull; WEC 35: Condit vs. Miura &bull; Aug 2008</div>
+                <div class="fight-event-label">WEC 35: Condit vs. Miura &bull; Aug 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 2:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">27/51</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:24</span></div><div class="totals-line"><span class="totals-name opponent">Marcus Hicks</span><span class="totals-stat">1/7</span><span class="totals-pct">14%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:47</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-5" style="display:none;">
@@ -624,7 +641,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Rob McCullough</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:54 &bull; WEC 32: Condit vs. Prater &bull; Feb 2008</div>
+                <div class="fight-event-label">WEC 32: Condit vs. Prater &bull; Feb 2008</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 3, 2:54</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">43/161</span><span class="totals-pct">27%</span><span class="totals-stat">TD 3/14</span><span class="totals-stat">Ctrl 2:40</span></div><div class="totals-line"><span class="totals-name opponent">Rob McCullough</span><span class="totals-stat">20/78</span><span class="totals-pct">26%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:21</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-6" style="display:none;">
@@ -654,7 +672,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-wec-7')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Sherron Leggett</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:08 &bull; WEC 29: Condit vs. Larson &bull; Aug 2007</div>
+                <div class="fight-event-label">WEC 29: Condit vs. Larson &bull; Aug 2007</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 4:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Jamie Varner</span><span class="totals-stat">18/28</span><span class="totals-pct">64%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:27</span></div><div class="totals-line"><span class="totals-name opponent">Sherron Leggett</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:35</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-wec-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-wec-7" style="display:none;">
@@ -676,7 +695,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:20:23 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:19:09 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">

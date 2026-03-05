@@ -56,7 +56,7 @@
         .fight-history { margin-top: 1rem; }
         .fight-card { background: #111827; border: 1px solid #1f2937;
             border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none; position: relative; }
         .fight-card-header:hover { background: #1a2332; }
         .fight-result-badge { display: inline-block; font-size: 0.7rem; font-weight: 700;
             padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -64,6 +64,8 @@
         .result-loss { background: rgba(220,38,38,0.2);  color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
         .result-nc   { background: rgba(107,114,128,0.2); color: #9ca3af; border: 1px solid rgba(107,114,128,0.4); }
         .fight-opponent { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 0.2rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.75rem;
+            color: #6b7280; text-align: right; max-width: 50%; }
         .fight-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.4rem; }
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem;
@@ -207,7 +209,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Volkan Oezdemir</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:27 &bull; UFC Fight Night: Tsarukyan vs. Hooker &bull; Nov 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Tsarukyan vs. Hooker &bull; Nov 2025</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 1:27</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">2/7</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Volkan Oezdemir</span><span class="totals-stat">13/35</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-0" style="display:none;">
@@ -231,7 +234,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Oumar Sy</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Usman vs. Buckley &bull; Jun 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Usman vs. Buckley &bull; Jun 2025</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">29/86</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Oumar Sy</span><span class="totals-stat">34/96</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 4:13</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
@@ -261,7 +265,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Julius Walker</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Cejudo vs. Song &bull; Feb 2025</div>
+                <div class="fight-event-label">UFC Fight Night: Cejudo vs. Song &bull; Feb 2025</div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">87/147</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:43</span></div><div class="totals-line"><span class="totals-name opponent">Julius Walker</span><span class="totals-stat">86/171</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 5:31</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;">
@@ -291,7 +296,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-3')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Azamat Murzakanov</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:18 &bull; UFC Fight Night: Sandhagen vs. Nurmagomedov &bull; Aug 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Sandhagen vs. Nurmagomedov &bull; Aug 2024</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 2, 3:18</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">15/74</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:51</span></div><div class="totals-line"><span class="totals-name opponent">Azamat Murzakanov</span><span class="totals-stat">45/85</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:44</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-3">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-3" style="display:none;">
@@ -318,7 +324,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-4')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Carlos Ulberg</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:12 &bull; UFC Fight Night: Lewis vs. Nascimento &bull; May 2024</div>
+                <div class="fight-event-label">UFC Fight Night: Lewis vs. Nascimento &bull; May 2024</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:12</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">1/4</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Carlos Ulberg</span><span class="totals-stat">7/11</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-4">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-4" style="display:none;">
@@ -342,7 +349,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-5')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dustin Jacoby</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 296: Edwards vs. Covington &bull; Dec 2023</div>
+                <div class="fight-event-label">UFC 296: Edwards vs. Covington &bull; Dec 2023</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">68/117</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:03</span></div><div class="totals-line"><span class="totals-name opponent">Dustin Jacoby</span><span class="totals-stat">93/150</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:08</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-5">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-5" style="display:none;">
@@ -372,7 +380,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-6')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Jimmy Crute</div>
-                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 1:55 &bull; UFC 290: Volkanovski vs. Rodriguez &bull; Jul 2023</div>
+                <div class="fight-event-label">UFC 290: Volkanovski vs. Rodriguez &bull; Jul 2023</div>
+                <div class="fight-meta">Submission (Guillotine Choke) &bull; Rd 2, 1:55</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">21/36</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:45</span></div><div class="totals-line"><span class="totals-name opponent">Jimmy Crute</span><span class="totals-stat">26/53</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 1:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-6">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-6" style="display:none;">
@@ -399,7 +408,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-7')">
                 <div class="fight-result-badge result-nc">D</div>
                 <div class="fight-opponent">vs. Jimmy Crute</div>
-                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00 &bull; UFC 284: Makhachev vs. Volkanovski &bull; Feb 2023</div>
+                <div class="fight-event-label">UFC 284: Makhachev vs. Volkanovski &bull; Feb 2023</div>
+                <div class="fight-meta">Decision (Majority) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">56/83</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:55</span></div><div class="totals-line"><span class="totals-name opponent">Jimmy Crute</span><span class="totals-stat">31/62</span><span class="totals-pct">50%</span><span class="totals-stat">TD 6/12</span><span class="totals-stat">Ctrl 7:55</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-7">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-7" style="display:none;">
@@ -429,7 +439,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-8')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Misha Cirkunov</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:28 &bull; UFC Fight Night: Grasso vs. Araujo &bull; Oct 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Grasso vs. Araujo &bull; Oct 2022</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 1:28</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">8/17</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name opponent">Misha Cirkunov</span><span class="totals-stat">5/8</span><span class="totals-pct">62%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-8">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-8" style="display:none;">
@@ -453,7 +464,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-9')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Askar Mozharov</div>
-                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 4:40 &bull; UFC Fight Night: Volkov vs. Rozenstruik &bull; Jun 2022</div>
+                <div class="fight-event-label">UFC Fight Night: Volkov vs. Rozenstruik &bull; Jun 2022</div>
+                <div class="fight-meta">KO/TKO (Elbows) &bull; Rd 1, 4:40</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">19/22</span><span class="totals-pct">86%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 4:19</span></div><div class="totals-line"><span class="totals-name opponent">Askar Mozharov</span><span class="totals-stat">2/11</span><span class="totals-pct">18%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-9">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-9" style="display:none;">
@@ -477,7 +489,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-10')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. William Knight</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC Fight Night: Font vs. Aldo &bull; Dec 2021</div>
+                <div class="fight-event-label">UFC Fight Night: Font vs. Aldo &bull; Dec 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">44/77</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 6:25</span></div><div class="totals-line"><span class="totals-name opponent">William Knight</span><span class="totals-stat">55/111</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:43</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-10">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-10" style="display:none;">
@@ -507,7 +520,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-11')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Ed Herman</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 265: Lewis vs. Gane &bull; Aug 2021</div>
+                <div class="fight-event-label">UFC 265: Lewis vs. Gane &bull; Aug 2021</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">93/140</span><span class="totals-pct">66%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:48</span></div><div class="totals-line"><span class="totals-name opponent">Ed Herman</span><span class="totals-stat">41/126</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-11">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-11" style="display:none;">
@@ -537,7 +551,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-12')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Fabio Cherant</div>
-                <div class="fight-meta">Submission (Von Flue Choke) &bull; Rd 1, 1:11 &bull; UFC 260: Miocic vs. Ngannou &bull; Mar 2021</div>
+                <div class="fight-event-label">UFC 260: Miocic vs. Ngannou &bull; Mar 2021</div>
+                <div class="fight-meta">Submission (Von Flue Choke) &bull; Rd 1, 1:11</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">3/3</span><span class="totals-pct">100%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:07</span></div><div class="totals-line"><span class="totals-name opponent">Fabio Cherant</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-12">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-12" style="display:none;">
@@ -561,7 +576,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-13')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Ovince Saint Preux</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:07 &bull; UFC Fight Night: Overeem vs. Sakai &bull; Sep 2020</div>
+                <div class="fight-event-label">UFC Fight Night: Overeem vs. Sakai &bull; Sep 2020</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 2, 4:07</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">19/40</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:36</span></div><div class="totals-line"><span class="totals-name opponent">Ovince Saint Preux</span><span class="totals-stat">33/80</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-13">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-13" style="display:none;">
@@ -588,7 +604,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-14')">
                 <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Devin Clark</div>
-                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00 &bull; UFC 250: Nunes vs. Spencer &bull; Jun 2020</div>
+                <div class="fight-event-label">UFC 250: Nunes vs. Spencer &bull; Jun 2020</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">39/85</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 8:42</span></div><div class="totals-line"><span class="totals-name opponent">Devin Clark</span><span class="totals-stat">79/124</span><span class="totals-pct">64%</span><span class="totals-stat">TD 1/10</span><span class="totals-stat">Ctrl 2:38</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-14">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-14" style="display:none;">
@@ -618,7 +635,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-15')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Paul Craig</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:19 &bull; UFC Fight Night: Ngannou vs. Dos Santos &bull; Jun 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Ngannou vs. Dos Santos &bull; Jun 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:19</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">8/22</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:22</span></div><div class="totals-line"><span class="totals-name opponent">Paul Craig</span><span class="totals-stat">7/13</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:12</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-15">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-15" style="display:none;">
@@ -642,7 +660,8 @@
             <div class="fight-card-header" onclick="toggleRounds('prof-16')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Vinicius Moreira</div>
-                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:56 &bull; UFC Fight Night: Cejudo vs. Dillashaw &bull; Jan 2019</div>
+                <div class="fight-event-label">UFC Fight Night: Cejudo vs. Dillashaw &bull; Jan 2019</div>
+                <div class="fight-meta">KO/TKO (Punch) &bull; Rd 1, 3:56</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">33/60</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:29</span></div><div class="totals-line"><span class="totals-name opponent">Vinicius Moreira</span><span class="totals-stat">11/21</span><span class="totals-pct">52%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 1:20</span></div></div>
                 <div class="expand-toggle" id="toggle-prof-16">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-prof-16" style="display:none;">
@@ -666,7 +685,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-0')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Dashawn Boatwright</div>
-                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:08 &bull; DWCS 2.1 &bull; Jun 2018</div>
+                <div class="fight-event-label">DWCS 2.1 &bull; Jun 2018</div>
+                <div class="fight-meta">KO/TKO (Punches) &bull; Rd 1, 0:08</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">7/8</span><span class="totals-pct">88%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Dashawn Boatwright</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-0" style="display:none;">
@@ -690,7 +710,8 @@
             <div class="fight-card-header" onclick="toggleRounds('non-ufc-dwcs-1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Daniel Jolly</div>
-                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00 &bull; DWCS 1.3 &bull; Jul 2017</div>
+                <div class="fight-event-label">DWCS 1.3 &bull; Jul 2017</div>
+                <div class="fight-meta">KO/TKO &bull; Rd 1, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Alonzo Menifield</span><span class="totals-stat">9/33</span><span class="totals-pct">27%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Daniel Jolly</span><span class="totals-stat">8/13</span><span class="totals-pct">62%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
                 <div class="expand-toggle" id="toggle-non-ufc-dwcs-1">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-non-ufc-dwcs-1" style="display:none;">
@@ -712,7 +733,7 @@
 </tbody></table></div></div></div>
 
         <div class="timestamp">
-            Profile generated: 2026-03-05 11:19:51 | Data source: UFCStats.com
+            Profile generated: 2026-03-05 13:18:41 | Data source: UFCStats.com
         </div>
     </div>
         <div class="site-footer">
