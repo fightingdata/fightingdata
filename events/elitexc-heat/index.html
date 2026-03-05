@@ -6,62 +6,62 @@
     <title>EliteXC - Heat Results - FightingData.com</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f5f5f5; color: #111; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
 
         /* Event header */
-        .event-header { margin-bottom: 2rem; border-bottom: 2px solid #dc2626; padding-bottom: 1.5rem; }
-        .event-status { display: inline-block; background: #374151; color: #d1d5db; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
-        .event-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .event-meta { color: #9ca3af; font-size: 1rem; }
-        .event-meta strong { color: #fff; }
-        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af; text-decoration: none; font-size: 0.875rem; }
-        .back-link:hover { color: #dc2626; }
+        .event-header { margin-bottom: 2rem; border-bottom: 2px solid #111; padding-bottom: 1.5rem; }
+        .event-status { display: inline-block; background: #111; color: #fff; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+        .event-title { font-size: 1.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+        .event-meta { color: #555; font-size: 1rem; }
+        .event-meta strong { color: #111; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #d62828; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #b71c1c; }
 
         /* Summary bar */
         .event-summary { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .summary-stat { font-size: 0.85rem; color: #9ca3af; }
-        .summary-stat strong { color: #fff; }
+        .summary-stat { font-size: 0.85rem; color: #777; }
+        .summary-stat strong { color: #111; }
 
         /* Fight cards */
         .fights-list { display: grid; gap: 0.75rem; }
-        .fight-card { background: #111827; border: 1px solid #1f2937; border-radius: 8px; overflow: hidden; }
+        .fight-card { background: #fff; border: 1px solid #e2e2e2; border-radius: 8px; overflow: hidden; }
         .fight-card-header { padding: 1rem 1.25rem; user-select: none; }
         .fight-card-header.clickable { cursor: pointer; }
-        .fight-card-header.clickable:hover { background: #1a2332; }
-        .weight-class-tag { color: #6b7280; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
-        .fight-result { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; color: #fff; }
-        .fight-detail-line { font-size: 0.85rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-card-header.clickable:hover { background: #fafafa; }
+        .weight-class-tag { color: #777; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+        .fight-result { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; color: #111; }
+        .fight-detail-line { font-size: 0.82rem; color: #777; margin-bottom: 0.4rem; }
 
         /* Totals */
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; flex-wrap: wrap; }
         .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
-        .winner-name { color: #d1d5db; }
-        .loser-name { color: #9ca3af; }
-        .fighter-a-name { color: #d1d5db; }
-        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 0.8rem; }
-        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
-        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .winner-name { color: #111; }
+        .loser-name { color: #777; }
+        .fighter-a-name { color: #111; }
+        .totals-stat { color: #111; font-family: 'SF Mono', Menlo, monospace; font-size: 0.8rem; }
+        .totals-pct { color: #777; font-size: 0.78rem; }
+        .totals-kd { color: #c2410c; font-size: 0.78rem; font-weight: 600; }
 
         /* Expand toggle */
-        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.35rem; }
+        .expand-toggle { font-size: 0.72rem; color: #d62828; font-weight: 600; margin-top: 0.35rem; }
 
         /* Round-by-round tables */
-        .rounds-detail { border-top: 1px solid #1f2937; }
-        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117; margin: 0; border-radius: 0; border: none; }
-        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem; padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
-        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
-        .rounds-table tr:hover { background: #111827; }
-        .round-num { color: #9ca3af; font-weight: 600; }
-        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
-        .winner-row td { color: #fff; }
-        .winner-row .fighter-label { color: #dc2626; font-weight: 600; }
-        .loser-row td { color: #9ca3af; }
-        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+        .rounds-detail { border-top: 1px solid #e2e2e2; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #fafafa; margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #fafafa; color: #999; font-size: 0.75rem; padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+        .rounds-table td { padding: 4px 10px; font-size: 0.78rem; color: #111; font-family: 'SF Mono', Menlo, monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #f0f0f0; }
+        .round-num { color: #555; font-weight: 600; }
+        .fighter-label { color: #777; font-size: 0.78rem; font-family: inherit; }
+        .winner-row td { color: #111; }
+        .winner-row .fighter-label { color: #d62828; font-weight: 600; }
+        .loser-row td { color: #777; }
+        .round-spacer td { padding: 2px 0; background: #fafafa; border-bottom: 1px solid #e2e2e2; }
 
         /* Footer */
-        .site-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1f2937; color: #6b7280; text-align: center; font-size: 0.875rem; }
+        .site-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e2e2; color: #777; text-align: center; font-size: 0.875rem; }
         .site-footer a { color: #dc2626; text-decoration: none; }
 
         @media (max-width: 768px) {
@@ -72,17 +72,7 @@
     </style>
 </head>
 <body>
-    <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
-        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
-            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
-            <nav style="display:flex;gap:1.5rem;">
-                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
-                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
-                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
-                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
-            </nav>
-        </div>
-    </header>
+        <header style="background:#111;position:sticky;top:0;z-index:90;"><div style="max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:52px;"><a href="/" style="font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.5px;">FIGHTING<span style="color:#d62828;">DATA</span></a><nav style="display:flex;gap:0;"><a href="/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;">Home</a><a href="/events/" style="color:#fff;text-decoration:none;padding:16px 18px;font-size:13px;font-weight:700;border-bottom:2px solid #d62828;">Events</a><a href="/fighters/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;">Fighters</a><a href="/about/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;">About</a></nav></div></header>
 
     <div class="container">
         <a href="/events/#previous" class="back-link">&#8592; Back to Events</a>
@@ -283,9 +273,7 @@
 </tbody></table></div>
             </div>
         </div>
-        <div class="site-footer">
-            <p>&copy; 2026 <a href="/">FightingData.com</a></p>
-        </div>
+        <footer style="background:#111;padding:28px 20px;margin-top:40px;"><div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;color:rgba(255,255,255,0.4);font-size:12px;"><div><span style="color:#fff;font-weight:800;font-size:14px;">FIGHTING<span style="color:#d62828;">DATA</span></span><div style="margin-top:6px;">Data sourced from UFCStats.com &middot; &copy; 2026 FightingData.com</div></div><div style="display:flex;gap:32px;"><a href="/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Home</a><a href="/events/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Events</a><a href="/fighters/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Fighters</a><a href="/about/" style="color:rgba(255,255,255,0.4);text-decoration:none;">About</a></div></div></footer>
     </div>
     <script>
     function toggleRounds(uid) {

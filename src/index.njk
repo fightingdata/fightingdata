@@ -1,135 +1,110 @@
 ---
 layout: layout.njk
 title: Home
-description: UFC Fight Analysis - Data-driven insights for every matchup
+description: UFC Fight Analysis - Data-driven fighter comparisons and matchup breakdowns
 ---
 
-<!-- Hero Section -->
-<section class="hero-section py-20">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">
-            UFC Fight Analysis<br>
-            <span class="text-red-600">Data-Driven</span>
-        </h1>
-        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Compare fighters. Analyze matchups. Make informed decisions with comprehensive fight statistics.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/events/" class="btn btn-primary px-8 py-3 rounded-lg font-semibold text-lg">
-                Upcoming Events
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Stats Bar -->
-<section class="bg-gray-900 border-y border-gray-800 py-8">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-3 gap-8 text-center">
+<!-- Hero Section with background image -->
+<section class="hero-section">
+    <div class="hero-content">
+        <p class="hero-label">UFC Fight Analysis</p>
+        <h1 class="hero-title">Data-Driven Fighter<br>Comparisons & Analysis</h1>
+        <p class="hero-subtitle">Compare fighters. Analyze matchups. 25 years of UFC history across 10,000+ fights.</p>
+        <a href="/events/" class="btn btn-primary">View Upcoming Events</a>
+        <div class="hero-stats">
             <div>
-                <div class="text-3xl font-bold text-red-600 stat-number">{% if stats.total_fighters %}{{ stats.total_fighters }}{% else %}2,493{% endif %}</div>
-                <div class="text-gray-400 text-sm mt-1">Fighters Tracked</div>
+                <div class="hero-stat-number">{% if stats.total_fighters %}{{ stats.total_fighters }}{% else %}3,663{% endif %}</div>
+                <div class="hero-stat-label">Fighters</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-red-600 stat-number">{% if stats.total_fights %}{{ stats.total_fights }}{% else %}8,337{% endif %}</div>
-                <div class="text-gray-400 text-sm mt-1">Fights Analyzed</div>
+                <div class="hero-stat-number">{% if stats.total_fights %}{{ stats.total_fights }}{% else %}10,951{% endif %}</div>
+                <div class="hero-stat-label">Fights</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-red-600 stat-number">{% if stats.total_events %}{{ stats.total_events }}{% else %}767{% endif %}</div>
-                <div class="text-gray-400 text-sm mt-1">Events Cataloged</div>
+                <div class="hero-stat-number">{% if stats.total_events %}{{ stats.total_events }}{% else %}1,210{% endif %}</div>
+                <div class="hero-stat-label">Events</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Upcoming Events -->
-<section class="py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8">Upcoming Events</h2>
-        
+<!-- This Week's Event -->
+<section style="padding:28px 0;">
+    <div class="container">
         {% if events.length > 0 %}
-            <div class="grid gap-6">
-                {% for event in events | limit(3) %}
-                <div class="event-card bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-red-600 transition">
-                    <a href="/events/{{ event.slug }}/" class="event-card-link">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold text-red-600 mb-1">{{ event.name }}</h3>
-                                <p class="text-lg text-gray-300">{{ event.date }} &bull; {{ event.location }}</p>
-                            </div>
-                            <span class="mt-4 md:mt-0 btn btn-primary px-6 py-2 rounded font-semibold">
-                                View Card &rarr;
-                            </span>
-                        </div>
-                    </a>
-                    
-                    {% if event.matchups.length > 0 %}
-                    <div class="matchup-list">
-                        {% for matchup in event.matchups | limit(5) %}
-                        <a href="/compare/{{ matchup.slug }}/" class="matchup-row">
-                            <span class="matchup-names">{{ matchup.fighter_a }} vs. {{ matchup.fighter_b }}</span>
-                            <span class="matchup-weight">{{ matchup.weight_class }}</span>
-                        </a>
-                        {% endfor %}
-                        
-                        {% if event.matchups.length > 5 %}
-                        <a href="/events/{{ event.slug }}/" class="matchup-more">
-                            + {{ event.matchups.length - 5 }} more fights &rarr;
-                        </a>
-                        {% endif %}
-                    </div>
-                    {% endif %}
-                </div>
-                {% endfor %}
+        {% set nextEvent = events[0] %}
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
+            <div>
+                <span class="section-label">This Week</span>
+                <h2 class="section-title">{{ nextEvent.name }}</h2>
+                <p class="section-meta">{{ nextEvent.date }} &bull; {{ nextEvent.location }}</p>
             </div>
-            
-            <div class="text-center mt-8">
-                <a href="/events/" class="text-red-600 hover:text-red-500 font-semibold">
-                    View All Events &rarr;
-                </a>
-            </div>
-        {% else %}
-            <div class="bg-gray-900 border border-gray-800 rounded-lg p-12 text-center">
-                <p class="text-gray-400">No upcoming events scheduled at this time.</p>
-            </div>
-        {% endif %}
-    </div>
-</section>
+            <a href="/events/{{ nextEvent.slug }}/" style="font-size:13px;color:#d62828;font-weight:600;">Full Card →</a>
+        </div>
 
-<!-- Features Section -->
-<section class="bg-gray-900 border-y border-gray-800 py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-12 text-center">Why FightingData?</h2>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="feature-icon mx-auto mb-4">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Head-to-Head Matchups</h3>
-                <p class="text-gray-400">Side-by-side fighter comparisons with career stats, recent form, and edge indicators for every upcoming fight.</p>
+        <div class="card">
+            {% if nextEvent.matchups.length > 0 %}
+                {% for matchup in nextEvent.matchups | limit(5) %}
+                <a href="/compare/{{ matchup.slug }}/" class="matchup-row">
+                    {% if loop.first %}<span class="matchup-tag">Main Event</span>{% endif %}
+                    <span class="matchup-names{% if loop.first %} main-event{% endif %}">{{ matchup.fighter_a }}{% if matchup.record_a %} <span class="matchup-record">{{ matchup.record_a }}</span>{% endif %} vs. {% if matchup.record_b %}<span class="matchup-record">{{ matchup.record_b }}</span> {% endif %}{{ matchup.fighter_b }}</span>
+                    <span class="matchup-weight">{{ matchup.weight_class }}</span>
+                </a>
+                {% endfor %}
+                {% if nextEvent.matchups.length > 5 %}
+                <a href="/events/{{ nextEvent.slug }}/" class="matchup-more">+ {{ nextEvent.matchups.length - 5 }} more fights</a>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <!-- Scheduled Events Table -->
+        {% if events.length > 1 %}
+        <h3 style="font-size:14px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;margin:32px 0 12px;">Scheduled Events</h3>
+        <div class="card">
+            <table class="sched-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Location</th>
+                        <th>Fights</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for event in events %}
+                    {% if not loop.first %}
+                    <tr onclick="window.location='/events/{{ event.slug }}/'">
+                        <td style="color:#555;">{{ event.date }}</td>
+                        <td><span class="sched-event-name">{{ event.name.split(':')[0] }}:</span> <span class="sched-event-sub">{{ event.name.split(':')[1] or '' }}</span></td>
+                        <td style="color:#555;">{{ event.location.split(',')[0] }}</td>
+                        <td style="text-align:center;color:#555;">{{ event.matchups.length }}</td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        {% else %}
+        <div class="card" style="padding:48px;text-align:center;">
+            <p style="color:#777;">No upcoming events scheduled at this time.</p>
+        </div>
+        {% endif %}
+
+        <!-- Features -->
+        <div class="features-grid">
+            <div class="card feature-card">
+                <h3>Head-to-Head Comparisons</h3>
+                <p>Career stats, recent form, edge indicators, and common opponents for every upcoming matchup.</p>
             </div>
-            
-            <div class="text-center">
-                <div class="feature-icon mx-auto mb-4">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-2">25 Years of Data</h3>
-                <p class="text-gray-400">Every UFC fight since November 2000 — striking, grappling, control time, and finishing stats across 8,000+ fights.</p>
+            <div class="card feature-card">
+                <h3>25 Years of Fight Data</h3>
+                <p>Every UFC fight since November 2000 — striking, grappling, control time, finishes, and round-by-round.</p>
             </div>
-            
-            <div class="text-center">
-                <div class="feature-icon mx-auto mb-4">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Updated Every Fight Week</h3>
-                <p class="text-gray-400">Fresh analysis after every event. New matchup breakdowns published as soon as fight cards are announced.</p>
+            <div class="card feature-card">
+                <h3>Updated Every Fight Week</h3>
+                <p>Fresh data after every event. New breakdowns published as soon as cards are announced.</p>
             </div>
         </div>
     </div>

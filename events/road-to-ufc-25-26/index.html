@@ -6,62 +6,62 @@
     <title>Road to UFC 2.5 + 2.6 Results - FightingData.com</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f5f5f5; color: #111; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
 
         /* Event header */
-        .event-header { margin-bottom: 2rem; border-bottom: 2px solid #dc2626; padding-bottom: 1.5rem; }
-        .event-status { display: inline-block; background: #374151; color: #d1d5db; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
-        .event-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .event-meta { color: #9ca3af; font-size: 1rem; }
-        .event-meta strong { color: #fff; }
-        .back-link { display: inline-block; margin-bottom: 1rem; color: #9ca3af; text-decoration: none; font-size: 0.875rem; }
-        .back-link:hover { color: #dc2626; }
+        .event-header { margin-bottom: 2rem; border-bottom: 2px solid #111; padding-bottom: 1.5rem; }
+        .event-status { display: inline-block; background: #111; color: #fff; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+        .event-title { font-size: 1.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+        .event-meta { color: #555; font-size: 1rem; }
+        .event-meta strong { color: #111; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #d62828; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #b71c1c; }
 
         /* Summary bar */
         .event-summary { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .summary-stat { font-size: 0.85rem; color: #9ca3af; }
-        .summary-stat strong { color: #fff; }
+        .summary-stat { font-size: 0.85rem; color: #777; }
+        .summary-stat strong { color: #111; }
 
         /* Fight cards */
         .fights-list { display: grid; gap: 0.75rem; }
-        .fight-card { background: #111827; border: 1px solid #1f2937; border-radius: 8px; overflow: hidden; }
+        .fight-card { background: #fff; border: 1px solid #e2e2e2; border-radius: 8px; overflow: hidden; }
         .fight-card-header { padding: 1rem 1.25rem; user-select: none; }
         .fight-card-header.clickable { cursor: pointer; }
-        .fight-card-header.clickable:hover { background: #1a2332; }
-        .weight-class-tag { color: #6b7280; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
-        .fight-result { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; color: #fff; }
-        .fight-detail-line { font-size: 0.85rem; color: #9ca3af; margin-bottom: 0.4rem; }
+        .fight-card-header.clickable:hover { background: #fafafa; }
+        .weight-class-tag { color: #777; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+        .fight-result { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; color: #111; }
+        .fight-detail-line { font-size: 0.82rem; color: #777; margin-bottom: 0.4rem; }
 
         /* Totals */
         .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
         .totals-line { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; flex-wrap: wrap; }
         .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
-        .winner-name { color: #d1d5db; }
-        .loser-name { color: #9ca3af; }
-        .fighter-a-name { color: #d1d5db; }
-        .totals-stat { color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 0.8rem; }
-        .totals-pct { color: #9ca3af; font-size: 0.78rem; }
-        .totals-kd { color: #fbbf24; font-size: 0.78rem; font-weight: 600; }
+        .winner-name { color: #111; }
+        .loser-name { color: #777; }
+        .fighter-a-name { color: #111; }
+        .totals-stat { color: #111; font-family: 'SF Mono', Menlo, monospace; font-size: 0.8rem; }
+        .totals-pct { color: #777; font-size: 0.78rem; }
+        .totals-kd { color: #c2410c; font-size: 0.78rem; font-weight: 600; }
 
         /* Expand toggle */
-        .expand-toggle { font-size: 0.75rem; color: #6b7280; margin-top: 0.35rem; }
+        .expand-toggle { font-size: 0.72rem; color: #d62828; font-weight: 600; margin-top: 0.35rem; }
 
         /* Round-by-round tables */
-        .rounds-detail { border-top: 1px solid #1f2937; }
-        .rounds-table { width: 100%; border-collapse: collapse; background: #0d1117; margin: 0; border-radius: 0; border: none; }
-        .rounds-table th { background: #0d1117; color: #6b7280; font-size: 0.75rem; padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
-        .rounds-table td { padding: 5px 10px; font-size: 0.82rem; color: #d1d5db; font-family: 'JetBrains Mono', 'Courier New', monospace; border-bottom: none; }
-        .rounds-table tr:hover { background: #111827; }
-        .round-num { color: #9ca3af; font-weight: 600; }
-        .fighter-label { color: #9ca3af; font-size: 0.78rem; font-family: inherit; }
-        .winner-row td { color: #fff; }
-        .winner-row .fighter-label { color: #dc2626; font-weight: 600; }
-        .loser-row td { color: #9ca3af; }
-        .round-spacer td { padding: 2px 0; background: #0d1117; border-bottom: 1px solid #1f2937; }
+        .rounds-detail { border-top: 1px solid #e2e2e2; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #fafafa; margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #fafafa; color: #999; font-size: 0.75rem; padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+        .rounds-table td { padding: 4px 10px; font-size: 0.78rem; color: #111; font-family: 'SF Mono', Menlo, monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #f0f0f0; }
+        .round-num { color: #555; font-weight: 600; }
+        .fighter-label { color: #777; font-size: 0.78rem; font-family: inherit; }
+        .winner-row td { color: #111; }
+        .winner-row .fighter-label { color: #d62828; font-weight: 600; }
+        .loser-row td { color: #777; }
+        .round-spacer td { padding: 2px 0; background: #fafafa; border-bottom: 1px solid #e2e2e2; }
 
         /* Footer */
-        .site-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1f2937; color: #6b7280; text-align: center; font-size: 0.875rem; }
+        .site-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e2e2; color: #777; text-align: center; font-size: 0.875rem; }
         .site-footer a { color: #dc2626; text-decoration: none; }
 
         @media (max-width: 768px) {
@@ -72,17 +72,7 @@
     </style>
 </head>
 <body>
-    <header style="background:#000;border-bottom:1px solid #1f2937;padding:1rem 0;">
-        <div style="max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
-            <a href="/" style="font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none;">FightingData<span style="color:#dc2626;">.com</span></a>
-            <nav style="display:flex;gap:1.5rem;">
-                <a href="/" style="color:#d1d5db;text-decoration:none;">Home</a>
-                <a href="/events/" style="color:#d1d5db;text-decoration:none;">Events</a>
-                <a href="/fighters/" style="color:#d1d5db;text-decoration:none;">Fighters</a>
-                <a href="/about/" style="color:#d1d5db;text-decoration:none;">About</a>
-            </nav>
-        </div>
-    </header>
+        <header style="background:#111;position:sticky;top:0;z-index:90;"><div style="max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:52px;"><a href="/" style="font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.5px;">FIGHTING<span style="color:#d62828;">DATA</span></a><nav style="display:flex;gap:0;"><a href="/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;">Home</a><a href="/events/" style="color:#fff;text-decoration:none;padding:16px 18px;font-size:13px;font-weight:700;border-bottom:2px solid #d62828;">Events</a><a href="/fighters/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;">Fighters</a><a href="/about/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;">About</a></nav></div></header>
 
     <div class="container">
         <a href="/events/#previous" class="back-link">&#8592; Back to Events</a>
@@ -93,22 +83,55 @@
         </div>
         
         <div class="event-summary">
-            <div class="summary-stat"><strong>9</strong> fights</div>
-            <div class="summary-stat"><strong>1</strong> KO/TKO</div>
-            <div class="summary-stat"><strong>1</strong> submissions</div>
-            <div class="summary-stat"><strong>7</strong> decisions</div>
+            <div class="summary-stat"><strong>28</strong> fights</div>
+            <div class="summary-stat"><strong>10</strong> KO/TKO</div>
+            <div class="summary-stat"><strong>5</strong> submissions</div>
+            <div class="summary-stat"><strong>12</strong> decisions</div>
         </div>
         <div class="fights-list">
             <div class="fight-card">
                 <div class="fight-card-header clickable"
                      onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
-                    <div class="fight-result">ChangHo Lee def. Daermisi Zhawupasi</div>
-                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 3, 3:35</div>
-                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">ChangHo Lee (W)</span><span class="totals-stat">40/60</span><span class="totals-pct">67%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 4:02</span></div><div class="totals-line"><span class="totals-name loser-name">Daermisi Zhawupasi (L)</span><span class="totals-stat">18/34</span><span class="totals-pct">53%</span><span class="totals-stat">TD 6/8</span><span class="totals-stat">Ctrl 7:31</span></div></div>
+                    <div class="fight-result">Shuya Kamikubo def. Baergeng Jieleyisi</div>
+                    <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Shuya Kamikubo (W)</span><span class="totals-stat">58/107</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 6:58</span></div><div class="totals-line"><span class="totals-name loser-name">Baergeng Jieleyisi (L)</span><span class="totals-stat">38/98</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:18</span></div></div>
                     <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
                 <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Shuya Kamikubo</td><td>6/13</td><td>46%</td><td>0/0</td><td>2:52</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Baergeng Jieleyisi</td><td>9/20</td><td>45%</td><td>0/0</td><td>0:37</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Shuya Kamikubo</td><td>35/67</td><td>52%</td><td>0/0</td><td>0:35</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Baergeng Jieleyisi</td><td>27/69</td><td>39%</td><td>0/0</td><td>0:27</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Shuya Kamikubo</td><td>17/27</td><td>63%</td><td>0/0</td><td>3:31</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Baergeng Jieleyisi</td><td>2/9</td><td>22%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">ChangHo Lee def. Daermisi Zhawupasi</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 3, 3:35</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">ChangHo Lee (W)</span><span class="totals-stat">40/60</span><span class="totals-pct">67%</span><span class="totals-stat">TD 4/13</span><span class="totals-stat">Ctrl 4:02</span></div><div class="totals-line"><span class="totals-name loser-name">Daermisi Zhawupasi (L)</span><span class="totals-stat">18/34</span><span class="totals-pct">53%</span><span class="totals-stat">TD 6/8</span><span class="totals-stat">Ctrl 7:31</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -134,14 +157,41 @@
             </div>
             <div class="fight-card">
                 <div class="fight-card-header clickable"
-                     onclick="toggleRounds(&#39;hist-1&#39;)">
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">ChangHo Lee def. Rana Rudra Pratap Singh</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 3:52</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">ChangHo Lee (W)</span><span class="totals-stat">35/48</span><span class="totals-pct">73%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:46</span></div><div class="totals-line"><span class="totals-name loser-name">Rana Rudra Pratap Singh (L)</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">ChangHo Lee</td><td>35/48</td><td>73%</td><td>1/1</td><td>3:46</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Rana Rudra Pratap Singh</td><td>0/0</td><td>—</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Nyamjargal Tumendemberel def. Peter Danesoe</div>
                     <div class="fight-detail-line">Submission (Rear Naked Choke) &bull; Rd 1, 1:02</div>
                     <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Nyamjargal Tumendemberel (W)</span><span class="totals-stat">24/39</span><span class="totals-pct">62%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:12</span></div><div class="totals-line"><span class="totals-name loser-name">Peter Danesoe (L)</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
-                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -161,14 +211,47 @@
             </div>
             <div class="fight-card">
                 <div class="fight-card-header clickable"
-                     onclick="toggleRounds(&#39;hist-2&#39;)">
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Nyamjargal Tumendemberel def. Top Noi Kiwram</div>
+                    <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Nyamjargal Tumendemberel (W)</span><span class="totals-stat">47/119</span><span class="totals-pct">39%</span><span class="totals-stat">TD 4/12</span><span class="totals-stat">Ctrl 3:10</span></div><div class="totals-line"><span class="totals-name loser-name">Top Noi Kiwram (L)</span><span class="totals-stat">51/94</span><span class="totals-pct">54%</span><span class="totals-stat">TD 6/7</span><span class="totals-stat">Ctrl 5:59</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Nyamjargal Tumendemberel</td><td>20/57</td><td>35%</td><td>3/9</td><td>2:07</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Top Noi Kiwram</td><td>21/42</td><td>50%</td><td>1/1</td><td>0:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Nyamjargal Tumendemberel</td><td>12/35</td><td>34%</td><td>0/2</td><td>0:40</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Top Noi Kiwram</td><td>23/43</td><td>53%</td><td>1/2</td><td>1:58</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Nyamjargal Tumendemberel</td><td>15/27</td><td>56%</td><td>1/1</td><td>0:23</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Top Noi Kiwram</td><td>7/9</td><td>78%</td><td>4/4</td><td>3:51</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-5&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Rei Tsuruya def. Mark Climaco</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                     <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Rei Tsuruya (W)</span><span class="totals-stat">23/46</span><span class="totals-pct">50%</span><span class="totals-stat">TD 8/15</span><span class="totals-stat">Ctrl 8:34</span></div><div class="totals-line"><span class="totals-name loser-name">Mark Climaco (L)</span><span class="totals-stat">31/55</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:24</span></div></div>
-                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
+                    <div class="expand-toggle" id="toggle-hist-5">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <div class="rounds-detail" id="rounds-hist-5" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -194,14 +277,44 @@
             </div>
             <div class="fight-card">
                 <div class="fight-card-header clickable"
-                     onclick="toggleRounds(&#39;hist-3&#39;)">
+                     onclick="toggleRounds(&#39;hist-6&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Rei Tsuruya def. Ronal Siahaan</div>
+                    <div class="fight-detail-line">Submission (Kimura) &bull; Rd 2, 1:19</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Rei Tsuruya (W)</span><span class="totals-stat">39/52</span><span class="totals-pct">75%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 5:35</span></div><div class="totals-line"><span class="totals-name loser-name">Ronal Siahaan (L)</span><span class="totals-stat">4/6</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-6">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Rei Tsuruya</td><td>38/49</td><td>78%</td><td>2/2</td><td>4:47</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ronal Siahaan</td><td>4/5</td><td>80%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Rei Tsuruya</td><td>1/3</td><td>33%</td><td>1/2</td><td>0:48</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ronal Siahaan</td><td>0/1</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-7&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Rongzhu def. Sangwook Kim</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                     <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Rongzhu (W)</span><span class="totals-stat">132/248</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name loser-name">Sangwook Kim (L)</span><span class="totals-stat">94/181</span><span class="totals-pct">52%</span><span class="totals-stat">TD 2/10</span><span class="totals-stat">Ctrl 2:29</span></div></div>
-                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
+                    <div class="expand-toggle" id="toggle-hist-7">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <div class="rounds-detail" id="rounds-hist-7" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -227,14 +340,68 @@
             </div>
             <div class="fight-card">
                 <div class="fight-card-header clickable"
-                     onclick="toggleRounds(&#39;hist-4&#39;)">
+                     onclick="toggleRounds(&#39;hist-8&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Rongzhu def. SeongChan Hong</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 2:17</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Rongzhu (W)</span><span class="totals-stat">20/38</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name loser-name">SeongChan Hong (L)</span><span class="totals-stat">15/27</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:47</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-8">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Rongzhu</td><td>20/38</td><td>53%</td><td>0/0</td><td>0:15</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">SeongChan Hong</td><td>15/27</td><td>56%</td><td>0/5</td><td>0:47</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-9&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Sangwook Kim def. Kazuma Maruyama</div>
+                    <div class="fight-detail-line">Submission (D'Arce Choke) &bull; Rd 1, 3:08</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Sangwook Kim (W)</span><span class="totals-stat">7/15</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:09</span></div><div class="totals-line"><span class="totals-name loser-name">Kazuma Maruyama (L)</span><span class="totals-stat">12/29</span><span class="totals-pct">41%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:32</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-9">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Sangwook Kim</td><td>7/15</td><td>47%</td><td>0/1</td><td>0:09</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Kazuma Maruyama</td><td>12/29</td><td>41%</td><td>1/3</td><td>0:32</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-10&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Jiniushiyue def. SeungGuk Choi</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                     <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jiniushiyue (W)</span><span class="totals-stat">47/127</span><span class="totals-pct">37%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name loser-name">SeungGuk Choi (L)</span><span class="totals-stat">28/81</span><span class="totals-pct">35%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:01</span></div></div>
-                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
+                    <div class="expand-toggle" id="toggle-hist-10">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <div class="rounds-detail" id="rounds-hist-10" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -260,14 +427,77 @@
             </div>
             <div class="fight-card">
                 <div class="fight-card-header clickable"
-                     onclick="toggleRounds(&#39;hist-5&#39;)">
+                     onclick="toggleRounds(&#39;hist-11&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">SeungGuk Choi def. Sumit Kumar</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">SeungGuk Choi (W)</span><span class="totals-stat">70/132</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 0:34</span></div><div class="totals-line"><span class="totals-name loser-name">Sumit Kumar (L)</span><span class="totals-stat">42/175</span><span class="totals-pct">24%</span><span class="totals-stat">TD 6/20</span><span class="totals-stat">Ctrl 1:33</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-11">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">SeungGuk Choi</td><td>19/36</td><td>53%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sumit Kumar</td><td>11/48</td><td>23%</td><td>4/9</td><td>0:57</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">SeungGuk Choi</td><td>20/35</td><td>57%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sumit Kumar</td><td>9/33</td><td>27%</td><td>2/9</td><td>0:36</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">SeungGuk Choi</td><td>31/61</td><td>51%</td><td>2/3</td><td>0:34</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sumit Kumar</td><td>22/94</td><td>23%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-12&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Taiyilake Nueraji def. HanSeul Kim</div>
+                    <div class="fight-detail-line">KO/TKO (Elbow) &bull; Rd 2, 1:38</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Taiyilake Nueraji (W)</span><span class="totals-stat">73/150</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name loser-name">HanSeul Kim (L)</span><span class="totals-stat">49/119</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-12">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Taiyilake Nueraji</td><td>55/110</td><td>50%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">HanSeul Kim</td><td>33/80</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Taiyilake Nueraji</td><td>18/40</td><td>45%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">HanSeul Kim</td><td>16/39</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-13&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Xiao Long def. Shuya Kamikubo</div>
                     <div class="fight-detail-line">Decision (Majority) &bull; Rd 3, 5:00</div>
                     <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Xiao Long (W)</span><span class="totals-stat">109/181</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:00</span></div><div class="totals-line"><span class="totals-name loser-name">Shuya Kamikubo (L)</span><span class="totals-stat">57/103</span><span class="totals-pct">55%</span><span class="totals-stat">TD 3/19</span><span class="totals-stat">Ctrl 4:38</span></div></div>
-                    <div class="expand-toggle" id="toggle-hist-5">&#9660; Round Details</div>
+                    <div class="expand-toggle" id="toggle-hist-13">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-5" style="display:none;">
+                <div class="rounds-detail" id="rounds-hist-13" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -293,14 +523,47 @@
             </div>
             <div class="fight-card">
                 <div class="fight-card-header clickable"
-                     onclick="toggleRounds(&#39;hist-6&#39;)">
+                     onclick="toggleRounds(&#39;hist-14&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Xiao Long def. Shohei Nose</div>
+                    <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Xiao Long (W)</span><span class="totals-stat">44/94</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 6:27</span></div><div class="totals-line"><span class="totals-name loser-name">Shohei Nose (L)</span><span class="totals-stat">24/63</span><span class="totals-pct">38%</span><span class="totals-stat">TD 4/17</span><span class="totals-stat">Ctrl 1:30</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-14">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-14" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Xiao Long</td><td>15/20</td><td>75%</td><td>1/1</td><td>1:57</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shohei Nose</td><td>5/12</td><td>42%</td><td>2/7</td><td>0:43</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Xiao Long</td><td>23/52</td><td>44%</td><td>0/0</td><td>1:45</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shohei Nose</td><td>14/31</td><td>45%</td><td>2/7</td><td>0:36</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Xiao Long</td><td>6/22</td><td>27%</td><td>1/1</td><td>2:45</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shohei Nose</td><td>5/20</td><td>25%</td><td>0/3</td><td>0:11</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-15&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Yizha def. SangWon Kim</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                     <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Yizha (W)</span><span class="totals-stat">62/158</span><span class="totals-pct">39%</span><span class="totals-stat">TD 2/13</span><span class="totals-stat">Ctrl 1:58</span></div><div class="totals-line"><span class="totals-name loser-name">SangWon Kim (L)</span><span class="totals-stat">43/84</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:23</span></div></div>
-                    <div class="expand-toggle" id="toggle-hist-6">&#9660; Round Details</div>
+                    <div class="expand-toggle" id="toggle-hist-15">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-6" style="display:none;">
+                <div class="rounds-detail" id="rounds-hist-15" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -326,14 +589,68 @@
             </div>
             <div class="fight-card">
                 <div class="fight-card-header clickable"
-                     onclick="toggleRounds(&#39;hist-7&#39;)">
+                     onclick="toggleRounds(&#39;hist-16&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Yizha def. Wuziazibieke Jiahefu</div>
+                    <div class="fight-detail-line">Submission (Armbar) &bull; Rd 1, 2:28</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Yizha (W)</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:42</span></div><div class="totals-line"><span class="totals-name loser-name">Wuziazibieke Jiahefu (L)</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:03</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-16">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-16" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Yizha</td><td>7/12</td><td>58%</td><td>0/0</td><td>0:42</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Wuziazibieke Jiahefu</td><td>1/2</td><td>50%</td><td>1/2</td><td>1:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-17&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Daermisi Zhawupasi def. Eperaim Ginting</div>
+                    <div class="fight-detail-line">Submission (Rear Naked Choke) &bull; Rd 1, 0:58</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Daermisi Zhawupasi (W)</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:40</span></div><div class="totals-line"><span class="totals-name loser-name">Eperaim Ginting (L)</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:14</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-17">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-17" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Daermisi Zhawupasi</td><td>0/1</td><td>0%</td><td>0/0</td><td>0:40</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Eperaim Ginting</td><td>0/1</td><td>0%</td><td>1/1</td><td>0:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-18&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Shin Haraguchi def. JaeHyun Park</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                     <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Shin Haraguchi (W)</span><span class="totals-stat">15/19</span><span class="totals-pct">79%</span><span class="totals-stat">TD 17/22</span><span class="totals-stat">Ctrl 12:20</span></div><div class="totals-line"><span class="totals-name loser-name">JaeHyun Park (L)</span><span class="totals-stat">12/19</span><span class="totals-pct">63%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:41</span></div></div>
-                    <div class="expand-toggle" id="toggle-hist-7">&#9660; Round Details</div>
+                    <div class="expand-toggle" id="toggle-hist-18">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-7" style="display:none;">
+                <div class="rounds-detail" id="rounds-hist-18" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -359,14 +676,41 @@
             </div>
             <div class="fight-card">
                 <div class="fight-card-header clickable"
-                     onclick="toggleRounds(&#39;hist-8&#39;)">
+                     onclick="toggleRounds(&#39;hist-19&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Jiniushiyue def. Billy Pasulatan</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 3:04</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jiniushiyue (W)</span><span class="totals-stat">16/31</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:59</span></div><div class="totals-line"><span class="totals-name loser-name">Billy Pasulatan (L)</span><span class="totals-stat">2/10</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-19">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-19" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jiniushiyue</td><td>16/31</td><td>52%</td><td>1/1</td><td>1:59</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Billy Pasulatan</td><td>2/10</td><td>20%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-20&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Kaiwen def. Koya Kanda</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                     <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Kaiwen (W)</span><span class="totals-stat">50/93</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:02</span></div><div class="totals-line"><span class="totals-name loser-name">Koya Kanda (L)</span><span class="totals-stat">56/124</span><span class="totals-pct">45%</span><span class="totals-stat">TD 1/9</span><span class="totals-stat">Ctrl 0:09</span></div></div>
-                    <div class="expand-toggle" id="toggle-hist-8">&#9660; Round Details</div>
+                    <div class="expand-toggle" id="toggle-hist-20">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-8" style="display:none;">
+                <div class="rounds-detail" id="rounds-hist-20" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -390,10 +734,218 @@
 <tr class="round-spacer"><td colspan="7"></td></tr>
 </tbody></table></div>
             </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-21&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Kaiwen def. Lu Kai</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 1:11</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Kaiwen (W)</span><span class="totals-stat">24/42</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name loser-name">Lu Kai (L)</span><span class="totals-stat">3/15</span><span class="totals-pct">20%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-21">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-21" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Kaiwen</td><td>24/42</td><td>57%</td><td>0/0</td><td>0:06</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Lu Kai</td><td>3/15</td><td>20%</td><td>0/1</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-22&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">SangWon Kim def. Keisuke Sasu</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 2, 1:42</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">SangWon Kim (W)</span><span class="totals-stat">26/37</span><span class="totals-pct">70%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div><div class="totals-line"><span class="totals-name loser-name">Keisuke Sasu (L)</span><span class="totals-stat">19/39</span><span class="totals-pct">49%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 2:23</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-22">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-22" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">SangWon Kim</td><td>9/16</td><td>56%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Keisuke Sasu</td><td>8/17</td><td>47%</td><td>3/4</td><td>2:23</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">SangWon Kim</td><td>17/21</td><td>81%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Keisuke Sasu</td><td>11/22</td><td>50%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-23&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Mark Climaco def. JungHyun Lee</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Mark Climaco (W)</span><span class="totals-stat">93/152</span><span class="totals-pct">61%</span><span class="totals-stat">TD 6/17</span><span class="totals-stat">Ctrl 4:29</span></div><div class="totals-line"><span class="totals-name loser-name">JungHyun Lee (L)</span><span class="totals-stat">64/161</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-23">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-23" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Mark Climaco</td><td>26/40</td><td>65%</td><td>3/8</td><td>2:54</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">JungHyun Lee</td><td>28/48</td><td>58%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Mark Climaco</td><td>35/59</td><td>59%</td><td>1/4</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">JungHyun Lee</td><td>21/67</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Mark Climaco</td><td>32/53</td><td>60%</td><td>2/5</td><td>1:35</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">JungHyun Lee</td><td>15/46</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-24&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Peter Danesoe def. Sim Kai Xiong</div>
+                    <div class="fight-detail-line">KO/TKO (Flying Knee) &bull; Rd 1, 4:23</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Peter Danesoe (W)</span><span class="totals-stat">20/38</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div><div class="totals-line"><span class="totals-name loser-name">Sim Kai Xiong (L)</span><span class="totals-stat">14/22</span><span class="totals-pct">64%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 1:21</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-24">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-24" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Peter Danesoe</td><td>20/38</td><td>53%</td><td>0/0</td><td>0:26</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sim Kai Xiong</td><td>14/22</td><td>64%</td><td>2/7</td><td>1:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-25&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">SangHoon Yoo def. Chris Hofmann</div>
+                    <div class="fight-detail-line">KO/TKO (Knee) &bull; Rd 3, 3:10</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">SangHoon Yoo (W)</span><span class="totals-stat">61/95</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:06</span></div><div class="totals-line"><span class="totals-name loser-name">Chris Hofmann (L)</span><span class="totals-stat">63/139</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 3:43</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-25">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-25" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">SangHoon Yoo</td><td>20/29</td><td>69%</td><td>0/0</td><td>0:23</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Chris Hofmann</td><td>20/47</td><td>43%</td><td>1/2</td><td>1:42</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">SangHoon Yoo</td><td>23/36</td><td>64%</td><td>0/0</td><td>0:36</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Chris Hofmann</td><td>22/50</td><td>44%</td><td>0/3</td><td>0:59</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">SangHoon Yoo</td><td>18/30</td><td>60%</td><td>0/0</td><td>0:07</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Chris Hofmann</td><td>21/42</td><td>50%</td><td>2/2</td><td>1:02</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-26&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Shin Haraguchi def. Windri Patilima</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 2, 1:25</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Shin Haraguchi (W)</span><span class="totals-stat">49/72</span><span class="totals-pct">68%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 5:50</span></div><div class="totals-line"><span class="totals-name loser-name">Windri Patilima (L)</span><span class="totals-stat">2/4</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-26">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-26" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Shin Haraguchi</td><td>18/27</td><td>67%</td><td>2/2</td><td>4:33</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Windri Patilima</td><td>2/3</td><td>67%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Shin Haraguchi</td><td>31/45</td><td>69%</td><td>1/1</td><td>1:17</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Windri Patilima</td><td>0/1</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-27&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Bahatebole Batebolati def. WonBin Ki</div>
+                    <div class="fight-detail-line">DQ &bull; Rd 2, 2:22</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Bahatebole Batebolati (W)</span><span class="totals-stat">32/68</span><span class="totals-pct">47%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:16</span></div><div class="totals-line"><span class="totals-name loser-name">WonBin Ki (L)</span><span class="totals-stat">34/95</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:19</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-27">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-27" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Bahatebole Batebolati</td><td>28/55</td><td>51%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">WonBin Ki</td><td>14/53</td><td>26%</td><td>0/2</td><td>0:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Bahatebole Batebolati</td><td>4/13</td><td>31%</td><td>1/1</td><td>0:13</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">WonBin Ki</td><td>20/42</td><td>48%</td><td>0/0</td><td>0:09</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
         </div>
-        <div class="site-footer">
-            <p>&copy; 2026 <a href="/">FightingData.com</a></p>
-        </div>
+        <footer style="background:#111;padding:28px 20px;margin-top:40px;"><div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;color:rgba(255,255,255,0.4);font-size:12px;"><div><span style="color:#fff;font-weight:800;font-size:14px;">FIGHTING<span style="color:#d62828;">DATA</span></span><div style="margin-top:6px;">Data sourced from UFCStats.com &middot; &copy; 2026 FightingData.com</div></div><div style="display:flex;gap:32px;"><a href="/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Home</a><a href="/events/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Events</a><a href="/fighters/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Fighters</a><a href="/about/" style="color:rgba(255,255,255,0.4);text-decoration:none;">About</a></div></div></footer>
     </div>
     <script>
     function toggleRounds(uid) {
