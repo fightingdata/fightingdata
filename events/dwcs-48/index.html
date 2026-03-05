@@ -100,48 +100,121 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Carlos Ulberg def. Bruno Oliveira</div>
                     <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 2:02</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Carlos Ulberg (W)</span><span class="totals-stat">10/22</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Bruno Oliveira (L)</span><span class="totals-stat">7/21</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Carlos Ulberg</td><td>10/22</td><td>45%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Bruno Oliveira</td><td>7/21</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Jared Vanderaa def. Harry Hunsucker</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 3:34</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jared Vanderaa (W)</span><span class="totals-stat">23/45</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:52</span></div><div class="totals-line"><span class="totals-name loser-name">Harry Hunsucker (L)</span><span class="totals-stat">17/31</span><span class="totals-pct">55%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jared Vanderaa</td><td>23/45</td><td>51%</td><td>1/1</td><td>0:52</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Harry Hunsucker</td><td>17/31</td><td>55%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Ignacio Bahamondes def. Edson Gomez</div>
                     <div class="fight-detail-line">KO/TKO (Kick) &bull; Rd 2, 2:31</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Ignacio Bahamondes (W)</span><span class="totals-stat">66/122</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div><div class="totals-line"><span class="totals-name loser-name">Edson Gomez (L)</span><span class="totals-stat">20/62</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:50</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Ignacio Bahamondes</td><td>30/56</td><td>54%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Edson Gomez</td><td>11/38</td><td>29%</td><td>0/5</td><td>0:37</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Ignacio Bahamondes</td><td>36/66</td><td>55%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Edson Gomez</td><td>9/24</td><td>38%</td><td>0/0</td><td>0:13</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Luis Saldana def. Vince Murdock</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 3, 0:44</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Luis Saldana (W)</span><span class="totals-stat">77/130</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:20</span></div><div class="totals-line"><span class="totals-name loser-name">Vince Murdock (L)</span><span class="totals-stat">13/60</span><span class="totals-pct">22%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Luis Saldana</td><td>25/51</td><td>49%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vince Murdock</td><td>7/27</td><td>26%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Luis Saldana</td><td>24/46</td><td>52%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vince Murdock</td><td>6/31</td><td>19%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Luis Saldana</td><td>28/33</td><td>85%</td><td>0/0</td><td>0:20</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vince Murdock</td><td>0/2</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

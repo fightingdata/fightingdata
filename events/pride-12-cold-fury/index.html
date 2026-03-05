@@ -93,77 +93,272 @@
         </div>
         
         <div class="event-summary">
-            <div class="summary-stat"><strong>6</strong> fights</div>
-            <div class="summary-stat"><strong>1</strong> KO/TKO</div>
+            <div class="summary-stat"><strong>9</strong> fights</div>
+            <div class="summary-stat"><strong>2</strong> KO/TKO</div>
             <div class="summary-stat"><strong>0</strong> submissions</div>
-            <div class="summary-stat"><strong>5</strong> decisions</div>
+            <div class="summary-stat"><strong>7</strong> decisions</div>
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Carlos Newton def. Johil de Oliveira</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 2, 10:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Carlos Newton (W)</span><span class="totals-stat">14/34</span><span class="totals-pct">41%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Johil de Oliveira (L)</span><span class="totals-stat">9/32</span><span class="totals-pct">28%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Carlos Newton</td><td>10/19</td><td>53%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Johil de Oliveira</td><td>5/13</td><td>38%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Carlos Newton</td><td>4/15</td><td>27%</td><td>2/2</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Johil de Oliveira</td><td>4/19</td><td>21%</td><td>1/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Wanderlei Silva def. Dan Henderson</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 2, 10:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Wanderlei Silva (W)</span><span class="totals-stat">70/110</span><span class="totals-pct">64%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Dan Henderson (L)</span><span class="totals-stat">25/45</span><span class="totals-pct">56%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Wanderlei Silva</td><td>54/82</td><td>66%</td><td>0/1</td><td>0:00</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Dan Henderson</td><td>16/28</td><td>57%</td><td>1/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Wanderlei Silva</td><td>16/28</td><td>57%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Dan Henderson</td><td>9/17</td><td>53%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Kazuyuki Fujita def. Gilbert Yvel</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 2, 10:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Kazuyuki Fujita (W)</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 5/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Gilbert Yvel (L)</span><span class="totals-stat">2/12</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Kazuyuki Fujita</td><td>1/1</td><td>100%</td><td>2/2</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Gilbert Yvel</td><td>0/4</td><td>0%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Kazuyuki Fujita</td><td>0/2</td><td>0%</td><td>3/4</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Gilbert Yvel</td><td>2/8</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Heath Herring def. Enson Inoue</div>
                     <div class="fight-detail-line">KO/TKO (Knees) &bull; Rd 1, 4:52</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Heath Herring (W)</span><span class="totals-stat">19/26</span><span class="totals-pct">73%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Enson Inoue (L)</span><span class="totals-stat">4/12</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Heath Herring</td><td>19/26</td><td>73%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Enson Inoue</td><td>4/12</td><td>33%</td><td>0/1</td><td>0:00</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Ricco Rodriguez def. John Marsh</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 2, 10:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Ricco Rodriguez (W)</span><span class="totals-stat">44/71</span><span class="totals-pct">62%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">John Marsh (L)</span><span class="totals-stat">11/34</span><span class="totals-pct">32%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Ricco Rodriguez</td><td>16/31</td><td>52%</td><td>2/4</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">John Marsh</td><td>7/20</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Ricco Rodriguez</td><td>28/40</td><td>70%</td><td>2/3</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">John Marsh</td><td>4/14</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-5&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Ricardo Almeida def. Akira Shoji</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 2, 10:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Ricardo Almeida (W)</span><span class="totals-stat">24/91</span><span class="totals-pct">26%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Akira Shoji (L)</span><span class="totals-stat">10/48</span><span class="totals-pct">21%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-5">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-5" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Ricardo Almeida</td><td>7/22</td><td>32%</td><td>1/3</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Akira Shoji</td><td>2/13</td><td>15%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Ricardo Almeida</td><td>17/69</td><td>25%</td><td>1/3</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Akira Shoji</td><td>8/35</td><td>23%</td><td>2/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-6&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Guy Mezger def. Alexander Otsuka</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 1:52</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Guy Mezger (W)</span><span class="totals-stat">14/33</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Alexander Otsuka (L)</span><span class="totals-stat">4/8</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-6">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Guy Mezger</td><td>14/33</td><td>42%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Alexander Otsuka</td><td>4/8</td><td>50%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-7&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Igor Vovchanchyn def. Mark Kerr</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 2, 10:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Igor Vovchanchyn (W)</span><span class="totals-stat">11/15</span><span class="totals-pct">73%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Mark Kerr (L)</span><span class="totals-stat">4/12</span><span class="totals-pct">33%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-7">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Igor Vovchanchyn</td><td>1/3</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mark Kerr</td><td>2/5</td><td>40%</td><td>2/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Igor Vovchanchyn</td><td>10/12</td><td>83%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mark Kerr</td><td>2/7</td><td>29%</td><td>2/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-8&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Kazushi Sakuraba def. Ryan Gracie</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 1, 10:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Kazushi Sakuraba (W)</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Ryan Gracie (L)</span><span class="totals-stat">3/7</span><span class="totals-pct">43%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-8">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Kazushi Sakuraba</td><td>7/12</td><td>58%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ryan Gracie</td><td>3/7</td><td>43%</td><td>1/4</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

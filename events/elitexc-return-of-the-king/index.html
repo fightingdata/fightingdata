@@ -93,55 +93,152 @@
         </div>
         
         <div class="event-summary">
-            <div class="summary-stat"><strong>4</strong> fights</div>
-            <div class="summary-stat"><strong>4</strong> KO/TKO</div>
+            <div class="summary-stat"><strong>5</strong> fights</div>
+            <div class="summary-stat"><strong>5</strong> KO/TKO</div>
             <div class="summary-stat"><strong>0</strong> submissions</div>
             <div class="summary-stat"><strong>0</strong> decisions</div>
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Dave Herman def. Ron Waterman</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 2:19</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Dave Herman (W)</span><span class="totals-stat">25/34</span><span class="totals-pct">74%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Ron Waterman (L)</span><span class="totals-stat">8/15</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Dave Herman</td><td>25/34</td><td>74%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ron Waterman</td><td>8/15</td><td>53%</td><td>2/4</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">KJ Noons def. Yves Edwards</div>
                     <div class="fight-detail-line">KO/TKO (Elbows) &bull; Rd 1, 0:48</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">KJ Noons (W)</span><span class="totals-stat">9/23</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Yves Edwards (L)</span><span class="totals-stat">4/14</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">KJ Noons</td><td>9/23</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Yves Edwards</td><td>4/14</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Nick Diaz def. Muhsin Corbbrey</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 3, 3:59</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Nick Diaz (W)</span><span class="totals-stat">76/225</span><span class="totals-pct">34%</span><span class="totals-stat">TD 2/7</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Nick Diaz</td><td>30/91</td><td>33%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Muhsin Corbbrey</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Nick Diaz</td><td>30/97</td><td>31%</td><td>1/4</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Muhsin Corbbrey</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Nick Diaz</td><td>16/37</td><td>43%</td><td>1/2</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Muhsin Corbbrey</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Rafael Cavalcante def. Wayne Cole</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 2:47</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Rafael Cavalcante (W)</span><span class="totals-stat">29/39</span><span class="totals-pct">74%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Wayne Cole (L)</span><span class="totals-stat">2/8</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Rafael Cavalcante</td><td>29/39</td><td>74%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Wayne Cole</td><td>2/8</td><td>25%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Murilo Rua def. Tony Bonello</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 3:15</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Murilo Rua (W)</span><span class="totals-stat">41/46</span><span class="totals-pct">89%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Tony Bonello (L)</span><span class="totals-stat">2/6</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Murilo Rua</td><td>41/46</td><td>89%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Tony Bonello</td><td>2/6</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

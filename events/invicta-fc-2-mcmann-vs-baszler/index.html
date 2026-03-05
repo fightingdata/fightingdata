@@ -100,15 +100,37 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Sara McMann def. Shayna Baszler</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Sara McMann (W)</span><span class="totals-stat">61/134</span><span class="totals-pct">46%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Shayna Baszler (L)</span><span class="totals-stat">57/137</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Sara McMann</td><td>24/57</td><td>42%</td><td>0/3</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shayna Baszler</td><td>25/58</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Sara McMann</td><td>12/28</td><td>43%</td><td>2/2</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shayna Baszler</td><td>12/33</td><td>36%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Sara McMann</td><td>25/49</td><td>51%</td><td>2/3</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Shayna Baszler</td><td>20/46</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

@@ -93,44 +93,101 @@
         </div>
         
         <div class="event-summary">
-            <div class="summary-stat"><strong>7</strong> fights</div>
-            <div class="summary-stat"><strong>3</strong> KO/TKO</div>
+            <div class="summary-stat"><strong>9</strong> fights</div>
+            <div class="summary-stat"><strong>4</strong> KO/TKO</div>
             <div class="summary-stat"><strong>1</strong> submissions</div>
-            <div class="summary-stat"><strong>3</strong> decisions</div>
+            <div class="summary-stat"><strong>4</strong> decisions</div>
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Ivan Salaverry def. Art Santore</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 2, 4:18</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Ivan Salaverry (W)</span><span class="totals-stat">68/142</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Art Santore (L)</span><span class="totals-stat">13/103</span><span class="totals-pct">13%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Ivan Salaverry</td><td>35/84</td><td>42%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Art Santore</td><td>8/67</td><td>12%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Ivan Salaverry</td><td>33/58</td><td>57%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Art Santore</td><td>5/36</td><td>14%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Jason Miller def. Lodune Sincaid</div>
                     <div class="fight-detail-line">Submission (Rear Naked Choke) &bull; Rd 1, 4:29</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jason Miller (W)</span><span class="totals-stat">16/21</span><span class="totals-pct">76%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Lodune Sincaid (L)</span><span class="totals-stat">9/9</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jason Miller</td><td>16/21</td><td>76%</td><td>1/4</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Lodune Sincaid</td><td>9/9</td><td>100%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Lyoto Machida def. Vernon White</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Lyoto Machida (W)</span><span class="totals-stat">26/42</span><span class="totals-pct">62%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Vernon White (L)</span><span class="totals-stat">14/68</span><span class="totals-pct">21%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Lyoto Machida</td><td>11/13</td><td>85%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vernon White</td><td>8/25</td><td>32%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Lyoto Machida</td><td>10/18</td><td>56%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vernon White</td><td>2/24</td><td>8%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Lyoto Machida</td><td>5/11</td><td>45%</td><td>1/2</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vernon White</td><td>4/19</td><td>21%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
                 <div class="fight-card-header"
@@ -155,26 +212,108 @@
                 <div class="rounds-detail" id="rounds-hist-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-5&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Quinton Jackson def. Matt Lindland</div>
                     <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Quinton Jackson (W)</span><span class="totals-stat">37/46</span><span class="totals-pct">80%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Matt Lindland (L)</span><span class="totals-stat">21/39</span><span class="totals-pct">54%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-5">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-5" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Quinton Jackson</td><td>13/14</td><td>93%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Matt Lindland</td><td>6/7</td><td>86%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Quinton Jackson</td><td>15/16</td><td>94%</td><td>2/2</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Matt Lindland</td><td>6/12</td><td>50%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Quinton Jackson</td><td>9/16</td><td>56%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Matt Lindland</td><td>9/20</td><td>45%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-6&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Ricco Rodriguez def. Ron Waterman</div>
+                    <div class="fight-detail-line">KO/TKO &bull; Rd 1, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Ricco Rodriguez (W)</span><span class="totals-stat">10/28</span><span class="totals-pct">36%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Ron Waterman (L)</span><span class="totals-stat">15/28</span><span class="totals-pct">54%</span><span class="totals-stat">TD 5/7</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-6">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Ricco Rodriguez</td><td>4/16</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ron Waterman</td><td>7/13</td><td>54%</td><td>2/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Ricco Rodriguez</td><td>2/4</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ron Waterman</td><td>1/6</td><td>17%</td><td>2/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Ricco Rodriguez</td><td>4/8</td><td>50%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ron Waterman</td><td>7/9</td><td>78%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-7&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Bas Rutten def. Ruben Villareal</div>
+                    <div class="fight-detail-line">KO/TKO (Kicks) &bull; Rd 1, 3:24</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Bas Rutten (W)</span><span class="totals-stat">19/31</span><span class="totals-pct">61%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Ruben Villareal (L)</span><span class="totals-stat">7/34</span><span class="totals-pct">21%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-7">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Bas Rutten</td><td>19/31</td><td>61%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ruben Villareal</td><td>7/34</td><td>21%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
                 <div class="fight-card-header"
                      >
                     <div class="weight-class-tag">Catchweight</div>
-                    <div class="fight-result">Ricco Rodriguez def. Ron Waterman</div>
-                    <div class="fight-detail-line">KO/TKO &bull; Rd 1, 5:00</div>
+                    <div class="fight-result">Rob McCullough def. Harris Sarmiento</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                     
                     
                 </div>
-                <div class="rounds-detail" id="rounds-hist-6" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-8" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
             </div>
         </div>
         <div class="site-footer">

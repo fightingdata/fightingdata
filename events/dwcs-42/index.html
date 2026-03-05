@@ -100,59 +100,151 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Adrian Yanez def. Brady Huang</div>
                     <div class="fight-detail-line">KO/TKO &bull; Rd 1, 0:39</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Adrian Yanez (W)</span><span class="totals-stat">7/10</span><span class="totals-pct">70%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Brady Huang (L)</span><span class="totals-stat">3/8</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:03</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Adrian Yanez</td><td>7/10</td><td>70%</td><td>0/0</td><td>0:00</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Brady Huang</td><td>3/8</td><td>38%</td><td>0/1</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Cory McKenna def. Vanessa Demopoulos</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Cory McKenna (W)</span><span class="totals-stat">47/95</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 11:07</span></div><div class="totals-line"><span class="totals-name loser-name">Vanessa Demopoulos (L)</span><span class="totals-stat">24/58</span><span class="totals-pct">41%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:12</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Cory McKenna</td><td>11/23</td><td>48%</td><td>0/0</td><td>4:19</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vanessa Demopoulos</td><td>10/15</td><td>67%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Cory McKenna</td><td>10/24</td><td>42%</td><td>1/1</td><td>3:43</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vanessa Demopoulos</td><td>6/17</td><td>35%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Cory McKenna</td><td>26/48</td><td>54%</td><td>0/0</td><td>3:05</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Vanessa Demopoulos</td><td>8/26</td><td>31%</td><td>0/2</td><td>0:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Dustin Stoltzfus def. Joe Pyfer</div>
                     <div class="fight-detail-line">KO/TKO &bull; Rd 1, 4:21</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Dustin Stoltzfus (W)</span><span class="totals-stat">16/21</span><span class="totals-pct">76%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name loser-name">Joe Pyfer (L)</span><span class="totals-stat">12/25</span><span class="totals-pct">48%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:32</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Dustin Stoltzfus</td><td>16/21</td><td>76%</td><td>1/1</td><td>0:03</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Joe Pyfer</td><td>12/25</td><td>48%</td><td>1/1</td><td>1:32</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Impa Kasanganay def. Anthony Adams</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Impa Kasanganay (W)</span><span class="totals-stat">94/167</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 5:43</span></div><div class="totals-line"><span class="totals-name loser-name">Anthony Adams (L)</span><span class="totals-stat">44/120</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:12</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Impa Kasanganay</td><td>24/54</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Anthony Adams</td><td>29/68</td><td>43%</td><td>0/0</td><td>0:53</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Impa Kasanganay</td><td>36/68</td><td>53%</td><td>1/1</td><td>1:35</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Anthony Adams</td><td>14/45</td><td>31%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Impa Kasanganay</td><td>34/45</td><td>76%</td><td>2/2</td><td>4:08</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Anthony Adams</td><td>1/7</td><td>14%</td><td>0/2</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">TJ Laramie def. Daniel Swain</div>
                     <div class="fight-detail-line">KO/TKO &bull; Rd 1, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">TJ Laramie (W)</span><span class="totals-stat">16/27</span><span class="totals-pct">59%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:05</span></div><div class="totals-line"><span class="totals-name loser-name">Daniel Swain (L)</span><span class="totals-stat">4/9</span><span class="totals-pct">44%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">TJ Laramie</td><td>16/27</td><td>59%</td><td>1/1</td><td>4:05</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Daniel Swain</td><td>4/9</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

@@ -5936,6 +5936,14 @@
     "year": "2010"
   },
   {
+    "id": 1209,
+    "name": "DEEP 50 - Impact",
+    "date": "Sunday, October 24, 2010",
+    "location": "",
+    "slug": "deep-50-impact",
+    "year": "2010"
+  },
+  {
     "id": 161,
     "name": "UFC 121: Lesnar vs Velasquez",
     "date": "Saturday, October 23, 2010",
@@ -6424,6 +6432,14 @@
     "year": "2009"
   },
   {
+    "id": 1206,
+    "name": "M-1 Global - Breakthrough",
+    "date": "Friday, August 28, 2009",
+    "location": "",
+    "slug": "m-1-global-breakthrough",
+    "year": "2009"
+  },
+  {
     "id": 1028,
     "name": "Strikeforce - Carano vs. Cyborg",
     "date": "Saturday, August 15, 2009",
@@ -6568,6 +6584,14 @@
     "year": "2009"
   },
   {
+    "id": 1207,
+    "name": "Sengoku - Seventh Battle",
+    "date": "Friday, March 20, 2009",
+    "location": "",
+    "slug": "sengoku-seventh-battle",
+    "year": "2009"
+  },
+  {
     "id": 1184,
     "name": "DREAM 7: Featherweight Grand Prix 2009 1st Round",
     "date": "Sunday, March 8, 2009",
@@ -6637,6 +6661,14 @@
     "date": "Saturday, January 17, 2009",
     "location": "Dublin, Leinster, Ireland",
     "slug": "ufc-93-franklin-vs-henderson",
+    "year": "2009"
+  },
+  {
+    "id": 1208,
+    "name": "Sengoku - no Ran 2009",
+    "date": "Sunday, January 4, 2009",
+    "location": "",
+    "slug": "sengoku-no-ran-2009",
     "year": "2009"
   },
   {
@@ -6789,6 +6821,14 @@
     "date": "Wednesday, September 17, 2008",
     "location": "Omaha, Nebraska, USA",
     "slug": "ufc-fight-night-diaz-vs-neer",
+    "year": "2008"
+  },
+  {
+    "id": 1200,
+    "name": "Strikeforce - Young Guns 3",
+    "date": "Saturday, September 13, 2008",
+    "location": "",
+    "slug": "strikeforce-young-guns-3",
     "year": "2008"
   },
   {
@@ -7054,6 +7094,14 @@
     "location": "Newcastle, England, United Kingdom",
     "slug": "ufc-80-rapid-fire",
     "year": "2008"
+  },
+  {
+    "id": 1204,
+    "name": "K-1 Dynamite!! 2007",
+    "date": "Monday, December 31, 2007",
+    "location": "",
+    "slug": "k-1-dynamite-2007",
+    "year": "2007"
   },
   {
     "id": 1078,
@@ -7408,6 +7456,14 @@
     "year": "2007"
   },
   {
+    "id": 1205,
+    "name": "K-1 Hero's 8",
+    "date": "Monday, March 12, 2007",
+    "location": "",
+    "slug": "k-1-heros-8",
+    "year": "2007"
+  },
+  {
     "id": 1176,
     "name": "Floripa Fight 4",
     "date": "Saturday, March 10, 2007",
@@ -7445,6 +7501,14 @@
     "date": "Sunday, February 18, 2007",
     "location": "",
     "slug": "bodogfight-costa-rica-218",
+    "year": "2007"
+  },
+  {
+    "id": 1210,
+    "name": "Shooto - Back to Our Roots 1",
+    "date": "Saturday, February 17, 2007",
+    "location": "",
+    "slug": "shooto-back-to-our-roots-1",
     "year": "2007"
   },
   {
@@ -7789,6 +7853,14 @@
     "date": "Thursday, June 15, 2006",
     "location": "",
     "slug": "wec-21-tapout",
+    "year": "2006"
+  },
+  {
+    "id": 1203,
+    "name": "WEF 6/10",
+    "date": "Saturday, June 10, 2006",
+    "location": "",
+    "slug": "wef-610",
     "year": "2006"
   },
   {
@@ -9048,6 +9120,14 @@
     "year": "2001"
   },
   {
+    "id": 1202,
+    "name": "WEC 1: Princes of Pain",
+    "date": "Saturday, June 30, 2001",
+    "location": "",
+    "slug": "wec-1-princes-of-pain",
+    "year": "2001"
+  },
+  {
     "id": 35,
     "name": "UFC 32: Showdown in the Meadowlands",
     "date": "Friday, June 29, 2001",
@@ -9317,6 +9397,14 @@
     "date": "Friday, October 16, 1998",
     "location": "Sao Paulo, Brazil",
     "slug": "ufc-ultimate-brazil",
+    "year": "1998"
+  },
+  {
+    "id": 1201,
+    "name": "PRIDE 4",
+    "date": "Sunday, October 11, 1998",
+    "location": "",
+    "slug": "pride-4",
     "year": "1998"
   },
   {

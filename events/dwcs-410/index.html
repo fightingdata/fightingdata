@@ -100,59 +100,160 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Gloria de Paula def. Pauline Macias</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Gloria de Paula (W)</span><span class="totals-stat">69/121</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 7:57</span></div><div class="totals-line"><span class="totals-name loser-name">Pauline Macias (L)</span><span class="totals-stat">12/41</span><span class="totals-pct">29%</span><span class="totals-stat">TD 2/11</span><span class="totals-stat">Ctrl 0:58</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Gloria de Paula</td><td>9/21</td><td>43%</td><td>0/0</td><td>3:04</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Pauline Macias</td><td>1/5</td><td>20%</td><td>1/3</td><td>0:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Gloria de Paula</td><td>26/46</td><td>57%</td><td>0/0</td><td>2:17</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Pauline Macias</td><td>4/15</td><td>27%</td><td>1/4</td><td>0:27</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Gloria de Paula</td><td>34/54</td><td>63%</td><td>0/0</td><td>2:36</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Pauline Macias</td><td>7/21</td><td>33%</td><td>0/4</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">JP Buys def. Jacob Silva</div>
                     <div class="fight-detail-line">Submission (Guillotine Choke) &bull; Rd 1, 4:54</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">JP Buys (W)</span><span class="totals-stat">22/28</span><span class="totals-pct">79%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 4:17</span></div><div class="totals-line"><span class="totals-name loser-name">Jacob Silva (L)</span><span class="totals-stat">0/1</span><span class="totals-pct">0%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">JP Buys</td><td>22/28</td><td>79%</td><td>1/1</td><td>4:17</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jacob Silva</td><td>0/1</td><td>0%</td><td>0/0</td><td>0:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Nick Maximov def. Oscar Cota</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Nick Maximov (W)</span><span class="totals-stat">37/63</span><span class="totals-pct">59%</span><span class="totals-stat">TD 2/5</span><span class="totals-stat">Ctrl 11:14</span></div><div class="totals-line"><span class="totals-name loser-name">Oscar Cota (L)</span><span class="totals-stat">5/12</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:27</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Nick Maximov</td><td>12/18</td><td>67%</td><td>1/3</td><td>1:39</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Oscar Cota</td><td>2/5</td><td>40%</td><td>0/0</td><td>3:15</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Nick Maximov</td><td>17/33</td><td>52%</td><td>0/1</td><td>4:51</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Oscar Cota</td><td>2/4</td><td>50%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Nick Maximov</td><td>8/12</td><td>67%</td><td>1/1</td><td>4:44</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Oscar Cota</td><td>1/3</td><td>33%</td><td>0/0</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Tucker Lutz def. Sherrard Blackledge</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Tucker Lutz (W)</span><span class="totals-stat">34/62</span><span class="totals-pct">55%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 7:51</span></div><div class="totals-line"><span class="totals-name loser-name">Sherrard Blackledge (L)</span><span class="totals-stat">37/75</span><span class="totals-pct">49%</span><span class="totals-stat">TD 2/9</span><span class="totals-stat">Ctrl 3:23</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Tucker Lutz</td><td>11/27</td><td>41%</td><td>1/2</td><td>2:13</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sherrard Blackledge</td><td>18/31</td><td>58%</td><td>1/4</td><td>1:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Tucker Lutz</td><td>18/26</td><td>69%</td><td>2/2</td><td>1:50</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sherrard Blackledge</td><td>9/28</td><td>32%</td><td>1/4</td><td>1:27</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Tucker Lutz</td><td>5/9</td><td>56%</td><td>1/3</td><td>3:48</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sherrard Blackledge</td><td>10/16</td><td>62%</td><td>0/1</td><td>0:46</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Victoria Leonardo def. Chelsea Hackett</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 2, 4:41</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Victoria Leonardo (W)</span><span class="totals-stat">47/88</span><span class="totals-pct">53%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 5:18</span></div><div class="totals-line"><span class="totals-name loser-name">Chelsea Hackett (L)</span><span class="totals-stat">25/49</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:35</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Victoria Leonardo</td><td>9/22</td><td>41%</td><td>1/1</td><td>2:03</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Chelsea Hackett</td><td>14/28</td><td>50%</td><td>0/0</td><td>0:25</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Victoria Leonardo</td><td>38/66</td><td>58%</td><td>2/6</td><td>3:15</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Chelsea Hackett</td><td>11/21</td><td>52%</td><td>0/0</td><td>0:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

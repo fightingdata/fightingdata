@@ -100,59 +100,157 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Bolaji Oki def. Dylan Salvador</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 2:46</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Bolaji Oki (W)</span><span class="totals-stat">32/60</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:08</span></div><div class="totals-line"><span class="totals-name loser-name">Dylan Salvador (L)</span><span class="totals-stat">12/32</span><span class="totals-pct">38%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Bolaji Oki</td><td>32/60</td><td>53%</td><td>0/0</td><td>0:08</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Dylan Salvador</td><td>12/32</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Carlos Prates def. Mitch Ramirez</div>
                     <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 2, 1:14</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Carlos Prates (W)</span><span class="totals-stat">30/47</span><span class="totals-pct">64%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name loser-name">Mitch Ramirez (L)</span><span class="totals-stat">23/44</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 1:18</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Carlos Prates</td><td>21/32</td><td>66%</td><td>0/0</td><td>0:20</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mitch Ramirez</td><td>21/42</td><td>50%</td><td>1/1</td><td>1:18</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Carlos Prates</td><td>9/15</td><td>60%</td><td>0/0</td><td>0:02</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mitch Ramirez</td><td>2/2</td><td>100%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Marco Tulio def. Yousri Belgaroui</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Marco Tulio (W)</span><span class="totals-stat">48/98</span><span class="totals-pct">49%</span><span class="totals-stat">TD 2/8</span><span class="totals-stat">Ctrl 6:18</span></div><div class="totals-line"><span class="totals-name loser-name">Yousri Belgaroui (L)</span><span class="totals-stat">33/69</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:25</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Marco Tulio</td><td>10/27</td><td>37%</td><td>1/5</td><td>1:54</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Yousri Belgaroui</td><td>11/28</td><td>39%</td><td>0/0</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Marco Tulio</td><td>21/42</td><td>50%</td><td>0/1</td><td>0:17</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Yousri Belgaroui</td><td>19/37</td><td>51%</td><td>0/0</td><td>1:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Marco Tulio</td><td>17/29</td><td>59%</td><td>1/2</td><td>4:07</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Yousri Belgaroui</td><td>3/4</td><td>75%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Thomas Petersen def. Chandler Cole</div>
                     <div class="fight-detail-line">Submission (Keylock) &bull; Rd 2, 1:08</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Thomas Petersen (W)</span><span class="totals-stat">22/30</span><span class="totals-pct">73%</span><span class="totals-stat">TD 3/3</span><span class="totals-stat">Ctrl 4:36</span></div><div class="totals-line"><span class="totals-name loser-name">Chandler Cole (L)</span><span class="totals-stat">15/25</span><span class="totals-pct">60%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:08</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Thomas Petersen</td><td>20/26</td><td>77%</td><td>2/2</td><td>3:55</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Chandler Cole</td><td>12/22</td><td>55%</td><td>0/1</td><td>0:08</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Thomas Petersen</td><td>2/4</td><td>50%</td><td>1/1</td><td>0:41</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Chandler Cole</td><td>3/3</td><td>100%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Timmy Cuamba def. Mateo Vogel</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Timmy Cuamba (W)</span><span class="totals-stat">43/126</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name loser-name">Mateo Vogel (L)</span><span class="totals-stat">67/145</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 4:04</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Timmy Cuamba</td><td>21/58</td><td>36%</td><td>0/0</td><td>0:06</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mateo Vogel</td><td>28/60</td><td>47%</td><td>0/2</td><td>1:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Timmy Cuamba</td><td>13/45</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mateo Vogel</td><td>24/60</td><td>40%</td><td>0/1</td><td>0:09</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Timmy Cuamba</td><td>9/23</td><td>39%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mateo Vogel</td><td>15/25</td><td>60%</td><td>1/3</td><td>2:50</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

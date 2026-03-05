@@ -100,15 +100,31 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Yoshihiro Akiyama vs. Kazushi Sakuraba — No Contest</div>
                     <div class="fight-detail-line">Overturned &bull; Rd 1, 5:37</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name fighter-a-name">Yoshihiro Akiyama</span><span class="totals-stat">30/54</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name fighter-a-name">Kazushi Sakuraba</span><span class="totals-stat">6/26</span><span class="totals-pct">23%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="loser-row"><td class="round-num">R1</td><td class="fighter-label">Yoshihiro Akiyama</td><td>30/54</td><td>56%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Kazushi Sakuraba</td><td>6/26</td><td>23%</td><td>0/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

@@ -100,59 +100,157 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Bruna Brasil def. Marnic Mann</div>
                     <div class="fight-detail-line">KO/TKO (Kick) &bull; Rd 2, 4:33</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Bruna Brasil (W)</span><span class="totals-stat">40/49</span><span class="totals-pct">82%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 2:32</span></div><div class="totals-line"><span class="totals-name loser-name">Marnic Mann (L)</span><span class="totals-stat">19/34</span><span class="totals-pct">56%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 3:02</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Bruna Brasil</td><td>22/27</td><td>81%</td><td>2/2</td><td>1:46</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Marnic Mann</td><td>11/20</td><td>55%</td><td>2/5</td><td>1:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Bruna Brasil</td><td>18/22</td><td>82%</td><td>0/0</td><td>0:46</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Marnic Mann</td><td>8/14</td><td>57%</td><td>1/3</td><td>1:41</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Daniel Marcos def. Brandon Lewis</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Daniel Marcos (W)</span><span class="totals-stat">81/172</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:14</span></div><div class="totals-line"><span class="totals-name loser-name">Brandon Lewis (L)</span><span class="totals-stat">45/170</span><span class="totals-pct">26%</span><span class="totals-stat">TD 2/13</span><span class="totals-stat">Ctrl 2:40</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Daniel Marcos</td><td>27/66</td><td>41%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Brandon Lewis</td><td>17/56</td><td>30%</td><td>1/4</td><td>0:38</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Daniel Marcos</td><td>23/52</td><td>44%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Brandon Lewis</td><td>16/56</td><td>29%</td><td>0/3</td><td>0:43</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Daniel Marcos</td><td>31/54</td><td>57%</td><td>0/0</td><td>0:14</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Brandon Lewis</td><td>12/58</td><td>21%</td><td>1/6</td><td>1:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Farid Basharat def. Allan Begosso</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Farid Basharat (W)</span><span class="totals-stat">116/177</span><span class="totals-pct">66%</span><span class="totals-stat">TD 3/4</span><span class="totals-stat">Ctrl 9:05</span></div><div class="totals-line"><span class="totals-name loser-name">Allan Begosso (L)</span><span class="totals-stat">27/67</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Farid Basharat</td><td>24/41</td><td>59%</td><td>1/1</td><td>2:06</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Allan Begosso</td><td>8/25</td><td>32%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Farid Basharat</td><td>43/62</td><td>69%</td><td>1/1</td><td>3:44</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Allan Begosso</td><td>10/16</td><td>62%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Farid Basharat</td><td>49/74</td><td>66%</td><td>1/2</td><td>3:15</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Allan Begosso</td><td>9/26</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Ikram Aliskerov def. Mario Sousa</div>
                     <div class="fight-detail-line">Submission (Kimura) &bull; Rd 1, 2:09</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Ikram Aliskerov (W)</span><span class="totals-stat">7/12</span><span class="totals-pct">58%</span><span class="totals-stat">TD 1/3</span><span class="totals-stat">Ctrl 0:23</span></div><div class="totals-line"><span class="totals-name loser-name">Mario Sousa (L)</span><span class="totals-stat">17/29</span><span class="totals-pct">59%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Ikram Aliskerov</td><td>7/12</td><td>58%</td><td>1/3</td><td>0:23</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mario Sousa</td><td>17/29</td><td>59%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Trevor Peek def. Malik Lewis</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 2, 2:37</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Trevor Peek (W)</span><span class="totals-stat">54/79</span><span class="totals-pct">68%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:05</span></div><div class="totals-line"><span class="totals-name loser-name">Malik Lewis (L)</span><span class="totals-stat">65/96</span><span class="totals-pct">68%</span><span class="totals-stat">TD 4/8</span><span class="totals-stat">Ctrl 2:05</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Trevor Peek</td><td>24/33</td><td>73%</td><td>0/1</td><td>0:41</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Malik Lewis</td><td>60/87</td><td>69%</td><td>4/8</td><td>2:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Trevor Peek</td><td>30/46</td><td>65%</td><td>1/1</td><td>1:24</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Malik Lewis</td><td>5/9</td><td>56%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

@@ -93,66 +93,200 @@
         </div>
         
         <div class="event-summary">
-            <div class="summary-stat"><strong>5</strong> fights</div>
+            <div class="summary-stat"><strong>6</strong> fights</div>
             <div class="summary-stat"><strong>0</strong> KO/TKO</div>
             <div class="summary-stat"><strong>3</strong> submissions</div>
-            <div class="summary-stat"><strong>2</strong> decisions</div>
+            <div class="summary-stat"><strong>3</strong> decisions</div>
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Albert Duraev def. Caio Bittencourt</div>
                     <div class="fight-detail-line">Submission (Neck Crank) &bull; Rd 1, 3:29</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Albert Duraev (W)</span><span class="totals-stat">2/3</span><span class="totals-pct">67%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 3:04</span></div><div class="totals-line"><span class="totals-name loser-name">Caio Bittencourt (L)</span><span class="totals-stat">1/6</span><span class="totals-pct">17%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Albert Duraev</td><td>2/3</td><td>67%</td><td>1/1</td><td>3:04</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Caio Bittencourt</td><td>1/6</td><td>17%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Jack Della Maddalena def. Ange Loosa</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jack Della Maddalena (W)</span><span class="totals-stat">108/227</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:08</span></div><div class="totals-line"><span class="totals-name loser-name">Ange Loosa (L)</span><span class="totals-stat">64/185</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 2:23</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jack Della Maddalena</td><td>39/75</td><td>52%</td><td>0/0</td><td>0:07</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ange Loosa</td><td>25/64</td><td>39%</td><td>0/1</td><td>0:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Jack Della Maddalena</td><td>32/58</td><td>55%</td><td>0/1</td><td>0:35</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ange Loosa</td><td>17/54</td><td>31%</td><td>0/1</td><td>1:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Jack Della Maddalena</td><td>37/94</td><td>39%</td><td>0/2</td><td>0:26</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Ange Loosa</td><td>22/67</td><td>33%</td><td>1/2</td><td>1:11</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Jailton Almeida def. Nasrudin Nasrudinov</div>
                     <div class="fight-detail-line">Submission (Rear Naked Choke) &bull; Rd 2, 1:49</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jailton Almeida (W)</span><span class="totals-stat">2/8</span><span class="totals-pct">25%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 3:26</span></div><div class="totals-line"><span class="totals-name loser-name">Nasrudin Nasrudinov (L)</span><span class="totals-stat">7/8</span><span class="totals-pct">88%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:14</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jailton Almeida</td><td>2/8</td><td>25%</td><td>2/4</td><td>2:02</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Nasrudin Nasrudinov</td><td>6/7</td><td>86%</td><td>1/2</td><td>2:14</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Jailton Almeida</td><td>0/0</td><td>—</td><td>1/1</td><td>1:24</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Nasrudin Nasrudinov</td><td>1/1</td><td>100%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Jasmine Jasudavicius def. Julia Polastri</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jasmine Jasudavicius (W)</span><span class="totals-stat">70/163</span><span class="totals-pct">43%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 8:11</span></div><div class="totals-line"><span class="totals-name loser-name">Julia Polastri (L)</span><span class="totals-stat">65/132</span><span class="totals-pct">49%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jasmine Jasudavicius</td><td>27/43</td><td>63%</td><td>1/1</td><td>4:17</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Julia Polastri</td><td>3/4</td><td>75%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Jasmine Jasudavicius</td><td>17/49</td><td>35%</td><td>2/3</td><td>2:28</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Julia Polastri</td><td>25/59</td><td>42%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Jasmine Jasudavicius</td><td>26/71</td><td>37%</td><td>1/3</td><td>1:26</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Julia Polastri</td><td>37/69</td><td>54%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Lukasz Brzeski def. Dylan Potter</div>
                     <div class="fight-detail-line">Submission (Rear Naked Choke) &bull; Rd 3, 3:51</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Lukasz Brzeski (W)</span><span class="totals-stat">80/150</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 7:55</span></div><div class="totals-line"><span class="totals-name loser-name">Dylan Potter (L)</span><span class="totals-stat">43/89</span><span class="totals-pct">48%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:15</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Lukasz Brzeski</td><td>41/79</td><td>52%</td><td>0/0</td><td>1:42</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Dylan Potter</td><td>21/47</td><td>45%</td><td>0/0</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Lukasz Brzeski</td><td>25/42</td><td>60%</td><td>1/2</td><td>3:37</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Dylan Potter</td><td>11/24</td><td>46%</td><td>0/0</td><td>0:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Lukasz Brzeski</td><td>14/29</td><td>48%</td><td>1/1</td><td>2:36</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Dylan Potter</td><td>11/18</td><td>61%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-5&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Mo Miller def. Brandon Lewis</div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Mo Miller (W)</span><span class="totals-stat">28/61</span><span class="totals-pct">46%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 9:10</span></div><div class="totals-line"><span class="totals-name loser-name">Brandon Lewis (L)</span><span class="totals-stat">20/51</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-5">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Mo Miller</td><td>8/25</td><td>32%</td><td>1/1</td><td>2:21</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Brandon Lewis</td><td>4/14</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Mo Miller</td><td>17/24</td><td>71%</td><td>1/1</td><td>3:13</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Brandon Lewis</td><td>10/19</td><td>53%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Mo Miller</td><td>3/12</td><td>25%</td><td>2/3</td><td>3:36</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Brandon Lewis</td><td>6/18</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

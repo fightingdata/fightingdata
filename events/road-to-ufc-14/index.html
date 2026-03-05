@@ -93,33 +93,149 @@
         </div>
         
         <div class="event-summary">
-            <div class="summary-stat"><strong>2</strong> fights</div>
-            <div class="summary-stat"><strong>2</strong> KO/TKO</div>
-            <div class="summary-stat"><strong>0</strong> submissions</div>
+            <div class="summary-stat"><strong>5</strong> fights</div>
+            <div class="summary-stat"><strong>4</strong> KO/TKO</div>
+            <div class="summary-stat"><strong>1</strong> submissions</div>
             <div class="summary-stat"><strong>0</strong> decisions</div>
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">HyunSung Park def. Jeremia Siregar</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 1, 3:56</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">HyunSung Park (W)</span><span class="totals-stat">29/41</span><span class="totals-pct">71%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 0:31</span></div><div class="totals-line"><span class="totals-name loser-name">Jeremia Siregar (L)</span><span class="totals-stat">11/26</span><span class="totals-pct">42%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:19</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">HyunSung Park</td><td>29/41</td><td>71%</td><td>1/4</td><td>0:31</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jeremia Siregar</td><td>11/26</td><td>42%</td><td>0/1</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Shohei Nose def. Wulijiburen</div>
                     <div class="fight-detail-line">KO/TKO &bull; Rd 1, 1:13</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Shohei Nose (W)</span><span class="totals-stat">6/12</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name loser-name">Wulijiburen (L)</span><span class="totals-stat">1/3</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Shohei Nose</td><td>6/12</td><td>50%</td><td>0/2</td><td>0:05</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Wulijiburen</td><td>1/3</td><td>33%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">HanSeul Kim def. John Adajar</div>
+                    <div class="fight-detail-line">Submission (Triangle Armbar) &bull; Rd 1, 4:37</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">HanSeul Kim (W)</span><span class="totals-stat">29/52</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:03</span></div><div class="totals-line"><span class="totals-name loser-name">John Adajar (L)</span><span class="totals-stat">18/34</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:26</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">HanSeul Kim</td><td>29/52</td><td>56%</td><td>0/0</td><td>2:03</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">John Adajar</td><td>18/34</td><td>53%</td><td>0/0</td><td>0:26</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">KyeungPyo Kim def. Jinensibieke Asikeerbai</div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 0:30</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">KyeungPyo Kim (W)</span><span class="totals-stat">5/5</span><span class="totals-pct">100%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name loser-name">Jinensibieke Asikeerbai (L)</span><span class="totals-stat">1/2</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">KyeungPyo Kim</td><td>5/5</td><td>100%</td><td>0/0</td><td>0:05</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jinensibieke Asikeerbai</td><td>1/2</td><td>50%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Lu Kai def. Angga</div>
+                    <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 2, 4:33</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Lu Kai (W)</span><span class="totals-stat">36/77</span><span class="totals-pct">47%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 4:10</span></div><div class="totals-line"><span class="totals-name loser-name">Angga (L)</span><span class="totals-stat">34/88</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/4</span><span class="totals-stat">Ctrl 0:46</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Lu Kai</td><td>21/55</td><td>38%</td><td>1/2</td><td>0:08</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Angga</td><td>30/72</td><td>42%</td><td>0/4</td><td>0:46</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Lu Kai</td><td>15/22</td><td>68%</td><td>1/1</td><td>4:02</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Angga</td><td>4/16</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

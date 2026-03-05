@@ -93,55 +93,167 @@
         </div>
         
         <div class="event-summary">
-            <div class="summary-stat"><strong>4</strong> fights</div>
+            <div class="summary-stat"><strong>5</strong> fights</div>
             <div class="summary-stat"><strong>2</strong> KO/TKO</div>
             <div class="summary-stat"><strong>0</strong> submissions</div>
-            <div class="summary-stat"><strong>2</strong> decisions</div>
+            <div class="summary-stat"><strong>3</strong> decisions</div>
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Andrey Pulyaev def. Liam Anderson</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Andrey Pulyaev (W)</span><span class="totals-stat">98/144</span><span class="totals-pct">68%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 2:43</span></div><div class="totals-line"><span class="totals-name loser-name">Liam Anderson (L)</span><span class="totals-stat">45/86</span><span class="totals-pct">52%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 6:07</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Andrey Pulyaev</td><td>38/53</td><td>72%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Liam Anderson</td><td>19/36</td><td>53%</td><td>0/1</td><td>2:03</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Andrey Pulyaev</td><td>37/53</td><td>70%</td><td>0/1</td><td>0:08</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Liam Anderson</td><td>19/38</td><td>50%</td><td>1/2</td><td>2:36</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Andrey Pulyaev</td><td>23/38</td><td>61%</td><td>1/1</td><td>2:35</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Liam Anderson</td><td>7/12</td><td>58%</td><td>0/2</td><td>1:28</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Bogdan Grad def. Michael Aswell Jr.</div>
                     <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Bogdan Grad (W)</span><span class="totals-stat">102/215</span><span class="totals-pct">47%</span><span class="totals-stat">TD 3/7</span><span class="totals-stat">Ctrl 1:32</span></div><div class="totals-line"><span class="totals-name loser-name">Michael Aswell Jr. (L)</span><span class="totals-stat">155/307</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:32</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Bogdan Grad</td><td>32/72</td><td>44%</td><td>1/1</td><td>0:10</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Michael Aswell Jr.</td><td>47/86</td><td>55%</td><td>0/0</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Bogdan Grad</td><td>34/65</td><td>52%</td><td>1/2</td><td>0:41</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Michael Aswell Jr.</td><td>48/95</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Bogdan Grad</td><td>36/78</td><td>46%</td><td>1/4</td><td>0:41</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Michael Aswell Jr.</td><td>60/126</td><td>48%</td><td>0/0</td><td>0:20</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Malcolm Wellmaker def. Adam Bramhald</div>
                     <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 2:29</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Malcolm Wellmaker (W)</span><span class="totals-stat">20/30</span><span class="totals-pct">67%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:06</span></div><div class="totals-line"><span class="totals-name loser-name">Adam Bramhald (L)</span><span class="totals-stat">19/42</span><span class="totals-pct">45%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Malcolm Wellmaker</td><td>20/30</td><td>67%</td><td>0/1</td><td>0:06</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Adam Bramhald</td><td>19/42</td><td>45%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Marco Tulio def. Matthieu Duclos</div>
                     <div class="fight-detail-line">KO/TKO (Spinning Back Kick) &bull; Rd 2, 2:38</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Marco Tulio (W)</span><span class="totals-stat">52/97</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 1:20</span></div><div class="totals-line"><span class="totals-name loser-name">Matthieu Duclos (L)</span><span class="totals-stat">30/81</span><span class="totals-pct">37%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Marco Tulio</td><td>28/57</td><td>49%</td><td>0/1</td><td>0:49</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Matthieu Duclos</td><td>23/52</td><td>44%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Marco Tulio</td><td>24/40</td><td>60%</td><td>0/1</td><td>0:31</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Matthieu Duclos</td><td>7/29</td><td>24%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
+                    <div class="weight-class-tag">Catchweight</div>
+                    <div class="fight-result">Nick Piccininni def. Jack Duffy</div>
+                    <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Nick Piccininni (W)</span><span class="totals-stat">32/67</span><span class="totals-pct">48%</span><span class="totals-stat">TD 6/16</span><span class="totals-stat">Ctrl 8:35</span></div><div class="totals-line"><span class="totals-name loser-name">Jack Duffy (L)</span><span class="totals-stat">76/110</span><span class="totals-pct">69%</span><span class="totals-stat">TD 0/5</span><span class="totals-stat">Ctrl 0:21</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
+                </div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Nick Piccininni</td><td>7/18</td><td>39%</td><td>1/3</td><td>1:58</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jack Duffy</td><td>26/37</td><td>70%</td><td>0/3</td><td>0:07</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Nick Piccininni</td><td>5/12</td><td>42%</td><td>2/2</td><td>4:06</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jack Duffy</td><td>12/17</td><td>71%</td><td>0/1</td><td>0:12</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Nick Piccininni</td><td>20/37</td><td>54%</td><td>3/11</td><td>2:31</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jack Duffy</td><td>38/56</td><td>68%</td><td>0/1</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

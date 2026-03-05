@@ -100,37 +100,91 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Javier Reyes def. Justice Torres</div>
                     <div class="fight-detail-line">KO/TKO (Knee) &bull; Rd 1, 2:32</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Javier Reyes (W)</span><span class="totals-stat">21/45</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name loser-name">Justice Torres (L)</span><span class="totals-stat">2/9</span><span class="totals-pct">22%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 0:30</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Javier Reyes</td><td>21/45</td><td>47%</td><td>0/0</td><td>0:03</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Justice Torres</td><td>2/9</td><td>22%</td><td>1/2</td><td>0:30</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Mantas Kondratavicius def. Djani Barbir</div>
                     <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 1:06</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Mantas Kondratavicius (W)</span><span class="totals-stat">5/15</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/1</span><span class="totals-stat">Ctrl 0:15</span></div><div class="totals-line"><span class="totals-name loser-name">Djani Barbir (L)</span><span class="totals-stat">4/10</span><span class="totals-pct">40%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:27</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Mantas Kondratavicius</td><td>5/15</td><td>33%</td><td>1/1</td><td>0:15</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Djani Barbir</td><td>4/10</td><td>40%</td><td>0/0</td><td>0:27</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Jeisla Chaves def. Sofia Montenegro</div>
                     <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jeisla Chaves (W)</span><span class="totals-stat">85/166</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/2</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Sofia Montenegro (L)</span><span class="totals-stat">64/160</span><span class="totals-pct">40%</span><span class="totals-stat">TD 1/4</span><span class="totals-stat">Ctrl 6:22</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jeisla Chaves</td><td>50/85</td><td>59%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sofia Montenegro</td><td>30/79</td><td>38%</td><td>0/1</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Jeisla Chaves</td><td>6/14</td><td>43%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sofia Montenegro</td><td>20/35</td><td>57%</td><td>0/0</td><td>4:21</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Jeisla Chaves</td><td>29/67</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sofia Montenegro</td><td>14/46</td><td>30%</td><td>1/3</td><td>1:42</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">

@@ -100,59 +100,157 @@
         </div>
         <div class="fights-list">
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Armen Petrosyan def. Kaloyan Kolev</div>
                     <div class="fight-detail-line">KO/TKO (Kick) &bull; Rd 1, 4:27</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Armen Petrosyan (W)</span><span class="totals-stat">20/35</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:01</span></div><div class="totals-line"><span class="totals-name loser-name">Kaloyan Kolev (L)</span><span class="totals-stat">5/11</span><span class="totals-pct">45%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 3:32</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-0" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Armen Petrosyan</td><td>20/35</td><td>57%</td><td>0/0</td><td>0:01</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Kaloyan Kolev</td><td>5/11</td><td>45%</td><td>3/5</td><td>3:32</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Caio Borralho def. Jesse Murray</div>
                     <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 1, 1:41</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Caio Borralho (W)</span><span class="totals-stat">13/23</span><span class="totals-pct">57%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:05</span></div><div class="totals-line"><span class="totals-name loser-name">Jesse Murray (L)</span><span class="totals-stat">4/14</span><span class="totals-pct">29%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Caio Borralho</td><td>13/23</td><td>57%</td><td>0/0</td><td>0:05</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jesse Murray</td><td>4/14</td><td>29%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Jonny Parsons def. Solomon Renfro</div>
                     <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jonny Parsons (W)</span><span class="totals-stat">53/136</span><span class="totals-pct">39%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 0:03</span></div><div class="totals-line"><span class="totals-name loser-name">Solomon Renfro (L)</span><span class="totals-stat">78/174</span><span class="totals-pct">45%</span><span class="totals-stat">TD 2/4</span><span class="totals-stat">Ctrl 1:50</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jonny Parsons</td><td>15/43</td><td>35%</td><td>0/2</td><td>0:01</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Solomon Renfro</td><td>37/75</td><td>49%</td><td>1/1</td><td>0:40</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Jonny Parsons</td><td>16/40</td><td>40%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Solomon Renfro</td><td>17/41</td><td>41%</td><td>1/1</td><td>1:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Jonny Parsons</td><td>22/53</td><td>42%</td><td>0/1</td><td>0:02</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Solomon Renfro</td><td>24/58</td><td>41%</td><td>0/2</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Pedro Falcao def. James Barnes</div>
                     <div class="fight-detail-line">KO/TKO (Punches) &bull; Rd 3, 3:55</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Pedro Falcao (W)</span><span class="totals-stat">42/69</span><span class="totals-pct">61%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 7:00</span></div><div class="totals-line"><span class="totals-name loser-name">James Barnes (L)</span><span class="totals-stat">8/23</span><span class="totals-pct">35%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 3:21</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-3" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Pedro Falcao</td><td>18/31</td><td>58%</td><td>0/1</td><td>0:40</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">James Barnes</td><td>4/16</td><td>25%</td><td>0/1</td><td>2:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Pedro Falcao</td><td>12/21</td><td>57%</td><td>2/2</td><td>3:58</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">James Barnes</td><td>2/5</td><td>40%</td><td>0/2</td><td>0:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Pedro Falcao</td><td>12/17</td><td>71%</td><td>1/2</td><td>2:22</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">James Barnes</td><td>2/2</td><td>100%</td><td>1/3</td><td>1:09</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
             <div class="fight-card">
-                <div class="fight-card-header"
-                     >
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
                     <div class="weight-class-tag">Catchweight</div>
                     <div class="fight-result">Piera Rodriguez def. Valesca Machado</div>
                     <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
-                    
-                    
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Piera Rodriguez (W)</span><span class="totals-stat">43/120</span><span class="totals-pct">36%</span><span class="totals-stat">TD 3/13</span><span class="totals-stat">Ctrl 4:18</span></div><div class="totals-line"><span class="totals-name loser-name">Valesca Machado (L)</span><span class="totals-stat">36/110</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:04</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
                 </div>
-                <div class="rounds-detail" id="rounds-hist-4" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Piera Rodriguez</td><td>16/49</td><td>33%</td><td>1/3</td><td>0:53</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Valesca Machado</td><td>9/44</td><td>20%</td><td>0/0</td><td>0:01</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Piera Rodriguez</td><td>13/32</td><td>41%</td><td>0/5</td><td>1:12</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Valesca Machado</td><td>11/34</td><td>32%</td><td>0/0</td><td>0:31</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Piera Rodriguez</td><td>14/39</td><td>36%</td><td>2/5</td><td>2:13</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Valesca Machado</td><td>16/32</td><td>50%</td><td>0/0</td><td>0:32</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
             </div>
         </div>
         <div class="site-footer">
