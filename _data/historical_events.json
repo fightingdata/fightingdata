@@ -9360,6 +9360,14 @@
     "year": "1999"
   },
   {
+    "id": 23,
+    "name": "UFC 20: Battle for the Gold",
+    "date": "Friday, May 7, 1999",
+    "location": "Birmingham, Alabama, USA",
+    "slug": "ufc-20-battle-for-the-gold",
+    "year": "1999"
+  },
+  {
     "id": 1144,
     "name": "PRIDE 5",
     "date": "Thursday, April 29, 1999",
@@ -9413,6 +9421,14 @@
     "date": "Wednesday, June 24, 1998",
     "location": "",
     "slug": "pride-3",
+    "year": "1998"
+  },
+  {
+    "id": 19,
+    "name": "UFC 17: Redemption",
+    "date": "Friday, May 15, 1998",
+    "location": "Mobile, Alabama, USA",
+    "slug": "ufc-17-redemption",
     "year": "1998"
   },
   {
@@ -9472,6 +9488,14 @@
     "year": "1997"
   },
   {
+    "id": 14,
+    "name": "UFC 13: The Ultimate Force",
+    "date": "Friday, May 30, 1997",
+    "location": "Augusta, Georgia, USA",
+    "slug": "ufc-13-the-ultimate-force",
+    "year": "1997"
+  },
+  {
     "id": 13,
     "name": "UFC 12: Judgement Day",
     "date": "Friday, February 7, 1997",
@@ -9501,6 +9525,14 @@
     "date": "Friday, July 12, 1996",
     "location": "Birmingham, Alabama, USA",
     "slug": "ufc-10-the-tournament",
+    "year": "1996"
+  },
+  {
+    "id": 9,
+    "name": "UFC 9: Motor City Madness",
+    "date": "Friday, May 17, 1996",
+    "location": "Detroit, Michigan, USA",
+    "slug": "ufc-9-motor-city-madness",
     "year": "1996"
   },
   {

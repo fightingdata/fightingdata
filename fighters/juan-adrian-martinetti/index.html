@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Adrian Martinetti - Fighter Profile | FightingData.com</title>
+    <meta name="description" content="Juan Adrian Martinetti UFC career stats, fight history, and round-by-round breakdowns.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+               background: #f5f5f5; color: #111; line-height: 1.6; }
+        a { color: #d62828; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+
+        .profile-header { display: flex; justify-content: space-between; align-items: flex-start;
+            margin-bottom: 1.5rem; padding: 24px 0; background: #fff;
+            border: 1px solid #e2e2e2; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            padding: 24px 20px; }
+        .profile-header-left { }
+        .profile-name { font-size: 2rem; font-weight: 900; text-transform: uppercase;
+            letter-spacing: -0.5px; margin: 6px 0 0; }
+        .profile-division { display: inline-block; padding: 3px 10px; border-radius: 3px;
+            font-size: 0.6rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
+            background: #d62828; color: #fff; margin-bottom: 4px; }
+        .profile-last-fought { font-size: 0.8rem; color: #777; margin-top: 4px; }
+        .profile-record-box { border: 1px solid #e2e2e2; border-radius: 6px; padding: 12px 24px; }
+        .profile-record-label { font-size: 0.55rem; font-weight: 700; color: #d62828;
+            text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; text-align: center; }
+        .profile-record-values { display: flex; gap: 0; align-items: center; }
+        .profile-record-item { text-align: center; padding: 0 20px; }
+        .profile-record-item .label { font-size: 0.55rem; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+        .profile-record-item .value { font-family: 'SF Mono', Menlo, monospace; font-size: 1.3rem; font-weight: 700; }
+        .profile-record-sep { width: 1px; height: 32px; background: #e2e2e2; }
+        .profile-records { display: none; }
+        .record-block { display: none; }
+
+        .profile-content { display: grid; grid-template-columns: 280px 1fr; gap: 20px; align-items: start; }
+
+        .profile-bio-section { margin: 0; }
+        .profile-bio-section .bio-card { max-width: 100%; width: 100%;
+            background: #fff; border: 1px solid #e2e2e2;
+            border-radius: 6px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .bio-field { display: flex; justify-content: space-between;
+            padding: 7px 0; border-bottom: 1px solid #f0f0f0; }
+        .bio-label { font-size: 0.8rem; color: #777; }
+        .bio-value { font-size: 0.85rem; color: #111; font-weight: 600;
+            font-family: 'SF Mono', Menlo, monospace; }
+
+        h2 { color: #111; margin-top: 1.5rem; margin-bottom: 0.75rem;
+             font-size: 0.85rem; font-weight: 800; text-transform: uppercase;
+             letter-spacing: 0.5px; padding-bottom: 8px; border-bottom: 2px solid #111; }
+
+        .profile-stats-table { width: 100%; border-collapse: collapse; background: #fff;
+            margin: 0.5rem 0; border-radius: 6px; overflow: hidden;
+            border: 1px solid #e2e2e2; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .profile-stats-table th, .profile-stats-table td {
+            padding: 8px 16px; border-bottom: 1px solid #f0f0f0; }
+        .profile-stats-table th { background: #fafafa; color: #111; font-weight: 700;
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .profile-stats-table tr:hover { background: #fafafa; }
+        .pstat-name { font-weight: 600; width: 55%; color: #111; font-size: 0.85rem; text-align: left; }
+        .pstat-val { width: 45%; text-align: center;
+            font-family: 'SF Mono', Menlo, monospace; color: #111; font-size: 0.85rem; }
+        .section-header { background: #f5f5f5; color: #999; padding: 6px 16px;
+            font-weight: 800; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; }
+
+        .fight-history { margin-top: 0.5rem; }
+        .fight-card { background: #fff; border: 1px solid #e2e2e2;
+            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none;
+            position: relative; border-left: 3px solid #e2e2e2; }
+        .fight-card-header:hover { background: #fafafa; }
+        .fight-card-header.win-border { border-left-color: #15803d; }
+        .fight-card-header.loss-border { border-left-color: #d62828; }
+        .fight-result-badge { display: inline-block; font-size: 0.6rem; font-weight: 700;
+            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .result-win  { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+        .result-loss { background: #fff5f5; color: #d62828; border: 1px solid #fecaca; }
+        .result-nc   { background: #f5f5f5; color: #999; border: 1px solid #e2e2e2; }
+        .fight-opponent { font-weight: 700; font-size: 0.95rem; color: #111; margin-bottom: 0.15rem; }
+        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.72rem;
+            color: #555; text-align: right; max-width: 50%; }
+        .fight-meta { font-size: 0.78rem; color: #777; margin-bottom: 0.3rem; }
+        .fight-totals-block { margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.15rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; flex-wrap: wrap; }
+        .totals-name { min-width: 130px; font-weight: 600; font-size: 0.78rem; }
+        .totals-name.featured { color: #111; }
+        .totals-name.opponent { color: #777; }
+        .totals-stat { color: #111; font-family: 'SF Mono', Menlo, monospace; font-size: 0.75rem; }
+        .totals-pct { color: #777; font-size: 0.73rem; }
+        .totals-kd { color: #c2410c; font-size: 0.73rem; font-weight: 600; }
+        .expand-toggle { font-size: 0.72rem; color: #d62828; margin-top: 0.2rem; font-weight: 600; }
+        .rounds-detail { border-top: 1px solid #e2e2e2; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #fafafa;
+            margin: 0; border-radius: 0; border: none; box-shadow: none; }
+        .rounds-table th { background: #fafafa; color: #999; font-size: 0.65rem;
+            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .rounds-table td { padding: 4px 10px; font-size: 0.78rem; color: #111;
+            font-family: 'SF Mono', Menlo, monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #f0f0f0; }
+        .round-num { color: #555; font-weight: 700; }
+        .fighter-label { color: #777; font-size: 0.73rem; font-family: inherit; }
+        .featured-row td { color: #111; }
+        .featured-row .fighter-label { color: #d62828; font-weight: 600; }
+        .opponent-row td { color: #777; }
+        .round-spacer td { padding: 2px 0; background: #fafafa; border-bottom: 1px solid #e2e2e2; }
+
+        .debut-disclaimer { background: #eff6ff; border: 1px solid #bfdbfe;
+            color: #1d4ed8; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px; line-height: 1.5; }
+        .debut-disclaimer strong { color: #1d4ed8; }
+        .timestamp { text-align: center; color: #999; font-size: 0.7rem;
+            margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e2e2; }
+        .back-link { display: inline-block; margin-bottom: 0.5rem; color: #d62828;
+            text-decoration: none; font-size: 0.8rem; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .profile-header { flex-direction: column; gap: 16px; }
+            .profile-name { font-size: 1.5rem; }
+            .profile-content { grid-template-columns: 1fr; }
+            .pstat-name { width: 50%; font-size: 0.8rem; }
+            .pstat-val { width: 50%; font-size: 0.8rem; }
+            .totals-name { min-width: 100px; }
+        }
+</style>
+</head>
+<body>
+        <header style="background:#111;position:sticky;top:0;z-index:90;">
+        <div style="max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:52px;">
+            <a href="/" style="font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.5px;">FIGHTING<span style="color:#d62828;">DATA</span></a>
+            <nav style="display:flex;gap:0;">
+                <a href="/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;font-weight:500;">Home</a>
+                <a href="/events/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;font-weight:500;">Events</a>
+                <a href="/fighters/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;font-weight:500;">Fighters</a>
+                <a href="/about/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;font-weight:500;">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="/fighters/" class="back-link">&#8592; Back to Fighters</a>
+
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;padding:24px 20px;background:#fff;border:1px solid #e2e2e2;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+            <div>
+                
+                <h1 style="font-size:2rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.5px;margin:6px 0 0;">Juan Adrian Martinetti</h1>
+                
+            </div>
+            
+        <div style="border:1px solid #e2e2e2;border-radius:6px;padding:12px 24px;">
+            <div style="font-size:0.55rem;font-weight:700;color:#d62828;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;text-align:center;">RECORD</div>
+            <div style="display:flex;align-items:center;">
+                <div style="text-align:center;padding:0 20px;">
+                    <div style="font-size:0.55rem;color:#999;text-transform:uppercase;letter-spacing:0.5px;">Pro</div>
+                    <div style="font-family:'SF Mono',Menlo,monospace;font-size:1.3rem;font-weight:700;">—</div>
+                </div>
+                <div style="width:1px;height:32px;background:#e2e2e2;"></div>
+                <div style="text-align:center;padding:0 20px;">
+                    <div style="font-size:0.55rem;color:#999;text-transform:uppercase;letter-spacing:0.5px;">UFC</div>
+                    <div style="font-family:'SF Mono',Menlo,monospace;font-size:1.3rem;font-weight:700;">—</div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        
+
+        <div style="display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start;">
+            <div>
+                <h2>Bio</h2>
+                <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">—</span></div></div></div>
+                
+                
+            </div>
+            <div>
+                <h2>Fight History</h2>
+                <p style="color:#6b7280;">No completed fight data available.</p>
+            </div>
+        </div>
+
+        <div class="timestamp">
+            Profile generated: 2026-03-07 16:34:23 | Data source: UFCStats.com
+        </div>
+    </div>
+        <footer style="background:#111;padding:28px 20px;margin-top:40px;">
+        <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;color:rgba(255,255,255,0.4);font-size:12px;">
+            <div><span style="color:#fff;font-weight:800;font-size:14px;">FIGHTING<span style="color:#d62828;">DATA</span></span><div style="margin-top:6px;line-height:1.6;">Data sourced from UFCStats.com &middot; &copy; 2026 FightingData.com</div></div>
+            <div style="display:flex;gap:32px;"><a href="/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Home</a><a href="/events/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Events</a><a href="/fighters/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Fighters</a><a href="/about/" style="color:rgba(255,255,255,0.4);text-decoration:none;">About</a></div>
+        </div>
+    </footer>
+    
+    <script>
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Rounds';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Rounds';
+        }
+    }
+    </script>
+
+</body>
+</html>

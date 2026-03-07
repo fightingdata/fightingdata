@@ -44,9 +44,9 @@
       },
       {
         "fighter_a": "Donte Johnson",
-        "fighter_b": "Dusko Todorovic",
+        "fighter_b": "Cody Brundage",
         "weight_class": "Middleweight",
-        "slug": "donte-johnson-vs-dusko-todorovic"
+        "slug": "donte-johnson-vs-cody-brundage"
       },
       {
         "fighter_a": "Ricky Turcios",
@@ -67,10 +67,16 @@
         "slug": "sumudaerji-vs-jesus-aguilar"
       },
       {
-        "fighter_a": "JooSang Yoo",
-        "fighter_b": "Gaston Bolanos",
+        "fighter_a": "Diyar Nurgozhay",
+        "fighter_b": "Rafael Tobias",
+        "weight_class": "Light Heavyweight",
+        "slug": "diyar-nurgozhay-vs-rafael-tobias"
+      },
+      {
+        "fighter_a": "Gaston Bolanos",
+        "fighter_b": "JeongYeong Lee",
         "weight_class": "Featherweight",
-        "slug": "joosang-yoo-vs-gaston-bolanos"
+        "slug": "gaston-bolanos-vs-jeongyeong-lee"
       },
       {
         "fighter_a": "Luke Fernandez",
@@ -521,6 +527,36 @@
         "fighter_b": "Daria Zhelezniakova",
         "weight_class": "Women's Bantamweight",
         "slug": "melissa-croden-vs-daria-zhelezniakova"
+      },
+      {
+        "fighter_a": "Robert Valentin",
+        "fighter_b": "Julien Leblanc",
+        "weight_class": "Middleweight",
+        "slug": "robert-valentin-vs-julien-leblanc"
+      },
+      {
+        "fighter_a": "Tanner Boser",
+        "fighter_b": "Gokhan Saricam",
+        "weight_class": "Heavyweight",
+        "slug": "tanner-boser-vs-gokhan-saricam"
+      },
+      {
+        "fighter_a": "Andre Lima",
+        "fighter_b": "DongHun Choi",
+        "weight_class": "Flyweight",
+        "slug": "andre-lima-vs-donghun-choi"
+      },
+      {
+        "fighter_a": "Allan Nascimento",
+        "fighter_b": "Mitch Raposo",
+        "weight_class": "Flyweight",
+        "slug": "allan-nascimento-vs-mitch-raposo"
+      },
+      {
+        "fighter_a": "John Castaneda",
+        "fighter_b": "Mark Vologdin",
+        "weight_class": "Bantamweight",
+        "slug": "john-castaneda-vs-mark-vologdin"
       }
     ]
   },
@@ -536,6 +572,12 @@
         "fighter_b": "Joaquin Buckley",
         "weight_class": "Welterweight",
         "slug": "sean-brady-vs-joaquin-buckley"
+      },
+      {
+        "fighter_a": "Davey Grant",
+        "fighter_b": "Juan Adrian Martinetti",
+        "weight_class": "Bantamweight",
+        "slug": "davey-grant-vs-juan-adrian-martinetti"
       }
     ]
   },
