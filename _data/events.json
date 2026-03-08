@@ -73,12 +73,6 @@
         "slug": "diyar-nurgozhay-vs-rafael-tobias"
       },
       {
-        "fighter_a": "Gaston Bolanos",
-        "fighter_b": "JeongYeong Lee",
-        "weight_class": "Featherweight",
-        "slug": "gaston-bolanos-vs-jeongyeong-lee"
-      },
-      {
         "fighter_a": "Luke Fernandez",
         "fighter_b": "Rodolfo Bellato",
         "weight_class": "Light Heavyweight",
@@ -112,10 +106,46 @@
         "slug": "ion-cutelaba-vs-oumar-sy"
       },
       {
+        "fighter_a": "Jose Delgado",
+        "fighter_b": "Andre Fili",
+        "weight_class": "Featherweight",
+        "slug": "jose-delgado-vs-andre-fili"
+      },
+      {
         "fighter_a": "Marwan Rahiki",
         "fighter_b": "Harry Hardwick",
         "weight_class": "Featherweight",
         "slug": "marwan-rahiki-vs-harry-hardwick"
+      },
+      {
+        "fighter_a": "Steven Asplund",
+        "fighter_b": "Vitor Petrino",
+        "weight_class": "Heavyweight",
+        "slug": "steven-asplund-vs-vitor-petrino"
+      },
+      {
+        "fighter_a": "Charles Johnson",
+        "fighter_b": "Bruno Silva",
+        "weight_class": "Flyweight",
+        "slug": "charles-johnson-vs-bruno-silva"
+      },
+      {
+        "fighter_a": "Brad Tavares",
+        "fighter_b": "Eryk Anders",
+        "weight_class": "Middleweight",
+        "slug": "brad-tavares-vs-eryk-anders"
+      },
+      {
+        "fighter_a": "Myktybek Orolbai",
+        "fighter_b": "Chris Curtis",
+        "weight_class": "Welterweight",
+        "slug": "myktybek-orolbai-vs-chris-curtis"
+      },
+      {
+        "fighter_a": "Bolaji Oki",
+        "fighter_b": "Manoel Sousa",
+        "weight_class": "Lightweight",
+        "slug": "bolaji-oki-vs-manoel-sousa"
       },
       {
         "fighter_a": "Luan Lacerda",
@@ -130,40 +160,16 @@
         "slug": "bia-mesquita-vs-montse-rendon"
       },
       {
-        "fighter_a": "Piera Rodriguez",
-        "fighter_b": "Sam Hughes",
-        "weight_class": "Women's Strawweight",
-        "slug": "piera-rodriguez-vs-sam-hughes"
-      },
-      {
-        "fighter_a": "Charles Johnson",
-        "fighter_b": "Bruno Silva",
-        "weight_class": "Flyweight",
-        "slug": "charles-johnson-vs-bruno-silva"
-      },
-      {
         "fighter_a": "SuYoung You",
         "fighter_b": "Elijah Smith",
         "weight_class": "Bantamweight",
         "slug": "suyoung-you-vs-elijah-smith"
       },
       {
-        "fighter_a": "Bolaji Oki",
-        "fighter_b": "Manoel Sousa",
-        "weight_class": "Lightweight",
-        "slug": "bolaji-oki-vs-manoel-sousa"
-      },
-      {
-        "fighter_a": "Steven Asplund",
-        "fighter_b": "Vitor Petrino",
-        "weight_class": "Heavyweight",
-        "slug": "steven-asplund-vs-vitor-petrino"
-      },
-      {
-        "fighter_a": "Jose Delgado",
-        "fighter_b": "Andre Fili",
-        "weight_class": "Featherweight",
-        "slug": "jose-delgado-vs-andre-fili"
+        "fighter_a": "Piera Rodriguez",
+        "fighter_b": "Sam Hughes",
+        "weight_class": "Women's Strawweight",
+        "slug": "piera-rodriguez-vs-sam-hughes"
       }
     ]
   },

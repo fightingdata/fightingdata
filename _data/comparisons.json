@@ -110,16 +110,6 @@
     "weight_class": "Light Heavyweight"
   },
   {
-    "fighter_a": "Gaston Bolanos",
-    "fighter_b": "JeongYeong Lee",
-    "slug": "gaston-bolanos-vs-jeongyeong-lee",
-    "url": "/compare/gaston-bolanos-vs-jeongyeong-lee/",
-    "event_name": "UFC 326: Holloway vs. Oliveira 2",
-    "event_date": "Saturday, March 7, 2026",
-    "event_slug": "ufc-326-holloway-vs-oliveira-2",
-    "weight_class": "Featherweight"
-  },
-  {
     "fighter_a": "Luke Fernandez",
     "fighter_b": "Rodolfo Bellato",
     "slug": "luke-fernandez-vs-rodolfo-bellato",
@@ -160,6 +150,16 @@
     "weight_class": "Light Heavyweight"
   },
   {
+    "fighter_a": "Jose Delgado",
+    "fighter_b": "Andre Fili",
+    "slug": "jose-delgado-vs-andre-fili",
+    "url": "/compare/jose-delgado-vs-andre-fili/",
+    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
+    "event_date": "Saturday, March 14, 2026",
+    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
+    "weight_class": "Featherweight"
+  },
+  {
     "fighter_a": "Marwan Rahiki",
     "fighter_b": "Harry Hardwick",
     "slug": "marwan-rahiki-vs-harry-hardwick",
@@ -168,6 +168,56 @@
     "event_date": "Saturday, March 14, 2026",
     "event_slug": "ufc-fight-night-emmett-vs-vallejos",
     "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Steven Asplund",
+    "fighter_b": "Vitor Petrino",
+    "slug": "steven-asplund-vs-vitor-petrino",
+    "url": "/compare/steven-asplund-vs-vitor-petrino/",
+    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
+    "event_date": "Saturday, March 14, 2026",
+    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Charles Johnson",
+    "fighter_b": "Bruno Silva",
+    "slug": "charles-johnson-vs-bruno-silva",
+    "url": "/compare/charles-johnson-vs-bruno-silva/",
+    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
+    "event_date": "Saturday, March 14, 2026",
+    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Brad Tavares",
+    "fighter_b": "Eryk Anders",
+    "slug": "brad-tavares-vs-eryk-anders",
+    "url": "/compare/brad-tavares-vs-eryk-anders/",
+    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
+    "event_date": "Saturday, March 14, 2026",
+    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Myktybek Orolbai",
+    "fighter_b": "Chris Curtis",
+    "slug": "myktybek-orolbai-vs-chris-curtis",
+    "url": "/compare/myktybek-orolbai-vs-chris-curtis/",
+    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
+    "event_date": "Saturday, March 14, 2026",
+    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Bolaji Oki",
+    "fighter_b": "Manoel Sousa",
+    "slug": "bolaji-oki-vs-manoel-sousa",
+    "url": "/compare/bolaji-oki-vs-manoel-sousa/",
+    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
+    "event_date": "Saturday, March 14, 2026",
+    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Luan Lacerda",
@@ -190,26 +240,6 @@
     "weight_class": "Women's Bantamweight"
   },
   {
-    "fighter_a": "Piera Rodriguez",
-    "fighter_b": "Sam Hughes",
-    "slug": "piera-rodriguez-vs-sam-hughes",
-    "url": "/compare/piera-rodriguez-vs-sam-hughes/",
-    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
-    "event_date": "Saturday, March 14, 2026",
-    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
-    "weight_class": "Women's Strawweight"
-  },
-  {
-    "fighter_a": "Charles Johnson",
-    "fighter_b": "Bruno Silva",
-    "slug": "charles-johnson-vs-bruno-silva",
-    "url": "/compare/charles-johnson-vs-bruno-silva/",
-    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
-    "event_date": "Saturday, March 14, 2026",
-    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
-    "weight_class": "Flyweight"
-  },
-  {
     "fighter_a": "SuYoung You",
     "fighter_b": "Elijah Smith",
     "slug": "suyoung-you-vs-elijah-smith",
@@ -220,34 +250,14 @@
     "weight_class": "Bantamweight"
   },
   {
-    "fighter_a": "Bolaji Oki",
-    "fighter_b": "Manoel Sousa",
-    "slug": "bolaji-oki-vs-manoel-sousa",
-    "url": "/compare/bolaji-oki-vs-manoel-sousa/",
+    "fighter_a": "Piera Rodriguez",
+    "fighter_b": "Sam Hughes",
+    "slug": "piera-rodriguez-vs-sam-hughes",
+    "url": "/compare/piera-rodriguez-vs-sam-hughes/",
     "event_name": "UFC Fight Night: Emmett vs. Vallejos",
     "event_date": "Saturday, March 14, 2026",
     "event_slug": "ufc-fight-night-emmett-vs-vallejos",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Steven Asplund",
-    "fighter_b": "Vitor Petrino",
-    "slug": "steven-asplund-vs-vitor-petrino",
-    "url": "/compare/steven-asplund-vs-vitor-petrino/",
-    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
-    "event_date": "Saturday, March 14, 2026",
-    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Jose Delgado",
-    "fighter_b": "Andre Fili",
-    "slug": "jose-delgado-vs-andre-fili",
-    "url": "/compare/jose-delgado-vs-andre-fili/",
-    "event_name": "UFC Fight Night: Emmett vs. Vallejos",
-    "event_date": "Saturday, March 14, 2026",
-    "event_slug": "ufc-fight-night-emmett-vs-vallejos",
-    "weight_class": "Featherweight"
+    "weight_class": "Women's Strawweight"
   },
   {
     "fighter_a": "Movsar Evloev",
