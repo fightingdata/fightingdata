@@ -253,10 +253,10 @@
         "slug": "zhu-kangjie-vs-marcio-barbosa"
       },
       {
-        "fighter_a": "Carol Foro",
-        "fighter_b": "Stephanie Luciano",
+        "fighter_a": "Bruna Brasil",
+        "fighter_b": "Alexia Thainara",
         "weight_class": "Women's Strawweight",
-        "slug": "carol-foro-vs-stephanie-luciano"
+        "slug": "bruna-brasil-vs-alexia-thainara"
       },
       {
         "fighter_a": "Terrance McKinney",
@@ -371,12 +371,6 @@
         "fighter_b": "Johnny Walker",
         "weight_class": "Light Heavyweight",
         "slug": "dominick-reyes-vs-johnny-walker"
-      },
-      {
-        "fighter_a": "Kyle Daukaus",
-        "fighter_b": "Vicente Luque",
-        "weight_class": "Middleweight",
-        "slug": "kyle-daukaus-vs-vicente-luque"
       },
       {
         "fighter_a": "Azamat Murzakanov",
@@ -527,6 +521,43 @@
     "date": "Sunday, June 14, 2026",
     "location": "Washington, DC, USA",
     "slug": "ufc-freedom-250",
-    "matchups": []
+    "matchups": [
+      {
+        "fighter_a": "Ilia Topuria",
+        "fighter_b": "Justin Gaethje",
+        "weight_class": "Lightweight",
+        "slug": "ilia-topuria-vs-justin-gaethje"
+      },
+      {
+        "fighter_a": "Ciryl Gane",
+        "fighter_b": "Alex Pereira",
+        "weight_class": "Heavyweight",
+        "slug": "ciryl-gane-vs-alex-pereira"
+      },
+      {
+        "fighter_a": "Sean O'Malley",
+        "fighter_b": "Aiemann Zahabi",
+        "weight_class": "Bantamweight",
+        "slug": "sean-omalley-vs-aiemann-zahabi"
+      },
+      {
+        "fighter_a": "Mauricio Ruffy",
+        "fighter_b": "Michael Chandler",
+        "weight_class": "Lightweight",
+        "slug": "mauricio-ruffy-vs-michael-chandler"
+      },
+      {
+        "fighter_a": "Bo Nickal",
+        "fighter_b": "Kyle Daukaus",
+        "weight_class": "Middleweight",
+        "slug": "bo-nickal-vs-kyle-daukaus"
+      },
+      {
+        "fighter_a": "Diego Lopes",
+        "fighter_b": "Steve Garcia",
+        "weight_class": "Featherweight",
+        "slug": "diego-lopes-vs-steve-garcia"
+      }
+    ]
   }
 ]

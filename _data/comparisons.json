@@ -380,10 +380,10 @@
     "weight_class": "Featherweight"
   },
   {
-    "fighter_a": "Carol Foro",
-    "fighter_b": "Stephanie Luciano",
-    "slug": "carol-foro-vs-stephanie-luciano",
-    "url": "/compare/carol-foro-vs-stephanie-luciano/",
+    "fighter_a": "Bruna Brasil",
+    "fighter_b": "Alexia Thainara",
+    "slug": "bruna-brasil-vs-alexia-thainara",
+    "url": "/compare/bruna-brasil-vs-alexia-thainara/",
     "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
     "event_date": "Saturday, March 28, 2026",
     "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
@@ -548,16 +548,6 @@
     "event_date": "Saturday, April 11, 2026",
     "event_slug": "ufc-327-prochazka-vs-ulberg",
     "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Kyle Daukaus",
-    "fighter_b": "Vicente Luque",
-    "slug": "kyle-daukaus-vs-vicente-luque",
-    "url": "/compare/kyle-daukaus-vs-vicente-luque/",
-    "event_name": "UFC 327: Prochazka vs. Ulberg",
-    "event_date": "Saturday, April 11, 2026",
-    "event_slug": "ufc-327-prochazka-vs-ulberg",
-    "weight_class": "Middleweight"
   },
   {
     "fighter_a": "Azamat Murzakanov",
@@ -748,5 +738,65 @@
     "event_date": "Saturday, May 2, 2026",
     "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
     "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Ilia Topuria",
+    "fighter_b": "Justin Gaethje",
+    "slug": "ilia-topuria-vs-justin-gaethje",
+    "url": "/compare/ilia-topuria-vs-justin-gaethje/",
+    "event_name": "UFC Freedom 250",
+    "event_date": "Sunday, June 14, 2026",
+    "event_slug": "ufc-freedom-250",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Ciryl Gane",
+    "fighter_b": "Alex Pereira",
+    "slug": "ciryl-gane-vs-alex-pereira",
+    "url": "/compare/ciryl-gane-vs-alex-pereira/",
+    "event_name": "UFC Freedom 250",
+    "event_date": "Sunday, June 14, 2026",
+    "event_slug": "ufc-freedom-250",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Sean O'Malley",
+    "fighter_b": "Aiemann Zahabi",
+    "slug": "sean-omalley-vs-aiemann-zahabi",
+    "url": "/compare/sean-omalley-vs-aiemann-zahabi/",
+    "event_name": "UFC Freedom 250",
+    "event_date": "Sunday, June 14, 2026",
+    "event_slug": "ufc-freedom-250",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Mauricio Ruffy",
+    "fighter_b": "Michael Chandler",
+    "slug": "mauricio-ruffy-vs-michael-chandler",
+    "url": "/compare/mauricio-ruffy-vs-michael-chandler/",
+    "event_name": "UFC Freedom 250",
+    "event_date": "Sunday, June 14, 2026",
+    "event_slug": "ufc-freedom-250",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Bo Nickal",
+    "fighter_b": "Kyle Daukaus",
+    "slug": "bo-nickal-vs-kyle-daukaus",
+    "url": "/compare/bo-nickal-vs-kyle-daukaus/",
+    "event_name": "UFC Freedom 250",
+    "event_date": "Sunday, June 14, 2026",
+    "event_slug": "ufc-freedom-250",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Diego Lopes",
+    "fighter_b": "Steve Garcia",
+    "slug": "diego-lopes-vs-steve-garcia",
+    "url": "/compare/diego-lopes-vs-steve-garcia/",
+    "event_name": "UFC Freedom 250",
+    "event_date": "Sunday, June 14, 2026",
+    "event_slug": "ufc-freedom-250",
+    "weight_class": "Featherweight"
   }
 ]
