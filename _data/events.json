@@ -337,10 +337,10 @@
   },
   {
     "id": 769,
-    "name": "UFC 327",
+    "name": "UFC 327: Prochazka vs. Ulberg",
     "date": "Saturday, April 11, 2026",
     "location": "Miami, Florida, USA",
-    "slug": "ufc-327",
+    "slug": "ufc-327-prochazka-vs-ulberg",
     "matchups": [
       {
         "fighter_a": "Jiri Prochazka",
@@ -520,5 +520,13 @@
         "slug": "jack-della-maddalena-vs-carlos-prates"
       }
     ]
+  },
+  {
+    "id": 1211,
+    "name": "UFC Freedom 250",
+    "date": "Sunday, June 14, 2026",
+    "location": "Washington, DC, USA",
+    "slug": "ufc-freedom-250",
+    "matchups": []
   }
 ]
