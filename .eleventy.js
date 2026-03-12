@@ -5,6 +5,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("events");
   eleventyConfig.addPassthroughCopy("compare");
   eleventyConfig.addPassthroughCopy("fighters");    
+  eleventyConfig.addPassthroughCopy("sitemap.xml");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   // Add limit filter (like Liquid)
   eleventyConfig.addFilter("limit", function(array, limit) {
