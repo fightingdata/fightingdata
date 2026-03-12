@@ -2,7 +2,7 @@ module.exports = function(eleventyConfig) {
   // Copy static assets to output
   eleventyConfig.addPassthroughCopy("assets");
   
-eleventyConfig.addPassthroughCopy("events");
+  eleventyConfig.addPassthroughCopy("events");
   eleventyConfig.addPassthroughCopy("compare");
   eleventyConfig.addPassthroughCopy("fighters");    
 
@@ -21,6 +21,12 @@ eleventyConfig.addPassthroughCopy("events");
   // Add default filter
   eleventyConfig.addFilter("default", function(value, defaultValue) {
     return value || defaultValue;
+  });
+
+  // Add commaNumber filter for formatting numbers with commas
+  eleventyConfig.addFilter("commaNumber", function(value) {
+    if (value === null || value === undefined) return '0';
+    return Number(value).toLocaleString('en-US');
   });
   
   return {

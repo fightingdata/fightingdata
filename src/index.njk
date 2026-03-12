@@ -13,15 +13,15 @@ description: UFC Fight Analysis - Data-driven fighter comparisons and matchup br
         <a href="/events/" class="btn btn-primary">View Upcoming Events</a>
         <div class="hero-stats">
             <div>
-                <div class="hero-stat-number">{% if stats.total_fighters %}{{ stats.total_fighters }}{% else %}3,663{% endif %}</div>
+                <div class="hero-stat-number">{% if stats.total_fighters %}{{ stats.total_fighters | commaNumber }}{% else %}3,663{% endif %}</div>
                 <div class="hero-stat-label">Fighters</div>
             </div>
             <div>
-                <div class="hero-stat-number">{% if stats.total_fights %}{{ stats.total_fights }}{% else %}10,951{% endif %}</div>
+                <div class="hero-stat-number">{% if stats.total_fights %}{{ stats.total_fights | commaNumber }}{% else %}10,951{% endif %}</div>
                 <div class="hero-stat-label">Fights</div>
             </div>
             <div>
-                <div class="hero-stat-number">{% if stats.total_events %}{{ stats.total_events }}{% else %}1,210{% endif %}</div>
+                <div class="hero-stat-number">{% if stats.total_events %}{{ stats.total_events | commaNumber }}{% else %}1,210{% endif %}</div>
                 <div class="hero-stat-label">Events</div>
             </div>
         </div>
