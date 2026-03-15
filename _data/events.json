@@ -1,98 +1,5 @@
 [
   {
-    "id": 765,
-    "name": "UFC Fight Night: Emmett vs. Vallejos",
-    "date": "Saturday, March 14, 2026",
-    "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night-emmett-vs-vallejos",
-    "matchups": [
-      {
-        "fighter_a": "Josh Emmett",
-        "fighter_b": "Kevin Vallejos",
-        "weight_class": "Featherweight",
-        "slug": "josh-emmett-vs-kevin-vallejos"
-      },
-      {
-        "fighter_a": "Amanda Lemos",
-        "fighter_b": "Gillian Robertson",
-        "weight_class": "Women's Strawweight",
-        "slug": "amanda-lemos-vs-gillian-robertson"
-      },
-      {
-        "fighter_a": "Ion Cutelaba",
-        "fighter_b": "Oumar Sy",
-        "weight_class": "Light Heavyweight",
-        "slug": "ion-cutelaba-vs-oumar-sy"
-      },
-      {
-        "fighter_a": "Jose Delgado",
-        "fighter_b": "Andre Fili",
-        "weight_class": "Featherweight",
-        "slug": "jose-delgado-vs-andre-fili"
-      },
-      {
-        "fighter_a": "Marwan Rahiki",
-        "fighter_b": "Harry Hardwick",
-        "weight_class": "Featherweight",
-        "slug": "marwan-rahiki-vs-harry-hardwick"
-      },
-      {
-        "fighter_a": "Steven Asplund",
-        "fighter_b": "Vitor Petrino",
-        "weight_class": "Heavyweight",
-        "slug": "steven-asplund-vs-vitor-petrino"
-      },
-      {
-        "fighter_a": "Charles Johnson",
-        "fighter_b": "Bruno Silva",
-        "weight_class": "Flyweight",
-        "slug": "charles-johnson-vs-bruno-silva"
-      },
-      {
-        "fighter_a": "Brad Tavares",
-        "fighter_b": "Eryk Anders",
-        "weight_class": "Middleweight",
-        "slug": "brad-tavares-vs-eryk-anders"
-      },
-      {
-        "fighter_a": "Myktybek Orolbai",
-        "fighter_b": "Chris Curtis",
-        "weight_class": "Welterweight",
-        "slug": "myktybek-orolbai-vs-chris-curtis"
-      },
-      {
-        "fighter_a": "Bolaji Oki",
-        "fighter_b": "Manoel Sousa",
-        "weight_class": "Lightweight",
-        "slug": "bolaji-oki-vs-manoel-sousa"
-      },
-      {
-        "fighter_a": "Luan Lacerda",
-        "fighter_b": "Hecher Sosa",
-        "weight_class": "Bantamweight",
-        "slug": "luan-lacerda-vs-hecher-sosa"
-      },
-      {
-        "fighter_a": "Bia Mesquita",
-        "fighter_b": "Montse Rendon",
-        "weight_class": "Women's Bantamweight",
-        "slug": "bia-mesquita-vs-montse-rendon"
-      },
-      {
-        "fighter_a": "SuYoung You",
-        "fighter_b": "Elijah Smith",
-        "weight_class": "Bantamweight",
-        "slug": "suyoung-you-vs-elijah-smith"
-      },
-      {
-        "fighter_a": "Piera Rodriguez",
-        "fighter_b": "Sam Hughes",
-        "weight_class": "Women's Strawweight",
-        "slug": "piera-rodriguez-vs-sam-hughes"
-      }
-    ]
-  },
-  {
     "id": 766,
     "name": "UFC Fight Night: Evloev vs. Murphy",
     "date": "Saturday, March 21, 2026",
@@ -148,16 +55,22 @@
         "slug": "nathaniel-wood-vs-losene-keita"
       },
       {
-        "fighter_a": "Louie Sutherland",
-        "fighter_b": "Brando Pericic",
+        "fighter_a": "Mario Pinto",
+        "fighter_b": "Felipe Franco",
         "weight_class": "Heavyweight",
-        "slug": "louie-sutherland-vs-brando-pericic"
+        "slug": "mario-pinto-vs-felipe-franco"
       },
       {
         "fighter_a": "Mantas Kondratavicius",
         "fighter_b": "Antonio Trocoli",
         "weight_class": "Middleweight",
         "slug": "mantas-kondratavicius-vs-antonio-trocoli"
+      },
+      {
+        "fighter_a": "Louie Sutherland",
+        "fighter_b": "Brando Pericic",
+        "weight_class": "Heavyweight",
+        "slug": "louie-sutherland-vs-brando-pericic"
       },
       {
         "fighter_a": "Shem Rock",
@@ -176,12 +89,6 @@
         "fighter_b": "Luana Carolina",
         "weight_class": "Women's Bantamweight",
         "slug": "melissa-mullins-vs-luana-carolina"
-      },
-      {
-        "fighter_a": "Mario Pinto",
-        "fighter_b": "Felipe Franco",
-        "weight_class": "Heavyweight",
-        "slug": "mario-pinto-vs-felipe-franco"
       }
     ]
   },
@@ -205,40 +112,10 @@
         "slug": "alexa-grasso-vs-maycee-barber"
       },
       {
-        "fighter_a": "Chase Hooper",
-        "fighter_b": "Lance Gibson Jr.",
-        "weight_class": "Lightweight",
-        "slug": "chase-hooper-vs-lance-gibson-jr"
-      },
-      {
-        "fighter_a": "Navajo Stirling",
-        "fighter_b": "Bruno Lopes",
-        "weight_class": "Light Heavyweight",
-        "slug": "navajo-stirling-vs-bruno-lopes"
-      },
-      {
-        "fighter_a": "Marcin Tybura",
-        "fighter_b": "Valter Walker",
-        "weight_class": "Heavyweight",
-        "slug": "marcin-tybura-vs-valter-walker"
-      },
-      {
         "fighter_a": "Michael Chiesa",
         "fighter_b": "Carlston Harris",
         "weight_class": "Welterweight",
         "slug": "michael-chiesa-vs-carlston-harris"
-      },
-      {
-        "fighter_a": "Mansur Abdul-Malik",
-        "fighter_b": "Yousri Belgaroui",
-        "weight_class": "Middleweight",
-        "slug": "mansur-abdul-malik-vs-yousri-belgaroui"
-      },
-      {
-        "fighter_a": "Casey O'Neill",
-        "fighter_b": "Gabriella Fernandes",
-        "weight_class": "Women's Flyweight",
-        "slug": "casey-oneill-vs-gabriella-fernandes"
       },
       {
         "fighter_a": "Julian Erosa",
@@ -247,10 +124,46 @@
         "slug": "julian-erosa-vs-lerryan-douglas"
       },
       {
-        "fighter_a": "Zhu Kangjie",
-        "fighter_b": "Marcio Barbosa",
-        "weight_class": "Featherweight",
-        "slug": "zhu-kangjie-vs-marcio-barbosa"
+        "fighter_a": "Mansur Abdul-Malik",
+        "fighter_b": "Yousri Belgaroui",
+        "weight_class": "Middleweight",
+        "slug": "mansur-abdul-malik-vs-yousri-belgaroui"
+      },
+      {
+        "fighter_a": "Terrance McKinney",
+        "fighter_b": "Kyle Nelson",
+        "weight_class": "Lightweight",
+        "slug": "terrance-mckinney-vs-kyle-nelson"
+      },
+      {
+        "fighter_a": "Ignacio Bahamondes",
+        "fighter_b": "Tofiq Musayev",
+        "weight_class": "Lightweight",
+        "slug": "ignacio-bahamondes-vs-tofiq-musayev"
+      },
+      {
+        "fighter_a": "Chase Hooper",
+        "fighter_b": "Lance Gibson Jr.",
+        "weight_class": "Lightweight",
+        "slug": "chase-hooper-vs-lance-gibson-jr"
+      },
+      {
+        "fighter_a": "Marcin Tybura",
+        "fighter_b": "Valter Walker",
+        "weight_class": "Heavyweight",
+        "slug": "marcin-tybura-vs-valter-walker"
+      },
+      {
+        "fighter_a": "Casey O'Neill",
+        "fighter_b": "Gabriella Fernandes",
+        "weight_class": "Women's Flyweight",
+        "slug": "casey-oneill-vs-gabriella-fernandes"
+      },
+      {
+        "fighter_a": "Navajo Stirling",
+        "fighter_b": "Bruno Lopes",
+        "weight_class": "Light Heavyweight",
+        "slug": "navajo-stirling-vs-bruno-lopes"
       },
       {
         "fighter_a": "Bruna Brasil",
@@ -259,10 +172,10 @@
         "slug": "bruna-brasil-vs-alexia-thainara"
       },
       {
-        "fighter_a": "Terrance McKinney",
-        "fighter_b": "Kyle Nelson",
-        "weight_class": "Lightweight",
-        "slug": "terrance-mckinney-vs-kyle-nelson"
+        "fighter_a": "Zhu Kangjie",
+        "fighter_b": "Marcio Barbosa",
+        "weight_class": "Featherweight",
+        "slug": "zhu-kangjie-vs-marcio-barbosa"
       }
     ]
   },
@@ -280,34 +193,16 @@
         "slug": "renato-moicano-vs-chris-duncan"
       },
       {
-        "fighter_a": "Robert Ruchala",
-        "fighter_b": "Jose Delano",
-        "weight_class": "Featherweight",
-        "slug": "robert-ruchala-vs-jose-delano"
-      },
-      {
-        "fighter_a": "Tofiq Musayev",
-        "fighter_b": "Samuel Sanches",
-        "weight_class": "Lightweight",
-        "slug": "tofiq-musayev-vs-samuel-sanches"
-      },
-      {
-        "fighter_a": "JunYong Park",
-        "fighter_b": "Edmen Shahbazyan",
-        "weight_class": "Middleweight",
-        "slug": "junyong-park-vs-edmen-shahbazyan"
-      },
-      {
-        "fighter_a": "Stewart Nicoll",
-        "fighter_b": "Alessandro Costa",
-        "weight_class": "Flyweight",
-        "slug": "stewart-nicoll-vs-alessandro-costa"
-      },
-      {
         "fighter_a": "Virna Jandiroba",
         "fighter_b": "Tabatha Ricci",
         "weight_class": "Women's Strawweight",
         "slug": "virna-jandiroba-vs-tabatha-ricci"
+      },
+      {
+        "fighter_a": "Abdul Rakhman Yakhyaev",
+        "fighter_b": "Brendson Ribeiro",
+        "weight_class": "Light Heavyweight",
+        "slug": "abdul-rakhman-yakhyaev-vs-brendson-ribeiro"
       },
       {
         "fighter_a": "Ethyn Ewing",
@@ -316,16 +211,52 @@
         "slug": "ethyn-ewing-vs-rafael-estevam"
       },
       {
+        "fighter_a": "Manolo Zecchini",
+        "fighter_b": "Tommy McMillen",
+        "weight_class": "Featherweight",
+        "slug": "manolo-zecchini-vs-tommy-mcmillen"
+      },
+      {
+        "fighter_a": "Charles Radtke",
+        "fighter_b": "Jose Henrique",
+        "weight_class": "Welterweight",
+        "slug": "charles-radtke-vs-jose-henrique"
+      },
+      {
         "fighter_a": "Guilherme Pat",
         "fighter_b": "Thomas Petersen",
         "weight_class": "Light Heavyweight",
         "slug": "guilherme-pat-vs-thomas-petersen"
       },
       {
+        "fighter_a": "Robert Ruchala",
+        "fighter_b": "Jose Delano",
+        "weight_class": "Featherweight",
+        "slug": "robert-ruchala-vs-jose-delano"
+      },
+      {
+        "fighter_a": "Stewart Nicoll",
+        "fighter_b": "Alessandro Costa",
+        "weight_class": "Flyweight",
+        "slug": "stewart-nicoll-vs-alessandro-costa"
+      },
+      {
+        "fighter_a": "Darrius Flowers",
+        "fighter_b": "Lando Vannata",
+        "weight_class": "Lightweight",
+        "slug": "darrius-flowers-vs-lando-vannata"
+      },
+      {
         "fighter_a": "Alice Pereira",
         "fighter_b": "Hailey Cowan",
         "weight_class": "Women's Bantamweight",
         "slug": "alice-pereira-vs-hailey-cowan"
+      },
+      {
+        "fighter_a": "Azamat Bekoev",
+        "fighter_b": "Tresean Gore",
+        "weight_class": "Middleweight",
+        "slug": "azamat-bekoev-vs-tresean-gore"
       },
       {
         "fighter_a": "Dione Barbosa",
@@ -361,12 +292,6 @@
         "slug": "josh-hokit-vs-curtis-blaydes"
       },
       {
-        "fighter_a": "Beneil Dariush",
-        "fighter_b": "Manuel Torres",
-        "weight_class": "Lightweight",
-        "slug": "beneil-dariush-vs-manuel-torres"
-      },
-      {
         "fighter_a": "Dominick Reyes",
         "fighter_b": "Johnny Walker",
         "weight_class": "Light Heavyweight",
@@ -385,16 +310,16 @@
         "slug": "aaron-pico-vs-patricio-freire"
       },
       {
-        "fighter_a": "Mateusz Gamrot",
-        "fighter_b": "Esteban Ribovics",
-        "weight_class": "Lightweight",
-        "slug": "mateusz-gamrot-vs-esteban-ribovics"
-      },
-      {
         "fighter_a": "Nate Landwehr",
         "fighter_b": "Cub Swanson",
         "weight_class": "Featherweight",
         "slug": "nate-landwehr-vs-cub-swanson"
+      },
+      {
+        "fighter_a": "Mateusz Gamrot",
+        "fighter_b": "Esteban Ribovics",
+        "weight_class": "Lightweight",
+        "slug": "mateusz-gamrot-vs-esteban-ribovics"
       },
       {
         "fighter_a": "Randy Brown",
@@ -409,10 +334,10 @@
         "slug": "tatiana-suarez-vs-loopy-godinez"
       },
       {
-        "fighter_a": "Francisco Prado",
-        "fighter_b": "Christopher Alvidrez",
-        "weight_class": "Welterweight",
-        "slug": "francisco-prado-vs-christopher-alvidrez"
+        "fighter_a": "Vicente Luque",
+        "fighter_b": "Kelvin Gastelum",
+        "weight_class": "Middleweight",
+        "slug": "vicente-luque-vs-kelvin-gastelum"
       },
       {
         "fighter_a": "Benoit Saint Denis",
@@ -481,16 +406,16 @@
   },
   {
     "id": 771,
-    "name": "UFC Fight Night: Brady vs. Buckley",
+    "name": "UFC Fight Night: Sterling vs. Zalal",
     "date": "Saturday, April 25, 2026",
     "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night-brady-vs-buckley",
+    "slug": "ufc-fight-night-sterling-vs-zalal",
     "matchups": [
       {
-        "fighter_a": "Sean Brady",
-        "fighter_b": "Joaquin Buckley",
-        "weight_class": "Welterweight",
-        "slug": "sean-brady-vs-joaquin-buckley"
+        "fighter_a": "Youssef Zalal",
+        "fighter_b": "Aljamain Sterling",
+        "weight_class": "Featherweight",
+        "slug": "youssef-zalal-vs-aljamain-sterling"
       },
       {
         "fighter_a": "Davey Grant",
@@ -512,6 +437,114 @@
         "fighter_b": "Carlos Prates",
         "weight_class": "Welterweight",
         "slug": "jack-della-maddalena-vs-carlos-prates"
+      },
+      {
+        "fighter_a": "Quillian Salkild",
+        "fighter_b": "Beneil Dariush",
+        "weight_class": "Lightweight",
+        "slug": "quillian-salkild-vs-beneil-dariush"
+      }
+    ]
+  },
+  {
+    "id": 1212,
+    "name": "UFC 328: Chimaev vs. Strickland",
+    "date": "Saturday, May 9, 2026",
+    "location": "Newark, New Jersey, USA",
+    "slug": "ufc-328-chimaev-vs-strickland",
+    "matchups": [
+      {
+        "fighter_a": "Sean Strickland",
+        "fighter_b": "Khamzat Chimaev",
+        "weight_class": "Middleweight",
+        "slug": "sean-strickland-vs-khamzat-chimaev"
+      },
+      {
+        "fighter_a": "Alexander Volkov",
+        "fighter_b": "Waldo Cortes Acosta",
+        "weight_class": "Heavyweight",
+        "slug": "alexander-volkov-vs-waldo-cortes-acosta"
+      },
+      {
+        "fighter_a": "Jan Blachowicz",
+        "fighter_b": "Bogdan Guskov",
+        "weight_class": "Light Heavyweight",
+        "slug": "jan-blachowicz-vs-bogdan-guskov"
+      },
+      {
+        "fighter_a": "Ateba Gautier",
+        "fighter_b": "Ozzy Diaz",
+        "weight_class": "Middleweight",
+        "slug": "ateba-gautier-vs-ozzy-diaz"
+      },
+      {
+        "fighter_a": "Sean Brady",
+        "fighter_b": "Joaquin Buckley",
+        "weight_class": "Welterweight",
+        "slug": "sean-brady-vs-joaquin-buckley"
+      }
+    ]
+  },
+  {
+    "id": 1213,
+    "name": "UFC Fight Night: Allen vs. Costa",
+    "date": "Saturday, May 16, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-allen-vs-costa",
+    "matchups": [
+      {
+        "fighter_a": "Arnold Allen",
+        "fighter_b": "Melquizael Costa",
+        "weight_class": "Featherweight",
+        "slug": "arnold-allen-vs-melquizael-costa"
+      }
+    ]
+  },
+  {
+    "id": 1214,
+    "name": "UFC Fight Night: Song vs. Figueiredo",
+    "date": "Saturday, May 30, 2026",
+    "location": "Macau, China",
+    "slug": "ufc-fight-night-song-vs-figueiredo",
+    "matchups": [
+      {
+        "fighter_a": "Song Yadong",
+        "fighter_b": "Deiveson Figueiredo",
+        "weight_class": "Bantamweight",
+        "slug": "song-yadong-vs-deiveson-figueiredo"
+      },
+      {
+        "fighter_a": "Tallison Teixeira",
+        "fighter_b": "Sergei Pavlovich",
+        "weight_class": "Heavyweight",
+        "slug": "tallison-teixeira-vs-sergei-pavlovich"
+      },
+      {
+        "fighter_a": "Alonzo Menifield",
+        "fighter_b": "Zhang Mingyang",
+        "weight_class": "Light Heavyweight",
+        "slug": "alonzo-menifield-vs-zhang-mingyang"
+      },
+      {
+        "fighter_a": "Sumudaerji",
+        "fighter_b": "Alex Perez",
+        "weight_class": "Flyweight",
+        "slug": "sumudaerji-vs-alex-perez"
+      }
+    ]
+  },
+  {
+    "id": 1215,
+    "name": "UFC Fight Night: Muhammad vs. Bonfim",
+    "date": "Saturday, June 6, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-muhammad-vs-bonfim",
+    "matchups": [
+      {
+        "fighter_a": "Belal Muhammad",
+        "fighter_b": "Gabriel Bonfim",
+        "weight_class": "Welterweight",
+        "slug": "belal-muhammad-vs-gabriel-bonfim"
       }
     ]
   },
