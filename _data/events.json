@@ -83,12 +83,6 @@
         "fighter_b": "Ravena Oliveira",
         "weight_class": "Women's Strawweight",
         "slug": "shanelle-dyer-vs-ravena-oliveira"
-      },
-      {
-        "fighter_a": "Melissa Mullins",
-        "fighter_b": "Luana Carolina",
-        "weight_class": "Women's Bantamweight",
-        "slug": "melissa-mullins-vs-luana-carolina"
       }
     ]
   },
@@ -149,9 +143,9 @@
       },
       {
         "fighter_a": "Marcin Tybura",
-        "fighter_b": "Valter Walker",
+        "fighter_b": "Tyrell Fortune",
         "weight_class": "Heavyweight",
-        "slug": "marcin-tybura-vs-valter-walker"
+        "slug": "marcin-tybura-vs-tyrell-fortune"
       },
       {
         "fighter_a": "Casey O'Neill",
@@ -164,6 +158,12 @@
         "fighter_b": "Bruno Lopes",
         "weight_class": "Light Heavyweight",
         "slug": "navajo-stirling-vs-bruno-lopes"
+      },
+      {
+        "fighter_a": "Ricky Simon",
+        "fighter_b": "Adrian Yanez",
+        "weight_class": "Bantamweight",
+        "slug": "ricky-simon-vs-adrian-yanez"
       },
       {
         "fighter_a": "Bruna Brasil",
@@ -401,6 +401,12 @@
         "fighter_b": "Mark Vologdin",
         "weight_class": "Bantamweight",
         "slug": "john-castaneda-vs-mark-vologdin"
+      },
+      {
+        "fighter_a": "Jamey-Lyn Horth",
+        "fighter_b": "JJ Aldrich",
+        "weight_class": "Women's Flyweight",
+        "slug": "jamey-lyn-horth-vs-jj-aldrich"
       }
     ]
   },
@@ -443,6 +449,36 @@
         "fighter_b": "Beneil Dariush",
         "weight_class": "Lightweight",
         "slug": "quillian-salkild-vs-beneil-dariush"
+      },
+      {
+        "fighter_a": "Tai Tuivasa",
+        "fighter_b": "Sean Sharaf",
+        "weight_class": "Heavyweight",
+        "slug": "tai-tuivasa-vs-sean-sharaf"
+      },
+      {
+        "fighter_a": "Junior Tafa",
+        "fighter_b": "Kevin Christian",
+        "weight_class": "Light Heavyweight",
+        "slug": "junior-tafa-vs-kevin-christian"
+      },
+      {
+        "fighter_a": "Cam Rowston",
+        "fighter_b": "Robert Bryczek",
+        "weight_class": "Middleweight",
+        "slug": "cam-rowston-vs-robert-bryczek"
+      },
+      {
+        "fighter_a": "Jacob Malkoun",
+        "fighter_b": "Gerald Meerschaert",
+        "weight_class": "Middleweight",
+        "slug": "jacob-malkoun-vs-gerald-meerschaert"
+      },
+      {
+        "fighter_a": "Tim Elliott",
+        "fighter_b": "Steve Erceg",
+        "weight_class": "Flyweight",
+        "slug": "tim-elliott-vs-steve-erceg"
       }
     ]
   },
@@ -482,6 +518,18 @@
         "fighter_b": "Joaquin Buckley",
         "weight_class": "Welterweight",
         "slug": "sean-brady-vs-joaquin-buckley"
+      },
+      {
+        "fighter_a": "King Green",
+        "fighter_b": "Jeremy Stephens",
+        "weight_class": "Lightweight",
+        "slug": "king-green-vs-jeremy-stephens"
+      },
+      {
+        "fighter_a": "Clayton Carpenter",
+        "fighter_b": "Jose Ochoa",
+        "weight_class": "Flyweight",
+        "slug": "clayton-carpenter-vs-jose-ochoa"
       }
     ]
   },

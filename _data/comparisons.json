@@ -130,16 +130,6 @@
     "weight_class": "Women's Strawweight"
   },
   {
-    "fighter_a": "Melissa Mullins",
-    "fighter_b": "Luana Carolina",
-    "slug": "melissa-mullins-vs-luana-carolina",
-    "url": "/compare/melissa-mullins-vs-luana-carolina/",
-    "event_name": "UFC Fight Night: Evloev vs. Murphy",
-    "event_date": "Saturday, March 21, 2026",
-    "event_slug": "ufc-fight-night-evloev-vs-murphy",
-    "weight_class": "Women's Bantamweight"
-  },
-  {
     "fighter_a": "Israel Adesanya",
     "fighter_b": "Joe Pyfer",
     "slug": "israel-adesanya-vs-joe-pyfer",
@@ -221,9 +211,9 @@
   },
   {
     "fighter_a": "Marcin Tybura",
-    "fighter_b": "Valter Walker",
-    "slug": "marcin-tybura-vs-valter-walker",
-    "url": "/compare/marcin-tybura-vs-valter-walker/",
+    "fighter_b": "Tyrell Fortune",
+    "slug": "marcin-tybura-vs-tyrell-fortune",
+    "url": "/compare/marcin-tybura-vs-tyrell-fortune/",
     "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
     "event_date": "Saturday, March 28, 2026",
     "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
@@ -248,6 +238,16 @@
     "event_date": "Saturday, March 28, 2026",
     "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
     "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Ricky Simon",
+    "fighter_b": "Adrian Yanez",
+    "slug": "ricky-simon-vs-adrian-yanez",
+    "url": "/compare/ricky-simon-vs-adrian-yanez/",
+    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
+    "event_date": "Saturday, March 28, 2026",
+    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Bruna Brasil",
@@ -600,6 +600,16 @@
     "weight_class": "Bantamweight"
   },
   {
+    "fighter_a": "Jamey-Lyn Horth",
+    "fighter_b": "JJ Aldrich",
+    "slug": "jamey-lyn-horth-vs-jj-aldrich",
+    "url": "/compare/jamey-lyn-horth-vs-jj-aldrich/",
+    "event_name": "UFC Fight Night: Burns vs. Malott",
+    "event_date": "Saturday, April 18, 2026",
+    "event_slug": "ufc-fight-night-burns-vs-malott",
+    "weight_class": "Women's Flyweight"
+  },
+  {
     "fighter_a": "Youssef Zalal",
     "fighter_b": "Aljamain Sterling",
     "slug": "youssef-zalal-vs-aljamain-sterling",
@@ -638,6 +648,56 @@
     "event_date": "Saturday, May 2, 2026",
     "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
     "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Tai Tuivasa",
+    "fighter_b": "Sean Sharaf",
+    "slug": "tai-tuivasa-vs-sean-sharaf",
+    "url": "/compare/tai-tuivasa-vs-sean-sharaf/",
+    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
+    "event_date": "Saturday, May 2, 2026",
+    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Junior Tafa",
+    "fighter_b": "Kevin Christian",
+    "slug": "junior-tafa-vs-kevin-christian",
+    "url": "/compare/junior-tafa-vs-kevin-christian/",
+    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
+    "event_date": "Saturday, May 2, 2026",
+    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Cam Rowston",
+    "fighter_b": "Robert Bryczek",
+    "slug": "cam-rowston-vs-robert-bryczek",
+    "url": "/compare/cam-rowston-vs-robert-bryczek/",
+    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
+    "event_date": "Saturday, May 2, 2026",
+    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Jacob Malkoun",
+    "fighter_b": "Gerald Meerschaert",
+    "slug": "jacob-malkoun-vs-gerald-meerschaert",
+    "url": "/compare/jacob-malkoun-vs-gerald-meerschaert/",
+    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
+    "event_date": "Saturday, May 2, 2026",
+    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Tim Elliott",
+    "fighter_b": "Steve Erceg",
+    "slug": "tim-elliott-vs-steve-erceg",
+    "url": "/compare/tim-elliott-vs-steve-erceg/",
+    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
+    "event_date": "Saturday, May 2, 2026",
+    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
+    "weight_class": "Flyweight"
   },
   {
     "fighter_a": "Sean Strickland",
@@ -688,6 +748,26 @@
     "event_date": "Saturday, May 9, 2026",
     "event_slug": "ufc-328-chimaev-vs-strickland",
     "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "King Green",
+    "fighter_b": "Jeremy Stephens",
+    "slug": "king-green-vs-jeremy-stephens",
+    "url": "/compare/king-green-vs-jeremy-stephens/",
+    "event_name": "UFC 328: Chimaev vs. Strickland",
+    "event_date": "Saturday, May 9, 2026",
+    "event_slug": "ufc-328-chimaev-vs-strickland",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Clayton Carpenter",
+    "fighter_b": "Jose Ochoa",
+    "slug": "clayton-carpenter-vs-jose-ochoa",
+    "url": "/compare/clayton-carpenter-vs-jose-ochoa/",
+    "event_name": "UFC 328: Chimaev vs. Strickland",
+    "event_date": "Saturday, May 9, 2026",
+    "event_slug": "ufc-328-chimaev-vs-strickland",
+    "weight_class": "Flyweight"
   },
   {
     "fighter_a": "Arnold Allen",
