@@ -1,98 +1,5 @@
 [
   {
-    "id": 767,
-    "name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "date": "Saturday, March 28, 2026",
-    "location": "Seattle, Washington, USA",
-    "slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "matchups": [
-      {
-        "fighter_a": "Israel Adesanya",
-        "fighter_b": "Joe Pyfer",
-        "weight_class": "Middleweight",
-        "slug": "israel-adesanya-vs-joe-pyfer"
-      },
-      {
-        "fighter_a": "Alexa Grasso",
-        "fighter_b": "Maycee Barber",
-        "weight_class": "Women's Flyweight",
-        "slug": "alexa-grasso-vs-maycee-barber"
-      },
-      {
-        "fighter_a": "Michael Chiesa",
-        "fighter_b": "Carlston Harris",
-        "weight_class": "Welterweight",
-        "slug": "michael-chiesa-vs-carlston-harris"
-      },
-      {
-        "fighter_a": "Julian Erosa",
-        "fighter_b": "Lerryan Douglas",
-        "weight_class": "Featherweight",
-        "slug": "julian-erosa-vs-lerryan-douglas"
-      },
-      {
-        "fighter_a": "Mansur Abdul-Malik",
-        "fighter_b": "Yousri Belgaroui",
-        "weight_class": "Middleweight",
-        "slug": "mansur-abdul-malik-vs-yousri-belgaroui"
-      },
-      {
-        "fighter_a": "Terrance McKinney",
-        "fighter_b": "Kyle Nelson",
-        "weight_class": "Lightweight",
-        "slug": "terrance-mckinney-vs-kyle-nelson"
-      },
-      {
-        "fighter_a": "Ignacio Bahamondes",
-        "fighter_b": "Tofiq Musayev",
-        "weight_class": "Lightweight",
-        "slug": "ignacio-bahamondes-vs-tofiq-musayev"
-      },
-      {
-        "fighter_a": "Chase Hooper",
-        "fighter_b": "Lance Gibson Jr.",
-        "weight_class": "Lightweight",
-        "slug": "chase-hooper-vs-lance-gibson-jr"
-      },
-      {
-        "fighter_a": "Marcin Tybura",
-        "fighter_b": "Tyrell Fortune",
-        "weight_class": "Heavyweight",
-        "slug": "marcin-tybura-vs-tyrell-fortune"
-      },
-      {
-        "fighter_a": "Casey O'Neill",
-        "fighter_b": "Gabriella Fernandes",
-        "weight_class": "Women's Flyweight",
-        "slug": "casey-oneill-vs-gabriella-fernandes"
-      },
-      {
-        "fighter_a": "Navajo Stirling",
-        "fighter_b": "Bruno Lopes",
-        "weight_class": "Light Heavyweight",
-        "slug": "navajo-stirling-vs-bruno-lopes"
-      },
-      {
-        "fighter_a": "Ricky Simon",
-        "fighter_b": "Adrian Yanez",
-        "weight_class": "Bantamweight",
-        "slug": "ricky-simon-vs-adrian-yanez"
-      },
-      {
-        "fighter_a": "Bruna Brasil",
-        "fighter_b": "Alexia Thainara",
-        "weight_class": "Women's Strawweight",
-        "slug": "bruna-brasil-vs-alexia-thainara"
-      },
-      {
-        "fighter_a": "Zhu Kangjie",
-        "fighter_b": "Marcio Barbosa",
-        "weight_class": "Featherweight",
-        "slug": "zhu-kangjie-vs-marcio-barbosa"
-      }
-    ]
-  },
-  {
     "id": 768,
     "name": "UFC Fight Night: Moicano vs. Duncan",
     "date": "Saturday, April 4, 2026",
@@ -320,6 +227,18 @@
         "fighter_b": "JJ Aldrich",
         "weight_class": "Women's Flyweight",
         "slug": "jamey-lyn-horth-vs-jj-aldrich"
+      },
+      {
+        "fighter_a": "Charles Jourdain",
+        "fighter_b": "Kyler Phillips",
+        "weight_class": "Bantamweight",
+        "slug": "charles-jourdain-vs-kyler-phillips"
+      },
+      {
+        "fighter_a": "Jai Herbert",
+        "fighter_b": "Mandel Nallo",
+        "weight_class": "Lightweight",
+        "slug": "jai-herbert-vs-mandel-nallo"
       }
     ]
   },
@@ -341,6 +260,48 @@
         "fighter_b": "Juan Adrian Martinetti",
         "weight_class": "Bantamweight",
         "slug": "davey-grant-vs-juan-adrian-martinetti"
+      },
+      {
+        "fighter_a": "Joselyne Edwards",
+        "fighter_b": "Norma Dumont",
+        "weight_class": "Women's Bantamweight",
+        "slug": "joselyne-edwards-vs-norma-dumont"
+      },
+      {
+        "fighter_a": "Raoni Barcelos",
+        "fighter_b": "Montel Jackson",
+        "weight_class": "Bantamweight",
+        "slug": "raoni-barcelos-vs-montel-jackson"
+      },
+      {
+        "fighter_a": "Talita Alencar",
+        "fighter_b": "Julia Polastri",
+        "weight_class": "Women's Strawweight",
+        "slug": "talita-alencar-vs-julia-polastri"
+      },
+      {
+        "fighter_a": "Rodolfo Vieira",
+        "fighter_b": "Eric McConico",
+        "weight_class": "Middleweight",
+        "slug": "rodolfo-vieira-vs-eric-mcconico"
+      },
+      {
+        "fighter_a": "Jafel Filho",
+        "fighter_b": "Lucas Rocha",
+        "weight_class": "Flyweight",
+        "slug": "jafel-filho-vs-lucas-rocha"
+      },
+      {
+        "fighter_a": "Mayra Bueno Silva",
+        "fighter_b": "Michelle Montague",
+        "weight_class": "Women's Bantamweight",
+        "slug": "mayra-bueno-silva-vs-michelle-montague"
+      },
+      {
+        "fighter_a": "Jackson McVey",
+        "fighter_b": "Sedriques Dumas",
+        "weight_class": "Middleweight",
+        "slug": "jackson-mcvey-vs-sedriques-dumas"
       }
     ]
   },

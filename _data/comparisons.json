@@ -1,145 +1,5 @@
 [
   {
-    "fighter_a": "Israel Adesanya",
-    "fighter_b": "Joe Pyfer",
-    "slug": "israel-adesanya-vs-joe-pyfer",
-    "url": "/compare/israel-adesanya-vs-joe-pyfer/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Alexa Grasso",
-    "fighter_b": "Maycee Barber",
-    "slug": "alexa-grasso-vs-maycee-barber",
-    "url": "/compare/alexa-grasso-vs-maycee-barber/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Michael Chiesa",
-    "fighter_b": "Carlston Harris",
-    "slug": "michael-chiesa-vs-carlston-harris",
-    "url": "/compare/michael-chiesa-vs-carlston-harris/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Julian Erosa",
-    "fighter_b": "Lerryan Douglas",
-    "slug": "julian-erosa-vs-lerryan-douglas",
-    "url": "/compare/julian-erosa-vs-lerryan-douglas/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Mansur Abdul-Malik",
-    "fighter_b": "Yousri Belgaroui",
-    "slug": "mansur-abdul-malik-vs-yousri-belgaroui",
-    "url": "/compare/mansur-abdul-malik-vs-yousri-belgaroui/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Terrance McKinney",
-    "fighter_b": "Kyle Nelson",
-    "slug": "terrance-mckinney-vs-kyle-nelson",
-    "url": "/compare/terrance-mckinney-vs-kyle-nelson/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Ignacio Bahamondes",
-    "fighter_b": "Tofiq Musayev",
-    "slug": "ignacio-bahamondes-vs-tofiq-musayev",
-    "url": "/compare/ignacio-bahamondes-vs-tofiq-musayev/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Chase Hooper",
-    "fighter_b": "Lance Gibson Jr.",
-    "slug": "chase-hooper-vs-lance-gibson-jr",
-    "url": "/compare/chase-hooper-vs-lance-gibson-jr/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Marcin Tybura",
-    "fighter_b": "Tyrell Fortune",
-    "slug": "marcin-tybura-vs-tyrell-fortune",
-    "url": "/compare/marcin-tybura-vs-tyrell-fortune/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Casey O'Neill",
-    "fighter_b": "Gabriella Fernandes",
-    "slug": "casey-oneill-vs-gabriella-fernandes",
-    "url": "/compare/casey-oneill-vs-gabriella-fernandes/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Navajo Stirling",
-    "fighter_b": "Bruno Lopes",
-    "slug": "navajo-stirling-vs-bruno-lopes",
-    "url": "/compare/navajo-stirling-vs-bruno-lopes/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Ricky Simon",
-    "fighter_b": "Adrian Yanez",
-    "slug": "ricky-simon-vs-adrian-yanez",
-    "url": "/compare/ricky-simon-vs-adrian-yanez/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Bruna Brasil",
-    "fighter_b": "Alexia Thainara",
-    "slug": "bruna-brasil-vs-alexia-thainara",
-    "url": "/compare/bruna-brasil-vs-alexia-thainara/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Women's Strawweight"
-  },
-  {
-    "fighter_a": "Zhu Kangjie",
-    "fighter_b": "Marcio Barbosa",
-    "slug": "zhu-kangjie-vs-marcio-barbosa",
-    "url": "/compare/zhu-kangjie-vs-marcio-barbosa/",
-    "event_name": "UFC Fight Night: Adesanya vs. Pyfer",
-    "event_date": "Saturday, March 28, 2026",
-    "event_slug": "ufc-fight-night-adesanya-vs-pyfer",
-    "weight_class": "Featherweight"
-  },
-  {
     "fighter_a": "Renato Moicano",
     "fighter_b": "Chris Duncan",
     "slug": "renato-moicano-vs-chris-duncan",
@@ -480,6 +340,26 @@
     "weight_class": "Women's Flyweight"
   },
   {
+    "fighter_a": "Charles Jourdain",
+    "fighter_b": "Kyler Phillips",
+    "slug": "charles-jourdain-vs-kyler-phillips",
+    "url": "/compare/charles-jourdain-vs-kyler-phillips/",
+    "event_name": "UFC Fight Night: Burns vs. Malott",
+    "event_date": "Saturday, April 18, 2026",
+    "event_slug": "ufc-fight-night-burns-vs-malott",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Jai Herbert",
+    "fighter_b": "Mandel Nallo",
+    "slug": "jai-herbert-vs-mandel-nallo",
+    "url": "/compare/jai-herbert-vs-mandel-nallo/",
+    "event_name": "UFC Fight Night: Burns vs. Malott",
+    "event_date": "Saturday, April 18, 2026",
+    "event_slug": "ufc-fight-night-burns-vs-malott",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Youssef Zalal",
     "fighter_b": "Aljamain Sterling",
     "slug": "youssef-zalal-vs-aljamain-sterling",
@@ -498,6 +378,76 @@
     "event_date": "Saturday, April 25, 2026",
     "event_slug": "ufc-fight-night-sterling-vs-zalal",
     "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Joselyne Edwards",
+    "fighter_b": "Norma Dumont",
+    "slug": "joselyne-edwards-vs-norma-dumont",
+    "url": "/compare/joselyne-edwards-vs-norma-dumont/",
+    "event_name": "UFC Fight Night: Sterling vs. Zalal",
+    "event_date": "Saturday, April 25, 2026",
+    "event_slug": "ufc-fight-night-sterling-vs-zalal",
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Raoni Barcelos",
+    "fighter_b": "Montel Jackson",
+    "slug": "raoni-barcelos-vs-montel-jackson",
+    "url": "/compare/raoni-barcelos-vs-montel-jackson/",
+    "event_name": "UFC Fight Night: Sterling vs. Zalal",
+    "event_date": "Saturday, April 25, 2026",
+    "event_slug": "ufc-fight-night-sterling-vs-zalal",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Talita Alencar",
+    "fighter_b": "Julia Polastri",
+    "slug": "talita-alencar-vs-julia-polastri",
+    "url": "/compare/talita-alencar-vs-julia-polastri/",
+    "event_name": "UFC Fight Night: Sterling vs. Zalal",
+    "event_date": "Saturday, April 25, 2026",
+    "event_slug": "ufc-fight-night-sterling-vs-zalal",
+    "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Rodolfo Vieira",
+    "fighter_b": "Eric McConico",
+    "slug": "rodolfo-vieira-vs-eric-mcconico",
+    "url": "/compare/rodolfo-vieira-vs-eric-mcconico/",
+    "event_name": "UFC Fight Night: Sterling vs. Zalal",
+    "event_date": "Saturday, April 25, 2026",
+    "event_slug": "ufc-fight-night-sterling-vs-zalal",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Jafel Filho",
+    "fighter_b": "Lucas Rocha",
+    "slug": "jafel-filho-vs-lucas-rocha",
+    "url": "/compare/jafel-filho-vs-lucas-rocha/",
+    "event_name": "UFC Fight Night: Sterling vs. Zalal",
+    "event_date": "Saturday, April 25, 2026",
+    "event_slug": "ufc-fight-night-sterling-vs-zalal",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Mayra Bueno Silva",
+    "fighter_b": "Michelle Montague",
+    "slug": "mayra-bueno-silva-vs-michelle-montague",
+    "url": "/compare/mayra-bueno-silva-vs-michelle-montague/",
+    "event_name": "UFC Fight Night: Sterling vs. Zalal",
+    "event_date": "Saturday, April 25, 2026",
+    "event_slug": "ufc-fight-night-sterling-vs-zalal",
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Jackson McVey",
+    "fighter_b": "Sedriques Dumas",
+    "slug": "jackson-mcvey-vs-sedriques-dumas",
+    "url": "/compare/jackson-mcvey-vs-sedriques-dumas/",
+    "event_name": "UFC Fight Night: Sterling vs. Zalal",
+    "event_date": "Saturday, April 25, 2026",
+    "event_slug": "ufc-fight-night-sterling-vs-zalal",
+    "weight_class": "Middleweight"
   },
   {
     "fighter_a": "Jack Della Maddalena",
