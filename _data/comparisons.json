@@ -1,135 +1,5 @@
 [
   {
-    "fighter_a": "Renato Moicano",
-    "fighter_b": "Chris Duncan",
-    "slug": "renato-moicano-vs-chris-duncan",
-    "url": "/compare/renato-moicano-vs-chris-duncan/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Virna Jandiroba",
-    "fighter_b": "Tabatha Ricci",
-    "slug": "virna-jandiroba-vs-tabatha-ricci",
-    "url": "/compare/virna-jandiroba-vs-tabatha-ricci/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Women's Strawweight"
-  },
-  {
-    "fighter_a": "Abdul Rakhman Yakhyaev",
-    "fighter_b": "Brendson Ribeiro",
-    "slug": "abdul-rakhman-yakhyaev-vs-brendson-ribeiro",
-    "url": "/compare/abdul-rakhman-yakhyaev-vs-brendson-ribeiro/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Ethyn Ewing",
-    "fighter_b": "Rafael Estevam",
-    "slug": "ethyn-ewing-vs-rafael-estevam",
-    "url": "/compare/ethyn-ewing-vs-rafael-estevam/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Manolo Zecchini",
-    "fighter_b": "Tommy McMillen",
-    "slug": "manolo-zecchini-vs-tommy-mcmillen",
-    "url": "/compare/manolo-zecchini-vs-tommy-mcmillen/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Charles Radtke",
-    "fighter_b": "Jose Henrique",
-    "slug": "charles-radtke-vs-jose-henrique",
-    "url": "/compare/charles-radtke-vs-jose-henrique/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Guilherme Pat",
-    "fighter_b": "Thomas Petersen",
-    "slug": "guilherme-pat-vs-thomas-petersen",
-    "url": "/compare/guilherme-pat-vs-thomas-petersen/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Robert Ruchala",
-    "fighter_b": "Jose Delano",
-    "slug": "robert-ruchala-vs-jose-delano",
-    "url": "/compare/robert-ruchala-vs-jose-delano/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Stewart Nicoll",
-    "fighter_b": "Alessandro Costa",
-    "slug": "stewart-nicoll-vs-alessandro-costa",
-    "url": "/compare/stewart-nicoll-vs-alessandro-costa/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Darrius Flowers",
-    "fighter_b": "Lando Vannata",
-    "slug": "darrius-flowers-vs-lando-vannata",
-    "url": "/compare/darrius-flowers-vs-lando-vannata/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Alice Pereira",
-    "fighter_b": "Hailey Cowan",
-    "slug": "alice-pereira-vs-hailey-cowan",
-    "url": "/compare/alice-pereira-vs-hailey-cowan/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Women's Bantamweight"
-  },
-  {
-    "fighter_a": "Azamat Bekoev",
-    "fighter_b": "Tresean Gore",
-    "slug": "azamat-bekoev-vs-tresean-gore",
-    "url": "/compare/azamat-bekoev-vs-tresean-gore/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Dione Barbosa",
-    "fighter_b": "Melissa Gatto",
-    "slug": "dione-barbosa-vs-melissa-gatto",
-    "url": "/compare/dione-barbosa-vs-melissa-gatto/",
-    "event_name": "UFC Fight Night: Moicano vs. Duncan",
-    "event_date": "Saturday, April 4, 2026",
-    "event_slug": "ufc-fight-night-moicano-vs-duncan",
-    "weight_class": "Women's Flyweight"
-  },
-  {
     "fighter_a": "Jiri Prochazka",
     "fighter_b": "Carlos Ulberg",
     "slug": "jiri-prochazka-vs-carlos-ulberg",
@@ -140,14 +10,14 @@
     "weight_class": "Light Heavyweight"
   },
   {
-    "fighter_a": "Joshua Van",
-    "fighter_b": "Tatsuro Taira",
-    "slug": "joshua-van-vs-tatsuro-taira",
-    "url": "/compare/joshua-van-vs-tatsuro-taira/",
+    "fighter_a": "Azamat Murzakanov",
+    "fighter_b": "Paulo Costa",
+    "slug": "azamat-murzakanov-vs-paulo-costa",
+    "url": "/compare/azamat-murzakanov-vs-paulo-costa/",
     "event_name": "UFC 327: Prochazka vs. Ulberg",
     "event_date": "Saturday, April 11, 2026",
     "event_slug": "ufc-327-prochazka-vs-ulberg",
-    "weight_class": "Flyweight"
+    "weight_class": "Light Heavyweight"
   },
   {
     "fighter_a": "Josh Hokit",
@@ -170,14 +40,14 @@
     "weight_class": "Light Heavyweight"
   },
   {
-    "fighter_a": "Azamat Murzakanov",
-    "fighter_b": "Paulo Costa",
-    "slug": "azamat-murzakanov-vs-paulo-costa",
-    "url": "/compare/azamat-murzakanov-vs-paulo-costa/",
+    "fighter_a": "Nate Landwehr",
+    "fighter_b": "Cub Swanson",
+    "slug": "nate-landwehr-vs-cub-swanson",
+    "url": "/compare/nate-landwehr-vs-cub-swanson/",
     "event_name": "UFC 327: Prochazka vs. Ulberg",
     "event_date": "Saturday, April 11, 2026",
     "event_slug": "ufc-327-prochazka-vs-ulberg",
-    "weight_class": "Light Heavyweight"
+    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Aaron Pico",
@@ -190,14 +60,14 @@
     "weight_class": "Featherweight"
   },
   {
-    "fighter_a": "Nate Landwehr",
-    "fighter_b": "Cub Swanson",
-    "slug": "nate-landwehr-vs-cub-swanson",
-    "url": "/compare/nate-landwehr-vs-cub-swanson/",
+    "fighter_a": "Randy Brown",
+    "fighter_b": "Kevin Holland",
+    "slug": "randy-brown-vs-kevin-holland",
+    "url": "/compare/randy-brown-vs-kevin-holland/",
     "event_name": "UFC 327: Prochazka vs. Ulberg",
     "event_date": "Saturday, April 11, 2026",
     "event_slug": "ufc-327-prochazka-vs-ulberg",
-    "weight_class": "Featherweight"
+    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Mateusz Gamrot",
@@ -210,16 +80,6 @@
     "weight_class": "Lightweight"
   },
   {
-    "fighter_a": "Randy Brown",
-    "fighter_b": "Kevin Holland",
-    "slug": "randy-brown-vs-kevin-holland",
-    "url": "/compare/randy-brown-vs-kevin-holland/",
-    "event_name": "UFC 327: Prochazka vs. Ulberg",
-    "event_date": "Saturday, April 11, 2026",
-    "event_slug": "ufc-327-prochazka-vs-ulberg",
-    "weight_class": "Welterweight"
-  },
-  {
     "fighter_a": "Tatiana Suarez",
     "fighter_b": "Loopy Godinez",
     "slug": "tatiana-suarez-vs-loopy-godinez",
@@ -230,6 +90,16 @@
     "weight_class": "Women's Strawweight"
   },
   {
+    "fighter_a": "Chris Padilla",
+    "fighter_b": "MarQuel Mederos",
+    "slug": "chris-padilla-vs-marquel-mederos",
+    "url": "/compare/chris-padilla-vs-marquel-mederos/",
+    "event_name": "UFC 327: Prochazka vs. Ulberg",
+    "event_date": "Saturday, April 11, 2026",
+    "event_slug": "ufc-327-prochazka-vs-ulberg",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Vicente Luque",
     "fighter_b": "Kelvin Gastelum",
     "slug": "vicente-luque-vs-kelvin-gastelum",
@@ -238,6 +108,16 @@
     "event_date": "Saturday, April 11, 2026",
     "event_slug": "ufc-327-prochazka-vs-ulberg",
     "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Charles Radtke",
+    "fighter_b": "Francisco Prado",
+    "slug": "charles-radtke-vs-francisco-prado",
+    "url": "/compare/charles-radtke-vs-francisco-prado/",
+    "event_name": "UFC 327: Prochazka vs. Ulberg",
+    "event_date": "Saturday, April 11, 2026",
+    "event_slug": "ufc-327-prochazka-vs-ulberg",
+    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Benoit Saint Denis",
@@ -260,6 +140,26 @@
     "weight_class": "Welterweight"
   },
   {
+    "fighter_a": "Charles Jourdain",
+    "fighter_b": "Kyler Phillips",
+    "slug": "charles-jourdain-vs-kyler-phillips",
+    "url": "/compare/charles-jourdain-vs-kyler-phillips/",
+    "event_name": "UFC Fight Night: Burns vs. Malott",
+    "event_date": "Saturday, April 18, 2026",
+    "event_slug": "ufc-fight-night-burns-vs-malott",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Jai Herbert",
+    "fighter_b": "Mandel Nallo",
+    "slug": "jai-herbert-vs-mandel-nallo",
+    "url": "/compare/jai-herbert-vs-mandel-nallo/",
+    "event_name": "UFC Fight Night: Burns vs. Malott",
+    "event_date": "Saturday, April 18, 2026",
+    "event_slug": "ufc-fight-night-burns-vs-malott",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Karine Silva",
     "fighter_b": "Jasmine Jasudavicius",
     "slug": "karine-silva-vs-jasmine-jasudavicius",
@@ -270,14 +170,14 @@
     "weight_class": "Women's Flyweight"
   },
   {
-    "fighter_a": "Melissa Croden",
-    "fighter_b": "Daria Zhelezniakova",
-    "slug": "melissa-croden-vs-daria-zhelezniakova",
-    "url": "/compare/melissa-croden-vs-daria-zhelezniakova/",
+    "fighter_a": "Marcio Barbosa",
+    "fighter_b": "Dennis Buzukja",
+    "slug": "marcio-barbosa-vs-dennis-buzukja",
+    "url": "/compare/marcio-barbosa-vs-dennis-buzukja/",
     "event_name": "UFC Fight Night: Burns vs. Malott",
     "event_date": "Saturday, April 18, 2026",
     "event_slug": "ufc-fight-night-burns-vs-malott",
-    "weight_class": "Women's Bantamweight"
+    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Robert Valentin",
@@ -300,34 +200,14 @@
     "weight_class": "Heavyweight"
   },
   {
-    "fighter_a": "Andre Lima",
-    "fighter_b": "DongHun Choi",
-    "slug": "andre-lima-vs-donghun-choi",
-    "url": "/compare/andre-lima-vs-donghun-choi/",
+    "fighter_a": "Melissa Croden",
+    "fighter_b": "Daria Zhelezniakova",
+    "slug": "melissa-croden-vs-daria-zhelezniakova",
+    "url": "/compare/melissa-croden-vs-daria-zhelezniakova/",
     "event_name": "UFC Fight Night: Burns vs. Malott",
     "event_date": "Saturday, April 18, 2026",
     "event_slug": "ufc-fight-night-burns-vs-malott",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Allan Nascimento",
-    "fighter_b": "Mitch Raposo",
-    "slug": "allan-nascimento-vs-mitch-raposo",
-    "url": "/compare/allan-nascimento-vs-mitch-raposo/",
-    "event_name": "UFC Fight Night: Burns vs. Malott",
-    "event_date": "Saturday, April 18, 2026",
-    "event_slug": "ufc-fight-night-burns-vs-malott",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "John Castaneda",
-    "fighter_b": "Mark Vologdin",
-    "slug": "john-castaneda-vs-mark-vologdin",
-    "url": "/compare/john-castaneda-vs-mark-vologdin/",
-    "event_name": "UFC Fight Night: Burns vs. Malott",
-    "event_date": "Saturday, April 18, 2026",
-    "event_slug": "ufc-fight-night-burns-vs-malott",
-    "weight_class": "Bantamweight"
+    "weight_class": "Women's Bantamweight"
   },
   {
     "fighter_a": "Jamey-Lyn Horth",
@@ -340,24 +220,24 @@
     "weight_class": "Women's Flyweight"
   },
   {
-    "fighter_a": "Charles Jourdain",
-    "fighter_b": "Kyler Phillips",
-    "slug": "charles-jourdain-vs-kyler-phillips",
-    "url": "/compare/charles-jourdain-vs-kyler-phillips/",
+    "fighter_a": "Allan Nascimento",
+    "fighter_b": "Mitch Raposo",
+    "slug": "allan-nascimento-vs-mitch-raposo",
+    "url": "/compare/allan-nascimento-vs-mitch-raposo/",
     "event_name": "UFC Fight Night: Burns vs. Malott",
     "event_date": "Saturday, April 18, 2026",
     "event_slug": "ufc-fight-night-burns-vs-malott",
-    "weight_class": "Bantamweight"
+    "weight_class": "Flyweight"
   },
   {
-    "fighter_a": "Jai Herbert",
-    "fighter_b": "Mandel Nallo",
-    "slug": "jai-herbert-vs-mandel-nallo",
-    "url": "/compare/jai-herbert-vs-mandel-nallo/",
+    "fighter_a": "Andre Lima",
+    "fighter_b": "DongHun Choi",
+    "slug": "andre-lima-vs-donghun-choi",
+    "url": "/compare/andre-lima-vs-donghun-choi/",
     "event_name": "UFC Fight Night: Burns vs. Malott",
     "event_date": "Saturday, April 18, 2026",
     "event_slug": "ufc-fight-night-burns-vs-malott",
-    "weight_class": "Lightweight"
+    "weight_class": "Flyweight"
   },
   {
     "fighter_a": "Youssef Zalal",
@@ -520,6 +400,16 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "Dom Mar Fan",
+    "fighter_b": "Kody Steele",
+    "slug": "dom-mar-fan-vs-kody-steele",
+    "url": "/compare/dom-mar-fan-vs-kody-steele/",
+    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
+    "event_date": "Saturday, May 2, 2026",
+    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Sean Strickland",
     "fighter_b": "Khamzat Chimaev",
     "slug": "sean-strickland-vs-khamzat-chimaev",
@@ -530,6 +420,16 @@
     "weight_class": "Middleweight"
   },
   {
+    "fighter_a": "Joshua Van",
+    "fighter_b": "Tatsuro Taira",
+    "slug": "joshua-van-vs-tatsuro-taira",
+    "url": "/compare/joshua-van-vs-tatsuro-taira/",
+    "event_name": "UFC 328: Chimaev vs. Strickland",
+    "event_date": "Saturday, May 9, 2026",
+    "event_slug": "ufc-328-chimaev-vs-strickland",
+    "weight_class": "Flyweight"
+  },
+  {
     "fighter_a": "Alexander Volkov",
     "fighter_b": "Waldo Cortes Acosta",
     "slug": "alexander-volkov-vs-waldo-cortes-acosta",
@@ -538,26 +438,6 @@
     "event_date": "Saturday, May 9, 2026",
     "event_slug": "ufc-328-chimaev-vs-strickland",
     "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Jan Blachowicz",
-    "fighter_b": "Bogdan Guskov",
-    "slug": "jan-blachowicz-vs-bogdan-guskov",
-    "url": "/compare/jan-blachowicz-vs-bogdan-guskov/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Ateba Gautier",
-    "fighter_b": "Ozzy Diaz",
-    "slug": "ateba-gautier-vs-ozzy-diaz",
-    "url": "/compare/ateba-gautier-vs-ozzy-diaz/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Middleweight"
   },
   {
     "fighter_a": "Sean Brady",
@@ -580,6 +460,36 @@
     "weight_class": "Lightweight"
   },
   {
+    "fighter_a": "Jan Blachowicz",
+    "fighter_b": "Bogdan Guskov",
+    "slug": "jan-blachowicz-vs-bogdan-guskov",
+    "url": "/compare/jan-blachowicz-vs-bogdan-guskov/",
+    "event_name": "UFC 328: Chimaev vs. Strickland",
+    "event_date": "Saturday, May 9, 2026",
+    "event_slug": "ufc-328-chimaev-vs-strickland",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Ateba Gautier",
+    "fighter_b": "Ozzy Diaz",
+    "slug": "ateba-gautier-vs-ozzy-diaz",
+    "url": "/compare/ateba-gautier-vs-ozzy-diaz/",
+    "event_name": "UFC 328: Chimaev vs. Strickland",
+    "event_date": "Saturday, May 9, 2026",
+    "event_slug": "ufc-328-chimaev-vs-strickland",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Roman Kopylov",
+    "fighter_b": "Marco Tulio",
+    "slug": "roman-kopylov-vs-marco-tulio",
+    "url": "/compare/roman-kopylov-vs-marco-tulio/",
+    "event_name": "UFC 328: Chimaev vs. Strickland",
+    "event_date": "Saturday, May 9, 2026",
+    "event_slug": "ufc-328-chimaev-vs-strickland",
+    "weight_class": "Middleweight"
+  },
+  {
     "fighter_a": "Clayton Carpenter",
     "fighter_b": "Jose Ochoa",
     "slug": "clayton-carpenter-vs-jose-ochoa",
@@ -590,6 +500,16 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "Baisangur Susurkaev",
+    "fighter_b": "Djorden Santos",
+    "slug": "baisangur-susurkaev-vs-djorden-santos",
+    "url": "/compare/baisangur-susurkaev-vs-djorden-santos/",
+    "event_name": "UFC 328: Chimaev vs. Strickland",
+    "event_date": "Saturday, May 9, 2026",
+    "event_slug": "ufc-328-chimaev-vs-strickland",
+    "weight_class": "Middleweight"
+  },
+  {
     "fighter_a": "Arnold Allen",
     "fighter_b": "Melquizael Costa",
     "slug": "arnold-allen-vs-melquizael-costa",
@@ -598,6 +518,76 @@
     "event_date": "Saturday, May 16, 2026",
     "event_slug": "ufc-fight-night-allen-vs-costa",
     "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Shauna Bannon",
+    "fighter_b": "Nicolle Caliari",
+    "slug": "shauna-bannon-vs-nicolle-caliari",
+    "url": "/compare/shauna-bannon-vs-nicolle-caliari/",
+    "event_name": "UFC Fight Night: Allen vs. Costa",
+    "event_date": "Saturday, May 16, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-costa",
+    "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Jacqueline Cavalcanti",
+    "fighter_b": "Ketlen Vieira",
+    "slug": "jacqueline-cavalcanti-vs-ketlen-vieira",
+    "url": "/compare/jacqueline-cavalcanti-vs-ketlen-vieira/",
+    "event_name": "UFC Fight Night: Allen vs. Costa",
+    "event_date": "Saturday, May 16, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-costa",
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Luis Gurule",
+    "fighter_b": "Daniel Barez",
+    "slug": "luis-gurule-vs-daniel-barez",
+    "url": "/compare/luis-gurule-vs-daniel-barez/",
+    "event_name": "UFC Fight Night: Allen vs. Costa",
+    "event_date": "Saturday, May 16, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-costa",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Timmy Cuamba",
+    "fighter_b": "Benardo Sopaj",
+    "slug": "timmy-cuamba-vs-benardo-sopaj",
+    "url": "/compare/timmy-cuamba-vs-benardo-sopaj/",
+    "event_name": "UFC Fight Night: Allen vs. Costa",
+    "event_date": "Saturday, May 16, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-costa",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Ivan Erslan",
+    "fighter_b": "Tuco Tokkos",
+    "slug": "ivan-erslan-vs-tuco-tokkos",
+    "url": "/compare/ivan-erslan-vs-tuco-tokkos/",
+    "event_name": "UFC Fight Night: Allen vs. Costa",
+    "event_date": "Saturday, May 16, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-costa",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Rodolfo Bellato",
+    "fighter_b": "Modestas Bukauskas",
+    "slug": "rodolfo-bellato-vs-modestas-bukauskas",
+    "url": "/compare/rodolfo-bellato-vs-modestas-bukauskas/",
+    "event_name": "UFC Fight Night: Allen vs. Costa",
+    "event_date": "Saturday, May 16, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-costa",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Alice Ardelean",
+    "fighter_b": "Polyana Viana",
+    "slug": "alice-ardelean-vs-polyana-viana",
+    "url": "/compare/alice-ardelean-vs-polyana-viana/",
+    "event_name": "UFC Fight Night: Allen vs. Costa",
+    "event_date": "Saturday, May 16, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-costa",
+    "weight_class": "Women's Strawweight"
   },
   {
     "fighter_a": "Song Yadong",
@@ -640,6 +630,56 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "Jaqueline Amorim",
+    "fighter_b": "Loma Lookboonmee",
+    "slug": "jaqueline-amorim-vs-loma-lookboonmee",
+    "url": "/compare/jaqueline-amorim-vs-loma-lookboonmee/",
+    "event_name": "UFC Fight Night: Song vs. Figueiredo",
+    "event_date": "Saturday, May 30, 2026",
+    "event_slug": "ufc-fight-night-song-vs-figueiredo",
+    "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Yi Sak Lee",
+    "fighter_b": "Luis Felipe Dias",
+    "slug": "yi-sak-lee-vs-luis-felipe-dias",
+    "url": "/compare/yi-sak-lee-vs-luis-felipe-dias/",
+    "event_name": "UFC Fight Night: Song vs. Figueiredo",
+    "event_date": "Saturday, May 30, 2026",
+    "event_slug": "ufc-fight-night-song-vs-figueiredo",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Jesus Aguilar",
+    "fighter_b": "Rei Tsuruya",
+    "slug": "jesus-aguilar-vs-rei-tsuruya",
+    "url": "/compare/jesus-aguilar-vs-rei-tsuruya/",
+    "event_name": "UFC Fight Night: Song vs. Figueiredo",
+    "event_date": "Saturday, May 30, 2026",
+    "event_slug": "ufc-fight-night-song-vs-figueiredo",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Aoriqileng",
+    "fighter_b": "Cody Haddon",
+    "slug": "aoriqileng-vs-cody-haddon",
+    "url": "/compare/aoriqileng-vs-cody-haddon/",
+    "event_name": "UFC Fight Night: Song vs. Figueiredo",
+    "event_date": "Saturday, May 30, 2026",
+    "event_slug": "ufc-fight-night-song-vs-figueiredo",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Kai Asakura",
+    "fighter_b": "Cameron Smotherman",
+    "slug": "kai-asakura-vs-cameron-smotherman",
+    "url": "/compare/kai-asakura-vs-cameron-smotherman/",
+    "event_name": "UFC Fight Night: Song vs. Figueiredo",
+    "event_date": "Saturday, May 30, 2026",
+    "event_slug": "ufc-fight-night-song-vs-figueiredo",
+    "weight_class": "Bantamweight"
+  },
+  {
     "fighter_a": "Belal Muhammad",
     "fighter_b": "Gabriel Bonfim",
     "slug": "belal-muhammad-vs-gabriel-bonfim",
@@ -648,6 +688,46 @@
     "event_date": "Saturday, June 6, 2026",
     "event_slug": "ufc-fight-night-muhammad-vs-bonfim",
     "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Iwo Baraniewski",
+    "fighter_b": "Billy Elekana",
+    "slug": "iwo-baraniewski-vs-billy-elekana",
+    "url": "/compare/iwo-baraniewski-vs-billy-elekana/",
+    "event_name": "UFC Fight Night: Muhammad vs. Bonfim",
+    "event_date": "Saturday, June 6, 2026",
+    "event_slug": "ufc-fight-night-muhammad-vs-bonfim",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Imanol Rodriguez",
+    "fighter_b": "Matt Schnell",
+    "slug": "imanol-rodriguez-vs-matt-schnell",
+    "url": "/compare/imanol-rodriguez-vs-matt-schnell/",
+    "event_name": "UFC Fight Night: Muhammad vs. Bonfim",
+    "event_date": "Saturday, June 6, 2026",
+    "event_slug": "ufc-fight-night-muhammad-vs-bonfim",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Edgar Chairez",
+    "fighter_b": "Bruno Silva",
+    "slug": "edgar-chairez-vs-bruno-silva",
+    "url": "/compare/edgar-chairez-vs-bruno-silva/",
+    "event_name": "UFC Fight Night: Muhammad vs. Bonfim",
+    "event_date": "Saturday, June 6, 2026",
+    "event_slug": "ufc-fight-night-muhammad-vs-bonfim",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Yuneisy Duben",
+    "fighter_b": "Jeisla Chaves",
+    "slug": "yuneisy-duben-vs-jeisla-chaves",
+    "url": "/compare/yuneisy-duben-vs-jeisla-chaves/",
+    "event_name": "UFC Fight Night: Muhammad vs. Bonfim",
+    "event_date": "Saturday, June 6, 2026",
+    "event_slug": "ufc-fight-night-muhammad-vs-bonfim",
+    "weight_class": "Women's Flyweight"
   },
   {
     "fighter_a": "Ilia Topuria",
