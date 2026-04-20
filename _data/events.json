@@ -1,92 +1,5 @@
 [
   {
-    "id": 770,
-    "name": "UFC Fight Night: Burns vs. Malott",
-    "date": "Saturday, April 18, 2026",
-    "location": "Winnipeg, Manitoba, Canada",
-    "slug": "ufc-fight-night-burns-vs-malott",
-    "matchups": [
-      {
-        "fighter_a": "Mike Malott",
-        "fighter_b": "Gilbert Burns",
-        "weight_class": "Welterweight",
-        "slug": "mike-malott-vs-gilbert-burns"
-      },
-      {
-        "fighter_a": "Charles Jourdain",
-        "fighter_b": "Kyler Phillips",
-        "weight_class": "Bantamweight",
-        "slug": "charles-jourdain-vs-kyler-phillips"
-      },
-      {
-        "fighter_a": "Jai Herbert",
-        "fighter_b": "Mandel Nallo",
-        "weight_class": "Lightweight",
-        "slug": "jai-herbert-vs-mandel-nallo"
-      },
-      {
-        "fighter_a": "Karine Silva",
-        "fighter_b": "Jasmine Jasudavicius",
-        "weight_class": "Women's Flyweight",
-        "slug": "karine-silva-vs-jasmine-jasudavicius"
-      },
-      {
-        "fighter_a": "Gauge Young",
-        "fighter_b": "Thiago Moises",
-        "weight_class": "Lightweight",
-        "slug": "gauge-young-vs-thiago-moises"
-      },
-      {
-        "fighter_a": "Marcio Barbosa",
-        "fighter_b": "Dennis Buzukja",
-        "weight_class": "Featherweight",
-        "slug": "marcio-barbosa-vs-dennis-buzukja"
-      },
-      {
-        "fighter_a": "Robert Valentin",
-        "fighter_b": "Julien Leblanc",
-        "weight_class": "Middleweight",
-        "slug": "robert-valentin-vs-julien-leblanc"
-      },
-      {
-        "fighter_a": "Tanner Boser",
-        "fighter_b": "Gokhan Saricam",
-        "weight_class": "Heavyweight",
-        "slug": "tanner-boser-vs-gokhan-saricam"
-      },
-      {
-        "fighter_a": "Melissa Croden",
-        "fighter_b": "Daria Zhelezniakova",
-        "weight_class": "Women's Bantamweight",
-        "slug": "melissa-croden-vs-daria-zhelezniakova"
-      },
-      {
-        "fighter_a": "Allan Nascimento",
-        "fighter_b": "Mitch Raposo",
-        "weight_class": "Flyweight",
-        "slug": "allan-nascimento-vs-mitch-raposo"
-      },
-      {
-        "fighter_a": "Jamey-Lyn Horth",
-        "fighter_b": "JJ Aldrich",
-        "weight_class": "Women's Flyweight",
-        "slug": "jamey-lyn-horth-vs-jj-aldrich"
-      },
-      {
-        "fighter_a": "John Castaneda",
-        "fighter_b": "Mark Vologdin",
-        "weight_class": "Bantamweight",
-        "slug": "john-castaneda-vs-mark-vologdin"
-      },
-      {
-        "fighter_a": "John Yannis",
-        "fighter_b": "Jamie Siraj",
-        "weight_class": "Bantamweight",
-        "slug": "john-yannis-vs-jamie-siraj"
-      }
-    ]
-  },
-  {
     "id": 771,
     "name": "UFC Fight Night: Sterling vs. Zalal",
     "date": "Saturday, April 25, 2026",
@@ -314,6 +227,12 @@
         "fighter_b": "Jose Ochoa",
         "weight_class": "Flyweight",
         "slug": "clayton-carpenter-vs-jose-ochoa"
+      },
+      {
+        "fighter_a": "Grant Dawson",
+        "fighter_b": "Mateusz Rebecki",
+        "weight_class": "Lightweight",
+        "slug": "grant-dawson-vs-mateusz-rebecki"
       }
     ]
   },
@@ -371,6 +290,36 @@
         "fighter_b": "Polyana Viana",
         "weight_class": "Women's Strawweight",
         "slug": "alice-ardelean-vs-polyana-viana"
+      },
+      {
+        "fighter_a": "Daniel Santos",
+        "fighter_b": "Dooho Choi",
+        "weight_class": "Featherweight",
+        "slug": "daniel-santos-vs-dooho-choi"
+      },
+      {
+        "fighter_a": "Malcolm Wellmaker",
+        "fighter_b": "Juan Diaz",
+        "weight_class": "Bantamweight",
+        "slug": "malcolm-wellmaker-vs-juan-diaz"
+      },
+      {
+        "fighter_a": "Nicolas Dalby",
+        "fighter_b": "Jeremiah Wells",
+        "weight_class": "Welterweight",
+        "slug": "nicolas-dalby-vs-jeremiah-wells"
+      },
+      {
+        "fighter_a": "Trey Ogden",
+        "fighter_b": "Tommy Gantt",
+        "weight_class": "Lightweight",
+        "slug": "trey-ogden-vs-tommy-gantt"
+      },
+      {
+        "fighter_a": "Cody Brundage",
+        "fighter_b": "Andre Petroski",
+        "weight_class": "Middleweight",
+        "slug": "cody-brundage-vs-andre-petroski"
       }
     ]
   },
@@ -440,6 +389,12 @@
         "fighter_b": "Xiong Jingnan",
         "weight_class": "Women's Strawweight",
         "slug": "angela-hill-vs-xiong-jingnan"
+      },
+      {
+        "fighter_a": "Muslim Salikhov",
+        "fighter_b": "Jake Matthews",
+        "weight_class": "Welterweight",
+        "slug": "muslim-salikhov-vs-jake-matthews"
       }
     ]
   },
@@ -524,6 +479,105 @@
         "fighter_b": "Steve Garcia",
         "weight_class": "Featherweight",
         "slug": "diego-lopes-vs-steve-garcia"
+      },
+      {
+        "fighter_a": "Derrick Lewis",
+        "fighter_b": "Josh Hokit",
+        "weight_class": "Heavyweight",
+        "slug": "derrick-lewis-vs-josh-hokit"
+      }
+    ]
+  },
+  {
+    "id": 1216,
+    "name": "UFC Fight Night",
+    "date": "Saturday, June 20, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night",
+    "matchups": [
+      {
+        "fighter_a": "Allan Nascimento",
+        "fighter_b": "Mitch Raposo",
+        "weight_class": "Flyweight",
+        "slug": "allan-nascimento-vs-mitch-raposo"
+      }
+    ]
+  },
+  {
+    "id": 1217,
+    "name": "UFC 329",
+    "date": "Saturday, July 11, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-329",
+    "matchups": [
+      {
+        "fighter_a": "Alexander Volkanovski",
+        "fighter_b": "Ilia Topuria",
+        "weight_class": "Featherweight",
+        "slug": "alexander-volkanovski-vs-ilia-topuria"
+      },
+      {
+        "fighter_a": "Alexander Volkanovski",
+        "fighter_b": "Islam Makhachev",
+        "weight_class": "Lightweight",
+        "slug": "alexander-volkanovski-vs-islam-makhachev"
+      },
+      {
+        "fighter_a": "Alexander Volkanovski",
+        "fighter_b": "Yair Rodriguez",
+        "weight_class": "Featherweight",
+        "slug": "alexander-volkanovski-vs-yair-rodriguez"
+      },
+      {
+        "fighter_a": "Dan Hooker",
+        "fighter_b": "Jalin Turner",
+        "weight_class": "Lightweight",
+        "slug": "dan-hooker-vs-jalin-turner"
+      },
+      {
+        "fighter_a": "Benoit Saint Denis",
+        "fighter_b": "Dustin Poirier",
+        "weight_class": "Lightweight",
+        "slug": "benoit-saint-denis-vs-dustin-poirier"
+      }
+    ]
+  },
+  {
+    "id": 1218,
+    "name": "UFC 330",
+    "date": "Saturday, August 15, 2026",
+    "location": "Philadelphia, Pennsylvania, USA",
+    "slug": "ufc-330",
+    "matchups": [
+      {
+        "fighter_a": "Diego Lopes",
+        "fighter_b": "Brian Ortega",
+        "weight_class": "Featherweight",
+        "slug": "diego-lopes-vs-brian-ortega"
+      },
+      {
+        "fighter_a": "Diego Lopes",
+        "fighter_b": "Dan Ige",
+        "weight_class": "Catchweight",
+        "slug": "diego-lopes-vs-dan-ige"
+      },
+      {
+        "fighter_a": "Dan Hooker",
+        "fighter_b": "Mateusz Gamrot",
+        "weight_class": "Lightweight",
+        "slug": "dan-hooker-vs-mateusz-gamrot"
+      },
+      {
+        "fighter_a": "Rafael Fiziev",
+        "fighter_b": "Justin Gaethje",
+        "weight_class": "Lightweight",
+        "slug": "rafael-fiziev-vs-justin-gaethje"
+      },
+      {
+        "fighter_a": "Mauricio Ruffy",
+        "fighter_b": "King Green",
+        "weight_class": "Lightweight",
+        "slug": "mauricio-ruffy-vs-king-green"
       }
     ]
   }
