@@ -3,27 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFC Fight Night: Sterling vs. Zalal Preview & Matchup Analysis | FightingData</title>
-    <meta name="description" content="UFC Fight Night: Sterling vs. Zalal fight card preview with head-to-head fighter comparisons, stats, and matchup analysis. April 25, 2026, Las Vegas, Nevada, USA.">
+    <title>UFC Fight Night: Sterling vs. Zalal Results & Fight Stats | FightingData</title>
+    <meta name="description" content="UFC Fight Night: Sterling vs. Zalal full results, fight stats, and round-by-round breakdowns. April 25, 2026, Las Vegas, Nevada, USA.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f5f5f5; color: #111; line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Event header */
         .event-header { margin-bottom: 2rem; border-bottom: 2px solid #111; padding-bottom: 1.5rem; }
-        .event-status { display: inline-block; background: #dc2626; color: #fff; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+        .event-status { display: inline-block; background: #111; color: #fff; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
         .event-title { font-size: 1.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
         .event-meta { color: #555; font-size: 1rem; }
         .event-meta strong { color: #111; }
-        .matchups { display: grid; gap: 1rem; }
-        .matchup-card { display: block; background: #fff; border: 1px solid #e2e2e2; border-radius: 8px; padding: 1.25rem 1.5rem; transition: all 0.2s; text-decoration: none; color: #111; }
-        .matchup-card:hover { border-color: #d62828; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        .weight-class { color: #777; font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .fighters { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
-        .fighter-name { font-size: 1.35rem; font-weight: 600; }
-        .fighter-record { font-size: 0.9rem; font-weight: 400; color: #777; }
-        .vs { color: #d62828; font-weight: 700; font-size: 1.1rem; }
-        .compare-cta { color: #d62828; font-weight: 600; font-size: 0.875rem; }
-        .no-matchups { background: #fff; border: 1px solid #e2e2e2; border-radius: 8px; padding: 2rem; text-align: center; color: #777; }
+        .back-link { display: inline-block; margin-bottom: 1rem; color: #d62828; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #b71c1c; }
+
+        /* Summary bar */
+        .event-summary { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .summary-stat { font-size: 0.85rem; color: #777; }
+        .summary-stat strong { color: #111; }
+
+        /* Fight cards */
+        .fights-list { display: grid; gap: 0.75rem; }
+        .fight-card { background: #fff; border: 1px solid #e2e2e2; border-radius: 8px; overflow: hidden; }
+        .fight-card-header { padding: 1rem 1.25rem; user-select: none; }
+        .fight-card-header.clickable { cursor: pointer; }
+        .fight-card-header.clickable:hover { background: #fafafa; }
+        .weight-class-tag { color: #777; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+        .fight-result { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; color: #111; }
+        .fight-detail-line { font-size: 0.82rem; color: #777; margin-bottom: 0.4rem; }
+
+        /* Totals */
+        .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .totals-line { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; flex-wrap: wrap; }
+        .totals-name { min-width: 140px; font-weight: 600; font-size: 0.82rem; }
+        .winner-name { color: #111; }
+        .loser-name { color: #777; }
+        .fighter-a-name { color: #111; }
+        .totals-stat { color: #111; font-family: 'SF Mono', Menlo, monospace; font-size: 0.8rem; }
+        .totals-pct { color: #777; font-size: 0.78rem; }
+        .totals-kd { color: #c2410c; font-size: 0.78rem; font-weight: 600; }
+
+        /* Expand toggle */
+        .expand-toggle { font-size: 0.72rem; color: #d62828; font-weight: 600; margin-top: 0.35rem; }
+
+        /* Round-by-round tables */
+        .rounds-detail { border-top: 1px solid #e2e2e2; }
+        .rounds-table { width: 100%; border-collapse: collapse; background: #fafafa; margin: 0; border-radius: 0; border: none; }
+        .rounds-table th { background: #fafafa; color: #999; font-size: 0.75rem; padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+        .rounds-table td { padding: 4px 10px; font-size: 0.78rem; color: #111; font-family: 'SF Mono', Menlo, monospace; border-bottom: none; }
+        .rounds-table tr:hover { background: #f0f0f0; }
+        .round-num { color: #555; font-weight: 600; }
+        .fighter-label { color: #777; font-size: 0.78rem; font-family: inherit; }
+        .winner-row td { color: #111; }
+        .winner-row .fighter-label { color: #d62828; font-weight: 600; }
+        .loser-row td { color: #777; }
+        .round-spacer td { padding: 2px 0; background: #fafafa; border-bottom: 1px solid #e2e2e2; }
+
         /* Header */
         .site-header { background: #111; position: sticky; top: 0; z-index: 90; }
         .site-header-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 52px; }
@@ -43,6 +80,7 @@
         .ev-footer-links { display: flex; gap: 32px; }
         .ev-footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; }
         .ev-footer-links a:hover { color: rgba(255,255,255,0.7); text-decoration: none; }
+
         @media (max-width: 768px) {
             .site-nav-desktop { display: none; }
             .site-nav-toggle { display: flex; }
@@ -50,8 +88,8 @@
             .ev-footer-inner { flex-direction: column; gap: 16px; }
             .ev-footer-links { gap: 20px; }
             .event-title { font-size: 1.5rem; }
-            .fighter-name { font-size: 1.125rem; }
-            .fighters { flex-direction: column; text-align: center; gap: 0.25rem; }
+            .fight-result { font-size: 1rem; }
+            .totals-name { min-width: 100px; }
         }
     </style>
 </head>
@@ -78,149 +116,462 @@
     </header>
 
     <div class="container">
+        <a href="/events/#previous" class="back-link">&#8592; Back to Events</a>
         <div class="event-header">
-            <div class="event-status" id="event-badge" data-event-date="2026-04-25"></div>
+            <div class="event-status">COMPLETED</div>
             <h1 class="event-title">UFC Fight Night: Sterling vs. Zalal</h1>
             <div class="event-meta"><strong>Saturday, April 25, 2026</strong> &bull; Las Vegas, Nevada, USA</div>
         </div>
-        <div class="matchups">
-            <a href="/compare/youssef-zalal-vs-aljamain-sterling/" class="matchup-card">
-                <div class="weight-class">Featherweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Youssef Zalal <span class="fighter-record">(18-5-1)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Aljamain Sterling <span class="fighter-record">(25-5-0)</span></div>
+        
+        <div class="event-summary">
+            <div class="summary-stat"><strong>13</strong> fights</div>
+            <div class="summary-stat"><strong>1</strong> KO/TKO</div>
+            <div class="summary-stat"><strong>1</strong> submissions</div>
+            <div class="summary-stat"><strong>11</strong> decisions</div>
+        </div>
+        <div class="fights-list">
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-0&#39;)">
+                    <div class="weight-class-tag">Featherweight</div>
+                    <div class="fight-result"><a href="/fighters/aljamain-sterling/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Aljamain Sterling</a> def. <a href="/fighters/youssef-zalal/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Youssef Zalal</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 5, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Aljamain Sterling (W)</span><span class="totals-stat">46/89</span><span class="totals-pct">52%</span><span class="totals-stat">TD 6/11</span><span class="totals-stat">Ctrl 13:49</span></div><div class="totals-line"><span class="totals-name loser-name">Youssef Zalal (L)</span><span class="totals-stat">35/65</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 3:59</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-0">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/joselyne-edwards-vs-norma-dumont/" class="matchup-card">
-                <div class="weight-class">Women's Bantamweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Joselyne Edwards <span class="fighter-record">(17-6-0)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Norma Dumont <span class="fighter-record">(13-2-0)</span></div>
+                <div class="rounds-detail" id="rounds-hist-0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Aljamain Sterling</td><td>8/24</td><td>33%</td><td>1/2</td><td>2:19</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Youssef Zalal</td><td>4/16</td><td>25%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Aljamain Sterling</td><td>15/29</td><td>52%</td><td>1/3</td><td>2:25</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Youssef Zalal</td><td>15/23</td><td>65%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Aljamain Sterling</td><td>2/3</td><td>67%</td><td>2/2</td><td>0:47</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Youssef Zalal</td><td>3/4</td><td>75%</td><td>0/0</td><td>3:48</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R4</td><td class="fighter-label">Aljamain Sterling</td><td>16/22</td><td>73%</td><td>1/2</td><td>4:16</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Youssef Zalal</td><td>3/4</td><td>75%</td><td>0/0</td><td>0:11</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R5</td><td class="fighter-label">Aljamain Sterling</td><td>5/11</td><td>45%</td><td>1/2</td><td>4:02</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Youssef Zalal</td><td>10/18</td><td>56%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-1&#39;)">
+                    <div class="weight-class-tag">Women's Bantamweight</div>
+                    <div class="fight-result"><a href="/fighters/joselyne-edwards/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Joselyne Edwards</a> def. <a href="/fighters/norma-dumont/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Norma Dumont</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Joselyne Edwards (W)</span><span class="totals-stat">70/152</span><span class="totals-pct">46%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 2:21</span></div><div class="totals-line"><span class="totals-name loser-name">Norma Dumont (L)</span><span class="totals-stat">51/100</span><span class="totals-pct">51%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 2:09</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-1">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/rafa-garcia-vs-alexander-hernandez/" class="matchup-card">
-                <div class="weight-class">Lightweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Rafa Garcia <span class="fighter-record">(18-4-0)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Alexander Hernandez <span class="fighter-record">(18-8-0)</span></div>
+                <div class="rounds-detail" id="rounds-hist-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Joselyne Edwards</td><td>6/13</td><td>46%</td><td>0/2</td><td>1:31</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Norma Dumont</td><td>6/14</td><td>43%</td><td>0/1</td><td>2:09</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Joselyne Edwards</td><td>27/61</td><td>44%</td><td>0/1</td><td>0:20</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Norma Dumont</td><td>24/45</td><td>53%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Joselyne Edwards</td><td>37/78</td><td>47%</td><td>0/0</td><td>0:30</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Norma Dumont</td><td>21/41</td><td>51%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-2&#39;)">
+                    <div class="weight-class-tag">Lightweight</div>
+                    <div class="fight-result"><a href="/fighters/rafa-garcia/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Rafa Garcia</a> def. <a href="/fighters/alexander-hernandez/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Alexander Hernandez</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Rafa Garcia (W)</span><span class="totals-stat">59/169</span><span class="totals-pct">35%</span><span class="totals-stat">TD 4/7</span><span class="totals-stat">Ctrl 1:50</span></div><div class="totals-line"><span class="totals-name loser-name">Alexander Hernandez (L)</span><span class="totals-stat">50/145</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-2">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/davey-grant-vs-juan-adrian-martinetti/" class="matchup-card">
-                <div class="weight-class">Bantamweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Davey Grant <span class="fighter-record">(17-8-0)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Juan Adrian Martinetti <span class="fighter-record">(17-1-0)</span></div>
+                <div class="rounds-detail" id="rounds-hist-2" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Rafa Garcia</td><td>10/40</td><td>25%</td><td>2/2</td><td>0:28</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Alexander Hernandez</td><td>8/27</td><td>30%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Rafa Garcia</td><td>20/66</td><td>30%</td><td>0/1</td><td>0:10</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Alexander Hernandez</td><td>18/38</td><td>47%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Rafa Garcia</td><td>29/63</td><td>46%</td><td>2/4</td><td>1:12</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Alexander Hernandez</td><td>24/80</td><td>30%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-3&#39;)">
+                    <div class="weight-class-tag">Bantamweight</div>
+                    <div class="fight-result"><a href="/fighters/davey-grant/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Davey Grant</a> def. <a href="/fighters/juan-adrian-martinetti/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Juan Adrian Martinetti</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Davey Grant (W)</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name loser-name">Juan Adrian Martinetti (L)</span><span class="totals-stat">99/196</span><span class="totals-pct">51%</span><span class="totals-stat">TD 1/5</span><span class="totals-stat">Ctrl 0:43</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-3">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/raoni-barcelos-vs-montel-jackson/" class="matchup-card">
-                <div class="weight-class">Bantamweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Raoni Barcelos <span class="fighter-record">(21-5-0)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Montel Jackson <span class="fighter-record">(15-3-0)</span></div>
+                <div class="rounds-detail" id="rounds-hist-3" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Davey Grant</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Juan Adrian Martinetti</td><td>18/41</td><td>44%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Davey Grant</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Juan Adrian Martinetti</td><td>38/79</td><td>48%</td><td>0/1</td><td>0:06</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Davey Grant</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Juan Adrian Martinetti</td><td>43/76</td><td>57%</td><td>1/3</td><td>0:37</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-4&#39;)">
+                    <div class="weight-class-tag">Bantamweight</div>
+                    <div class="fight-result"><a href="/fighters/raoni-barcelos/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Raoni Barcelos</a> def. <a href="/fighters/montel-jackson/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Montel Jackson</a></div>
+                    <div class="fight-detail-line">Decision (Split) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Raoni Barcelos (W)</span><span class="totals-stat">21/38</span><span class="totals-pct">55%</span><span class="totals-stat">TD 6/18</span><span class="totals-stat">Ctrl 7:45</span></div><div class="totals-line"><span class="totals-name loser-name">Montel Jackson (L)</span><span class="totals-stat">35/66</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:23</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-4">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/marcus-buchecha-vs-ryan-spann/" class="matchup-card">
-                <div class="weight-class">Heavyweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Marcus Buchecha <span class="fighter-record">(5-2-1)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Ryan Spann <span class="fighter-record">(23-11-0)</span></div>
+                <div class="rounds-detail" id="rounds-hist-4" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Raoni Barcelos</td><td>3/4</td><td>75%</td><td>2/4</td><td>2:49</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Montel Jackson</td><td>14/24</td><td>58%</td><td>0/0</td><td>0:23</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Raoni Barcelos</td><td>8/17</td><td>47%</td><td>1/7</td><td>2:14</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Montel Jackson</td><td>13/19</td><td>68%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Raoni Barcelos</td><td>10/17</td><td>59%</td><td>3/7</td><td>2:42</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Montel Jackson</td><td>8/23</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-5&#39;)">
+                    <div class="weight-class-tag">Heavyweight</div>
+                    <div class="fight-result"><a href="/fighters/ryan-spann/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Ryan Spann</a> def. <a href="/fighters/marcus-buchecha/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Marcus Buchecha</a></div>
+                    <div class="fight-detail-line">KO/TKO (Punch) &bull; Rd 2, 2:10</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Ryan Spann (W)</span><span class="totals-stat">15/27</span><span class="totals-pct">56%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:56</span></div><div class="totals-line"><span class="totals-name loser-name">Marcus Buchecha (L)</span><span class="totals-stat">8/13</span><span class="totals-pct">62%</span><span class="totals-stat">TD 1/7</span><span class="totals-stat">Ctrl 1:09</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-5">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/rodolfo-vieira-vs-eric-mcconico/" class="matchup-card">
-                <div class="weight-class">Middleweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Rodolfo Vieira <span class="fighter-record">(11-4-0)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Eric McConico <span class="fighter-record">(10-4-1)</span></div>
+                <div class="rounds-detail" id="rounds-hist-5" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Ryan Spann</td><td>10/18</td><td>56%</td><td>0/0</td><td>2:29</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Marcus Buchecha</td><td>4/6</td><td>67%</td><td>1/6</td><td>1:05</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Ryan Spann</td><td>5/9</td><td>56%</td><td>0/0</td><td>0:27</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Marcus Buchecha</td><td>4/7</td><td>57%</td><td>0/1</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-6&#39;)">
+                    <div class="weight-class-tag">Middleweight</div>
+                    <div class="fight-result"><a href="/fighters/eric-mcconico/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Eric McConico</a> def. <a href="/fighters/rodolfo-vieira/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Rodolfo Vieira</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Eric McConico (W)</span><span class="totals-stat">54/102</span><span class="totals-pct">53%</span><span class="totals-stat">TD 2/2</span><span class="totals-stat">Ctrl 0:51</span></div><div class="totals-line"><span class="totals-name loser-name">Rodolfo Vieira (L)</span><span class="totals-stat">40/70</span><span class="totals-pct">57%</span><span class="totals-stat">TD 4/15</span><span class="totals-stat">Ctrl 6:24</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-6">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/jackson-mcvey-vs-sedriques-dumas/" class="matchup-card">
-                <div class="weight-class">Middleweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Jackson McVey <span class="fighter-record">(6-2-0)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Sedriques Dumas <span class="fighter-record">(10-4-0 (1 NC))</span></div>
+                <div class="rounds-detail" id="rounds-hist-6" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Eric McConico</td><td>11/14</td><td>79%</td><td>2/2</td><td>0:21</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Rodolfo Vieira</td><td>10/13</td><td>77%</td><td>4/9</td><td>3:15</td><td>1</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Eric McConico</td><td>20/46</td><td>43%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Rodolfo Vieira</td><td>20/33</td><td>61%</td><td>0/3</td><td>1:48</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Eric McConico</td><td>23/42</td><td>55%</td><td>0/0</td><td>0:30</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Rodolfo Vieira</td><td>10/24</td><td>42%</td><td>0/3</td><td>1:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-7&#39;)">
+                    <div class="weight-class-tag">Middleweight</div>
+                    <div class="fight-result"><a href="/fighters/jackson-mcvey/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Jackson McVey</a> def. <a href="/fighters/sedriques-dumas/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Sedriques Dumas</a></div>
+                    <div class="fight-detail-line">Submission (D'Arce Choke) &bull; Rd 1, 2:14</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Jackson McVey (W)</span><span class="totals-stat">21/29</span><span class="totals-pct">72%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:03</span></div><div class="totals-line"><span class="totals-name loser-name">Sedriques Dumas (L)</span><span class="totals-stat">3/4</span><span class="totals-pct">75%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:02</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-7">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/mayra-bueno-silva-vs-michelle-montague/" class="matchup-card">
-                <div class="weight-class">Women's Bantamweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Mayra Bueno Silva <span class="fighter-record">(10-6-1 (1 NC))</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Michelle Montague <span class="fighter-record">(7-0-0)</span></div>
+                <div class="rounds-detail" id="rounds-hist-7" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Jackson McVey</td><td>21/29</td><td>72%</td><td>0/0</td><td>2:03</td><td>1</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Sedriques Dumas</td><td>3/4</td><td>75%</td><td>0/0</td><td>0:02</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-8&#39;)">
+                    <div class="weight-class-tag">Women's Bantamweight</div>
+                    <div class="fight-result"><a href="/fighters/michelle-montague/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Michelle Montague</a> def. <a href="/fighters/mayra-bueno-silva/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Mayra Bueno Silva</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Michelle Montague (W)</span><span class="totals-stat">42/83</span><span class="totals-pct">51%</span><span class="totals-stat">TD 2/6</span><span class="totals-stat">Ctrl 10:14</span></div><div class="totals-line"><span class="totals-name loser-name">Mayra Bueno Silva (L)</span><span class="totals-stat">26/45</span><span class="totals-pct">58%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:39</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-8">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/cody-durden-vs-jafel-filho/" class="matchup-card">
-                <div class="weight-class">Flyweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Cody Durden <span class="fighter-record">(17-10-1)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Jafel Filho <span class="fighter-record">(17-4-0)</span></div>
+                <div class="rounds-detail" id="rounds-hist-8" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Michelle Montague</td><td>16/20</td><td>80%</td><td>1/1</td><td>4:56</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mayra Bueno Silva</td><td>0/0</td><td>—</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Michelle Montague</td><td>18/43</td><td>42%</td><td>0/4</td><td>2:01</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mayra Bueno Silva</td><td>20/37</td><td>54%</td><td>0/0</td><td>0:29</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Michelle Montague</td><td>8/20</td><td>40%</td><td>1/1</td><td>3:17</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Mayra Bueno Silva</td><td>6/8</td><td>75%</td><td>0/0</td><td>1:10</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-9&#39;)">
+                    <div class="weight-class-tag">Flyweight</div>
+                    <div class="fight-result"><a href="/fighters/cody-durden/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Cody Durden</a> def. <a href="/fighters/jafel-filho/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Jafel Filho</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Cody Durden (W)</span><span class="totals-stat">34/72</span><span class="totals-pct">47%</span><span class="totals-stat">TD 5/5</span><span class="totals-stat">Ctrl 5:14</span></div><div class="totals-line"><span class="totals-name loser-name">Jafel Filho (L)</span><span class="totals-stat">23/63</span><span class="totals-pct">37%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 3:08</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-9">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/francis-marshall-vs-lucas-brennan/" class="matchup-card">
-                <div class="weight-class">Lightweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Francis Marshall <span class="fighter-record">(9-3-0)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Lucas Brennan</div>
+                <div class="rounds-detail" id="rounds-hist-9" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Cody Durden</td><td>11/23</td><td>48%</td><td>2/2</td><td>1:20</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jafel Filho</td><td>3/12</td><td>25%</td><td>1/1</td><td>2:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Cody Durden</td><td>15/34</td><td>44%</td><td>2/2</td><td>0:37</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jafel Filho</td><td>8/28</td><td>29%</td><td>1/1</td><td>0:44</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Cody Durden</td><td>8/15</td><td>53%</td><td>1/1</td><td>3:17</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Jafel Filho</td><td>12/23</td><td>52%</td><td>0/1</td><td>0:24</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-10&#39;)">
+                    <div class="weight-class-tag">Lightweight</div>
+                    <div class="fight-result"><a href="/fighters/francis-marshall/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Francis Marshall</a> def. <a href="/fighters/lucas-brennan/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Lucas Brennan</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Francis Marshall (W)</span><span class="totals-stat">33/69</span><span class="totals-pct">48%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 6:36</span></div><div class="totals-line"><span class="totals-name loser-name">Lucas Brennan (L)</span><span class="totals-stat">9/36</span><span class="totals-pct">25%</span><span class="totals-stat">TD 0/6</span><span class="totals-stat">Ctrl 0:47</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-10">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/max-griffin-vs-victor-valenzuela/" class="matchup-card">
-                <div class="weight-class">Welterweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Max Griffin <span class="fighter-record">(20-12-0)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Victor Valenzuela</div>
+                <div class="rounds-detail" id="rounds-hist-10" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Francis Marshall</td><td>9/16</td><td>56%</td><td>1/1</td><td>3:28</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Lucas Brennan</td><td>2/8</td><td>25%</td><td>0/2</td><td>0:13</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Francis Marshall</td><td>8/10</td><td>80%</td><td>1/1</td><td>3:08</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Lucas Brennan</td><td>1/7</td><td>14%</td><td>0/1</td><td>0:34</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Francis Marshall</td><td>16/43</td><td>37%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Lucas Brennan</td><td>6/21</td><td>29%</td><td>0/3</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-11&#39;)">
+                    <div class="weight-class-tag">Welterweight</div>
+                    <div class="fight-result"><a href="/fighters/victor-valenzuela/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Victor Valenzuela</a> def. <a href="/fighters/max-griffin/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Max Griffin</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name loser-name">Max Griffin (L)</span><span class="totals-stat">40/89</span><span class="totals-pct">45%</span><span class="totals-stat">TD 4/9</span><span class="totals-stat">Ctrl 1:03</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-11">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
-            <a href="/compare/talita-alencar-vs-julia-polastri/" class="matchup-card">
-                <div class="weight-class">Women's Strawweight</div>
-                <div class="fighters">
-                    <div class="fighter-name">Talita Alencar <span class="fighter-record">(7-1-1)</span></div>
-                    <div class="vs">vs</div>
-                    <div class="fighter-name">Julia Polastri <span class="fighter-record">(14-5-0)</span></div>
+                <div class="rounds-detail" id="rounds-hist-11" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Victor Valenzuela</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Max Griffin</td><td>10/24</td><td>42%</td><td>1/1</td><td>0:21</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Victor Valenzuela</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Max Griffin</td><td>10/27</td><td>37%</td><td>2/4</td><td>0:19</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Victor Valenzuela</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Max Griffin</td><td>20/38</td><td>53%</td><td>1/4</td><td>0:23</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
+            <div class="fight-card">
+                <div class="fight-card-header clickable"
+                     onclick="toggleRounds(&#39;hist-12&#39;)">
+                    <div class="weight-class-tag">Women's Strawweight</div>
+                    <div class="fight-result"><a href="/fighters/talita-alencar/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Talita Alencar</a> def. <a href="/fighters/julia-polastri/" style="color:inherit;text-decoration:none;border-bottom:1px solid #ccc;">Julia Polastri</a></div>
+                    <div class="fight-detail-line">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                    <div class="fight-totals-block"><div class="totals-line"><span class="totals-name winner-name">Talita Alencar (W)</span><span class="totals-stat">60/195</span><span class="totals-pct">31%</span><span class="totals-stat">TD 3/5</span><span class="totals-stat">Ctrl 2:27</span></div><div class="totals-line"><span class="totals-name loser-name">Julia Polastri (L)</span><span class="totals-stat">78/111</span><span class="totals-pct">70%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:04</span></div></div>
+                    <div class="expand-toggle" id="toggle-hist-12">&#9660; Round Details</div>
                 </div>
-                <div class="compare-cta">View Fighter Comparison &rarr;</div>
-            </a>
+                <div class="rounds-detail" id="rounds-hist-12" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="winner-row"><td class="round-num">R1</td><td class="fighter-label">Talita Alencar</td><td>12/49</td><td>24%</td><td>2/2</td><td>1:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Julia Polastri</td><td>21/26</td><td>81%</td><td>0/0</td><td>0:04</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R2</td><td class="fighter-label">Talita Alencar</td><td>20/65</td><td>31%</td><td>1/3</td><td>1:27</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Julia Polastri</td><td>27/40</td><td>68%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="winner-row"><td class="round-num">R3</td><td class="fighter-label">Talita Alencar</td><td>28/81</td><td>35%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="loser-row"><td></td><td class="fighter-label">Julia Polastri</td><td>30/45</td><td>67%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div>
+            </div>
         </div>
         <footer class="ev-footer"><div class="ev-footer-inner"><div><span style="color:#fff;font-weight:800;font-size:14px;">FIGHTING<span style="color:#d62828;">DATA</span></span><div style="margin-top:6px;">Data sourced from UFCStats.com &middot; &copy; 2026 FightingData.com</div></div><div class="ev-footer-links"><a href="/">Home</a><a href="/events/">Events</a><a href="/fighters/">Fighters</a><a href="/about/">About</a></div></div></footer>
     </div>
     <script>
-    (function() {
-        var badge = document.getElementById('event-badge');
-        if (!badge) return;
-        var eventDate = badge.getAttribute('data-event-date');
-        if (!eventDate) { badge.style.display = 'none'; return; }
-        var parts = eventDate.split('-');
-        var evtDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
-        var today = new Date();
-        today.setHours(0, 0, 0, 0);
-        evtDate.setHours(0, 0, 0, 0);
-        var diff = Math.round((evtDate - today) / (1000 * 60 * 60 * 24));
-        if (diff === 0) badge.textContent = 'TONIGHT';
-        else if (diff === 1) badge.textContent = 'TOMORROW';
-        else if (diff > 1) badge.textContent = 'IN ' + diff + ' DAYS';
-        else badge.style.display = 'none';
-    })();
+    function toggleRounds(uid) {
+        var panel  = document.getElementById('rounds-' + uid);
+        var toggle = document.getElementById('toggle-' + uid);
+        if (!panel) return;
+        if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+            if (toggle) toggle.innerHTML = '&#9650; Round Details';
+        } else {
+            panel.style.display = 'none';
+            if (toggle) toggle.innerHTML = '&#9660; Round Details';
+        }
+    }
     </script>
 </body>
 </html>
