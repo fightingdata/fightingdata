@@ -1,86 +1,5 @@
 [
   {
-    "id": 772,
-    "name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "date": "Saturday, May 2, 2026",
-    "location": "Perth, Western Australia, Australia",
-    "slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "matchups": [
-      {
-        "fighter_a": "Jack Della Maddalena",
-        "fighter_b": "Carlos Prates",
-        "weight_class": "Welterweight",
-        "slug": "jack-della-maddalena-vs-carlos-prates"
-      },
-      {
-        "fighter_a": "Quillian Salkild",
-        "fighter_b": "Beneil Dariush",
-        "weight_class": "Lightweight",
-        "slug": "quillian-salkild-vs-beneil-dariush"
-      },
-      {
-        "fighter_a": "Tim Elliott",
-        "fighter_b": "Steve Erceg",
-        "weight_class": "Flyweight",
-        "slug": "tim-elliott-vs-steve-erceg"
-      },
-      {
-        "fighter_a": "Brando Pericic",
-        "fighter_b": "Shamil Gaziev",
-        "weight_class": "Heavyweight",
-        "slug": "brando-pericic-vs-shamil-gaziev"
-      },
-      {
-        "fighter_a": "Tai Tuivasa",
-        "fighter_b": "Louie Sutherland",
-        "weight_class": "Heavyweight",
-        "slug": "tai-tuivasa-vs-louie-sutherland"
-      },
-      {
-        "fighter_a": "Cam Rowston",
-        "fighter_b": "Robert Bryczek",
-        "weight_class": "Middleweight",
-        "slug": "cam-rowston-vs-robert-bryczek"
-      },
-      {
-        "fighter_a": "Junior Tafa",
-        "fighter_b": "Kevin Christian",
-        "weight_class": "Light Heavyweight",
-        "slug": "junior-tafa-vs-kevin-christian"
-      },
-      {
-        "fighter_a": "Jacob Malkoun",
-        "fighter_b": "Gerald Meerschaert",
-        "weight_class": "Middleweight",
-        "slug": "jacob-malkoun-vs-gerald-meerschaert"
-      },
-      {
-        "fighter_a": "Colby Thicknesse",
-        "fighter_b": "Vince Morales",
-        "weight_class": "Bantamweight",
-        "slug": "colby-thicknesse-vs-vince-morales"
-      },
-      {
-        "fighter_a": "Wes Schultz",
-        "fighter_b": "Benjamin Johnston",
-        "weight_class": "Middleweight",
-        "slug": "wes-schultz-vs-benjamin-johnston"
-      },
-      {
-        "fighter_a": "Jonathan Micallef",
-        "fighter_b": "Themba Gorimbo",
-        "weight_class": "Welterweight",
-        "slug": "jonathan-micallef-vs-themba-gorimbo"
-      },
-      {
-        "fighter_a": "Dom Mar Fan",
-        "fighter_b": "Kody Steele",
-        "weight_class": "Lightweight",
-        "slug": "dom-mar-fan-vs-kody-steele"
-      }
-    ]
-  },
-  {
     "id": 1212,
     "name": "UFC 328: Chimaev vs. Strickland",
     "date": "Saturday, May 9, 2026",
@@ -134,6 +53,12 @@
         "fighter_b": "Mateusz Rebecki",
         "weight_class": "Lightweight",
         "slug": "grant-dawson-vs-mateusz-rebecki"
+      },
+      {
+        "fighter_a": "Jared Gordon",
+        "fighter_b": "Jim Miller",
+        "weight_class": "Lightweight",
+        "slug": "jared-gordon-vs-jim-miller"
       },
       {
         "fighter_a": "Roman Kopylov",
@@ -320,6 +245,12 @@
         "fighter_b": "Loma Lookboonmee",
         "weight_class": "Women's Strawweight",
         "slug": "jaqueline-amorim-vs-loma-lookboonmee"
+      },
+      {
+        "fighter_a": "Zhu Kangjie",
+        "fighter_b": "Ramon Taveras",
+        "weight_class": "Featherweight",
+        "slug": "zhu-kangjie-vs-ramon-taveras"
       }
     ]
   },
@@ -457,16 +388,46 @@
   },
   {
     "id": 1216,
-    "name": "UFC Fight Night",
+    "name": "UFC Fight Night: Kape vs. Horiguchi",
     "date": "Saturday, June 20, 2026",
     "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night",
+    "slug": "ufc-fight-night-kape-vs-horiguchi",
     "matchups": [
+      {
+        "fighter_a": "Kyoji Horiguchi",
+        "fighter_b": "Manel Kape",
+        "weight_class": "Flyweight",
+        "slug": "kyoji-horiguchi-vs-manel-kape"
+      },
       {
         "fighter_a": "Allan Nascimento",
         "fighter_b": "Mitch Raposo",
         "weight_class": "Flyweight",
         "slug": "allan-nascimento-vs-mitch-raposo"
+      },
+      {
+        "fighter_a": "Ion Cutelaba",
+        "fighter_b": "Navajo Stirling",
+        "weight_class": "Light Heavyweight",
+        "slug": "ion-cutelaba-vs-navajo-stirling"
+      },
+      {
+        "fighter_a": "Kevin Borjas",
+        "fighter_b": "Andre Lima",
+        "weight_class": "Flyweight",
+        "slug": "kevin-borjas-vs-andre-lima"
+      },
+      {
+        "fighter_a": "Hyder Amil",
+        "fighter_b": "Christian Rodriguez",
+        "weight_class": "Featherweight",
+        "slug": "hyder-amil-vs-christian-rodriguez"
+      },
+      {
+        "fighter_a": "Bia Mesquita",
+        "fighter_b": "Melissa Mullins",
+        "weight_class": "Women's Bantamweight",
+        "slug": "bia-mesquita-vs-melissa-mullins"
       }
     ]
   },

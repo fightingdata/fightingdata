@@ -1,125 +1,5 @@
 [
   {
-    "fighter_a": "Jack Della Maddalena",
-    "fighter_b": "Carlos Prates",
-    "slug": "jack-della-maddalena-vs-carlos-prates",
-    "url": "/compare/jack-della-maddalena-vs-carlos-prates/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Quillian Salkild",
-    "fighter_b": "Beneil Dariush",
-    "slug": "quillian-salkild-vs-beneil-dariush",
-    "url": "/compare/quillian-salkild-vs-beneil-dariush/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Tim Elliott",
-    "fighter_b": "Steve Erceg",
-    "slug": "tim-elliott-vs-steve-erceg",
-    "url": "/compare/tim-elliott-vs-steve-erceg/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Brando Pericic",
-    "fighter_b": "Shamil Gaziev",
-    "slug": "brando-pericic-vs-shamil-gaziev",
-    "url": "/compare/brando-pericic-vs-shamil-gaziev/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Tai Tuivasa",
-    "fighter_b": "Louie Sutherland",
-    "slug": "tai-tuivasa-vs-louie-sutherland",
-    "url": "/compare/tai-tuivasa-vs-louie-sutherland/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Cam Rowston",
-    "fighter_b": "Robert Bryczek",
-    "slug": "cam-rowston-vs-robert-bryczek",
-    "url": "/compare/cam-rowston-vs-robert-bryczek/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Junior Tafa",
-    "fighter_b": "Kevin Christian",
-    "slug": "junior-tafa-vs-kevin-christian",
-    "url": "/compare/junior-tafa-vs-kevin-christian/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Jacob Malkoun",
-    "fighter_b": "Gerald Meerschaert",
-    "slug": "jacob-malkoun-vs-gerald-meerschaert",
-    "url": "/compare/jacob-malkoun-vs-gerald-meerschaert/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Colby Thicknesse",
-    "fighter_b": "Vince Morales",
-    "slug": "colby-thicknesse-vs-vince-morales",
-    "url": "/compare/colby-thicknesse-vs-vince-morales/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Wes Schultz",
-    "fighter_b": "Benjamin Johnston",
-    "slug": "wes-schultz-vs-benjamin-johnston",
-    "url": "/compare/wes-schultz-vs-benjamin-johnston/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Jonathan Micallef",
-    "fighter_b": "Themba Gorimbo",
-    "slug": "jonathan-micallef-vs-themba-gorimbo",
-    "url": "/compare/jonathan-micallef-vs-themba-gorimbo/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Dom Mar Fan",
-    "fighter_b": "Kody Steele",
-    "slug": "dom-mar-fan-vs-kody-steele",
-    "url": "/compare/dom-mar-fan-vs-kody-steele/",
-    "event_name": "UFC Fight Night: Della Maddalena vs. Prates",
-    "event_date": "Saturday, May 2, 2026",
-    "event_slug": "ufc-fight-night-della-maddalena-vs-prates",
-    "weight_class": "Lightweight"
-  },
-  {
     "fighter_a": "Sean Strickland",
     "fighter_b": "Khamzat Chimaev",
     "slug": "sean-strickland-vs-khamzat-chimaev",
@@ -194,6 +74,16 @@
     "fighter_b": "Mateusz Rebecki",
     "slug": "grant-dawson-vs-mateusz-rebecki",
     "url": "/compare/grant-dawson-vs-mateusz-rebecki/",
+    "event_name": "UFC 328: Chimaev vs. Strickland",
+    "event_date": "Saturday, May 9, 2026",
+    "event_slug": "ufc-328-chimaev-vs-strickland",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Jared Gordon",
+    "fighter_b": "Jim Miller",
+    "slug": "jared-gordon-vs-jim-miller",
+    "url": "/compare/jared-gordon-vs-jim-miller/",
     "event_name": "UFC 328: Chimaev vs. Strickland",
     "event_date": "Saturday, May 9, 2026",
     "event_slug": "ufc-328-chimaev-vs-strickland",
@@ -480,6 +370,16 @@
     "weight_class": "Women's Strawweight"
   },
   {
+    "fighter_a": "Zhu Kangjie",
+    "fighter_b": "Ramon Taveras",
+    "slug": "zhu-kangjie-vs-ramon-taveras",
+    "url": "/compare/zhu-kangjie-vs-ramon-taveras/",
+    "event_name": "UFC Fight Night: Song vs. Figueiredo",
+    "event_date": "Saturday, May 30, 2026",
+    "event_slug": "ufc-fight-night-song-vs-figueiredo",
+    "weight_class": "Featherweight"
+  },
+  {
     "fighter_a": "Belal Muhammad",
     "fighter_b": "Gabriel Bonfim",
     "slug": "belal-muhammad-vs-gabriel-bonfim",
@@ -670,14 +570,64 @@
     "weight_class": "Heavyweight"
   },
   {
+    "fighter_a": "Kyoji Horiguchi",
+    "fighter_b": "Manel Kape",
+    "slug": "kyoji-horiguchi-vs-manel-kape",
+    "url": "/compare/kyoji-horiguchi-vs-manel-kape/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Flyweight"
+  },
+  {
     "fighter_a": "Allan Nascimento",
     "fighter_b": "Mitch Raposo",
     "slug": "allan-nascimento-vs-mitch-raposo",
     "url": "/compare/allan-nascimento-vs-mitch-raposo/",
-    "event_name": "UFC Fight Night",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
     "event_date": "Saturday, June 20, 2026",
-    "event_slug": "ufc-fight-night",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
     "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Ion Cutelaba",
+    "fighter_b": "Navajo Stirling",
+    "slug": "ion-cutelaba-vs-navajo-stirling",
+    "url": "/compare/ion-cutelaba-vs-navajo-stirling/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Kevin Borjas",
+    "fighter_b": "Andre Lima",
+    "slug": "kevin-borjas-vs-andre-lima",
+    "url": "/compare/kevin-borjas-vs-andre-lima/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Hyder Amil",
+    "fighter_b": "Christian Rodriguez",
+    "slug": "hyder-amil-vs-christian-rodriguez",
+    "url": "/compare/hyder-amil-vs-christian-rodriguez/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Bia Mesquita",
+    "fighter_b": "Melissa Mullins",
+    "slug": "bia-mesquita-vs-melissa-mullins",
+    "url": "/compare/bia-mesquita-vs-melissa-mullins/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Women's Bantamweight"
   },
   {
     "fighter_a": "Alexander Volkanovski",
