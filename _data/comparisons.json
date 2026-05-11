@@ -1,135 +1,5 @@
 [
   {
-    "fighter_a": "Sean Strickland",
-    "fighter_b": "Khamzat Chimaev",
-    "slug": "sean-strickland-vs-khamzat-chimaev",
-    "url": "/compare/sean-strickland-vs-khamzat-chimaev/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Joshua Van",
-    "fighter_b": "Tatsuro Taira",
-    "slug": "joshua-van-vs-tatsuro-taira",
-    "url": "/compare/joshua-van-vs-tatsuro-taira/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Alexander Volkov",
-    "fighter_b": "Waldo Cortes Acosta",
-    "slug": "alexander-volkov-vs-waldo-cortes-acosta",
-    "url": "/compare/alexander-volkov-vs-waldo-cortes-acosta/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Sean Brady",
-    "fighter_b": "Joaquin Buckley",
-    "slug": "sean-brady-vs-joaquin-buckley",
-    "url": "/compare/sean-brady-vs-joaquin-buckley/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "King Green",
-    "fighter_b": "Jeremy Stephens",
-    "slug": "king-green-vs-jeremy-stephens",
-    "url": "/compare/king-green-vs-jeremy-stephens/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Ateba Gautier",
-    "fighter_b": "Ozzy Diaz",
-    "slug": "ateba-gautier-vs-ozzy-diaz",
-    "url": "/compare/ateba-gautier-vs-ozzy-diaz/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Yaroslav Amosov",
-    "fighter_b": "Joel Alvarez",
-    "slug": "yaroslav-amosov-vs-joel-alvarez",
-    "url": "/compare/yaroslav-amosov-vs-joel-alvarez/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Grant Dawson",
-    "fighter_b": "Mateusz Rebecki",
-    "slug": "grant-dawson-vs-mateusz-rebecki",
-    "url": "/compare/grant-dawson-vs-mateusz-rebecki/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Jared Gordon",
-    "fighter_b": "Jim Miller",
-    "slug": "jared-gordon-vs-jim-miller",
-    "url": "/compare/jared-gordon-vs-jim-miller/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Roman Kopylov",
-    "fighter_b": "Marco Tulio",
-    "slug": "roman-kopylov-vs-marco-tulio",
-    "url": "/compare/roman-kopylov-vs-marco-tulio/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Pat Sabatini",
-    "fighter_b": "William Gomis",
-    "slug": "pat-sabatini-vs-william-gomis",
-    "url": "/compare/pat-sabatini-vs-william-gomis/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Baisangur Susurkaev",
-    "fighter_b": "Djorden Santos",
-    "slug": "baisangur-susurkaev-vs-djorden-santos",
-    "url": "/compare/baisangur-susurkaev-vs-djorden-santos/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Clayton Carpenter",
-    "fighter_b": "Jose Ochoa",
-    "slug": "clayton-carpenter-vs-jose-ochoa",
-    "url": "/compare/clayton-carpenter-vs-jose-ochoa/",
-    "event_name": "UFC 328: Chimaev vs. Strickland",
-    "event_date": "Saturday, May 9, 2026",
-    "event_slug": "ufc-328-chimaev-vs-strickland",
-    "weight_class": "Flyweight"
-  },
-  {
     "fighter_a": "Arnold Allen",
     "fighter_b": "Melquizael Costa",
     "slug": "arnold-allen-vs-melquizael-costa",
@@ -380,6 +250,16 @@
     "weight_class": "Featherweight"
   },
   {
+    "fighter_a": "Jose Henrique",
+    "fighter_b": "Ding Meng",
+    "slug": "jose-henrique-vs-ding-meng",
+    "url": "/compare/jose-henrique-vs-ding-meng/",
+    "event_name": "UFC Fight Night: Song vs. Figueiredo",
+    "event_date": "Saturday, May 30, 2026",
+    "event_slug": "ufc-fight-night-song-vs-figueiredo",
+    "weight_class": "Welterweight"
+  },
+  {
     "fighter_a": "Belal Muhammad",
     "fighter_b": "Gabriel Bonfim",
     "slug": "belal-muhammad-vs-gabriel-bonfim",
@@ -628,6 +508,26 @@
     "event_date": "Saturday, June 20, 2026",
     "event_slug": "ufc-fight-night-kape-vs-horiguchi",
     "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Rafael Fiziev",
+    "fighter_b": "Manuel Torres",
+    "slug": "rafael-fiziev-vs-manuel-torres",
+    "url": "/compare/rafael-fiziev-vs-manuel-torres/",
+    "event_name": "UFC Fight Night: Fiziev vs. Torres",
+    "event_date": "Saturday, June 27, 2026",
+    "event_slug": "ufc-fight-night-fiziev-vs-torres",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Michel Pereira",
+    "fighter_b": "Shara Magomedov",
+    "slug": "michel-pereira-vs-shara-magomedov",
+    "url": "/compare/michel-pereira-vs-shara-magomedov/",
+    "event_name": "UFC Fight Night: Fiziev vs. Torres",
+    "event_date": "Saturday, June 27, 2026",
+    "event_slug": "ufc-fight-night-fiziev-vs-torres",
+    "weight_class": "Middleweight"
   },
   {
     "fighter_a": "Alexander Volkanovski",

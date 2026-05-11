@@ -1,92 +1,5 @@
 [
   {
-    "id": 1212,
-    "name": "UFC 328: Chimaev vs. Strickland",
-    "date": "Saturday, May 9, 2026",
-    "location": "Newark, New Jersey, USA",
-    "slug": "ufc-328-chimaev-vs-strickland",
-    "matchups": [
-      {
-        "fighter_a": "Sean Strickland",
-        "fighter_b": "Khamzat Chimaev",
-        "weight_class": "Middleweight",
-        "slug": "sean-strickland-vs-khamzat-chimaev"
-      },
-      {
-        "fighter_a": "Joshua Van",
-        "fighter_b": "Tatsuro Taira",
-        "weight_class": "Flyweight",
-        "slug": "joshua-van-vs-tatsuro-taira"
-      },
-      {
-        "fighter_a": "Alexander Volkov",
-        "fighter_b": "Waldo Cortes Acosta",
-        "weight_class": "Heavyweight",
-        "slug": "alexander-volkov-vs-waldo-cortes-acosta"
-      },
-      {
-        "fighter_a": "Sean Brady",
-        "fighter_b": "Joaquin Buckley",
-        "weight_class": "Welterweight",
-        "slug": "sean-brady-vs-joaquin-buckley"
-      },
-      {
-        "fighter_a": "King Green",
-        "fighter_b": "Jeremy Stephens",
-        "weight_class": "Lightweight",
-        "slug": "king-green-vs-jeremy-stephens"
-      },
-      {
-        "fighter_a": "Ateba Gautier",
-        "fighter_b": "Ozzy Diaz",
-        "weight_class": "Middleweight",
-        "slug": "ateba-gautier-vs-ozzy-diaz"
-      },
-      {
-        "fighter_a": "Yaroslav Amosov",
-        "fighter_b": "Joel Alvarez",
-        "weight_class": "Welterweight",
-        "slug": "yaroslav-amosov-vs-joel-alvarez"
-      },
-      {
-        "fighter_a": "Grant Dawson",
-        "fighter_b": "Mateusz Rebecki",
-        "weight_class": "Lightweight",
-        "slug": "grant-dawson-vs-mateusz-rebecki"
-      },
-      {
-        "fighter_a": "Jared Gordon",
-        "fighter_b": "Jim Miller",
-        "weight_class": "Lightweight",
-        "slug": "jared-gordon-vs-jim-miller"
-      },
-      {
-        "fighter_a": "Roman Kopylov",
-        "fighter_b": "Marco Tulio",
-        "weight_class": "Middleweight",
-        "slug": "roman-kopylov-vs-marco-tulio"
-      },
-      {
-        "fighter_a": "Pat Sabatini",
-        "fighter_b": "William Gomis",
-        "weight_class": "Featherweight",
-        "slug": "pat-sabatini-vs-william-gomis"
-      },
-      {
-        "fighter_a": "Baisangur Susurkaev",
-        "fighter_b": "Djorden Santos",
-        "weight_class": "Middleweight",
-        "slug": "baisangur-susurkaev-vs-djorden-santos"
-      },
-      {
-        "fighter_a": "Clayton Carpenter",
-        "fighter_b": "Jose Ochoa",
-        "weight_class": "Flyweight",
-        "slug": "clayton-carpenter-vs-jose-ochoa"
-      }
-    ]
-  },
-  {
     "id": 1213,
     "name": "UFC Fight Night: Allen vs. Costa",
     "date": "Saturday, May 16, 2026",
@@ -251,6 +164,12 @@
         "fighter_b": "Ramon Taveras",
         "weight_class": "Featherweight",
         "slug": "zhu-kangjie-vs-ramon-taveras"
+      },
+      {
+        "fighter_a": "Jose Henrique",
+        "fighter_b": "Ding Meng",
+        "weight_class": "Welterweight",
+        "slug": "jose-henrique-vs-ding-meng"
       }
     ]
   },
@@ -428,6 +347,27 @@
         "fighter_b": "Melissa Mullins",
         "weight_class": "Women's Bantamweight",
         "slug": "bia-mesquita-vs-melissa-mullins"
+      }
+    ]
+  },
+  {
+    "id": 1219,
+    "name": "UFC Fight Night: Fiziev vs. Torres",
+    "date": "Saturday, June 27, 2026",
+    "location": "Baku, Azerbaijan",
+    "slug": "ufc-fight-night-fiziev-vs-torres",
+    "matchups": [
+      {
+        "fighter_a": "Rafael Fiziev",
+        "fighter_b": "Manuel Torres",
+        "weight_class": "Lightweight",
+        "slug": "rafael-fiziev-vs-manuel-torres"
+      },
+      {
+        "fighter_a": "Michel Pereira",
+        "fighter_b": "Shara Magomedov",
+        "weight_class": "Middleweight",
+        "slug": "michel-pereira-vs-shara-magomedov"
       }
     ]
   },
