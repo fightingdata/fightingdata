@@ -37,6 +37,12 @@
         "slug": "timmy-cuamba-vs-benardo-sopaj"
       },
       {
+        "fighter_a": "Nikolay Veretennikov",
+        "fighter_b": "Khaos Williams",
+        "weight_class": "Welterweight",
+        "slug": "nikolay-veretennikov-vs-khaos-williams"
+      },
+      {
         "fighter_a": "Nicolas Dalby",
         "fighter_b": "Jeremiah Wells",
         "weight_class": "Welterweight",
@@ -47,12 +53,6 @@
         "fighter_b": "Tuco Tokkos",
         "weight_class": "Light Heavyweight",
         "slug": "ivan-erslan-vs-tuco-tokkos"
-      },
-      {
-        "fighter_a": "Trey Ogden",
-        "fighter_b": "Tommy Gantt",
-        "weight_class": "Lightweight",
-        "slug": "trey-ogden-vs-tommy-gantt"
       },
       {
         "fighter_a": "Jacqueline Cavalcanti",

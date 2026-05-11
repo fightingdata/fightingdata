@@ -50,6 +50,16 @@
     "weight_class": "Bantamweight"
   },
   {
+    "fighter_a": "Nikolay Veretennikov",
+    "fighter_b": "Khaos Williams",
+    "slug": "nikolay-veretennikov-vs-khaos-williams",
+    "url": "/compare/nikolay-veretennikov-vs-khaos-williams/",
+    "event_name": "UFC Fight Night: Allen vs. Costa",
+    "event_date": "Saturday, May 16, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-costa",
+    "weight_class": "Welterweight"
+  },
+  {
     "fighter_a": "Nicolas Dalby",
     "fighter_b": "Jeremiah Wells",
     "slug": "nicolas-dalby-vs-jeremiah-wells",
@@ -68,16 +78,6 @@
     "event_date": "Saturday, May 16, 2026",
     "event_slug": "ufc-fight-night-allen-vs-costa",
     "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Trey Ogden",
-    "fighter_b": "Tommy Gantt",
-    "slug": "trey-ogden-vs-tommy-gantt",
-    "url": "/compare/trey-ogden-vs-tommy-gantt/",
-    "event_name": "UFC Fight Night: Allen vs. Costa",
-    "event_date": "Saturday, May 16, 2026",
-    "event_slug": "ufc-fight-night-allen-vs-costa",
-    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Jacqueline Cavalcanti",
