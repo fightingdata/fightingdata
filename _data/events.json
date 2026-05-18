@@ -1,92 +1,5 @@
 [
   {
-    "id": 1213,
-    "name": "UFC Fight Night: Allen vs. Costa",
-    "date": "Saturday, May 16, 2026",
-    "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night-allen-vs-costa",
-    "matchups": [
-      {
-        "fighter_a": "Arnold Allen",
-        "fighter_b": "Melquizael Costa",
-        "weight_class": "Featherweight",
-        "slug": "arnold-allen-vs-melquizael-costa"
-      },
-      {
-        "fighter_a": "Daniel Santos",
-        "fighter_b": "Dooho Choi",
-        "weight_class": "Featherweight",
-        "slug": "daniel-santos-vs-dooho-choi"
-      },
-      {
-        "fighter_a": "Malcolm Wellmaker",
-        "fighter_b": "Juan Diaz",
-        "weight_class": "Bantamweight",
-        "slug": "malcolm-wellmaker-vs-juan-diaz"
-      },
-      {
-        "fighter_a": "Rodolfo Bellato",
-        "fighter_b": "Modestas Bukauskas",
-        "weight_class": "Light Heavyweight",
-        "slug": "rodolfo-bellato-vs-modestas-bukauskas"
-      },
-      {
-        "fighter_a": "Timmy Cuamba",
-        "fighter_b": "Benardo Sopaj",
-        "weight_class": "Bantamweight",
-        "slug": "timmy-cuamba-vs-benardo-sopaj"
-      },
-      {
-        "fighter_a": "Nikolay Veretennikov",
-        "fighter_b": "Khaos Williams",
-        "weight_class": "Welterweight",
-        "slug": "nikolay-veretennikov-vs-khaos-williams"
-      },
-      {
-        "fighter_a": "Nicolas Dalby",
-        "fighter_b": "Jeremiah Wells",
-        "weight_class": "Welterweight",
-        "slug": "nicolas-dalby-vs-jeremiah-wells"
-      },
-      {
-        "fighter_a": "Ivan Erslan",
-        "fighter_b": "Tuco Tokkos",
-        "weight_class": "Light Heavyweight",
-        "slug": "ivan-erslan-vs-tuco-tokkos"
-      },
-      {
-        "fighter_a": "Jacqueline Cavalcanti",
-        "fighter_b": "Ketlen Vieira",
-        "weight_class": "Women's Bantamweight",
-        "slug": "jacqueline-cavalcanti-vs-ketlen-vieira"
-      },
-      {
-        "fighter_a": "Cody Brundage",
-        "fighter_b": "Andre Petroski",
-        "weight_class": "Middleweight",
-        "slug": "cody-brundage-vs-andre-petroski"
-      },
-      {
-        "fighter_a": "Alice Ardelean",
-        "fighter_b": "Polyana Viana",
-        "weight_class": "Women's Strawweight",
-        "slug": "alice-ardelean-vs-polyana-viana"
-      },
-      {
-        "fighter_a": "Luis Gurule",
-        "fighter_b": "Daniel Barez",
-        "weight_class": "Flyweight",
-        "slug": "luis-gurule-vs-daniel-barez"
-      },
-      {
-        "fighter_a": "Shauna Bannon",
-        "fighter_b": "Nicolle Caliari",
-        "weight_class": "Women's Strawweight",
-        "slug": "shauna-bannon-vs-nicolle-caliari"
-      }
-    ]
-  },
-  {
     "id": 1214,
     "name": "UFC Fight Night: Song vs. Figueiredo",
     "date": "Saturday, May 30, 2026",
@@ -118,22 +31,28 @@
         "slug": "kai-asakura-vs-cameron-smotherman"
       },
       {
-        "fighter_a": "Sumudaerji",
-        "fighter_b": "Alex Perez",
-        "weight_class": "Flyweight",
-        "slug": "sumudaerji-vs-alex-perez"
-      },
-      {
         "fighter_a": "Muslim Salikhov",
         "fighter_b": "Jake Matthews",
         "weight_class": "Welterweight",
         "slug": "muslim-salikhov-vs-jake-matthews"
       },
       {
+        "fighter_a": "Sumudaerji",
+        "fighter_b": "Alex Perez",
+        "weight_class": "Flyweight",
+        "slug": "sumudaerji-vs-alex-perez"
+      },
+      {
         "fighter_a": "Yi Sak Lee",
         "fighter_b": "Luis Felipe Dias",
         "weight_class": "Middleweight",
         "slug": "yi-sak-lee-vs-luis-felipe-dias"
+      },
+      {
+        "fighter_a": "Jose Henrique",
+        "fighter_b": "Ding Meng",
+        "weight_class": "Welterweight",
+        "slug": "jose-henrique-vs-ding-meng"
       },
       {
         "fighter_a": "Aoriqileng",
@@ -154,22 +73,16 @@
         "slug": "angela-hill-vs-xiong-jingnan"
       },
       {
-        "fighter_a": "Jaqueline Amorim",
-        "fighter_b": "Loma Lookboonmee",
-        "weight_class": "Women's Strawweight",
-        "slug": "jaqueline-amorim-vs-loma-lookboonmee"
-      },
-      {
         "fighter_a": "Zhu Kangjie",
         "fighter_b": "Ramon Taveras",
         "weight_class": "Featherweight",
         "slug": "zhu-kangjie-vs-ramon-taveras"
       },
       {
-        "fighter_a": "Jose Henrique",
-        "fighter_b": "Ding Meng",
-        "weight_class": "Welterweight",
-        "slug": "jose-henrique-vs-ding-meng"
+        "fighter_a": "Jaqueline Amorim",
+        "fighter_b": "Loma Lookboonmee",
+        "weight_class": "Women's Strawweight",
+        "slug": "jaqueline-amorim-vs-loma-lookboonmee"
       }
     ]
   },
@@ -280,6 +193,12 @@
         "slug": "sean-omalley-vs-aiemann-zahabi"
       },
       {
+        "fighter_a": "Derrick Lewis",
+        "fighter_b": "Josh Hokit",
+        "weight_class": "Heavyweight",
+        "slug": "derrick-lewis-vs-josh-hokit"
+      },
+      {
         "fighter_a": "Mauricio Ruffy",
         "fighter_b": "Michael Chandler",
         "weight_class": "Lightweight",
@@ -296,12 +215,6 @@
         "fighter_b": "Steve Garcia",
         "weight_class": "Featherweight",
         "slug": "diego-lopes-vs-steve-garcia"
-      },
-      {
-        "fighter_a": "Derrick Lewis",
-        "fighter_b": "Josh Hokit",
-        "weight_class": "Heavyweight",
-        "slug": "derrick-lewis-vs-josh-hokit"
       }
     ]
   },
@@ -368,16 +281,142 @@
         "fighter_b": "Shara Magomedov",
         "weight_class": "Middleweight",
         "slug": "michel-pereira-vs-shara-magomedov"
+      },
+      {
+        "fighter_a": "Marvin Vettori",
+        "fighter_b": "Ismail Naurdiev",
+        "weight_class": "Middleweight",
+        "slug": "marvin-vettori-vs-ismail-naurdiev"
+      },
+      {
+        "fighter_a": "Brunno Ferreira",
+        "fighter_b": "Ikram Aliskerov",
+        "weight_class": "Middleweight",
+        "slug": "brunno-ferreira-vs-ikram-aliskerov"
+      },
+      {
+        "fighter_a": "Andrey Pulyaev",
+        "fighter_b": "Nursulton Ruziboev",
+        "weight_class": "Middleweight",
+        "slug": "andrey-pulyaev-vs-nursulton-ruziboev"
+      },
+      {
+        "fighter_a": "Nazim Sadykhov",
+        "fighter_b": "Matheus Camilo",
+        "weight_class": "Lightweight",
+        "slug": "nazim-sadykhov-vs-matheus-camilo"
+      },
+      {
+        "fighter_a": "Daniil Donchenko",
+        "fighter_b": "Andreas Gustafsson",
+        "weight_class": "Welterweight",
+        "slug": "daniil-donchenko-vs-andreas-gustafsson"
+      },
+      {
+        "fighter_a": "Jean Matsumoto",
+        "fighter_b": "Bekzat Almakhan",
+        "weight_class": "Bantamweight",
+        "slug": "jean-matsumoto-vs-bekzat-almakhan"
+      },
+      {
+        "fighter_a": "Michal Oleksiejczuk",
+        "fighter_b": "Abus Magomedov",
+        "weight_class": "Middleweight",
+        "slug": "michal-oleksiejczuk-vs-abus-magomedov"
+      },
+      {
+        "fighter_a": "Julius Walker",
+        "fighter_b": "Abdul Rakhman Yakhyaev",
+        "weight_class": "Light Heavyweight",
+        "slug": "julius-walker-vs-abdul-rakhman-yakhyaev"
+      },
+      {
+        "fighter_a": "Charles Johnson",
+        "fighter_b": "Asu Almabayev",
+        "weight_class": "Flyweight",
+        "slug": "charles-johnson-vs-asu-almabayev"
+      },
+      {
+        "fighter_a": "Eric Nolan",
+        "fighter_b": "Farman Hasanov",
+        "weight_class": "Welterweight",
+        "slug": "eric-nolan-vs-farman-hasanov"
       }
     ]
   },
   {
     "id": 1217,
-    "name": "UFC 329",
+    "name": "UFC 329: McGregor vs. Holloway 2",
     "date": "Saturday, July 11, 2026",
     "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-329",
+    "slug": "ufc-329-mcgregor-vs-holloway-2",
     "matchups": [
+      {
+        "fighter_a": "Max Holloway",
+        "fighter_b": "Conor McGregor",
+        "weight_class": "Welterweight",
+        "slug": "max-holloway-vs-conor-mcgregor"
+      },
+      {
+        "fighter_a": "Benoit Saint Denis",
+        "fighter_b": "Paddy Pimblett",
+        "weight_class": "Lightweight",
+        "slug": "benoit-saint-denis-vs-paddy-pimblett"
+      },
+      {
+        "fighter_a": "Mario Bautista",
+        "fighter_b": "Cory Sandhagen",
+        "weight_class": "Bantamweight",
+        "slug": "mario-bautista-vs-cory-sandhagen"
+      },
+      {
+        "fighter_a": "Lone'er Kavanagh",
+        "fighter_b": "Brandon Royval",
+        "weight_class": "Flyweight",
+        "slug": "loneer-kavanagh-vs-brandon-royval"
+      },
+      {
+        "fighter_a": "Elisha Ellison",
+        "fighter_b": "Gable Steveson",
+        "weight_class": "Heavyweight",
+        "slug": "elisha-ellison-vs-gable-steveson"
+      },
+      {
+        "fighter_a": "Nikita Krylov",
+        "fighter_b": "Robert Whittaker",
+        "weight_class": "Light Heavyweight",
+        "slug": "nikita-krylov-vs-robert-whittaker"
+      },
+      {
+        "fighter_a": "Luke Riley",
+        "fighter_b": "Kai Kamaka",
+        "weight_class": "Featherweight",
+        "slug": "luke-riley-vs-kai-kamaka"
+      },
+      {
+        "fighter_a": "Damian Pinas",
+        "fighter_b": "Cesar Almeida",
+        "weight_class": "Middleweight",
+        "slug": "damian-pinas-vs-cesar-almeida"
+      },
+      {
+        "fighter_a": "Cody Garbrandt",
+        "fighter_b": "Adrian Yanez",
+        "weight_class": "Bantamweight",
+        "slug": "cody-garbrandt-vs-adrian-yanez"
+      },
+      {
+        "fighter_a": "Wang Cong",
+        "fighter_b": "Tracy Cortez",
+        "weight_class": "Women's Flyweight",
+        "slug": "wang-cong-vs-tracy-cortez"
+      },
+      {
+        "fighter_a": "Ode Osbourne",
+        "fighter_b": "Cody Durden",
+        "weight_class": "Flyweight",
+        "slug": "ode-osbourne-vs-cody-durden"
+      },
       {
         "fighter_a": "Alexander Volkanovski",
         "fighter_b": "Ilia Topuria",
@@ -407,6 +446,21 @@
         "fighter_b": "Dustin Poirier",
         "weight_class": "Lightweight",
         "slug": "benoit-saint-denis-vs-dustin-poirier"
+      }
+    ]
+  },
+  {
+    "id": 1220,
+    "name": "UFC Fight Night",
+    "date": "Saturday, July 18, 2026",
+    "location": "Oklahoma City, Oklahoma, USA",
+    "slug": "ufc-fight-night",
+    "matchups": [
+      {
+        "fighter_a": "Marc-Andre Barriault",
+        "fighter_b": "Brad Tavares",
+        "weight_class": "Middleweight",
+        "slug": "marc-andre-barriault-vs-brad-tavares"
       }
     ]
   },

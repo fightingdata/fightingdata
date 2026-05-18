@@ -1,5 +1,13 @@
 [
   {
+    "id": 1213,
+    "name": "UFC Fight Night: Allen vs. Costa",
+    "date": "Saturday, May 16, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-allen-vs-costa",
+    "year": "2026"
+  },
+  {
     "id": 1212,
     "name": "UFC 328: Chimaev vs. Strickland",
     "date": "Saturday, May 9, 2026",
