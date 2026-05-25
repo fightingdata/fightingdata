@@ -380,6 +380,56 @@
     "weight_class": "Women's Bantamweight"
   },
   {
+    "fighter_a": "Jhonata Diniz",
+    "fighter_b": "Jose Montanha",
+    "slug": "jhonata-diniz-vs-jose-montanha",
+    "url": "/compare/jhonata-diniz-vs-jose-montanha/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Luana Santos",
+    "fighter_b": "Karol Rosa",
+    "slug": "luana-santos-vs-karol-rosa",
+    "url": "/compare/luana-santos-vs-karol-rosa/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Gaston Bolanos",
+    "fighter_b": "Michael Aswell Jr.",
+    "slug": "gaston-bolanos-vs-michael-aswell-jr",
+    "url": "/compare/gaston-bolanos-vs-michael-aswell-jr/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Melsik Baghdasaryan",
+    "fighter_b": "Murtazali Magomedov",
+    "slug": "melsik-baghdasaryan-vs-murtazali-magomedov",
+    "url": "/compare/melsik-baghdasaryan-vs-murtazali-magomedov/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Farid Basharat",
+    "fighter_b": "Ethyn Ewing",
+    "slug": "farid-basharat-vs-ethyn-ewing",
+    "url": "/compare/farid-basharat-vs-ethyn-ewing/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Bantamweight"
+  },
+  {
     "fighter_a": "Rafael Fiziev",
     "fighter_b": "Manuel Torres",
     "slug": "rafael-fiziev-vs-manuel-torres",
@@ -400,20 +450,70 @@
     "weight_class": "Middleweight"
   },
   {
-    "fighter_a": "Marvin Vettori",
-    "fighter_b": "Ismail Naurdiev",
-    "slug": "marvin-vettori-vs-ismail-naurdiev",
-    "url": "/compare/marvin-vettori-vs-ismail-naurdiev/",
+    "fighter_a": "Nazim Sadykhov",
+    "fighter_b": "Matheus Camilo",
+    "slug": "nazim-sadykhov-vs-matheus-camilo",
+    "url": "/compare/nazim-sadykhov-vs-matheus-camilo/",
     "event_name": "UFC Fight Night: Fiziev vs. Torres",
     "event_date": "Saturday, June 27, 2026",
     "event_slug": "ufc-fight-night-fiziev-vs-torres",
-    "weight_class": "Middleweight"
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Charles Johnson",
+    "fighter_b": "Asu Almabayev",
+    "slug": "charles-johnson-vs-asu-almabayev",
+    "url": "/compare/charles-johnson-vs-asu-almabayev/",
+    "event_name": "UFC Fight Night: Fiziev vs. Torres",
+    "event_date": "Saturday, June 27, 2026",
+    "event_slug": "ufc-fight-night-fiziev-vs-torres",
+    "weight_class": "Flyweight"
   },
   {
     "fighter_a": "Brunno Ferreira",
     "fighter_b": "Ikram Aliskerov",
     "slug": "brunno-ferreira-vs-ikram-aliskerov",
     "url": "/compare/brunno-ferreira-vs-ikram-aliskerov/",
+    "event_name": "UFC Fight Night: Fiziev vs. Torres",
+    "event_date": "Saturday, June 27, 2026",
+    "event_slug": "ufc-fight-night-fiziev-vs-torres",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Michal Oleksiejczuk",
+    "fighter_b": "Abus Magomedov",
+    "slug": "michal-oleksiejczuk-vs-abus-magomedov",
+    "url": "/compare/michal-oleksiejczuk-vs-abus-magomedov/",
+    "event_name": "UFC Fight Night: Fiziev vs. Torres",
+    "event_date": "Saturday, June 27, 2026",
+    "event_slug": "ufc-fight-night-fiziev-vs-torres",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Eric Nolan",
+    "fighter_b": "Farman Hasanov",
+    "slug": "eric-nolan-vs-farman-hasanov",
+    "url": "/compare/eric-nolan-vs-farman-hasanov/",
+    "event_name": "UFC Fight Night: Fiziev vs. Torres",
+    "event_date": "Saturday, June 27, 2026",
+    "event_slug": "ufc-fight-night-fiziev-vs-torres",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Julius Walker",
+    "fighter_b": "Abdul Rakhman Yakhyaev",
+    "slug": "julius-walker-vs-abdul-rakhman-yakhyaev",
+    "url": "/compare/julius-walker-vs-abdul-rakhman-yakhyaev/",
+    "event_name": "UFC Fight Night: Fiziev vs. Torres",
+    "event_date": "Saturday, June 27, 2026",
+    "event_slug": "ufc-fight-night-fiziev-vs-torres",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Marvin Vettori",
+    "fighter_b": "Ismail Naurdiev",
+    "slug": "marvin-vettori-vs-ismail-naurdiev",
+    "url": "/compare/marvin-vettori-vs-ismail-naurdiev/",
     "event_name": "UFC Fight Night: Fiziev vs. Torres",
     "event_date": "Saturday, June 27, 2026",
     "event_slug": "ufc-fight-night-fiziev-vs-torres",
@@ -428,16 +528,6 @@
     "event_date": "Saturday, June 27, 2026",
     "event_slug": "ufc-fight-night-fiziev-vs-torres",
     "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Nazim Sadykhov",
-    "fighter_b": "Matheus Camilo",
-    "slug": "nazim-sadykhov-vs-matheus-camilo",
-    "url": "/compare/nazim-sadykhov-vs-matheus-camilo/",
-    "event_name": "UFC Fight Night: Fiziev vs. Torres",
-    "event_date": "Saturday, June 27, 2026",
-    "event_slug": "ufc-fight-night-fiziev-vs-torres",
-    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Daniil Donchenko",
@@ -458,46 +548,6 @@
     "event_date": "Saturday, June 27, 2026",
     "event_slug": "ufc-fight-night-fiziev-vs-torres",
     "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Michal Oleksiejczuk",
-    "fighter_b": "Abus Magomedov",
-    "slug": "michal-oleksiejczuk-vs-abus-magomedov",
-    "url": "/compare/michal-oleksiejczuk-vs-abus-magomedov/",
-    "event_name": "UFC Fight Night: Fiziev vs. Torres",
-    "event_date": "Saturday, June 27, 2026",
-    "event_slug": "ufc-fight-night-fiziev-vs-torres",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Julius Walker",
-    "fighter_b": "Abdul Rakhman Yakhyaev",
-    "slug": "julius-walker-vs-abdul-rakhman-yakhyaev",
-    "url": "/compare/julius-walker-vs-abdul-rakhman-yakhyaev/",
-    "event_name": "UFC Fight Night: Fiziev vs. Torres",
-    "event_date": "Saturday, June 27, 2026",
-    "event_slug": "ufc-fight-night-fiziev-vs-torres",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Charles Johnson",
-    "fighter_b": "Asu Almabayev",
-    "slug": "charles-johnson-vs-asu-almabayev",
-    "url": "/compare/charles-johnson-vs-asu-almabayev/",
-    "event_name": "UFC Fight Night: Fiziev vs. Torres",
-    "event_date": "Saturday, June 27, 2026",
-    "event_slug": "ufc-fight-night-fiziev-vs-torres",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Eric Nolan",
-    "fighter_b": "Farman Hasanov",
-    "slug": "eric-nolan-vs-farman-hasanov",
-    "url": "/compare/eric-nolan-vs-farman-hasanov/",
-    "event_name": "UFC Fight Night: Fiziev vs. Torres",
-    "event_date": "Saturday, June 27, 2026",
-    "event_slug": "ufc-fight-night-fiziev-vs-torres",
-    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Max Holloway",

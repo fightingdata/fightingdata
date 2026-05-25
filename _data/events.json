@@ -260,6 +260,36 @@
         "fighter_b": "Melissa Mullins",
         "weight_class": "Women's Bantamweight",
         "slug": "bia-mesquita-vs-melissa-mullins"
+      },
+      {
+        "fighter_a": "Jhonata Diniz",
+        "fighter_b": "Jose Montanha",
+        "weight_class": "Heavyweight",
+        "slug": "jhonata-diniz-vs-jose-montanha"
+      },
+      {
+        "fighter_a": "Luana Santos",
+        "fighter_b": "Karol Rosa",
+        "weight_class": "Women's Bantamweight",
+        "slug": "luana-santos-vs-karol-rosa"
+      },
+      {
+        "fighter_a": "Gaston Bolanos",
+        "fighter_b": "Michael Aswell Jr.",
+        "weight_class": "Featherweight",
+        "slug": "gaston-bolanos-vs-michael-aswell-jr"
+      },
+      {
+        "fighter_a": "Melsik Baghdasaryan",
+        "fighter_b": "Murtazali Magomedov",
+        "weight_class": "Featherweight",
+        "slug": "melsik-baghdasaryan-vs-murtazali-magomedov"
+      },
+      {
+        "fighter_a": "Farid Basharat",
+        "fighter_b": "Ethyn Ewing",
+        "weight_class": "Bantamweight",
+        "slug": "farid-basharat-vs-ethyn-ewing"
       }
     ]
   },
@@ -283,10 +313,16 @@
         "slug": "michel-pereira-vs-shara-magomedov"
       },
       {
-        "fighter_a": "Marvin Vettori",
-        "fighter_b": "Ismail Naurdiev",
-        "weight_class": "Middleweight",
-        "slug": "marvin-vettori-vs-ismail-naurdiev"
+        "fighter_a": "Nazim Sadykhov",
+        "fighter_b": "Matheus Camilo",
+        "weight_class": "Lightweight",
+        "slug": "nazim-sadykhov-vs-matheus-camilo"
+      },
+      {
+        "fighter_a": "Charles Johnson",
+        "fighter_b": "Asu Almabayev",
+        "weight_class": "Flyweight",
+        "slug": "charles-johnson-vs-asu-almabayev"
       },
       {
         "fighter_a": "Brunno Ferreira",
@@ -295,16 +331,34 @@
         "slug": "brunno-ferreira-vs-ikram-aliskerov"
       },
       {
+        "fighter_a": "Michal Oleksiejczuk",
+        "fighter_b": "Abus Magomedov",
+        "weight_class": "Middleweight",
+        "slug": "michal-oleksiejczuk-vs-abus-magomedov"
+      },
+      {
+        "fighter_a": "Eric Nolan",
+        "fighter_b": "Farman Hasanov",
+        "weight_class": "Welterweight",
+        "slug": "eric-nolan-vs-farman-hasanov"
+      },
+      {
+        "fighter_a": "Julius Walker",
+        "fighter_b": "Abdul Rakhman Yakhyaev",
+        "weight_class": "Light Heavyweight",
+        "slug": "julius-walker-vs-abdul-rakhman-yakhyaev"
+      },
+      {
+        "fighter_a": "Marvin Vettori",
+        "fighter_b": "Ismail Naurdiev",
+        "weight_class": "Middleweight",
+        "slug": "marvin-vettori-vs-ismail-naurdiev"
+      },
+      {
         "fighter_a": "Andrey Pulyaev",
         "fighter_b": "Nursulton Ruziboev",
         "weight_class": "Middleweight",
         "slug": "andrey-pulyaev-vs-nursulton-ruziboev"
-      },
-      {
-        "fighter_a": "Nazim Sadykhov",
-        "fighter_b": "Matheus Camilo",
-        "weight_class": "Lightweight",
-        "slug": "nazim-sadykhov-vs-matheus-camilo"
       },
       {
         "fighter_a": "Daniil Donchenko",
@@ -317,30 +371,6 @@
         "fighter_b": "Bekzat Almakhan",
         "weight_class": "Bantamweight",
         "slug": "jean-matsumoto-vs-bekzat-almakhan"
-      },
-      {
-        "fighter_a": "Michal Oleksiejczuk",
-        "fighter_b": "Abus Magomedov",
-        "weight_class": "Middleweight",
-        "slug": "michal-oleksiejczuk-vs-abus-magomedov"
-      },
-      {
-        "fighter_a": "Julius Walker",
-        "fighter_b": "Abdul Rakhman Yakhyaev",
-        "weight_class": "Light Heavyweight",
-        "slug": "julius-walker-vs-abdul-rakhman-yakhyaev"
-      },
-      {
-        "fighter_a": "Charles Johnson",
-        "fighter_b": "Asu Almabayev",
-        "weight_class": "Flyweight",
-        "slug": "charles-johnson-vs-asu-almabayev"
-      },
-      {
-        "fighter_a": "Eric Nolan",
-        "fighter_b": "Farman Hasanov",
-        "weight_class": "Welterweight",
-        "slug": "eric-nolan-vs-farman-hasanov"
       }
     ]
   },

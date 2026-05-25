@@ -30634,6 +30634,23 @@
     "last_fight_date": "2013-11-09"
   },
   {
+    "id": 3694,
+    "name": "Jose Montanha",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "jose-montanha",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 523,
     "name": "Jose Ochoa",
     "nickname": null,
@@ -43994,6 +44011,23 @@
     "career_nc": 0,
     "division": "",
     "last_fight_date": "2025-08-12"
+  },
+  {
+    "id": 3695,
+    "name": "Murtazali Magomedov",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "murtazali-magomedov",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 328,
