@@ -197,7 +197,7 @@
             <div style="display:flex;align-items:center;">
                 <div style="text-align:center;padding:0 20px;">
                     <div style="font-size:0.55rem;color:#999;text-transform:uppercase;letter-spacing:0.5px;">Pro</div>
-                    <div style="font-family:'SF Mono',Menlo,monospace;font-size:1.3rem;font-weight:700;">—</div>
+                    <div style="font-family:'SF Mono',Menlo,monospace;font-size:1.3rem;font-weight:700;">17-12-5</div>
                 </div>
                 <div style="width:1px;height:32px;background:#e2e2e2;"></div>
                 <div style="text-align:center;padding:0 20px;">
@@ -213,7 +213,7 @@
         <div class="profile-content">
             <div>
                 <h2>Bio</h2>
-                <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">—</span></div></div></div>
+                <div class="profile-bio-section"><div class="bio-card"><div class="bio-field"><span class="bio-label">Age</span><span class="bio-value">43 (Sep 17, 1982)</span></div><div class="bio-field"><span class="bio-label">Height</span><span class="bio-value">5'6"</span></div><div class="bio-field"><span class="bio-label">Weight</span><span class="bio-value">139 lbs</span></div><div class="bio-field"><span class="bio-label">Reach</span><span class="bio-value">—</span></div><div class="bio-field"><span class="bio-label">Stance</span><span class="bio-value">Switch</span></div></div></div>
                 <h2>Career Stats</h2>
     <table class="profile-stats-table">
         <thead>
@@ -294,17 +294,48 @@
         <div class="fight-card">
             <div class="fight-card-header loss-border" onclick="toggleRounds('prof-1')">
                 <div class="fight-result-badge result-loss">LOSS</div>
+                <div class="fight-opponent">vs. Tomoya Miyashita</div>
+                <div class="fight-event-label"><a href="/events/dream-12/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">DREAM 12</a> &bull; Oct 2009</div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keisuke Fujiwara</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div><div class="totals-line"><span class="totals-name opponent">Tomoya Miyashita</span><span class="totals-stat">25/38</span><span class="totals-pct">66%</span><span class="totals-stat">TD 4/5</span><span class="totals-stat">Ctrl 0:00</span></div></div>
+                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Keisuke Fujiwara</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tomoya Miyashita</td><td>8/10</td><td>80%</td><td>1/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Keisuke Fujiwara</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tomoya Miyashita</td><td>7/12</td><td>58%</td><td>2/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Keisuke Fujiwara</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Tomoya Miyashita</td><td>10/16</td><td>62%</td><td>1/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header loss-border" onclick="toggleRounds('prof-2')">
+                <div class="fight-result-badge result-loss">LOSS</div>
                 <div class="fight-opponent">vs. Masakazu Imanari</div>
                 <div class="fight-event-label"><a href="/events/dream-fight-for-japan/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">DREAM - Fight for Japan</a> &bull; </div>
                 <div class="fight-meta">Decision (Unanimous) &bull; Rd 2, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Keisuke Fujiwara</span><span class="totals-stat">0/0</span><span class="totals-pct">—</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
-                <div class="expand-toggle" id="toggle-prof-1">&#9660; Rounds</div>
-            </div><div class="rounds-detail" id="rounds-prof-1" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
+                <div class="expand-toggle" id="toggle-prof-2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-prof-2" style="display:none;"><p style="color:#6b7280;padding:8px 12px;font-size:0.85rem;">Round-by-round data not available for this fight.</p></div></div></div>
             </div>
         </div>
 
         <div class="timestamp">
-            Profile generated: 2026-05-25 16:14:30 | Data source: UFCStats.com
+            Profile generated: 2026-05-26 22:15:53 | Data source: UFCStats.com
         </div>
     </div>
         <footer class="site-footer">

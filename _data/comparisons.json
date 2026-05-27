@@ -720,6 +720,16 @@
     "weight_class": "Middleweight"
   },
   {
+    "fighter_a": "Chase Hooper",
+    "fighter_b": "Mitch Ramirez",
+    "slug": "chase-hooper-vs-mitch-ramirez",
+    "url": "/compare/chase-hooper-vs-mitch-ramirez/",
+    "event_name": "UFC Fight Night",
+    "event_date": "Saturday, July 18, 2026",
+    "event_slug": "ufc-fight-night",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Diego Lopes",
     "fighter_b": "Brian Ortega",
     "slug": "diego-lopes-vs-brian-ortega",

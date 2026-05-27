@@ -491,6 +491,12 @@
         "fighter_b": "Brad Tavares",
         "weight_class": "Middleweight",
         "slug": "marc-andre-barriault-vs-brad-tavares"
+      },
+      {
+        "fighter_a": "Chase Hooper",
+        "fighter_b": "Mitch Ramirez",
+        "weight_class": "Lightweight",
+        "slug": "chase-hooper-vs-mitch-ramirez"
       }
     ]
   },
