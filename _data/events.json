@@ -1,86 +1,5 @@
 [
   {
-    "id": 1215,
-    "name": "UFC Fight Night: Muhammad vs. Bonfim",
-    "date": "Saturday, June 6, 2026",
-    "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night-muhammad-vs-bonfim",
-    "matchups": [
-      {
-        "fighter_a": "Belal Muhammad",
-        "fighter_b": "Gabriel Bonfim",
-        "weight_class": "Welterweight",
-        "slug": "belal-muhammad-vs-gabriel-bonfim"
-      },
-      {
-        "fighter_a": "Brendan Allen",
-        "fighter_b": "Edmen Shahbazyan",
-        "weight_class": "Middleweight",
-        "slug": "brendan-allen-vs-edmen-shahbazyan"
-      },
-      {
-        "fighter_a": "Fares Ziam",
-        "fighter_b": "Tom Nolan",
-        "weight_class": "Lightweight",
-        "slug": "fares-ziam-vs-tom-nolan"
-      },
-      {
-        "fighter_a": "Santiago Luna",
-        "fighter_b": "Bryce Mitchell",
-        "weight_class": "Bantamweight",
-        "slug": "santiago-luna-vs-bryce-mitchell"
-      },
-      {
-        "fighter_a": "Iwo Baraniewski",
-        "fighter_b": "Junior Tafa",
-        "weight_class": "Light Heavyweight",
-        "slug": "iwo-baraniewski-vs-junior-tafa"
-      },
-      {
-        "fighter_a": "Matt Schnell",
-        "fighter_b": "Alessandro Costa",
-        "weight_class": "Catch Weight",
-        "slug": "matt-schnell-vs-alessandro-costa"
-      },
-      {
-        "fighter_a": "John Yannis",
-        "fighter_b": "Marcus McGhee",
-        "weight_class": "Bantamweight",
-        "slug": "john-yannis-vs-marcus-mcghee"
-      },
-      {
-        "fighter_a": "Edgar Chairez",
-        "fighter_b": "Bruno Silva",
-        "weight_class": "Flyweight",
-        "slug": "edgar-chairez-vs-bruno-silva"
-      },
-      {
-        "fighter_a": "Priscila Cachoeira",
-        "fighter_b": "Chelsea Chandler",
-        "weight_class": "Women's Bantamweight",
-        "slug": "priscila-cachoeira-vs-chelsea-chandler"
-      },
-      {
-        "fighter_a": "Jordan Leavitt",
-        "fighter_b": "Joanderson Brito",
-        "weight_class": "Featherweight",
-        "slug": "jordan-leavitt-vs-joanderson-brito"
-      },
-      {
-        "fighter_a": "Yuneisy Duben",
-        "fighter_b": "Jeisla Chaves",
-        "weight_class": "Women's Flyweight",
-        "slug": "yuneisy-duben-vs-jeisla-chaves"
-      },
-      {
-        "fighter_a": "Ketlen Souza",
-        "fighter_b": "Ariane Carnelossi",
-        "weight_class": "Women's Strawweight",
-        "slug": "ketlen-souza-vs-ariane-carnelossi"
-      }
-    ]
-  },
-  {
     "id": 1211,
     "name": "UFC Freedom 250",
     "date": "Sunday, June 14, 2026",
@@ -197,6 +116,12 @@
         "fighter_b": "Jose Montanha",
         "weight_class": "Heavyweight",
         "slug": "jhonata-diniz-vs-jose-montanha"
+      },
+      {
+        "fighter_a": "Vinicius Oliveira",
+        "fighter_b": "Giga Chikadze",
+        "weight_class": "Featherweight",
+        "slug": "vinicius-oliveira-vs-giga-chikadze"
       }
     ]
   },
@@ -272,6 +197,12 @@
         "fighter_b": "Bekzat Almakhan",
         "weight_class": "Bantamweight",
         "slug": "jean-matsumoto-vs-bekzat-almakhan"
+      },
+      {
+        "fighter_a": "Javier Reyes",
+        "fighter_b": "Kaan Ofli",
+        "weight_class": "Featherweight",
+        "slug": "javier-reyes-vs-kaan-ofli"
       }
     ]
   },
@@ -416,6 +347,81 @@
         "fighter_b": "Kevin Holland",
         "weight_class": "Welterweight",
         "slug": "jacobe-smith-vs-kevin-holland"
+      },
+      {
+        "fighter_a": "Fatima Kline",
+        "fighter_b": "Amanda Ribas",
+        "weight_class": "Women's Strawweight",
+        "slug": "fatima-kline-vs-amanda-ribas"
+      },
+      {
+        "fighter_a": "Veronica Hardy",
+        "fighter_b": "Dione Barbosa",
+        "weight_class": "Women's Flyweight",
+        "slug": "veronica-hardy-vs-dione-barbosa"
+      }
+    ]
+  },
+  {
+    "id": 1222,
+    "name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "date": "Saturday, July 25, 2026",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "matchups": [
+      {
+        "fighter_a": "Magomed Ankalaev",
+        "fighter_b": "Khalil Rountree Jr.",
+        "weight_class": "Light Heavyweight",
+        "slug": "magomed-ankalaev-vs-khalil-rountree-jr"
+      },
+      {
+        "fighter_a": "David Martinez",
+        "fighter_b": "Umar Nurmagomedov",
+        "weight_class": "Bantamweight",
+        "slug": "david-martinez-vs-umar-nurmagomedov"
+      },
+      {
+        "fighter_a": "Rizvan Kuniev",
+        "fighter_b": "Tyrell Fortune",
+        "weight_class": "Heavyweight",
+        "slug": "rizvan-kuniev-vs-tyrell-fortune"
+      },
+      {
+        "fighter_a": "Valter Walker",
+        "fighter_b": "Thomas Petersen",
+        "weight_class": "Heavyweight",
+        "slug": "valter-walker-vs-thomas-petersen"
+      },
+      {
+        "fighter_a": "Brendson Ribeiro",
+        "fighter_b": "Magomed Tuchalov",
+        "weight_class": "Light Heavyweight",
+        "slug": "brendson-ribeiro-vs-magomed-tuchalov"
+      },
+      {
+        "fighter_a": "Steve Erceg",
+        "fighter_b": "Ramazan Temirov",
+        "weight_class": "Flyweight",
+        "slug": "steve-erceg-vs-ramazan-temirov"
+      },
+      {
+        "fighter_a": "Islam Dulatov",
+        "fighter_b": "Wellington Turman",
+        "weight_class": "Welterweight",
+        "slug": "islam-dulatov-vs-wellington-turman"
+      },
+      {
+        "fighter_a": "Axel Sola",
+        "fighter_b": "Ismael Bonfim",
+        "weight_class": "Lightweight",
+        "slug": "axel-sola-vs-ismael-bonfim"
+      },
+      {
+        "fighter_a": "Dustin Jacoby",
+        "fighter_b": "Uran Satybaldiev",
+        "weight_class": "Light Heavyweight",
+        "slug": "dustin-jacoby-vs-uran-satybaldiev"
       }
     ]
   },
@@ -461,6 +467,24 @@
         "fighter_b": "Jovan Leka",
         "weight_class": "Heavyweight",
         "slug": "max-gimenis-vs-jovan-leka"
+      },
+      {
+        "fighter_a": "Ludovit Klein",
+        "fighter_b": "Tofiq Musayev",
+        "weight_class": "Lightweight",
+        "slug": "ludovit-klein-vs-tofiq-musayev"
+      },
+      {
+        "fighter_a": "Josias Musasa",
+        "fighter_b": "Mark Vologdin",
+        "weight_class": "Bantamweight",
+        "slug": "josias-musasa-vs-mark-vologdin"
+      },
+      {
+        "fighter_a": "Bogdan Grad",
+        "fighter_b": "Dennis Buzukja",
+        "weight_class": "Featherweight",
+        "slug": "bogdan-grad-vs-dennis-buzukja"
       }
     ]
   },
