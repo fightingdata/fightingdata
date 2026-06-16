@@ -28,37 +28,69 @@ description: UFC Fight Analysis - Data-driven fighter comparisons and matchup br
     </div>
 </section>
 
-<!-- This Week's Event -->
+<!-- Featured Event (48h grace window) -->
 <section style="padding:28px 0;">
     <div class="container">
-        {% if events.length > 0 %}
-        {% set nextEvent = events[0] %}
+        {#
+          Prefer the computed featured_event from stats.json. It implements the
+          48h grace window: a just-finished card stays featured Sat–Mon, then
+          rolls to the next upcoming card Tuesday. Falls back to events[0] for
+          older stats.json that predates this field.
+        #}
+        {% set featured = stats.featured_event %}
+        {% if not featured and events.length > 0 %}{% set featured = events[0] %}{% endif %}
+
+        {% if featured %}
         <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
             <div>
-                <span class="section-label">This Week</span>
-                <h2 class="section-title">{{ nextEvent.name }}</h2>
-                <p class="section-meta">{{ nextEvent.date }} &bull; {{ nextEvent.location }}</p>
+                <span class="section-label">{% if featured.is_past %}Latest Event{% else %}This Week{% endif %}</span>
+                <h2 class="section-title">{{ featured.name }}</h2>
+                <p class="section-meta">{{ featured.date }} &bull; {{ featured.location }}</p>
             </div>
-            <a href="/events/{{ nextEvent.slug }}/" style="font-size:13px;color:#d62828;font-weight:600;">Full Card →</a>
+            <a href="/events/{{ featured.slug }}/" style="font-size:13px;color:#d62828;font-weight:600;">Full Card →</a>
         </div>
 
         <div class="card">
-            {% if nextEvent.matchups.length > 0 %}
-                {% for matchup in nextEvent.matchups | limit(5) %}
-                <a href="/compare/{{ matchup.slug }}/" class="matchup-row">
+            {% if featured.matchups.length > 0 %}
+                {% for matchup in featured.matchups | limit(5) %}
+                {#
+                  When the featured card has already happened (grace window),
+                  link rows to the event page (/events/{slug}/ — always exists,
+                  shows preview then results). Otherwise link to the per-matchup
+                  comparison page, which only exists for upcoming events.
+                #}
+                <a href="{% if featured.is_past %}/events/{{ featured.slug }}/{% else %}/compare/{{ matchup.slug }}/{% endif %}" class="matchup-row">
                     {% if loop.first %}<span class="matchup-tag">Main Event</span>{% endif %}
-                    <span class="matchup-names{% if loop.first %} main-event{% endif %}">{{ matchup.fighter_a }}{% if matchup.record_a %} <span class="matchup-record">{{ matchup.record_a }}</span>{% endif %} vs. {% if matchup.record_b %}<span class="matchup-record">{{ matchup.record_b }}</span> {% endif %}{{ matchup.fighter_b }}</span>
+                    <span class="matchup-names{% if loop.first %} main-event{% endif %}">{{ matchup.fighter_a }} vs. {{ matchup.fighter_b }}</span>
                     <span class="matchup-weight">{{ matchup.weight_class }}</span>
                 </a>
                 {% endfor %}
-                {% if nextEvent.matchups.length > 5 %}
-                <a href="/events/{{ nextEvent.slug }}/" class="matchup-more">+ {{ nextEvent.matchups.length - 5 }} more fights</a>
+                {% if featured.matchups.length > 5 %}
+                <a href="/events/{{ featured.slug }}/" class="matchup-more">+ {{ featured.matchups.length - 5 }} more fights</a>
                 {% endif %}
             {% endif %}
         </div>
 
+        {#
+          Latest Results link — points at the most recent fully-scored card.
+          Only shown when it differs from the event featured above (otherwise
+          the featured card already IS the latest result).
+        #}
+        {% if stats.latest_result and stats.latest_result.slug != featured.slug %}
+        <div style="margin-top:10px;">
+            <a href="/events/{{ stats.latest_result.slug }}/" style="font-size:13px;color:#d62828;font-weight:600;">Latest Results: {{ stats.latest_result.name }} →</a>
+        </div>
+        {% endif %}
+
         <!-- Scheduled Events Table -->
-        {% if events.length > 1 %}
+        {#
+          Show the upcoming-events table, skipping whichever event is featured
+          above. During the grace window the featured card is a PAST event (not
+          in `events`), so nothing is skipped and every upcoming event shows.
+          When featured is the soonest upcoming card, it equals events[0] and is
+          skipped here to avoid duplicating it.
+        #}
+        {% if events.length > 1 or (featured.is_past and events.length > 0) %}
         <h3 style="font-size:14px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;margin:32px 0 12px;">Scheduled Events</h3>
         <div class="card">
             <table class="sched-table">
@@ -72,7 +104,7 @@ description: UFC Fight Analysis - Data-driven fighter comparisons and matchup br
                 </thead>
                 <tbody>
                     {% for event in events %}
-                    {% if not loop.first %}
+                    {% if event.slug != featured.slug %}
                     <tr onclick="window.location='/events/{{ event.slug }}/'">
                         <td style="color:#555;">{{ event.date }}</td>
                         <td><span class="sched-event-name">{{ event.name.split(':')[0] }}:</span> <span class="sched-event-sub">{{ event.name.split(':')[1] or '' }}</span></td>

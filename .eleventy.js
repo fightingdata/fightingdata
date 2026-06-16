@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("fighters");    
   eleventyConfig.addPassthroughCopy("sitemap.xml");
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("_redirects");   // Netlify legacy 404 -> current slug redirects (P4)
 
   // Add limit filter (like Liquid)
   eleventyConfig.addFilter("limit", function(array, limit) {

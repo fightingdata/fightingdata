@@ -1,75 +1,5 @@
 [
   {
-    "fighter_a": "Ilia Topuria",
-    "fighter_b": "Justin Gaethje",
-    "slug": "ilia-topuria-vs-justin-gaethje",
-    "url": "/compare/ilia-topuria-vs-justin-gaethje/",
-    "event_name": "UFC Freedom 250",
-    "event_date": "Sunday, June 14, 2026",
-    "event_slug": "ufc-freedom-250",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Ciryl Gane",
-    "fighter_b": "Alex Pereira",
-    "slug": "ciryl-gane-vs-alex-pereira",
-    "url": "/compare/ciryl-gane-vs-alex-pereira/",
-    "event_name": "UFC Freedom 250",
-    "event_date": "Sunday, June 14, 2026",
-    "event_slug": "ufc-freedom-250",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Sean O'Malley",
-    "fighter_b": "Aiemann Zahabi",
-    "slug": "sean-omalley-vs-aiemann-zahabi",
-    "url": "/compare/sean-omalley-vs-aiemann-zahabi/",
-    "event_name": "UFC Freedom 250",
-    "event_date": "Sunday, June 14, 2026",
-    "event_slug": "ufc-freedom-250",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Derrick Lewis",
-    "fighter_b": "Josh Hokit",
-    "slug": "derrick-lewis-vs-josh-hokit",
-    "url": "/compare/derrick-lewis-vs-josh-hokit/",
-    "event_name": "UFC Freedom 250",
-    "event_date": "Sunday, June 14, 2026",
-    "event_slug": "ufc-freedom-250",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Mauricio Ruffy",
-    "fighter_b": "Michael Chandler",
-    "slug": "mauricio-ruffy-vs-michael-chandler",
-    "url": "/compare/mauricio-ruffy-vs-michael-chandler/",
-    "event_name": "UFC Freedom 250",
-    "event_date": "Sunday, June 14, 2026",
-    "event_slug": "ufc-freedom-250",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Bo Nickal",
-    "fighter_b": "Kyle Daukaus",
-    "slug": "bo-nickal-vs-kyle-daukaus",
-    "url": "/compare/bo-nickal-vs-kyle-daukaus/",
-    "event_name": "UFC Freedom 250",
-    "event_date": "Sunday, June 14, 2026",
-    "event_slug": "ufc-freedom-250",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Diego Lopes",
-    "fighter_b": "Steve Garcia",
-    "slug": "diego-lopes-vs-steve-garcia",
-    "url": "/compare/diego-lopes-vs-steve-garcia/",
-    "event_name": "UFC Freedom 250",
-    "event_date": "Sunday, June 14, 2026",
-    "event_slug": "ufc-freedom-250",
-    "weight_class": "Featherweight"
-  },
-  {
     "fighter_a": "Kyoji Horiguchi",
     "fighter_b": "Manel Kape",
     "slug": "kyoji-horiguchi-vs-manel-kape",
@@ -88,6 +18,16 @@
     "event_date": "Saturday, June 20, 2026",
     "event_slug": "ufc-fight-night-kape-vs-horiguchi",
     "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Vinicius Oliveira",
+    "fighter_b": "Giga Chikadze",
+    "slug": "vinicius-oliveira-vs-giga-chikadze",
+    "url": "/compare/vinicius-oliveira-vs-giga-chikadze/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Hyder Amil",
@@ -130,6 +70,16 @@
     "weight_class": "Women's Bantamweight"
   },
   {
+    "fighter_a": "Jhonata Diniz",
+    "fighter_b": "Jose Montanha",
+    "slug": "jhonata-diniz-vs-jose-montanha",
+    "url": "/compare/jhonata-diniz-vs-jose-montanha/",
+    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
+    "event_date": "Saturday, June 20, 2026",
+    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
+    "weight_class": "Heavyweight"
+  },
+  {
     "fighter_a": "Allan Nascimento",
     "fighter_b": "Mitch Raposo",
     "slug": "allan-nascimento-vs-mitch-raposo",
@@ -158,26 +108,6 @@
     "event_date": "Saturday, June 20, 2026",
     "event_slug": "ufc-fight-night-kape-vs-horiguchi",
     "weight_class": "Women's Bantamweight"
-  },
-  {
-    "fighter_a": "Jhonata Diniz",
-    "fighter_b": "Jose Montanha",
-    "slug": "jhonata-diniz-vs-jose-montanha",
-    "url": "/compare/jhonata-diniz-vs-jose-montanha/",
-    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
-    "event_date": "Saturday, June 20, 2026",
-    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Vinicius Oliveira",
-    "fighter_b": "Giga Chikadze",
-    "slug": "vinicius-oliveira-vs-giga-chikadze",
-    "url": "/compare/vinicius-oliveira-vs-giga-chikadze/",
-    "event_name": "UFC Fight Night: Kape vs. Horiguchi",
-    "event_date": "Saturday, June 20, 2026",
-    "event_slug": "ufc-fight-night-kape-vs-horiguchi",
-    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Rafael Fiziev",
