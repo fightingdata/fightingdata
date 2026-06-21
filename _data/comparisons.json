@@ -250,56 +250,6 @@
     "weight_class": "Flyweight"
   },
   {
-    "fighter_a": "Alexander Volkanovski",
-    "fighter_b": "Ilia Topuria",
-    "slug": "alexander-volkanovski-vs-ilia-topuria",
-    "url": "/compare/alexander-volkanovski-vs-ilia-topuria/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Alexander Volkanovski",
-    "fighter_b": "Islam Makhachev",
-    "slug": "alexander-volkanovski-vs-islam-makhachev",
-    "url": "/compare/alexander-volkanovski-vs-islam-makhachev/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Alexander Volkanovski",
-    "fighter_b": "Yair Rodriguez",
-    "slug": "alexander-volkanovski-vs-yair-rodriguez",
-    "url": "/compare/alexander-volkanovski-vs-yair-rodriguez/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Dan Hooker",
-    "fighter_b": "Jalin Turner",
-    "slug": "dan-hooker-vs-jalin-turner",
-    "url": "/compare/dan-hooker-vs-jalin-turner/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Benoit Saint Denis",
-    "fighter_b": "Dustin Poirier",
-    "slug": "benoit-saint-denis-vs-dustin-poirier",
-    "url": "/compare/benoit-saint-denis-vs-dustin-poirier/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Lightweight"
-  },
-  {
     "fighter_a": "Dricus Du Plessis",
     "fighter_b": "Kamaru Usman",
     "slug": "dricus-du-plessis-vs-kamaru-usman",
@@ -618,55 +568,5 @@
     "event_date": "Saturday, August 15, 2026",
     "event_slug": "ufc-330-makhachev-vs-machado-garry",
     "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Diego Lopes",
-    "fighter_b": "Brian Ortega",
-    "slug": "diego-lopes-vs-brian-ortega",
-    "url": "/compare/diego-lopes-vs-brian-ortega/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Diego Lopes",
-    "fighter_b": "Dan Ige",
-    "slug": "diego-lopes-vs-dan-ige",
-    "url": "/compare/diego-lopes-vs-dan-ige/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Catchweight"
-  },
-  {
-    "fighter_a": "Dan Hooker",
-    "fighter_b": "Mateusz Gamrot",
-    "slug": "dan-hooker-vs-mateusz-gamrot",
-    "url": "/compare/dan-hooker-vs-mateusz-gamrot/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Rafael Fiziev",
-    "fighter_b": "Justin Gaethje",
-    "slug": "rafael-fiziev-vs-justin-gaethje",
-    "url": "/compare/rafael-fiziev-vs-justin-gaethje/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Mauricio Ruffy",
-    "fighter_b": "King Green",
-    "slug": "mauricio-ruffy-vs-king-green",
-    "url": "/compare/mauricio-ruffy-vs-king-green/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Lightweight"
   }
 ]

@@ -164,36 +164,6 @@
         "fighter_b": "Cody Durden",
         "weight_class": "Flyweight",
         "slug": "ode-osbourne-vs-cody-durden"
-      },
-      {
-        "fighter_a": "Alexander Volkanovski",
-        "fighter_b": "Ilia Topuria",
-        "weight_class": "Featherweight",
-        "slug": "alexander-volkanovski-vs-ilia-topuria"
-      },
-      {
-        "fighter_a": "Alexander Volkanovski",
-        "fighter_b": "Islam Makhachev",
-        "weight_class": "Lightweight",
-        "slug": "alexander-volkanovski-vs-islam-makhachev"
-      },
-      {
-        "fighter_a": "Alexander Volkanovski",
-        "fighter_b": "Yair Rodriguez",
-        "weight_class": "Featherweight",
-        "slug": "alexander-volkanovski-vs-yair-rodriguez"
-      },
-      {
-        "fighter_a": "Dan Hooker",
-        "fighter_b": "Jalin Turner",
-        "weight_class": "Lightweight",
-        "slug": "dan-hooker-vs-jalin-turner"
-      },
-      {
-        "fighter_a": "Benoit Saint Denis",
-        "fighter_b": "Dustin Poirier",
-        "weight_class": "Lightweight",
-        "slug": "benoit-saint-denis-vs-dustin-poirier"
       }
     ]
   },
@@ -422,36 +392,6 @@
         "fighter_b": "Jasmine Jasudavicius",
         "weight_class": "Women's Flyweight",
         "slug": "erin-blanchfield-vs-jasmine-jasudavicius"
-      },
-      {
-        "fighter_a": "Diego Lopes",
-        "fighter_b": "Brian Ortega",
-        "weight_class": "Featherweight",
-        "slug": "diego-lopes-vs-brian-ortega"
-      },
-      {
-        "fighter_a": "Diego Lopes",
-        "fighter_b": "Dan Ige",
-        "weight_class": "Catchweight",
-        "slug": "diego-lopes-vs-dan-ige"
-      },
-      {
-        "fighter_a": "Dan Hooker",
-        "fighter_b": "Mateusz Gamrot",
-        "weight_class": "Lightweight",
-        "slug": "dan-hooker-vs-mateusz-gamrot"
-      },
-      {
-        "fighter_a": "Rafael Fiziev",
-        "fighter_b": "Justin Gaethje",
-        "weight_class": "Lightweight",
-        "slug": "rafael-fiziev-vs-justin-gaethje"
-      },
-      {
-        "fighter_a": "Mauricio Ruffy",
-        "fighter_b": "King Green",
-        "weight_class": "Lightweight",
-        "slug": "mauricio-ruffy-vs-king-green"
       }
     ]
   }
