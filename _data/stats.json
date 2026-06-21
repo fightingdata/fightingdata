@@ -1,68 +1,104 @@
 {
-  "total_fighters": 3756,
+  "total_fighters": 3762,
   "total_events": 1222,
-  "total_fights": 11182,
-  "upcoming_events": 7,
+  "total_fights": 11193,
+  "upcoming_events": 6,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-08-15",
-  "last_updated": "2026-06-15T19:58:54.932141",
+  "last_updated": "2026-06-21T09:32:37.589214",
   "featured_event": {
-    "name": "UFC Freedom 250",
-    "date": "Sunday, June 14, 2026",
-    "iso_date": "2026-06-14",
-    "location": "Washington, DC, USA",
-    "slug": "ufc-freedom-250",
-    "is_past": true,
+    "name": "UFC Fight Night: Fiziev vs. Torres",
+    "date": "Saturday, June 27, 2026",
+    "iso_date": "2026-06-27",
+    "location": "Baku, Azerbaijan",
+    "slug": "ufc-fight-night-fiziev-vs-torres",
+    "is_past": false,
     "matchups": [
       {
-        "fighter_a": "Ilia Topuria",
-        "fighter_b": "Justin Gaethje",
+        "fighter_a": "Rafael Fiziev",
+        "fighter_b": "Manuel Torres",
         "weight_class": "Lightweight",
-        "slug": "ilia-topuria-vs-justin-gaethje"
+        "slug": "rafael-fiziev-vs-manuel-torres"
       },
       {
-        "fighter_a": "Ciryl Gane",
-        "fighter_b": "Alex Pereira",
-        "weight_class": "Heavyweight",
-        "slug": "ciryl-gane-vs-alex-pereira"
-      },
-      {
-        "fighter_a": "Sean O'Malley",
-        "fighter_b": "Aiemann Zahabi",
-        "weight_class": "Bantamweight",
-        "slug": "sean-omalley-vs-aiemann-zahabi"
-      },
-      {
-        "fighter_a": "Derrick Lewis",
-        "fighter_b": "Josh Hokit",
-        "weight_class": "Heavyweight",
-        "slug": "derrick-lewis-vs-josh-hokit"
-      },
-      {
-        "fighter_a": "Mauricio Ruffy",
-        "fighter_b": "Michael Chandler",
-        "weight_class": "Lightweight",
-        "slug": "mauricio-ruffy-vs-michael-chandler"
-      },
-      {
-        "fighter_a": "Bo Nickal",
-        "fighter_b": "Kyle Daukaus",
+        "fighter_a": "Michel Pereira",
+        "fighter_b": "Shara Magomedov",
         "weight_class": "Middleweight",
-        "slug": "bo-nickal-vs-kyle-daukaus"
+        "slug": "michel-pereira-vs-shara-magomedov"
       },
       {
-        "fighter_a": "Diego Lopes",
-        "fighter_b": "Steve Garcia",
+        "fighter_a": "Nazim Sadykhov",
+        "fighter_b": "Matheus Camilo",
+        "weight_class": "Lightweight",
+        "slug": "nazim-sadykhov-vs-matheus-camilo"
+      },
+      {
+        "fighter_a": "Charles Johnson",
+        "fighter_b": "Asu Almabayev",
+        "weight_class": "Flyweight",
+        "slug": "charles-johnson-vs-asu-almabayev"
+      },
+      {
+        "fighter_a": "Brunno Ferreira",
+        "fighter_b": "Ikram Aliskerov",
+        "weight_class": "Middleweight",
+        "slug": "brunno-ferreira-vs-ikram-aliskerov"
+      },
+      {
+        "fighter_a": "Michal Oleksiejczuk",
+        "fighter_b": "Abus Magomedov",
+        "weight_class": "Middleweight",
+        "slug": "michal-oleksiejczuk-vs-abus-magomedov"
+      },
+      {
+        "fighter_a": "Eric Nolan",
+        "fighter_b": "Farman Hasanov",
+        "weight_class": "Welterweight",
+        "slug": "eric-nolan-vs-farman-hasanov"
+      },
+      {
+        "fighter_a": "Julius Walker",
+        "fighter_b": "Abdul Rakhman Yakhyaev",
+        "weight_class": "Light Heavyweight",
+        "slug": "julius-walker-vs-abdul-rakhman-yakhyaev"
+      },
+      {
+        "fighter_a": "Andrey Pulyaev",
+        "fighter_b": "Nursulton Ruziboev",
+        "weight_class": "Middleweight",
+        "slug": "andrey-pulyaev-vs-nursulton-ruziboev"
+      },
+      {
+        "fighter_a": "Javier Reyes",
+        "fighter_b": "Kaan Ofli",
         "weight_class": "Featherweight",
-        "slug": "diego-lopes-vs-steve-garcia"
+        "slug": "javier-reyes-vs-kaan-ofli"
+      },
+      {
+        "fighter_a": "Daniil Donchenko",
+        "fighter_b": "Theodor Berggren",
+        "weight_class": "Welterweight",
+        "slug": "daniil-donchenko-vs-theodor-berggren"
+      },
+      {
+        "fighter_a": "Jean Matsumoto",
+        "fighter_b": "Bekzat Almakhan",
+        "weight_class": "Bantamweight",
+        "slug": "jean-matsumoto-vs-bekzat-almakhan"
+      },
+      {
+        "fighter_a": "Tahir Abdullayev",
+        "fighter_b": "Jefferson Nascimento",
+        "weight_class": "Welterweight",
+        "slug": "tahir-abdullayev-vs-jefferson-nascimento"
       }
     ]
   },
   "latest_result": {
-    "name": "UFC Fight Night: Muhammad vs. Bonfim",
-    "date": "Saturday, June 6, 2026",
-    "iso_date": "2026-06-06",
+    "name": "UFC Fight Night: Kape vs. Horiguchi",
+    "date": "Saturday, June 20, 2026",
+    "iso_date": "2026-06-20",
     "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night-muhammad-vs-bonfim"
+    "slug": "ufc-fight-night-kape-vs-horiguchi"
   }
 }

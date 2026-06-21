@@ -1,0 +1,24 @@
+---
+layout: layout.njk
+---
+{#
+  Individual article layout. Chains to layout.njk for the site header/footer/chrome.
+  Frontmatter consumed: title, deck, date, category, event, slug.
+  The article .md files in src/articles/ get this layout via src/articles/articles.json.
+#}
+<article class="article">
+    <div class="article-wrap">
+        {% if category %}<div class="article-kicker">{{ category }}</div>{% endif %}
+        <h1 class="article-title">{{ title }}</h1>
+        {% if deck %}<p class="article-deck">{{ deck }}</p>{% endif %}
+        <div class="article-byline">
+            {{ date | articleDate }} &middot; By Jacob Grajauskis
+        </div>
+        <div class="article-body">
+            {{ content | fighterLinks | safe }}
+        </div>
+        <div class="article-foot">
+            <a href="/articles/" class="article-back">&larr; All Articles</a>
+        </div>
+    </div>
+</article>

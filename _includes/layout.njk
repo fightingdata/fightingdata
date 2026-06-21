@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | FightingData.com - UFC Fight Analysis</title>
-    <meta name="description" content="{{ description or 'UFC fight analysis and fighter statistics. Data-driven insights for every matchup.' }}">
+    <meta name="description" content="{{ description or deck or 'UFC fight analysis and fighter statistics. Data-driven insights for every matchup.' }}">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/css/styles.css">
 
     <!-- Open Graph -->
     <meta property="og:title" content="{{ title }} | FightingData.com">
-    <meta property="og:description" content="{{ description or 'UFC fight analysis and fighter statistics.' }}">
+    <meta property="og:description" content="{{ description or deck or 'UFC fight analysis and fighter statistics.' }}">
     <meta property="og:url" content="https://fightingdata.com{{ page.url }}">
     <meta property="og:type" content="website">
 
@@ -32,6 +32,7 @@
             </button>
             <nav class="site-nav">
                 <a href="/"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
+                <a href="/articles/"{% if "/articles/" in page.url %} class="active"{% endif %}>Articles</a>
                 <a href="/events/"{% if page.url == "/events/" %} class="active"{% endif %}>Events</a>
                 <a href="/fighters/"{% if page.url == "/fighters/" %} class="active"{% endif %}>Fighters</a>
                 <a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a>
@@ -53,6 +54,7 @@
             </div>
             <div class="footer-nav">
                 <a href="/">Home</a>
+                <a href="/articles/">Articles</a>
                 <a href="/events/">Events</a>
                 <a href="/fighters/">Fighters</a>
                 <a href="/about/">About</a>

@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+title: Articles
+description: UFC fight recaps, previews, and data-driven analysis from FightingData.com.
+---
+
+<section style="padding:28px 0;">
+    <div class="container" style="max-width:860px;">
+        <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:4px;">Articles</h1>
+        <p style="color:#777;font-size:15px;margin-bottom:32px;">Recaps, previews, and data-driven analysis.</p>
+
+        {% set posts = collections.articles | reverse %}
+        {% if posts.length %}
+        <div class="article-card-list">
+            {% for post in posts %}
+            <a href="{{ post.url }}" class="article-card">
+                {% if post.data.category %}<span class="article-card-kicker">{{ post.data.category }}</span>{% endif %}
+                <h2 class="article-card-title">{{ post.data.title }}</h2>
+                {% if post.data.deck %}<p class="article-card-deck">{{ post.data.deck }}</p>{% endif %}
+                <span class="article-card-date">{{ post.date | articleDate }}</span>
+            </a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="card" style="padding:24px;color:#777;">No articles published yet — check back soon.</div>
+        {% endif %}
+    </div>
+</section>
