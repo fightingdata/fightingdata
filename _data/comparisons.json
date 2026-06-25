@@ -170,6 +170,16 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "King Green",
+    "fighter_b": "Terrance McKinney",
+    "slug": "king-green-vs-terrance-mckinney",
+    "url": "/compare/king-green-vs-terrance-mckinney/",
+    "event_name": "UFC 329: McGregor vs. Holloway 2",
+    "event_date": "Saturday, July 11, 2026",
+    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Nikita Krylov",
     "fighter_b": "Robert Whittaker",
     "slug": "nikita-krylov-vs-robert-whittaker",
@@ -228,6 +238,16 @@
     "event_date": "Saturday, July 11, 2026",
     "event_slug": "ufc-329-mcgregor-vs-holloway-2",
     "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Farid Basharat",
+    "fighter_b": "Ethyn Ewing",
+    "slug": "farid-basharat-vs-ethyn-ewing",
+    "url": "/compare/farid-basharat-vs-ethyn-ewing/",
+    "event_name": "UFC 329: McGregor vs. Holloway 2",
+    "event_date": "Saturday, July 11, 2026",
+    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Zach Reese",
@@ -300,16 +320,6 @@
     "weight_class": "Welterweight"
   },
   {
-    "fighter_a": "Fatima Kline",
-    "fighter_b": "Amanda Ribas",
-    "slug": "fatima-kline-vs-amanda-ribas",
-    "url": "/compare/fatima-kline-vs-amanda-ribas/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Women's Strawweight"
-  },
-  {
     "fighter_a": "Veronica Hardy",
     "fighter_b": "Dione Barbosa",
     "slug": "veronica-hardy-vs-dione-barbosa",
@@ -328,6 +338,56 @@
     "event_date": "Saturday, July 18, 2026",
     "event_slug": "ufc-fight-night-du-plessis-vs-usman",
     "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Alberto Montes",
+    "fighter_b": "Tommy McMillen",
+    "slug": "alberto-montes-vs-tommy-mcmillen",
+    "url": "/compare/alberto-montes-vs-tommy-mcmillen/",
+    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
+    "event_date": "Saturday, July 18, 2026",
+    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Jose Delgado",
+    "fighter_b": "Austin Bashi",
+    "slug": "jose-delgado-vs-austin-bashi",
+    "url": "/compare/jose-delgado-vs-austin-bashi/",
+    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
+    "event_date": "Saturday, July 18, 2026",
+    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Fatima Kline",
+    "fighter_b": "Tabatha Ricci",
+    "slug": "fatima-kline-vs-tabatha-ricci",
+    "url": "/compare/fatima-kline-vs-tabatha-ricci/",
+    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
+    "event_date": "Saturday, July 18, 2026",
+    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
+    "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Felipe Franco",
+    "fighter_b": "Levi Rodrigues Jr.",
+    "slug": "felipe-franco-vs-levi-rodrigues-jr",
+    "url": "/compare/felipe-franco-vs-levi-rodrigues-jr/",
+    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
+    "event_date": "Saturday, July 18, 2026",
+    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Allen Frye Jr.",
+    "fighter_b": "Alvin Hines",
+    "slug": "allen-frye-jr-vs-alvin-hines",
+    "url": "/compare/allen-frye-jr-vs-alvin-hines/",
+    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
+    "event_date": "Saturday, July 18, 2026",
+    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
+    "weight_class": "Heavyweight"
   },
   {
     "fighter_a": "Magomed Ankalaev",
@@ -528,6 +588,16 @@
     "event_date": "Saturday, August 1, 2026",
     "event_slug": "ufc-fight-night-medic-vs-rodriguez",
     "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Hailey Cowan",
+    "fighter_b": "Nina Milosevic",
+    "slug": "hailey-cowan-vs-nina-milosevic",
+    "url": "/compare/hailey-cowan-vs-nina-milosevic/",
+    "event_name": "UFC Fight Night: Medic vs. Rodriguez",
+    "event_date": "Saturday, August 1, 2026",
+    "event_slug": "ufc-fight-night-medic-vs-rodriguez",
+    "weight_class": "Women's Bantamweight"
   },
   {
     "fighter_a": "Islam Makhachev",

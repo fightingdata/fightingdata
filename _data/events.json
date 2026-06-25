@@ -118,6 +118,12 @@
         "slug": "loneer-kavanagh-vs-brandon-royval"
       },
       {
+        "fighter_a": "King Green",
+        "fighter_b": "Terrance McKinney",
+        "weight_class": "Lightweight",
+        "slug": "king-green-vs-terrance-mckinney"
+      },
+      {
         "fighter_a": "Nikita Krylov",
         "fighter_b": "Robert Whittaker",
         "weight_class": "Light Heavyweight",
@@ -152,6 +158,12 @@
         "fighter_b": "Cesar Almeida",
         "weight_class": "Middleweight",
         "slug": "damian-pinas-vs-cesar-almeida"
+      },
+      {
+        "fighter_a": "Farid Basharat",
+        "fighter_b": "Ethyn Ewing",
+        "weight_class": "Bantamweight",
+        "slug": "farid-basharat-vs-ethyn-ewing"
       },
       {
         "fighter_a": "Zach Reese",
@@ -205,12 +217,6 @@
         "slug": "jacobe-smith-vs-kevin-holland"
       },
       {
-        "fighter_a": "Fatima Kline",
-        "fighter_b": "Amanda Ribas",
-        "weight_class": "Women's Strawweight",
-        "slug": "fatima-kline-vs-amanda-ribas"
-      },
-      {
         "fighter_a": "Veronica Hardy",
         "fighter_b": "Dione Barbosa",
         "weight_class": "Women's Flyweight",
@@ -221,6 +227,36 @@
         "fighter_b": "Stewart Nicoll",
         "weight_class": "Flyweight",
         "slug": "alden-coria-vs-stewart-nicoll"
+      },
+      {
+        "fighter_a": "Alberto Montes",
+        "fighter_b": "Tommy McMillen",
+        "weight_class": "Featherweight",
+        "slug": "alberto-montes-vs-tommy-mcmillen"
+      },
+      {
+        "fighter_a": "Jose Delgado",
+        "fighter_b": "Austin Bashi",
+        "weight_class": "Featherweight",
+        "slug": "jose-delgado-vs-austin-bashi"
+      },
+      {
+        "fighter_a": "Fatima Kline",
+        "fighter_b": "Tabatha Ricci",
+        "weight_class": "Women's Strawweight",
+        "slug": "fatima-kline-vs-tabatha-ricci"
+      },
+      {
+        "fighter_a": "Felipe Franco",
+        "fighter_b": "Levi Rodrigues Jr.",
+        "weight_class": "Light Heavyweight",
+        "slug": "felipe-franco-vs-levi-rodrigues-jr"
+      },
+      {
+        "fighter_a": "Allen Frye Jr.",
+        "fighter_b": "Alvin Hines",
+        "weight_class": "Heavyweight",
+        "slug": "allen-frye-jr-vs-alvin-hines"
       }
     ]
   },
@@ -359,6 +395,12 @@
         "fighter_b": "Michael Oliveira",
         "weight_class": "Welterweight",
         "slug": "oban-elliott-vs-michael-oliveira"
+      },
+      {
+        "fighter_a": "Hailey Cowan",
+        "fighter_b": "Nina Milosevic",
+        "weight_class": "Women's Bantamweight",
+        "slug": "hailey-cowan-vs-nina-milosevic"
       }
     ]
   },
