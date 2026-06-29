@@ -1,92 +1,5 @@
 [
   {
-    "id": 1219,
-    "name": "UFC Fight Night: Fiziev vs. Torres",
-    "date": "Saturday, June 27, 2026",
-    "location": "Baku, Azerbaijan",
-    "slug": "ufc-fight-night-fiziev-vs-torres",
-    "matchups": [
-      {
-        "fighter_a": "Rafael Fiziev",
-        "fighter_b": "Manuel Torres",
-        "weight_class": "Lightweight",
-        "slug": "rafael-fiziev-vs-manuel-torres"
-      },
-      {
-        "fighter_a": "Michel Pereira",
-        "fighter_b": "Shara Magomedov",
-        "weight_class": "Middleweight",
-        "slug": "michel-pereira-vs-shara-magomedov"
-      },
-      {
-        "fighter_a": "Nazim Sadykhov",
-        "fighter_b": "Matheus Camilo",
-        "weight_class": "Lightweight",
-        "slug": "nazim-sadykhov-vs-matheus-camilo"
-      },
-      {
-        "fighter_a": "Charles Johnson",
-        "fighter_b": "Asu Almabayev",
-        "weight_class": "Flyweight",
-        "slug": "charles-johnson-vs-asu-almabayev"
-      },
-      {
-        "fighter_a": "Brunno Ferreira",
-        "fighter_b": "Ikram Aliskerov",
-        "weight_class": "Middleweight",
-        "slug": "brunno-ferreira-vs-ikram-aliskerov"
-      },
-      {
-        "fighter_a": "Michal Oleksiejczuk",
-        "fighter_b": "Abus Magomedov",
-        "weight_class": "Middleweight",
-        "slug": "michal-oleksiejczuk-vs-abus-magomedov"
-      },
-      {
-        "fighter_a": "Eric Nolan",
-        "fighter_b": "Farman Hasanov",
-        "weight_class": "Welterweight",
-        "slug": "eric-nolan-vs-farman-hasanov"
-      },
-      {
-        "fighter_a": "Julius Walker",
-        "fighter_b": "Abdul Rakhman Yakhyaev",
-        "weight_class": "Light Heavyweight",
-        "slug": "julius-walker-vs-abdul-rakhman-yakhyaev"
-      },
-      {
-        "fighter_a": "Andrey Pulyaev",
-        "fighter_b": "Nursulton Ruziboev",
-        "weight_class": "Middleweight",
-        "slug": "andrey-pulyaev-vs-nursulton-ruziboev"
-      },
-      {
-        "fighter_a": "Javier Reyes",
-        "fighter_b": "Kaan Ofli",
-        "weight_class": "Featherweight",
-        "slug": "javier-reyes-vs-kaan-ofli"
-      },
-      {
-        "fighter_a": "Daniil Donchenko",
-        "fighter_b": "Theodor Berggren",
-        "weight_class": "Welterweight",
-        "slug": "daniil-donchenko-vs-theodor-berggren"
-      },
-      {
-        "fighter_a": "Jean Matsumoto",
-        "fighter_b": "Bekzat Almakhan",
-        "weight_class": "Bantamweight",
-        "slug": "jean-matsumoto-vs-bekzat-almakhan"
-      },
-      {
-        "fighter_a": "Tahir Abdullayev",
-        "fighter_b": "Jefferson Nascimento",
-        "weight_class": "Welterweight",
-        "slug": "tahir-abdullayev-vs-jefferson-nascimento"
-      }
-    ]
-  },
-  {
     "id": 1217,
     "name": "UFC 329: McGregor vs. Holloway 2",
     "date": "Saturday, July 11, 2026",
@@ -193,18 +106,6 @@
         "slug": "dricus-du-plessis-vs-kamaru-usman"
       },
       {
-        "fighter_a": "Marc-Andre Barriault",
-        "fighter_b": "Brad Tavares",
-        "weight_class": "Middleweight",
-        "slug": "marc-andre-barriault-vs-brad-tavares"
-      },
-      {
-        "fighter_a": "Chase Hooper",
-        "fighter_b": "Mitch Ramirez",
-        "weight_class": "Lightweight",
-        "slug": "chase-hooper-vs-mitch-ramirez"
-      },
-      {
         "fighter_a": "Christian Leroy Duncan",
         "fighter_b": "Jared Cannonier",
         "weight_class": "Middleweight",
@@ -217,28 +118,10 @@
         "slug": "jacobe-smith-vs-kevin-holland"
       },
       {
-        "fighter_a": "Veronica Hardy",
-        "fighter_b": "Dione Barbosa",
-        "weight_class": "Women's Flyweight",
-        "slug": "veronica-hardy-vs-dione-barbosa"
-      },
-      {
-        "fighter_a": "Alden Coria",
-        "fighter_b": "Stewart Nicoll",
-        "weight_class": "Flyweight",
-        "slug": "alden-coria-vs-stewart-nicoll"
-      },
-      {
-        "fighter_a": "Alberto Montes",
-        "fighter_b": "Tommy McMillen",
-        "weight_class": "Featherweight",
-        "slug": "alberto-montes-vs-tommy-mcmillen"
-      },
-      {
-        "fighter_a": "Jose Delgado",
-        "fighter_b": "Austin Bashi",
-        "weight_class": "Featherweight",
-        "slug": "jose-delgado-vs-austin-bashi"
+        "fighter_a": "Chase Hooper",
+        "fighter_b": "Mitch Ramirez",
+        "weight_class": "Lightweight",
+        "slug": "chase-hooper-vs-mitch-ramirez"
       },
       {
         "fighter_a": "Fatima Kline",
@@ -247,16 +130,40 @@
         "slug": "fatima-kline-vs-tabatha-ricci"
       },
       {
-        "fighter_a": "Felipe Franco",
-        "fighter_b": "Levi Rodrigues Jr.",
-        "weight_class": "Light Heavyweight",
-        "slug": "felipe-franco-vs-levi-rodrigues-jr"
+        "fighter_a": "Alberto Montes",
+        "fighter_b": "Tommy McMillen",
+        "weight_class": "Featherweight",
+        "slug": "alberto-montes-vs-tommy-mcmillen"
+      },
+      {
+        "fighter_a": "Veronica Hardy",
+        "fighter_b": "Dione Barbosa",
+        "weight_class": "Women's Flyweight",
+        "slug": "veronica-hardy-vs-dione-barbosa"
+      },
+      {
+        "fighter_a": "Jose Delgado",
+        "fighter_b": "Austin Bashi",
+        "weight_class": "Featherweight",
+        "slug": "jose-delgado-vs-austin-bashi"
       },
       {
         "fighter_a": "Allen Frye Jr.",
         "fighter_b": "Alvin Hines",
         "weight_class": "Heavyweight",
         "slug": "allen-frye-jr-vs-alvin-hines"
+      },
+      {
+        "fighter_a": "Felipe Franco",
+        "fighter_b": "Levi Rodrigues Jr.",
+        "weight_class": "Light Heavyweight",
+        "slug": "felipe-franco-vs-levi-rodrigues-jr"
+      },
+      {
+        "fighter_a": "Alden Coria",
+        "fighter_b": "Stewart Nicoll",
+        "weight_class": "Flyweight",
+        "slug": "alden-coria-vs-stewart-nicoll"
       }
     ]
   },
@@ -274,34 +181,16 @@
         "slug": "magomed-ankalaev-vs-khalil-rountree-jr"
       },
       {
-        "fighter_a": "David Martinez",
-        "fighter_b": "Umar Nurmagomedov",
-        "weight_class": "Bantamweight",
-        "slug": "david-martinez-vs-umar-nurmagomedov"
+        "fighter_a": "Steve Erceg",
+        "fighter_b": "Ramazan Temirov",
+        "weight_class": "Flyweight",
+        "slug": "steve-erceg-vs-ramazan-temirov"
       },
       {
         "fighter_a": "Rizvan Kuniev",
         "fighter_b": "Tyrell Fortune",
         "weight_class": "Heavyweight",
         "slug": "rizvan-kuniev-vs-tyrell-fortune"
-      },
-      {
-        "fighter_a": "Valter Walker",
-        "fighter_b": "Thomas Petersen",
-        "weight_class": "Heavyweight",
-        "slug": "valter-walker-vs-thomas-petersen"
-      },
-      {
-        "fighter_a": "Brendson Ribeiro",
-        "fighter_b": "Magomed Tuchalov",
-        "weight_class": "Light Heavyweight",
-        "slug": "brendson-ribeiro-vs-magomed-tuchalov"
-      },
-      {
-        "fighter_a": "Steve Erceg",
-        "fighter_b": "Ramazan Temirov",
-        "weight_class": "Flyweight",
-        "slug": "steve-erceg-vs-ramazan-temirov"
       },
       {
         "fighter_a": "Islam Dulatov",
@@ -316,10 +205,28 @@
         "slug": "axel-sola-vs-ismael-bonfim"
       },
       {
+        "fighter_a": "Valter Walker",
+        "fighter_b": "Thomas Petersen",
+        "weight_class": "Heavyweight",
+        "slug": "valter-walker-vs-thomas-petersen"
+      },
+      {
         "fighter_a": "Dustin Jacoby",
         "fighter_b": "Uran Satybaldiev",
         "weight_class": "Light Heavyweight",
         "slug": "dustin-jacoby-vs-uran-satybaldiev"
+      },
+      {
+        "fighter_a": "Brendson Ribeiro",
+        "fighter_b": "Magomed Tuchalov",
+        "weight_class": "Light Heavyweight",
+        "slug": "brendson-ribeiro-vs-magomed-tuchalov"
+      },
+      {
+        "fighter_a": "David Martinez",
+        "fighter_b": "Umar Nurmagomedov",
+        "weight_class": "Bantamweight",
+        "slug": "david-martinez-vs-umar-nurmagomedov"
       }
     ]
   },
@@ -434,6 +341,21 @@
         "fighter_b": "Jasmine Jasudavicius",
         "weight_class": "Women's Flyweight",
         "slug": "erin-blanchfield-vs-jasmine-jasudavicius"
+      }
+    ]
+  },
+  {
+    "id": 1223,
+    "name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "date": "Saturday, August 22, 2026",
+    "location": "Sacramento, California, USA",
+    "slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "matchups": [
+      {
+        "fighter_a": "Anthony Hernandez",
+        "fighter_b": "Gregory Rodrigues",
+        "weight_class": "Middleweight",
+        "slug": "anthony-hernandez-vs-gregory-rodrigues"
       }
     ]
   }
