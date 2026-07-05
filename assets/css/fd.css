@@ -367,7 +367,29 @@ body { font-family: var(--fd-sans);
 :where(.fd-event) .loser-row td { color: var(--fd-muted); }
 :where(.fd-event) .round-spacer td { padding: 2px 0; background: var(--fd-bg-subtle); border-bottom: 1px solid var(--fd-border); }
 
+/* Card-level Strength of Schedule (Phase 5) */
+:where(.fd-event) .sos-heading { color: var(--fd-ink); margin: 2rem 0 0.25rem;
+    font-size: 0.85rem; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.5px; padding-bottom: 8px; border-bottom: 2px solid var(--fd-ink); }
+:where(.fd-event) .sos-sub { font-size: 0.75rem; color: var(--fd-faint); margin: 8px 0 12px; line-height: 1.5; }
+:where(.fd-event) .sos-sub a { color: var(--fd-red); text-decoration: none; }
+:where(.fd-event) .sos-table { width: 100%; border-collapse: collapse; background: var(--fd-card);
+    border: 1px solid var(--fd-border); border-radius: var(--fd-radius); overflow: hidden;
+    box-shadow: var(--fd-shadow); }
+:where(.fd-event) .sos-table th { background: var(--fd-bg-subtle); color: var(--fd-ink);
+    font-weight: 700; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 8px 10px; text-align: left; }
+:where(.fd-event) .sos-table td { padding: 6px 10px; font-size: 0.8rem;
+    font-family: var(--fd-mono); color: var(--fd-ink);
+    border-bottom: 1px solid var(--fd-hairline); }
+:where(.fd-event) .sos-table tr:hover { background: var(--fd-bg-subtle); }
+:where(.fd-event) .sos-name { font-family: var(--fd-sans); font-weight: 600; }
+:where(.fd-event) .sos-name a { color: var(--fd-ink); text-decoration: none; }
+:where(.fd-event) .sos-name a:hover { color: var(--fd-red); }
+:where(.fd-event) .sos-pct { color: var(--fd-muted); }
+
 @media (max-width: 768px) {
+    :where(.fd-event) .sos-table { display: block; overflow-x: auto; }
     :where(.fd-event) .event-title { font-size: 1.5rem; }
     :where(.fd-event) .fighter-name { font-size: 1.125rem; }
     :where(.fd-event) .fighters { flex-direction: column; text-align: center; gap: 0.25rem; }
