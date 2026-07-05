@@ -145,6 +145,10 @@ body { font-family: var(--fd-sans);
 :where(.fd-compare) .fighter-info { flex: 1; text-align: center; }
 :where(.fd-compare) .fighter-info h3 { margin: 0; color: var(--fd-ink); font-size: 1.6rem; font-weight: 900;
     text-transform: uppercase; letter-spacing: -0.5px; }
+:where(.fd-compare) .fighter-name-link { color: var(--fd-ink); text-decoration: none;
+    border-bottom: 2px solid var(--fd-border); }
+:where(.fd-compare) .fighter-name-link:hover { color: var(--fd-red); text-decoration: none;
+    border-bottom-color: var(--fd-red); }
 :where(.fd-compare) .fighter-records { font-size: 0.85rem; color: var(--fd-text); margin-top: 6px; }
 :where(.fd-compare) .fighter-records strong { color: var(--fd-ink); font-family: var(--fd-mono); font-size: 0.95rem; }
 :where(.fd-compare) .vs-divider { display: flex; flex-direction: column; align-items: center;
@@ -261,6 +265,27 @@ body { font-family: var(--fd-sans);
 :where(.fd-profile) .profile-records { display: none; }
 :where(.fd-profile) .record-block { display: none; }
 
+/* Header bio strip + featured articles (Jake feedback, Jul 6) */
+:where(.fd-profile) .profile-header { flex-wrap: wrap; }
+:where(.fd-profile) .profile-bio-strip { display: flex; width: 100%; margin-top: 18px;
+    padding-top: 14px; border-top: 1px solid var(--fd-hairline); }
+:where(.fd-profile) .profile-bio-item { flex: 1; text-align: center;
+    border-right: 1px solid var(--fd-hairline); padding: 0 8px; }
+:where(.fd-profile) .profile-bio-item:last-child { border-right: none; }
+:where(.fd-profile) .profile-bio-label { font-size: 0.6rem; color: var(--fd-faint);
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+:where(.fd-profile) .profile-bio-value { font-family: var(--fd-mono); font-size: 0.85rem;
+    font-weight: 600; color: var(--fd-ink); }
+:where(.fd-profile) .profile-articles { margin: 0 0 0.5rem; }
+:where(.fd-profile) .profile-article { display: flex; justify-content: space-between;
+    align-items: baseline; gap: 12px; background: var(--fd-card);
+    border: 1px solid var(--fd-border); border-radius: var(--fd-radius);
+    box-shadow: var(--fd-shadow); padding: 10px 16px; margin-bottom: 8px;
+    text-decoration: none; }
+:where(.fd-profile) .profile-article:hover { border-color: var(--fd-red); text-decoration: none; }
+:where(.fd-profile) .profile-article-title { color: var(--fd-ink); font-weight: 600; font-size: 0.9rem; }
+:where(.fd-profile) .profile-article-date { color: var(--fd-faint); font-size: 0.75rem; white-space: nowrap; }
+
 :where(.fd-profile) .profile-content { display: grid; grid-template-columns: 280px 1fr; gap: 20px; align-items: start; }
 
 :where(.fd-profile) .profile-bio-section { margin: 0; }
@@ -371,7 +396,9 @@ body { font-family: var(--fd-sans);
 :where(.fd-event) .sos-heading { color: var(--fd-ink); margin: 2rem 0 0.25rem;
     font-size: 0.85rem; font-weight: 800; text-transform: uppercase;
     letter-spacing: 0.5px; padding-bottom: 8px; border-bottom: 2px solid var(--fd-ink); }
-:where(.fd-event) .sos-sub { font-size: 0.75rem; color: var(--fd-faint); margin: 8px 0 12px; line-height: 1.5; }
+:where(.fd-event) .sos-sub { font-size: 0.82rem; color: var(--fd-text); margin: 8px 0 12px;
+    line-height: 1.55; max-width: 85ch; }
+:where(.fd-event) .sos-sub strong { color: var(--fd-ink); }
 :where(.fd-event) .sos-sub a { color: var(--fd-red); text-decoration: none; }
 :where(.fd-event) .sos-table { width: 100%; border-collapse: collapse; background: var(--fd-card);
     border: 1px solid var(--fd-border); border-radius: var(--fd-radius); overflow: hidden;
