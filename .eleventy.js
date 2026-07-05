@@ -44,6 +44,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("compare");
   eleventyConfig.addPassthroughCopy("fighters");
   eleventyConfig.addPassthroughCopy("methodology"); // generated from METRIC_DEFS (Phase 3)
+  eleventyConfig.addPassthroughCopy("divisions");   // generated division hub (Phase 5)
   eleventyConfig.addPassthroughCopy("sitemap.xml");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_redirects");   // Netlify legacy 404 -> current slug redirects (P4)
