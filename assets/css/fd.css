@@ -375,5 +375,23 @@ body { font-family: var(--fd-sans);
     :where(.fd-event) .totals-name { min-width: 100px; }
 }
 
-/* ── Chart language (placeholder — populated in Phase 3 with fd-charts.js) ─ */
-.fd-chart { position: relative; }
+/* ── Chart language (Phase 3 — fd-charts.js) ────────────────────────────── */
+.fd-dash { margin: 0 0 1.5rem; }
+.fd-dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.fd-chart-card { background: var(--fd-card); border: 1px solid var(--fd-border);
+    border-radius: var(--fd-radius); box-shadow: var(--fd-shadow);
+    padding: 14px 16px; margin: 0.5rem 0; }
+.fd-chart-title { font-size: 0.7rem; font-weight: 800; color: var(--fd-ink);
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+.fd-chart-sub { font-size: 0.72rem; color: var(--fd-faint); margin-bottom: 10px; }
+.fd-chart { position: relative; height: 300px; }
+.fd-chart.small { height: 210px; }
+.fd-chart-note { font-size: 0.68rem; color: var(--fd-faint); margin-top: 8px;
+    line-height: 1.5; }
+.fd-chart-note a { color: var(--fd-red); }
+.fd-legend-chip { display: inline-block; width: 10px; height: 10px;
+    border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+@media (max-width: 768px) {
+    .fd-dash-grid { grid-template-columns: 1fr; }
+    .fd-chart { height: 240px; }
+}

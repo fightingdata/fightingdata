@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nora Cornolle UFC Stats & Fight History | FightingData</title>
     <meta name="description" content="Nora Cornolle UFC career stats, fight history, and round-by-round breakdowns.">
-    <link rel="stylesheet" href="/assets/css/fd.css?v=15f21fa8">
+    <link rel="stylesheet" href="/assets/css/fd.css?v=7efcf0c0">
 </head>
 <body class="fd-profile">
         <header class="site-header">
@@ -57,6 +57,37 @@
         </div>
 
         
+        
+        <div class="fd-dash" data-slug="nora-cornolle" data-division="Women's Bantamweight">
+            <h2>Career Analytics</h2>
+            <div class="fd-chart-card">
+                <div class="fd-chart-title">Cumulative Significant Strikes vs the Women's Bantamweight field</div>
+                <div class="fd-chart-sub"><span class="fd-legend-chip" style="background:var(--fd-red);"></span>Nora Cornolle
+                    &nbsp;&nbsp;<span class="fd-legend-chip" style="background:rgba(17,17,17,0.14);"></span>League percentile bands (p5&ndash;p95)
+                    &nbsp;&nbsp;<span class="fd-legend-chip" style="background:none;border-top:2px dashed var(--fd-faint);height:0;width:14px;"></span>League median</div>
+                <div class="fd-chart"><canvas data-chart="curve" role="img" aria-label="Cumulative significant strikes landed by Nora Cornolle over career fight minutes, against league percentile bands"></canvas></div>
+                <div class="fd-chart-note">Bands show fighters whose careers reached each minute mark. <a href="/methodology/">How these are calculated &rarr;</a></div>
+            </div>
+            <div class="fd-dash-grid">
+                <div>
+                    <table class="profile-stats-table"><tr><th>Advanced Metric</th><th style="text-align:center;">Career</th></tr><tr><td class="section-header" colspan="2">Fight Shape</td></tr><tr><td class="pstat-name">Avg Fight Time</td><td class="pstat-val">11:17</td></tr><tr><td class="pstat-name">Fight Completion Rate (xR%)</td><td class="pstat-val">75.2%</td></tr><tr><td class="pstat-name">Expected Rounds (xR)</td><td class="pstat-val">2.26</td></tr><tr><td class="pstat-name">% Fights Inside the Distance</td><td class="pstat-val">50.0%</td></tr><tr><td class="section-header" colspan="2">Strength of Schedule</td></tr><tr><td class="pstat-name">Opponent UFC Record (all, at fight time)</td><td class="pstat-val">21-11 (65.6%)</td></tr><tr><td class="pstat-name">Opponent UFC Record (among wins)</td><td class="pstat-val">5-3 (62.5%)</td></tr><tr><td class="pstat-name">Opponent UFC Record (among losses)</td><td class="pstat-val">16-8 (66.7%)</td></tr><tr><td class="section-header" colspan="2">Positional Profile</td></tr><tr><td class="pstat-name">% Time at Distance (approx.)</td><td class="pstat-val">34.9%</td></tr><tr><td class="pstat-name">% Time in Control</td><td class="pstat-val">12.6%</td></tr><tr><td class="pstat-name">% Time Controlled</td><td class="pstat-val">52.5%</td></tr><tr><td class="pstat-name">Control Rate of Clinch/Ground Time</td><td class="pstat-val">19.4%</td></tr><tr><td class="section-header" colspan="2">Distance Striking</td></tr><tr><td class="pstat-name">Distance Sig. Strikes Landed / Min</td><td class="pstat-val">4.53</td></tr><tr><td class="pstat-name">Distance Sig. Strikes Absorbed / Min</td><td class="pstat-val">3.86</td></tr><tr><td class="pstat-name">Distance Striking Differential / Min</td><td class="pstat-val">+0.68</td></tr><tr><td class="pstat-name">Distance Strike Accuracy</td><td class="pstat-val">47.1%</td></tr><tr><td class="pstat-name">Distance Strike Defense</td><td class="pstat-val">64.5%</td></tr><tr><td class="section-header" colspan="2">Power & Pressure</td></tr><tr><td class="pstat-name">KDs per 100 Power Strikes Landed</td><td class="pstat-val">0.78</td></tr><tr><td class="pstat-name">Knocked Down per 100 Absorbed</td><td class="pstat-val">0.00</td></tr><tr><td class="pstat-name">TD Attempts per 5 Distance Min</td><td class="pstat-val">1.91</td></tr><tr><td class="pstat-name">TDs Faced per 5 Distance Min</td><td class="pstat-val">4.45</td></tr><tr><td class="pstat-name">Sub Attempts per 15 Control Min</td><td class="pstat-val">1.75</td></tr><tr><td class="pstat-name">Fade Index (R3 pace / R1 pace)</td><td class="pstat-val">0.94</td></tr></table>
+                    
+                    <div class="fd-chart-note">All metrics are UFC fights only. <a href="/methodology/">Methodology &rarr;</a></div>
+                </div>
+                <div>
+                    <div class="fd-chart-card">
+                        <div class="fd-chart-title">Where the Strikes Land</div>
+                        <div class="fd-chart-sub">Share of landed significant strikes by target</div>
+                        <div class="fd-chart small"><canvas data-chart="target-mix" role="img" aria-label="Head, body, leg share of landed significant strikes"></canvas></div>
+                    </div>
+                    <div class="fd-chart-card">
+                        <div class="fd-chart-title">Where the Fight Happens</div>
+                        <div class="fd-chart-sub">Share of total fight time by position</div>
+                        <div class="fd-chart small"><canvas data-chart="positional" role="img" aria-label="Percent of fight time at distance, in control, and being controlled"></canvas></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="profile-content">
             <div>
@@ -292,7 +323,7 @@
         </div>
 
         <div class="timestamp">
-            Profile generated: 2026-07-04 22:09:57 | Data source: UFCStats.com
+            Profile generated: 2026-07-05 01:28:37 | Data source: UFCStats.com
         </div>
     </div>
         <footer class="site-footer">
@@ -317,5 +348,7 @@
     }
     </script>
 
+    <script src="/assets/vendor/chart.umd.min.js" defer></script>
+    <script src="/assets/js/fd-charts.js" defer></script>
 </body>
 </html>
