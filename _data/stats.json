@@ -1,11 +1,11 @@
 {
-  "total_fighters": 3763,
+  "total_fighters": 3765,
   "total_events": 1223,
-  "total_fights": 11200,
+  "total_fights": 11209,
   "upcoming_events": 6,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-08-22",
-  "last_updated": "2026-06-29T08:54:34.035631",
+  "last_updated": "2026-07-04T22:00:36.885058",
   "featured_event": {
     "name": "UFC 329: McGregor vs. Holloway 2",
     "date": "Saturday, July 11, 2026",
@@ -93,10 +93,10 @@
         "slug": "zach-reese-vs-ryan-gandra"
       },
       {
-        "fighter_a": "Ode Osbourne",
-        "fighter_b": "Cody Durden",
+        "fighter_a": "Cody Durden",
+        "fighter_b": "Alessandro Costa",
         "weight_class": "Flyweight",
-        "slug": "ode-osbourne-vs-cody-durden"
+        "slug": "cody-durden-vs-alessandro-costa"
       }
     ]
   },

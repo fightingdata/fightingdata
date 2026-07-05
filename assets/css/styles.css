@@ -1,5 +1,30 @@
 /* FightingData.com — Session J Design Refresh (Light Theme) */
 
+/* ── Design tokens (Session X, Phase 1) ──────────────────────────
+   Mirrors :root in assets/css/fd.css (the design-system authority —
+   generated compare/profile/event pages). Keep the two in sync; new
+   rules in THIS file should use var(--fd-*) instead of hex literals. */
+:root {
+    --fd-red: #d62828;
+    --fd-red-dark: #b71c1c;
+    --fd-blue: #1d4ed8;
+    --fd-ink: #111;
+    --fd-text: #555;
+    --fd-muted: #777;
+    --fd-faint: #999;
+    --fd-bg: #f5f5f5;
+    --fd-card: #fff;
+    --fd-bg-subtle: #fafafa;
+    --fd-border: #e2e2e2;
+    --fd-hairline: #f0f0f0;
+    --fd-win: #15803d;
+    --fd-warn: #c2410c;
+    --fd-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --fd-mono: 'SF Mono', Menlo, monospace;
+    --fd-radius: 6px;
+    --fd-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 

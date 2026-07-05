@@ -13277,6 +13277,23 @@
     "last_fight_date": "2026-02-28"
   },
   {
+    "id": 3765,
+    "name": "Damian Rzepecki",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "damian-rzepecki",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 1372,
     "name": "Damian Stasiak",
     "nickname": null,
@@ -38773,6 +38790,23 @@
     "career_losses": 0,
     "career_draws": 0,
     "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
+    "id": 3764,
+    "name": "Magomed Zaynukov",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "magomed-zaynukov",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
     "division": "",
     "last_fight_date": ""
   },

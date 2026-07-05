@@ -85,10 +85,10 @@
         "slug": "zach-reese-vs-ryan-gandra"
       },
       {
-        "fighter_a": "Ode Osbourne",
-        "fighter_b": "Cody Durden",
+        "fighter_a": "Cody Durden",
+        "fighter_b": "Alessandro Costa",
         "weight_class": "Flyweight",
-        "slug": "ode-osbourne-vs-cody-durden"
+        "slug": "cody-durden-vs-alessandro-costa"
       }
     ]
   },
@@ -164,6 +164,12 @@
         "fighter_b": "Stewart Nicoll",
         "weight_class": "Flyweight",
         "slug": "alden-coria-vs-stewart-nicoll"
+      },
+      {
+        "fighter_a": "Seokhyeon Ko",
+        "fighter_b": "Jean-Paul Lebosnoyani",
+        "weight_class": "Welterweight",
+        "slug": "seokhyeon-ko-vs-jean-paul-lebosnoyani"
       }
     ]
   },
@@ -227,6 +233,18 @@
         "fighter_b": "Umar Nurmagomedov",
         "weight_class": "Bantamweight",
         "slug": "david-martinez-vs-umar-nurmagomedov"
+      },
+      {
+        "fighter_a": "Magomed Zaynukov",
+        "fighter_b": "Damian Rzepecki",
+        "weight_class": "Lightweight",
+        "slug": "magomed-zaynukov-vs-damian-rzepecki"
+      },
+      {
+        "fighter_a": "Nurullo Aliev",
+        "fighter_b": "Mike Davis",
+        "weight_class": "Lightweight",
+        "slug": "nurullo-aliev-vs-mike-davis"
       }
     ]
   },
@@ -341,6 +359,42 @@
         "fighter_b": "Jasmine Jasudavicius",
         "weight_class": "Women's Flyweight",
         "slug": "erin-blanchfield-vs-jasmine-jasudavicius"
+      },
+      {
+        "fighter_a": "Neil Magny",
+        "fighter_b": "Ramiz Brahimaj",
+        "weight_class": "Welterweight",
+        "slug": "neil-magny-vs-ramiz-brahimaj"
+      },
+      {
+        "fighter_a": "Jalin Turner",
+        "fighter_b": "Kaue Fernandes",
+        "weight_class": "Lightweight",
+        "slug": "jalin-turner-vs-kaue-fernandes"
+      },
+      {
+        "fighter_a": "Chidi Njokuani",
+        "fighter_b": "Geoff Neal",
+        "weight_class": "Welterweight",
+        "slug": "chidi-njokuani-vs-geoff-neal"
+      },
+      {
+        "fighter_a": "Mansur Abdul-Malik",
+        "fighter_b": "Dustin Stoltzfus",
+        "weight_class": "Middleweight",
+        "slug": "mansur-abdul-malik-vs-dustin-stoltzfus"
+      },
+      {
+        "fighter_a": "Myktybek Orolbai",
+        "fighter_b": "Jeremiah Wells",
+        "weight_class": "Welterweight",
+        "slug": "myktybek-orolbai-vs-jeremiah-wells"
+      },
+      {
+        "fighter_a": "Vicente Luque",
+        "fighter_b": "Tresean Gore",
+        "weight_class": "Middleweight",
+        "slug": "vicente-luque-vs-tresean-gore"
       }
     ]
   },

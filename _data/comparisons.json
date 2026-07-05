@@ -130,10 +130,10 @@
     "weight_class": "Middleweight"
   },
   {
-    "fighter_a": "Ode Osbourne",
-    "fighter_b": "Cody Durden",
-    "slug": "ode-osbourne-vs-cody-durden",
-    "url": "/compare/ode-osbourne-vs-cody-durden/",
+    "fighter_a": "Cody Durden",
+    "fighter_b": "Alessandro Costa",
+    "slug": "cody-durden-vs-alessandro-costa",
+    "url": "/compare/cody-durden-vs-alessandro-costa/",
     "event_name": "UFC 329: McGregor vs. Holloway 2",
     "event_date": "Saturday, July 11, 2026",
     "event_slug": "ufc-329-mcgregor-vs-holloway-2",
@@ -250,6 +250,16 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "Seokhyeon Ko",
+    "fighter_b": "Jean-Paul Lebosnoyani",
+    "slug": "seokhyeon-ko-vs-jean-paul-lebosnoyani",
+    "url": "/compare/seokhyeon-ko-vs-jean-paul-lebosnoyani/",
+    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
+    "event_date": "Saturday, July 18, 2026",
+    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
+    "weight_class": "Welterweight"
+  },
+  {
     "fighter_a": "Magomed Ankalaev",
     "fighter_b": "Khalil Rountree Jr.",
     "slug": "magomed-ankalaev-vs-khalil-rountree-jr",
@@ -338,6 +348,26 @@
     "event_date": "Saturday, July 25, 2026",
     "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
     "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Magomed Zaynukov",
+    "fighter_b": "Damian Rzepecki",
+    "slug": "magomed-zaynukov-vs-damian-rzepecki",
+    "url": "/compare/magomed-zaynukov-vs-damian-rzepecki/",
+    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_date": "Saturday, July 25, 2026",
+    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Nurullo Aliev",
+    "fighter_b": "Mike Davis",
+    "slug": "nurullo-aliev-vs-mike-davis",
+    "url": "/compare/nurullo-aliev-vs-mike-davis/",
+    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_date": "Saturday, July 25, 2026",
+    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Uros Medic",
@@ -498,6 +528,66 @@
     "event_date": "Saturday, August 15, 2026",
     "event_slug": "ufc-330-makhachev-vs-machado-garry",
     "weight_class": "Women's Flyweight"
+  },
+  {
+    "fighter_a": "Neil Magny",
+    "fighter_b": "Ramiz Brahimaj",
+    "slug": "neil-magny-vs-ramiz-brahimaj",
+    "url": "/compare/neil-magny-vs-ramiz-brahimaj/",
+    "event_name": "UFC 330: Makhachev vs. Machado Garry",
+    "event_date": "Saturday, August 15, 2026",
+    "event_slug": "ufc-330-makhachev-vs-machado-garry",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Jalin Turner",
+    "fighter_b": "Kaue Fernandes",
+    "slug": "jalin-turner-vs-kaue-fernandes",
+    "url": "/compare/jalin-turner-vs-kaue-fernandes/",
+    "event_name": "UFC 330: Makhachev vs. Machado Garry",
+    "event_date": "Saturday, August 15, 2026",
+    "event_slug": "ufc-330-makhachev-vs-machado-garry",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Chidi Njokuani",
+    "fighter_b": "Geoff Neal",
+    "slug": "chidi-njokuani-vs-geoff-neal",
+    "url": "/compare/chidi-njokuani-vs-geoff-neal/",
+    "event_name": "UFC 330: Makhachev vs. Machado Garry",
+    "event_date": "Saturday, August 15, 2026",
+    "event_slug": "ufc-330-makhachev-vs-machado-garry",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Mansur Abdul-Malik",
+    "fighter_b": "Dustin Stoltzfus",
+    "slug": "mansur-abdul-malik-vs-dustin-stoltzfus",
+    "url": "/compare/mansur-abdul-malik-vs-dustin-stoltzfus/",
+    "event_name": "UFC 330: Makhachev vs. Machado Garry",
+    "event_date": "Saturday, August 15, 2026",
+    "event_slug": "ufc-330-makhachev-vs-machado-garry",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Myktybek Orolbai",
+    "fighter_b": "Jeremiah Wells",
+    "slug": "myktybek-orolbai-vs-jeremiah-wells",
+    "url": "/compare/myktybek-orolbai-vs-jeremiah-wells/",
+    "event_name": "UFC 330: Makhachev vs. Machado Garry",
+    "event_date": "Saturday, August 15, 2026",
+    "event_slug": "ufc-330-makhachev-vs-machado-garry",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Vicente Luque",
+    "fighter_b": "Tresean Gore",
+    "slug": "vicente-luque-vs-tresean-gore",
+    "url": "/compare/vicente-luque-vs-tresean-gore/",
+    "event_name": "UFC 330: Makhachev vs. Machado Garry",
+    "event_date": "Saturday, August 15, 2026",
+    "event_slug": "ufc-330-makhachev-vs-machado-garry",
+    "weight_class": "Middleweight"
   },
   {
     "fighter_a": "Anthony Hernandez",
