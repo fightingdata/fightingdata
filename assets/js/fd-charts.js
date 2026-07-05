@@ -178,6 +178,89 @@
         });
     };
 
+    /* Dual career curves (comparison pages): fighter A red, B blue, league
+       median dashed. Bands omitted — two fighter lines + median reads best. */
+    FD.dualCurve = function (canvas, curveA, curveB, nameA, nameB, env, grid) {
+        function fighterSet(curve, color) {
+            return {
+                data: curve.map(function (p) { return { x: p[0], y: p[1], meta: p }; }),
+                borderColor: color, borderWidth: 2.5,
+                pointRadius: 2, pointBackgroundColor: color,
+                fill: false, order: 1
+            };
+        }
+        var maxMin = Math.max(
+            curveA.length ? curveA[curveA.length - 1][0] : 0,
+            curveB.length ? curveB[curveB.length - 1][0] : 0, 30) * 1.08;
+        new Chart(canvas, {
+            type: 'line',
+            data: {
+                datasets: [
+                    {
+                        data: grid.map(function (g, i) { return { x: g, y: env.p50[i] }; })
+                                  .filter(function (p) { return p.y !== null && p.x <= maxMin; }),
+                        borderColor: C.faint, borderDash: [5, 4], borderWidth: 1.5,
+                        pointRadius: 0, fill: false, order: 5
+                    },
+                    fighterSet(curveA, C.red),
+                    fighterSet(curveB, C.blue)
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                scales: {
+                    x: { type: 'linear', max: maxMin, grid: { color: C.border },
+                         title: { display: true, text: 'Cumulative fight minutes', color: C.muted } },
+                    y: { grid: { color: C.border },
+                         title: { display: true, text: 'Cumulative sig. strikes landed', color: C.muted } }
+                },
+                plugins: {
+                    tooltip: {
+                        filter: function (item) { return item.dataset.order === 1; },
+                        displayColors: false,
+                        backgroundColor: C.ink, titleColor: '#fff', bodyColor: 'rgba(255,255,255,0.8)',
+                        callbacks: {
+                            title: function (items) {
+                                var m = items[0].raw.meta;
+                                var who = items[0].datasetIndex === 1 ? nameA : nameB;
+                                return who + ': ' + m[5] + ' vs ' + m[4];
+                            },
+                            label: function (item) {
+                                var m = item.raw.meta;
+                                return [m[3] + ' · ' + m[6],
+                                        m[1] + ' landed over ' + m[0] + ' min'];
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    };
+
+    /* Auto-hydrate a comparison page (div.fd-vs[data-slug-a][data-slug-b]). */
+    function initVs(el) {
+        var slugA = el.getAttribute('data-slug-a');
+        var slugB = el.getAttribute('data-slug-b');
+        var division = el.getAttribute('data-division') || '';
+        Promise.all([FD.loadFighter(slugA), FD.loadFighter(slugB), FD.loadBaselines()])
+            .then(function (res) {
+                var a = res[0], b = res[1], base = res[2];
+                var cv = el.querySelector('canvas[data-chart="dual-curve"]');
+                if (cv && a.curve && b.curve && a.curve.length >= 2 && b.curve.length >= 2) {
+                    var env = base.divisions[division] || base.global;
+                    FD.dualCurve(cv, a.curve, b.curve,
+                                 el.getAttribute('data-name-a') || 'Fighter A',
+                                 el.getAttribute('data-name-b') || 'Fighter B',
+                                 env, base.grid);
+                } else if (cv) {
+                    cv.closest('.fd-chart-card').style.display = 'none';
+                }
+            })
+            .catch(function () {
+                el.querySelectorAll('.fd-chart-card').forEach(function (c) { c.style.display = 'none'; });
+            });
+    }
+
     /* Auto-hydrate a fighter profile dashboard (div.fd-dash[data-slug]). */
     function initDash(el) {
         var slug = el.getAttribute('data-slug');
@@ -209,5 +292,6 @@
     window.FD = FD;
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.fd-dash[data-slug]').forEach(initDash);
+        document.querySelectorAll('.fd-vs[data-slug-a]').forEach(initVs);
     });
 })();
