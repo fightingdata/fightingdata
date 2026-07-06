@@ -330,6 +330,21 @@
     ]
   },
   {
+    "id": 1224,
+    "name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "date": "Saturday, August 8, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "matchups": [
+      {
+        "fighter_a": "Quillian Salkild",
+        "fighter_b": "Mateusz Gamrot",
+        "weight_class": "Lightweight",
+        "slug": "quillian-salkild-vs-mateusz-gamrot"
+      }
+    ]
+  },
+  {
     "id": 1218,
     "name": "UFC 330: Makhachev vs. Machado Garry",
     "date": "Saturday, August 15, 2026",

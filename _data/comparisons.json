@@ -490,6 +490,16 @@
     "weight_class": "Women's Bantamweight"
   },
   {
+    "fighter_a": "Quillian Salkild",
+    "fighter_b": "Mateusz Gamrot",
+    "slug": "quillian-salkild-vs-mateusz-gamrot",
+    "url": "/compare/quillian-salkild-vs-mateusz-gamrot/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Islam Makhachev",
     "fighter_b": "Ian Machado Garry",
     "slug": "islam-makhachev-vs-ian-machado-garry",
