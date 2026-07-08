@@ -966,7 +966,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2010-09-25"
+    "last_fight_date": "2011-05-29"
   },
   {
     "id": 1038,
@@ -3652,7 +3652,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2003-05-16"
   },
   {
     "id": 2595,
@@ -4094,7 +4094,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2008-09-20"
+    "last_fight_date": "2009-05-15"
   },
   {
     "id": 599,
@@ -4434,7 +4434,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2004-06-20"
+    "last_fight_date": "2005-05-22"
   },
   {
     "id": 1565,
@@ -4638,7 +4638,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-22"
   },
   {
     "id": 1284,
@@ -4757,7 +4757,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2006-07-22"
+    "last_fight_date": "2007-05-12"
   },
   {
     "id": 1339,
@@ -5046,7 +5046,7 @@
     "career_draws": 3,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2009-03-08"
+    "last_fight_date": "2011-05-29"
   },
   {
     "id": 1505,
@@ -5403,7 +5403,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "Bantamweight",
-    "last_fight_date": "2024-11-23"
+    "last_fight_date": "2025-05-22"
   },
   {
     "id": 3477,
@@ -5420,7 +5420,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 319,
@@ -5471,7 +5471,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2009-01-24"
+    "last_fight_date": "2009-05-15"
   },
   {
     "id": 1379,
@@ -6287,7 +6287,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-27"
   },
   {
     "id": 667,
@@ -6474,7 +6474,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1998-05-15"
   },
   {
     "id": 2584,
@@ -7103,7 +7103,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2007-05-12"
   },
   {
     "id": 2641,
@@ -8024,6 +8024,23 @@
     "last_fight_date": "2018-08-11"
   },
   {
+    "id": 3767,
+    "name": "Bruno Blindado Silva",
+    "nickname": null,
+    "height_cm": 182.9,
+    "reach_cm": 188.0,
+    "stance": "Orthodox",
+    "dob": "1989-07-13",
+    "slug": "bruno-blindado-silva",
+    "career_record": "23-13-0",
+    "career_wins": 23,
+    "career_losses": 13,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "Middleweight",
+    "last_fight_date": "2025-05-10"
+  },
+  {
     "id": 2796,
     "name": "Bruno Carvalho",
     "nickname": null,
@@ -8327,7 +8344,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2008-03-15"
+    "last_fight_date": "2008-05-11"
   },
   {
     "id": 1686,
@@ -8922,7 +8939,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2009-05-15"
   },
   {
     "id": 3367,
@@ -9789,7 +9806,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2003-10-05"
+    "last_fight_date": "2004-05-23"
   },
   {
     "id": 827,
@@ -10112,7 +10129,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2001-11-03"
+    "last_fight_date": "2007-05-12"
   },
   {
     "id": 954,
@@ -10656,7 +10673,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1999-05-07"
   },
   {
     "id": 2055,
@@ -10928,7 +10945,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-28"
   },
   {
     "id": 1851,
@@ -11506,7 +11523,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "1994-09-09"
+    "last_fight_date": "1997-05-30"
   },
   {
     "id": 2500,
@@ -12798,7 +12815,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2004-10-14"
+    "last_fight_date": "2005-05-22"
   },
   {
     "id": 666,
@@ -13019,7 +13036,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2006-04-02"
+    "last_fight_date": "2008-05-11"
   },
   {
     "id": 2670,
@@ -13070,7 +13087,7 @@
     "career_draws": 0,
     "career_nc": 1,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 2654,
@@ -13138,7 +13155,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2009-12-19"
+    "last_fight_date": "2011-05-29"
   },
   {
     "id": 2992,
@@ -15552,7 +15569,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 2204,
@@ -15909,7 +15926,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2011-08-12"
+    "last_fight_date": "2012-05-19"
   },
   {
     "id": 2388,
@@ -16436,7 +16453,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1997-05-30"
   },
   {
     "id": 1286,
@@ -16844,7 +16861,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-22"
   },
   {
     "id": 1663,
@@ -17558,7 +17575,7 @@
     "career_draws": 2,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2001-07-29"
+    "last_fight_date": "2004-05-15"
   },
   {
     "id": 874,
@@ -18731,7 +18748,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-22"
   },
   {
     "id": 3431,
@@ -18748,7 +18765,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-28"
   },
   {
     "id": 3497,
@@ -18935,7 +18952,7 @@
     "career_draws": null,
     "career_nc": null,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2010-05-15"
   },
   {
     "id": 2051,
@@ -19734,7 +19751,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2010-05-29"
   },
   {
     "id": 2559,
@@ -19972,7 +19989,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "Women's Strawweight",
-    "last_fight_date": "2024-11-23"
+    "last_fight_date": "2025-05-22"
   },
   {
     "id": 1598,
@@ -21026,7 +21043,7 @@
     "career_draws": null,
     "career_nc": null,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2007-05-12"
   },
   {
     "id": 2847,
@@ -21485,7 +21502,7 @@
     "career_draws": 1,
     "career_nc": 2,
     "division": "",
-    "last_fight_date": "2011-07-30"
+    "last_fight_date": "2012-05-19"
   },
   {
     "id": 1040,
@@ -21638,7 +21655,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2006-05-05"
   },
   {
     "id": 1943,
@@ -22063,7 +22080,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2010-05-15"
   },
   {
     "id": 1092,
@@ -22420,7 +22437,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2022-06-10"
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 1167,
@@ -22573,7 +22590,7 @@
     "career_draws": null,
     "career_nc": null,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1998-05-15"
   },
   {
     "id": 3169,
@@ -24052,7 +24069,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2010-05-29"
   },
   {
     "id": 104,
@@ -24732,7 +24749,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 2980,
@@ -25854,7 +25871,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2012-01-07"
+    "last_fight_date": "2012-05-19"
   },
   {
     "id": 2532,
@@ -26160,7 +26177,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2008-02-23"
+    "last_fight_date": "2009-05-26"
   },
   {
     "id": 2795,
@@ -28489,7 +28506,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-22"
   },
   {
     "id": 3529,
@@ -28506,7 +28523,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2004-05-23"
   },
   {
     "id": 1264,
@@ -28574,7 +28591,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2024-02-03"
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 3651,
@@ -29152,7 +29169,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1998-05-15"
   },
   {
     "id": 3334,
@@ -29492,7 +29509,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2009-06-19"
+    "last_fight_date": "2010-05-15"
   },
   {
     "id": 2652,
@@ -29509,7 +29526,7 @@
     "career_draws": 1,
     "career_nc": 1,
     "division": "",
-    "last_fight_date": "2000-12-09"
+    "last_fight_date": "2001-05-27"
   },
   {
     "id": 3478,
@@ -29679,7 +29696,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 2727,
@@ -30274,7 +30291,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2007-05-12"
   },
   {
     "id": 474,
@@ -30410,7 +30427,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2008-05-31"
   },
   {
     "id": 2056,
@@ -31073,7 +31090,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2009-05-26"
   },
   {
     "id": 107,
@@ -32586,7 +32603,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2022-06-09"
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 3567,
@@ -32603,7 +32620,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-27"
   },
   {
     "id": 2229,
@@ -33368,7 +33385,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-22"
   },
   {
     "id": 3167,
@@ -33436,7 +33453,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2008-05-31"
   },
   {
     "id": 3012,
@@ -33504,7 +33521,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2009-05-15"
   },
   {
     "id": 2857,
@@ -33946,7 +33963,7 @@
     "career_draws": 4,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2008-05-11"
   },
   {
     "id": 2859,
@@ -34150,7 +34167,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-28"
   },
   {
     "id": 3574,
@@ -34337,7 +34354,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2022-10-23"
+    "last_fight_date": "2023-05-27"
   },
   {
     "id": 1291,
@@ -34660,7 +34677,7 @@
     "career_draws": 3,
     "career_nc": 1,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2003-05-02"
   },
   {
     "id": 2484,
@@ -35153,7 +35170,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "Light Heavyweight",
-    "last_fight_date": "2009-06-06"
+    "last_fight_date": "2010-05-15"
   },
   {
     "id": 3470,
@@ -35425,7 +35442,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2005-05-22"
   },
   {
     "id": 2423,
@@ -35476,7 +35493,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 3181,
@@ -35629,7 +35646,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2011-05-29"
   },
   {
     "id": 3737,
@@ -35646,7 +35663,7 @@
     "career_draws": null,
     "career_nc": null,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1996-05-17"
   },
   {
     "id": 2409,
@@ -36003,7 +36020,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 1492,
@@ -36326,7 +36343,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 750,
@@ -37125,7 +37142,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 2560,
@@ -37261,7 +37278,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 921,
@@ -37635,7 +37652,7 @@
     "career_draws": 0,
     "career_nc": 1,
     "division": "",
-    "last_fight_date": "2022-10-23"
+    "last_fight_date": "2023-05-27"
   },
   {
     "id": 1406,
@@ -38230,7 +38247,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2008-03-15"
+    "last_fight_date": "2008-05-11"
   },
   {
     "id": 542,
@@ -40678,7 +40695,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1996-05-17"
   },
   {
     "id": 1016,
@@ -41443,7 +41460,7 @@
     "career_draws": 0,
     "career_nc": 1,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2004-05-23"
   },
   {
     "id": 388,
@@ -43160,7 +43177,7 @@
     "career_draws": 1,
     "career_nc": 1,
     "division": "",
-    "last_fight_date": "2007-09-15"
+    "last_fight_date": "2009-05-15"
   },
   {
     "id": 2715,
@@ -44265,7 +44282,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2010-09-25"
+    "last_fight_date": "2011-05-29"
   },
   {
     "id": 377,
@@ -46305,7 +46322,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1998-05-15"
   },
   {
     "id": 1239,
@@ -47563,7 +47580,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 2849,
@@ -47988,7 +48005,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2023-08-27"
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 2996,
@@ -48396,7 +48413,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 629,
@@ -48855,7 +48872,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2008-06-15"
+    "last_fight_date": "2010-05-29"
   },
   {
     "id": 3211,
@@ -48889,7 +48906,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2003-10-05"
+    "last_fight_date": "2004-05-23"
   },
   {
     "id": 3271,
@@ -49093,7 +49110,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-28"
   },
   {
     "id": 1046,
@@ -49688,7 +49705,7 @@
     "career_draws": 2,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 3255,
@@ -50164,7 +50181,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "Lightweight",
-    "last_fight_date": "2009-02-07"
+    "last_fight_date": "2011-05-29"
   },
   {
     "id": 1999,
@@ -50657,7 +50674,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-22"
   },
   {
     "id": 53,
@@ -51881,7 +51898,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-27"
   },
   {
     "id": 3378,
@@ -52578,7 +52595,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 3479,
@@ -52969,7 +52986,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2008-05-16"
   },
   {
     "id": 3605,
@@ -53326,7 +53343,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2009-06-06"
+    "last_fight_date": "2010-05-15"
   },
   {
     "id": 2748,
@@ -53394,7 +53411,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2004-05-22"
   },
   {
     "id": 2349,
@@ -53632,7 +53649,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2019-08-27"
+    "last_fight_date": "2023-05-28"
   },
   {
     "id": 3353,
@@ -54601,7 +54618,7 @@
     "career_draws": 0,
     "career_nc": 2,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-28"
   },
   {
     "id": 2536,
@@ -55604,7 +55621,7 @@
     "career_draws": 2,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2022-10-23"
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 3749,
@@ -55621,7 +55638,7 @@
     "career_draws": null,
     "career_nc": null,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2008-05-11"
   },
   {
     "id": 2354,
@@ -55740,7 +55757,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2007-05-12"
   },
   {
     "id": 1025,
@@ -56590,7 +56607,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1997-05-30"
   },
   {
     "id": 909,
@@ -56811,7 +56828,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-27"
   },
   {
     "id": 128,
@@ -57610,7 +57627,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 3342,
@@ -57678,7 +57695,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 2556,
@@ -58698,7 +58715,7 @@
     "career_draws": null,
     "career_nc": null,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2009-05-15"
   },
   {
     "id": 2025,
@@ -59293,7 +59310,7 @@
     "career_draws": 2,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2005-05-22"
   },
   {
     "id": 3735,
@@ -59412,7 +59429,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1997-05-30"
   },
   {
     "id": 3392,
@@ -59480,7 +59497,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1999-05-07"
   },
   {
     "id": 1646,
@@ -59548,7 +59565,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2022-10-23"
+    "last_fight_date": "2023-05-27"
   },
   {
     "id": 1816,
@@ -59582,7 +59599,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2009-05-15"
   },
   {
     "id": 210,
@@ -60007,7 +60024,7 @@
     "career_draws": 2,
     "career_nc": 0,
     "division": "Heavyweight",
-    "last_fight_date": "2006-02-26"
+    "last_fight_date": "2006-05-05"
   },
   {
     "id": 2836,
@@ -60041,7 +60058,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2004-05-23"
   },
   {
     "id": 841,
@@ -60826,6 +60843,23 @@
     "last_fight_date": "2024-05-18"
   },
   {
+    "id": 3768,
+    "name": "Victor Psicosis Valenzuela",
+    "nickname": null,
+    "height_cm": 175.3,
+    "reach_cm": 180.3,
+    "stance": "Orthodox",
+    "dob": "1994-02-09",
+    "slug": "victor-psicosis-valenzuela",
+    "career_record": "14-4-0",
+    "career_wins": 14,
+    "career_losses": 4,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "Welterweight",
+    "last_fight_date": "2026-04-25"
+  },
+  {
     "id": 3061,
     "name": "Victor Reyna",
     "nickname": null,
@@ -60874,7 +60908,7 @@
     "career_draws": 2,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2025-10-14"
+    "last_fight_date": "2007-06-22"
   },
   {
     "id": 2343,
@@ -61146,7 +61180,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2011-04-09"
+    "last_fight_date": "2012-05-19"
   },
   {
     "id": 365,
@@ -61792,7 +61826,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "1997-05-30"
   },
   {
     "id": 2370,
@@ -62149,7 +62183,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-28"
   },
   {
     "id": 2910,
@@ -62200,7 +62234,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2022-10-23"
+    "last_fight_date": "2024-05-19"
   },
   {
     "id": 947,
@@ -62251,7 +62285,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2023-05-27"
   },
   {
     "id": 2222,
@@ -62319,7 +62353,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2024-08-23"
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 3681,
@@ -62642,7 +62676,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2022-06-10"
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 3676,
@@ -62676,7 +62710,7 @@
     "career_draws": 1,
     "career_nc": 1,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 3039,
@@ -62948,7 +62982,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "2004-02-15"
+    "last_fight_date": "2004-05-23"
   },
   {
     "id": 2865,
@@ -63067,7 +63101,7 @@
     "career_draws": null,
     "career_nc": null,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2024-05-18"
   },
   {
     "id": 196,
@@ -63152,7 +63186,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 3144,
@@ -63407,7 +63441,7 @@
     "career_draws": null,
     "career_nc": null,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2011-05-29"
   },
   {
     "id": 1321,
@@ -63764,7 +63798,7 @@
     "career_draws": 0,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": "1993-11-12"
+    "last_fight_date": "1996-05-17"
   },
   {
     "id": 826,
@@ -63900,7 +63934,7 @@
     "career_draws": 1,
     "career_nc": 0,
     "division": "",
-    "last_fight_date": ""
+    "last_fight_date": "2025-05-23"
   },
   {
     "id": 2000,
