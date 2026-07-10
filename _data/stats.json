@@ -1,11 +1,11 @@
 {
-  "total_fighters": 3768,
+  "total_fighters": 3769,
   "total_events": 1260,
-  "total_fights": 11223,
+  "total_fights": 11227,
   "upcoming_events": 7,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-08-22",
-  "last_updated": "2026-07-07T20:43:57.833668",
+  "last_updated": "2026-07-10T11:44:18.588259",
   "featured_event": {
     "name": "UFC 329: McGregor vs. Holloway 2",
     "date": "Saturday, July 11, 2026",
@@ -82,9 +82,9 @@
       },
       {
         "fighter_a": "Farid Basharat",
-        "fighter_b": "Ethyn Ewing",
+        "fighter_b": "John Garza",
         "weight_class": "Bantamweight",
-        "slug": "farid-basharat-vs-ethyn-ewing"
+        "slug": "farid-basharat-vs-john-garza"
       },
       {
         "fighter_a": "Zach Reese",
