@@ -1,110 +1,92 @@
 {
-  "total_fighters": 3769,
-  "total_events": 1260,
-  "total_fights": 11227,
-  "upcoming_events": 7,
+  "total_fighters": 3772,
+  "total_events": 1262,
+  "total_fights": 11232,
+  "upcoming_events": 8,
   "date_range_start": "1993-11-12",
-  "date_range_end": "2026-08-22",
-  "last_updated": "2026-07-10T11:44:18.588259",
+  "date_range_end": "2026-09-05",
+  "last_updated": "2026-07-13T08:59:37.860861",
   "featured_event": {
-    "name": "UFC 329: McGregor vs. Holloway 2",
-    "date": "Saturday, July 11, 2026",
-    "iso_date": "2026-07-11",
-    "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-329-mcgregor-vs-holloway-2",
+    "name": "UFC Fight Night: Du Plessis vs. Usman",
+    "date": "Saturday, July 18, 2026",
+    "iso_date": "2026-07-18",
+    "location": "Oklahoma City, Oklahoma, USA",
+    "slug": "ufc-fight-night-du-plessis-vs-usman",
     "is_past": false,
     "matchups": [
       {
-        "fighter_a": "Max Holloway",
-        "fighter_b": "Conor McGregor",
-        "weight_class": "Welterweight",
-        "slug": "max-holloway-vs-conor-mcgregor"
+        "fighter_a": "Dricus Du Plessis",
+        "fighter_b": "Kamaru Usman",
+        "weight_class": "Middleweight",
+        "slug": "dricus-du-plessis-vs-kamaru-usman"
       },
       {
-        "fighter_a": "Benoit Saint Denis",
-        "fighter_b": "Paddy Pimblett",
+        "fighter_a": "Christian Leroy Duncan",
+        "fighter_b": "Jared Cannonier",
+        "weight_class": "Middleweight",
+        "slug": "christian-leroy-duncan-vs-jared-cannonier"
+      },
+      {
+        "fighter_a": "Chase Hooper",
+        "fighter_b": "Mitch Ramirez",
         "weight_class": "Lightweight",
-        "slug": "benoit-saint-denis-vs-paddy-pimblett"
+        "slug": "chase-hooper-vs-mitch-ramirez"
       },
       {
-        "fighter_a": "Mario Bautista",
-        "fighter_b": "Cory Sandhagen",
-        "weight_class": "Bantamweight",
-        "slug": "mario-bautista-vs-cory-sandhagen"
+        "fighter_a": "Fatima Kline",
+        "fighter_b": "Tabatha Ricci",
+        "weight_class": "Women's Strawweight",
+        "slug": "fatima-kline-vs-tabatha-ricci"
       },
       {
-        "fighter_a": "Lone'er Kavanagh",
-        "fighter_b": "Brandon Royval",
-        "weight_class": "Flyweight",
-        "slug": "loneer-kavanagh-vs-brandon-royval"
-      },
-      {
-        "fighter_a": "King Green",
-        "fighter_b": "Terrance McKinney",
-        "weight_class": "Lightweight",
-        "slug": "king-green-vs-terrance-mckinney"
-      },
-      {
-        "fighter_a": "Nikita Krylov",
-        "fighter_b": "Robert Whittaker",
-        "weight_class": "Light Heavyweight",
-        "slug": "nikita-krylov-vs-robert-whittaker"
-      },
-      {
-        "fighter_a": "Elisha Ellison",
-        "fighter_b": "Gable Steveson",
-        "weight_class": "Heavyweight",
-        "slug": "elisha-ellison-vs-gable-steveson"
-      },
-      {
-        "fighter_a": "Cody Garbrandt",
-        "fighter_b": "Adrian Yanez",
-        "weight_class": "Bantamweight",
-        "slug": "cody-garbrandt-vs-adrian-yanez"
-      },
-      {
-        "fighter_a": "Luke Riley",
-        "fighter_b": "Kai Kamaka",
+        "fighter_a": "Alberto Montes",
+        "fighter_b": "Tommy McMillen",
         "weight_class": "Featherweight",
-        "slug": "luke-riley-vs-kai-kamaka"
+        "slug": "alberto-montes-vs-tommy-mcmillen"
       },
       {
-        "fighter_a": "Wang Cong",
-        "fighter_b": "Tracy Cortez",
-        "weight_class": "Women's Flyweight",
-        "slug": "wang-cong-vs-tracy-cortez"
+        "fighter_a": "Jose Delgado",
+        "fighter_b": "Austin Bashi",
+        "weight_class": "Featherweight",
+        "slug": "jose-delgado-vs-austin-bashi"
       },
       {
-        "fighter_a": "Damian Pinas",
-        "fighter_b": "Cesar Almeida",
-        "weight_class": "Middleweight",
-        "slug": "damian-pinas-vs-cesar-almeida"
+        "fighter_a": "Seokhyeon Ko",
+        "fighter_b": "Jean-Paul Lebosnoyani",
+        "weight_class": "Welterweight",
+        "slug": "seokhyeon-ko-vs-jean-paul-lebosnoyani"
       },
       {
-        "fighter_a": "Farid Basharat",
-        "fighter_b": "John Garza",
-        "weight_class": "Bantamweight",
-        "slug": "farid-basharat-vs-john-garza"
+        "fighter_a": "Felipe Franco",
+        "fighter_b": "Levi Rodrigues Jr.",
+        "weight_class": "Light Heavyweight",
+        "slug": "felipe-franco-vs-levi-rodrigues-jr"
       },
       {
-        "fighter_a": "Zach Reese",
-        "fighter_b": "Ryan Gandra",
-        "weight_class": "Middleweight",
-        "slug": "zach-reese-vs-ryan-gandra"
-      },
-      {
-        "fighter_a": "Cody Durden",
-        "fighter_b": "Alessandro Costa",
+        "fighter_a": "Alden Coria",
+        "fighter_b": "Stewart Nicoll",
         "weight_class": "Flyweight",
-        "slug": "cody-durden-vs-alessandro-costa"
+        "slug": "alden-coria-vs-stewart-nicoll"
+      },
+      {
+        "fighter_a": "Alvin Hines",
+        "fighter_b": "RJ Harris",
+        "weight_class": "Heavyweight",
+        "slug": "alvin-hines-vs-rj-harris"
+      },
+      {
+        "fighter_a": "Dione Barbosa",
+        "fighter_b": "Anna Melisano",
+        "weight_class": "Women's Flyweight",
+        "slug": "dione-barbosa-vs-anna-melisano"
       }
     ]
   },
   "latest_result": {
-    "name": "UFC Fight Night: Fiziev vs. Torres",
-    "date": "Saturday, June 27, 2026",
-    "iso_date": "2026-06-27",
-    "location": "Baku, Azerbaijan",
-    "slug": "ufc-fight-night-fiziev-vs-torres"
+    "name": "UFC 329: McGregor vs. Holloway 2",
+    "date": "Saturday, July 11, 2026",
+    "iso_date": "2026-07-11",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-329-mcgregor-vs-holloway-2"
   }
 }

@@ -1,98 +1,5 @@
 [
   {
-    "id": 1217,
-    "name": "UFC 329: McGregor vs. Holloway 2",
-    "date": "Saturday, July 11, 2026",
-    "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-329-mcgregor-vs-holloway-2",
-    "matchups": [
-      {
-        "fighter_a": "Max Holloway",
-        "fighter_b": "Conor McGregor",
-        "weight_class": "Welterweight",
-        "slug": "max-holloway-vs-conor-mcgregor"
-      },
-      {
-        "fighter_a": "Benoit Saint Denis",
-        "fighter_b": "Paddy Pimblett",
-        "weight_class": "Lightweight",
-        "slug": "benoit-saint-denis-vs-paddy-pimblett"
-      },
-      {
-        "fighter_a": "Mario Bautista",
-        "fighter_b": "Cory Sandhagen",
-        "weight_class": "Bantamweight",
-        "slug": "mario-bautista-vs-cory-sandhagen"
-      },
-      {
-        "fighter_a": "Lone'er Kavanagh",
-        "fighter_b": "Brandon Royval",
-        "weight_class": "Flyweight",
-        "slug": "loneer-kavanagh-vs-brandon-royval"
-      },
-      {
-        "fighter_a": "King Green",
-        "fighter_b": "Terrance McKinney",
-        "weight_class": "Lightweight",
-        "slug": "king-green-vs-terrance-mckinney"
-      },
-      {
-        "fighter_a": "Nikita Krylov",
-        "fighter_b": "Robert Whittaker",
-        "weight_class": "Light Heavyweight",
-        "slug": "nikita-krylov-vs-robert-whittaker"
-      },
-      {
-        "fighter_a": "Elisha Ellison",
-        "fighter_b": "Gable Steveson",
-        "weight_class": "Heavyweight",
-        "slug": "elisha-ellison-vs-gable-steveson"
-      },
-      {
-        "fighter_a": "Cody Garbrandt",
-        "fighter_b": "Adrian Yanez",
-        "weight_class": "Bantamweight",
-        "slug": "cody-garbrandt-vs-adrian-yanez"
-      },
-      {
-        "fighter_a": "Luke Riley",
-        "fighter_b": "Kai Kamaka",
-        "weight_class": "Featherweight",
-        "slug": "luke-riley-vs-kai-kamaka"
-      },
-      {
-        "fighter_a": "Wang Cong",
-        "fighter_b": "Tracy Cortez",
-        "weight_class": "Women's Flyweight",
-        "slug": "wang-cong-vs-tracy-cortez"
-      },
-      {
-        "fighter_a": "Damian Pinas",
-        "fighter_b": "Cesar Almeida",
-        "weight_class": "Middleweight",
-        "slug": "damian-pinas-vs-cesar-almeida"
-      },
-      {
-        "fighter_a": "Farid Basharat",
-        "fighter_b": "John Garza",
-        "weight_class": "Bantamweight",
-        "slug": "farid-basharat-vs-john-garza"
-      },
-      {
-        "fighter_a": "Zach Reese",
-        "fighter_b": "Ryan Gandra",
-        "weight_class": "Middleweight",
-        "slug": "zach-reese-vs-ryan-gandra"
-      },
-      {
-        "fighter_a": "Cody Durden",
-        "fighter_b": "Alessandro Costa",
-        "weight_class": "Flyweight",
-        "slug": "cody-durden-vs-alessandro-costa"
-      }
-    ]
-  },
-  {
     "id": 1220,
     "name": "UFC Fight Night: Du Plessis vs. Usman",
     "date": "Saturday, July 18, 2026",
@@ -112,28 +19,22 @@
         "slug": "christian-leroy-duncan-vs-jared-cannonier"
       },
       {
-        "fighter_a": "Jacobe Smith",
-        "fighter_b": "Kevin Holland",
-        "weight_class": "Welterweight",
-        "slug": "jacobe-smith-vs-kevin-holland"
-      },
-      {
         "fighter_a": "Chase Hooper",
         "fighter_b": "Mitch Ramirez",
         "weight_class": "Lightweight",
         "slug": "chase-hooper-vs-mitch-ramirez"
       },
       {
-        "fighter_a": "Alberto Montes",
-        "fighter_b": "Tommy McMillen",
-        "weight_class": "Featherweight",
-        "slug": "alberto-montes-vs-tommy-mcmillen"
-      },
-      {
         "fighter_a": "Fatima Kline",
         "fighter_b": "Tabatha Ricci",
         "weight_class": "Women's Strawweight",
         "slug": "fatima-kline-vs-tabatha-ricci"
+      },
+      {
+        "fighter_a": "Alberto Montes",
+        "fighter_b": "Tommy McMillen",
+        "weight_class": "Featherweight",
+        "slug": "alberto-montes-vs-tommy-mcmillen"
       },
       {
         "fighter_a": "Jose Delgado",
@@ -160,16 +61,16 @@
         "slug": "alden-coria-vs-stewart-nicoll"
       },
       {
-        "fighter_a": "Allen Frye Jr.",
-        "fighter_b": "Alvin Hines",
+        "fighter_a": "Alvin Hines",
+        "fighter_b": "RJ Harris",
         "weight_class": "Heavyweight",
-        "slug": "allen-frye-jr-vs-alvin-hines"
+        "slug": "alvin-hines-vs-rj-harris"
       },
       {
-        "fighter_a": "Veronica Hardy",
-        "fighter_b": "Dione Barbosa",
+        "fighter_a": "Dione Barbosa",
+        "fighter_b": "Anna Melisano",
         "weight_class": "Women's Flyweight",
-        "slug": "veronica-hardy-vs-dione-barbosa"
+        "slug": "dione-barbosa-vs-anna-melisano"
       }
     ]
   },
@@ -449,7 +350,60 @@
         "fighter_b": "Elise Reed",
         "weight_class": "Women's Strawweight",
         "slug": "shanelle-dyer-vs-elise-reed"
+      },
+      {
+        "fighter_a": "Gauge Young",
+        "fighter_b": "Kody Steele",
+        "weight_class": "Lightweight",
+        "slug": "gauge-young-vs-kody-steele"
       }
     ]
+  },
+  {
+    "id": 1261,
+    "name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "date": "Saturday, August 29, 2026",
+    "location": "Shanghai, China",
+    "slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "matchups": [
+      {
+        "fighter_a": "Song Yadong",
+        "fighter_b": "Umar Nurmagomedov",
+        "weight_class": "Bantamweight",
+        "slug": "song-yadong-vs-umar-nurmagomedov"
+      },
+      {
+        "fighter_a": "Denise Gomes",
+        "fighter_b": "Yan Xiaonan",
+        "weight_class": "Women's Strawweight",
+        "slug": "denise-gomes-vs-yan-xiaonan"
+      },
+      {
+        "fighter_a": "Sumudaerji",
+        "fighter_b": "Alex Perez",
+        "weight_class": "Flyweight",
+        "slug": "sumudaerji-vs-alex-perez"
+      },
+      {
+        "fighter_a": "Kevin Borjas",
+        "fighter_b": "Rei Tsuruya",
+        "weight_class": "Flyweight",
+        "slug": "kevin-borjas-vs-rei-tsuruya"
+      },
+      {
+        "fighter_a": "Junior Tafa",
+        "fighter_b": "Liu Ce",
+        "weight_class": "Light Heavyweight",
+        "slug": "junior-tafa-vs-liu-ce"
+      }
+    ]
+  },
+  {
+    "id": 1262,
+    "name": "UFC Fight Night",
+    "date": "Saturday, September 5, 2026",
+    "location": "Paris, Ile-de-France, France",
+    "slug": "ufc-fight-night",
+    "matchups": []
   }
 ]

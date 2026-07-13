@@ -1,145 +1,5 @@
 [
   {
-    "fighter_a": "Max Holloway",
-    "fighter_b": "Conor McGregor",
-    "slug": "max-holloway-vs-conor-mcgregor",
-    "url": "/compare/max-holloway-vs-conor-mcgregor/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Benoit Saint Denis",
-    "fighter_b": "Paddy Pimblett",
-    "slug": "benoit-saint-denis-vs-paddy-pimblett",
-    "url": "/compare/benoit-saint-denis-vs-paddy-pimblett/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Mario Bautista",
-    "fighter_b": "Cory Sandhagen",
-    "slug": "mario-bautista-vs-cory-sandhagen",
-    "url": "/compare/mario-bautista-vs-cory-sandhagen/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Lone'er Kavanagh",
-    "fighter_b": "Brandon Royval",
-    "slug": "loneer-kavanagh-vs-brandon-royval",
-    "url": "/compare/loneer-kavanagh-vs-brandon-royval/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "King Green",
-    "fighter_b": "Terrance McKinney",
-    "slug": "king-green-vs-terrance-mckinney",
-    "url": "/compare/king-green-vs-terrance-mckinney/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Nikita Krylov",
-    "fighter_b": "Robert Whittaker",
-    "slug": "nikita-krylov-vs-robert-whittaker",
-    "url": "/compare/nikita-krylov-vs-robert-whittaker/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Elisha Ellison",
-    "fighter_b": "Gable Steveson",
-    "slug": "elisha-ellison-vs-gable-steveson",
-    "url": "/compare/elisha-ellison-vs-gable-steveson/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Cody Garbrandt",
-    "fighter_b": "Adrian Yanez",
-    "slug": "cody-garbrandt-vs-adrian-yanez",
-    "url": "/compare/cody-garbrandt-vs-adrian-yanez/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Luke Riley",
-    "fighter_b": "Kai Kamaka",
-    "slug": "luke-riley-vs-kai-kamaka",
-    "url": "/compare/luke-riley-vs-kai-kamaka/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Wang Cong",
-    "fighter_b": "Tracy Cortez",
-    "slug": "wang-cong-vs-tracy-cortez",
-    "url": "/compare/wang-cong-vs-tracy-cortez/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Damian Pinas",
-    "fighter_b": "Cesar Almeida",
-    "slug": "damian-pinas-vs-cesar-almeida",
-    "url": "/compare/damian-pinas-vs-cesar-almeida/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Farid Basharat",
-    "fighter_b": "John Garza",
-    "slug": "farid-basharat-vs-john-garza",
-    "url": "/compare/farid-basharat-vs-john-garza/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Zach Reese",
-    "fighter_b": "Ryan Gandra",
-    "slug": "zach-reese-vs-ryan-gandra",
-    "url": "/compare/zach-reese-vs-ryan-gandra/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Cody Durden",
-    "fighter_b": "Alessandro Costa",
-    "slug": "cody-durden-vs-alessandro-costa",
-    "url": "/compare/cody-durden-vs-alessandro-costa/",
-    "event_name": "UFC 329: McGregor vs. Holloway 2",
-    "event_date": "Saturday, July 11, 2026",
-    "event_slug": "ufc-329-mcgregor-vs-holloway-2",
-    "weight_class": "Flyweight"
-  },
-  {
     "fighter_a": "Dricus Du Plessis",
     "fighter_b": "Kamaru Usman",
     "slug": "dricus-du-plessis-vs-kamaru-usman",
@@ -160,16 +20,6 @@
     "weight_class": "Middleweight"
   },
   {
-    "fighter_a": "Jacobe Smith",
-    "fighter_b": "Kevin Holland",
-    "slug": "jacobe-smith-vs-kevin-holland",
-    "url": "/compare/jacobe-smith-vs-kevin-holland/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Welterweight"
-  },
-  {
     "fighter_a": "Chase Hooper",
     "fighter_b": "Mitch Ramirez",
     "slug": "chase-hooper-vs-mitch-ramirez",
@@ -180,16 +30,6 @@
     "weight_class": "Lightweight"
   },
   {
-    "fighter_a": "Alberto Montes",
-    "fighter_b": "Tommy McMillen",
-    "slug": "alberto-montes-vs-tommy-mcmillen",
-    "url": "/compare/alberto-montes-vs-tommy-mcmillen/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Featherweight"
-  },
-  {
     "fighter_a": "Fatima Kline",
     "fighter_b": "Tabatha Ricci",
     "slug": "fatima-kline-vs-tabatha-ricci",
@@ -198,6 +38,16 @@
     "event_date": "Saturday, July 18, 2026",
     "event_slug": "ufc-fight-night-du-plessis-vs-usman",
     "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Alberto Montes",
+    "fighter_b": "Tommy McMillen",
+    "slug": "alberto-montes-vs-tommy-mcmillen",
+    "url": "/compare/alberto-montes-vs-tommy-mcmillen/",
+    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
+    "event_date": "Saturday, July 18, 2026",
+    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
+    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Jose Delgado",
@@ -240,20 +90,20 @@
     "weight_class": "Flyweight"
   },
   {
-    "fighter_a": "Allen Frye Jr.",
-    "fighter_b": "Alvin Hines",
-    "slug": "allen-frye-jr-vs-alvin-hines",
-    "url": "/compare/allen-frye-jr-vs-alvin-hines/",
+    "fighter_a": "Alvin Hines",
+    "fighter_b": "RJ Harris",
+    "slug": "alvin-hines-vs-rj-harris",
+    "url": "/compare/alvin-hines-vs-rj-harris/",
     "event_name": "UFC Fight Night: Du Plessis vs. Usman",
     "event_date": "Saturday, July 18, 2026",
     "event_slug": "ufc-fight-night-du-plessis-vs-usman",
     "weight_class": "Heavyweight"
   },
   {
-    "fighter_a": "Veronica Hardy",
-    "fighter_b": "Dione Barbosa",
-    "slug": "veronica-hardy-vs-dione-barbosa",
-    "url": "/compare/veronica-hardy-vs-dione-barbosa/",
+    "fighter_a": "Dione Barbosa",
+    "fighter_b": "Anna Melisano",
+    "slug": "dione-barbosa-vs-anna-melisano",
+    "url": "/compare/dione-barbosa-vs-anna-melisano/",
     "event_name": "UFC Fight Night: Du Plessis vs. Usman",
     "event_date": "Saturday, July 18, 2026",
     "event_slug": "ufc-fight-night-du-plessis-vs-usman",
@@ -648,5 +498,65 @@
     "event_date": "Saturday, August 22, 2026",
     "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
     "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Gauge Young",
+    "fighter_b": "Kody Steele",
+    "slug": "gauge-young-vs-kody-steele",
+    "url": "/compare/gauge-young-vs-kody-steele/",
+    "event_name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "event_date": "Saturday, August 22, 2026",
+    "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Song Yadong",
+    "fighter_b": "Umar Nurmagomedov",
+    "slug": "song-yadong-vs-umar-nurmagomedov",
+    "url": "/compare/song-yadong-vs-umar-nurmagomedov/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Denise Gomes",
+    "fighter_b": "Yan Xiaonan",
+    "slug": "denise-gomes-vs-yan-xiaonan",
+    "url": "/compare/denise-gomes-vs-yan-xiaonan/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Sumudaerji",
+    "fighter_b": "Alex Perez",
+    "slug": "sumudaerji-vs-alex-perez",
+    "url": "/compare/sumudaerji-vs-alex-perez/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Kevin Borjas",
+    "fighter_b": "Rei Tsuruya",
+    "slug": "kevin-borjas-vs-rei-tsuruya",
+    "url": "/compare/kevin-borjas-vs-rei-tsuruya/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Junior Tafa",
+    "fighter_b": "Liu Ce",
+    "slug": "junior-tafa-vs-liu-ce",
+    "url": "/compare/junior-tafa-vs-liu-ce/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Light Heavyweight"
   }
 ]
