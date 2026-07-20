@@ -1,91 +1,16 @@
 [
   {
-    "id": 1220,
-    "name": "UFC Fight Night: Du Plessis vs. Usman",
-    "date": "Saturday, July 18, 2026",
-    "location": "Oklahoma City, Oklahoma, USA",
-    "slug": "ufc-fight-night-du-plessis-vs-usman",
-    "matchups": [
-      {
-        "fighter_a": "Dricus Du Plessis",
-        "fighter_b": "Kamaru Usman",
-        "weight_class": "Middleweight",
-        "slug": "dricus-du-plessis-vs-kamaru-usman"
-      },
-      {
-        "fighter_a": "Christian Leroy Duncan",
-        "fighter_b": "Jared Cannonier",
-        "weight_class": "Middleweight",
-        "slug": "christian-leroy-duncan-vs-jared-cannonier"
-      },
-      {
-        "fighter_a": "Chase Hooper",
-        "fighter_b": "Mitch Ramirez",
-        "weight_class": "Lightweight",
-        "slug": "chase-hooper-vs-mitch-ramirez"
-      },
-      {
-        "fighter_a": "Fatima Kline",
-        "fighter_b": "Tabatha Ricci",
-        "weight_class": "Women's Strawweight",
-        "slug": "fatima-kline-vs-tabatha-ricci"
-      },
-      {
-        "fighter_a": "Alberto Montes",
-        "fighter_b": "Tommy McMillen",
-        "weight_class": "Featherweight",
-        "slug": "alberto-montes-vs-tommy-mcmillen"
-      },
-      {
-        "fighter_a": "Jose Delgado",
-        "fighter_b": "Austin Bashi",
-        "weight_class": "Featherweight",
-        "slug": "jose-delgado-vs-austin-bashi"
-      },
-      {
-        "fighter_a": "Seokhyeon Ko",
-        "fighter_b": "Jean-Paul Lebosnoyani",
-        "weight_class": "Welterweight",
-        "slug": "seokhyeon-ko-vs-jean-paul-lebosnoyani"
-      },
-      {
-        "fighter_a": "Felipe Franco",
-        "fighter_b": "Levi Rodrigues Jr.",
-        "weight_class": "Light Heavyweight",
-        "slug": "felipe-franco-vs-levi-rodrigues-jr"
-      },
-      {
-        "fighter_a": "Alden Coria",
-        "fighter_b": "Stewart Nicoll",
-        "weight_class": "Flyweight",
-        "slug": "alden-coria-vs-stewart-nicoll"
-      },
-      {
-        "fighter_a": "Alvin Hines",
-        "fighter_b": "RJ Harris",
-        "weight_class": "Heavyweight",
-        "slug": "alvin-hines-vs-rj-harris"
-      },
-      {
-        "fighter_a": "Dione Barbosa",
-        "fighter_b": "Anna Melisano",
-        "weight_class": "Women's Flyweight",
-        "slug": "dione-barbosa-vs-anna-melisano"
-      }
-    ]
-  },
-  {
     "id": 1222,
-    "name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "name": "UFC Fight Night: Ankalaev vs. Guskov",
     "date": "Saturday, July 25, 2026",
     "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
-    "slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "slug": "ufc-fight-night-ankalaev-vs-guskov",
     "matchups": [
       {
-        "fighter_a": "Magomed Ankalaev",
-        "fighter_b": "Khalil Rountree Jr.",
+        "fighter_a": "Bogdan Guskov",
+        "fighter_b": "Magomed Ankalaev",
         "weight_class": "Light Heavyweight",
-        "slug": "magomed-ankalaev-vs-khalil-rountree-jr"
+        "slug": "bogdan-guskov-vs-magomed-ankalaev"
       },
       {
         "fighter_a": "Steve Erceg",
@@ -112,6 +37,12 @@
         "slug": "rizvan-kuniev-vs-tyrell-fortune"
       },
       {
+        "fighter_a": "Saygid Izagakhmaev",
+        "fighter_b": "Abubakar Vagaev",
+        "weight_class": "Welterweight",
+        "slug": "saygid-izagakhmaev-vs-abubakar-vagaev"
+      },
+      {
         "fighter_a": "Valter Walker",
         "fighter_b": "Thomas Petersen",
         "weight_class": "Heavyweight",
@@ -122,6 +53,12 @@
         "fighter_b": "Uran Satybaldiev",
         "weight_class": "Light Heavyweight",
         "slug": "dustin-jacoby-vs-uran-satybaldiev"
+      },
+      {
+        "fighter_a": "Sam Patterson",
+        "fighter_b": "Santiago Ponzinibbio",
+        "weight_class": "Welterweight",
+        "slug": "sam-patterson-vs-santiago-ponzinibbio"
       },
       {
         "fighter_a": "Axel Sola",
@@ -157,10 +94,10 @@
         "slug": "uros-medic-vs-daniel-rodriguez"
       },
       {
-        "fighter_a": "Jan Blachowicz",
-        "fighter_b": "Bogdan Guskov",
+        "fighter_a": "Navajo Stirling",
+        "fighter_b": "Jan Blachowicz",
         "weight_class": "Light Heavyweight",
-        "slug": "jan-blachowicz-vs-bogdan-guskov"
+        "slug": "navajo-stirling-vs-jan-blachowicz"
       },
       {
         "fighter_a": "Marcin Tybura",
@@ -215,6 +152,12 @@
         "fighter_b": "Jovan Leka",
         "weight_class": "Heavyweight",
         "slug": "max-gimenis-vs-jovan-leka"
+      },
+      {
+        "fighter_a": "Kyle Prepolec",
+        "fighter_b": "Mateusz Rebecki",
+        "weight_class": "Lightweight",
+        "slug": "kyle-prepolec-vs-mateusz-rebecki"
       }
     ]
   },
@@ -230,6 +173,36 @@
         "fighter_b": "Mateusz Gamrot",
         "weight_class": "Lightweight",
         "slug": "quillian-salkild-vs-mateusz-gamrot"
+      },
+      {
+        "fighter_a": "Bruno Lopes",
+        "fighter_b": "Diyar Nurgozhay",
+        "weight_class": "Light Heavyweight",
+        "slug": "bruno-lopes-vs-diyar-nurgozhay"
+      },
+      {
+        "fighter_a": "Diego Ferreira",
+        "fighter_b": "Billy Quarantillo",
+        "weight_class": "Lightweight",
+        "slug": "diego-ferreira-vs-billy-quarantillo"
+      },
+      {
+        "fighter_a": "Louie Sutherland",
+        "fighter_b": "Henrique Da Silva Lopes",
+        "weight_class": "Heavyweight",
+        "slug": "louie-sutherland-vs-henrique-da-silva-lopes"
+      },
+      {
+        "fighter_a": "Steven Asplund",
+        "fighter_b": "Guilherme Pat",
+        "weight_class": "Heavyweight",
+        "slug": "steven-asplund-vs-guilherme-pat"
+      },
+      {
+        "fighter_a": "Amanda Lemos",
+        "fighter_b": "Alexia Thainara",
+        "weight_class": "Women's Strawweight",
+        "slug": "amanda-lemos-vs-alexia-thainara"
       }
     ]
   },
@@ -360,6 +333,14 @@
     ]
   },
   {
+    "id": 1263,
+    "name": "DWCS 10.3",
+    "date": "Tuesday, August 25, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "dwcs-103",
+    "matchups": []
+  },
+  {
     "id": 1261,
     "name": "UFC Fight Night: Nurmagomedov vs. Song",
     "date": "Saturday, August 29, 2026",
@@ -395,6 +376,12 @@
         "fighter_b": "Liu Ce",
         "weight_class": "Light Heavyweight",
         "slug": "junior-tafa-vs-liu-ce"
+      },
+      {
+        "fighter_a": "Aoriqileng",
+        "fighter_b": "Kai Asakura",
+        "weight_class": "Bantamweight",
+        "slug": "aoriqileng-vs-kai-asakura"
       }
     ]
   },
@@ -404,6 +391,25 @@
     "date": "Saturday, September 5, 2026",
     "location": "Paris, Ile-de-France, France",
     "slug": "ufc-fight-night",
-    "matchups": []
+    "matchups": [
+      {
+        "fighter_a": "Michael Page",
+        "fighter_b": "Nursulton Ruziboev",
+        "weight_class": "Middleweight",
+        "slug": "michael-page-vs-nursulton-ruziboev"
+      },
+      {
+        "fighter_a": "Kurtis Campbell",
+        "fighter_b": "Trevor Peek",
+        "weight_class": "Featherweight",
+        "slug": "kurtis-campbell-vs-trevor-peek"
+      },
+      {
+        "fighter_a": "Mario Pinto",
+        "fighter_b": "Ryan Spann",
+        "weight_class": "Heavyweight",
+        "slug": "mario-pinto-vs-ryan-spann"
+      }
+    ]
   }
 ]

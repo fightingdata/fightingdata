@@ -1,122 +1,12 @@
 [
   {
-    "fighter_a": "Dricus Du Plessis",
-    "fighter_b": "Kamaru Usman",
-    "slug": "dricus-du-plessis-vs-kamaru-usman",
-    "url": "/compare/dricus-du-plessis-vs-kamaru-usman/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Christian Leroy Duncan",
-    "fighter_b": "Jared Cannonier",
-    "slug": "christian-leroy-duncan-vs-jared-cannonier",
-    "url": "/compare/christian-leroy-duncan-vs-jared-cannonier/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Chase Hooper",
-    "fighter_b": "Mitch Ramirez",
-    "slug": "chase-hooper-vs-mitch-ramirez",
-    "url": "/compare/chase-hooper-vs-mitch-ramirez/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Fatima Kline",
-    "fighter_b": "Tabatha Ricci",
-    "slug": "fatima-kline-vs-tabatha-ricci",
-    "url": "/compare/fatima-kline-vs-tabatha-ricci/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Women's Strawweight"
-  },
-  {
-    "fighter_a": "Alberto Montes",
-    "fighter_b": "Tommy McMillen",
-    "slug": "alberto-montes-vs-tommy-mcmillen",
-    "url": "/compare/alberto-montes-vs-tommy-mcmillen/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Jose Delgado",
-    "fighter_b": "Austin Bashi",
-    "slug": "jose-delgado-vs-austin-bashi",
-    "url": "/compare/jose-delgado-vs-austin-bashi/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Seokhyeon Ko",
-    "fighter_b": "Jean-Paul Lebosnoyani",
-    "slug": "seokhyeon-ko-vs-jean-paul-lebosnoyani",
-    "url": "/compare/seokhyeon-ko-vs-jean-paul-lebosnoyani/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Felipe Franco",
-    "fighter_b": "Levi Rodrigues Jr.",
-    "slug": "felipe-franco-vs-levi-rodrigues-jr",
-    "url": "/compare/felipe-franco-vs-levi-rodrigues-jr/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Alden Coria",
-    "fighter_b": "Stewart Nicoll",
-    "slug": "alden-coria-vs-stewart-nicoll",
-    "url": "/compare/alden-coria-vs-stewart-nicoll/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Alvin Hines",
-    "fighter_b": "RJ Harris",
-    "slug": "alvin-hines-vs-rj-harris",
-    "url": "/compare/alvin-hines-vs-rj-harris/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Dione Barbosa",
-    "fighter_b": "Anna Melisano",
-    "slug": "dione-barbosa-vs-anna-melisano",
-    "url": "/compare/dione-barbosa-vs-anna-melisano/",
-    "event_name": "UFC Fight Night: Du Plessis vs. Usman",
-    "event_date": "Saturday, July 18, 2026",
-    "event_slug": "ufc-fight-night-du-plessis-vs-usman",
-    "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Magomed Ankalaev",
-    "fighter_b": "Khalil Rountree Jr.",
-    "slug": "magomed-ankalaev-vs-khalil-rountree-jr",
-    "url": "/compare/magomed-ankalaev-vs-khalil-rountree-jr/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "fighter_a": "Bogdan Guskov",
+    "fighter_b": "Magomed Ankalaev",
+    "slug": "bogdan-guskov-vs-magomed-ankalaev",
+    "url": "/compare/bogdan-guskov-vs-magomed-ankalaev/",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Light Heavyweight"
   },
   {
@@ -124,9 +14,9 @@
     "fighter_b": "Ramazan Temirov",
     "slug": "steve-erceg-vs-ramazan-temirov",
     "url": "/compare/steve-erceg-vs-ramazan-temirov/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Flyweight"
   },
   {
@@ -134,9 +24,9 @@
     "fighter_b": "Wellington Turman",
     "slug": "islam-dulatov-vs-wellington-turman",
     "url": "/compare/islam-dulatov-vs-wellington-turman/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Welterweight"
   },
   {
@@ -144,9 +34,9 @@
     "fighter_b": "Damian Rzepecki",
     "slug": "magomed-zaynukov-vs-damian-rzepecki",
     "url": "/compare/magomed-zaynukov-vs-damian-rzepecki/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Lightweight"
   },
   {
@@ -154,19 +44,29 @@
     "fighter_b": "Tyrell Fortune",
     "slug": "rizvan-kuniev-vs-tyrell-fortune",
     "url": "/compare/rizvan-kuniev-vs-tyrell-fortune/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Saygid Izagakhmaev",
+    "fighter_b": "Abubakar Vagaev",
+    "slug": "saygid-izagakhmaev-vs-abubakar-vagaev",
+    "url": "/compare/saygid-izagakhmaev-vs-abubakar-vagaev/",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
+    "event_date": "Saturday, July 25, 2026",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
+    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Valter Walker",
     "fighter_b": "Thomas Petersen",
     "slug": "valter-walker-vs-thomas-petersen",
     "url": "/compare/valter-walker-vs-thomas-petersen/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Heavyweight"
   },
   {
@@ -174,19 +74,29 @@
     "fighter_b": "Uran Satybaldiev",
     "slug": "dustin-jacoby-vs-uran-satybaldiev",
     "url": "/compare/dustin-jacoby-vs-uran-satybaldiev/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Sam Patterson",
+    "fighter_b": "Santiago Ponzinibbio",
+    "slug": "sam-patterson-vs-santiago-ponzinibbio",
+    "url": "/compare/sam-patterson-vs-santiago-ponzinibbio/",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
+    "event_date": "Saturday, July 25, 2026",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
+    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Axel Sola",
     "fighter_b": "Ismael Bonfim",
     "slug": "axel-sola-vs-ismael-bonfim",
     "url": "/compare/axel-sola-vs-ismael-bonfim/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Lightweight"
   },
   {
@@ -194,9 +104,9 @@
     "fighter_b": "Magomed Tuchalov",
     "slug": "brendson-ribeiro-vs-magomed-tuchalov",
     "url": "/compare/brendson-ribeiro-vs-magomed-tuchalov/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Light Heavyweight"
   },
   {
@@ -204,9 +114,9 @@
     "fighter_b": "Mike Davis",
     "slug": "nurullo-aliev-vs-mike-davis",
     "url": "/compare/nurullo-aliev-vs-mike-davis/",
-    "event_name": "UFC Fight Night: Ankalaev vs. Rountree Jr",
+    "event_name": "UFC Fight Night: Ankalaev vs. Guskov",
     "event_date": "Saturday, July 25, 2026",
-    "event_slug": "ufc-fight-night-ankalaev-vs-rountree-jr",
+    "event_slug": "ufc-fight-night-ankalaev-vs-guskov",
     "weight_class": "Lightweight"
   },
   {
@@ -220,10 +130,10 @@
     "weight_class": "Welterweight"
   },
   {
-    "fighter_a": "Jan Blachowicz",
-    "fighter_b": "Bogdan Guskov",
-    "slug": "jan-blachowicz-vs-bogdan-guskov",
-    "url": "/compare/jan-blachowicz-vs-bogdan-guskov/",
+    "fighter_a": "Navajo Stirling",
+    "fighter_b": "Jan Blachowicz",
+    "slug": "navajo-stirling-vs-jan-blachowicz",
+    "url": "/compare/navajo-stirling-vs-jan-blachowicz/",
     "event_name": "UFC Fight Night: Medic vs. Rodriguez",
     "event_date": "Saturday, August 1, 2026",
     "event_slug": "ufc-fight-night-medic-vs-rodriguez",
@@ -320,6 +230,16 @@
     "weight_class": "Heavyweight"
   },
   {
+    "fighter_a": "Kyle Prepolec",
+    "fighter_b": "Mateusz Rebecki",
+    "slug": "kyle-prepolec-vs-mateusz-rebecki",
+    "url": "/compare/kyle-prepolec-vs-mateusz-rebecki/",
+    "event_name": "UFC Fight Night: Medic vs. Rodriguez",
+    "event_date": "Saturday, August 1, 2026",
+    "event_slug": "ufc-fight-night-medic-vs-rodriguez",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Quillian Salkild",
     "fighter_b": "Mateusz Gamrot",
     "slug": "quillian-salkild-vs-mateusz-gamrot",
@@ -328,6 +248,56 @@
     "event_date": "Saturday, August 8, 2026",
     "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
     "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Bruno Lopes",
+    "fighter_b": "Diyar Nurgozhay",
+    "slug": "bruno-lopes-vs-diyar-nurgozhay",
+    "url": "/compare/bruno-lopes-vs-diyar-nurgozhay/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Diego Ferreira",
+    "fighter_b": "Billy Quarantillo",
+    "slug": "diego-ferreira-vs-billy-quarantillo",
+    "url": "/compare/diego-ferreira-vs-billy-quarantillo/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Louie Sutherland",
+    "fighter_b": "Henrique Da Silva Lopes",
+    "slug": "louie-sutherland-vs-henrique-da-silva-lopes",
+    "url": "/compare/louie-sutherland-vs-henrique-da-silva-lopes/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Steven Asplund",
+    "fighter_b": "Guilherme Pat",
+    "slug": "steven-asplund-vs-guilherme-pat",
+    "url": "/compare/steven-asplund-vs-guilherme-pat/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Amanda Lemos",
+    "fighter_b": "Alexia Thainara",
+    "slug": "amanda-lemos-vs-alexia-thainara",
+    "url": "/compare/amanda-lemos-vs-alexia-thainara/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Women's Strawweight"
   },
   {
     "fighter_a": "Islam Makhachev",
@@ -558,5 +528,45 @@
     "event_date": "Saturday, August 29, 2026",
     "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
     "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Aoriqileng",
+    "fighter_b": "Kai Asakura",
+    "slug": "aoriqileng-vs-kai-asakura",
+    "url": "/compare/aoriqileng-vs-kai-asakura/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Michael Page",
+    "fighter_b": "Nursulton Ruziboev",
+    "slug": "michael-page-vs-nursulton-ruziboev",
+    "url": "/compare/michael-page-vs-nursulton-ruziboev/",
+    "event_name": "UFC Fight Night",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Kurtis Campbell",
+    "fighter_b": "Trevor Peek",
+    "slug": "kurtis-campbell-vs-trevor-peek",
+    "url": "/compare/kurtis-campbell-vs-trevor-peek/",
+    "event_name": "UFC Fight Night",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Mario Pinto",
+    "fighter_b": "Ryan Spann",
+    "slug": "mario-pinto-vs-ryan-spann",
+    "url": "/compare/mario-pinto-vs-ryan-spann/",
+    "event_name": "UFC Fight Night",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night",
+    "weight_class": "Heavyweight"
   }
 ]

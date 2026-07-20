@@ -442,6 +442,23 @@
     "last_fight_date": "2023-06-03"
   },
   {
+    "id": 3775,
+    "name": "Abubakar Vagaev",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "1993-04-14",
+    "slug": "abubakar-vagaev",
+    "career_record": "24-4-0",
+    "career_wins": 24,
+    "career_losses": 4,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 420,
     "name": "Abus Magomedov",
     "nickname": null,
@@ -1249,13 +1266,13 @@
     "stance": "Orthodox",
     "dob": "1994-05-31",
     "slug": "alberto-montes",
-    "career_record": "12-1-0",
+    "career_record": "12-2-0",
     "career_wins": 12,
-    "career_losses": 1,
+    "career_losses": 2,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Featherweight",
-    "last_fight_date": "2026-03-07"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 1584,
@@ -1283,13 +1300,13 @@
     "stance": "Orthodox",
     "dob": "1998-04-24",
     "slug": "alden-coria",
-    "career_record": "12-3-0 (1 NC)",
-    "career_wins": 12,
+    "career_record": "13-3-0 (1 NC)",
+    "career_wins": 13,
     "career_losses": 3,
     "career_draws": 0,
     "career_nc": 1,
     "division": "Flyweight",
-    "last_fight_date": "2026-02-21"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 3197,
@@ -2711,13 +2728,13 @@
     "stance": "Orthodox",
     "dob": "1991-10-20",
     "slug": "alvin-hines",
-    "career_record": "7-1-0",
+    "career_record": "7-2-0",
     "career_wins": 7,
-    "career_losses": 1,
+    "career_losses": 2,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Heavyweight",
-    "last_fight_date": "2025-06-28"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 2270,
@@ -3726,18 +3743,18 @@
     "id": 3771,
     "name": "Anna Melisano",
     "nickname": null,
-    "height_cm": null,
-    "reach_cm": null,
+    "height_cm": 162.6,
+    "reach_cm": 172.7,
     "stance": "Orthodox",
     "dob": "1997-05-20",
     "slug": "anna-melisano",
-    "career_record": "6-1-0",
+    "career_record": "6-2-0",
     "career_wins": 6,
-    "career_losses": 1,
+    "career_losses": 2,
     "career_draws": 0,
     "career_nc": 0,
-    "division": "",
-    "last_fight_date": ""
+    "division": "Women's Flyweight",
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 2389,
@@ -5176,13 +5193,13 @@
     "stance": "Orthodox",
     "dob": "2001-09-29",
     "slug": "austin-bashi",
-    "career_record": "14-1-0",
+    "career_record": "14-2-0",
     "career_wins": 14,
-    "career_losses": 1,
+    "career_losses": 2,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Featherweight",
-    "last_fight_date": "2025-08-02"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 481,
@@ -10293,13 +10310,13 @@
     "stance": "Southpaw",
     "dob": "1999-09-13",
     "slug": "chase-hooper",
-    "career_record": "16-5-1",
-    "career_wins": 16,
+    "career_record": "17-5-1",
+    "career_wins": 17,
     "career_losses": 5,
     "career_draws": 1,
     "career_nc": 0,
     "division": "Lightweight",
-    "last_fight_date": "2026-03-28"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 865,
@@ -11415,13 +11432,13 @@
     "stance": "Switch",
     "dob": "1995-07-24",
     "slug": "christian-leroy-duncan",
-    "career_record": "14-2-0",
-    "career_wins": 14,
+    "career_record": "15-2-0",
+    "career_wins": 15,
     "career_losses": 2,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Middleweight",
-    "last_fight_date": "2026-03-21"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 2057,
@@ -13316,7 +13333,7 @@
     "nickname": null,
     "height_cm": null,
     "reach_cm": null,
-    "stance": null,
+    "stance": "Orthodox",
     "dob": "2001-11-23",
     "slug": "damian-rzepecki",
     "career_record": "10-0-0",
@@ -13343,6 +13360,23 @@
     "career_nc": 0,
     "division": "Bantamweight",
     "last_fight_date": "2018-07-22"
+  },
+  {
+    "id": 3774,
+    "name": "Damien Anderson",
+    "nickname": null,
+    "height_cm": 172.7,
+    "reach_cm": 175.3,
+    "stance": "Southpaw",
+    "dob": "1997-01-04",
+    "slug": "damien-anderson",
+    "career_record": "5-1-0",
+    "career_wins": 5,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "Featherweight",
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 1419,
@@ -16396,13 +16430,13 @@
     "stance": "Orthodox",
     "dob": "1992-05-08",
     "slug": "dione-barbosa",
-    "career_record": "9-4-0",
-    "career_wins": 9,
+    "career_record": "10-4-0",
+    "career_wins": 10,
     "career_losses": 4,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Women's Flyweight",
-    "last_fight_date": "2026-04-04"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 485,
@@ -17212,13 +17246,13 @@
     "stance": "Switch",
     "dob": "1994-01-14",
     "slug": "dricus-du-plessis",
-    "career_record": "23-3-0",
-    "career_wins": 23,
+    "career_record": "24-3-0",
+    "career_wins": 24,
     "career_losses": 3,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Middleweight",
-    "last_fight_date": "2025-08-16"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 2011,
@@ -19499,6 +19533,23 @@
     "last_fight_date": "2011-09-10"
   },
   {
+    "id": 3773,
+    "name": "Ezra Elliott",
+    "nickname": null,
+    "height_cm": 175.3,
+    "reach_cm": 182.9,
+    "stance": "Orthodox",
+    "dob": "2000-05-18",
+    "slug": "ezra-elliott",
+    "career_record": "8-0-0",
+    "career_wins": 8,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "Featherweight",
+    "last_fight_date": "2026-07-18"
+  },
+  {
     "id": 2477,
     "name": "Fabiano Iha",
     "nickname": null,
@@ -19745,13 +19796,13 @@
     "stance": "Orthodox",
     "dob": "2000-07-12",
     "slug": "fatima-kline",
-    "career_record": "9-1-0",
-    "career_wins": 9,
+    "career_record": "10-1-0",
+    "career_wins": 10,
     "career_losses": 1,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Women's Strawweight",
-    "last_fight_date": "2025-11-15"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 3163,
@@ -19881,13 +19932,13 @@
     "stance": "Orthodox",
     "dob": "2001-01-22",
     "slug": "felipe-franco",
-    "career_record": "10-2-0",
-    "career_wins": 10,
+    "career_record": "11-2-0",
+    "career_wins": 11,
     "career_losses": 2,
     "career_draws": 0,
     "career_nc": 0,
-    "division": "Heavyweight",
-    "last_fight_date": "2026-03-21"
+    "division": "Light Heavyweight",
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 555,
@@ -22863,6 +22914,23 @@
     "career_nc": 0,
     "division": "",
     "last_fight_date": "2007-03-10"
+  },
+  {
+    "id": 3777,
+    "name": "Henrique Da Silva Lopes",
+    "nickname": null,
+    "height_cm": 190.5,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1985-03-08",
+    "slug": "henrique-da-silva-lopes",
+    "career_record": "5-2-0",
+    "career_wins": 5,
+    "career_losses": 2,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 2529,
@@ -26256,13 +26324,13 @@
     "stance": "Switch",
     "dob": "1984-03-16",
     "slug": "jared-cannonier",
-    "career_record": "18-9-0",
+    "career_record": "18-10-0",
     "career_wins": 18,
-    "career_losses": 9,
+    "career_losses": 10,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Middleweight",
-    "last_fight_date": "2025-08-16"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 707,
@@ -27140,13 +27208,13 @@
     "stance": "Switch",
     "dob": "1999-01-27",
     "slug": "jean-paul-lebosnoyani",
-    "career_record": "10-2-0",
-    "career_wins": 10,
+    "career_record": "11-2-0",
+    "career_wins": 11,
     "career_losses": 2,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Welterweight",
-    "last_fight_date": "2026-02-21"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 3128,
@@ -31165,17 +31233,17 @@
     "name": "Jose Delgado",
     "nickname": null,
     "height_cm": 180.3,
-    "reach_cm": 188.0,
+    "reach_cm": 185.4,
     "stance": "Switch",
     "dob": "1998-04-21",
     "slug": "jose-delgado",
-    "career_record": "11-2-0",
-    "career_wins": 11,
+    "career_record": "12-2-0",
+    "career_wins": 12,
     "career_losses": 2,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Featherweight",
-    "last_fight_date": "2026-03-14"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 3372,
@@ -33651,13 +33719,13 @@
     "stance": "Switch",
     "dob": "1987-05-11",
     "slug": "kamaru-usman",
-    "career_record": "21-4-0",
+    "career_record": "21-5-0",
     "career_wins": 21,
-    "career_losses": 4,
+    "career_losses": 5,
     "career_draws": 0,
     "career_nc": 0,
-    "division": "Welterweight",
-    "last_fight_date": "2025-06-14"
+    "division": "Middleweight",
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 849,
@@ -37119,13 +37187,13 @@
     "stance": "Orthodox",
     "dob": "1996-10-15",
     "slug": "levi-rodrigues-jr",
-    "career_record": "5-0-0 (1 NC)",
+    "career_record": "5-1-0 (1 NC)",
     "career_wins": 5,
-    "career_losses": 0,
+    "career_losses": 1,
     "career_draws": 0,
     "career_nc": 1,
-    "division": "",
-    "last_fight_date": "2025-10-14"
+    "division": "Light Heavyweight",
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 1728,
@@ -38867,7 +38935,7 @@
     "nickname": null,
     "height_cm": null,
     "reach_cm": null,
-    "stance": null,
+    "stance": "Orthodox",
     "dob": "1999-12-30",
     "slug": "magomed-tuchalov",
     "career_record": "6-0-0",
@@ -38894,6 +38962,23 @@
     "career_nc": 0,
     "division": "",
     "last_fight_date": "2025-10-07"
+  },
+  {
+    "id": 3776,
+    "name": "Magomedrasul Gasanov",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "magomedrasul-gasanov",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 2891,
@@ -44272,17 +44357,17 @@
     "name": "Mitch Ramirez",
     "nickname": null,
     "height_cm": 180.3,
-    "reach_cm": 180.3,
+    "reach_cm": 177.8,
     "stance": "Orthodox",
     "dob": "1992-11-03",
     "slug": "mitch-ramirez",
-    "career_record": "8-3-0",
+    "career_record": "8-4-0",
     "career_wins": 8,
-    "career_losses": 3,
+    "career_losses": 4,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Lightweight",
-    "last_fight_date": "2025-07-12"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 375,
@@ -48589,18 +48674,18 @@
     "id": 3770,
     "name": "RJ Harris",
     "nickname": null,
-    "height_cm": null,
-    "reach_cm": null,
+    "height_cm": 190.5,
+    "reach_cm": 198.1,
     "stance": "Orthodox",
     "dob": "1998-10-01",
     "slug": "rj-harris",
-    "career_record": "5-0-0",
-    "career_wins": 5,
+    "career_record": "6-0-0",
+    "career_wins": 6,
     "career_losses": 0,
     "career_draws": 0,
     "career_nc": 0,
-    "division": "",
-    "last_fight_date": ""
+    "division": "Heavyweight",
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 1134,
@@ -53997,7 +54082,7 @@
     "nickname": null,
     "height_cm": 182.9,
     "reach_cm": 188.0,
-    "stance": null,
+    "stance": "Orthodox",
     "dob": "1994-09-03",
     "slug": "saygid-izagakhmaev",
     "career_record": "22-3-0",
@@ -54663,13 +54748,13 @@
     "stance": "Southpaw",
     "dob": "1993-09-24",
     "slug": "seokhyeon-ko",
-    "career_record": "13-2-0",
+    "career_record": "13-3-0",
     "career_wins": 13,
-    "career_losses": 2,
+    "career_losses": 3,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Welterweight",
-    "last_fight_date": "2025-11-01"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 3233,
@@ -56788,13 +56873,13 @@
     "stance": "Orthodox",
     "dob": "1994-11-04",
     "slug": "stewart-nicoll",
-    "career_record": "8-3-0",
+    "career_record": "8-4-0",
     "career_wins": 8,
-    "career_losses": 3,
+    "career_losses": 4,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Flyweight",
-    "last_fight_date": "2026-04-04"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 684,
@@ -57077,13 +57162,13 @@
     "stance": "Orthodox",
     "dob": "1995-02-21",
     "slug": "tabatha-ricci",
-    "career_record": "12-4-0",
+    "career_record": "12-5-0",
     "career_wins": 12,
-    "career_losses": 4,
+    "career_losses": 5,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Women's Strawweight",
-    "last_fight_date": "2026-04-04"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 3573,
@@ -59321,13 +59406,13 @@
     "stance": "Orthodox",
     "dob": "1997-12-15",
     "slug": "tommy-mcmillen",
-    "career_record": "10-0-0",
-    "career_wins": 10,
+    "career_record": "11-0-0",
+    "career_wins": 11,
     "career_losses": 0,
     "career_draws": 0,
     "career_nc": 0,
     "division": "Featherweight",
-    "last_fight_date": "2026-04-04"
+    "last_fight_date": "2026-07-18"
   },
   {
     "id": 2299,
