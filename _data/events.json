@@ -1,86 +1,5 @@
 [
   {
-    "id": 1222,
-    "name": "UFC Fight Night: Ankalaev vs. Guskov",
-    "date": "Saturday, July 25, 2026",
-    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
-    "slug": "ufc-fight-night-ankalaev-vs-guskov",
-    "matchups": [
-      {
-        "fighter_a": "Bogdan Guskov",
-        "fighter_b": "Magomed Ankalaev",
-        "weight_class": "Light Heavyweight",
-        "slug": "bogdan-guskov-vs-magomed-ankalaev"
-      },
-      {
-        "fighter_a": "Steve Erceg",
-        "fighter_b": "Ramazan Temirov",
-        "weight_class": "Flyweight",
-        "slug": "steve-erceg-vs-ramazan-temirov"
-      },
-      {
-        "fighter_a": "Islam Dulatov",
-        "fighter_b": "Wellington Turman",
-        "weight_class": "Welterweight",
-        "slug": "islam-dulatov-vs-wellington-turman"
-      },
-      {
-        "fighter_a": "Magomed Zaynukov",
-        "fighter_b": "Damian Rzepecki",
-        "weight_class": "Lightweight",
-        "slug": "magomed-zaynukov-vs-damian-rzepecki"
-      },
-      {
-        "fighter_a": "Rizvan Kuniev",
-        "fighter_b": "Tyrell Fortune",
-        "weight_class": "Heavyweight",
-        "slug": "rizvan-kuniev-vs-tyrell-fortune"
-      },
-      {
-        "fighter_a": "Saygid Izagakhmaev",
-        "fighter_b": "Abubakar Vagaev",
-        "weight_class": "Welterweight",
-        "slug": "saygid-izagakhmaev-vs-abubakar-vagaev"
-      },
-      {
-        "fighter_a": "Valter Walker",
-        "fighter_b": "Thomas Petersen",
-        "weight_class": "Heavyweight",
-        "slug": "valter-walker-vs-thomas-petersen"
-      },
-      {
-        "fighter_a": "Dustin Jacoby",
-        "fighter_b": "Uran Satybaldiev",
-        "weight_class": "Light Heavyweight",
-        "slug": "dustin-jacoby-vs-uran-satybaldiev"
-      },
-      {
-        "fighter_a": "Sam Patterson",
-        "fighter_b": "Santiago Ponzinibbio",
-        "weight_class": "Welterweight",
-        "slug": "sam-patterson-vs-santiago-ponzinibbio"
-      },
-      {
-        "fighter_a": "Axel Sola",
-        "fighter_b": "Ismael Bonfim",
-        "weight_class": "Lightweight",
-        "slug": "axel-sola-vs-ismael-bonfim"
-      },
-      {
-        "fighter_a": "Brendson Ribeiro",
-        "fighter_b": "Magomed Tuchalov",
-        "weight_class": "Light Heavyweight",
-        "slug": "brendson-ribeiro-vs-magomed-tuchalov"
-      },
-      {
-        "fighter_a": "Nurullo Aliev",
-        "fighter_b": "Mike Davis",
-        "weight_class": "Lightweight",
-        "slug": "nurullo-aliev-vs-mike-davis"
-      }
-    ]
-  },
-  {
     "id": 1221,
     "name": "UFC Fight Night: Medic vs. Rodriguez",
     "date": "Saturday, August 1, 2026",
@@ -142,6 +61,12 @@
         "slug": "bogdan-grad-vs-dennis-buzukja"
       },
       {
+        "fighter_a": "Kyle Prepolec",
+        "fighter_b": "Mateusz Rebecki",
+        "weight_class": "Lightweight",
+        "slug": "kyle-prepolec-vs-mateusz-rebecki"
+      },
+      {
         "fighter_a": "Hailey Cowan",
         "fighter_b": "Nina Milosevic",
         "weight_class": "Women's Bantamweight",
@@ -152,12 +77,6 @@
         "fighter_b": "Jovan Leka",
         "weight_class": "Heavyweight",
         "slug": "max-gimenis-vs-jovan-leka"
-      },
-      {
-        "fighter_a": "Kyle Prepolec",
-        "fighter_b": "Mateusz Rebecki",
-        "weight_class": "Lightweight",
-        "slug": "kyle-prepolec-vs-mateusz-rebecki"
       }
     ]
   },
@@ -173,6 +92,12 @@
         "fighter_b": "Mateusz Gamrot",
         "weight_class": "Lightweight",
         "slug": "quillian-salkild-vs-mateusz-gamrot"
+      },
+      {
+        "fighter_a": "Ty Miller",
+        "fighter_b": "Billy Ray Goff",
+        "weight_class": "Welterweight",
+        "slug": "ty-miller-vs-billy-ray-goff"
       },
       {
         "fighter_a": "Bruno Lopes",
@@ -193,10 +118,22 @@
         "slug": "louie-sutherland-vs-henrique-da-silva-lopes"
       },
       {
+        "fighter_a": "Yadier del Valle",
+        "fighter_b": "Darren Elkins",
+        "weight_class": "Featherweight",
+        "slug": "yadier-del-valle-vs-darren-elkins"
+      },
+      {
         "fighter_a": "Steven Asplund",
         "fighter_b": "Guilherme Pat",
         "weight_class": "Heavyweight",
         "slug": "steven-asplund-vs-guilherme-pat"
+      },
+      {
+        "fighter_a": "Juliana Miller",
+        "fighter_b": "Ravena Oliveira",
+        "weight_class": "Women's Flyweight",
+        "slug": "juliana-miller-vs-ravena-oliveira"
       },
       {
         "fighter_a": "Amanda Lemos",
@@ -409,6 +346,51 @@
         "fighter_b": "Ryan Spann",
         "weight_class": "Heavyweight",
         "slug": "mario-pinto-vs-ryan-spann"
+      }
+    ]
+  },
+  {
+    "id": 1264,
+    "name": "UFC Fight Night",
+    "date": "Saturday, September 12, 2026",
+    "location": "Glendale, Arizona, USA",
+    "slug": "ufc-fight-night",
+    "matchups": [
+      {
+        "fighter_a": "Waldo Cortes Acosta",
+        "fighter_b": "Curtis Blaydes",
+        "weight_class": "Heavyweight",
+        "slug": "waldo-cortes-acosta-vs-curtis-blaydes"
+      },
+      {
+        "fighter_a": "Alexa Grasso",
+        "fighter_b": "Manon Fiorot",
+        "weight_class": "Women's Flyweight",
+        "slug": "alexa-grasso-vs-manon-fiorot"
+      },
+      {
+        "fighter_a": "Brandon Moreno",
+        "fighter_b": "Joseph Morales",
+        "weight_class": "Flyweight",
+        "slug": "brandon-moreno-vs-joseph-morales"
+      },
+      {
+        "fighter_a": "Edgar Chairez",
+        "fighter_b": "Tim Elliott",
+        "weight_class": "Flyweight",
+        "slug": "edgar-chairez-vs-tim-elliott"
+      },
+      {
+        "fighter_a": "Yousri Belgaroui",
+        "fighter_b": "Kelvin Gastelum",
+        "weight_class": "Middleweight",
+        "slug": "yousri-belgaroui-vs-kelvin-gastelum"
+      },
+      {
+        "fighter_a": "JJ Aldrich",
+        "fighter_b": "Regina Tarin",
+        "weight_class": "Women's Flyweight",
+        "slug": "jj-aldrich-vs-regina-tarin"
       }
     ]
   }

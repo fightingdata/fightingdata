@@ -1,98 +1,98 @@
 {
-  "total_fighters": 3777,
-  "total_events": 1263,
-  "total_fights": 11245,
+  "total_fighters": 3779,
+  "total_events": 1264,
+  "total_fights": 11254,
   "upcoming_events": 8,
   "date_range_start": "1993-11-12",
-  "date_range_end": "2026-09-05",
-  "last_updated": "2026-07-20T08:53:46.677550",
+  "date_range_end": "2026-09-12",
+  "last_updated": "2026-07-27T08:56:03.874088",
   "featured_event": {
-    "name": "UFC Fight Night: Ankalaev vs. Guskov",
-    "date": "Saturday, July 25, 2026",
-    "iso_date": "2026-07-25",
-    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
-    "slug": "ufc-fight-night-ankalaev-vs-guskov",
+    "name": "UFC Fight Night: Medic vs. Rodriguez",
+    "date": "Saturday, August 1, 2026",
+    "iso_date": "2026-08-01",
+    "location": "Belgrade, Vojvodina, Serbia",
+    "slug": "ufc-fight-night-medic-vs-rodriguez",
     "is_past": false,
     "matchups": [
       {
-        "fighter_a": "Bogdan Guskov",
-        "fighter_b": "Magomed Ankalaev",
-        "weight_class": "Light Heavyweight",
-        "slug": "bogdan-guskov-vs-magomed-ankalaev"
-      },
-      {
-        "fighter_a": "Steve Erceg",
-        "fighter_b": "Ramazan Temirov",
-        "weight_class": "Flyweight",
-        "slug": "steve-erceg-vs-ramazan-temirov"
-      },
-      {
-        "fighter_a": "Islam Dulatov",
-        "fighter_b": "Wellington Turman",
+        "fighter_a": "Uros Medic",
+        "fighter_b": "Daniel Rodriguez",
         "weight_class": "Welterweight",
-        "slug": "islam-dulatov-vs-wellington-turman"
+        "slug": "uros-medic-vs-daniel-rodriguez"
       },
       {
-        "fighter_a": "Magomed Zaynukov",
-        "fighter_b": "Damian Rzepecki",
-        "weight_class": "Lightweight",
-        "slug": "magomed-zaynukov-vs-damian-rzepecki"
+        "fighter_a": "Navajo Stirling",
+        "fighter_b": "Jan Blachowicz",
+        "weight_class": "Light Heavyweight",
+        "slug": "navajo-stirling-vs-jan-blachowicz"
       },
       {
-        "fighter_a": "Rizvan Kuniev",
-        "fighter_b": "Tyrell Fortune",
+        "fighter_a": "Marcin Tybura",
+        "fighter_b": "Aleksandar Rakic",
         "weight_class": "Heavyweight",
-        "slug": "rizvan-kuniev-vs-tyrell-fortune"
+        "slug": "marcin-tybura-vs-aleksandar-rakic"
       },
       {
-        "fighter_a": "Saygid Izagakhmaev",
-        "fighter_b": "Abubakar Vagaev",
+        "fighter_a": "Dusko Todorovic",
+        "fighter_b": "Robert Valentin",
+        "weight_class": "Middleweight",
+        "slug": "dusko-todorovic-vs-robert-valentin"
+      },
+      {
+        "fighter_a": "Gilbert Urbina",
+        "fighter_b": "Vlasto Cepo",
+        "weight_class": "Middleweight",
+        "slug": "gilbert-urbina-vs-vlasto-cepo"
+      },
+      {
+        "fighter_a": "Ludovit Klein",
+        "fighter_b": "Tofiq Musayev",
+        "weight_class": "Lightweight",
+        "slug": "ludovit-klein-vs-tofiq-musayev"
+      },
+      {
+        "fighter_a": "Oban Elliott",
+        "fighter_b": "Michael Oliveira",
         "weight_class": "Welterweight",
-        "slug": "saygid-izagakhmaev-vs-abubakar-vagaev"
+        "slug": "oban-elliott-vs-michael-oliveira"
       },
       {
-        "fighter_a": "Valter Walker",
-        "fighter_b": "Thomas Petersen",
+        "fighter_a": "Josias Musasa",
+        "fighter_b": "Mark Vologdin",
+        "weight_class": "Bantamweight",
+        "slug": "josias-musasa-vs-mark-vologdin"
+      },
+      {
+        "fighter_a": "Bogdan Grad",
+        "fighter_b": "Dennis Buzukja",
+        "weight_class": "Featherweight",
+        "slug": "bogdan-grad-vs-dennis-buzukja"
+      },
+      {
+        "fighter_a": "Kyle Prepolec",
+        "fighter_b": "Mateusz Rebecki",
+        "weight_class": "Lightweight",
+        "slug": "kyle-prepolec-vs-mateusz-rebecki"
+      },
+      {
+        "fighter_a": "Hailey Cowan",
+        "fighter_b": "Nina Milosevic",
+        "weight_class": "Women's Bantamweight",
+        "slug": "hailey-cowan-vs-nina-milosevic"
+      },
+      {
+        "fighter_a": "Max Gimenis",
+        "fighter_b": "Jovan Leka",
         "weight_class": "Heavyweight",
-        "slug": "valter-walker-vs-thomas-petersen"
-      },
-      {
-        "fighter_a": "Dustin Jacoby",
-        "fighter_b": "Uran Satybaldiev",
-        "weight_class": "Light Heavyweight",
-        "slug": "dustin-jacoby-vs-uran-satybaldiev"
-      },
-      {
-        "fighter_a": "Sam Patterson",
-        "fighter_b": "Santiago Ponzinibbio",
-        "weight_class": "Welterweight",
-        "slug": "sam-patterson-vs-santiago-ponzinibbio"
-      },
-      {
-        "fighter_a": "Axel Sola",
-        "fighter_b": "Ismael Bonfim",
-        "weight_class": "Lightweight",
-        "slug": "axel-sola-vs-ismael-bonfim"
-      },
-      {
-        "fighter_a": "Brendson Ribeiro",
-        "fighter_b": "Magomed Tuchalov",
-        "weight_class": "Light Heavyweight",
-        "slug": "brendson-ribeiro-vs-magomed-tuchalov"
-      },
-      {
-        "fighter_a": "Nurullo Aliev",
-        "fighter_b": "Mike Davis",
-        "weight_class": "Lightweight",
-        "slug": "nurullo-aliev-vs-mike-davis"
+        "slug": "max-gimenis-vs-jovan-leka"
       }
     ]
   },
   "latest_result": {
-    "name": "UFC Fight Night: Du Plessis vs. Usman",
-    "date": "Saturday, July 18, 2026",
-    "iso_date": "2026-07-18",
-    "location": "Oklahoma City, Oklahoma, USA",
-    "slug": "ufc-fight-night-du-plessis-vs-usman"
+    "name": "UFC Fight Night: Ankalaev vs. Guskov",
+    "date": "Saturday, July 25, 2026",
+    "iso_date": "2026-07-25",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-fight-night-ankalaev-vs-guskov"
   }
 }
