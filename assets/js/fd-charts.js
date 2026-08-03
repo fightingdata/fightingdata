@@ -50,6 +50,27 @@
         }
     };
 
+    /* A career starts at zero strikes in zero minutes. analytics.py records one
+       point per fight (accumulated at each fight's END), so without this the
+       fighter's line begins mid-air at their first fight's end — while the
+       league bands, which interpolate from the origin, start at 0. That
+       mismatch made every fighter look ahead of the field early on.
+       The origin carries no meta, so it is excluded from tooltips. */
+    function withOrigin(curve) {
+        var pts = curve.map(function (p) {
+            return { x: p[0], y: p[1], meta: p };
+        });
+        if (pts.length && pts[0].x > 0) {
+            pts.unshift({ x: 0, y: 0, meta: null });
+        }
+        return pts;
+    }
+
+    /* Real data points only — the synthetic origin has no fight behind it. */
+    function realPoint(item) {
+        return item.dataset.order === 1 && item.raw && item.raw.meta;
+    }
+
     /* Career cumulative sig-strike curve vs league percentile envelope. */
     FD.curveChart = function (canvas, curve, env, grid) {
         function band(key, alpha, fillTo) {
@@ -64,9 +85,7 @@
                 order: 10
             };
         }
-        var fighterPts = curve.map(function (p) {
-            return { x: p[0], y: p[1], meta: p };
-        });
+        var fighterPts = withOrigin(curve);
         var maxMin = Math.max(curve.length ? curve[curve.length - 1][0] : 0, 30) * 1.08;
         new Chart(canvas, {
             type: 'line',
@@ -101,7 +120,7 @@
                 },
                 plugins: {
                     tooltip: {
-                        filter: function (item) { return item.dataset.order === 1; },
+                        filter: realPoint,
                         displayColors: false,
                         backgroundColor: C.ink, titleColor: '#fff', bodyColor: 'rgba(255,255,255,0.8)',
                         callbacks: {
@@ -183,7 +202,7 @@
     FD.dualCurve = function (canvas, curveA, curveB, nameA, nameB, env, grid) {
         function fighterSet(curve, color) {
             return {
-                data: curve.map(function (p) { return { x: p[0], y: p[1], meta: p }; }),
+                data: withOrigin(curve),
                 borderColor: color, borderWidth: 2.5,
                 pointRadius: 2, pointBackgroundColor: color,
                 fill: false, order: 1
@@ -216,7 +235,7 @@
                 },
                 plugins: {
                     tooltip: {
-                        filter: function (item) { return item.dataset.order === 1; },
+                        filter: realPoint,
                         displayColors: false,
                         backgroundColor: C.ink, titleColor: '#fff', bodyColor: 'rgba(255,255,255,0.8)',
                         callbacks: {

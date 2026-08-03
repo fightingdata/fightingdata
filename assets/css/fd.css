@@ -104,6 +104,18 @@ body { font-family: var(--fd-sans);
 :where(.fd-compare, .fd-profile) .fight-opponent { font-weight: 700; font-size: 0.95rem; color: var(--fd-ink); margin-bottom: 0.15rem; }
 :where(.fd-compare, .fd-profile) .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.72rem;
     color: var(--fd-text); text-align: right; max-width: 50%; }
+/* Per-bout division + title marker. Sits under the event/date line so a
+   fighter who moves between weight classes is readable at a glance. */
+:where(.fd-compare, .fd-profile) .fight-division-group { display: block; margin-top: 0.15rem; }
+:where(.fd-compare, .fd-profile) .fight-division { display: inline-block; font-size: 0.66rem;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--fd-muted); border: 1px solid var(--fd-border); border-radius: 3px;
+    padding: 0.05rem 0.32rem; white-space: nowrap; }
+:where(.fd-compare, .fd-profile) .fight-title-badge { display: inline-block; margin-left: 0.25rem;
+    font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+    color: #fff; background: var(--fd-red); border-radius: 3px;
+    padding: 0.05rem 0.32rem; white-space: nowrap; }
+
 :where(.fd-compare, .fd-profile) .fight-meta { font-size: 0.78rem; color: var(--fd-muted); margin-bottom: 0.3rem; }
 :where(.fd-compare, .fd-profile) .fight-totals-block { margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.15rem; }
 :where(.fd-compare, .fd-profile) .totals-line { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; flex-wrap: wrap; }
@@ -346,6 +358,9 @@ body { font-family: var(--fd-sans);
     box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
 :where(.fd-event) .weight-class { color: var(--fd-muted); font-size: 0.8rem; margin-bottom: 0.5rem;
     text-transform: uppercase; letter-spacing: 0.05em; }
+:where(.fd-event) .weight-class .title-chip { display: inline-block; margin-left: 0.4rem;
+    color: #fff; background: var(--fd-red); border-radius: 3px; padding: 0.02rem 0.34rem;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; }
 :where(.fd-event) .fighters { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
 :where(.fd-event) .fighter-name { font-size: 1.35rem; font-weight: 600; }
 :where(.fd-event) .fighter-record { font-size: 0.9rem; font-weight: 400; color: var(--fd-muted); }
@@ -363,8 +378,13 @@ body { font-family: var(--fd-sans);
 :where(.fd-event) .fight-card-header { padding: 1rem 1.25rem; user-select: none; }
 :where(.fd-event) .fight-card-header.clickable { cursor: pointer; }
 :where(.fd-event) .fight-card-header.clickable:hover { background: var(--fd-bg-subtle); }
-:where(.fd-event) .weight-class-tag { color: var(--fd-muted); font-size: 0.75rem; text-transform: uppercase;
-    letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+/* inline-block so the division and TITLE tags sit side by side. Pages that
+   carry only the division tag are unaffected. */
+:where(.fd-event) .weight-class-tag { display: inline-block; color: var(--fd-muted); font-size: 0.75rem;
+    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+:where(.fd-event) .weight-class-tag.title-tag { margin-left: 0.4rem; color: #fff;
+    background: var(--fd-red); border-radius: 3px; padding: 0.02rem 0.34rem;
+    font-weight: 700; letter-spacing: 0.06em; }
 :where(.fd-event) .fight-result { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--fd-ink); }
 :where(.fd-event) .fight-detail-line { font-size: 0.82rem; color: var(--fd-muted); margin-bottom: 0.4rem; }
 :where(.fd-event) .fight-totals-block { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }

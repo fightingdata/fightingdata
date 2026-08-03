@@ -155,6 +155,11 @@ a:hover { text-decoration: underline; }
     padding: 3px 10px; border-radius: 3px; color: #555; border: 1px solid #e2e2e2;
     white-space: nowrap;
 }
+.matchup-title-chip {
+    display: inline-block; margin-left: 4px; padding: 1px 5px; border-radius: 2px;
+    background: var(--fd-red); color: #fff; font-size: 9px; font-weight: 700;
+    letter-spacing: 0.6px;
+}
 .matchup-vs {
     font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 3px;
     background: #eee; color: #999; flex-shrink: 0;

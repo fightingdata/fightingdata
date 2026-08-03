@@ -1,86 +1,5 @@
 [
   {
-    "id": 1221,
-    "name": "UFC Fight Night: Medic vs. Rodriguez",
-    "date": "Saturday, August 1, 2026",
-    "location": "Belgrade, Vojvodina, Serbia",
-    "slug": "ufc-fight-night-medic-vs-rodriguez",
-    "matchups": [
-      {
-        "fighter_a": "Uros Medic",
-        "fighter_b": "Daniel Rodriguez",
-        "weight_class": "Welterweight",
-        "slug": "uros-medic-vs-daniel-rodriguez"
-      },
-      {
-        "fighter_a": "Navajo Stirling",
-        "fighter_b": "Jan Blachowicz",
-        "weight_class": "Light Heavyweight",
-        "slug": "navajo-stirling-vs-jan-blachowicz"
-      },
-      {
-        "fighter_a": "Marcin Tybura",
-        "fighter_b": "Aleksandar Rakic",
-        "weight_class": "Heavyweight",
-        "slug": "marcin-tybura-vs-aleksandar-rakic"
-      },
-      {
-        "fighter_a": "Dusko Todorovic",
-        "fighter_b": "Robert Valentin",
-        "weight_class": "Middleweight",
-        "slug": "dusko-todorovic-vs-robert-valentin"
-      },
-      {
-        "fighter_a": "Gilbert Urbina",
-        "fighter_b": "Vlasto Cepo",
-        "weight_class": "Middleweight",
-        "slug": "gilbert-urbina-vs-vlasto-cepo"
-      },
-      {
-        "fighter_a": "Ludovit Klein",
-        "fighter_b": "Tofiq Musayev",
-        "weight_class": "Lightweight",
-        "slug": "ludovit-klein-vs-tofiq-musayev"
-      },
-      {
-        "fighter_a": "Oban Elliott",
-        "fighter_b": "Michael Oliveira",
-        "weight_class": "Welterweight",
-        "slug": "oban-elliott-vs-michael-oliveira"
-      },
-      {
-        "fighter_a": "Josias Musasa",
-        "fighter_b": "Mark Vologdin",
-        "weight_class": "Bantamweight",
-        "slug": "josias-musasa-vs-mark-vologdin"
-      },
-      {
-        "fighter_a": "Bogdan Grad",
-        "fighter_b": "Dennis Buzukja",
-        "weight_class": "Featherweight",
-        "slug": "bogdan-grad-vs-dennis-buzukja"
-      },
-      {
-        "fighter_a": "Kyle Prepolec",
-        "fighter_b": "Mateusz Rebecki",
-        "weight_class": "Lightweight",
-        "slug": "kyle-prepolec-vs-mateusz-rebecki"
-      },
-      {
-        "fighter_a": "Hailey Cowan",
-        "fighter_b": "Nina Milosevic",
-        "weight_class": "Women's Bantamweight",
-        "slug": "hailey-cowan-vs-nina-milosevic"
-      },
-      {
-        "fighter_a": "Max Gimenis",
-        "fighter_b": "Jovan Leka",
-        "weight_class": "Heavyweight",
-        "slug": "max-gimenis-vs-jovan-leka"
-      }
-    ]
-  },
-  {
     "id": 1224,
     "name": "UFC Fight Night: Gamrot vs. Salkilld",
     "date": "Saturday, August 8, 2026",
@@ -91,57 +10,67 @@
         "fighter_a": "Quillian Salkild",
         "fighter_b": "Mateusz Gamrot",
         "weight_class": "Lightweight",
+        "is_title": false,
         "slug": "quillian-salkild-vs-mateusz-gamrot"
       },
       {
         "fighter_a": "Ty Miller",
         "fighter_b": "Billy Ray Goff",
         "weight_class": "Welterweight",
+        "is_title": false,
         "slug": "ty-miller-vs-billy-ray-goff"
       },
       {
         "fighter_a": "Bruno Lopes",
         "fighter_b": "Diyar Nurgozhay",
         "weight_class": "Light Heavyweight",
+        "is_title": false,
         "slug": "bruno-lopes-vs-diyar-nurgozhay"
       },
       {
         "fighter_a": "Diego Ferreira",
         "fighter_b": "Billy Quarantillo",
         "weight_class": "Lightweight",
+        "is_title": false,
         "slug": "diego-ferreira-vs-billy-quarantillo"
       },
       {
         "fighter_a": "Louie Sutherland",
         "fighter_b": "Henrique Da Silva Lopes",
         "weight_class": "Heavyweight",
+        "is_title": false,
         "slug": "louie-sutherland-vs-henrique-da-silva-lopes"
       },
       {
         "fighter_a": "Yadier del Valle",
         "fighter_b": "Darren Elkins",
         "weight_class": "Featherweight",
+        "is_title": false,
         "slug": "yadier-del-valle-vs-darren-elkins"
       },
       {
         "fighter_a": "Steven Asplund",
         "fighter_b": "Guilherme Pat",
         "weight_class": "Heavyweight",
+        "is_title": false,
         "slug": "steven-asplund-vs-guilherme-pat"
       },
       {
         "fighter_a": "Juliana Miller",
         "fighter_b": "Ravena Oliveira",
         "weight_class": "Women's Flyweight",
+        "is_title": false,
         "slug": "juliana-miller-vs-ravena-oliveira"
       },
       {
         "fighter_a": "Amanda Lemos",
         "fighter_b": "Alexia Thainara",
         "weight_class": "Women's Strawweight",
+        "is_title": false,
         "slug": "amanda-lemos-vs-alexia-thainara"
       }
-    ]
+    ],
+    "homepage": true
   },
   {
     "id": 1218,
@@ -154,63 +83,74 @@
         "fighter_a": "Islam Makhachev",
         "fighter_b": "Ian Machado Garry",
         "weight_class": "Welterweight",
+        "is_title": true,
         "slug": "islam-makhachev-vs-ian-machado-garry"
       },
       {
         "fighter_a": "Gillian Robertson",
         "fighter_b": "Mackenzie Dern",
         "weight_class": "Women's Strawweight",
+        "is_title": true,
         "slug": "gillian-robertson-vs-mackenzie-dern"
-      },
-      {
-        "fighter_a": "Erin Blanchfield",
-        "fighter_b": "Jasmine Jasudavicius",
-        "weight_class": "Women's Flyweight",
-        "slug": "erin-blanchfield-vs-jasmine-jasudavicius"
       },
       {
         "fighter_a": "Jalin Turner",
         "fighter_b": "Kaue Fernandes",
         "weight_class": "Lightweight",
+        "is_title": false,
         "slug": "jalin-turner-vs-kaue-fernandes"
       },
       {
         "fighter_a": "Mansur Abdul-Malik",
         "fighter_b": "Dustin Stoltzfus",
         "weight_class": "Middleweight",
+        "is_title": false,
         "slug": "mansur-abdul-malik-vs-dustin-stoltzfus"
       },
       {
         "fighter_a": "Edson Barboza",
         "fighter_b": "Esteban Ribovics",
         "weight_class": "Lightweight",
+        "is_title": false,
         "slug": "edson-barboza-vs-esteban-ribovics"
       },
       {
         "fighter_a": "Myktybek Orolbai",
         "fighter_b": "Jeremiah Wells",
         "weight_class": "Welterweight",
+        "is_title": false,
         "slug": "myktybek-orolbai-vs-jeremiah-wells"
       },
       {
         "fighter_a": "Chidi Njokuani",
         "fighter_b": "Geoff Neal",
         "weight_class": "Welterweight",
+        "is_title": false,
         "slug": "chidi-njokuani-vs-geoff-neal"
       },
       {
         "fighter_a": "Vicente Luque",
         "fighter_b": "Tresean Gore",
         "weight_class": "Middleweight",
+        "is_title": false,
         "slug": "vicente-luque-vs-tresean-gore"
       },
       {
         "fighter_a": "Neil Magny",
         "fighter_b": "Ramiz Brahimaj",
         "weight_class": "Welterweight",
+        "is_title": false,
         "slug": "neil-magny-vs-ramiz-brahimaj"
+      },
+      {
+        "fighter_a": "Donte Johnson",
+        "fighter_b": "Eric McConico",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "donte-johnson-vs-eric-mcconico"
       }
-    ]
+    ],
+    "homepage": true
   },
   {
     "id": 1223,
@@ -223,51 +163,60 @@
         "fighter_a": "Anthony Hernandez",
         "fighter_b": "Gregory Rodrigues",
         "weight_class": "Middleweight",
+        "is_title": false,
         "slug": "anthony-hernandez-vs-gregory-rodrigues"
       },
       {
         "fighter_a": "Reinier de Ridder",
         "fighter_b": "Roman Dolidze",
         "weight_class": "Light Heavyweight",
+        "is_title": false,
         "slug": "reinier-de-ridder-vs-roman-dolidze"
       },
       {
         "fighter_a": "Serghei Spivac",
         "fighter_b": "Vitor Petrino",
         "weight_class": "Heavyweight",
+        "is_title": false,
         "slug": "serghei-spivac-vs-vitor-petrino"
       },
       {
         "fighter_a": "Kennedy Nzechukwu",
         "fighter_b": "Shamil Gaziev",
         "weight_class": "Heavyweight",
+        "is_title": false,
         "slug": "kennedy-nzechukwu-vs-shamil-gaziev"
       },
       {
         "fighter_a": "Carli Judice",
         "fighter_b": "Jeisla Chaves",
         "weight_class": "Women's Strawweight",
+        "is_title": false,
         "slug": "carli-judice-vs-jeisla-chaves"
       },
       {
         "fighter_a": "Wes Schultz",
         "fighter_b": "Jackson McVey",
         "weight_class": "Middleweight",
+        "is_title": false,
         "slug": "wes-schultz-vs-jackson-mcvey"
       },
       {
         "fighter_a": "Shanelle Dyer",
         "fighter_b": "Elise Reed",
         "weight_class": "Women's Strawweight",
+        "is_title": false,
         "slug": "shanelle-dyer-vs-elise-reed"
       },
       {
         "fighter_a": "Gauge Young",
         "fighter_b": "Kody Steele",
         "weight_class": "Lightweight",
+        "is_title": false,
         "slug": "gauge-young-vs-kody-steele"
       }
-    ]
+    ],
+    "homepage": true
   },
   {
     "id": 1263,
@@ -275,7 +224,8 @@
     "date": "Tuesday, August 25, 2026",
     "location": "Las Vegas, Nevada, USA",
     "slug": "dwcs-103",
-    "matchups": []
+    "matchups": [],
+    "homepage": false
   },
   {
     "id": 1261,
@@ -288,110 +238,149 @@
         "fighter_a": "Song Yadong",
         "fighter_b": "Umar Nurmagomedov",
         "weight_class": "Bantamweight",
+        "is_title": false,
         "slug": "song-yadong-vs-umar-nurmagomedov"
       },
       {
         "fighter_a": "Denise Gomes",
         "fighter_b": "Yan Xiaonan",
         "weight_class": "Women's Strawweight",
+        "is_title": false,
         "slug": "denise-gomes-vs-yan-xiaonan"
       },
       {
         "fighter_a": "Sumudaerji",
         "fighter_b": "Alex Perez",
         "weight_class": "Flyweight",
+        "is_title": false,
         "slug": "sumudaerji-vs-alex-perez"
       },
       {
         "fighter_a": "Kevin Borjas",
         "fighter_b": "Rei Tsuruya",
         "weight_class": "Flyweight",
+        "is_title": false,
         "slug": "kevin-borjas-vs-rei-tsuruya"
       },
       {
         "fighter_a": "Junior Tafa",
         "fighter_b": "Liu Ce",
         "weight_class": "Light Heavyweight",
+        "is_title": false,
         "slug": "junior-tafa-vs-liu-ce"
       },
       {
         "fighter_a": "Aoriqileng",
         "fighter_b": "Kai Asakura",
         "weight_class": "Bantamweight",
+        "is_title": false,
         "slug": "aoriqileng-vs-kai-asakura"
       }
-    ]
+    ],
+    "homepage": true
   },
   {
     "id": 1262,
     "name": "UFC Fight Night",
     "date": "Saturday, September 5, 2026",
     "location": "Paris, Ile-de-France, France",
-    "slug": "ufc-fight-night",
+    "slug": "ufc-fight-night-2026-09-05",
     "matchups": [
+      {
+        "fighter_a": "Dan Hooker",
+        "fighter_b": "Salahdine Parnasse",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "dan-hooker-vs-salahdine-parnasse"
+      },
       {
         "fighter_a": "Michael Page",
         "fighter_b": "Nursulton Ruziboev",
         "weight_class": "Middleweight",
+        "is_title": false,
         "slug": "michael-page-vs-nursulton-ruziboev"
       },
       {
         "fighter_a": "Kurtis Campbell",
         "fighter_b": "Trevor Peek",
         "weight_class": "Featherweight",
+        "is_title": false,
         "slug": "kurtis-campbell-vs-trevor-peek"
       },
       {
         "fighter_a": "Mario Pinto",
         "fighter_b": "Ryan Spann",
         "weight_class": "Heavyweight",
+        "is_title": false,
         "slug": "mario-pinto-vs-ryan-spann"
       }
-    ]
+    ],
+    "homepage": false
   },
   {
     "id": 1264,
     "name": "UFC Fight Night",
     "date": "Saturday, September 12, 2026",
     "location": "Glendale, Arizona, USA",
-    "slug": "ufc-fight-night",
+    "slug": "ufc-fight-night-2026-09-12",
     "matchups": [
       {
         "fighter_a": "Waldo Cortes Acosta",
         "fighter_b": "Curtis Blaydes",
         "weight_class": "Heavyweight",
+        "is_title": false,
         "slug": "waldo-cortes-acosta-vs-curtis-blaydes"
       },
       {
         "fighter_a": "Alexa Grasso",
         "fighter_b": "Manon Fiorot",
         "weight_class": "Women's Flyweight",
+        "is_title": false,
         "slug": "alexa-grasso-vs-manon-fiorot"
       },
       {
         "fighter_a": "Brandon Moreno",
         "fighter_b": "Joseph Morales",
         "weight_class": "Flyweight",
+        "is_title": false,
         "slug": "brandon-moreno-vs-joseph-morales"
       },
       {
         "fighter_a": "Edgar Chairez",
         "fighter_b": "Tim Elliott",
         "weight_class": "Flyweight",
+        "is_title": false,
         "slug": "edgar-chairez-vs-tim-elliott"
       },
       {
         "fighter_a": "Yousri Belgaroui",
         "fighter_b": "Kelvin Gastelum",
         "weight_class": "Middleweight",
+        "is_title": false,
         "slug": "yousri-belgaroui-vs-kelvin-gastelum"
       },
       {
         "fighter_a": "JJ Aldrich",
         "fighter_b": "Regina Tarin",
         "weight_class": "Women's Flyweight",
+        "is_title": false,
         "slug": "jj-aldrich-vs-regina-tarin"
+      },
+      {
+        "fighter_a": "Dan Ige",
+        "fighter_b": "David Martinez",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "dan-ige-vs-david-martinez"
+      },
+      {
+        "fighter_a": "Ignacio Bahamondes",
+        "fighter_b": "Muslim Salikhov",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "ignacio-bahamondes-vs-muslim-salikhov"
       }
-    ]
+    ],
+    "homepage": false
   }
 ]

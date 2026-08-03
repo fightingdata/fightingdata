@@ -6800,6 +6800,23 @@
     "last_fight_date": "2026-03-14"
   },
   {
+    "id": 3782,
+    "name": "Borislav Nikolic",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "borislav-nikolic",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 1228,
     "name": "Boston Salmon",
     "nickname": null,
@@ -40341,6 +40358,23 @@
     "last_fight_date": "2025-05-03"
   },
   {
+    "id": 3783,
+    "name": "Marina Spasic",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "marina-spasic",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 48,
     "name": "Mario Bautista",
     "nickname": null,
@@ -44183,6 +44217,23 @@
     "last_fight_date": "2025-11-08"
   },
   {
+    "id": 3780,
+    "name": "Milos Janicic",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "milos-janicic",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 1982,
     "name": "Milton Vieira",
     "nickname": null,
@@ -46425,6 +46476,23 @@
     "career_nc": 0,
     "division": "Featherweight",
     "last_fight_date": "2016-02-06"
+  },
+  {
+    "id": 3781,
+    "name": "Noah Gugnon",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "noah-gugnon",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 3261,
@@ -53497,6 +53565,23 @@
     "career_nc": 0,
     "division": "Lightweight",
     "last_fight_date": "2010-12-04"
+  },
+  {
+    "id": 3784,
+    "name": "Salahdine Parnasse",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1997-12-04",
+    "slug": "salahdine-parnasse",
+    "career_record": "23-2-0",
+    "career_wins": 23,
+    "career_losses": 2,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 1257,

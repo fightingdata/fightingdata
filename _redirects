@@ -2,6 +2,11 @@
 # Old slugs Google indexed before events were renamed -> current slug.
 # _redirects is processed BEFORE netlify.toml, so these 301s fire
 # before the catch-all /events/:slug/ rewrite can send them to a 404.
+#
+# Tracked renames (auto-recorded on slug change, keyed on event_id):
+/events/ufc-fight-night-ankalaev-vs-rountree-jr/    /events/ufc-fight-night-ankalaev-vs-guskov/    301
+#
+# Legacy 404s resolved from LEGACY_404_REDIRECTS:
 /events/ufc-294/    /events/ufc-294-makhachev-vs-volkanovski-2/    301
 /events/ufc-314/    /events/ufc-314-volkanovski-vs-lopes/    301
 /events/ufc-290/    /events/ufc-290-volkanovski-vs-rodriguez/    301

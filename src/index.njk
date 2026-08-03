@@ -38,7 +38,7 @@ description: UFC Fight Analysis - Data-driven fighter comparisons and matchup br
           older stats.json that predates this field.
         #}
         {% set featured = stats.featured_event %}
-        {% if not featured and events.length > 0 %}{% set featured = events[0] %}{% endif %}
+        {% if not featured %}{% set featured = (events | selectattr("homepage") | list)[0] %}{% endif %}
 
         {% if featured %}
         <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
@@ -62,7 +62,7 @@ description: UFC Fight Analysis - Data-driven fighter comparisons and matchup br
                 <a href="{% if featured.is_past %}/events/{{ featured.slug }}/{% else %}/compare/{{ matchup.slug }}/{% endif %}" class="matchup-row">
                     {% if loop.first %}<span class="matchup-tag">Main Event</span>{% endif %}
                     <span class="matchup-names{% if loop.first %} main-event{% endif %}">{{ matchup.fighter_a }} vs. {{ matchup.fighter_b }}</span>
-                    <span class="matchup-weight">{{ matchup.weight_class }}</span>
+                    <span class="matchup-weight">{{ matchup.weight_class }}{% if matchup.is_title %} <span class="matchup-title-chip">TITLE</span>{% endif %}</span>
                 </a>
                 {% endfor %}
                 {% if featured.matchups.length > 5 %}
@@ -89,8 +89,14 @@ description: UFC Fight Analysis - Data-driven fighter comparisons and matchup br
           in `events`), so nothing is skipped and every upcoming event shows.
           When featured is the soonest upcoming card, it equals events[0] and is
           skipped here to avoid duplicating it.
+
+          `homepage` is set by generate.py (see homepage_eligible): UFC-only,
+          must be a named card, must have >= 5 announced bouts. This is a
+          HOMEPAGE filter only — /events/ still lists every card and every
+          event page stays live, so no crawl path is lost.
         #}
-        {% if events.length > 1 or (featured.is_past and events.length > 0) %}
+        {% set shownEvents = events | selectattr("homepage") | list %}
+        {% if shownEvents.length > 1 or (featured.is_past and shownEvents.length > 0) %}
         <h3 style="font-size:14px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;margin:32px 0 12px;">Scheduled Events</h3>
         <div class="card">
             <table class="sched-table">
@@ -103,7 +109,7 @@ description: UFC Fight Analysis - Data-driven fighter comparisons and matchup br
                     </tr>
                 </thead>
                 <tbody>
-                    {% for event in events %}
+                    {% for event in shownEvents %}
                     {% if event.slug != featured.slug %}
                     <tr onclick="window.location='/events/{{ event.slug }}/'">
                         <td style="color:#555;">{{ event.date }}</td>

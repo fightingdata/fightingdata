@@ -1,90 +1,116 @@
 {
-  "total_fighters": 3779,
+  "total_fighters": 3784,
   "total_events": 1264,
-  "total_fights": 11254,
-  "upcoming_events": 8,
+  "total_fights": 11259,
+  "upcoming_events": 7,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-09-12",
-  "last_updated": "2026-07-27T08:56:03.874088",
+  "last_updated": "2026-08-02T20:40:22.883564",
   "featured_event": {
     "name": "UFC Fight Night: Medic vs. Rodriguez",
     "date": "Saturday, August 1, 2026",
     "iso_date": "2026-08-01",
     "location": "Belgrade, Vojvodina, Serbia",
     "slug": "ufc-fight-night-medic-vs-rodriguez",
-    "is_past": false,
+    "is_past": true,
     "matchups": [
       {
         "fighter_a": "Uros Medic",
         "fighter_b": "Daniel Rodriguez",
         "weight_class": "Welterweight",
+        "is_title": false,
         "slug": "uros-medic-vs-daniel-rodriguez"
       },
       {
         "fighter_a": "Navajo Stirling",
         "fighter_b": "Jan Blachowicz",
         "weight_class": "Light Heavyweight",
+        "is_title": false,
         "slug": "navajo-stirling-vs-jan-blachowicz"
       },
       {
         "fighter_a": "Marcin Tybura",
         "fighter_b": "Aleksandar Rakic",
         "weight_class": "Heavyweight",
+        "is_title": false,
         "slug": "marcin-tybura-vs-aleksandar-rakic"
       },
       {
         "fighter_a": "Dusko Todorovic",
         "fighter_b": "Robert Valentin",
         "weight_class": "Middleweight",
+        "is_title": false,
         "slug": "dusko-todorovic-vs-robert-valentin"
       },
       {
         "fighter_a": "Gilbert Urbina",
         "fighter_b": "Vlasto Cepo",
         "weight_class": "Middleweight",
+        "is_title": false,
         "slug": "gilbert-urbina-vs-vlasto-cepo"
+      },
+      {
+        "fighter_a": "Milos Janicic",
+        "fighter_b": "Noah Gugnon",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "milos-janicic-vs-noah-gugnon"
       },
       {
         "fighter_a": "Ludovit Klein",
         "fighter_b": "Tofiq Musayev",
         "weight_class": "Lightweight",
+        "is_title": false,
         "slug": "ludovit-klein-vs-tofiq-musayev"
       },
       {
         "fighter_a": "Oban Elliott",
         "fighter_b": "Michael Oliveira",
         "weight_class": "Welterweight",
+        "is_title": false,
         "slug": "oban-elliott-vs-michael-oliveira"
       },
       {
-        "fighter_a": "Josias Musasa",
-        "fighter_b": "Mark Vologdin",
+        "fighter_a": "Mark Vologdin",
+        "fighter_b": "Borislav Nikolic",
         "weight_class": "Bantamweight",
-        "slug": "josias-musasa-vs-mark-vologdin"
+        "is_title": false,
+        "slug": "mark-vologdin-vs-borislav-nikolic"
       },
       {
         "fighter_a": "Bogdan Grad",
         "fighter_b": "Dennis Buzukja",
         "weight_class": "Featherweight",
+        "is_title": false,
         "slug": "bogdan-grad-vs-dennis-buzukja"
       },
       {
         "fighter_a": "Kyle Prepolec",
         "fighter_b": "Mateusz Rebecki",
         "weight_class": "Lightweight",
+        "is_title": false,
         "slug": "kyle-prepolec-vs-mateusz-rebecki"
       },
       {
         "fighter_a": "Hailey Cowan",
         "fighter_b": "Nina Milosevic",
         "weight_class": "Women's Bantamweight",
+        "is_title": false,
         "slug": "hailey-cowan-vs-nina-milosevic"
       },
       {
-        "fighter_a": "Max Gimenis",
+        "fighter_a": "Alexander Poppeck",
         "fighter_b": "Jovan Leka",
         "weight_class": "Heavyweight",
-        "slug": "max-gimenis-vs-jovan-leka"
+        "is_title": false,
+        "slug": "alexander-poppeck-vs-jovan-leka"
+      },
+      {
+        "fighter_a": "Stephanie Luciano",
+        "fighter_b": "Marina Spasic",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "stephanie-luciano-vs-marina-spasic"
       }
     ]
   },
