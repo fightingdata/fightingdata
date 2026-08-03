@@ -10,6 +10,36 @@
     "weight_class": "Lightweight"
   },
   {
+    "fighter_a": "Diego Ferreira",
+    "fighter_b": "Billy Quarantillo",
+    "slug": "diego-ferreira-vs-billy-quarantillo",
+    "url": "/compare/diego-ferreira-vs-billy-quarantillo/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Yadier del Valle",
+    "fighter_b": "Darren Elkins",
+    "slug": "yadier-del-valle-vs-darren-elkins",
+    "url": "/compare/yadier-del-valle-vs-darren-elkins/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Amanda Lemos",
+    "fighter_b": "Alexia Thainara",
+    "slug": "amanda-lemos-vs-alexia-thainara",
+    "url": "/compare/amanda-lemos-vs-alexia-thainara/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Women's Strawweight"
+  },
+  {
     "fighter_a": "Ty Miller",
     "fighter_b": "Billy Ray Goff",
     "slug": "ty-miller-vs-billy-ray-goff",
@@ -30,16 +60,6 @@
     "weight_class": "Light Heavyweight"
   },
   {
-    "fighter_a": "Diego Ferreira",
-    "fighter_b": "Billy Quarantillo",
-    "slug": "diego-ferreira-vs-billy-quarantillo",
-    "url": "/compare/diego-ferreira-vs-billy-quarantillo/",
-    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
-    "event_date": "Saturday, August 8, 2026",
-    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
-    "weight_class": "Lightweight"
-  },
-  {
     "fighter_a": "Louie Sutherland",
     "fighter_b": "Henrique Da Silva Lopes",
     "slug": "louie-sutherland-vs-henrique-da-silva-lopes",
@@ -48,16 +68,6 @@
     "event_date": "Saturday, August 8, 2026",
     "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
     "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Yadier del Valle",
-    "fighter_b": "Darren Elkins",
-    "slug": "yadier-del-valle-vs-darren-elkins",
-    "url": "/compare/yadier-del-valle-vs-darren-elkins/",
-    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
-    "event_date": "Saturday, August 8, 2026",
-    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
-    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Steven Asplund",
@@ -80,14 +90,24 @@
     "weight_class": "Women's Flyweight"
   },
   {
-    "fighter_a": "Amanda Lemos",
-    "fighter_b": "Alexia Thainara",
-    "slug": "amanda-lemos-vs-alexia-thainara",
-    "url": "/compare/amanda-lemos-vs-alexia-thainara/",
+    "fighter_a": "Manoel Sousa",
+    "fighter_b": "Richie Miranda",
+    "slug": "manoel-sousa-vs-richie-miranda",
+    "url": "/compare/manoel-sousa-vs-richie-miranda/",
     "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
     "event_date": "Saturday, August 8, 2026",
     "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
-    "weight_class": "Women's Strawweight"
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Miles Johns",
+    "fighter_b": "Jessie Rosas",
+    "slug": "miles-johns-vs-jessie-rosas",
+    "url": "/compare/miles-johns-vs-jessie-rosas/",
+    "event_name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "event_date": "Saturday, August 8, 2026",
+    "event_slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Islam Makhachev",
@@ -330,13 +350,23 @@
     "weight_class": "Bantamweight"
   },
   {
+    "fighter_a": "Jack Jenkins",
+    "fighter_b": "Sean Woodson",
+    "slug": "jack-jenkins-vs-sean-woodson",
+    "url": "/compare/jack-jenkins-vs-sean-woodson/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Featherweight"
+  },
+  {
     "fighter_a": "Dan Hooker",
     "fighter_b": "Salahdine Parnasse",
     "slug": "dan-hooker-vs-salahdine-parnasse",
     "url": "/compare/dan-hooker-vs-salahdine-parnasse/",
-    "event_name": "UFC Fight Night",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
     "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-2026-09-05",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
     "weight_class": "Lightweight"
   },
   {
@@ -344,9 +374,9 @@
     "fighter_b": "Nursulton Ruziboev",
     "slug": "michael-page-vs-nursulton-ruziboev",
     "url": "/compare/michael-page-vs-nursulton-ruziboev/",
-    "event_name": "UFC Fight Night",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
     "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-2026-09-05",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
     "weight_class": "Middleweight"
   },
   {
@@ -354,9 +384,9 @@
     "fighter_b": "Trevor Peek",
     "slug": "kurtis-campbell-vs-trevor-peek",
     "url": "/compare/kurtis-campbell-vs-trevor-peek/",
-    "event_name": "UFC Fight Night",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
     "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-2026-09-05",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
     "weight_class": "Featherweight"
   },
   {
@@ -364,9 +394,9 @@
     "fighter_b": "Ryan Spann",
     "slug": "mario-pinto-vs-ryan-spann",
     "url": "/compare/mario-pinto-vs-ryan-spann/",
-    "event_name": "UFC Fight Night",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
     "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-2026-09-05",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
     "weight_class": "Heavyweight"
   },
   {
@@ -447,6 +477,16 @@
     "event_name": "UFC Fight Night",
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "ufc-fight-night-2026-09-12",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Mike Malott",
+    "fighter_b": "Joaquin Buckley",
+    "slug": "mike-malott-vs-joaquin-buckley",
+    "url": "/compare/mike-malott-vs-joaquin-buckley/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
     "weight_class": "Welterweight"
   }
 ]

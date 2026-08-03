@@ -14,6 +14,27 @@
         "slug": "quillian-salkild-vs-mateusz-gamrot"
       },
       {
+        "fighter_a": "Diego Ferreira",
+        "fighter_b": "Billy Quarantillo",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "diego-ferreira-vs-billy-quarantillo"
+      },
+      {
+        "fighter_a": "Yadier del Valle",
+        "fighter_b": "Darren Elkins",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "yadier-del-valle-vs-darren-elkins"
+      },
+      {
+        "fighter_a": "Amanda Lemos",
+        "fighter_b": "Alexia Thainara",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "amanda-lemos-vs-alexia-thainara"
+      },
+      {
         "fighter_a": "Ty Miller",
         "fighter_b": "Billy Ray Goff",
         "weight_class": "Welterweight",
@@ -28,25 +49,11 @@
         "slug": "bruno-lopes-vs-diyar-nurgozhay"
       },
       {
-        "fighter_a": "Diego Ferreira",
-        "fighter_b": "Billy Quarantillo",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "diego-ferreira-vs-billy-quarantillo"
-      },
-      {
         "fighter_a": "Louie Sutherland",
         "fighter_b": "Henrique Da Silva Lopes",
         "weight_class": "Heavyweight",
         "is_title": false,
         "slug": "louie-sutherland-vs-henrique-da-silva-lopes"
-      },
-      {
-        "fighter_a": "Yadier del Valle",
-        "fighter_b": "Darren Elkins",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "yadier-del-valle-vs-darren-elkins"
       },
       {
         "fighter_a": "Steven Asplund",
@@ -63,11 +70,18 @@
         "slug": "juliana-miller-vs-ravena-oliveira"
       },
       {
-        "fighter_a": "Amanda Lemos",
-        "fighter_b": "Alexia Thainara",
-        "weight_class": "Women's Strawweight",
+        "fighter_a": "Manoel Sousa",
+        "fighter_b": "Richie Miranda",
+        "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "amanda-lemos-vs-alexia-thainara"
+        "slug": "manoel-sousa-vs-richie-miranda"
+      },
+      {
+        "fighter_a": "Miles Johns",
+        "fighter_b": "Jessie Rosas",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "miles-johns-vs-jessie-rosas"
       }
     ],
     "homepage": true
@@ -275,16 +289,23 @@
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "aoriqileng-vs-kai-asakura"
+      },
+      {
+        "fighter_a": "Jack Jenkins",
+        "fighter_b": "Sean Woodson",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "jack-jenkins-vs-sean-woodson"
       }
     ],
     "homepage": true
   },
   {
     "id": 1262,
-    "name": "UFC Fight Night",
+    "name": "UFC Fight Night: Hooker vs. Parnasse",
     "date": "Saturday, September 5, 2026",
     "location": "Paris, Ile-de-France, France",
-    "slug": "ufc-fight-night-2026-09-05",
+    "slug": "ufc-fight-night-hooker-vs-parnasse",
     "matchups": [
       {
         "fighter_a": "Dan Hooker",
@@ -379,6 +400,23 @@
         "weight_class": "Welterweight",
         "is_title": false,
         "slug": "ignacio-bahamondes-vs-muslim-salikhov"
+      }
+    ],
+    "homepage": false
+  },
+  {
+    "id": 1265,
+    "name": "UFC Fight Night: Buckley vs. Malott",
+    "date": "Saturday, October 17, 2026",
+    "location": "Edmonton, Alberta, Canada",
+    "slug": "ufc-fight-night-buckley-vs-malott",
+    "matchups": [
+      {
+        "fighter_a": "Mike Malott",
+        "fighter_b": "Joaquin Buckley",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "mike-malott-vs-joaquin-buckley"
       }
     ],
     "homepage": false
