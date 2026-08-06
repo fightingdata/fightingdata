@@ -1,11 +1,11 @@
 {
-  "total_fighters": 3786,
+  "total_fighters": 3790,
   "total_events": 1265,
-  "total_fights": 11263,
+  "total_fights": 11275,
   "upcoming_events": 8,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-10-17",
-  "last_updated": "2026-08-03T08:59:36.902463",
+  "last_updated": "2026-08-06T08:00:22.159947",
   "featured_event": {
     "name": "UFC Fight Night: Gamrot vs. Salkilld",
     "date": "Saturday, August 8, 2026",
@@ -50,6 +50,13 @@
         "slug": "ty-miller-vs-billy-ray-goff"
       },
       {
+        "fighter_a": "Steven Asplund",
+        "fighter_b": "Guilherme Pat",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "steven-asplund-vs-guilherme-pat"
+      },
+      {
         "fighter_a": "Bruno Lopes",
         "fighter_b": "Diyar Nurgozhay",
         "weight_class": "Light Heavyweight",
@@ -64,20 +71,6 @@
         "slug": "louie-sutherland-vs-henrique-da-silva-lopes"
       },
       {
-        "fighter_a": "Steven Asplund",
-        "fighter_b": "Guilherme Pat",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "steven-asplund-vs-guilherme-pat"
-      },
-      {
-        "fighter_a": "Juliana Miller",
-        "fighter_b": "Ravena Oliveira",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "juliana-miller-vs-ravena-oliveira"
-      },
-      {
         "fighter_a": "Manoel Sousa",
         "fighter_b": "Richie Miranda",
         "weight_class": "Lightweight",
@@ -90,6 +83,20 @@
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "miles-johns-vs-jessie-rosas"
+      },
+      {
+        "fighter_a": "Juliana Miller",
+        "fighter_b": "Ravena Oliveira",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "juliana-miller-vs-ravena-oliveira"
+      },
+      {
+        "fighter_a": "Carol Foro",
+        "fighter_b": "Gigi Canuto",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "carol-foro-vs-gigi-canuto"
       }
     ]
   },

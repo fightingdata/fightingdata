@@ -799,6 +799,23 @@
     "last_fight_date": "2017-09-09"
   },
   {
+    "id": 3789,
+    "name": "Agulali",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "agulali",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": "2025-08-22"
+  },
+  {
     "id": 3157,
     "name": "Ahmad Hassanzada",
     "nickname": null,
@@ -21673,6 +21690,23 @@
     "career_nc": 0,
     "division": "Featherweight",
     "last_fight_date": "2025-12-13"
+  },
+  {
+    "id": 3787,
+    "name": "Gigi Canuto",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "2002-11-16",
+    "slug": "gigi-canuto",
+    "career_record": "7-1-0",
+    "career_wins": 7,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 2450,
@@ -45186,6 +45220,23 @@
     "last_fight_date": "2014-03-01"
   },
   {
+    "id": 3788,
+    "name": "Namsrai Batbayar",
+    "nickname": null,
+    "height_cm": 162.6,
+    "reach_cm": 172.7,
+    "stance": "Orthodox",
+    "dob": "2000-12-29",
+    "slug": "namsrai-batbayar",
+    "career_record": "10-1-0",
+    "career_wins": 10,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": "2025-08-22"
+  },
+  {
     "id": 1905,
     "name": "Nandor Guelmino",
     "nickname": null,
@@ -62014,6 +62065,23 @@
     "career_nc": 0,
     "division": "",
     "last_fight_date": "2003-12-31"
+  },
+  {
+    "id": 3790,
+    "name": "Wataru Yamauchi",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "wataru-yamauchi",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 3719,

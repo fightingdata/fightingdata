@@ -42,6 +42,13 @@
         "slug": "ty-miller-vs-billy-ray-goff"
       },
       {
+        "fighter_a": "Steven Asplund",
+        "fighter_b": "Guilherme Pat",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "steven-asplund-vs-guilherme-pat"
+      },
+      {
         "fighter_a": "Bruno Lopes",
         "fighter_b": "Diyar Nurgozhay",
         "weight_class": "Light Heavyweight",
@@ -56,20 +63,6 @@
         "slug": "louie-sutherland-vs-henrique-da-silva-lopes"
       },
       {
-        "fighter_a": "Steven Asplund",
-        "fighter_b": "Guilherme Pat",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "steven-asplund-vs-guilherme-pat"
-      },
-      {
-        "fighter_a": "Juliana Miller",
-        "fighter_b": "Ravena Oliveira",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "juliana-miller-vs-ravena-oliveira"
-      },
-      {
         "fighter_a": "Manoel Sousa",
         "fighter_b": "Richie Miranda",
         "weight_class": "Lightweight",
@@ -82,6 +75,20 @@
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "miles-johns-vs-jessie-rosas"
+      },
+      {
+        "fighter_a": "Juliana Miller",
+        "fighter_b": "Ravena Oliveira",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "juliana-miller-vs-ravena-oliveira"
+      },
+      {
+        "fighter_a": "Carol Foro",
+        "fighter_b": "Gigi Canuto",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "carol-foro-vs-gigi-canuto"
       }
     ],
     "homepage": true
@@ -108,13 +115,6 @@
         "slug": "gillian-robertson-vs-mackenzie-dern"
       },
       {
-        "fighter_a": "Jalin Turner",
-        "fighter_b": "Kaue Fernandes",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "jalin-turner-vs-kaue-fernandes"
-      },
-      {
         "fighter_a": "Mansur Abdul-Malik",
         "fighter_b": "Dustin Stoltzfus",
         "weight_class": "Middleweight",
@@ -129,18 +129,25 @@
         "slug": "edson-barboza-vs-esteban-ribovics"
       },
       {
-        "fighter_a": "Myktybek Orolbai",
-        "fighter_b": "Jeremiah Wells",
+        "fighter_a": "Chidi Njokuani",
+        "fighter_b": "Joel Alvarez",
         "weight_class": "Welterweight",
         "is_title": false,
-        "slug": "myktybek-orolbai-vs-jeremiah-wells"
+        "slug": "chidi-njokuani-vs-joel-alvarez"
       },
       {
-        "fighter_a": "Chidi Njokuani",
-        "fighter_b": "Geoff Neal",
-        "weight_class": "Welterweight",
+        "fighter_a": "Jalin Turner",
+        "fighter_b": "Kaue Fernandes",
+        "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "chidi-njokuani-vs-geoff-neal"
+        "slug": "jalin-turner-vs-kaue-fernandes"
+      },
+      {
+        "fighter_a": "Donte Johnson",
+        "fighter_b": "Eric McConico",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "donte-johnson-vs-eric-mcconico"
       },
       {
         "fighter_a": "Vicente Luque",
@@ -157,11 +164,18 @@
         "slug": "neil-magny-vs-ramiz-brahimaj"
       },
       {
-        "fighter_a": "Donte Johnson",
-        "fighter_b": "Eric McConico",
-        "weight_class": "Middleweight",
+        "fighter_a": "Myktybek Orolbai",
+        "fighter_b": "Jeremiah Wells",
+        "weight_class": "Welterweight",
         "is_title": false,
-        "slug": "donte-johnson-vs-eric-mcconico"
+        "slug": "myktybek-orolbai-vs-jeremiah-wells"
+      },
+      {
+        "fighter_a": "Lucas Fernando",
+        "fighter_b": "Rafael Tobias",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "lucas-fernando-vs-rafael-tobias"
       }
     ],
     "homepage": true
@@ -181,13 +195,6 @@
         "slug": "anthony-hernandez-vs-gregory-rodrigues"
       },
       {
-        "fighter_a": "Reinier de Ridder",
-        "fighter_b": "Roman Dolidze",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "reinier-de-ridder-vs-roman-dolidze"
-      },
-      {
         "fighter_a": "Serghei Spivac",
         "fighter_b": "Vitor Petrino",
         "weight_class": "Heavyweight",
@@ -195,11 +202,11 @@
         "slug": "serghei-spivac-vs-vitor-petrino"
       },
       {
-        "fighter_a": "Kennedy Nzechukwu",
-        "fighter_b": "Shamil Gaziev",
-        "weight_class": "Heavyweight",
+        "fighter_a": "Reinier de Ridder",
+        "fighter_b": "Roman Dolidze",
+        "weight_class": "Light Heavyweight",
         "is_title": false,
-        "slug": "kennedy-nzechukwu-vs-shamil-gaziev"
+        "slug": "reinier-de-ridder-vs-roman-dolidze"
       },
       {
         "fighter_a": "Carli Judice",
@@ -209,6 +216,13 @@
         "slug": "carli-judice-vs-jeisla-chaves"
       },
       {
+        "fighter_a": "Kennedy Nzechukwu",
+        "fighter_b": "Shamil Gaziev",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "kennedy-nzechukwu-vs-shamil-gaziev"
+      },
+      {
         "fighter_a": "Wes Schultz",
         "fighter_b": "Jackson McVey",
         "weight_class": "Middleweight",
@@ -216,18 +230,18 @@
         "slug": "wes-schultz-vs-jackson-mcvey"
       },
       {
-        "fighter_a": "Shanelle Dyer",
-        "fighter_b": "Elise Reed",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "shanelle-dyer-vs-elise-reed"
-      },
-      {
         "fighter_a": "Gauge Young",
         "fighter_b": "Kody Steele",
         "weight_class": "Lightweight",
         "is_title": false,
         "slug": "gauge-young-vs-kody-steele"
+      },
+      {
+        "fighter_a": "Shanelle Dyer",
+        "fighter_b": "Elise Reed",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "shanelle-dyer-vs-elise-reed"
       }
     ],
     "homepage": true
@@ -263,18 +277,18 @@
         "slug": "denise-gomes-vs-yan-xiaonan"
       },
       {
+        "fighter_a": "Aoriqileng",
+        "fighter_b": "Kai Asakura",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "aoriqileng-vs-kai-asakura"
+      },
+      {
         "fighter_a": "Sumudaerji",
         "fighter_b": "Alex Perez",
         "weight_class": "Flyweight",
         "is_title": false,
         "slug": "sumudaerji-vs-alex-perez"
-      },
-      {
-        "fighter_a": "Kevin Borjas",
-        "fighter_b": "Rei Tsuruya",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "kevin-borjas-vs-rei-tsuruya"
       },
       {
         "fighter_a": "Junior Tafa",
@@ -284,18 +298,32 @@
         "slug": "junior-tafa-vs-liu-ce"
       },
       {
-        "fighter_a": "Aoriqileng",
-        "fighter_b": "Kai Asakura",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "aoriqileng-vs-kai-asakura"
-      },
-      {
         "fighter_a": "Jack Jenkins",
         "fighter_b": "Sean Woodson",
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "jack-jenkins-vs-sean-woodson"
+      },
+      {
+        "fighter_a": "Kevin Borjas",
+        "fighter_b": "Rei Tsuruya",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "kevin-borjas-vs-rei-tsuruya"
+      },
+      {
+        "fighter_a": "Andre Lima",
+        "fighter_b": "Namsrai Batbayar",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "andre-lima-vs-namsrai-batbayar"
+      },
+      {
+        "fighter_a": "Julia Polastri",
+        "fighter_b": "Xiong Jingnan",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "julia-polastri-vs-xiong-jingnan"
       }
     ],
     "homepage": true
@@ -322,11 +350,11 @@
         "slug": "michael-page-vs-nursulton-ruziboev"
       },
       {
-        "fighter_a": "Kurtis Campbell",
-        "fighter_b": "Trevor Peek",
+        "fighter_a": "Morgan Charriere",
+        "fighter_b": "Felipe Lima",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "kurtis-campbell-vs-trevor-peek"
+        "slug": "morgan-charriere-vs-felipe-lima"
       },
       {
         "fighter_a": "Mario Pinto",
@@ -334,9 +362,30 @@
         "weight_class": "Heavyweight",
         "is_title": false,
         "slug": "mario-pinto-vs-ryan-spann"
+      },
+      {
+        "fighter_a": "Kurtis Campbell",
+        "fighter_b": "Trevor Peek",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "kurtis-campbell-vs-trevor-peek"
+      },
+      {
+        "fighter_a": "Nathaniel Wood",
+        "fighter_b": "Mairon Santos",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "nathaniel-wood-vs-mairon-santos"
+      },
+      {
+        "fighter_a": "Matthieu Duclos",
+        "fighter_b": "Luis Felipe Dias",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "matthieu-duclos-vs-luis-felipe-dias"
       }
     ],
-    "homepage": false
+    "homepage": true
   },
   {
     "id": 1264,
@@ -345,6 +394,13 @@
     "location": "Glendale, Arizona, USA",
     "slug": "ufc-fight-night-2026-09-12",
     "matchups": [
+      {
+        "fighter_a": "Jean Silva",
+        "fighter_b": "Yair Rodriguez",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "jean-silva-vs-yair-rodriguez"
+      },
       {
         "fighter_a": "Waldo Cortes Acosta",
         "fighter_b": "Curtis Blaydes",
@@ -417,6 +473,13 @@
         "weight_class": "Welterweight",
         "is_title": false,
         "slug": "mike-malott-vs-joaquin-buckley"
+      },
+      {
+        "fighter_a": "Nate Landwehr",
+        "fighter_b": "Mandel Nallo",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "nate-landwehr-vs-mandel-nallo"
       }
     ],
     "homepage": false
