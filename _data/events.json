@@ -157,6 +157,13 @@
         "slug": "vicente-luque-vs-tresean-gore"
       },
       {
+        "fighter_a": "Lucas Fernando",
+        "fighter_b": "Rafael Tobias",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "lucas-fernando-vs-rafael-tobias"
+      },
+      {
         "fighter_a": "Neil Magny",
         "fighter_b": "Ramiz Brahimaj",
         "weight_class": "Welterweight",
@@ -169,13 +176,6 @@
         "weight_class": "Welterweight",
         "is_title": false,
         "slug": "myktybek-orolbai-vs-jeremiah-wells"
-      },
-      {
-        "fighter_a": "Lucas Fernando",
-        "fighter_b": "Rafael Tobias",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "lucas-fernando-vs-rafael-tobias"
       }
     ],
     "homepage": true
@@ -298,6 +298,13 @@
         "slug": "junior-tafa-vs-liu-ce"
       },
       {
+        "fighter_a": "Andre Lima",
+        "fighter_b": "Namsrai Batbayar",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "andre-lima-vs-namsrai-batbayar"
+      },
+      {
         "fighter_a": "Jack Jenkins",
         "fighter_b": "Sean Woodson",
         "weight_class": "Featherweight",
@@ -310,13 +317,6 @@
         "weight_class": "Flyweight",
         "is_title": false,
         "slug": "kevin-borjas-vs-rei-tsuruya"
-      },
-      {
-        "fighter_a": "Andre Lima",
-        "fighter_b": "Namsrai Batbayar",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "andre-lima-vs-namsrai-batbayar"
       },
       {
         "fighter_a": "Julia Polastri",
@@ -402,11 +402,11 @@
         "slug": "jean-silva-vs-yair-rodriguez"
       },
       {
-        "fighter_a": "Waldo Cortes Acosta",
-        "fighter_b": "Curtis Blaydes",
-        "weight_class": "Heavyweight",
+        "fighter_a": "Brandon Moreno",
+        "fighter_b": "Joseph Morales",
+        "weight_class": "Flyweight",
         "is_title": false,
-        "slug": "waldo-cortes-acosta-vs-curtis-blaydes"
+        "slug": "brandon-moreno-vs-joseph-morales"
       },
       {
         "fighter_a": "Alexa Grasso",
@@ -416,11 +416,18 @@
         "slug": "alexa-grasso-vs-manon-fiorot"
       },
       {
-        "fighter_a": "Brandon Moreno",
-        "fighter_b": "Joseph Morales",
-        "weight_class": "Flyweight",
+        "fighter_a": "Waldo Cortes Acosta",
+        "fighter_b": "Curtis Blaydes",
+        "weight_class": "Heavyweight",
         "is_title": false,
-        "slug": "brandon-moreno-vs-joseph-morales"
+        "slug": "waldo-cortes-acosta-vs-curtis-blaydes"
+      },
+      {
+        "fighter_a": "Dan Ige",
+        "fighter_b": "David Martinez",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "dan-ige-vs-david-martinez"
       },
       {
         "fighter_a": "Edgar Chairez",
@@ -428,6 +435,13 @@
         "weight_class": "Flyweight",
         "is_title": false,
         "slug": "edgar-chairez-vs-tim-elliott"
+      },
+      {
+        "fighter_a": "Ignacio Bahamondes",
+        "fighter_b": "Muslim Salikhov",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "ignacio-bahamondes-vs-muslim-salikhov"
       },
       {
         "fighter_a": "Yousri Belgaroui",
@@ -442,20 +456,6 @@
         "weight_class": "Women's Flyweight",
         "is_title": false,
         "slug": "jj-aldrich-vs-regina-tarin"
-      },
-      {
-        "fighter_a": "Dan Ige",
-        "fighter_b": "David Martinez",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "dan-ige-vs-david-martinez"
-      },
-      {
-        "fighter_a": "Ignacio Bahamondes",
-        "fighter_b": "Muslim Salikhov",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "ignacio-bahamondes-vs-muslim-salikhov"
       }
     ],
     "homepage": false

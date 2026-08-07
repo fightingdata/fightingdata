@@ -200,6 +200,16 @@
     "weight_class": "Middleweight"
   },
   {
+    "fighter_a": "Lucas Fernando",
+    "fighter_b": "Rafael Tobias",
+    "slug": "lucas-fernando-vs-rafael-tobias",
+    "url": "/compare/lucas-fernando-vs-rafael-tobias/",
+    "event_name": "UFC 330: Makhachev vs. Machado Garry",
+    "event_date": "Saturday, August 15, 2026",
+    "event_slug": "ufc-330-makhachev-vs-machado-garry",
+    "weight_class": "Light Heavyweight"
+  },
+  {
     "fighter_a": "Neil Magny",
     "fighter_b": "Ramiz Brahimaj",
     "slug": "neil-magny-vs-ramiz-brahimaj",
@@ -218,16 +228,6 @@
     "event_date": "Saturday, August 15, 2026",
     "event_slug": "ufc-330-makhachev-vs-machado-garry",
     "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Lucas Fernando",
-    "fighter_b": "Rafael Tobias",
-    "slug": "lucas-fernando-vs-rafael-tobias",
-    "url": "/compare/lucas-fernando-vs-rafael-tobias/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Light Heavyweight"
   },
   {
     "fighter_a": "Anthony Hernandez",
@@ -360,6 +360,16 @@
     "weight_class": "Light Heavyweight"
   },
   {
+    "fighter_a": "Andre Lima",
+    "fighter_b": "Namsrai Batbayar",
+    "slug": "andre-lima-vs-namsrai-batbayar",
+    "url": "/compare/andre-lima-vs-namsrai-batbayar/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Flyweight"
+  },
+  {
     "fighter_a": "Jack Jenkins",
     "fighter_b": "Sean Woodson",
     "slug": "jack-jenkins-vs-sean-woodson",
@@ -374,16 +384,6 @@
     "fighter_b": "Rei Tsuruya",
     "slug": "kevin-borjas-vs-rei-tsuruya",
     "url": "/compare/kevin-borjas-vs-rei-tsuruya/",
-    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
-    "event_date": "Saturday, August 29, 2026",
-    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Andre Lima",
-    "fighter_b": "Namsrai Batbayar",
-    "slug": "andre-lima-vs-namsrai-batbayar",
-    "url": "/compare/andre-lima-vs-namsrai-batbayar/",
     "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
     "event_date": "Saturday, August 29, 2026",
     "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
@@ -480,14 +480,14 @@
     "weight_class": "Featherweight"
   },
   {
-    "fighter_a": "Waldo Cortes Acosta",
-    "fighter_b": "Curtis Blaydes",
-    "slug": "waldo-cortes-acosta-vs-curtis-blaydes",
-    "url": "/compare/waldo-cortes-acosta-vs-curtis-blaydes/",
+    "fighter_a": "Brandon Moreno",
+    "fighter_b": "Joseph Morales",
+    "slug": "brandon-moreno-vs-joseph-morales",
+    "url": "/compare/brandon-moreno-vs-joseph-morales/",
     "event_name": "UFC Fight Night",
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "ufc-fight-night-2026-09-12",
-    "weight_class": "Heavyweight"
+    "weight_class": "Flyweight"
   },
   {
     "fighter_a": "Alexa Grasso",
@@ -500,14 +500,24 @@
     "weight_class": "Women's Flyweight"
   },
   {
-    "fighter_a": "Brandon Moreno",
-    "fighter_b": "Joseph Morales",
-    "slug": "brandon-moreno-vs-joseph-morales",
-    "url": "/compare/brandon-moreno-vs-joseph-morales/",
+    "fighter_a": "Waldo Cortes Acosta",
+    "fighter_b": "Curtis Blaydes",
+    "slug": "waldo-cortes-acosta-vs-curtis-blaydes",
+    "url": "/compare/waldo-cortes-acosta-vs-curtis-blaydes/",
     "event_name": "UFC Fight Night",
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "ufc-fight-night-2026-09-12",
-    "weight_class": "Flyweight"
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Dan Ige",
+    "fighter_b": "David Martinez",
+    "slug": "dan-ige-vs-david-martinez",
+    "url": "/compare/dan-ige-vs-david-martinez/",
+    "event_name": "UFC Fight Night",
+    "event_date": "Saturday, September 12, 2026",
+    "event_slug": "ufc-fight-night-2026-09-12",
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Edgar Chairez",
@@ -518,6 +528,16 @@
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "ufc-fight-night-2026-09-12",
     "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Ignacio Bahamondes",
+    "fighter_b": "Muslim Salikhov",
+    "slug": "ignacio-bahamondes-vs-muslim-salikhov",
+    "url": "/compare/ignacio-bahamondes-vs-muslim-salikhov/",
+    "event_name": "UFC Fight Night",
+    "event_date": "Saturday, September 12, 2026",
+    "event_slug": "ufc-fight-night-2026-09-12",
+    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Yousri Belgaroui",
@@ -538,26 +558,6 @@
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "ufc-fight-night-2026-09-12",
     "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Dan Ige",
-    "fighter_b": "David Martinez",
-    "slug": "dan-ige-vs-david-martinez",
-    "url": "/compare/dan-ige-vs-david-martinez/",
-    "event_name": "UFC Fight Night",
-    "event_date": "Saturday, September 12, 2026",
-    "event_slug": "ufc-fight-night-2026-09-12",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Ignacio Bahamondes",
-    "fighter_b": "Muslim Salikhov",
-    "slug": "ignacio-bahamondes-vs-muslim-salikhov",
-    "url": "/compare/ignacio-bahamondes-vs-muslim-salikhov/",
-    "event_name": "UFC Fight Night",
-    "event_date": "Saturday, September 12, 2026",
-    "event_slug": "ufc-fight-night-2026-09-12",
-    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Mike Malott",
