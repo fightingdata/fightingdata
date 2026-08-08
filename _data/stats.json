@@ -5,7 +5,7 @@
   "upcoming_events": 8,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-10-17",
-  "last_updated": "2026-08-07T08:00:18.631002",
+  "last_updated": "2026-08-08T08:00:19.508748",
   "featured_event": {
     "name": "UFC Fight Night: Gamrot vs. Salkilld",
     "date": "Saturday, August 8, 2026",
@@ -78,11 +78,11 @@
         "slug": "manoel-sousa-vs-richie-miranda"
       },
       {
-        "fighter_a": "Miles Johns",
-        "fighter_b": "Jessie Rosas",
+        "fighter_a": "Gianni Vazquez",
+        "fighter_b": "Miles Johns",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "miles-johns-vs-jessie-rosas"
+        "slug": "gianni-vazquez-vs-miles-johns"
       },
       {
         "fighter_a": "Juliana Miller",
