@@ -1,99 +1,5 @@
 [
   {
-    "id": 1224,
-    "name": "UFC Fight Night: Gamrot vs. Salkilld",
-    "date": "Saturday, August 8, 2026",
-    "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night-gamrot-vs-salkilld",
-    "matchups": [
-      {
-        "fighter_a": "Quillian Salkild",
-        "fighter_b": "Mateusz Gamrot",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "quillian-salkild-vs-mateusz-gamrot"
-      },
-      {
-        "fighter_a": "Diego Ferreira",
-        "fighter_b": "Billy Quarantillo",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "diego-ferreira-vs-billy-quarantillo"
-      },
-      {
-        "fighter_a": "Yadier del Valle",
-        "fighter_b": "Darren Elkins",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "yadier-del-valle-vs-darren-elkins"
-      },
-      {
-        "fighter_a": "Amanda Lemos",
-        "fighter_b": "Alexia Thainara",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "amanda-lemos-vs-alexia-thainara"
-      },
-      {
-        "fighter_a": "Ty Miller",
-        "fighter_b": "Billy Ray Goff",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "ty-miller-vs-billy-ray-goff"
-      },
-      {
-        "fighter_a": "Steven Asplund",
-        "fighter_b": "Guilherme Pat",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "steven-asplund-vs-guilherme-pat"
-      },
-      {
-        "fighter_a": "Bruno Lopes",
-        "fighter_b": "Diyar Nurgozhay",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "bruno-lopes-vs-diyar-nurgozhay"
-      },
-      {
-        "fighter_a": "Louie Sutherland",
-        "fighter_b": "Henrique Da Silva Lopes",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "louie-sutherland-vs-henrique-da-silva-lopes"
-      },
-      {
-        "fighter_a": "Manoel Sousa",
-        "fighter_b": "Richie Miranda",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "manoel-sousa-vs-richie-miranda"
-      },
-      {
-        "fighter_a": "Gianni Vazquez",
-        "fighter_b": "Miles Johns",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "gianni-vazquez-vs-miles-johns"
-      },
-      {
-        "fighter_a": "Juliana Miller",
-        "fighter_b": "Ravena Oliveira",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "juliana-miller-vs-ravena-oliveira"
-      },
-      {
-        "fighter_a": "Carol Foro",
-        "fighter_b": "Gigi Canuto",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "carol-foro-vs-gigi-canuto"
-      }
-    ],
-    "homepage": true
-  },
-  {
     "id": 1218,
     "name": "UFC 330: Makhachev vs. Machado Garry",
     "date": "Saturday, August 15, 2026",
@@ -113,6 +19,13 @@
         "weight_class": "Women's Strawweight",
         "is_title": true,
         "slug": "gillian-robertson-vs-mackenzie-dern"
+      },
+      {
+        "fighter_a": "Charles Johnson",
+        "fighter_b": "Jose Ochoa",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "charles-johnson-vs-jose-ochoa"
       },
       {
         "fighter_a": "Mansur Abdul-Malik",
@@ -389,10 +302,10 @@
   },
   {
     "id": 1264,
-    "name": "UFC Fight Night",
+    "name": "Noche UFC: Rodriguez vs. Silva",
     "date": "Saturday, September 12, 2026",
     "location": "Glendale, Arizona, USA",
-    "slug": "ufc-fight-night-2026-09-12",
+    "slug": "noche-ufc-rodriguez-vs-silva",
     "matchups": [
       {
         "fighter_a": "Jean Silva",
@@ -456,9 +369,117 @@
         "weight_class": "Women's Flyweight",
         "is_title": false,
         "slug": "jj-aldrich-vs-regina-tarin"
+      },
+      {
+        "fighter_a": "Marwan Rahiki",
+        "fighter_b": "Tommy McMillen",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "marwan-rahiki-vs-tommy-mcmillen"
       }
     ],
-    "homepage": false
+    "homepage": true
+  },
+  {
+    "id": 1266,
+    "name": "UFC 331: Van vs. Pantoja 2",
+    "date": "Saturday, September 19, 2026",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-331-van-vs-pantoja-2",
+    "matchups": [
+      {
+        "fighter_a": "Joshua Van",
+        "fighter_b": "Alexandre Pantoja",
+        "weight_class": "Flyweight",
+        "is_title": true,
+        "slug": "joshua-van-vs-alexandre-pantoja"
+      },
+      {
+        "fighter_a": "Mauricio Ruffy",
+        "fighter_b": "Arman Tsarukyan",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "mauricio-ruffy-vs-arman-tsarukyan"
+      },
+      {
+        "fighter_a": "Patricio Freire",
+        "fighter_b": "Dooho Choi",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "patricio-freire-vs-dooho-choi"
+      },
+      {
+        "fighter_a": "Brian Ortega",
+        "fighter_b": "Renato Moicano",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "brian-ortega-vs-renato-moicano"
+      },
+      {
+        "fighter_a": "Iwo Baraniewski",
+        "fighter_b": "Alonzo Menifield",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "iwo-baraniewski-vs-alonzo-menifield"
+      },
+      {
+        "fighter_a": "Sean Sharaf",
+        "fighter_b": "Gable Steveson",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "sean-sharaf-vs-gable-steveson"
+      },
+      {
+        "fighter_a": "Marlon Vera",
+        "fighter_b": "Charles Jourdain",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "marlon-vera-vs-charles-jourdain"
+      },
+      {
+        "fighter_a": "Tai Tuivasa",
+        "fighter_b": "Robelis Despaigne",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "tai-tuivasa-vs-robelis-despaigne"
+      },
+      {
+        "fighter_a": "Brunno Ferreira",
+        "fighter_b": "Edmen Shahbazyan",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "brunno-ferreira-vs-edmen-shahbazyan"
+      },
+      {
+        "fighter_a": "Giga Chikadze",
+        "fighter_b": "Joanderson Brito",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "giga-chikadze-vs-joanderson-brito"
+      },
+      {
+        "fighter_a": "Eduarda Moura",
+        "fighter_b": "Casey O'Neill",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "eduarda-moura-vs-casey-oneill"
+      },
+      {
+        "fighter_a": "Ryan Gandra",
+        "fighter_b": "Ozzy Diaz",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "ryan-gandra-vs-ozzy-diaz"
+      },
+      {
+        "fighter_a": "JooSang Yoo",
+        "fighter_b": "Michael Aswell Jr.",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "joosang-yoo-vs-michael-aswell-jr"
+      }
+    ],
+    "homepage": true
   },
   {
     "id": 1265,

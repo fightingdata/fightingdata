@@ -5,7 +5,10 @@
 #
 # Tracked renames (auto-recorded on slug change, keyed on event_id):
 /events/ufc-fight-night-2026-09-05/    /events/ufc-fight-night-hooker-vs-parnasse/    301
+/events/ufc-fight-night-2026-09-12/    /events/noche-ufc-rodriguez-vs-silva/    301
 /events/ufc-fight-night-ankalaev-vs-rountree-jr/    /events/ufc-fight-night-ankalaev-vs-guskov/    301
+/events/ufc-fight-night-grasso-vs-shevchenko-2/    /events/noche-ufc-grasso-vs-shevchenko-2/    301
+/events/ufc-fight-night-lopes-vs-silva/    /events/noche-ufc-lopes-vs-silva/    301
 #
 # Legacy 404s resolved from LEGACY_404_REDIRECTS:
 /events/ufc-294/    /events/ufc-294-makhachev-vs-volkanovski-2/    301

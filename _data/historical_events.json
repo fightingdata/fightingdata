@@ -1,5 +1,13 @@
 [
   {
+    "id": 1224,
+    "name": "UFC Fight Night: Gamrot vs. Salkilld",
+    "date": "Saturday, August 8, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-gamrot-vs-salkilld",
+    "year": "2026"
+  },
+  {
     "id": 1221,
     "name": "UFC Fight Night: Medic vs. Rodriguez",
     "date": "Saturday, August 1, 2026",
@@ -329,10 +337,10 @@
   },
   {
     "id": 747,
-    "name": "UFC Fight Night: Lopes vs. Silva",
+    "name": "Noche UFC: Lopes vs. Silva",
     "date": "Saturday, September 13, 2025",
     "location": "San Antonio, Texas, USA",
-    "slug": "ufc-fight-night-lopes-vs-silva",
+    "slug": "noche-ufc-lopes-vs-silva",
     "year": "2025"
   },
   {
@@ -1209,10 +1217,10 @@
   },
   {
     "id": 663,
-    "name": "UFC Fight Night: Grasso vs. Shevchenko 2",
+    "name": "Noche UFC: Grasso vs. Shevchenko 2",
     "date": "Saturday, September 16, 2023",
     "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night-grasso-vs-shevchenko-2",
+    "slug": "noche-ufc-grasso-vs-shevchenko-2",
     "year": "2023"
   },
   {
