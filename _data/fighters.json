@@ -2091,6 +2091,23 @@
     "last_fight_date": "2026-08-01"
   },
   {
+    "id": 3801,
+    "name": "Alexander Soldatkin",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "alexander-soldatkin",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": "2023-09-26"
+  },
+  {
     "id": 3728,
     "name": "Alexander Trevino",
     "nickname": null,
@@ -2295,6 +2312,23 @@
     "last_fight_date": "2026-08-08"
   },
   {
+    "id": 3792,
+    "name": "Alexis Apodaca",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "alexis-apodaca",
+    "career_record": "3-1-0",
+    "career_wins": 3,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 1020,
     "name": "Alexis Davis",
     "nickname": null,
@@ -2327,6 +2361,23 @@
     "career_nc": 0,
     "division": "Women's Bantamweight",
     "last_fight_date": "2015-01-03"
+  },
+  {
+    "id": 3797,
+    "name": "Alexis Miranda",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1999-01-03",
+    "slug": "alexis-miranda",
+    "career_record": "9-2-0",
+    "career_wins": 9,
+    "career_losses": 2,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 2936,
@@ -5761,6 +5812,23 @@
     "career_nc": 1,
     "division": "Welterweight",
     "last_fight_date": "2026-06-06"
+  },
+  {
+    "id": 3791,
+    "name": "Bella Mir",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "2003-01-01",
+    "slug": "bella-mir",
+    "career_record": "4-0-0",
+    "career_wins": 4,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 1918,
@@ -9297,6 +9365,23 @@
     "career_nc": 0,
     "division": "Welterweight",
     "last_fight_date": "2004-10-14"
+  },
+  {
+    "id": 3798,
+    "name": "Carlos Petruzella",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1997-03-29",
+    "slug": "carlos-petruzella",
+    "career_record": "15-1-0",
+    "career_wins": 15,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 304,
@@ -21112,6 +21197,23 @@
     "career_nc": 0,
     "division": "",
     "last_fight_date": "2018-07-31"
+  },
+  {
+    "id": 3794,
+    "name": "Gary Balletto",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1995-01-20",
+    "slug": "gary-balletto",
+    "career_record": "11-3-0",
+    "career_wins": 11,
+    "career_losses": 3,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 2728,
@@ -37791,6 +37893,23 @@
     "last_fight_date": "2015-01-03"
   },
   {
+    "id": 3800,
+    "name": "Louis Jourdain",
+    "nickname": null,
+    "height_cm": 175.3,
+    "reach_cm": 175.3,
+    "stance": "Orthodox",
+    "dob": "1997-03-13",
+    "slug": "louis-jourdain",
+    "career_record": "9-3-0",
+    "career_wins": 9,
+    "career_losses": 3,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": "2025-09-30"
+  },
+  {
     "id": 988,
     "name": "Louis Smolka",
     "nickname": null,
@@ -38928,6 +39047,23 @@
     "career_nc": 1,
     "division": "",
     "last_fight_date": "2011-09-23"
+  },
+  {
+    "id": 3802,
+    "name": "Magno Dias",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "magno-dias",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": "2025-09-30"
   },
   {
     "id": 1548,
@@ -40492,6 +40628,23 @@
     "career_nc": 0,
     "division": "Heavyweight",
     "last_fight_date": "2006-09-23"
+  },
+  {
+    "id": 3793,
+    "name": "Mario Piazzon",
+    "nickname": null,
+    "height_cm": 175.3,
+    "reach_cm": 185.4,
+    "stance": "Orthodox",
+    "dob": "1998-04-06",
+    "slug": "mario-piazzon",
+    "career_record": "8-0-0",
+    "career_wins": 8,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": "2023-09-26"
   },
   {
     "id": 177,
@@ -45847,6 +46000,23 @@
     "career_nc": 0,
     "division": "",
     "last_fight_date": "2013-07-13"
+  },
+  {
+    "id": 3799,
+    "name": "Nicholas Galanti",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1998-06-18",
+    "slug": "nicholas-galanti",
+    "career_record": "7-1-0",
+    "career_wins": 7,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 1499,
@@ -52258,6 +52428,23 @@
     "last_fight_date": "2011-04-01"
   },
   {
+    "id": 3796,
+    "name": "Ronald Humphrey",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "2000-09-20",
+    "slug": "ronald-humphrey",
+    "career_record": "4-0-0",
+    "career_wins": 4,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 2422,
     "name": "Ronald Jhun",
     "nickname": null,
@@ -54602,6 +54789,23 @@
     "career_nc": 0,
     "division": "Welterweight",
     "last_fight_date": "2026-05-09"
+  },
+  {
+    "id": 3795,
+    "name": "Sean Clancy Jr.",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "2002-11-25",
+    "slug": "sean-clancy-jr",
+    "career_record": "8-0-0",
+    "career_wins": 8,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 3747,

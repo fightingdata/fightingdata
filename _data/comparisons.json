@@ -20,14 +20,14 @@
     "weight_class": "Women's Strawweight"
   },
   {
-    "fighter_a": "Charles Johnson",
-    "fighter_b": "Jose Ochoa",
-    "slug": "charles-johnson-vs-jose-ochoa",
-    "url": "/compare/charles-johnson-vs-jose-ochoa/",
+    "fighter_a": "Jalin Turner",
+    "fighter_b": "Kaue Fernandes",
+    "slug": "jalin-turner-vs-kaue-fernandes",
+    "url": "/compare/jalin-turner-vs-kaue-fernandes/",
     "event_name": "UFC 330: Makhachev vs. Machado Garry",
     "event_date": "Saturday, August 15, 2026",
     "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Flyweight"
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Mansur Abdul-Malik",
@@ -60,14 +60,14 @@
     "weight_class": "Welterweight"
   },
   {
-    "fighter_a": "Jalin Turner",
-    "fighter_b": "Kaue Fernandes",
-    "slug": "jalin-turner-vs-kaue-fernandes",
-    "url": "/compare/jalin-turner-vs-kaue-fernandes/",
+    "fighter_a": "Charles Johnson",
+    "fighter_b": "Eduardo Chapolin",
+    "slug": "charles-johnson-vs-eduardo-chapolin",
+    "url": "/compare/charles-johnson-vs-eduardo-chapolin/",
     "event_name": "UFC 330: Makhachev vs. Machado Garry",
     "event_date": "Saturday, August 15, 2026",
     "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Lightweight"
+    "weight_class": "Catch Weight"
   },
   {
     "fighter_a": "Donte Johnson",
@@ -198,6 +198,56 @@
     "event_date": "Saturday, August 22, 2026",
     "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
     "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Bella Mir",
+    "fighter_b": "Alexis Apodaca",
+    "slug": "bella-mir-vs-alexis-apodaca",
+    "url": "/compare/bella-mir-vs-alexis-apodaca/",
+    "event_name": "DWCS 10.3",
+    "event_date": "Tuesday, August 25, 2026",
+    "event_slug": "dwcs-103",
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Guilherme Uriel",
+    "fighter_b": "Mario Piazzon",
+    "slug": "guilherme-uriel-vs-mario-piazzon",
+    "url": "/compare/guilherme-uriel-vs-mario-piazzon/",
+    "event_name": "DWCS 10.3",
+    "event_date": "Tuesday, August 25, 2026",
+    "event_slug": "dwcs-103",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Gary Balletto",
+    "fighter_b": "Sean Clancy Jr.",
+    "slug": "gary-balletto-vs-sean-clancy-jr",
+    "url": "/compare/gary-balletto-vs-sean-clancy-jr/",
+    "event_name": "DWCS 10.3",
+    "event_date": "Tuesday, August 25, 2026",
+    "event_slug": "dwcs-103",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Ronald Humphrey",
+    "fighter_b": "Alexis Miranda",
+    "slug": "ronald-humphrey-vs-alexis-miranda",
+    "url": "/compare/ronald-humphrey-vs-alexis-miranda/",
+    "event_name": "DWCS 10.3",
+    "event_date": "Tuesday, August 25, 2026",
+    "event_slug": "dwcs-103",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Carlos Petruzella",
+    "fighter_b": "Nicholas Galanti",
+    "slug": "carlos-petruzella-vs-nicholas-galanti",
+    "url": "/compare/carlos-petruzella-vs-nicholas-galanti/",
+    "event_name": "DWCS 10.3",
+    "event_date": "Tuesday, August 25, 2026",
+    "event_slug": "dwcs-103",
+    "weight_class": "Middleweight"
   },
   {
     "fighter_a": "Song Yadong",
@@ -608,5 +658,65 @@
     "event_date": "Saturday, October 17, 2026",
     "event_slug": "ufc-fight-night-buckley-vs-malott",
     "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Erin Blanchfield",
+    "fighter_b": "Jasmine Jasudavicius",
+    "slug": "erin-blanchfield-vs-jasmine-jasudavicius",
+    "url": "/compare/erin-blanchfield-vs-jasmine-jasudavicius/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Women's Flyweight"
+  },
+  {
+    "fighter_a": "Marc-Andre Barriault",
+    "fighter_b": "Kyle Daukaus",
+    "slug": "marc-andre-barriault-vs-kyle-daukaus",
+    "url": "/compare/marc-andre-barriault-vs-kyle-daukaus/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Jamey-Lyn Horth",
+    "fighter_b": "Katlyn Cerminara",
+    "slug": "jamey-lyn-horth-vs-katlyn-cerminara",
+    "url": "/compare/jamey-lyn-horth-vs-katlyn-cerminara/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Women's Flyweight"
+  },
+  {
+    "fighter_a": "Jhonata Diniz",
+    "fighter_b": "Tanner Boser",
+    "slug": "jhonata-diniz-vs-tanner-boser",
+    "url": "/compare/jhonata-diniz-vs-tanner-boser/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Melissa Croden",
+    "fighter_b": "Chelsea Chandler",
+    "slug": "melissa-croden-vs-chelsea-chandler",
+    "url": "/compare/melissa-croden-vs-chelsea-chandler/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Timmy Cuamba",
+    "fighter_b": "Louis Jourdain",
+    "slug": "timmy-cuamba-vs-louis-jourdain",
+    "url": "/compare/timmy-cuamba-vs-louis-jourdain/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Bantamweight"
   }
 ]

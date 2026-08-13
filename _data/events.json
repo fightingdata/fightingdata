@@ -21,11 +21,11 @@
         "slug": "gillian-robertson-vs-mackenzie-dern"
       },
       {
-        "fighter_a": "Charles Johnson",
-        "fighter_b": "Jose Ochoa",
-        "weight_class": "Flyweight",
+        "fighter_a": "Jalin Turner",
+        "fighter_b": "Kaue Fernandes",
+        "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "charles-johnson-vs-jose-ochoa"
+        "slug": "jalin-turner-vs-kaue-fernandes"
       },
       {
         "fighter_a": "Mansur Abdul-Malik",
@@ -49,11 +49,11 @@
         "slug": "chidi-njokuani-vs-joel-alvarez"
       },
       {
-        "fighter_a": "Jalin Turner",
-        "fighter_b": "Kaue Fernandes",
-        "weight_class": "Lightweight",
+        "fighter_a": "Charles Johnson",
+        "fighter_b": "Eduardo Chapolin",
+        "weight_class": "Catch Weight",
         "is_title": false,
-        "slug": "jalin-turner-vs-kaue-fernandes"
+        "slug": "charles-johnson-vs-eduardo-chapolin"
       },
       {
         "fighter_a": "Donte Johnson",
@@ -165,7 +165,43 @@
     "date": "Tuesday, August 25, 2026",
     "location": "Las Vegas, Nevada, USA",
     "slug": "dwcs-103",
-    "matchups": [],
+    "matchups": [
+      {
+        "fighter_a": "Bella Mir",
+        "fighter_b": "Alexis Apodaca",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "bella-mir-vs-alexis-apodaca"
+      },
+      {
+        "fighter_a": "Guilherme Uriel",
+        "fighter_b": "Mario Piazzon",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "guilherme-uriel-vs-mario-piazzon"
+      },
+      {
+        "fighter_a": "Gary Balletto",
+        "fighter_b": "Sean Clancy Jr.",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "gary-balletto-vs-sean-clancy-jr"
+      },
+      {
+        "fighter_a": "Ronald Humphrey",
+        "fighter_b": "Alexis Miranda",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "ronald-humphrey-vs-alexis-miranda"
+      },
+      {
+        "fighter_a": "Carlos Petruzella",
+        "fighter_b": "Nicholas Galanti",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "carlos-petruzella-vs-nicholas-galanti"
+      }
+    ],
     "homepage": false
   },
   {
@@ -501,8 +537,50 @@
         "weight_class": "Lightweight",
         "is_title": false,
         "slug": "nate-landwehr-vs-mandel-nallo"
+      },
+      {
+        "fighter_a": "Erin Blanchfield",
+        "fighter_b": "Jasmine Jasudavicius",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "erin-blanchfield-vs-jasmine-jasudavicius"
+      },
+      {
+        "fighter_a": "Marc-Andre Barriault",
+        "fighter_b": "Kyle Daukaus",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "marc-andre-barriault-vs-kyle-daukaus"
+      },
+      {
+        "fighter_a": "Jamey-Lyn Horth",
+        "fighter_b": "Katlyn Cerminara",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "jamey-lyn-horth-vs-katlyn-cerminara"
+      },
+      {
+        "fighter_a": "Jhonata Diniz",
+        "fighter_b": "Tanner Boser",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "jhonata-diniz-vs-tanner-boser"
+      },
+      {
+        "fighter_a": "Melissa Croden",
+        "fighter_b": "Chelsea Chandler",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "melissa-croden-vs-chelsea-chandler"
+      },
+      {
+        "fighter_a": "Timmy Cuamba",
+        "fighter_b": "Louis Jourdain",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "timmy-cuamba-vs-louis-jourdain"
       }
     ],
-    "homepage": false
+    "homepage": true
   }
 ]
