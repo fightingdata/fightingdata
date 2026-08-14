@@ -292,6 +292,13 @@
         "slug": "dan-hooker-vs-salahdine-parnasse"
       },
       {
+        "fighter_a": "Axel Sola",
+        "fighter_b": "Fares Ziam",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "axel-sola-vs-fares-ziam"
+      },
+      {
         "fighter_a": "Michael Page",
         "fighter_b": "Nursulton Ruziboev",
         "weight_class": "Middleweight",
@@ -304,6 +311,13 @@
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "morgan-charriere-vs-felipe-lima"
+      },
+      {
+        "fighter_a": "Muhammad Naimov",
+        "fighter_b": "Losene Keita",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "muhammad-naimov-vs-losene-keita"
       },
       {
         "fighter_a": "Mario Pinto",
@@ -320,11 +334,25 @@
         "slug": "kurtis-campbell-vs-trevor-peek"
       },
       {
+        "fighter_a": "Oumar Sy",
+        "fighter_b": "Modestas Bukauskas",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "oumar-sy-vs-modestas-bukauskas"
+      },
+      {
         "fighter_a": "Nathaniel Wood",
         "fighter_b": "Mairon Santos",
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "nathaniel-wood-vs-mairon-santos"
+      },
+      {
+        "fighter_a": "Klaudia Sygula",
+        "fighter_b": "Nora Cornolle",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "klaudia-sygula-vs-nora-cornolle"
       },
       {
         "fighter_a": "Matthieu Duclos",

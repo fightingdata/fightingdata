@@ -350,6 +350,16 @@
     "weight_class": "Lightweight"
   },
   {
+    "fighter_a": "Axel Sola",
+    "fighter_b": "Fares Ziam",
+    "slug": "axel-sola-vs-fares-ziam",
+    "url": "/compare/axel-sola-vs-fares-ziam/",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Michael Page",
     "fighter_b": "Nursulton Ruziboev",
     "slug": "michael-page-vs-nursulton-ruziboev",
@@ -364,6 +374,16 @@
     "fighter_b": "Felipe Lima",
     "slug": "morgan-charriere-vs-felipe-lima",
     "url": "/compare/morgan-charriere-vs-felipe-lima/",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Muhammad Naimov",
+    "fighter_b": "Losene Keita",
+    "slug": "muhammad-naimov-vs-losene-keita",
+    "url": "/compare/muhammad-naimov-vs-losene-keita/",
     "event_name": "UFC Fight Night: Hooker vs. Parnasse",
     "event_date": "Saturday, September 5, 2026",
     "event_slug": "ufc-fight-night-hooker-vs-parnasse",
@@ -390,6 +410,16 @@
     "weight_class": "Featherweight"
   },
   {
+    "fighter_a": "Oumar Sy",
+    "fighter_b": "Modestas Bukauskas",
+    "slug": "oumar-sy-vs-modestas-bukauskas",
+    "url": "/compare/oumar-sy-vs-modestas-bukauskas/",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
+    "weight_class": "Light Heavyweight"
+  },
+  {
     "fighter_a": "Nathaniel Wood",
     "fighter_b": "Mairon Santos",
     "slug": "nathaniel-wood-vs-mairon-santos",
@@ -398,6 +428,16 @@
     "event_date": "Saturday, September 5, 2026",
     "event_slug": "ufc-fight-night-hooker-vs-parnasse",
     "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Klaudia Sygula",
+    "fighter_b": "Nora Cornolle",
+    "slug": "klaudia-sygula-vs-nora-cornolle",
+    "url": "/compare/klaudia-sygula-vs-nora-cornolle/",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
+    "weight_class": "Women's Bantamweight"
   },
   {
     "fighter_a": "Matthieu Duclos",
