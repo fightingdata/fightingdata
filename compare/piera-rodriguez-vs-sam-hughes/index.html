@@ -3,204 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piera Rodriguez vs Sam Hughes Fight Analysis | FightingData</title>
-    <meta name="description" content="Piera Rodriguez vs Sam Hughes head-to-head stats, career comparison, common opponents, and round-by-round breakdowns.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-               background: #f5f5f5; color: #111; line-height: 1.6; }
-        a { color: #d62828; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
-        h1 { text-align: center; color: #111; font-size: 1.8rem; font-weight: 900;
-             text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 0; }
-        h2 { color: #111; margin-top: 1.5rem; margin-bottom: 0.75rem;
-             font-size: 0.85rem; font-weight: 800; text-transform: uppercase;
-             letter-spacing: 0.5px; padding-bottom: 8px; border-bottom: 2px solid #111; }
-
-        .fighter-header { display: flex; justify-content: center; align-items: flex-start;
-            margin: 1rem 0; padding: 1.5rem 0; background: #fff;
-            border: 1px solid #e2e2e2; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-        .fighter-info { flex: 1; text-align: center; }
-        .fighter-info h3 { margin: 0; color: #111; font-size: 1.6rem; font-weight: 900;
-            text-transform: uppercase; letter-spacing: -0.5px; }
-        .fighter-records { font-size: 0.85rem; color: #555; margin-top: 6px; }
-        .fighter-records strong { color: #111; font-family: 'SF Mono', Menlo, monospace; font-size: 0.95rem; }
-        .vs-divider { display: flex; flex-direction: column; align-items: center;
-            padding: 0 16px; flex-shrink: 0; }
-        .vs-weight-class { display: inline-block; padding: 2px 10px; border-radius: 3px;
-            font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
-            color: #555; border: 1px solid #e2e2e2; margin-bottom: 6px; }
-        .vs-color-bar { display: flex; height: 3px; width: 160px; border-radius: 2px; overflow: hidden; }
-        .vs-color-bar .red { flex: 1; background: #d62828; }
-        .vs-color-bar .blue { flex: 1; background: #1d4ed8; }
-        .vs-text { font-size: 0.7rem; color: #999; font-weight: 700; margin-top: 6px; }
-        .record-label { display: none; }
-        .record-pro, .record-ufc { display: none; }
-
-        .bio-section { display: flex; justify-content: center; gap: 0; margin: 0 0 1.5rem;
-            background: #fff; border: 1px solid #e2e2e2; border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 14px 0; }
-        .bio-card { display: none; }
-        .bio-divider { display: none; }
-        .bio-compare-item { flex: 1; text-align: center; padding: 0 12px;
-            border-right: 1px solid #f0f0f0; }
-        .bio-compare-item:last-child { border-right: none; }
-        .bio-compare-label { font-size: 0.6rem; color: #999; text-transform: uppercase;
-            letter-spacing: 0.5px; margin-bottom: 4px; }
-        .bio-compare-values { display: flex; justify-content: center; gap: 12px; }
-        .bio-compare-values span { font-family: 'SF Mono', Menlo, monospace;
-            font-size: 0.8rem; font-weight: 600; color: #111; }
-        .bio-compare-values .sep { color: #ddd; font-weight: 400; }
-
-        table { width: 100%; border-collapse: collapse; background: #fff;
-                margin: 0.5rem 0; border-radius: 6px; overflow: hidden;
-                border: 1px solid #e2e2e2; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-        th, td { padding: 8px 16px; text-align: left; border-bottom: 1px solid #f0f0f0; }
-        th { background: #fafafa; color: #111; font-weight: 700; font-size: 0.7rem;
-             text-transform: uppercase; letter-spacing: 0.5px; }
-        th.stat-a { color: #d62828; text-align: center; font-size: 0.75rem; }
-        th.stat-b { color: #1d4ed8; text-align: center; font-size: 0.75rem; }
-        tr:hover { background: #fafafa; }
-        .stat-name { font-weight: 600; width: 40%; color: #111; font-size: 0.85rem; }
-        .stat-a, .stat-b { width: 20%; text-align: center;
-            font-family: 'SF Mono', Menlo, monospace; color: #111; font-size: 0.85rem; }
-        .edge { width: 10%; text-align: center; font-weight: bold; font-size: 0.85rem; }
-        .edge-a { color: #d62828; }
-        .edge-b { color: #1d4ed8; }
-        .edge-even { color: #ccc; }
-        .section-header { background: #f5f5f5; color: #999; padding: 6px 16px;
-            font-weight: 800; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; }
-        .edge-summary-row td { border-top: 2px solid #e2e2e2; background: #fafafa; font-weight: 700; }
-
-        .sample-warning { background: #fff7ed; border: 1px solid #fed7aa;
-            color: #c2410c; padding: 10px 15px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
-        .debut-disclaimer { background: #eff6ff; border: 1px solid #bfdbfe;
-            color: #1d4ed8; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 14px; line-height: 1.5; }
-        .debut-disclaimer strong { color: #1d4ed8; }
-
-        .narrative { background: #fff; padding: 1.25rem 1.5rem; border-radius: 6px;
-            margin: 0.5rem 0; border: 1px solid #e2e2e2; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-            line-height: 1.7; color: #555; font-size: 0.85rem; }
-        .narrative p { margin-bottom: 0.6rem; }
-        .narrative p:last-child { margin-bottom: 0; }
-        .narrative strong { color: #111; }
-
-        .last3-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 0.5rem 0; }
-        .last3-name { color: #111; font-size: 0.85rem; font-weight: 800;
-            margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e2e2; }
-        .fight-card { background: #fff; border: 1px solid #e2e2e2;
-            border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-        .fight-card-header { padding: 0.75rem 1rem; cursor: pointer; user-select: none;
-            position: relative; border-left: 3px solid #e2e2e2; }
-        .fight-card-header:hover { background: #fafafa; }
-        .fight-card-header.win-border { border-left-color: #15803d; }
-        .fight-card-header.loss-border { border-left-color: #d62828; }
-        .fight-result-badge { display: inline-block; font-size: 0.6rem; font-weight: 700;
-            padding: 2px 8px; border-radius: 3px; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
-        .result-win  { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
-        .result-loss { background: #fff5f5; color: #d62828; border: 1px solid #fecaca; }
-        .result-nc   { background: #f5f5f5; color: #999; border: 1px solid #e2e2e2; }
-        .fight-opponent { font-weight: 700; font-size: 0.95rem; color: #111; margin-bottom: 0.15rem; }
-        .fight-event-label { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.72rem;
-            color: #555; text-align: right; max-width: 50%; }
-        .fight-meta { font-size: 0.78rem; color: #777; margin-bottom: 0.3rem; }
-        .fight-totals-block { margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.15rem; }
-        .totals-line { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; flex-wrap: wrap; }
-        .totals-name { min-width: 130px; font-weight: 600; font-size: 0.78rem; }
-        .totals-name.featured { color: #111; }
-        .totals-name.opponent { color: #777; }
-        .totals-stat { color: #111; font-family: 'SF Mono', Menlo, monospace; font-size: 0.75rem; }
-        .totals-pct { color: #777; font-size: 0.73rem; }
-        .totals-kd { color: #c2410c; font-size: 0.73rem; font-weight: 600; }
-        .expand-toggle { font-size: 0.72rem; color: #d62828; margin-top: 0.2rem; font-weight: 600; }
-        .rounds-detail { border-top: 1px solid #e2e2e2; }
-        .rounds-table { width: 100%; border-collapse: collapse; background: #fafafa;
-            margin: 0; border-radius: 0; border: none; box-shadow: none; }
-        .rounds-table th { background: #fafafa; color: #999; font-size: 0.65rem;
-            padding: 6px 10px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .rounds-table td { padding: 4px 10px; font-size: 0.78rem; color: #111;
-            font-family: 'SF Mono', Menlo, monospace; border-bottom: none; }
-        .rounds-table tr:hover { background: #f0f0f0; }
-        .round-num { color: #555; font-weight: 700; }
-        .fighter-label { color: #777; font-size: 0.73rem; font-family: inherit; }
-        .featured-row td { color: #111; }
-        .featured-row .fighter-label { color: #d62828; font-weight: 600; }
-        .opponent-row td { color: #777; }
-        .round-spacer td { padding: 2px 0; background: #fafafa; border-bottom: 1px solid #e2e2e2; }
-        .no-fight-data { color: #777; font-size: 0.9rem; padding: 1rem 0; }
-
-        .common-opponents { margin: 0.5rem 0; }
-        .no-common { color: #777; font-size: 0.9rem; padding: 1rem;
-            background: #fff; border: 1px solid #e2e2e2; border-radius: 6px; }
-        .co-block { margin-bottom: 1.5rem; }
-        .co-opponent-name { font-size: 1rem; font-weight: 700; color: #111;
-            margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e2e2; }
-        .co-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        .co-fighter-card { margin-bottom: 0; }
-        .co-fighter-name-label { font-size: 0.85rem; font-weight: 700; color: #111; margin-bottom: 0.3rem; }
-
-        .limited-data-banner { background: #fff7ed; border: 1px solid #fed7aa; color: #c2410c;
-            padding: 1.25rem 1.5rem; border-radius: 6px; margin: 1.5rem 0;
-            font-size: 0.9rem; line-height: 1.5; text-align: center; }
-        .limited-data-banner strong { color: #c2410c; display: block; font-size: 1rem; margin-bottom: 0.5rem; }
-
-        .timestamp { text-align: center; color: #999; font-size: 0.7rem;
-            margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e2e2; }
-        .site-footer { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem;
-            text-align: center; color: #999; font-size: 0.8rem; border-top: 1px solid #e2e2e2; }
-        .site-footer a { color: #d62828; text-decoration: none; }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 1.3rem; }
-            .fighter-info h3 { font-size: 1.1rem; }
-            .fighter-header { flex-direction: column; gap: 1rem; align-items: center; }
-            .vs-divider { padding: 8px 0; }
-            .stat-name { width: 35%; font-size: 0.75rem; }
-            .stat-a, .stat-b { width: 22%; font-size: 0.75rem; }
-            .edge { width: 10%; font-size: 0.7rem; }
-            .last3-grid { grid-template-columns: 1fr; }
-            .bio-section { flex-direction: column; padding: 10px 0; }
-            .bio-compare-item { border-right: none; border-bottom: 1px solid #f0f0f0; padding: 8px 12px; }
-            .co-grid { grid-template-columns: 1fr; }
-        }
-</style>
+    <title>Piera Rodriguez vs Sam Hughes — Stats, Record & Matchup Breakdown | FightingData</title>
+    <meta name="description" content="Head-to-head UFC stats for Piera Rodriguez vs Sam Hughes: significant strikes, takedowns, common opponents, and round-by-round Fight Dynamics.">
+    <link rel="stylesheet" href="/assets/css/fd.css?v=97ee96a1">
+    <meta property="og:title" content="Piera Rodriguez vs Sam Hughes — Stats & Matchup Breakdown">
+    <meta property="og:description" content="Head-to-head stats, Fight Dynamics and career analytics for Piera Rodriguez vs Sam Hughes.">
+    <meta property="og:url" content="https://fightingdata.com/compare/piera-rodriguez-vs-sam-hughes/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://fightingdata.com/assets/share/default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://fightingdata.com/compare/piera-rodriguez-vs-sam-hughes/">
+    <script defer data-domain="fightingdata.com" src="https://plausible.io/js/script.js"></script>
 </head>
-<body>
-        <header style="background:#111;position:sticky;top:0;z-index:90;">
-        <div style="max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:52px;">
-            <a href="/" style="font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.5px;">FIGHTING<span style="color:#d62828;">DATA</span></a>
-            <nav style="display:flex;gap:0;">
-                <a href="/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;font-weight:500;">Home</a>
-                <a href="/events/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;font-weight:500;">Events</a>
-                <a href="/fighters/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;font-weight:500;">Fighters</a>
-                <a href="/about/" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:16px 18px;font-size:13px;font-weight:500;">About</a>
+<body class="fd-compare">
+        <header class="site-header">
+        <div class="site-header-inner">
+            <a href="/" class="site-logo">FIGHTING<span style="color:#d62828;">DATA</span></a>
+            <nav class="site-nav-desktop">
+                <a href="/" class="site-nav-link">Home</a>
+                <a href="/articles/" class="site-nav-link">Articles</a>
+                <a href="/events/" class="site-nav-link">Events</a>
+                <a href="/divisions/" class="site-nav-link">Divisions</a>
+                <a href="/fighters/" class="site-nav-link">Fighters</a>
+                <a href="/about/" class="site-nav-link">About</a>
             </nav>
+            <button class="site-nav-toggle" onclick="document.querySelector('.site-nav-mobile').classList.toggle('open');" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+        <nav class="site-nav-mobile">
+            <a href="/" class="site-nav-link">Home</a>
+            <a href="/articles/" class="site-nav-link">Articles</a>
+            <a href="/events/" class="site-nav-link">Events</a>
+            <a href="/divisions/" class="site-nav-link">Divisions</a>
+            <a href="/fighters/" class="site-nav-link">Fighters</a>
+            <a href="/about/" class="site-nav-link">About</a>
+        </nav>
     </header>
-    <div style="max-width:1200px;margin:0 auto;padding:0.75rem 1rem 0;"><a href="/events/ufc-fight-night-emmett-vs-vallejos/" style="color:#9ca3af;text-decoration:none;font-size:0.875rem;">&#8592; Back to UFC Fight Night: Emmett vs. Vallejos</a></div>
     <div class="container">
         <h1>Piera Rodriguez vs Sam Hughes</h1>
 
         <div class="fighter-header">
             <div class="fighter-info">
-                <h3>Piera Rodriguez</h3>
-                <div class="fighter-records">Pro <strong>11-2-0</strong> &nbsp;|&nbsp; UFC <strong>4-2-0</strong></div>
+                <h3><a href="/fighters/piera-rodriguez/" class="fighter-name-link">Piera Rodriguez</a></h3>
+                <div class="fighter-records">Pro <strong>12-2-0</strong> &nbsp;|&nbsp; UFC <strong>5-2-0</strong></div>
             </div>
             <div class="vs-divider">
-                <div class="vs-weight-class">Women's Strawweight</div>
+                <div class="vs-weight-class"></div>
                 <div class="vs-color-bar"><div class="red"></div><div class="blue"></div></div>
                 <div class="vs-text">VS</div>
             </div>
             <div class="fighter-info">
-                <h3>Sam Hughes</h3>
-                <div class="fighter-records">Pro <strong>11-6-0</strong> &nbsp;|&nbsp; UFC <strong>6-5-0</strong></div>
+                <h3><a href="/fighters/sam-hughes/" class="fighter-name-link">Sam Hughes</a></h3>
+                <div class="fighter-records">Pro <strong>11-7-0</strong> &nbsp;|&nbsp; UFC <strong>6-6-0</strong></div>
             </div>
         </div>
 
         
-        <div class="bio-section"><div class="bio-compare-item"><div class="bio-compare-label">Age</div><div class="bio-compare-values"><span>33</span><span class="sep">|</span><span>33</span></div></div><div class="bio-compare-item"><div class="bio-compare-label">Height</div><div class="bio-compare-values"><span>5'3"</span><span class="sep">|</span><span>5'5"</span></div></div><div class="bio-compare-item"><div class="bio-compare-label">Reach</div><div class="bio-compare-values"><span>63"</span><span class="sep">|</span><span>64"</span></div></div><div class="bio-compare-item"><div class="bio-compare-label">Stance</div><div class="bio-compare-values"><span>Orthodox</span><span class="sep">|</span><span>Orthodox</span></div></div></div>
+        <div class="bio-section"><div class="bio-compare-item"><div class="bio-compare-label">Age</div><div class="bio-compare-values"><span>33</span><span class="sep">|</span><span>34</span></div></div><div class="bio-compare-item"><div class="bio-compare-label">Height</div><div class="bio-compare-values"><span>5'3"</span><span class="sep">|</span><span>5'5"</span></div></div><div class="bio-compare-item"><div class="bio-compare-label">Reach</div><div class="bio-compare-values"><span>63"</span><span class="sep">|</span><span>64"</span></div></div><div class="bio-compare-item"><div class="bio-compare-label">Stance</div><div class="bio-compare-values"><span>Orthodox</span><span class="sep">|</span><span>Orthodox</span></div></div></div>
 
         
 
@@ -215,27 +75,71 @@
                 </tr>
             </thead>
             <tbody><tr><td colspan="4" class="section-header">Striking</td></tr>
-<tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">49.5%</td><td class="stat-b">46.9%</td><td class="edge edge-even">—</td></tr>
-<tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">3.7</td><td class="stat-b">4.3</td><td class="edge edge-even">—</td></tr>
-<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">2.9</td><td class="stat-b">4.4</td><td class="edge edge-a">◄</td></tr>
-<tr><td class="stat-name">Strike Differential</td><td class="stat-a">0.8/min</td><td class="stat-b">-0.1/min</td><td class="edge edge-a">◄</td></tr>
+<tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">48.6%</td><td class="stat-b">47.5%</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">4.2</td><td class="stat-b">4.4</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">3.2</td><td class="stat-b">4.7</td><td class="edge edge-a">◄</td></tr>
+<tr><td class="stat-name">Strike Differential</td><td class="stat-a">1.0/min</td><td class="stat-b">-0.3/min</td><td class="edge edge-a">◄</td></tr>
 <tr><td colspan="4" class="section-header">Grappling</td></tr>
-<tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">65.8%</td><td class="stat-b">35.3%</td><td class="edge edge-a">◄</td></tr>
-<tr><td class="stat-name">Takedown Defense</td><td class="stat-a">73.3%</td><td class="stat-b">60.9%</td><td class="edge edge-a">◄</td></tr>
-<tr><td class="stat-name">Takedowns Landed/15min</td><td class="stat-a">4.8</td><td class="stat-b">1.2</td><td class="edge edge-a">◄</td></tr>
+<tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">59.1%</td><td class="stat-b">29.3%</td><td class="edge edge-a">◄</td></tr>
+<tr><td class="stat-name">Takedown Defense</td><td class="stat-a">81.8%</td><td class="stat-b">63.5%</td><td class="edge edge-a">◄</td></tr>
+<tr><td class="stat-name">Takedowns Landed/15min</td><td class="stat-a">4.2</td><td class="stat-b">1.1</td><td class="edge edge-a">◄</td></tr>
 <tr><td class="stat-name">Submission Attempts/15min</td><td class="stat-a">0.0</td><td class="stat-b">0.2</td><td class="edge edge-even">—</td></tr>
-<tr><td class="stat-name">Control Time/15min</td><td class="stat-a">5:12</td><td class="stat-b">4:25</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Control Time/15min</td><td class="stat-a">4:46</td><td class="stat-b">4:02</td><td class="edge edge-even">—</td></tr>
 <tr><td colspan="4" class="section-header">Finishing Ability</td></tr>
 <tr><td class="stat-name">KO/TKO % of Wins</td><td class="stat-a">0.0%</td><td class="stat-b">16.7%</td><td class="edge edge-even">—</td></tr>
 <tr><td class="stat-name">Submission % of Wins</td><td class="stat-a">0.0%</td><td class="stat-b">16.7%</td><td class="edge edge-even">—</td></tr>
 <tr><td class="stat-name">Decision % of Wins</td><td class="stat-a">100.0%</td><td class="stat-b">66.7%</td><td class="edge edge-even">—</td></tr>
-<tr><td class="stat-name">Avg Fight Time</td><td class="stat-a">12:56</td><td class="stat-b">13:15</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Avg Fight Time</td><td class="stat-a">13:13</td><td class="stat-b">13:24</td><td class="edge edge-even">—</td></tr>
 <tr><td colspan="4" class="section-header">Secondary Stats</td></tr>
-<tr><td class="stat-name">Knockdowns/15min</td><td class="stat-a">0.0</td><td class="stat-b">0.0</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Knockdowns/15min</td><td class="stat-a">0.2</td><td class="stat-b">0.0</td><td class="edge edge-even">—</td></tr>
 <tr><td class="stat-name">Reversals/15min</td><td class="stat-a">0.0</td><td class="stat-b">0.1</td><td class="edge edge-even">—</td></tr>
 <tr class="edge-summary-row"><td class="stat-name" style="color:#9ca3af;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;">Edges</td><td class="stat-a" style="color:#16a34a;font-weight:700;">5</td><td class="stat-b" style="color:#dc2626;font-weight:700;">0</td><td class="edge edge-even" style="font-size:0.85rem;">4 even</td></tr>
 </tbody>
         </table>
+
+        
+        <h2>Fight Dynamics</h2>
+        <div class="fd-vs" data-slug-a="piera-rodriguez" data-slug-b="sam-hughes"
+             data-name-a="Piera Rodriguez" data-name-b="Sam Hughes" data-division="">
+            <div class="fd-chart-card">
+                <div class="fd-chart-title">Career Striking Volume</div>
+                <div class="fd-chart-sub"><span class="fd-legend-chip" style="background:var(--fd-red);"></span>Piera Rodriguez
+                    &nbsp;&nbsp;<span class="fd-legend-chip" style="background:var(--fd-blue);"></span>Sam Hughes
+                    &nbsp;&nbsp;<span class="fd-legend-chip" style="background:none;border-top:2px dashed var(--fd-faint);height:0;width:14px;"></span>League median</div>
+                <div class="fd-chart"><canvas data-chart="dual-curve" role="img" aria-label="Cumulative significant strikes landed over career fight minutes for both fighters"></canvas></div>
+            </div>
+            <table>
+                <tr><th>Statistic</th><th class="stat-a">Piera Rodriguez</th><th class="stat-b">Sam Hughes</th><th>Edge</th></tr>
+                <tr><td colspan="4" class="section-header">Fight Shape</td></tr>
+<tr><td class="stat-name">Fight Completion Rate</td><td class="stat-a">88.2%</td><td class="stat-b">89.4%</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">Avg Fight Time</td><td class="stat-a">13:13</td><td class="stat-b">13:24</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">% Fights Inside the Distance</td><td class="stat-a">28.6%</td><td class="stat-b">25.0%</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td colspan="4" class="section-header">Strength of UFC Schedule</td></tr>
+<tr><td class="stat-name">Opponent UFC Win % (all)</td><td class="stat-a">54.8%</td><td class="stat-b">65.7%</td><td class="edge edge-b">&#9654;</td></tr>
+<tr><td class="stat-name">Opponent UFC Record (all)</td><td class="stat-a">23-19 (54.8%)</td><td class="stat-b">23-12 (65.7%)</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">Opponent Record (among wins)</td><td class="stat-a">13-12 (52.0%)</td><td class="stat-b">6-3 (66.7%)</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td colspan="4" class="section-header">Positional Profile</td></tr>
+<tr><td class="stat-name">% Time at Distance (approx.)</td><td class="stat-a">53.6%</td><td class="stat-b">61.8%</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">% Time in Control</td><td class="stat-a">31.9%</td><td class="stat-b">27.0%</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">% Time Controlled</td><td class="stat-a">14.5%</td><td class="stat-b">11.2%</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">Control Rate of Clinch/Ground Time</td><td class="stat-a">68.7%</td><td class="stat-b">70.7%</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td colspan="4" class="section-header">Distance Striking</td></tr>
+<tr><td class="stat-name">Distance Sig. Landed / Min</td><td class="stat-a">4.97</td><td class="stat-b">5.46</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">Distance Sig. Absorbed / Min</td><td class="stat-a">4.61</td><td class="stat-b">5.91</td><td class="edge edge-a">&#9664;</td></tr>
+<tr><td class="stat-name">Distance Striking Differential / Min</td><td class="stat-a">+0.36</td><td class="stat-b">-0.45</td><td class="edge edge-a">&#9664;</td></tr>
+<tr><td class="stat-name">Distance Strike Accuracy</td><td class="stat-a">39.5%</td><td class="stat-b">42.7%</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">Distance Strike Defense</td><td class="stat-a">56.5%</td><td class="stat-b">63.1%</td><td class="edge edge-b">&#9654;</td></tr>
+<tr><td colspan="4" class="section-header">Power &amp; Pressure</td></tr>
+<tr><td class="stat-name">KDs per 100 Power Strikes</td><td class="stat-a">0.31</td><td class="stat-b">0.00</td><td class="edge edge-a">&#9664;</td></tr>
+<tr><td class="stat-name">Knocked Down per 100 Absorbed</td><td class="stat-a">0.00</td><td class="stat-b">0.16</td><td class="edge edge-a">&#9664;</td></tr>
+<tr><td class="stat-name">TD Attempts per 5 Distance Min</td><td class="stat-a">4.43</td><td class="stat-b">2.06</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">TDs Faced per 5 Distance Min</td><td class="stat-a">2.22</td><td class="stat-b">2.61</td><td class="edge edge-even">&mdash;</td></tr>
+<tr><td class="stat-name">Fade Index (R3 / R1 pace)</td><td class="stat-a">1.05</td><td class="stat-b">1.30</td><td class="edge edge-even">&mdash;</td></tr>
+
+            </table>
+            <div class="fd-chart-note">UFC fights only. Metrics with insufficient data show "&mdash;" and award no edge.
+                <a href="/methodology/">Methodology &rarr;</a></div>
+        </div>
 
         
     <h2>Last 5 Fights (Averages)</h2>
@@ -248,13 +152,13 @@
                 <th class="edge">Edge</th>
             </tr>
         </thead>
-        <tbody><tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">48.2%</td><td class="stat-b">46.7%</td><td class="edge edge-even">—</td></tr>
-<tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">3.8</td><td class="stat-b">4.8</td><td class="edge edge-b">►</td></tr>
-<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">3.1</td><td class="stat-b">3.9</td><td class="edge edge-a">◄</td></tr>
-<tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">64.7%</td><td class="stat-b">33.3%</td><td class="edge edge-a">◄</td></tr>
-<tr><td class="stat-name">Takedown Defense</td><td class="stat-a">71.4%</td><td class="stat-b">73.9%</td><td class="edge edge-even">—</td></tr>
-<tr><td class="stat-name">Control Time/Fight</td><td class="stat-a">4:20</td><td class="stat-b">3:52</td><td class="edge edge-even">—</td></tr>
-<tr class="edge-summary-row"><td class="stat-name" style="color:#9ca3af;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;">Edges</td><td class="stat-a" style="color:#16a34a;font-weight:700;">2</td><td class="stat-b" style="color:#dc2626;font-weight:700;">1</td><td class="edge edge-even" style="font-size:0.85rem;">3 even</td></tr>
+        <tbody><tr><td class="stat-name">Sig. Strike Accuracy</td><td class="stat-a">46.3%</td><td class="stat-b">48.4%</td><td class="edge edge-even">—</td></tr>
+<tr><td class="stat-name">Sig. Strikes Landed/min</td><td class="stat-a">4.1</td><td class="stat-b">5.3</td><td class="edge edge-b">►</td></tr>
+<tr><td class="stat-name">Sig. Strikes Absorbed/min</td><td class="stat-a">3.2</td><td class="stat-b">5.3</td><td class="edge edge-a">◄</td></tr>
+<tr><td class="stat-name">Takedown Accuracy</td><td class="stat-a">62.1%</td><td class="stat-b">20.8%</td><td class="edge edge-a">◄</td></tr>
+<tr><td class="stat-name">Takedown Defense</td><td class="stat-a">84.6%</td><td class="stat-b">73.7%</td><td class="edge edge-a">◄</td></tr>
+<tr><td class="stat-name">Control Time/Fight</td><td class="stat-a">4:28</td><td class="stat-b">2:32</td><td class="edge edge-a">◄</td></tr>
+<tr class="edge-summary-row"><td class="stat-name" style="color:#9ca3af;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;">Edges</td><td class="stat-a" style="color:#16a34a;font-weight:700;">4</td><td class="stat-b" style="color:#dc2626;font-weight:700;">1</td><td class="edge edge-even" style="font-size:0.85rem;">1 even</td></tr>
 </tbody>
     </table>
 
@@ -264,12 +168,43 @@
         <div class="fight-card">
             <div class="fight-card-header win-border" onclick="toggleRounds('a-f0')">
                 <div class="fight-result-badge result-win">WIN</div>
-                <div class="fight-opponent">vs. Ketlen Souza</div>
-                <div class="fight-event-label"><a href="/events/ufc-fight-night-taira-vs-park/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Taira vs. Park</a> &bull; Aug 2025</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
-                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Piera Rodriguez</span><span class="totals-stat">64/150</span><span class="totals-pct">43%</span><span class="totals-stat">TD 7/10</span><span class="totals-stat">Ctrl 4:36</span></div><div class="totals-line"><span class="totals-name opponent">Ketlen Souza</span><span class="totals-stat">56/103</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:41</span></div></div>
+                <div class="fight-opponent">vs. Sam Hughes</div>
+                <div class="fight-event-label"><a href="/events/ufc-fight-night-emmett-vs-vallejos/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Emmett vs. Vallejos</a> &bull; Mar 2026<span class="fight-division-group"><span class="fight-division">Women's Strawweight</span></span></div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Piera Rodriguez</span><span class="totals-stat">107/231</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:35</span></div><div class="totals-line"><span class="totals-name opponent">Sam Hughes</span><span class="totals-stat">77/144</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 0:22</span></div></div>
                 <div class="expand-toggle" id="toggle-a-f0">&#9660; Rounds</div>
             </div><div class="rounds-detail" id="rounds-a-f0" style="display:none;">
+                <table class="rounds-table">
+                    <thead>
+                        <tr>
+                            <th>Rnd</th>
+                            <th>Fighter</th>
+                            <th>Sig Str</th>
+                            <th>Acc</th>
+                            <th>TD</th>
+                            <th>Ctrl</th>
+                            <th>KD</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Piera Rodriguez</td><td>40/85</td><td>47%</td><td>0/3</td><td>1:04</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sam Hughes</td><td>33/43</td><td>77%</td><td>0/4</td><td>0:22</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Piera Rodriguez</td><td>30/63</td><td>48%</td><td>1/1</td><td>1:14</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sam Hughes</td><td>22/37</td><td>59%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Piera Rodriguez</td><td>37/83</td><td>45%</td><td>0/2</td><td>0:17</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Sam Hughes</td><td>22/64</td><td>34%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
+        <div class="fight-card">
+            <div class="fight-card-header win-border" onclick="toggleRounds('a-f1')">
+                <div class="fight-result-badge result-win">WIN</div>
+                <div class="fight-opponent">vs. Ketlen Souza</div>
+                <div class="fight-event-label"><a href="/events/ufc-fight-night-taira-vs-park/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Taira vs. Park</a> &bull; Aug 2025<span class="fight-division-group"><span class="fight-division">Women's Strawweight</span></span></div>
+                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Piera Rodriguez</span><span class="totals-stat">64/150</span><span class="totals-pct">43%</span><span class="totals-stat">TD 7/10</span><span class="totals-stat">Ctrl 4:36</span></div><div class="totals-line"><span class="totals-name opponent">Ketlen Souza</span><span class="totals-stat">56/103</span><span class="totals-pct">54%</span><span class="totals-stat">TD 0/3</span><span class="totals-stat">Ctrl 1:41</span></div></div>
+                <div class="expand-toggle" id="toggle-a-f1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-a-f1" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -293,14 +228,14 @@
 <tr class="round-spacer"><td colspan="7"></td></tr>
 </tbody></table></div></div>
         <div class="fight-card">
-            <div class="fight-card-header win-border" onclick="toggleRounds('a-f1')">
+            <div class="fight-card-header win-border" onclick="toggleRounds('a-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Josefine Knutsson</div>
-                <div class="fight-event-label"><a href="/events/ufc-fight-night-covington-vs-buckley/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Covington vs. Buckley</a> &bull; Dec 2024</div>
+                <div class="fight-event-label"><a href="/events/ufc-fight-night-covington-vs-buckley/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Covington vs. Buckley</a> &bull; Dec 2024<span class="fight-division-group"><span class="fight-division">Women's Strawweight</span></span></div>
                 <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Piera Rodriguez</span><span class="totals-stat">36/64</span><span class="totals-pct">56%</span><span class="totals-stat">TD 8/10</span><span class="totals-stat">Ctrl 10:24</span></div><div class="totals-line"><span class="totals-name opponent">Josefine Knutsson</span><span class="totals-stat">26/55</span><span class="totals-pct">47%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 1:17</span></div></div>
-                <div class="expand-toggle" id="toggle-a-f1">&#9660; Rounds</div>
-            </div><div class="rounds-detail" id="rounds-a-f1" style="display:none;">
+                <div class="expand-toggle" id="toggle-a-f2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-a-f2" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -322,16 +257,17 @@
 <tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Piera Rodriguez</td><td>5/14</td><td>36%</td><td>1/1</td><td>4:05</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Josefine Knutsson</td><td>2/6</td><td>33%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div>
+</tbody></table></div></div></div>
+            <div class="last3-fighter"><h3 class="last3-name">Sam Hughes</h3>
         <div class="fight-card">
-            <div class="fight-card-header loss-border" onclick="toggleRounds('a-f2')">
+            <div class="fight-card-header loss-border" onclick="toggleRounds('b-f0')">
                 <div class="fight-result-badge result-loss">LOSS</div>
-                <div class="fight-opponent">vs. Ariane Carnelossi</div>
-                <div class="fight-event-label"><a href="/events/ufc-fight-night-barboza-vs-murphy/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Barboza vs. Murphy</a> &bull; May 2024</div>
-                <div class="fight-meta">DQ &bull; Rd 2, 3:16</div>
-                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Piera Rodriguez</span><span class="totals-stat">40/81</span><span class="totals-pct">49%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 3:53</span></div><div class="totals-line"><span class="totals-name opponent">Ariane Carnelossi</span><span class="totals-stat">16/49</span><span class="totals-pct">33%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 0:00</span></div></div>
-                <div class="expand-toggle" id="toggle-a-f2">&#9660; Rounds</div>
-            </div><div class="rounds-detail" id="rounds-a-f2" style="display:none;">
+                <div class="fight-opponent">vs. Piera Rodriguez</div>
+                <div class="fight-event-label"><a href="/events/ufc-fight-night-emmett-vs-vallejos/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Emmett vs. Vallejos</a> &bull; Mar 2026<span class="fight-division-group"><span class="fight-division">Women's Strawweight</span></span></div>
+                <div class="fight-meta">Decision (Unanimous) &bull; Rd 3, 5:00</div>
+                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Hughes</span><span class="totals-stat">77/144</span><span class="totals-pct">53%</span><span class="totals-stat">TD 0/7</span><span class="totals-stat">Ctrl 0:22</span></div><div class="totals-line"><span class="totals-name opponent">Piera Rodriguez</span><span class="totals-stat">107/231</span><span class="totals-pct">46%</span><span class="totals-stat">TD 1/6</span><span class="totals-stat">Ctrl 2:35</span></div></div>
+                <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -344,23 +280,25 @@
                             <th>KD</th>
                         </tr>
                     </thead>
-                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Piera Rodriguez</td><td>19/50</td><td>38%</td><td>1/1</td><td>1:22</td><td>—</td></tr>
-<tr class="opponent-row"><td></td><td class="fighter-label">Ariane Carnelossi</td><td>10/33</td><td>30%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Hughes</td><td>33/43</td><td>77%</td><td>0/4</td><td>0:22</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Piera Rodriguez</td><td>40/85</td><td>47%</td><td>0/3</td><td>1:04</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Piera Rodriguez</td><td>21/31</td><td>68%</td><td>0/1</td><td>2:31</td><td>1</td></tr>
-<tr class="opponent-row"><td></td><td class="fighter-label">Ariane Carnelossi</td><td>6/16</td><td>38%</td><td>0/0</td><td>0:00</td><td>—</td></tr>
+<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Hughes</td><td>22/37</td><td>59%</td><td>0/2</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Piera Rodriguez</td><td>30/63</td><td>48%</td><td>1/1</td><td>1:14</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div></div>
-            <div class="last3-fighter"><h3 class="last3-name">Sam Hughes</h3>
+<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Hughes</td><td>22/64</td><td>34%</td><td>0/1</td><td>0:00</td><td>—</td></tr>
+<tr class="opponent-row"><td></td><td class="fighter-label">Piera Rodriguez</td><td>37/83</td><td>45%</td><td>0/2</td><td>0:17</td><td>—</td></tr>
+<tr class="round-spacer"><td colspan="7"></td></tr>
+</tbody></table></div></div>
         <div class="fight-card">
-            <div class="fight-card-header win-border" onclick="toggleRounds('b-f0')">
+            <div class="fight-card-header win-border" onclick="toggleRounds('b-f1')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Shauna Bannon</div>
-                <div class="fight-event-label"><a href="/events/ufc-fight-night-imavov-vs-borralho/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Imavov vs. Borralho</a> &bull; Sep 2025</div>
+                <div class="fight-event-label"><a href="/events/ufc-fight-night-imavov-vs-borralho/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Imavov vs. Borralho</a> &bull; Sep 2025<span class="fight-division-group"><span class="fight-division">Women's Strawweight</span></span></div>
                 <div class="fight-meta">Submission (Rear Naked Choke) &bull; Rd 2, 1:58</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Hughes</span><span class="totals-stat">21/46</span><span class="totals-pct">46%</span><span class="totals-stat">TD 2/3</span><span class="totals-stat">Ctrl 5:29</span></div><div class="totals-line"><span class="totals-name opponent">Shauna Bannon</span><span class="totals-stat">13/38</span><span class="totals-pct">34%</span><span class="totals-stat">TD 0/1</span><span class="totals-stat">Ctrl 0:00</span></div></div>
-                <div class="expand-toggle" id="toggle-b-f0">&#9660; Rounds</div>
-            </div><div class="rounds-detail" id="rounds-b-f0" style="display:none;">
+                <div class="expand-toggle" id="toggle-b-f1">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-b-f1" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -381,14 +319,14 @@
 <tr class="round-spacer"><td colspan="7"></td></tr>
 </tbody></table></div></div>
         <div class="fight-card">
-            <div class="fight-card-header win-border" onclick="toggleRounds('b-f1')">
+            <div class="fight-card-header win-border" onclick="toggleRounds('b-f2')">
                 <div class="fight-result-badge result-win">WIN</div>
                 <div class="fight-opponent">vs. Stephanie Luciano</div>
-                <div class="fight-event-label"><a href="/events/ufc-fight-night-vettori-vs-dolidze-2/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Vettori vs. Dolidze 2</a> &bull; Mar 2025</div>
+                <div class="fight-event-label"><a href="/events/ufc-fight-night-vettori-vs-dolidze-2/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Vettori vs. Dolidze 2</a> &bull; Mar 2025<span class="fight-division-group"><span class="fight-division">Women's Strawweight</span></span></div>
                 <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
                 <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Hughes</span><span class="totals-stat">76/152</span><span class="totals-pct">50%</span><span class="totals-stat">TD 3/8</span><span class="totals-stat">Ctrl 4:21</span></div><div class="totals-line"><span class="totals-name opponent">Stephanie Luciano</span><span class="totals-stat">82/251</span><span class="totals-pct">33%</span><span class="totals-stat">TD 1/2</span><span class="totals-stat">Ctrl 1:15</span></div></div>
-                <div class="expand-toggle" id="toggle-b-f1">&#9660; Rounds</div>
-            </div><div class="rounds-detail" id="rounds-b-f1" style="display:none;">
+                <div class="expand-toggle" id="toggle-b-f2">&#9660; Rounds</div>
+            </div><div class="rounds-detail" id="rounds-b-f2" style="display:none;">
                 <table class="rounds-table">
                     <thead>
                         <tr>
@@ -410,37 +348,6 @@
 <tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Hughes</td><td>28/55</td><td>51%</td><td>0/5</td><td>0:15</td><td>—</td></tr>
 <tr class="opponent-row"><td></td><td class="fighter-label">Stephanie Luciano</td><td>22/103</td><td>21%</td><td>1/1</td><td>1:00</td><td>—</td></tr>
 <tr class="round-spacer"><td colspan="7"></td></tr>
-</tbody></table></div></div>
-        <div class="fight-card">
-            <div class="fight-card-header win-border" onclick="toggleRounds('b-f2')">
-                <div class="fight-result-badge result-win">WIN</div>
-                <div class="fight-opponent">vs. Viktoriia Dudakova</div>
-                <div class="fight-event-label"><a href="/events/ufc-fight-night-sandhagen-vs-nurmagomedov/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:2px;">UFC Fight Night: Sandhagen vs. Nurmagomedov</a> &bull; Aug 2024</div>
-                <div class="fight-meta">Decision (Split) &bull; Rd 3, 5:00</div>
-                <div class="fight-totals-block"><div class="totals-line"><span class="totals-name featured">Sam Hughes</span><span class="totals-stat">97/193</span><span class="totals-pct">50%</span><span class="totals-stat">TD 0/0</span><span class="totals-stat">Ctrl 2:14</span></div><div class="totals-line"><span class="totals-name opponent">Viktoriia Dudakova</span><span class="totals-stat">61/144</span><span class="totals-pct">42%</span><span class="totals-stat">TD 3/10</span><span class="totals-stat">Ctrl 4:38</span></div></div>
-                <div class="expand-toggle" id="toggle-b-f2">&#9660; Rounds</div>
-            </div><div class="rounds-detail" id="rounds-b-f2" style="display:none;">
-                <table class="rounds-table">
-                    <thead>
-                        <tr>
-                            <th>Rnd</th>
-                            <th>Fighter</th>
-                            <th>Sig Str</th>
-                            <th>Acc</th>
-                            <th>TD</th>
-                            <th>Ctrl</th>
-                            <th>KD</th>
-                        </tr>
-                    </thead>
-                    <tbody><tr class="featured-row"><td class="round-num">R1</td><td class="fighter-label">Sam Hughes</td><td>30/70</td><td>43%</td><td>0/0</td><td>0:33</td><td>—</td></tr>
-<tr class="opponent-row"><td></td><td class="fighter-label">Viktoriia Dudakova</td><td>25/66</td><td>38%</td><td>1/3</td><td>1:24</td><td>—</td></tr>
-<tr class="round-spacer"><td colspan="7"></td></tr>
-<tr class="featured-row"><td class="round-num">R2</td><td class="fighter-label">Sam Hughes</td><td>41/80</td><td>51%</td><td>0/0</td><td>0:31</td><td>—</td></tr>
-<tr class="opponent-row"><td></td><td class="fighter-label">Viktoriia Dudakova</td><td>25/53</td><td>47%</td><td>1/5</td><td>1:23</td><td>—</td></tr>
-<tr class="round-spacer"><td colspan="7"></td></tr>
-<tr class="featured-row"><td class="round-num">R3</td><td class="fighter-label">Sam Hughes</td><td>26/43</td><td>60%</td><td>0/0</td><td>1:10</td><td>—</td></tr>
-<tr class="opponent-row"><td></td><td class="fighter-label">Viktoriia Dudakova</td><td>11/25</td><td>44%</td><td>1/2</td><td>1:51</td><td>—</td></tr>
-<tr class="round-spacer"><td colspan="7"></td></tr>
 </tbody></table></div></div></div>
         </div>
 
@@ -449,19 +356,19 @@
 
         <h2>Analysis Summary</h2>
         <div class="narrative">
-            <p><strong>Striking Volume:</strong> Both fighters operate at a similar pace (3.7 vs 4.3 sig str/min). Accuracy and timing will decide the striking battle.</p>
-<p><strong>Grappling:</strong> Piera Rodriguez shoots 4.8 TD/15min at 66% accuracy against Sam Hughes's 61% defense — takedowns are a viable path. Sam Hughes shoots at 35% accuracy against Piera Rodriguez's 73% defense — Piera Rodriguez should keep it standing.</p>
+            <p><strong>Striking Volume:</strong> Both fighters operate at a similar pace (4.2 vs 4.4 sig str/min). Accuracy and timing will decide the striking battle.</p>
+<p><strong>Grappling:</strong> Piera Rodriguez shoots at 59% accuracy but Sam Hughes stops 64% of attempts — the takedown path looks difficult. Sam Hughes shoots at 29% accuracy against Piera Rodriguez's 82% defense — Piera Rodriguez should keep it standing.</p>
 <p><strong>Finish Threat:</strong> Both fighters trend toward decisions — Piera Rodriguez (100% of wins) and Sam Hughes (67%).</p>
         </div>
 
         <div class="timestamp">
-            Report generated: 2026-03-12 18:04:45 | Data source: UFCStats.com
+            Last updated: 2026-08-13 | Data source: UFCStats.com
         </div>
     </div>
-        <footer style="background:#111;padding:28px 20px;margin-top:40px;">
-        <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;color:rgba(255,255,255,0.4);font-size:12px;">
+        <footer class="site-footer">
+        <div class="site-footer-inner">
             <div><span style="color:#fff;font-weight:800;font-size:14px;">FIGHTING<span style="color:#d62828;">DATA</span></span><div style="margin-top:6px;line-height:1.6;">Data sourced from UFCStats.com &middot; &copy; 2026 FightingData.com</div></div>
-            <div style="display:flex;gap:32px;"><a href="/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Home</a><a href="/events/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Events</a><a href="/fighters/" style="color:rgba(255,255,255,0.4);text-decoration:none;">Fighters</a><a href="/about/" style="color:rgba(255,255,255,0.4);text-decoration:none;">About</a></div>
+            <div class="site-footer-links"><a href="/">Home</a><a href="/articles/">Articles</a><a href="/events/">Events</a><a href="/divisions/">Divisions</a><a href="/fighters/">Fighters</a><a href="/about/">About</a></div>
         </div>
     </footer>
     
@@ -480,5 +387,7 @@
     }
     </script>
 
+    <script src="/assets/vendor/chart.umd.min.js" defer></script>
+    <script src="/assets/js/fd-charts.js" defer></script>
 </body>
 </html>
