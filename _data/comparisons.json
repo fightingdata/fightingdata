@@ -1,125 +1,5 @@
 [
   {
-    "fighter_a": "Islam Makhachev",
-    "fighter_b": "Ian Machado Garry",
-    "slug": "islam-makhachev-vs-ian-machado-garry",
-    "url": "/compare/islam-makhachev-vs-ian-machado-garry/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Gillian Robertson",
-    "fighter_b": "Mackenzie Dern",
-    "slug": "gillian-robertson-vs-mackenzie-dern",
-    "url": "/compare/gillian-robertson-vs-mackenzie-dern/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Women's Strawweight"
-  },
-  {
-    "fighter_a": "Jalin Turner",
-    "fighter_b": "Kaue Fernandes",
-    "slug": "jalin-turner-vs-kaue-fernandes",
-    "url": "/compare/jalin-turner-vs-kaue-fernandes/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Mansur Abdul-Malik",
-    "fighter_b": "Dustin Stoltzfus",
-    "slug": "mansur-abdul-malik-vs-dustin-stoltzfus",
-    "url": "/compare/mansur-abdul-malik-vs-dustin-stoltzfus/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Edson Barboza",
-    "fighter_b": "Esteban Ribovics",
-    "slug": "edson-barboza-vs-esteban-ribovics",
-    "url": "/compare/edson-barboza-vs-esteban-ribovics/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Chidi Njokuani",
-    "fighter_b": "Joel Alvarez",
-    "slug": "chidi-njokuani-vs-joel-alvarez",
-    "url": "/compare/chidi-njokuani-vs-joel-alvarez/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Charles Johnson",
-    "fighter_b": "Eduardo Chapolin",
-    "slug": "charles-johnson-vs-eduardo-chapolin",
-    "url": "/compare/charles-johnson-vs-eduardo-chapolin/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Catch Weight"
-  },
-  {
-    "fighter_a": "Donte Johnson",
-    "fighter_b": "Eric McConico",
-    "slug": "donte-johnson-vs-eric-mcconico",
-    "url": "/compare/donte-johnson-vs-eric-mcconico/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Vicente Luque",
-    "fighter_b": "Tresean Gore",
-    "slug": "vicente-luque-vs-tresean-gore",
-    "url": "/compare/vicente-luque-vs-tresean-gore/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Lucas Fernando",
-    "fighter_b": "Rafael Tobias",
-    "slug": "lucas-fernando-vs-rafael-tobias",
-    "url": "/compare/lucas-fernando-vs-rafael-tobias/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Neil Magny",
-    "fighter_b": "Ramiz Brahimaj",
-    "slug": "neil-magny-vs-ramiz-brahimaj",
-    "url": "/compare/neil-magny-vs-ramiz-brahimaj/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Myktybek Orolbai",
-    "fighter_b": "Jeremiah Wells",
-    "slug": "myktybek-orolbai-vs-jeremiah-wells",
-    "url": "/compare/myktybek-orolbai-vs-jeremiah-wells/",
-    "event_name": "UFC 330: Makhachev vs. Machado Garry",
-    "event_date": "Saturday, August 15, 2026",
-    "event_slug": "ufc-330-makhachev-vs-machado-garry",
-    "weight_class": "Welterweight"
-  },
-  {
     "fighter_a": "Anthony Hernandez",
     "fighter_b": "Gregory Rodrigues",
     "slug": "anthony-hernandez-vs-gregory-rodrigues",
@@ -150,6 +30,16 @@
     "weight_class": "Light Heavyweight"
   },
   {
+    "fighter_a": "Mason Jones",
+    "fighter_b": "MarQuel Mederos",
+    "slug": "mason-jones-vs-marquel-mederos",
+    "url": "/compare/mason-jones-vs-marquel-mederos/",
+    "event_name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "event_date": "Saturday, August 22, 2026",
+    "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Carli Judice",
     "fighter_b": "Jeisla Chaves",
     "slug": "carli-judice-vs-jeisla-chaves",
@@ -158,6 +48,26 @@
     "event_date": "Saturday, August 22, 2026",
     "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
     "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Terrance Chatman",
+    "fighter_b": "Anthony Wint",
+    "slug": "terrance-chatman-vs-anthony-wint",
+    "url": "/compare/terrance-chatman-vs-anthony-wint/",
+    "event_name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "event_date": "Saturday, August 22, 2026",
+    "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Lerryan Douglas",
+    "fighter_b": "Jamall Emmers",
+    "slug": "lerryan-douglas-vs-jamall-emmers",
+    "url": "/compare/lerryan-douglas-vs-jamall-emmers/",
+    "event_name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "event_date": "Saturday, August 22, 2026",
+    "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Kennedy Nzechukwu",
@@ -170,6 +80,36 @@
     "weight_class": "Heavyweight"
   },
   {
+    "fighter_a": "Nasrat Haqparast",
+    "fighter_b": "Chris Padilla",
+    "slug": "nasrat-haqparast-vs-chris-padilla",
+    "url": "/compare/nasrat-haqparast-vs-chris-padilla/",
+    "event_name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "event_date": "Saturday, August 22, 2026",
+    "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Marcio Barbosa",
+    "fighter_b": "Ryan Kuse",
+    "slug": "marcio-barbosa-vs-ryan-kuse",
+    "url": "/compare/marcio-barbosa-vs-ryan-kuse/",
+    "event_name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "event_date": "Saturday, August 22, 2026",
+    "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Gauge Young",
+    "fighter_b": "Stan Dorsainvil",
+    "slug": "gauge-young-vs-stan-dorsainvil",
+    "url": "/compare/gauge-young-vs-stan-dorsainvil/",
+    "event_name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "event_date": "Saturday, August 22, 2026",
+    "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Wes Schultz",
     "fighter_b": "Jackson McVey",
     "slug": "wes-schultz-vs-jackson-mcvey",
@@ -178,16 +118,6 @@
     "event_date": "Saturday, August 22, 2026",
     "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
     "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Gauge Young",
-    "fighter_b": "Kody Steele",
-    "slug": "gauge-young-vs-kody-steele",
-    "url": "/compare/gauge-young-vs-kody-steele/",
-    "event_name": "UFC Fight Night: Hernandez vs. Rodrigues",
-    "event_date": "Saturday, August 22, 2026",
-    "event_slug": "ufc-fight-night-hernandez-vs-rodrigues",
-    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Shanelle Dyer",

@@ -1,99 +1,5 @@
 [
   {
-    "id": 1218,
-    "name": "UFC 330: Makhachev vs. Machado Garry",
-    "date": "Saturday, August 15, 2026",
-    "location": "Philadelphia, Pennsylvania, USA",
-    "slug": "ufc-330-makhachev-vs-machado-garry",
-    "matchups": [
-      {
-        "fighter_a": "Islam Makhachev",
-        "fighter_b": "Ian Machado Garry",
-        "weight_class": "Welterweight",
-        "is_title": true,
-        "slug": "islam-makhachev-vs-ian-machado-garry"
-      },
-      {
-        "fighter_a": "Gillian Robertson",
-        "fighter_b": "Mackenzie Dern",
-        "weight_class": "Women's Strawweight",
-        "is_title": true,
-        "slug": "gillian-robertson-vs-mackenzie-dern"
-      },
-      {
-        "fighter_a": "Jalin Turner",
-        "fighter_b": "Kaue Fernandes",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "jalin-turner-vs-kaue-fernandes"
-      },
-      {
-        "fighter_a": "Mansur Abdul-Malik",
-        "fighter_b": "Dustin Stoltzfus",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "mansur-abdul-malik-vs-dustin-stoltzfus"
-      },
-      {
-        "fighter_a": "Edson Barboza",
-        "fighter_b": "Esteban Ribovics",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "edson-barboza-vs-esteban-ribovics"
-      },
-      {
-        "fighter_a": "Chidi Njokuani",
-        "fighter_b": "Joel Alvarez",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "chidi-njokuani-vs-joel-alvarez"
-      },
-      {
-        "fighter_a": "Charles Johnson",
-        "fighter_b": "Eduardo Chapolin",
-        "weight_class": "Catch Weight",
-        "is_title": false,
-        "slug": "charles-johnson-vs-eduardo-chapolin"
-      },
-      {
-        "fighter_a": "Donte Johnson",
-        "fighter_b": "Eric McConico",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "donte-johnson-vs-eric-mcconico"
-      },
-      {
-        "fighter_a": "Vicente Luque",
-        "fighter_b": "Tresean Gore",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "vicente-luque-vs-tresean-gore"
-      },
-      {
-        "fighter_a": "Lucas Fernando",
-        "fighter_b": "Rafael Tobias",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "lucas-fernando-vs-rafael-tobias"
-      },
-      {
-        "fighter_a": "Neil Magny",
-        "fighter_b": "Ramiz Brahimaj",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "neil-magny-vs-ramiz-brahimaj"
-      },
-      {
-        "fighter_a": "Myktybek Orolbai",
-        "fighter_b": "Jeremiah Wells",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "myktybek-orolbai-vs-jeremiah-wells"
-      }
-    ],
-    "homepage": true
-  },
-  {
     "id": 1223,
     "name": "UFC Fight Night: Hernandez vs. Rodrigues",
     "date": "Saturday, August 22, 2026",
@@ -122,11 +28,32 @@
         "slug": "reinier-de-ridder-vs-roman-dolidze"
       },
       {
+        "fighter_a": "Mason Jones",
+        "fighter_b": "MarQuel Mederos",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "mason-jones-vs-marquel-mederos"
+      },
+      {
         "fighter_a": "Carli Judice",
         "fighter_b": "Jeisla Chaves",
         "weight_class": "Women's Strawweight",
         "is_title": false,
         "slug": "carli-judice-vs-jeisla-chaves"
+      },
+      {
+        "fighter_a": "Terrance Chatman",
+        "fighter_b": "Anthony Wint",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "terrance-chatman-vs-anthony-wint"
+      },
+      {
+        "fighter_a": "Lerryan Douglas",
+        "fighter_b": "Jamall Emmers",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "lerryan-douglas-vs-jamall-emmers"
       },
       {
         "fighter_a": "Kennedy Nzechukwu",
@@ -136,18 +63,32 @@
         "slug": "kennedy-nzechukwu-vs-shamil-gaziev"
       },
       {
+        "fighter_a": "Nasrat Haqparast",
+        "fighter_b": "Chris Padilla",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "nasrat-haqparast-vs-chris-padilla"
+      },
+      {
+        "fighter_a": "Marcio Barbosa",
+        "fighter_b": "Ryan Kuse",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "marcio-barbosa-vs-ryan-kuse"
+      },
+      {
+        "fighter_a": "Gauge Young",
+        "fighter_b": "Stan Dorsainvil",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "gauge-young-vs-stan-dorsainvil"
+      },
+      {
         "fighter_a": "Wes Schultz",
         "fighter_b": "Jackson McVey",
         "weight_class": "Middleweight",
         "is_title": false,
         "slug": "wes-schultz-vs-jackson-mcvey"
-      },
-      {
-        "fighter_a": "Gauge Young",
-        "fighter_b": "Kody Steele",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "gauge-young-vs-kody-steele"
       },
       {
         "fighter_a": "Shanelle Dyer",

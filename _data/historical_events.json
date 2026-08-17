@@ -1,5 +1,21 @@
 [
   {
+    "id": 1218,
+    "name": "UFC 330: Makhachev vs. Machado Garry",
+    "date": "Saturday, August 15, 2026",
+    "location": "Philadelphia, Pennsylvania, USA",
+    "slug": "ufc-330-makhachev-vs-machado-garry",
+    "year": "2026"
+  },
+  {
+    "id": 1267,
+    "name": "DWCS 10.1",
+    "date": "Tuesday, August 11, 2026",
+    "location": "",
+    "slug": "dwcs-101",
+    "year": "2026"
+  },
+  {
     "id": 1224,
     "name": "UFC Fight Night: Gamrot vs. Salkilld",
     "date": "Saturday, August 8, 2026",
