@@ -45,6 +45,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("fighters");
   eleventyConfig.addPassthroughCopy("methodology"); // generated from METRIC_DEFS (Phase 3)
   eleventyConfig.addPassthroughCopy("divisions");   // generated division hub (Phase 5)
+  // Root favicon: the ~4,150 Python-generated pages (profiles, compares, events)
+  // carry no <link rel="icon">, so browsers fall back to requesting /favicon.ico.
+  // Serving it from the root gives every page an icon without adding a tag to
+  // generate_reports.py — which would rewrite every generated page on deploy.
+  eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_redirects");   // Netlify legacy 404 -> current slug redirects (P4)
