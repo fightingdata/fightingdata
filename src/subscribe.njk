@@ -1,0 +1,34 @@
+---
+layout: layout.njk
+title: Newsletter
+description: Data-driven UFC recaps and analysis. Every card broken down with the numbers behind it, in your inbox every Tuesday.
+---
+
+<section class="subscribe-page">
+    <div class="subscribe-wrap">
+        <h1 class="subscribe-title">The FightingData Newsletter</h1>
+        <p class="subscribe-deck">
+            Every UFC card broken down with the numbers behind it &mdash; recaps, fighter
+            analytics, and the data most coverage skips. One email, every Tuesday. Free.
+        </p>
+
+        {% include "subscribe-form.njk" %}
+
+        <div class="subscribe-notes">
+            <h2>What you get</h2>
+            <ul>
+                <li><strong>The recap.</strong> Every card, fight by fight, with the striking,
+                    grappling, and control numbers that decided it.</li>
+                <li><strong>Fighter analytics.</strong> Career trends, division context, and the
+                    stats that don't show up on the broadcast.</li>
+                <li><strong>No picks, no hot takes.</strong> We present the data clearly and let
+                    you draw your own conclusions.</li>
+            </ul>
+            <p class="subscribe-fineprint">
+                All statistics are sourced from
+                <a href="http://ufcstats.com" target="_blank" rel="noopener noreferrer">UFCStats.com</a>
+                and verified against the source. Unsubscribe any time &mdash; one click, no login.
+            </p>
+        </div>
+    </div>
+</section>

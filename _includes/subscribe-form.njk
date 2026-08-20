@@ -1,0 +1,20 @@
+{#
+  Beehiiv inline subscribe form — SINGLE SOURCE for every placement
+  (/subscribe/, end of each article, homepage). Change the form here, not in
+  three templates.
+
+  The loader injects a cross-origin <iframe> from subscribe-forms.beehiiv.com
+  into a wrapper div it creates itself, then sizes that wrapper from a
+  postMessage the iframe sends back. Two consequences, both deliberate:
+
+  1. NOTHING inside the form can be styled from our CSS — it is another origin.
+     The button colour is set in Beehiiv's own Style tab, not here.
+  2. If the resize handshake does not complete, the wrapper it creates stays at
+     height:0 and the form is invisible. `.fd-subscribe-embed > div` below sets a
+     min-height so a failed handshake still renders a usable form rather than a
+     blank gap. Their inline height wins once it arrives, because an inline style
+     beats a stylesheet rule — min-height only ever raises the floor.
+#}
+<div class="fd-subscribe-embed">
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="fabd7125-27ee-4bf4-933c-c278e180e97d"></script>
+</div>

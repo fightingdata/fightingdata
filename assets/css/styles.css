@@ -371,3 +371,39 @@ a:hover { text-decoration: underline; }
     .article-deck { font-size: 1.05rem; }
     .article-body { font-size: 17px; }
 }
+
+/* ── Newsletter subscribe (Beehiiv embed) ─────────────────────────────────── */
+/* The form itself is a cross-origin iframe and cannot be styled from here —
+   only the frame around it. See _includes/subscribe-form.njk. */
+.fd-subscribe-embed { margin: 0 auto; max-width: 100%; }
+/* Failsafe: the loader creates its own wrapper div and sizes it via postMessage.
+   If that handshake never lands the wrapper sits at height:0 and the form is
+   invisible, so hold a floor under it. Their inline height still wins once it
+   arrives — min-height only raises the floor, never caps it. */
+.fd-subscribe-embed > div { min-height: 320px; }
+
+/* /subscribe/ page */
+.subscribe-page { padding: 36px 0 56px; }
+.subscribe-wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+.subscribe-title { font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+.subscribe-deck { color: #555; font-size: 1.1rem; line-height: 1.6; margin-bottom: 28px; }
+.subscribe-notes { margin-top: 36px; padding-top: 24px; border-top: 1px solid #e2e2e2; }
+.subscribe-notes h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; }
+.subscribe-notes ul { margin: 0 0 20px 22px; }
+.subscribe-notes li { margin-bottom: 10px; color: #555; line-height: 1.7; }
+.subscribe-fineprint { color: #777; font-size: 14px; line-height: 1.6; }
+.subscribe-fineprint a { color: #d62828; }
+
+/* End-of-article + homepage placement */
+.article-subscribe { margin-top: 44px; padding-top: 28px; border-top: 3px solid #111; }
+.article-subscribe-kicker {
+    font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    color: #d62828; margin-bottom: 10px;
+}
+.article-subscribe h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; }
+.article-subscribe p { color: #555; line-height: 1.6; margin-bottom: 20px; }
+
+@media (max-width: 640px) {
+    .subscribe-title { font-size: 1.7rem; }
+    .subscribe-deck { font-size: 1.05rem; }
+}
