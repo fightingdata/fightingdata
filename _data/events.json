@@ -195,13 +195,6 @@
         "slug": "andre-lima-vs-namsrai-batbayar"
       },
       {
-        "fighter_a": "Jack Jenkins",
-        "fighter_b": "Sean Woodson",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "jack-jenkins-vs-sean-woodson"
-      },
-      {
         "fighter_a": "Kevin Borjas",
         "fighter_b": "Rei Tsuruya",
         "weight_class": "Flyweight",
@@ -209,11 +202,25 @@
         "slug": "kevin-borjas-vs-rei-tsuruya"
       },
       {
+        "fighter_a": "Jack Jenkins",
+        "fighter_b": "Sean Woodson",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "jack-jenkins-vs-sean-woodson"
+      },
+      {
         "fighter_a": "Julia Polastri",
         "fighter_b": "Xiong Jingnan",
         "weight_class": "Women's Strawweight",
         "is_title": false,
         "slug": "julia-polastri-vs-xiong-jingnan"
+      },
+      {
+        "fighter_a": "Bilal Hasan",
+        "fighter_b": "Nilson Rojas",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "bilal-hasan-vs-nilson-rojas"
       }
     ],
     "homepage": true
@@ -301,6 +308,13 @@
         "weight_class": "Middleweight",
         "is_title": false,
         "slug": "matthieu-duclos-vs-luis-felipe-dias"
+      },
+      {
+        "fighter_a": "Sofia Montenegro",
+        "fighter_b": "Delphine Benouaich",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "sofia-montenegro-vs-delphine-benouaich"
       }
     ],
     "homepage": true
@@ -381,6 +395,13 @@
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "marwan-rahiki-vs-tommy-mcmillen"
+      },
+      {
+        "fighter_a": "Rodrigo Vera",
+        "fighter_b": "Ramiro Jimenez",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "rodrigo-vera-vs-ramiro-jimenez"
       }
     ],
     "homepage": true
@@ -548,6 +569,13 @@
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "timmy-cuamba-vs-louis-jourdain"
+      },
+      {
+        "fighter_a": "Gilbert Urbina",
+        "fighter_b": "Julien Leblanc",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "gilbert-urbina-vs-julien-leblanc"
       }
     ],
     "homepage": true

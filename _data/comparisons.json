@@ -240,16 +240,6 @@
     "weight_class": "Flyweight"
   },
   {
-    "fighter_a": "Jack Jenkins",
-    "fighter_b": "Sean Woodson",
-    "slug": "jack-jenkins-vs-sean-woodson",
-    "url": "/compare/jack-jenkins-vs-sean-woodson/",
-    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
-    "event_date": "Saturday, August 29, 2026",
-    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
-    "weight_class": "Featherweight"
-  },
-  {
     "fighter_a": "Kevin Borjas",
     "fighter_b": "Rei Tsuruya",
     "slug": "kevin-borjas-vs-rei-tsuruya",
@@ -260,6 +250,16 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "Jack Jenkins",
+    "fighter_b": "Sean Woodson",
+    "slug": "jack-jenkins-vs-sean-woodson",
+    "url": "/compare/jack-jenkins-vs-sean-woodson/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Featherweight"
+  },
+  {
     "fighter_a": "Julia Polastri",
     "fighter_b": "Xiong Jingnan",
     "slug": "julia-polastri-vs-xiong-jingnan",
@@ -268,6 +268,16 @@
     "event_date": "Saturday, August 29, 2026",
     "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
     "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Bilal Hasan",
+    "fighter_b": "Nilson Rojas",
+    "slug": "bilal-hasan-vs-nilson-rojas",
+    "url": "/compare/bilal-hasan-vs-nilson-rojas/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Flyweight"
   },
   {
     "fighter_a": "Dan Hooker",
@@ -380,6 +390,16 @@
     "weight_class": "Middleweight"
   },
   {
+    "fighter_a": "Sofia Montenegro",
+    "fighter_b": "Delphine Benouaich",
+    "slug": "sofia-montenegro-vs-delphine-benouaich",
+    "url": "/compare/sofia-montenegro-vs-delphine-benouaich/",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
+    "weight_class": "Women's Strawweight"
+  },
+  {
     "fighter_a": "Jean Silva",
     "fighter_b": "Yair Rodriguez",
     "slug": "jean-silva-vs-yair-rodriguez",
@@ -474,6 +494,16 @@
     "fighter_b": "Tommy McMillen",
     "slug": "marwan-rahiki-vs-tommy-mcmillen",
     "url": "/compare/marwan-rahiki-vs-tommy-mcmillen/",
+    "event_name": "Noche UFC: Rodriguez vs. Silva",
+    "event_date": "Saturday, September 12, 2026",
+    "event_slug": "noche-ufc-rodriguez-vs-silva",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Rodrigo Vera",
+    "fighter_b": "Ramiro Jimenez",
+    "slug": "rodrigo-vera-vs-ramiro-jimenez",
+    "url": "/compare/rodrigo-vera-vs-ramiro-jimenez/",
     "event_name": "Noche UFC: Rodriguez vs. Silva",
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "noche-ufc-rodriguez-vs-silva",
@@ -688,5 +718,15 @@
     "event_date": "Saturday, October 17, 2026",
     "event_slug": "ufc-fight-night-buckley-vs-malott",
     "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Gilbert Urbina",
+    "fighter_b": "Julien Leblanc",
+    "slug": "gilbert-urbina-vs-julien-leblanc",
+    "url": "/compare/gilbert-urbina-vs-julien-leblanc/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Middleweight"
   }
 ]

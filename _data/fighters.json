@@ -6290,6 +6290,23 @@
     "last_fight_date": "2019-02-02"
   },
   {
+    "id": 3808,
+    "name": "Bilal Hasan",
+    "nickname": null,
+    "height_cm": 170.2,
+    "reach_cm": 177.8,
+    "stance": "Switch",
+    "dob": "2001-07-16",
+    "slug": "bilal-hasan",
+    "career_record": "9-0-0 (1 NC)",
+    "career_wins": 9,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 1,
+    "division": "",
+    "last_fight_date": "2026-08-11"
+  },
+  {
     "id": 740,
     "name": "Bill Algeo",
     "nickname": null,
@@ -15689,6 +15706,23 @@
     "career_nc": 0,
     "division": "",
     "last_fight_date": "2008-02-13"
+  },
+  {
+    "id": 3810,
+    "name": "Delphine Benouaich",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1995-03-21",
+    "slug": "delphine-benouaich",
+    "career_record": "7-2-0",
+    "career_wins": 7,
+    "career_losses": 2,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 2029,
@@ -45067,6 +45101,23 @@
     "last_fight_date": "2026-03-21"
   },
   {
+    "id": 3812,
+    "name": "Mridul Saikia",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "mridul-saikia",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": "2026-08-11"
+  },
+  {
     "id": 3278,
     "name": "Mu Bae Choi",
     "nickname": null,
@@ -46680,6 +46731,23 @@
     "career_nc": 0,
     "division": "Welterweight",
     "last_fight_date": "2026-05-16"
+  },
+  {
+    "id": 3809,
+    "name": "Nilson Rojas",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "1999-04-21",
+    "slug": "nilson-rojas",
+    "career_record": "9-0-0",
+    "career_wins": 9,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 3763,
@@ -49553,6 +49621,23 @@
     "career_nc": 0,
     "division": "Bantamweight",
     "last_fight_date": "2014-01-25"
+  },
+  {
+    "id": 3811,
+    "name": "Ramiro Jimenez",
+    "nickname": null,
+    "height_cm": 175.3,
+    "reach_cm": 185.4,
+    "stance": "Southpaw",
+    "dob": "1999-01-16",
+    "slug": "ramiro-jimenez",
+    "career_record": "11-0-0",
+    "career_wins": 11,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": "2025-08-19"
   },
   {
     "id": 429,
@@ -59838,6 +59923,23 @@
     "career_nc": 0,
     "division": "Middleweight",
     "last_fight_date": "2010-09-15"
+  },
+  {
+    "id": 3813,
+    "name": "Tommy Cuozzi Jr.",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "tommy-cuozzi-jr",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": "2025-08-19"
   },
   {
     "id": 3683,

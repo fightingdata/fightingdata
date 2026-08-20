@@ -2,92 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fightingdata.com/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/articles/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/events/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/bantamweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/featherweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/flyweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/heavyweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/light-heavyweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/lightweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/middleweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/welterweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/womens-bantamweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/womens-flyweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/womens-strawweight/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/methodology/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/about/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -6612,7 +6612,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/belal-muhammad-vs-gabriel-bonfim/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6643,6 +6643,11 @@
   <url>
     <loc>https://fightingdata.com/compare/bia-mesquita-vs-montse-rendon/</loc>
     <lastmod>2026-08-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/bilal-hasan-vs-nilson-rojas/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6902,7 +6907,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/davey-grant-vs-juan-adrian-martinetti/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7088,6 +7093,11 @@
   <url>
     <loc>https://fightingdata.com/compare/giga-chikadze-vs-joanderson-brito/</loc>
     <lastmod>2026-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/gilbert-urbina-vs-julien-leblanc/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7852,7 +7862,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/priscila-cachoeira-vs-chelsea-chandler/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7938,6 +7948,11 @@
   <url>
     <loc>https://fightingdata.com/compare/rodolfo-vieira-vs-eric-mcconico/</loc>
     <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/rodrigo-vera-vs-ramiro-jimenez/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8043,6 +8058,11 @@
   <url>
     <loc>https://fightingdata.com/compare/shem-rock-vs-abdul-kareem-al-selwady/</loc>
     <lastmod>2026-08-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/sofia-montenegro-vs-delphine-benouaich/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -10093,6 +10113,11 @@
   <url>
     <loc>https://fightingdata.com/fighters/bibulatov-magomed/</loc>
     <lastmod>2026-08-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/fighters/bilal-hasan/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -12863,6 +12888,11 @@
   <url>
     <loc>https://fightingdata.com/fighters/del-hawkins/</loc>
     <lastmod>2026-08-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/fighters/delphine-benouaich/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -21506,6 +21536,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://fightingdata.com/fighters/mridul-saikia/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://fightingdata.com/fighters/mu-bae-choi/</loc>
     <lastmod>2026-08-03</lastmod>
     <priority>0.6</priority>
@@ -21978,6 +22013,11 @@
   <url>
     <loc>https://fightingdata.com/fighters/nikolay-veretennikov/</loc>
     <lastmod>2026-08-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/fighters/nilson-rojas/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -22818,6 +22858,11 @@
   <url>
     <loc>https://fightingdata.com/fighters/ramiro-hernandez/</loc>
     <lastmod>2026-08-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/fighters/ramiro-jimenez/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -25848,6 +25893,11 @@
   <url>
     <loc>https://fightingdata.com/fighters/tomasz-drwal/</loc>
     <lastmod>2026-08-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/fighters/tommy-cuozzi-jr/</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
