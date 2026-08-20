@@ -17,6 +17,16 @@ layout: layout.njk
         <div class="article-body">
             {{ content | fighterLinks | safe }}
         </div>
+        <div class="article-subscribe">
+            <div class="article-subscribe-kicker">The FightingData Newsletter</div>
+            <h2>Get every card broken down like this</h2>
+            <p>
+                Recaps, fighter analytics, and the numbers behind every UFC card &mdash;
+                one email, every Tuesday. Free.
+            </p>
+            {% include "subscribe-form.njk" %}
+        </div>
+
         <div class="article-foot">
             <a href="/articles/" class="article-back">&larr; All Articles</a>
         </div>

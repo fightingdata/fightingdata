@@ -376,11 +376,20 @@ a:hover { text-decoration: underline; }
 /* The form itself is a cross-origin iframe and cannot be styled from here —
    only the frame around it. See _includes/subscribe-form.njk. */
 .fd-subscribe-embed { margin: 0 auto; max-width: 100%; }
-/* Failsafe: the loader creates its own wrapper div and sizes it via postMessage.
-   If that handshake never lands the wrapper sits at height:0 and the form is
-   invisible, so hold a floor under it. Their inline height still wins once it
-   arrives — min-height only raises the floor, never caps it. */
-.fd-subscribe-embed > div { min-height: 320px; }
+/* The loader builds TWO nested divs — an outer sizing div and an inner
+   `overflow:hidden; height:0px` clipper — then grows the inner one from a
+   postMessage the iframe sends back with its height. VERIFIED ON PRODUCTION:
+   that message never arrives, so the clipper stays at 0 and the form is
+   invisible. The form itself is fine (it renders correctly when its URL is
+   loaded directly), so we supply the height ourselves.
+   Target the INNER div: a rule on `> div` only grows the outer one and the
+   clipper still hides everything. Keep their overflow:hidden — the iframe is a
+   fixed 2000px and its content is top-aligned, so clipping to our height shows
+   exactly the form. Heights measured from the form at each width
+   (680px wide -> 339, 500 -> 375, 375 -> 459) plus a small buffer. */
+.fd-subscribe-embed > div > div { height: 360px !important; }
+@media (max-width: 640px) { .fd-subscribe-embed > div > div { height: 400px !important; } }
+@media (max-width: 480px) { .fd-subscribe-embed > div > div { height: 490px !important; } }
 
 /* /subscribe/ page */
 .subscribe-page { padding: 36px 0 56px; }
