@@ -404,7 +404,14 @@ a:hover { text-decoration: underline; }
 .subscribe-fineprint a { color: #d62828; }
 
 /* End-of-article + homepage placement */
-.article-subscribe { margin-top: 44px; padding-top: 28px; border-top: 3px solid #111; }
+/* Cap and centre the block. On an article this is a no-op (the column is
+   already 720px), but the homepage container runs ~1060px wide, which stretched
+   the iframe that far and left the form as a small island in a wide white box.
+   The form does not scale up with its frame — it just gets more empty space. */
+.article-subscribe {
+    max-width: 720px; margin: 44px auto 0;
+    padding-top: 28px; border-top: 3px solid #111;
+}
 .article-subscribe-kicker {
     font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
     color: #d62828; margin-bottom: 10px;
