@@ -230,6 +230,16 @@
     "weight_class": "Light Heavyweight"
   },
   {
+    "fighter_a": "Bilal Hasan",
+    "fighter_b": "Nilson Rojas",
+    "slug": "bilal-hasan-vs-nilson-rojas",
+    "url": "/compare/bilal-hasan-vs-nilson-rojas/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Flyweight"
+  },
+  {
     "fighter_a": "Andre Lima",
     "fighter_b": "Namsrai Batbayar",
     "slug": "andre-lima-vs-namsrai-batbayar",
@@ -250,6 +260,16 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "Xiao Long",
+    "fighter_b": "Francesco Nuzzi",
+    "slug": "xiao-long-vs-francesco-nuzzi",
+    "url": "/compare/xiao-long-vs-francesco-nuzzi/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Bantamweight"
+  },
+  {
     "fighter_a": "Jack Jenkins",
     "fighter_b": "Sean Woodson",
     "slug": "jack-jenkins-vs-sean-woodson",
@@ -258,6 +278,16 @@
     "event_date": "Saturday, August 29, 2026",
     "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
     "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Lawrence Lui",
+    "fighter_b": "Hector Santiago",
+    "slug": "lawrence-lui-vs-hector-santiago",
+    "url": "/compare/lawrence-lui-vs-hector-santiago/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Julia Polastri",
@@ -270,14 +300,14 @@
     "weight_class": "Women's Strawweight"
   },
   {
-    "fighter_a": "Bilal Hasan",
-    "fighter_b": "Nilson Rojas",
-    "slug": "bilal-hasan-vs-nilson-rojas",
-    "url": "/compare/bilal-hasan-vs-nilson-rojas/",
+    "fighter_a": "Ding Meng",
+    "fighter_b": "Cameron Nelson",
+    "slug": "ding-meng-vs-cameron-nelson",
+    "url": "/compare/ding-meng-vs-cameron-nelson/",
     "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
     "event_date": "Saturday, August 29, 2026",
     "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
-    "weight_class": "Flyweight"
+    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Dan Hooker",

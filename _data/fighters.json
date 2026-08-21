@@ -8959,6 +8959,23 @@
     "last_fight_date": "2022-04-23"
   },
   {
+    "id": 3816,
+    "name": "Cameron Nelson",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "1998-07-28",
+    "slug": "cameron-nelson",
+    "career_record": "7-1-0",
+    "career_wins": 7,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 604,
     "name": "Cameron Saaiman",
     "nickname": null,
@@ -20434,6 +20451,23 @@
     "last_fight_date": "2024-09-24"
   },
   {
+    "id": 3814,
+    "name": "Francesco Nuzzi",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1996-08-28",
+    "slug": "francesco-nuzzi",
+    "career_record": "11-2-0",
+    "career_wins": 11,
+    "career_losses": 2,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 1427,
     "name": "Francimar Barroso",
     "nickname": null,
@@ -23101,6 +23135,23 @@
     "career_nc": 0,
     "division": "Flyweight",
     "last_fight_date": "2017-08-05"
+  },
+  {
+    "id": 3815,
+    "name": "Hector Santiago",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "1993-03-21",
+    "slug": "hector-santiago",
+    "career_record": "6-1-0",
+    "career_wins": 6,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 1566,

@@ -188,6 +188,13 @@
         "slug": "junior-tafa-vs-liu-ce"
       },
       {
+        "fighter_a": "Bilal Hasan",
+        "fighter_b": "Nilson Rojas",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "bilal-hasan-vs-nilson-rojas"
+      },
+      {
         "fighter_a": "Andre Lima",
         "fighter_b": "Namsrai Batbayar",
         "weight_class": "Flyweight",
@@ -202,11 +209,25 @@
         "slug": "kevin-borjas-vs-rei-tsuruya"
       },
       {
+        "fighter_a": "Xiao Long",
+        "fighter_b": "Francesco Nuzzi",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "xiao-long-vs-francesco-nuzzi"
+      },
+      {
         "fighter_a": "Jack Jenkins",
         "fighter_b": "Sean Woodson",
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "jack-jenkins-vs-sean-woodson"
+      },
+      {
+        "fighter_a": "Lawrence Lui",
+        "fighter_b": "Hector Santiago",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "lawrence-lui-vs-hector-santiago"
       },
       {
         "fighter_a": "Julia Polastri",
@@ -216,11 +237,11 @@
         "slug": "julia-polastri-vs-xiong-jingnan"
       },
       {
-        "fighter_a": "Bilal Hasan",
-        "fighter_b": "Nilson Rojas",
-        "weight_class": "Flyweight",
+        "fighter_a": "Ding Meng",
+        "fighter_b": "Cameron Nelson",
+        "weight_class": "Welterweight",
         "is_title": false,
-        "slug": "bilal-hasan-vs-nilson-rojas"
+        "slug": "ding-meng-vs-cameron-nelson"
       }
     ],
     "homepage": true
