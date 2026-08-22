@@ -13,7 +13,7 @@ Twelve fights, eight finishes, and two hours and twenty minutes of total fight t
 
 ## Prelims
 
-#### Fight 1: Jeremiah Wells def. Myktybek Orolbai — Technical Submission (Guillotine Choke), Round 3 (1:24)
+### Fight 1: Jeremiah Wells def. Myktybek Orolbai — Technical Submission (Guillotine Choke), Round 3 (1:24)
 
 The card opened with a Philadelphia fighter against a -1200 favorite, and for two rounds it went exactly the way the odds said it would.
 
@@ -23,7 +23,7 @@ Then Wells landed a right hand square on the jaw. Orolbai shot in to recover, pu
 
 Wells was +2800 to win by submission. He took his gloves off afterward and said the UFC decides his future — he wants a top 15 opponent, and if he can't get one, he's done. He talked about working in that building when he was younger. He talked about his son graduating from Air Force boot camp next week. It was a hell of a way to open a card.
 
-#### Fight 2: Neil Magny def. Ramiz Brahimaj — TKO, Round 2 (3:20)
+### Fight 2: Neil Magny def. Ramiz Brahimaj — TKO, Round 2 (3:20)
 
 Neil Magny does this. He has been doing it for thirteen years and people still get surprised.
 
@@ -33,7 +33,7 @@ The thing about grinding Neil Magny is that it costs you more than it costs him.
 
 That's Magny's 25th UFC win, tying Charles Oliveira for the second-most in promotion history behind Jim Miller's 28. It was also his 38th UFC fight, the most any welterweight has ever had, and his 25 wins are the most in divisional history too. He's 3-1 in his last four with all three wins by finish. At 39, he is somehow in the best form he's had in years.
 
-#### Fight 3: Lucas Fernando def. Rafael Tobias — TKO, Round 3 (1:10)
+### Fight 3: Lucas Fernando def. Rafael Tobias — TKO, Round 3 (1:10)
 
 Two Brazilians at light heavyweight, one making his debut, and it was one of the cleanest debuts you'll see.
 
@@ -43,7 +43,7 @@ The second round was worse for Tobias. A massive jab sat him down, Fernando let 
 
 The finish was a knee to the body at distance. Tobias' body simply quit on him and he dropped. Keith Peterson called it at 1:10. Two knockdowns, a 60% clip, and a body attack that broke a man down over three rounds — that's a professional debut.
 
-#### Fight 4: Tresean Gore def. Vicente Luque — Unanimous Decision (30-27, 30-27, 29-28)
+### Fight 4: Tresean Gore def. Vicente Luque — Unanimous Decision (30-27, 30-27, 29-28)
 
 A physically grueling fight on the card, and the one where a veteran's tank ran dry.
 
@@ -55,7 +55,7 @@ Worth noting: neither man landed a single takedown all night. Gore was 0 for 2, 
 
 The third was Luque surviving. His body language was exhausted from the opening seconds and he barely threw for the first three minutes. Gore jabbed him up, took the round, and took the fight. Gore has now won two in a row and has real power in his hands. He also had some of his bottom teeth knocked out by a knee during the last minute of the third round. During the post-fight interview the broadcast showed the knocked out teeth.
 
-#### Fight 5: Donte Johnson def. Eric McConico — KO, Round 1 (1:38)
+### Fight 5: Donte Johnson def. Eric McConico — KO, Round 1 (1:38)
 
 Ninety-eight seconds, one punch, and one of the scariest finishes of the year.
 
@@ -65,7 +65,7 @@ Then he threw a straight left down the middle. It went through McConico's guard 
 
 Johnson is 9-0 now with eight of his nine wins by stoppage and seven of those eight by knockout. He is an explosion with a fight record attached. McConico has now lost all five of his career fights by knockout.
 
-#### Fight 6: Charles Johnson def. Eduardo Chapolin — Submission (Scottish Twister), Round 3 (1:36)
+### Fight 6: Charles Johnson def. Eduardo Chapolin — Submission (Scottish Twister), Round 3 (1:36)
 
 Have you ever heard of the "Scottish Twister"?
 
@@ -77,7 +77,7 @@ Johnson looked like the fresher man in the third and started dictating. A front 
 
 That is the fifth twister in UFC history and only the second Scottish twister, after Murtazali Magomedov earlier this year. The striking numbers were far closer than the fight felt — Johnson 66 of 142, Chapolin 55 of 131 — and Johnson went 0 for 5 on takedowns. He got it done with the one thing nobody was looking for. Afterward he dedicated the win to Allan Nascimento, the flyweight who passed away earlier this month.
 
-#### Fight 7: Chidi Njokuani def. Joel Alvarez — Unanimous Decision (30-27, 30-27, 29-28)
+### Fight 7: Chidi Njokuani def. Joel Alvarez — Unanimous Decision (30-27, 30-27, 29-28)
 
 The crowd booed this fight and I understand why. The numbers say it was a clinic.
 
@@ -89,7 +89,7 @@ Njokuani was a +260 underdog and snapped a two-fight skid. He got busier as it w
 
 ## Main Card
 
-#### Fight 8: Esteban Ribovics def. Edson Barboza — TKO, Round 2 (1:32)
+### Fight 8: Esteban Ribovics def. Edson Barboza — TKO, Round 2 (1:32)
 
 Edson Barboza's pre-fight walkout was emotional and everyone in the building knew what was coming.
 
@@ -99,7 +99,7 @@ The second round lasted 92 seconds. Ribovics landed an uppercut, hunted Barboza 
 
 Barboza took his gloves off and laid them on the canvas in tears with his kids in the Octagon. Thirty-two UFC fights. He retires with the second-most knockouts by kick or knee in UFC history at six. Ribovics called him an idol and said that when you fight in this sport, you know this day comes for everyone.
 
-#### Fight 9: Dustin Stoltzfus def. Mansur Abdul-Malik — Submission (Rear Naked Choke), Round 2 (4:25)
+### Fight 9: Dustin Stoltzfus def. Mansur Abdul-Malik — Submission (Rear Naked Choke), Round 2 (4:25)
 
 The biggest upset on the main card, and it came from the guy who was supposed to be outgunned everywhere.
 
@@ -109,7 +109,7 @@ The second was chaos, both men trading knees and fists in scrambles, and Abdul-M
 
 These two used to train together. Stoltzfus finished with 43 of 70 at 61%, 3:02 of control, and a $100,000 Performance of the Night bonus. Abdul-Malik is 0-2 in his last two now, and the pattern is getting hard to ignore — the moment someone grabs him, the fight stops being his.
 
-#### Fight 10: Jalin Turner def. Kaue Fernandes — KO, Round 1 (0:39)
+### Fight 10: Jalin Turner def. Kaue Fernandes — KO, Round 1 (0:39)
 
 Thirty-nine seconds. So fast, I couldn't even take notes on what happened.
 
@@ -117,7 +117,7 @@ Thirty-nine seconds. So fast, I couldn't even take notes on what happened.
 
 Turner finished 9 of 14 with a knockdown. That's the whole fight. He wants a number next to his name and called for a top 15 opponent, and he also took home Performance of the Night. When you spin in front of a fighter with that reach and that kind of timing, this is what happens.
 
-#### Fight 11: Champion Mackenzie Dern def. #5 Gillian Robertson — Unanimous Decision (49-46, 49-46, 48-47) — Women's Strawweight Title
+### Fight 11: Champion Mackenzie Dern def. #5 Gillian Robertson — Unanimous Decision (49-46, 49-46, 48-47) — Women's Strawweight Title
 
 [[Mackenzie Dern]]'s first title defense, and she won it going away.
 
@@ -129,7 +129,7 @@ Robertson's only real round was the fifth. She got a takedown, controlled 4:28, 
 
 Her 12 wins in UFC strawweight competition are the second-most in divisional history behind Angela Hill's 13. The fight was low-action and the crowd let them know, but this was a dominant title defense by any measure.
 
-#### Fight 12: Champion Islam Makhachev def. #1 Ian Machado Garry — Unanimous Decision (49-46, 49-46, 48-47) — Welterweight Title
+### Fight 12: Champion Islam Makhachev def. #1 Ian Machado Garry — Unanimous Decision (49-46, 49-46, 48-47) — Welterweight Title
 
 Here's the number that will confuse people: [[Ian Machado Garry]] outlanded [[Islam Makhachev]] 29 to 22 in significant strikes over five rounds. He lost 49-46 on two cards.
 

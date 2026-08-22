@@ -21,8 +21,8 @@
     --fd-blue: #1d4ed8;         /* fighter B */
     --fd-ink: #111;             /* headings / primary text / dark chrome */
     --fd-text: #555;            /* body copy */
-    --fd-muted: #777;           /* secondary text */
-    --fd-faint: #999;           /* tertiary text / labels */
+    --fd-muted: #6b6b6b;           /* secondary text */
+    --fd-faint: #6f6f6f;           /* tertiary text / labels */
     --fd-bg: #f5f5f5;           /* page background */
     --fd-card: #fff;            /* card background */
     --fd-bg-subtle: #fafafa;    /* table headers / hover */
@@ -30,6 +30,7 @@
     --fd-hairline: #f0f0f0;
     --fd-win: #15803d;
     --fd-warn: #c2410c;
+    --fd-red-on-dark: #f05252;  /* AA-safe red for text on the dark chrome */
     --fd-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --fd-mono: 'SF Mono', Menlo, monospace;
     --fd-radius: 6px;
@@ -45,6 +46,34 @@ body { font-family: var(--fd-sans);
 :where(.fd-compare, .fd-profile) a:hover { text-decoration: underline; }
 
 /* ── Chrome: header / nav (shared by every generated page) ──────────────── */
+/* Skip link — mirrors styles.css so generated pages match the Eleventy ones.
+   Off-screen until focused, so it costs sighted users nothing and saves a
+   keyboard user from tabbing the whole nav on all ~5,000 generated pages. */
+.skip-link {
+    position: absolute; top: -40px; left: 0; background: var(--fd-red); color: #fff;
+    padding: 8px 16px; z-index: 100; transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
+/* ── Focus visibility (WCAG 2.4.7) — mirrors styles.css ───────────────────
+   :focus-visible so a mouse click leaves no ring, only keyboard navigation.
+   White on the dark chrome because brand red is 3.77:1 against #111. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid var(--fd-red);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+.site-header a:focus-visible,
+.site-footer a:focus-visible,
+.site-nav-toggle:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
 .site-header { background: var(--fd-ink); position: sticky; top: 0; z-index: 90; }
 .site-header-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px;
     display: flex; align-items: center; justify-content: space-between; height: 52px; }
@@ -155,7 +184,7 @@ body { font-family: var(--fd-sans);
     margin: 1rem 0; padding: 1.5rem 0; background: var(--fd-card);
     border: 1px solid var(--fd-border); border-radius: var(--fd-radius); box-shadow: var(--fd-shadow); }
 :where(.fd-compare) .fighter-info { flex: 1; text-align: center; }
-:where(.fd-compare) .fighter-info h3 { margin: 0; color: var(--fd-ink); font-size: 1.6rem; font-weight: 900;
+:where(.fd-compare) .fighter-info h2 { margin: 0; color: var(--fd-ink); font-size: 1.6rem; font-weight: 900;
     text-transform: uppercase; letter-spacing: -0.5px; }
 :where(.fd-compare) .fighter-name-link { color: var(--fd-ink); text-decoration: none;
     border-bottom: 2px solid var(--fd-border); }
@@ -188,7 +217,7 @@ body { font-family: var(--fd-sans);
 :where(.fd-compare) .bio-compare-values { display: flex; justify-content: center; gap: 12px; }
 :where(.fd-compare) .bio-compare-values span { font-family: var(--fd-mono);
     font-size: 0.8rem; font-weight: 600; color: var(--fd-ink); }
-:where(.fd-compare) .bio-compare-values .sep { color: #ddd; font-weight: 400; }
+:where(.fd-compare) .bio-compare-values .sep { color: var(--fd-faint); font-weight: 400; }
 
 :where(.fd-compare) table { width: 100%; border-collapse: collapse; background: var(--fd-card);
         margin: 0.5rem 0; border-radius: var(--fd-radius); overflow: hidden;
@@ -205,7 +234,7 @@ body { font-family: var(--fd-sans);
 :where(.fd-compare) .edge { width: 10%; text-align: center; font-weight: bold; font-size: 0.85rem; }
 :where(.fd-compare) .edge-a { color: var(--fd-red); }
 :where(.fd-compare) .edge-b { color: var(--fd-blue); }
-:where(.fd-compare) .edge-even { color: #ccc; }
+:where(.fd-compare) .edge-even { color: var(--fd-muted); }  /* was #ccc = 1.61:1; the em-dash means "no edge", real content */
 :where(.fd-compare) .edge-summary-row td { border-top: 2px solid var(--fd-border); background: var(--fd-bg-subtle); font-weight: 700; }
 
 :where(.fd-compare) .sample-warning { background: #fff7ed; border: 1px solid #fed7aa;

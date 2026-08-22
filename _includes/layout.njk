@@ -42,14 +42,14 @@
     <header class="site-header">
         <div class="container">
             <a href="/" class="site-logo">FIGHTING<span>DATA</span></a>
-            <button class="mobile-menu-btn" onclick="document.querySelector('.site-nav').classList.toggle('mobile-open')" aria-label="Menu">
+            <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" onclick="var n=document.querySelector('.site-nav');var o=n.classList.toggle('mobile-open');this.setAttribute('aria-expanded',o);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
-            <nav class="site-nav">
+            <nav class="site-nav" id="site-nav">
                 <a href="/"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
                 <a href="/articles/"{% if "/articles/" in page.url %} class="active"{% endif %}>Articles</a>
                 <a href="/events/"{% if page.url == "/events/" %} class="active"{% endif %}>Events</a>

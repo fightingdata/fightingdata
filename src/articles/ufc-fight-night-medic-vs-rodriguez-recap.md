@@ -11,7 +11,7 @@ The UFC went to Serbia for the first time on August 1st, 2026, and Belgrade Aren
 
 ## Prelims
 
-#### Fight 1: Stephanie Luciano def. Marina Spasic — Submission (Rear Naked Choke), Round 1 (3:20)
+### Fight 1: Stephanie Luciano def. Marina Spasic — Submission (Rear Naked Choke), Round 1 (3:20)
 
 The card opened with a Serbian fighter in the cage and the building at full volume, and then [[Stephanie Luciano]] quieted it in three and a half minutes.
 
@@ -21,7 +21,7 @@ But it didn't go ten more minutes. Luciano waited, let Spasic get comfortable th
 
 Beautiful patience on that shot. Luciano now has back-to-back rear naked choke finishes and sits at 8-2-1. Spasic suffered the first stoppage loss of her career and never saw it coming, because for three minutes she was the better fighter.
 
-#### Fight 2: Jovan Leka def. Alexander Poppeck — KO, Round 1 (2:22)
+### Fight 2: Jovan Leka def. Alexander Poppeck — KO, Round 1 (2:22)
 
 Two Contender Series alums, both making their actual UFC debuts, and a 47-pound weight difference — [[Jovan Leka]] at 262, [[Alexander Poppeck]] at 215.
 
@@ -31,7 +31,7 @@ BANG! Leka threw one body kick and it sounded like a gunshot. Right to the liver
 
 One of the nastiest, loudest body kicks you'll ever hear. Leka becomes the first Serbian to win on Serbian soil, and the building erupted.
 
-#### Fight 3: Nina Milosevic def. Hailey Cowan — TKO, Round 1 (3:41)
+### Fight 3: Nina Milosevic def. Hailey Cowan — TKO, Round 1 (3:41)
 
 Serbia went 2-for-2 with a body shot of its own.
 
@@ -41,7 +41,7 @@ The finish was a straight right to the middle of the body. Cowan's hands dropped
 
 She said she wants to fight again as soon as possible. Give it to her. As for Cowan, she's 0-4 in the UFC now and on a four-fight losing skid — I don't want to see her on a UFC card again.
 
-#### Fight 4: Mateusz Rebecki def. Kyle Prepolec — TKO, Round 1 (4:41)
+### Fight 4: Mateusz Rebecki def. Kyle Prepolec — TKO, Round 1 (4:41)
 
 This was a beating.
 
@@ -51,7 +51,7 @@ Prepolec landed two strikes. Two. By the end he was on all fours with his hands 
 
 Rebecki snapped a three-fight losing skid here for his first win since October 2024, and he's now landed at least one takedown against all nine of his UFC opponents. Prepolec falls to 0-5 in the UFC and 0-3 since returning in May of last year.
 
-#### Fight 5: Bogdan Grad def. Dennis Buzukja — Submission (Arm Triangle), Round 2 (4:33)
+### Fight 5: Bogdan Grad def. Dennis Buzukja — Submission (Arm Triangle), Round 2 (4:33)
 
 The first fight of the night to escape round one, and the most controversial result on the card.
 
@@ -63,7 +63,7 @@ Then Grad caught a sloppy exchange, took top position, and locked the arm triang
 
 For what it's worth, I think Buzukja was going to lose that position regardless. But Grad was fading badly and Buzukja was the fresher man. Would have been fun to watch that one go to a decision.
 
-#### Fight 6: Borislav Nikolic def. Mark Vologdin — Unanimous Decision (29-27, 29-27, 29-27)
+### Fight 6: Borislav Nikolic def. Mark Vologdin — Unanimous Decision (29-27, 29-27, 29-27)
 
 The judges finally got involved, and it took six fights.
 
@@ -75,7 +75,7 @@ Round three is where Nikolic earned the scorecards. He battered Vologdin for the
 
 Credit to Vologdin. He ate a full round of back-mount ground-and-pound and never stopped fighting. But Nikolic wasn't impressive here given the hype around a 94 percent career finish rate, and I'd want to see him with a full camp before drawing conclusions.
 
-#### Fight 7: Michael Oliveira def. Oban Elliott — KO, Round 1 (1:49)
+### Fight 7: Michael Oliveira def. Oban Elliott — KO, Round 1 (1:49)
 
 Nine years in the Brazilian army as a paratrooper, undefeated, and now 10-0 with a UFC debut knockout.
 
@@ -85,7 +85,7 @@ Two knockdowns in 109 seconds. Oliveira has finished nine of his ten career wins
 
 Elliott drops to three straight losses, the longest skid of his career.
 
-#### Fight 8: Tofiq Musayev def. Ludovit Klein — TKO, Round 2 (4:07)
+### Fight 8: Tofiq Musayev def. Ludovit Klein — TKO, Round 2 (4:07)
 
 The best technical fight on the prelims, and the numbers say it was dead even until it wasn't.
 
@@ -99,7 +99,7 @@ Musayev has now finished 21 of his 24 career wins and wants a top-15 opponent. A
 
 ## Main Card
 
-#### Fight 9: Noah Gugnon def. Milos Janicic — Submission (Rear Naked Choke), Round 1 (1:21)
+### Fight 9: Noah Gugnon def. Milos Janicic — Submission (Rear Naked Choke), Round 1 (1:21)
 
 Both men making their UFC debuts, both with 100 percent finish rates, and it lasted eighty-one seconds.
 
@@ -109,7 +109,7 @@ From there Gugnon took full mount, took the back, and got the tap at 1:21. Janic
 
 Hard to scout either man off this. Gugnon has finished all ten of his career wins and looked composed, but the injury wrote this one. Janicic suffered the first submission loss of his career.
 
-#### Fight 10: Gilbert Urbina def. Vlasto Cepo — TKO, Round 1 (1:01)
+### Fight 10: Gilbert Urbina def. Vlasto Cepo — TKO, Round 1 (1:01)
 
 The biggest upset on the card. [[Gilbert Urbina]] was a plus-270 underdog and needed sixty-one seconds.
 
@@ -119,7 +119,7 @@ Cepo went 7 of 24 for twenty-nine percent and never mounted any defense once he 
 
 Urbina landed 30 significant strikes in 61 seconds at sixty-two percent accuracy in his middleweight debut and took home $100,000 for Performance of the Night. That's how you answer a promotional cut conversation.
 
-#### Fight 11: Robert Valentin def. Dusko Todorovic — Submission (Guillotine), Round 1 (4:14)
+### Fight 11: Robert Valentin def. Dusko Todorovic — Submission (Guillotine), Round 1 (4:14)
 
 Almost no striking, constant scrambling, and a submission that came from a place you don't expect.
 
@@ -129,7 +129,7 @@ The finish is the detail worth getting right. Todorovic reversed into what looke
 
 Two significant strikes landed in the entire fight — one each. That's it. Valentin has now finished 11 of his 12 career wins and both of his UFC victories by submission. Todorovic suffered the first submission loss of his career and has gone 3-7 in his last ten after starting 11-0.
 
-#### Fight 12: Aleksandar Rakic def. #13 Marcin Tybura — Unanimous Decision (30-27, 30-27, 30-27)
+### Fight 12: Aleksandar Rakic def. #13 Marcin Tybura — Unanimous Decision (30-27, 30-27, 30-27)
 
 [[Aleksandar Rakic]] moved up to heavyweight for the first time and won his first fight in over five years.
 
@@ -141,7 +141,7 @@ Round one wasn't close: Rakic 36 of 60 at sixty percent, Tybura 10 of 56 at seve
 
 The third round was ugly — a lot of fence clinching, both men slowing down, not much happening. But the result was never in doubt. Tybura went twenty-five percent, recorded no control time, completed no takedowns, and didn't seem particularly interested in changing any of that. I don't really care to watch him fight if that's how it's going to go.
 
-#### Fight 13: #15 Navajo Stirling def. #4 Jan Blachowicz — TKO, Round 1 (2:56)
+### Fight 13: #15 Navajo Stirling def. #4 Jan Blachowicz — TKO, Round 1 (2:56)
 
 Five months ago on the Adesanya vs. Pyfer card, I wrote that [[Navajo Stirling]] doesn't panic — that he builds, breaks you, and then finishes. He just did it to a former light heavyweight champion on less than two weeks' notice.
 
@@ -155,7 +155,7 @@ Stirling is 11-0 and his six-fight UFC light heavyweight win streak is second-lo
 
 For Blachowicz, this is a five-fight winless run, the longest of his career, and he hasn't won since May 2022. Seven of his nine UFC losses have come by decision, so getting stopped like this is new territory at 43.
 
-#### Fight 14: #14 Uros Medic def. #15 Daniel Rodriguez — TKO, Round 1 (0:30)
+### Fight 14: #14 Uros Medic def. #15 Daniel Rodriguez — TKO, Round 1 (0:30)
 
 A five-round main event that lasted thirty seconds.
 
