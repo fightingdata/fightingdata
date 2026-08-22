@@ -395,13 +395,13 @@ a:hover { text-decoration: underline; }
 .subscribe-page { padding: 36px 0 56px; }
 .subscribe-wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
 .subscribe-title { font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
-.subscribe-deck { color: #555; font-size: 1.1rem; line-height: 1.6; margin-bottom: 28px; }
-.subscribe-notes { margin-top: 36px; padding-top: 24px; border-top: 1px solid #e2e2e2; }
+.subscribe-deck { color: var(--fd-text); font-size: 1.1rem; line-height: 1.6; margin-bottom: 28px; }
+.subscribe-notes { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--fd-border); }
 .subscribe-notes h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; }
 .subscribe-notes ul { margin: 0 0 20px 22px; }
-.subscribe-notes li { margin-bottom: 10px; color: #555; line-height: 1.7; }
-.subscribe-fineprint { color: #777; font-size: 14px; line-height: 1.6; }
-.subscribe-fineprint a { color: #d62828; }
+.subscribe-notes li { margin-bottom: 10px; color: var(--fd-text); line-height: 1.7; }
+.subscribe-fineprint { color: var(--fd-muted); font-size: 14px; line-height: 1.6; }
+.subscribe-fineprint a { color: var(--fd-red); }
 
 /* End-of-article + homepage placement */
 /* Cap and centre the block. On an article this is a no-op (the column is
@@ -410,16 +410,41 @@ a:hover { text-decoration: underline; }
    The form does not scale up with its frame — it just gets more empty space. */
 .article-subscribe {
     max-width: 720px; margin: 44px auto 0;
-    padding-top: 28px; border-top: 3px solid #111;
+    padding-top: 28px; border-top: 3px solid var(--fd-ink);
 }
 .article-subscribe-kicker {
     font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
-    color: #d62828; margin-bottom: 10px;
+    color: var(--fd-red); margin-bottom: 10px;
 }
 .article-subscribe h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; }
-.article-subscribe p { color: #555; line-height: 1.6; margin-bottom: 20px; }
+.article-subscribe p { color: var(--fd-text); line-height: 1.6; margin-bottom: 20px; }
 
 @media (max-width: 640px) {
     .subscribe-title { font-size: 1.7rem; }
     .subscribe-deck { font-size: 1.05rem; }
 }
+
+/* ── /welcome/ — post-confirmation landing (Beehiiv signup flow redirect) ──── */
+.welcome-badge {
+    display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--fd-card); background: var(--fd-win);
+    padding: 5px 11px; border-radius: 3px; margin-bottom: 16px;
+}
+.welcome-next { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--fd-border); }
+.welcome-next h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 16px; }
+.welcome-card {
+    display: block; padding: 16px 18px; margin-bottom: 12px;
+    background: var(--fd-card); border: 1px solid var(--fd-border); border-radius: 6px;
+    text-decoration: none; transition: border-color .15s, transform .15s;
+}
+.welcome-card:hover { border-color: var(--fd-red); transform: translateY(-1px); }
+.welcome-card-title {
+    display: block; font-weight: 800; font-size: 15px; color: var(--fd-ink); margin-bottom: 4px;
+}
+.welcome-card:hover .welcome-card-title { color: var(--fd-red); }
+.welcome-card-body { display: block; color: var(--fd-text); font-size: 14px; line-height: 1.6; }
+.welcome-ask {
+    margin-top: 28px; padding: 16px 18px;
+    background: var(--fd-bg-subtle); border-left: 3px solid var(--fd-red); border-radius: 0 4px 4px 0;
+}
+.welcome-ask p { color: var(--fd-text); font-size: 15px; line-height: 1.7; margin: 0; }
