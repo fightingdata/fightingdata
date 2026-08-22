@@ -443,8 +443,3 @@ a:hover { text-decoration: underline; }
 }
 .welcome-card:hover .welcome-card-title { color: var(--fd-red); }
 .welcome-card-body { display: block; color: var(--fd-text); font-size: 14px; line-height: 1.6; }
-.welcome-ask {
-    margin-top: 28px; padding: 16px 18px;
-    background: var(--fd-bg-subtle); border-left: 3px solid var(--fd-red); border-radius: 0 4px 4px 0;
-}
-.welcome-ask p { color: var(--fd-text); font-size: 15px; line-height: 1.7; margin: 0; }
