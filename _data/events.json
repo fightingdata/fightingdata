@@ -209,18 +209,18 @@
         "slug": "kevin-borjas-vs-rei-tsuruya"
       },
       {
-        "fighter_a": "Xiao Long",
-        "fighter_b": "Francesco Nuzzi",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "xiao-long-vs-francesco-nuzzi"
-      },
-      {
         "fighter_a": "Jack Jenkins",
         "fighter_b": "Sean Woodson",
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "jack-jenkins-vs-sean-woodson"
+      },
+      {
+        "fighter_a": "Xiao Long",
+        "fighter_b": "Francesco Nuzzi",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "xiao-long-vs-francesco-nuzzi"
       },
       {
         "fighter_a": "Lawrence Lui",
@@ -362,6 +362,13 @@
         "slug": "brandon-moreno-vs-joseph-morales"
       },
       {
+        "fighter_a": "Marwan Rahiki",
+        "fighter_b": "Tommy McMillen",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "marwan-rahiki-vs-tommy-mcmillen"
+      },
+      {
         "fighter_a": "Alexa Grasso",
         "fighter_b": "Manon Fiorot",
         "weight_class": "Women's Flyweight",
@@ -404,6 +411,13 @@
         "slug": "yousri-belgaroui-vs-kelvin-gastelum"
       },
       {
+        "fighter_a": "Rodrigo Vera",
+        "fighter_b": "Ramiro Jimenez",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "rodrigo-vera-vs-ramiro-jimenez"
+      },
+      {
         "fighter_a": "JJ Aldrich",
         "fighter_b": "Regina Tarin",
         "weight_class": "Women's Flyweight",
@@ -411,18 +425,11 @@
         "slug": "jj-aldrich-vs-regina-tarin"
       },
       {
-        "fighter_a": "Marwan Rahiki",
-        "fighter_b": "Tommy McMillen",
-        "weight_class": "Featherweight",
+        "fighter_a": "Rafa Garcia",
+        "fighter_b": "Rongzhu",
+        "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "marwan-rahiki-vs-tommy-mcmillen"
-      },
-      {
-        "fighter_a": "Rodrigo Vera",
-        "fighter_b": "Ramiro Jimenez",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "rodrigo-vera-vs-ramiro-jimenez"
+        "slug": "rafa-garcia-vs-rongzhu"
       }
     ],
     "homepage": true

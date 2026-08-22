@@ -260,16 +260,6 @@
     "weight_class": "Flyweight"
   },
   {
-    "fighter_a": "Xiao Long",
-    "fighter_b": "Francesco Nuzzi",
-    "slug": "xiao-long-vs-francesco-nuzzi",
-    "url": "/compare/xiao-long-vs-francesco-nuzzi/",
-    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
-    "event_date": "Saturday, August 29, 2026",
-    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
-    "weight_class": "Bantamweight"
-  },
-  {
     "fighter_a": "Jack Jenkins",
     "fighter_b": "Sean Woodson",
     "slug": "jack-jenkins-vs-sean-woodson",
@@ -278,6 +268,16 @@
     "event_date": "Saturday, August 29, 2026",
     "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
     "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Xiao Long",
+    "fighter_b": "Francesco Nuzzi",
+    "slug": "xiao-long-vs-francesco-nuzzi",
+    "url": "/compare/xiao-long-vs-francesco-nuzzi/",
+    "event_name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "event_date": "Saturday, August 29, 2026",
+    "event_slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Lawrence Lui",
@@ -450,6 +450,16 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "Marwan Rahiki",
+    "fighter_b": "Tommy McMillen",
+    "slug": "marwan-rahiki-vs-tommy-mcmillen",
+    "url": "/compare/marwan-rahiki-vs-tommy-mcmillen/",
+    "event_name": "Noche UFC: Rodriguez vs. Silva",
+    "event_date": "Saturday, September 12, 2026",
+    "event_slug": "noche-ufc-rodriguez-vs-silva",
+    "weight_class": "Featherweight"
+  },
+  {
     "fighter_a": "Alexa Grasso",
     "fighter_b": "Manon Fiorot",
     "slug": "alexa-grasso-vs-manon-fiorot",
@@ -510,6 +520,16 @@
     "weight_class": "Middleweight"
   },
   {
+    "fighter_a": "Rodrigo Vera",
+    "fighter_b": "Ramiro Jimenez",
+    "slug": "rodrigo-vera-vs-ramiro-jimenez",
+    "url": "/compare/rodrigo-vera-vs-ramiro-jimenez/",
+    "event_name": "Noche UFC: Rodriguez vs. Silva",
+    "event_date": "Saturday, September 12, 2026",
+    "event_slug": "noche-ufc-rodriguez-vs-silva",
+    "weight_class": "Featherweight"
+  },
+  {
     "fighter_a": "JJ Aldrich",
     "fighter_b": "Regina Tarin",
     "slug": "jj-aldrich-vs-regina-tarin",
@@ -520,24 +540,14 @@
     "weight_class": "Women's Flyweight"
   },
   {
-    "fighter_a": "Marwan Rahiki",
-    "fighter_b": "Tommy McMillen",
-    "slug": "marwan-rahiki-vs-tommy-mcmillen",
-    "url": "/compare/marwan-rahiki-vs-tommy-mcmillen/",
+    "fighter_a": "Rafa Garcia",
+    "fighter_b": "Rongzhu",
+    "slug": "rafa-garcia-vs-rongzhu",
+    "url": "/compare/rafa-garcia-vs-rongzhu/",
     "event_name": "Noche UFC: Rodriguez vs. Silva",
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "noche-ufc-rodriguez-vs-silva",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Rodrigo Vera",
-    "fighter_b": "Ramiro Jimenez",
-    "slug": "rodrigo-vera-vs-ramiro-jimenez",
-    "url": "/compare/rodrigo-vera-vs-ramiro-jimenez/",
-    "event_name": "Noche UFC: Rodriguez vs. Silva",
-    "event_date": "Saturday, September 12, 2026",
-    "event_slug": "noche-ufc-rodriguez-vs-silva",
-    "weight_class": "Featherweight"
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Joshua Van",
