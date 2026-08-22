@@ -19,6 +19,20 @@
 
     {% if noindex %}<meta name="robots" content="noindex, follow">{% endif %}
     <link rel="canonical" href="https://fightingdata.com{{ page.url }}">
+
+    {#- JSON-LD. Organization/WebSite is emitted ONCE, on the homepage — repeating
+        the site identity on every page adds bytes and tells Google nothing new.
+        Article pages emit their own schema via article.njk instead. -#}
+    {% if page.url == "/" %}
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"FightingData","url":"https://fightingdata.com","logo":{"@type":"ImageObject","url":"https://fightingdata.com/assets/images/logo-800.png"},"description":"UFC fight analysis and fighter statistics, built on 25 years of UFC fight data.","sameAs":["https://x.com/fightingdata"]}</script>
+    {% endif %}
+    {#- Articles carry the "articles" tag via src/articles/articles.json. Detected
+        here rather than set in article.njk because a child template cannot pass a
+        variable up into its layout. `| dump` is JSON.stringify, so titles with
+        quotes, em-dashes or apostrophes stay valid JSON. -#}
+    {% if "articles" in (tags or []) %}
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ title | dump | safe }},"description":{{ (deck or description or "") | dump | safe }},"datePublished":{{ (date | isoDate) | dump | safe }},"author":{"@type":"Person","name":"Jacob Grajauskis"},"publisher":{"@type":"Organization","name":"FightingData","logo":{"@type":"ImageObject","url":"https://fightingdata.com/assets/images/logo-800.png"}},"image":"https://fightingdata.com/assets/share/default.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://fightingdata.com{{ page.url }}"}}</script>
+    {% endif %}
     <script defer data-domain="fightingdata.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>

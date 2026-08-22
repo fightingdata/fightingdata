@@ -66,6 +66,15 @@ module.exports = function(eleventyConfig) {
     return isNaN(d) ? new Date().getFullYear() : d.getUTCFullYear();
   });
 
+  // ISO date (YYYY-MM-DD) for JSON-LD datePublished. UTC getters for the same
+  // reason as articleDate below: a "YYYY-MM-DD" frontmatter date parses to
+  // midnight UTC, and local getters would shift it a day west of Greenwich.
+  eleventyConfig.addFilter("isoDate", function(value) {
+    const d = (value instanceof Date) ? value : new Date(value);
+    if (isNaN(d)) return "";
+    return d.toISOString().slice(0, 10);
+  });
+
   // Long-form article date, e.g. "April 12, 2026".
   // Uses UTC getters so a "YYYY-MM-DD" frontmatter date never shifts a day
   // due to the local timezone when Eleventy parses it to midnight UTC.
