@@ -1,117 +1,117 @@
 {
   "total_fighters": 3816,
-  "total_events": 1267,
-  "total_fights": 11323,
-  "upcoming_events": 7,
+  "total_events": 1270,
+  "total_fights": 11340,
+  "upcoming_events": 9,
   "date_range_start": "1993-11-12",
-  "date_range_end": "2026-10-17",
-  "last_updated": "2026-08-22T12:28:06.882230",
+  "date_range_end": "2026-10-24",
+  "last_updated": "2026-08-24T09:14:26.032447",
   "featured_event": {
-    "name": "UFC Fight Night: Hernandez vs. Rodrigues",
-    "date": "Saturday, August 22, 2026",
-    "iso_date": "2026-08-22",
-    "location": "Sacramento, California, USA",
-    "slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "date": "Saturday, August 29, 2026",
+    "iso_date": "2026-08-29",
+    "location": "Shanghai, China",
+    "slug": "ufc-fight-night-nurmagomedov-vs-song",
     "is_past": false,
     "matchups": [
       {
-        "fighter_a": "Anthony Hernandez",
-        "fighter_b": "Gregory Rodrigues",
-        "weight_class": "Middleweight",
+        "fighter_a": "Song Yadong",
+        "fighter_b": "Umar Nurmagomedov",
+        "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "anthony-hernandez-vs-gregory-rodrigues"
+        "slug": "song-yadong-vs-umar-nurmagomedov"
       },
       {
-        "fighter_a": "Serghei Spivac",
-        "fighter_b": "Vitor Petrino",
-        "weight_class": "Heavyweight",
+        "fighter_a": "Denise Gomes",
+        "fighter_b": "Yan Xiaonan",
+        "weight_class": "Women's Strawweight",
         "is_title": false,
-        "slug": "serghei-spivac-vs-vitor-petrino"
+        "slug": "denise-gomes-vs-yan-xiaonan"
       },
       {
-        "fighter_a": "Reinier de Ridder",
-        "fighter_b": "Roman Dolidze",
+        "fighter_a": "Aoriqileng",
+        "fighter_b": "Kai Asakura",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "aoriqileng-vs-kai-asakura"
+      },
+      {
+        "fighter_a": "Sumudaerji",
+        "fighter_b": "Alex Perez",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "sumudaerji-vs-alex-perez"
+      },
+      {
+        "fighter_a": "Junior Tafa",
+        "fighter_b": "Liu Ce",
         "weight_class": "Light Heavyweight",
         "is_title": false,
-        "slug": "reinier-de-ridder-vs-roman-dolidze"
+        "slug": "junior-tafa-vs-liu-ce"
       },
       {
-        "fighter_a": "Mason Jones",
-        "fighter_b": "MarQuel Mederos",
-        "weight_class": "Lightweight",
+        "fighter_a": "Bilal Hasan",
+        "fighter_b": "Nilson Rojas",
+        "weight_class": "Flyweight",
         "is_title": false,
-        "slug": "mason-jones-vs-marquel-mederos"
+        "slug": "bilal-hasan-vs-nilson-rojas"
       },
       {
-        "fighter_a": "Carli Judice",
-        "fighter_b": "Jeisla Chaves",
-        "weight_class": "Women's Strawweight",
+        "fighter_a": "Andre Lima",
+        "fighter_b": "Namsrai Batbayar",
+        "weight_class": "Flyweight",
         "is_title": false,
-        "slug": "carli-judice-vs-jeisla-chaves"
+        "slug": "andre-lima-vs-namsrai-batbayar"
       },
       {
-        "fighter_a": "Terrance Chatman",
-        "fighter_b": "Anthony Wint",
-        "weight_class": "Heavyweight",
+        "fighter_a": "Kevin Borjas",
+        "fighter_b": "Rei Tsuruya",
+        "weight_class": "Flyweight",
         "is_title": false,
-        "slug": "terrance-chatman-vs-anthony-wint"
+        "slug": "kevin-borjas-vs-rei-tsuruya"
       },
       {
-        "fighter_a": "Lerryan Douglas",
-        "fighter_b": "Jamall Emmers",
+        "fighter_a": "Jack Jenkins",
+        "fighter_b": "Sean Woodson",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "lerryan-douglas-vs-jamall-emmers"
+        "slug": "jack-jenkins-vs-sean-woodson"
       },
       {
-        "fighter_a": "Kennedy Nzechukwu",
-        "fighter_b": "Shamil Gaziev",
-        "weight_class": "Heavyweight",
+        "fighter_a": "Xiao Long",
+        "fighter_b": "Francesco Nuzzi",
+        "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "kennedy-nzechukwu-vs-shamil-gaziev"
+        "slug": "xiao-long-vs-francesco-nuzzi"
       },
       {
-        "fighter_a": "Nasrat Haqparast",
-        "fighter_b": "Chris Padilla",
-        "weight_class": "Lightweight",
+        "fighter_a": "Lawrence Lui",
+        "fighter_b": "Hector Santiago",
+        "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "nasrat-haqparast-vs-chris-padilla"
+        "slug": "lawrence-lui-vs-hector-santiago"
       },
       {
-        "fighter_a": "Marcio Barbosa",
-        "fighter_b": "Ryan Kuse",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "marcio-barbosa-vs-ryan-kuse"
-      },
-      {
-        "fighter_a": "Gauge Young",
-        "fighter_b": "Stan Dorsainvil",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "gauge-young-vs-stan-dorsainvil"
-      },
-      {
-        "fighter_a": "Wes Schultz",
-        "fighter_b": "Jackson McVey",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "wes-schultz-vs-jackson-mcvey"
-      },
-      {
-        "fighter_a": "Shanelle Dyer",
-        "fighter_b": "Elise Reed",
+        "fighter_a": "Julia Polastri",
+        "fighter_b": "Xiong Jingnan",
         "weight_class": "Women's Strawweight",
         "is_title": false,
-        "slug": "shanelle-dyer-vs-elise-reed"
+        "slug": "julia-polastri-vs-xiong-jingnan"
+      },
+      {
+        "fighter_a": "Ding Meng",
+        "fighter_b": "Cameron Nelson",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "ding-meng-vs-cameron-nelson"
       }
     ]
   },
   "latest_result": {
-    "name": "UFC 330: Makhachev vs. Machado Garry",
-    "date": "Saturday, August 15, 2026",
-    "iso_date": "2026-08-15",
-    "location": "Philadelphia, Pennsylvania, USA",
-    "slug": "ufc-330-makhachev-vs-machado-garry"
+    "name": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "date": "Saturday, August 22, 2026",
+    "iso_date": "2026-08-22",
+    "location": "Sacramento, California, USA",
+    "slug": "ufc-fight-night-hernandez-vs-rodrigues"
   }
 }

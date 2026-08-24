@@ -1,106 +1,5 @@
 [
   {
-    "id": 1223,
-    "name": "UFC Fight Night: Hernandez vs. Rodrigues",
-    "date": "Saturday, August 22, 2026",
-    "location": "Sacramento, California, USA",
-    "slug": "ufc-fight-night-hernandez-vs-rodrigues",
-    "matchups": [
-      {
-        "fighter_a": "Anthony Hernandez",
-        "fighter_b": "Gregory Rodrigues",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "anthony-hernandez-vs-gregory-rodrigues"
-      },
-      {
-        "fighter_a": "Serghei Spivac",
-        "fighter_b": "Vitor Petrino",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "serghei-spivac-vs-vitor-petrino"
-      },
-      {
-        "fighter_a": "Reinier de Ridder",
-        "fighter_b": "Roman Dolidze",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "reinier-de-ridder-vs-roman-dolidze"
-      },
-      {
-        "fighter_a": "Mason Jones",
-        "fighter_b": "MarQuel Mederos",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "mason-jones-vs-marquel-mederos"
-      },
-      {
-        "fighter_a": "Carli Judice",
-        "fighter_b": "Jeisla Chaves",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "carli-judice-vs-jeisla-chaves"
-      },
-      {
-        "fighter_a": "Terrance Chatman",
-        "fighter_b": "Anthony Wint",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "terrance-chatman-vs-anthony-wint"
-      },
-      {
-        "fighter_a": "Lerryan Douglas",
-        "fighter_b": "Jamall Emmers",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "lerryan-douglas-vs-jamall-emmers"
-      },
-      {
-        "fighter_a": "Kennedy Nzechukwu",
-        "fighter_b": "Shamil Gaziev",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "kennedy-nzechukwu-vs-shamil-gaziev"
-      },
-      {
-        "fighter_a": "Nasrat Haqparast",
-        "fighter_b": "Chris Padilla",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "nasrat-haqparast-vs-chris-padilla"
-      },
-      {
-        "fighter_a": "Marcio Barbosa",
-        "fighter_b": "Ryan Kuse",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "marcio-barbosa-vs-ryan-kuse"
-      },
-      {
-        "fighter_a": "Gauge Young",
-        "fighter_b": "Stan Dorsainvil",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "gauge-young-vs-stan-dorsainvil"
-      },
-      {
-        "fighter_a": "Wes Schultz",
-        "fighter_b": "Jackson McVey",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "wes-schultz-vs-jackson-mcvey"
-      },
-      {
-        "fighter_a": "Shanelle Dyer",
-        "fighter_b": "Elise Reed",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "shanelle-dyer-vs-elise-reed"
-      }
-    ],
-    "homepage": true
-  },
-  {
     "id": 1263,
     "name": "DWCS 10.3",
     "date": "Tuesday, August 25, 2026",
@@ -536,6 +435,82 @@
     "homepage": true
   },
   {
+    "id": 1268,
+    "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+    "date": "Saturday, September 26, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-rosas-jr-vs-barcelos",
+    "matchups": [
+      {
+        "fighter_a": "Raul Rosas Jr.",
+        "fighter_b": "Raoni Barcelos",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "raul-rosas-jr-vs-raoni-barcelos"
+      }
+    ],
+    "homepage": false
+  },
+  {
+    "id": 1269,
+    "name": "UFC 332",
+    "date": "Saturday, October 3, 2026",
+    "location": "Salt Lake City, Utah, USA",
+    "slug": "ufc-332",
+    "matchups": [
+      {
+        "fighter_a": "Deiveson Figueiredo",
+        "fighter_b": "Payton Talbott",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "deiveson-figueiredo-vs-payton-talbott"
+      },
+      {
+        "fighter_a": "Mick Parkin",
+        "fighter_b": "Johnny Walker",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "mick-parkin-vs-johnny-walker"
+      },
+      {
+        "fighter_a": "Marvin Vettori",
+        "fighter_b": "Ismail Naurdiev",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "marvin-vettori-vs-ismail-naurdiev"
+      },
+      {
+        "fighter_a": "Ateba Gautier",
+        "fighter_b": "Roman Kopylov",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "ateba-gautier-vs-roman-kopylov"
+      },
+      {
+        "fighter_a": "Alden Coria",
+        "fighter_b": "Imanol Rodriguez",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "alden-coria-vs-imanol-rodriguez"
+      },
+      {
+        "fighter_a": "Damian Pinas",
+        "fighter_b": "Andrey Pulyaev",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "damian-pinas-vs-andrey-pulyaev"
+      },
+      {
+        "fighter_a": "Eric Nolan",
+        "fighter_b": "Court McGee",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "eric-nolan-vs-court-mcgee"
+      }
+    ],
+    "homepage": true
+  },
+  {
     "id": 1265,
     "name": "UFC Fight Night: Buckley vs. Malott",
     "date": "Saturday, October 17, 2026",
@@ -604,6 +579,72 @@
         "weight_class": "Middleweight",
         "is_title": false,
         "slug": "gilbert-urbina-vs-julien-leblanc"
+      }
+    ],
+    "homepage": true
+  },
+  {
+    "id": 1270,
+    "name": "UFC 333: Volkanovski vs. Evloev",
+    "date": "Saturday, October 24, 2026",
+    "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+    "slug": "ufc-333-volkanovski-vs-evloev",
+    "matchups": [
+      {
+        "fighter_a": "Alexander Volkanovski",
+        "fighter_b": "Movsar Evloev",
+        "weight_class": "Featherweight",
+        "is_title": true,
+        "slug": "alexander-volkanovski-vs-movsar-evloev"
+      },
+      {
+        "fighter_a": "Petr Yan",
+        "fighter_b": "Merab Dvalishvili",
+        "weight_class": "Bantamweight",
+        "is_title": true,
+        "slug": "petr-yan-vs-merab-dvalishvili"
+      },
+      {
+        "fighter_a": "Lone'er Kavanagh",
+        "fighter_b": "Ramazan Temirov",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "loneer-kavanagh-vs-ramazan-temirov"
+      },
+      {
+        "fighter_a": "Arnold Allen",
+        "fighter_b": "Aaron Pico",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "arnold-allen-vs-aaron-pico"
+      },
+      {
+        "fighter_a": "Azamat Murzakanov",
+        "fighter_b": "Dominick Reyes",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "azamat-murzakanov-vs-dominick-reyes"
+      },
+      {
+        "fighter_a": "Cam Rowston",
+        "fighter_b": "Abus Magomedov",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "cam-rowston-vs-abus-magomedov"
+      },
+      {
+        "fighter_a": "Nikita Krylov",
+        "fighter_b": "Abdul Rakhman Yakhyaev",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "nikita-krylov-vs-abdul-rakhman-yakhyaev"
+      },
+      {
+        "fighter_a": "Grant Dawson",
+        "fighter_b": "Nurullo Aliev",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "grant-dawson-vs-nurullo-aliev"
       }
     ],
     "homepage": true
