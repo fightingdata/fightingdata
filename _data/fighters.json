@@ -19754,6 +19754,23 @@
     "last_fight_date": "2026-07-18"
   },
   {
+    "id": 3818,
+    "name": "Fabia Sintes",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "1994-07-27",
+    "slug": "fabia-sintes",
+    "career_record": "11-3-0",
+    "career_wins": 11,
+    "career_losses": 3,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 2477,
     "name": "Fabiano Iha",
     "nickname": null,
@@ -24393,6 +24410,23 @@
     "career_nc": 1,
     "division": "Flyweight",
     "last_fight_date": "2013-10-09"
+  },
+  {
+    "id": 3821,
+    "name": "Ilimbek Akylbek Uulu",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "2003-09-01",
+    "slug": "ilimbek-akylbek-uulu",
+    "career_record": "10-3-0",
+    "career_wins": 10,
+    "career_losses": 3,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 861,
@@ -42687,6 +42721,23 @@
     "last_fight_date": "2016-07-07"
   },
   {
+    "id": 3820,
+    "name": "Mehemmedeli Osmanli",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "2004-08-05",
+    "slug": "mehemmedeli-osmanli",
+    "career_record": "12-1-0",
+    "career_wins": 12,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 3296,
     "name": "Melchor Manibusan",
     "nickname": null,
@@ -42719,6 +42770,23 @@
     "career_nc": 0,
     "division": "Women's Flyweight",
     "last_fight_date": "2018-06-23"
+  },
+  {
+    "id": 3819,
+    "name": "Melissa Amaya",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1994-11-27",
+    "slug": "melissa-amaya",
+    "career_record": "8-0-0",
+    "career_wins": 8,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 254,
@@ -42923,6 +42991,23 @@
     "career_nc": 1,
     "division": "",
     "last_fight_date": "2009-03-08"
+  },
+  {
+    "id": 3817,
+    "name": "Michael Aljarouj",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "1997-08-21",
+    "slug": "michael-aljarouj",
+    "career_record": "13-3-0 (2 NC)",
+    "career_wins": 13,
+    "career_losses": 3,
+    "career_draws": 0,
+    "career_nc": 2,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 159,

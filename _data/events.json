@@ -1,50 +1,5 @@
 [
   {
-    "id": 1263,
-    "name": "DWCS 10.3",
-    "date": "Tuesday, August 25, 2026",
-    "location": "Las Vegas, Nevada, USA",
-    "slug": "dwcs-103",
-    "matchups": [
-      {
-        "fighter_a": "Bella Mir",
-        "fighter_b": "Alexis Apodaca",
-        "weight_class": "Women's Bantamweight",
-        "is_title": false,
-        "slug": "bella-mir-vs-alexis-apodaca"
-      },
-      {
-        "fighter_a": "Guilherme Uriel",
-        "fighter_b": "Mario Piazzon",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "guilherme-uriel-vs-mario-piazzon"
-      },
-      {
-        "fighter_a": "Gary Balletto",
-        "fighter_b": "Sean Clancy Jr.",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "gary-balletto-vs-sean-clancy-jr"
-      },
-      {
-        "fighter_a": "Ronald Humphrey",
-        "fighter_b": "Alexis Miranda",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "ronald-humphrey-vs-alexis-miranda"
-      },
-      {
-        "fighter_a": "Carlos Petruzella",
-        "fighter_b": "Nicholas Galanti",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "carlos-petruzella-vs-nicholas-galanti"
-      }
-    ],
-    "homepage": false
-  },
-  {
     "id": 1261,
     "name": "UFC Fight Night: Nurmagomedov vs. Song",
     "date": "Saturday, August 29, 2026",
@@ -80,11 +35,11 @@
         "slug": "sumudaerji-vs-alex-perez"
       },
       {
-        "fighter_a": "Junior Tafa",
+        "fighter_a": "Levi Rodrigues Jr.",
         "fighter_b": "Liu Ce",
         "weight_class": "Light Heavyweight",
         "is_title": false,
-        "slug": "junior-tafa-vs-liu-ce"
+        "slug": "levi-rodrigues-jr-vs-liu-ce"
       },
       {
         "fighter_a": "Bilal Hasan",
@@ -174,6 +129,13 @@
         "slug": "michael-page-vs-nursulton-ruziboev"
       },
       {
+        "fighter_a": "Daniil Donchenko",
+        "fighter_b": "Punahele Soriano",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "daniil-donchenko-vs-punahele-soriano"
+      },
+      {
         "fighter_a": "Morgan Charriere",
         "fighter_b": "Felipe Lima",
         "weight_class": "Featherweight",
@@ -216,6 +178,13 @@
         "slug": "nathaniel-wood-vs-mairon-santos"
       },
       {
+        "fighter_a": "Michael Aljarouj",
+        "fighter_b": "Fabia Sintes",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "michael-aljarouj-vs-fabia-sintes"
+      },
+      {
         "fighter_a": "Klaudia Sygula",
         "fighter_b": "Nora Cornolle",
         "weight_class": "Women's Bantamweight",
@@ -248,10 +217,10 @@
     "matchups": [
       {
         "fighter_a": "Jean Silva",
-        "fighter_b": "Yair Rodriguez",
+        "fighter_b": "Jose Delgado",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "jean-silva-vs-yair-rodriguez"
+        "slug": "jean-silva-vs-jose-delgado"
       },
       {
         "fighter_a": "Brandon Moreno",
@@ -303,13 +272,6 @@
         "slug": "ignacio-bahamondes-vs-muslim-salikhov"
       },
       {
-        "fighter_a": "Yousri Belgaroui",
-        "fighter_b": "Kelvin Gastelum",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "yousri-belgaroui-vs-kelvin-gastelum"
-      },
-      {
         "fighter_a": "Rodrigo Vera",
         "fighter_b": "Ramiro Jimenez",
         "weight_class": "Featherweight",
@@ -329,6 +291,13 @@
         "weight_class": "Lightweight",
         "is_title": false,
         "slug": "rafa-garcia-vs-rongzhu"
+      },
+      {
+        "fighter_a": "Yousri Belgaroui",
+        "fighter_b": "Djorden Santos",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "yousri-belgaroui-vs-djorden-santos"
       }
     ],
     "homepage": true
@@ -447,9 +416,79 @@
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "raul-rosas-jr-vs-raoni-barcelos"
+      },
+      {
+        "fighter_a": "Valesca Machado",
+        "fighter_b": "Melissa Amaya",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "valesca-machado-vs-melissa-amaya"
+      },
+      {
+        "fighter_a": "Mehemmedeli Osmanli",
+        "fighter_b": "Ilimbek Akylbek Uulu",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu"
+      },
+      {
+        "fighter_a": "Ricky Simon",
+        "fighter_b": "Montel Jackson",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "ricky-simon-vs-montel-jackson"
+      },
+      {
+        "fighter_a": "Rodolfo Bellato",
+        "fighter_b": "Christian Edwards",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "rodolfo-bellato-vs-christian-edwards"
+      },
+      {
+        "fighter_a": "Rodolfo Vieira",
+        "fighter_b": "Robert Bryczek",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "rodolfo-vieira-vs-robert-bryczek"
+      },
+      {
+        "fighter_a": "Rinya Nakamura",
+        "fighter_b": "Brady Hiestand",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "rinya-nakamura-vs-brady-hiestand"
+      },
+      {
+        "fighter_a": "John Castaneda",
+        "fighter_b": "Alatengheili",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "john-castaneda-vs-alatengheili"
+      },
+      {
+        "fighter_a": "Elves Brener",
+        "fighter_b": "Josiah Harrell",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "elves-brener-vs-josiah-harrell"
+      },
+      {
+        "fighter_a": "Ailin Perez",
+        "fighter_b": "Norma Dumont",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "ailin-perez-vs-norma-dumont"
+      },
+      {
+        "fighter_a": "Vanessa Demopoulos",
+        "fighter_b": "Yazmin Jauregui",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "vanessa-demopoulos-vs-yazmin-jauregui"
       }
     ],
-    "homepage": false
+    "homepage": true
   },
   {
     "id": 1269,
@@ -579,6 +618,13 @@
         "weight_class": "Middleweight",
         "is_title": false,
         "slug": "gilbert-urbina-vs-julien-leblanc"
+      },
+      {
+        "fighter_a": "Chad Anheliger",
+        "fighter_b": "Steven Koslow",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "chad-anheliger-vs-steven-koslow"
       }
     ],
     "homepage": true

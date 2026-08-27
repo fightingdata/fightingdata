@@ -1,11 +1,11 @@
 {
-  "total_fighters": 3816,
+  "total_fighters": 3821,
   "total_events": 1270,
-  "total_fights": 11340,
-  "upcoming_events": 9,
+  "total_fights": 11353,
+  "upcoming_events": 8,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-10-24",
-  "last_updated": "2026-08-24T09:14:26.032447",
+  "last_updated": "2026-08-27T08:00:26.266826",
   "featured_event": {
     "name": "UFC Fight Night: Nurmagomedov vs. Song",
     "date": "Saturday, August 29, 2026",
@@ -43,11 +43,11 @@
         "slug": "sumudaerji-vs-alex-perez"
       },
       {
-        "fighter_a": "Junior Tafa",
+        "fighter_a": "Levi Rodrigues Jr.",
         "fighter_b": "Liu Ce",
         "weight_class": "Light Heavyweight",
         "is_title": false,
-        "slug": "junior-tafa-vs-liu-ce"
+        "slug": "levi-rodrigues-jr-vs-liu-ce"
       },
       {
         "fighter_a": "Bilal Hasan",
