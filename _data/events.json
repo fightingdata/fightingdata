@@ -272,18 +272,18 @@
         "slug": "ignacio-bahamondes-vs-muslim-salikhov"
       },
       {
+        "fighter_a": "Yousri Belgaroui",
+        "fighter_b": "Djorden Santos",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "yousri-belgaroui-vs-djorden-santos"
+      },
+      {
         "fighter_a": "Rodrigo Vera",
         "fighter_b": "Ramiro Jimenez",
         "weight_class": "Featherweight",
         "is_title": false,
         "slug": "rodrigo-vera-vs-ramiro-jimenez"
-      },
-      {
-        "fighter_a": "JJ Aldrich",
-        "fighter_b": "Regina Tarin",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "jj-aldrich-vs-regina-tarin"
       },
       {
         "fighter_a": "Rafa Garcia",
@@ -293,11 +293,11 @@
         "slug": "rafa-garcia-vs-rongzhu"
       },
       {
-        "fighter_a": "Yousri Belgaroui",
-        "fighter_b": "Djorden Santos",
-        "weight_class": "Middleweight",
+        "fighter_a": "JJ Aldrich",
+        "fighter_b": "Regina Tarin",
+        "weight_class": "Women's Flyweight",
         "is_title": false,
-        "slug": "yousri-belgaroui-vs-djorden-santos"
+        "slug": "jj-aldrich-vs-regina-tarin"
       }
     ],
     "homepage": true

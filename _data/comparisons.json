@@ -350,6 +350,16 @@
     "weight_class": "Welterweight"
   },
   {
+    "fighter_a": "Yousri Belgaroui",
+    "fighter_b": "Djorden Santos",
+    "slug": "yousri-belgaroui-vs-djorden-santos",
+    "url": "/compare/yousri-belgaroui-vs-djorden-santos/",
+    "event_name": "Noche UFC: Rodriguez vs. Silva",
+    "event_date": "Saturday, September 12, 2026",
+    "event_slug": "noche-ufc-rodriguez-vs-silva",
+    "weight_class": "Middleweight"
+  },
+  {
     "fighter_a": "Rodrigo Vera",
     "fighter_b": "Ramiro Jimenez",
     "slug": "rodrigo-vera-vs-ramiro-jimenez",
@@ -358,16 +368,6 @@
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "noche-ufc-rodriguez-vs-silva",
     "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "JJ Aldrich",
-    "fighter_b": "Regina Tarin",
-    "slug": "jj-aldrich-vs-regina-tarin",
-    "url": "/compare/jj-aldrich-vs-regina-tarin/",
-    "event_name": "Noche UFC: Rodriguez vs. Silva",
-    "event_date": "Saturday, September 12, 2026",
-    "event_slug": "noche-ufc-rodriguez-vs-silva",
-    "weight_class": "Women's Flyweight"
   },
   {
     "fighter_a": "Rafa Garcia",
@@ -380,14 +380,14 @@
     "weight_class": "Lightweight"
   },
   {
-    "fighter_a": "Yousri Belgaroui",
-    "fighter_b": "Djorden Santos",
-    "slug": "yousri-belgaroui-vs-djorden-santos",
-    "url": "/compare/yousri-belgaroui-vs-djorden-santos/",
+    "fighter_a": "JJ Aldrich",
+    "fighter_b": "Regina Tarin",
+    "slug": "jj-aldrich-vs-regina-tarin",
+    "url": "/compare/jj-aldrich-vs-regina-tarin/",
     "event_name": "Noche UFC: Rodriguez vs. Silva",
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "noche-ufc-rodriguez-vs-silva",
-    "weight_class": "Middleweight"
+    "weight_class": "Women's Flyweight"
   },
   {
     "fighter_a": "Joshua Van",
