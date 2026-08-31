@@ -1,106 +1,5 @@
 [
   {
-    "id": 1261,
-    "name": "UFC Fight Night: Nurmagomedov vs. Song",
-    "date": "Saturday, August 29, 2026",
-    "location": "Shanghai, China",
-    "slug": "ufc-fight-night-nurmagomedov-vs-song",
-    "matchups": [
-      {
-        "fighter_a": "Song Yadong",
-        "fighter_b": "Umar Nurmagomedov",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "song-yadong-vs-umar-nurmagomedov"
-      },
-      {
-        "fighter_a": "Denise Gomes",
-        "fighter_b": "Yan Xiaonan",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "denise-gomes-vs-yan-xiaonan"
-      },
-      {
-        "fighter_a": "Aoriqileng",
-        "fighter_b": "Kai Asakura",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "aoriqileng-vs-kai-asakura"
-      },
-      {
-        "fighter_a": "Sumudaerji",
-        "fighter_b": "Alex Perez",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "sumudaerji-vs-alex-perez"
-      },
-      {
-        "fighter_a": "Levi Rodrigues Jr.",
-        "fighter_b": "Liu Ce",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "levi-rodrigues-jr-vs-liu-ce"
-      },
-      {
-        "fighter_a": "Bilal Hasan",
-        "fighter_b": "Nilson Rojas",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "bilal-hasan-vs-nilson-rojas"
-      },
-      {
-        "fighter_a": "Andre Lima",
-        "fighter_b": "Namsrai Batbayar",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "andre-lima-vs-namsrai-batbayar"
-      },
-      {
-        "fighter_a": "Kevin Borjas",
-        "fighter_b": "Rei Tsuruya",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "kevin-borjas-vs-rei-tsuruya"
-      },
-      {
-        "fighter_a": "Jack Jenkins",
-        "fighter_b": "Sean Woodson",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "jack-jenkins-vs-sean-woodson"
-      },
-      {
-        "fighter_a": "Xiao Long",
-        "fighter_b": "Francesco Nuzzi",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "xiao-long-vs-francesco-nuzzi"
-      },
-      {
-        "fighter_a": "Lawrence Lui",
-        "fighter_b": "Hector Santiago",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "lawrence-lui-vs-hector-santiago"
-      },
-      {
-        "fighter_a": "Julia Polastri",
-        "fighter_b": "Xiong Jingnan",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "julia-polastri-vs-xiong-jingnan"
-      },
-      {
-        "fighter_a": "Ding Meng",
-        "fighter_b": "Cameron Nelson",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "ding-meng-vs-cameron-nelson"
-      }
-    ],
-    "homepage": true
-  },
-  {
     "id": 1262,
     "name": "UFC Fight Night: Hooker vs. Parnasse",
     "date": "Saturday, September 5, 2026",
@@ -210,10 +109,10 @@
   },
   {
     "id": 1264,
-    "name": "Noche UFC: Rodriguez vs. Silva",
+    "name": "Noche UFC: Silva vs. Delgado",
     "date": "Saturday, September 12, 2026",
     "location": "Glendale, Arizona, USA",
-    "slug": "noche-ufc-rodriguez-vs-silva",
+    "slug": "noche-ufc-silva-vs-delgado",
     "matchups": [
       {
         "fighter_a": "Jean Silva",
@@ -694,5 +593,39 @@
       }
     ],
     "homepage": true
+  },
+  {
+    "id": 1271,
+    "name": "UFC Fight Night",
+    "date": "Saturday, October 31, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night",
+    "matchups": [
+      {
+        "fighter_a": "Nick Klein",
+        "fighter_b": "Joe Kropschot",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "nick-klein-vs-joe-kropschot"
+      }
+    ],
+    "homepage": false
+  },
+  {
+    "id": 1272,
+    "name": "UFC Fight Night: Bonfim vs. Brady",
+    "date": "Saturday, November 7, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-bonfim-vs-brady",
+    "matchups": [
+      {
+        "fighter_a": "Sean Brady",
+        "fighter_b": "Gabriel Bonfim",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "sean-brady-vs-gabriel-bonfim"
+      }
+    ],
+    "homepage": false
   }
 ]

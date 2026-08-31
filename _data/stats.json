@@ -1,117 +1,124 @@
 {
-  "total_fighters": 3821,
-  "total_events": 1270,
-  "total_fights": 11353,
-  "upcoming_events": 8,
+  "total_fighters": 3823,
+  "total_events": 1272,
+  "total_fights": 11356,
+  "upcoming_events": 9,
   "date_range_start": "1993-11-12",
-  "date_range_end": "2026-10-24",
-  "last_updated": "2026-08-29T08:00:49.651399",
+  "date_range_end": "2026-11-07",
+  "last_updated": "2026-08-31T09:14:24.251873",
   "featured_event": {
-    "name": "UFC Fight Night: Nurmagomedov vs. Song",
-    "date": "Saturday, August 29, 2026",
-    "iso_date": "2026-08-29",
-    "location": "Shanghai, China",
-    "slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "name": "UFC Fight Night: Hooker vs. Parnasse",
+    "date": "Saturday, September 5, 2026",
+    "iso_date": "2026-09-05",
+    "location": "Paris, Ile-de-France, France",
+    "slug": "ufc-fight-night-hooker-vs-parnasse",
     "is_past": false,
     "matchups": [
       {
-        "fighter_a": "Song Yadong",
-        "fighter_b": "Umar Nurmagomedov",
-        "weight_class": "Bantamweight",
+        "fighter_a": "Dan Hooker",
+        "fighter_b": "Salahdine Parnasse",
+        "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "song-yadong-vs-umar-nurmagomedov"
+        "slug": "dan-hooker-vs-salahdine-parnasse"
       },
       {
-        "fighter_a": "Denise Gomes",
-        "fighter_b": "Yan Xiaonan",
-        "weight_class": "Women's Strawweight",
+        "fighter_a": "Axel Sola",
+        "fighter_b": "Fares Ziam",
+        "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "denise-gomes-vs-yan-xiaonan"
+        "slug": "axel-sola-vs-fares-ziam"
       },
       {
-        "fighter_a": "Aoriqileng",
-        "fighter_b": "Kai Asakura",
-        "weight_class": "Bantamweight",
+        "fighter_a": "Michael Page",
+        "fighter_b": "Nursulton Ruziboev",
+        "weight_class": "Middleweight",
         "is_title": false,
-        "slug": "aoriqileng-vs-kai-asakura"
+        "slug": "michael-page-vs-nursulton-ruziboev"
       },
       {
-        "fighter_a": "Sumudaerji",
-        "fighter_b": "Alex Perez",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "sumudaerji-vs-alex-perez"
-      },
-      {
-        "fighter_a": "Levi Rodrigues Jr.",
-        "fighter_b": "Liu Ce",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "levi-rodrigues-jr-vs-liu-ce"
-      },
-      {
-        "fighter_a": "Bilal Hasan",
-        "fighter_b": "Nilson Rojas",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "bilal-hasan-vs-nilson-rojas"
-      },
-      {
-        "fighter_a": "Andre Lima",
-        "fighter_b": "Namsrai Batbayar",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "andre-lima-vs-namsrai-batbayar"
-      },
-      {
-        "fighter_a": "Kevin Borjas",
-        "fighter_b": "Rei Tsuruya",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "kevin-borjas-vs-rei-tsuruya"
-      },
-      {
-        "fighter_a": "Jack Jenkins",
-        "fighter_b": "Sean Woodson",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "jack-jenkins-vs-sean-woodson"
-      },
-      {
-        "fighter_a": "Xiao Long",
-        "fighter_b": "Francesco Nuzzi",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "xiao-long-vs-francesco-nuzzi"
-      },
-      {
-        "fighter_a": "Lawrence Lui",
-        "fighter_b": "Hector Santiago",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "lawrence-lui-vs-hector-santiago"
-      },
-      {
-        "fighter_a": "Julia Polastri",
-        "fighter_b": "Xiong Jingnan",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "julia-polastri-vs-xiong-jingnan"
-      },
-      {
-        "fighter_a": "Ding Meng",
-        "fighter_b": "Cameron Nelson",
+        "fighter_a": "Daniil Donchenko",
+        "fighter_b": "Punahele Soriano",
         "weight_class": "Welterweight",
         "is_title": false,
-        "slug": "ding-meng-vs-cameron-nelson"
+        "slug": "daniil-donchenko-vs-punahele-soriano"
+      },
+      {
+        "fighter_a": "Morgan Charriere",
+        "fighter_b": "Felipe Lima",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "morgan-charriere-vs-felipe-lima"
+      },
+      {
+        "fighter_a": "Muhammad Naimov",
+        "fighter_b": "Losene Keita",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "muhammad-naimov-vs-losene-keita"
+      },
+      {
+        "fighter_a": "Mario Pinto",
+        "fighter_b": "Ryan Spann",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "mario-pinto-vs-ryan-spann"
+      },
+      {
+        "fighter_a": "Kurtis Campbell",
+        "fighter_b": "Trevor Peek",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "kurtis-campbell-vs-trevor-peek"
+      },
+      {
+        "fighter_a": "Oumar Sy",
+        "fighter_b": "Modestas Bukauskas",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "oumar-sy-vs-modestas-bukauskas"
+      },
+      {
+        "fighter_a": "Nathaniel Wood",
+        "fighter_b": "Mairon Santos",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "nathaniel-wood-vs-mairon-santos"
+      },
+      {
+        "fighter_a": "Michael Aljarouj",
+        "fighter_b": "Fabia Sintes",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "michael-aljarouj-vs-fabia-sintes"
+      },
+      {
+        "fighter_a": "Klaudia Sygula",
+        "fighter_b": "Nora Cornolle",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "klaudia-sygula-vs-nora-cornolle"
+      },
+      {
+        "fighter_a": "Matthieu Duclos",
+        "fighter_b": "Luis Felipe Dias",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "matthieu-duclos-vs-luis-felipe-dias"
+      },
+      {
+        "fighter_a": "Sofia Montenegro",
+        "fighter_b": "Delphine Benouaich",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "sofia-montenegro-vs-delphine-benouaich"
       }
     ]
   },
   "latest_result": {
-    "name": "UFC Fight Night: Hernandez vs. Rodrigues",
-    "date": "Saturday, August 22, 2026",
-    "iso_date": "2026-08-22",
-    "location": "Sacramento, California, USA",
-    "slug": "ufc-fight-night-hernandez-vs-rodrigues"
+    "name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "date": "Saturday, August 29, 2026",
+    "iso_date": "2026-08-29",
+    "location": "Shanghai, China",
+    "slug": "ufc-fight-night-nurmagomedov-vs-song"
   }
 }

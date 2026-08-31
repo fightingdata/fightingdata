@@ -1,5 +1,21 @@
 [
   {
+    "id": 1261,
+    "name": "UFC Fight Night: Nurmagomedov vs. Song",
+    "date": "Saturday, August 29, 2026",
+    "location": "Shanghai, China",
+    "slug": "ufc-fight-night-nurmagomedov-vs-song",
+    "year": "2026"
+  },
+  {
+    "id": 1263,
+    "name": "DWCS 10.3",
+    "date": "Tuesday, August 25, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "dwcs-103",
+    "year": "2026"
+  },
+  {
     "id": 1223,
     "name": "UFC Fight Night: Hernandez vs. Rodrigues",
     "date": "Saturday, August 22, 2026",
