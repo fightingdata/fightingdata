@@ -38420,6 +38420,23 @@
     "last_fight_date": "2021-09-28"
   },
   {
+    "id": 3825,
+    "name": "Lucia Szabova",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": "1997-12-23",
+    "slug": "lucia-szabova",
+    "career_record": "12-0-0",
+    "career_wins": 12,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 2862,
     "name": "Luciano Azevedo",
     "nickname": null,
@@ -48431,6 +48448,23 @@
     "career_nc": 0,
     "division": "Welterweight",
     "last_fight_date": "2014-09-13"
+  },
+  {
+    "id": 3824,
+    "name": "Pavel Andrusca",
+    "nickname": null,
+    "height_cm": 170.2,
+    "reach_cm": 167.6,
+    "stance": "Orthodox",
+    "dob": "2002-05-08",
+    "slug": "pavel-andrusca",
+    "career_record": "8-0-0",
+    "career_wins": 8,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
   },
   {
     "id": 2931,

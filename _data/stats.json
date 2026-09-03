@@ -1,11 +1,11 @@
 {
-  "total_fighters": 3823,
+  "total_fighters": 3825,
   "total_events": 1272,
-  "total_fights": 11356,
+  "total_fights": 11357,
   "upcoming_events": 9,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-11-07",
-  "last_updated": "2026-08-31T09:14:24.251873",
+  "last_updated": "2026-09-03T08:00:26.237372",
   "featured_event": {
     "name": "UFC Fight Night: Hooker vs. Parnasse",
     "date": "Saturday, September 5, 2026",
@@ -43,11 +43,11 @@
         "slug": "daniil-donchenko-vs-punahele-soriano"
       },
       {
-        "fighter_a": "Morgan Charriere",
-        "fighter_b": "Felipe Lima",
+        "fighter_a": "Kurtis Campbell",
+        "fighter_b": "Trevor Peek",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "morgan-charriere-vs-felipe-lima"
+        "slug": "kurtis-campbell-vs-trevor-peek"
       },
       {
         "fighter_a": "Muhammad Naimov",
@@ -57,18 +57,18 @@
         "slug": "muhammad-naimov-vs-losene-keita"
       },
       {
+        "fighter_a": "Morgan Charriere",
+        "fighter_b": "Felipe Lima",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "morgan-charriere-vs-felipe-lima"
+      },
+      {
         "fighter_a": "Mario Pinto",
         "fighter_b": "Ryan Spann",
         "weight_class": "Heavyweight",
         "is_title": false,
         "slug": "mario-pinto-vs-ryan-spann"
-      },
-      {
-        "fighter_a": "Kurtis Campbell",
-        "fighter_b": "Trevor Peek",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "kurtis-campbell-vs-trevor-peek"
       },
       {
         "fighter_a": "Oumar Sy",
@@ -79,10 +79,10 @@
       },
       {
         "fighter_a": "Nathaniel Wood",
-        "fighter_b": "Mairon Santos",
+        "fighter_b": "Pavel Andrusca",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "nathaniel-wood-vs-mairon-santos"
+        "slug": "nathaniel-wood-vs-pavel-andrusca"
       },
       {
         "fighter_a": "Michael Aljarouj",

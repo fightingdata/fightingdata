@@ -40,10 +40,10 @@
     "weight_class": "Welterweight"
   },
   {
-    "fighter_a": "Morgan Charriere",
-    "fighter_b": "Felipe Lima",
-    "slug": "morgan-charriere-vs-felipe-lima",
-    "url": "/compare/morgan-charriere-vs-felipe-lima/",
+    "fighter_a": "Kurtis Campbell",
+    "fighter_b": "Trevor Peek",
+    "slug": "kurtis-campbell-vs-trevor-peek",
+    "url": "/compare/kurtis-campbell-vs-trevor-peek/",
     "event_name": "UFC Fight Night: Hooker vs. Parnasse",
     "event_date": "Saturday, September 5, 2026",
     "event_slug": "ufc-fight-night-hooker-vs-parnasse",
@@ -60,6 +60,16 @@
     "weight_class": "Featherweight"
   },
   {
+    "fighter_a": "Morgan Charriere",
+    "fighter_b": "Felipe Lima",
+    "slug": "morgan-charriere-vs-felipe-lima",
+    "url": "/compare/morgan-charriere-vs-felipe-lima/",
+    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
+    "event_date": "Saturday, September 5, 2026",
+    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
+    "weight_class": "Featherweight"
+  },
+  {
     "fighter_a": "Mario Pinto",
     "fighter_b": "Ryan Spann",
     "slug": "mario-pinto-vs-ryan-spann",
@@ -68,16 +78,6 @@
     "event_date": "Saturday, September 5, 2026",
     "event_slug": "ufc-fight-night-hooker-vs-parnasse",
     "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Kurtis Campbell",
-    "fighter_b": "Trevor Peek",
-    "slug": "kurtis-campbell-vs-trevor-peek",
-    "url": "/compare/kurtis-campbell-vs-trevor-peek/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Oumar Sy",
@@ -91,9 +91,9 @@
   },
   {
     "fighter_a": "Nathaniel Wood",
-    "fighter_b": "Mairon Santos",
-    "slug": "nathaniel-wood-vs-mairon-santos",
-    "url": "/compare/nathaniel-wood-vs-mairon-santos/",
+    "fighter_b": "Pavel Andrusca",
+    "slug": "nathaniel-wood-vs-pavel-andrusca",
+    "url": "/compare/nathaniel-wood-vs-pavel-andrusca/",
     "event_name": "UFC Fight Night: Hooker vs. Parnasse",
     "event_date": "Saturday, September 5, 2026",
     "event_slug": "ufc-fight-night-hooker-vs-parnasse",
@@ -758,6 +758,16 @@
     "event_date": "Saturday, October 31, 2026",
     "event_slug": "ufc-fight-night",
     "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Tainara Lisboa",
+    "fighter_b": "Lucia Szabova",
+    "slug": "tainara-lisboa-vs-lucia-szabova",
+    "url": "/compare/tainara-lisboa-vs-lucia-szabova/",
+    "event_name": "UFC Fight Night",
+    "event_date": "Saturday, October 31, 2026",
+    "event_slug": "ufc-fight-night",
+    "weight_class": "Women's Flyweight"
   },
   {
     "fighter_a": "Sean Brady",

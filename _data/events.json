@@ -35,11 +35,11 @@
         "slug": "daniil-donchenko-vs-punahele-soriano"
       },
       {
-        "fighter_a": "Morgan Charriere",
-        "fighter_b": "Felipe Lima",
+        "fighter_a": "Kurtis Campbell",
+        "fighter_b": "Trevor Peek",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "morgan-charriere-vs-felipe-lima"
+        "slug": "kurtis-campbell-vs-trevor-peek"
       },
       {
         "fighter_a": "Muhammad Naimov",
@@ -49,18 +49,18 @@
         "slug": "muhammad-naimov-vs-losene-keita"
       },
       {
+        "fighter_a": "Morgan Charriere",
+        "fighter_b": "Felipe Lima",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "morgan-charriere-vs-felipe-lima"
+      },
+      {
         "fighter_a": "Mario Pinto",
         "fighter_b": "Ryan Spann",
         "weight_class": "Heavyweight",
         "is_title": false,
         "slug": "mario-pinto-vs-ryan-spann"
-      },
-      {
-        "fighter_a": "Kurtis Campbell",
-        "fighter_b": "Trevor Peek",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "kurtis-campbell-vs-trevor-peek"
       },
       {
         "fighter_a": "Oumar Sy",
@@ -71,10 +71,10 @@
       },
       {
         "fighter_a": "Nathaniel Wood",
-        "fighter_b": "Mairon Santos",
+        "fighter_b": "Pavel Andrusca",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "nathaniel-wood-vs-mairon-santos"
+        "slug": "nathaniel-wood-vs-pavel-andrusca"
       },
       {
         "fighter_a": "Michael Aljarouj",
@@ -607,6 +607,13 @@
         "weight_class": "Middleweight",
         "is_title": false,
         "slug": "nick-klein-vs-joe-kropschot"
+      },
+      {
+        "fighter_a": "Tainara Lisboa",
+        "fighter_b": "Lucia Szabova",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "tainara-lisboa-vs-lucia-szabova"
       }
     ],
     "homepage": false
