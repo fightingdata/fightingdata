@@ -265,25 +265,11 @@
         "slug": "tai-tuivasa-vs-robelis-despaigne"
       },
       {
-        "fighter_a": "Brunno Ferreira",
-        "fighter_b": "Edmen Shahbazyan",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "brunno-ferreira-vs-edmen-shahbazyan"
-      },
-      {
-        "fighter_a": "Giga Chikadze",
-        "fighter_b": "Joanderson Brito",
+        "fighter_a": "JooSang Yoo",
+        "fighter_b": "Michael Aswell Jr.",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "giga-chikadze-vs-joanderson-brito"
-      },
-      {
-        "fighter_a": "Eduarda Moura",
-        "fighter_b": "Casey O'Neill",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "eduarda-moura-vs-casey-oneill"
+        "slug": "joosang-yoo-vs-michael-aswell-jr"
       },
       {
         "fighter_a": "Ryan Gandra",
@@ -293,11 +279,25 @@
         "slug": "ryan-gandra-vs-ozzy-diaz"
       },
       {
-        "fighter_a": "JooSang Yoo",
-        "fighter_b": "Michael Aswell Jr.",
+        "fighter_a": "Brunno Ferreira",
+        "fighter_b": "Edmen Shahbazyan",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "brunno-ferreira-vs-edmen-shahbazyan"
+      },
+      {
+        "fighter_a": "Eduarda Moura",
+        "fighter_b": "Casey O'Neill",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "eduarda-moura-vs-casey-oneill"
+      },
+      {
+        "fighter_a": "Giga Chikadze",
+        "fighter_b": "Joanderson Brito",
         "weight_class": "Featherweight",
         "is_title": false,
-        "slug": "joosang-yoo-vs-michael-aswell-jr"
+        "slug": "giga-chikadze-vs-joanderson-brito"
       }
     ],
     "homepage": true

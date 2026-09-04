@@ -340,34 +340,14 @@
     "weight_class": "Heavyweight"
   },
   {
-    "fighter_a": "Brunno Ferreira",
-    "fighter_b": "Edmen Shahbazyan",
-    "slug": "brunno-ferreira-vs-edmen-shahbazyan",
-    "url": "/compare/brunno-ferreira-vs-edmen-shahbazyan/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Giga Chikadze",
-    "fighter_b": "Joanderson Brito",
-    "slug": "giga-chikadze-vs-joanderson-brito",
-    "url": "/compare/giga-chikadze-vs-joanderson-brito/",
+    "fighter_a": "JooSang Yoo",
+    "fighter_b": "Michael Aswell Jr.",
+    "slug": "joosang-yoo-vs-michael-aswell-jr",
+    "url": "/compare/joosang-yoo-vs-michael-aswell-jr/",
     "event_name": "UFC 331: Van vs. Pantoja 2",
     "event_date": "Saturday, September 19, 2026",
     "event_slug": "ufc-331-van-vs-pantoja-2",
     "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Eduarda Moura",
-    "fighter_b": "Casey O'Neill",
-    "slug": "eduarda-moura-vs-casey-oneill",
-    "url": "/compare/eduarda-moura-vs-casey-oneill/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Women's Flyweight"
   },
   {
     "fighter_a": "Ryan Gandra",
@@ -380,10 +360,30 @@
     "weight_class": "Middleweight"
   },
   {
-    "fighter_a": "JooSang Yoo",
-    "fighter_b": "Michael Aswell Jr.",
-    "slug": "joosang-yoo-vs-michael-aswell-jr",
-    "url": "/compare/joosang-yoo-vs-michael-aswell-jr/",
+    "fighter_a": "Brunno Ferreira",
+    "fighter_b": "Edmen Shahbazyan",
+    "slug": "brunno-ferreira-vs-edmen-shahbazyan",
+    "url": "/compare/brunno-ferreira-vs-edmen-shahbazyan/",
+    "event_name": "UFC 331: Van vs. Pantoja 2",
+    "event_date": "Saturday, September 19, 2026",
+    "event_slug": "ufc-331-van-vs-pantoja-2",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Eduarda Moura",
+    "fighter_b": "Casey O'Neill",
+    "slug": "eduarda-moura-vs-casey-oneill",
+    "url": "/compare/eduarda-moura-vs-casey-oneill/",
+    "event_name": "UFC 331: Van vs. Pantoja 2",
+    "event_date": "Saturday, September 19, 2026",
+    "event_slug": "ufc-331-van-vs-pantoja-2",
+    "weight_class": "Women's Flyweight"
+  },
+  {
+    "fighter_a": "Giga Chikadze",
+    "fighter_b": "Joanderson Brito",
+    "slug": "giga-chikadze-vs-joanderson-brito",
+    "url": "/compare/giga-chikadze-vs-joanderson-brito/",
     "event_name": "UFC 331: Van vs. Pantoja 2",
     "event_date": "Saturday, September 19, 2026",
     "event_slug": "ufc-331-van-vs-pantoja-2",
