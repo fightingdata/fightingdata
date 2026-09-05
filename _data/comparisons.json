@@ -230,14 +230,14 @@
     "weight_class": "Middleweight"
   },
   {
-    "fighter_a": "Rodrigo Vera",
-    "fighter_b": "Ramiro Jimenez",
-    "slug": "rodrigo-vera-vs-ramiro-jimenez",
-    "url": "/compare/rodrigo-vera-vs-ramiro-jimenez/",
+    "fighter_a": "Drakkar Klose",
+    "fighter_b": "Tommy Gantt",
+    "slug": "drakkar-klose-vs-tommy-gantt",
+    "url": "/compare/drakkar-klose-vs-tommy-gantt/",
     "event_name": "Noche UFC: Silva vs. Delgado",
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "noche-ufc-silva-vs-delgado",
-    "weight_class": "Featherweight"
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Rafa Garcia",
@@ -248,6 +248,16 @@
     "event_date": "Saturday, September 12, 2026",
     "event_slug": "noche-ufc-silva-vs-delgado",
     "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Jessie Rosas",
+    "fighter_b": "Sean King III",
+    "slug": "jessie-rosas-vs-sean-king-iii",
+    "url": "/compare/jessie-rosas-vs-sean-king-iii/",
+    "event_name": "Noche UFC: Silva vs. Delgado",
+    "event_date": "Saturday, September 12, 2026",
+    "event_slug": "noche-ufc-silva-vs-delgado",
+    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "JJ Aldrich",

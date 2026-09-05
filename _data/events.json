@@ -178,11 +178,11 @@
         "slug": "yousri-belgaroui-vs-djorden-santos"
       },
       {
-        "fighter_a": "Rodrigo Vera",
-        "fighter_b": "Ramiro Jimenez",
-        "weight_class": "Featherweight",
+        "fighter_a": "Drakkar Klose",
+        "fighter_b": "Tommy Gantt",
+        "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "rodrigo-vera-vs-ramiro-jimenez"
+        "slug": "drakkar-klose-vs-tommy-gantt"
       },
       {
         "fighter_a": "Rafa Garcia",
@@ -190,6 +190,13 @@
         "weight_class": "Lightweight",
         "is_title": false,
         "slug": "rafa-garcia-vs-rongzhu"
+      },
+      {
+        "fighter_a": "Jessie Rosas",
+        "fighter_b": "Sean King III",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "jessie-rosas-vs-sean-king-iii"
       },
       {
         "fighter_a": "JJ Aldrich",
