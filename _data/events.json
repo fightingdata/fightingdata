@@ -1,113 +1,5 @@
 [
   {
-    "id": 1262,
-    "name": "UFC Fight Night: Hooker vs. Parnasse",
-    "date": "Saturday, September 5, 2026",
-    "location": "Paris, Ile-de-France, France",
-    "slug": "ufc-fight-night-hooker-vs-parnasse",
-    "matchups": [
-      {
-        "fighter_a": "Dan Hooker",
-        "fighter_b": "Salahdine Parnasse",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "dan-hooker-vs-salahdine-parnasse"
-      },
-      {
-        "fighter_a": "Axel Sola",
-        "fighter_b": "Fares Ziam",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "axel-sola-vs-fares-ziam"
-      },
-      {
-        "fighter_a": "Michael Page",
-        "fighter_b": "Nursulton Ruziboev",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "michael-page-vs-nursulton-ruziboev"
-      },
-      {
-        "fighter_a": "Daniil Donchenko",
-        "fighter_b": "Punahele Soriano",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "daniil-donchenko-vs-punahele-soriano"
-      },
-      {
-        "fighter_a": "Kurtis Campbell",
-        "fighter_b": "Trevor Peek",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "kurtis-campbell-vs-trevor-peek"
-      },
-      {
-        "fighter_a": "Muhammad Naimov",
-        "fighter_b": "Losene Keita",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "muhammad-naimov-vs-losene-keita"
-      },
-      {
-        "fighter_a": "Morgan Charriere",
-        "fighter_b": "Felipe Lima",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "morgan-charriere-vs-felipe-lima"
-      },
-      {
-        "fighter_a": "Mario Pinto",
-        "fighter_b": "Ryan Spann",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "mario-pinto-vs-ryan-spann"
-      },
-      {
-        "fighter_a": "Oumar Sy",
-        "fighter_b": "Modestas Bukauskas",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "oumar-sy-vs-modestas-bukauskas"
-      },
-      {
-        "fighter_a": "Nathaniel Wood",
-        "fighter_b": "Pavel Andrusca",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "nathaniel-wood-vs-pavel-andrusca"
-      },
-      {
-        "fighter_a": "Michael Aljarouj",
-        "fighter_b": "Fabia Sintes",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "michael-aljarouj-vs-fabia-sintes"
-      },
-      {
-        "fighter_a": "Klaudia Sygula",
-        "fighter_b": "Nora Cornolle",
-        "weight_class": "Women's Bantamweight",
-        "is_title": false,
-        "slug": "klaudia-sygula-vs-nora-cornolle"
-      },
-      {
-        "fighter_a": "Matthieu Duclos",
-        "fighter_b": "Luis Felipe Dias",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "matthieu-duclos-vs-luis-felipe-dias"
-      },
-      {
-        "fighter_a": "Sofia Montenegro",
-        "fighter_b": "Delphine Benouaich",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "sofia-montenegro-vs-delphine-benouaich"
-      }
-    ],
-    "homepage": true
-  },
-  {
     "id": 1264,
     "name": "Noche UFC: Silva vs. Delgado",
     "date": "Saturday, September 12, 2026",
@@ -398,11 +290,18 @@
   },
   {
     "id": 1269,
-    "name": "UFC 332",
+    "name": "UFC 332: Silva vs. Wang",
     "date": "Saturday, October 3, 2026",
     "location": "Salt Lake City, Utah, USA",
-    "slug": "ufc-332",
+    "slug": "ufc-332-silva-vs-wang",
     "matchups": [
+      {
+        "fighter_a": "Wang Cong",
+        "fighter_b": "Natalia Silva",
+        "weight_class": "Women's Flyweight",
+        "is_title": true,
+        "slug": "wang-cong-vs-natalia-silva"
+      },
       {
         "fighter_a": "Deiveson Figueiredo",
         "fighter_b": "Payton Talbott",
@@ -411,18 +310,18 @@
         "slug": "deiveson-figueiredo-vs-payton-talbott"
       },
       {
-        "fighter_a": "Mick Parkin",
-        "fighter_b": "Johnny Walker",
-        "weight_class": "Heavyweight",
+        "fighter_a": "King Green",
+        "fighter_b": "Esteban Ribovics",
+        "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "mick-parkin-vs-johnny-walker"
+        "slug": "king-green-vs-esteban-ribovics"
       },
       {
-        "fighter_a": "Marvin Vettori",
-        "fighter_b": "Ismail Naurdiev",
-        "weight_class": "Middleweight",
+        "fighter_a": "Khaos Williams",
+        "fighter_b": "Roberto Soldic",
+        "weight_class": "Welterweight",
         "is_title": false,
-        "slug": "marvin-vettori-vs-ismail-naurdiev"
+        "slug": "khaos-williams-vs-roberto-soldic"
       },
       {
         "fighter_a": "Ateba Gautier",
@@ -446,6 +345,34 @@
         "slug": "damian-pinas-vs-andrey-pulyaev"
       },
       {
+        "fighter_a": "Marcus McGhee",
+        "fighter_b": "Benardo Sopaj",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "marcus-mcghee-vs-benardo-sopaj"
+      },
+      {
+        "fighter_a": "Mick Parkin",
+        "fighter_b": "Johnny Walker",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "mick-parkin-vs-johnny-walker"
+      },
+      {
+        "fighter_a": "Rafael Dos Anjos",
+        "fighter_b": "Alexander Hernandez",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "rafael-dos-anjos-vs-alexander-hernandez"
+      },
+      {
+        "fighter_a": "Marvin Vettori",
+        "fighter_b": "Ismail Naurdiev",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "marvin-vettori-vs-ismail-naurdiev"
+      },
+      {
         "fighter_a": "Eric Nolan",
         "fighter_b": "Court McGee",
         "weight_class": "Welterweight",
@@ -454,6 +381,23 @@
       }
     ],
     "homepage": true
+  },
+  {
+    "id": 1273,
+    "name": "UFC Fight Night: Allen vs. Duncan",
+    "date": "Saturday, October 10, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-allen-vs-duncan",
+    "matchups": [
+      {
+        "fighter_a": "Christian Leroy Duncan",
+        "fighter_b": "Brendan Allen",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "christian-leroy-duncan-vs-brendan-allen"
+      }
+    ],
+    "homepage": false
   },
   {
     "id": 1265,

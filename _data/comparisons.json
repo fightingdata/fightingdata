@@ -1,145 +1,5 @@
 [
   {
-    "fighter_a": "Dan Hooker",
-    "fighter_b": "Salahdine Parnasse",
-    "slug": "dan-hooker-vs-salahdine-parnasse",
-    "url": "/compare/dan-hooker-vs-salahdine-parnasse/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Axel Sola",
-    "fighter_b": "Fares Ziam",
-    "slug": "axel-sola-vs-fares-ziam",
-    "url": "/compare/axel-sola-vs-fares-ziam/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Michael Page",
-    "fighter_b": "Nursulton Ruziboev",
-    "slug": "michael-page-vs-nursulton-ruziboev",
-    "url": "/compare/michael-page-vs-nursulton-ruziboev/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Daniil Donchenko",
-    "fighter_b": "Punahele Soriano",
-    "slug": "daniil-donchenko-vs-punahele-soriano",
-    "url": "/compare/daniil-donchenko-vs-punahele-soriano/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Kurtis Campbell",
-    "fighter_b": "Trevor Peek",
-    "slug": "kurtis-campbell-vs-trevor-peek",
-    "url": "/compare/kurtis-campbell-vs-trevor-peek/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Muhammad Naimov",
-    "fighter_b": "Losene Keita",
-    "slug": "muhammad-naimov-vs-losene-keita",
-    "url": "/compare/muhammad-naimov-vs-losene-keita/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Morgan Charriere",
-    "fighter_b": "Felipe Lima",
-    "slug": "morgan-charriere-vs-felipe-lima",
-    "url": "/compare/morgan-charriere-vs-felipe-lima/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Mario Pinto",
-    "fighter_b": "Ryan Spann",
-    "slug": "mario-pinto-vs-ryan-spann",
-    "url": "/compare/mario-pinto-vs-ryan-spann/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Oumar Sy",
-    "fighter_b": "Modestas Bukauskas",
-    "slug": "oumar-sy-vs-modestas-bukauskas",
-    "url": "/compare/oumar-sy-vs-modestas-bukauskas/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Nathaniel Wood",
-    "fighter_b": "Pavel Andrusca",
-    "slug": "nathaniel-wood-vs-pavel-andrusca",
-    "url": "/compare/nathaniel-wood-vs-pavel-andrusca/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Michael Aljarouj",
-    "fighter_b": "Fabia Sintes",
-    "slug": "michael-aljarouj-vs-fabia-sintes",
-    "url": "/compare/michael-aljarouj-vs-fabia-sintes/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Klaudia Sygula",
-    "fighter_b": "Nora Cornolle",
-    "slug": "klaudia-sygula-vs-nora-cornolle",
-    "url": "/compare/klaudia-sygula-vs-nora-cornolle/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Women's Bantamweight"
-  },
-  {
-    "fighter_a": "Matthieu Duclos",
-    "fighter_b": "Luis Felipe Dias",
-    "slug": "matthieu-duclos-vs-luis-felipe-dias",
-    "url": "/compare/matthieu-duclos-vs-luis-felipe-dias/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Sofia Montenegro",
-    "fighter_b": "Delphine Benouaich",
-    "slug": "sofia-montenegro-vs-delphine-benouaich",
-    "url": "/compare/sofia-montenegro-vs-delphine-benouaich/",
-    "event_name": "UFC Fight Night: Hooker vs. Parnasse",
-    "event_date": "Saturday, September 5, 2026",
-    "event_slug": "ufc-fight-night-hooker-vs-parnasse",
-    "weight_class": "Women's Strawweight"
-  },
-  {
     "fighter_a": "Jean Silva",
     "fighter_b": "Jose Delgado",
     "slug": "jean-silva-vs-jose-delgado",
@@ -510,43 +370,53 @@
     "weight_class": "Women's Strawweight"
   },
   {
+    "fighter_a": "Wang Cong",
+    "fighter_b": "Natalia Silva",
+    "slug": "wang-cong-vs-natalia-silva",
+    "url": "/compare/wang-cong-vs-natalia-silva/",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "Saturday, October 3, 2026",
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Women's Flyweight"
+  },
+  {
     "fighter_a": "Deiveson Figueiredo",
     "fighter_b": "Payton Talbott",
     "slug": "deiveson-figueiredo-vs-payton-talbott",
     "url": "/compare/deiveson-figueiredo-vs-payton-talbott/",
-    "event_name": "UFC 332",
+    "event_name": "UFC 332: Silva vs. Wang",
     "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332",
+    "event_slug": "ufc-332-silva-vs-wang",
     "weight_class": "Bantamweight"
   },
   {
-    "fighter_a": "Mick Parkin",
-    "fighter_b": "Johnny Walker",
-    "slug": "mick-parkin-vs-johnny-walker",
-    "url": "/compare/mick-parkin-vs-johnny-walker/",
-    "event_name": "UFC 332",
+    "fighter_a": "King Green",
+    "fighter_b": "Esteban Ribovics",
+    "slug": "king-green-vs-esteban-ribovics",
+    "url": "/compare/king-green-vs-esteban-ribovics/",
+    "event_name": "UFC 332: Silva vs. Wang",
     "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332",
-    "weight_class": "Heavyweight"
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Lightweight"
   },
   {
-    "fighter_a": "Marvin Vettori",
-    "fighter_b": "Ismail Naurdiev",
-    "slug": "marvin-vettori-vs-ismail-naurdiev",
-    "url": "/compare/marvin-vettori-vs-ismail-naurdiev/",
-    "event_name": "UFC 332",
+    "fighter_a": "Khaos Williams",
+    "fighter_b": "Roberto Soldic",
+    "slug": "khaos-williams-vs-roberto-soldic",
+    "url": "/compare/khaos-williams-vs-roberto-soldic/",
+    "event_name": "UFC 332: Silva vs. Wang",
     "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332",
-    "weight_class": "Middleweight"
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Welterweight"
   },
   {
     "fighter_a": "Ateba Gautier",
     "fighter_b": "Roman Kopylov",
     "slug": "ateba-gautier-vs-roman-kopylov",
     "url": "/compare/ateba-gautier-vs-roman-kopylov/",
-    "event_name": "UFC 332",
+    "event_name": "UFC 332: Silva vs. Wang",
     "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332",
+    "event_slug": "ufc-332-silva-vs-wang",
     "weight_class": "Middleweight"
   },
   {
@@ -554,9 +424,9 @@
     "fighter_b": "Imanol Rodriguez",
     "slug": "alden-coria-vs-imanol-rodriguez",
     "url": "/compare/alden-coria-vs-imanol-rodriguez/",
-    "event_name": "UFC 332",
+    "event_name": "UFC 332: Silva vs. Wang",
     "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332",
+    "event_slug": "ufc-332-silva-vs-wang",
     "weight_class": "Flyweight"
   },
   {
@@ -564,9 +434,49 @@
     "fighter_b": "Andrey Pulyaev",
     "slug": "damian-pinas-vs-andrey-pulyaev",
     "url": "/compare/damian-pinas-vs-andrey-pulyaev/",
-    "event_name": "UFC 332",
+    "event_name": "UFC 332: Silva vs. Wang",
     "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332",
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Marcus McGhee",
+    "fighter_b": "Benardo Sopaj",
+    "slug": "marcus-mcghee-vs-benardo-sopaj",
+    "url": "/compare/marcus-mcghee-vs-benardo-sopaj/",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "Saturday, October 3, 2026",
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Mick Parkin",
+    "fighter_b": "Johnny Walker",
+    "slug": "mick-parkin-vs-johnny-walker",
+    "url": "/compare/mick-parkin-vs-johnny-walker/",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "Saturday, October 3, 2026",
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Rafael Dos Anjos",
+    "fighter_b": "Alexander Hernandez",
+    "slug": "rafael-dos-anjos-vs-alexander-hernandez",
+    "url": "/compare/rafael-dos-anjos-vs-alexander-hernandez/",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "Saturday, October 3, 2026",
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Marvin Vettori",
+    "fighter_b": "Ismail Naurdiev",
+    "slug": "marvin-vettori-vs-ismail-naurdiev",
+    "url": "/compare/marvin-vettori-vs-ismail-naurdiev/",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "Saturday, October 3, 2026",
+    "event_slug": "ufc-332-silva-vs-wang",
     "weight_class": "Middleweight"
   },
   {
@@ -574,10 +484,20 @@
     "fighter_b": "Court McGee",
     "slug": "eric-nolan-vs-court-mcgee",
     "url": "/compare/eric-nolan-vs-court-mcgee/",
-    "event_name": "UFC 332",
+    "event_name": "UFC 332: Silva vs. Wang",
     "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332",
+    "event_slug": "ufc-332-silva-vs-wang",
     "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Christian Leroy Duncan",
+    "fighter_b": "Brendan Allen",
+    "slug": "christian-leroy-duncan-vs-brendan-allen",
+    "url": "/compare/christian-leroy-duncan-vs-brendan-allen/",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "Saturday, October 10, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-duncan",
+    "weight_class": "Middleweight"
   },
   {
     "fighter_a": "Mike Malott",
