@@ -1,106 +1,5 @@
 [
   {
-    "id": 1264,
-    "name": "Noche UFC: Silva vs. Delgado",
-    "date": "Saturday, September 12, 2026",
-    "location": "Glendale, Arizona, USA",
-    "slug": "noche-ufc-silva-vs-delgado",
-    "matchups": [
-      {
-        "fighter_a": "Jean Silva",
-        "fighter_b": "Jose Delgado",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "jean-silva-vs-jose-delgado"
-      },
-      {
-        "fighter_a": "Brandon Moreno",
-        "fighter_b": "Joseph Morales",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "brandon-moreno-vs-joseph-morales"
-      },
-      {
-        "fighter_a": "Marwan Rahiki",
-        "fighter_b": "Tommy McMillen",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "marwan-rahiki-vs-tommy-mcmillen"
-      },
-      {
-        "fighter_a": "Alexa Grasso",
-        "fighter_b": "Manon Fiorot",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "alexa-grasso-vs-manon-fiorot"
-      },
-      {
-        "fighter_a": "Waldo Cortes Acosta",
-        "fighter_b": "Curtis Blaydes",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "waldo-cortes-acosta-vs-curtis-blaydes"
-      },
-      {
-        "fighter_a": "Dan Ige",
-        "fighter_b": "David Martinez",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "dan-ige-vs-david-martinez"
-      },
-      {
-        "fighter_a": "Edgar Chairez",
-        "fighter_b": "Tim Elliott",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "edgar-chairez-vs-tim-elliott"
-      },
-      {
-        "fighter_a": "Ignacio Bahamondes",
-        "fighter_b": "Muslim Salikhov",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "ignacio-bahamondes-vs-muslim-salikhov"
-      },
-      {
-        "fighter_a": "Yousri Belgaroui",
-        "fighter_b": "Djorden Santos",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "yousri-belgaroui-vs-djorden-santos"
-      },
-      {
-        "fighter_a": "Drakkar Klose",
-        "fighter_b": "Tommy Gantt",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "drakkar-klose-vs-tommy-gantt"
-      },
-      {
-        "fighter_a": "Rafa Garcia",
-        "fighter_b": "Rongzhu",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "rafa-garcia-vs-rongzhu"
-      },
-      {
-        "fighter_a": "Jessie Rosas",
-        "fighter_b": "Sean King III",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "jessie-rosas-vs-sean-king-iii"
-      },
-      {
-        "fighter_a": "JJ Aldrich",
-        "fighter_b": "Regina Tarin",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "jj-aldrich-vs-regina-tarin"
-      }
-    ],
-    "homepage": true
-  },
-  {
     "id": 1266,
     "name": "UFC 331: Van vs. Pantoja 2",
     "date": "Saturday, September 19, 2026",
@@ -216,34 +115,6 @@
         "slug": "raul-rosas-jr-vs-raoni-barcelos"
       },
       {
-        "fighter_a": "Valesca Machado",
-        "fighter_b": "Melissa Amaya",
-        "weight_class": "Women's Strawweight",
-        "is_title": false,
-        "slug": "valesca-machado-vs-melissa-amaya"
-      },
-      {
-        "fighter_a": "Mehemmedeli Osmanli",
-        "fighter_b": "Ilimbek Akylbek Uulu",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu"
-      },
-      {
-        "fighter_a": "Ricky Simon",
-        "fighter_b": "Montel Jackson",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "ricky-simon-vs-montel-jackson"
-      },
-      {
-        "fighter_a": "Rodolfo Bellato",
-        "fighter_b": "Christian Edwards",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "rodolfo-bellato-vs-christian-edwards"
-      },
-      {
         "fighter_a": "Rodolfo Vieira",
         "fighter_b": "Robert Bryczek",
         "weight_class": "Middleweight",
@@ -258,11 +129,18 @@
         "slug": "rinya-nakamura-vs-brady-hiestand"
       },
       {
-        "fighter_a": "John Castaneda",
-        "fighter_b": "Alatengheili",
+        "fighter_a": "Mehemmedeli Osmanli",
+        "fighter_b": "Ilimbek Akylbek Uulu",
         "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "john-castaneda-vs-alatengheili"
+        "slug": "mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu"
+      },
+      {
+        "fighter_a": "Valesca Machado",
+        "fighter_b": "Melissa Amaya",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "valesca-machado-vs-melissa-amaya"
       },
       {
         "fighter_a": "Elves Brener",
@@ -270,6 +148,27 @@
         "weight_class": "Lightweight",
         "is_title": false,
         "slug": "elves-brener-vs-josiah-harrell"
+      },
+      {
+        "fighter_a": "Rodolfo Bellato",
+        "fighter_b": "Christian Edwards",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "rodolfo-bellato-vs-christian-edwards"
+      },
+      {
+        "fighter_a": "Ricky Simon",
+        "fighter_b": "Montel Jackson",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "ricky-simon-vs-montel-jackson"
+      },
+      {
+        "fighter_a": "John Castaneda",
+        "fighter_b": "Alatengheili",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "john-castaneda-vs-alatengheili"
       },
       {
         "fighter_a": "Ailin Perez",
@@ -475,6 +374,20 @@
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "chad-anheliger-vs-steven-koslow"
+      },
+      {
+        "fighter_a": "Louie Sutherland",
+        "fighter_b": "Javad Mahjoub",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "louie-sutherland-vs-javad-mahjoub"
+      },
+      {
+        "fighter_a": "SuYoung You",
+        "fighter_b": "Cody Chovancek",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "suyoung-you-vs-cody-chovancek"
       }
     ],
     "homepage": true
@@ -541,6 +454,13 @@
         "weight_class": "Lightweight",
         "is_title": false,
         "slug": "grant-dawson-vs-nurullo-aliev"
+      },
+      {
+        "fighter_a": "Alexander Volkov",
+        "fighter_b": "Rizvan Kuniev",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "alexander-volkov-vs-rizvan-kuniev"
       }
     ],
     "homepage": true
