@@ -27727,6 +27727,23 @@
     "last_fight_date": "2026-09-12"
   },
   {
+    "id": 3849,
+    "name": "Jean White Bear Silva",
+    "nickname": null,
+    "height_cm": 167.6,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "1977-10-08",
+    "slug": "jean-white-bear-silva",
+    "career_record": "19-12-3 (1 NC)",
+    "career_wins": 19,
+    "career_losses": 12,
+    "career_draws": 3,
+    "career_nc": 1,
+    "division": "",
+    "last_fight_date": "2005-07-17"
+  },
+  {
     "id": 92,
     "name": "Jean-Paul Lebosnoyani",
     "nickname": null,
@@ -43348,6 +43365,23 @@
     "career_nc": 0,
     "division": "Middleweight",
     "last_fight_date": "2017-11-25"
+  },
+  {
+    "id": 3850,
+    "name": "Michael Black Sniper McDonald",
+    "nickname": null,
+    "height_cm": 180.3,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "1965-02-06",
+    "slug": "michael-black-sniper-mcdonald",
+    "career_record": "1-1-0",
+    "career_wins": 1,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": "2004-03-14"
   },
   {
     "id": 2804,
