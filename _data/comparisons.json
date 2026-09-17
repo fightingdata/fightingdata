@@ -30,14 +30,14 @@
     "weight_class": "Featherweight"
   },
   {
-    "fighter_a": "Brian Ortega",
-    "fighter_b": "Renato Moicano",
-    "slug": "brian-ortega-vs-renato-moicano",
-    "url": "/compare/brian-ortega-vs-renato-moicano/",
+    "fighter_a": "Sean Sharaf",
+    "fighter_b": "Gable Steveson",
+    "slug": "sean-sharaf-vs-gable-steveson",
+    "url": "/compare/sean-sharaf-vs-gable-steveson/",
     "event_name": "UFC 331: Van vs. Pantoja 2",
     "event_date": "Saturday, September 19, 2026",
     "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Lightweight"
+    "weight_class": "Heavyweight"
   },
   {
     "fighter_a": "Iwo Baraniewski",
@@ -48,16 +48,6 @@
     "event_date": "Saturday, September 19, 2026",
     "event_slug": "ufc-331-van-vs-pantoja-2",
     "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Sean Sharaf",
-    "fighter_b": "Gable Steveson",
-    "slug": "sean-sharaf-vs-gable-steveson",
-    "url": "/compare/sean-sharaf-vs-gable-steveson/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Heavyweight"
   },
   {
     "fighter_a": "Marlon Vera",
@@ -360,6 +350,16 @@
     "weight_class": "Welterweight"
   },
   {
+    "fighter_a": "Anthony Wint",
+    "fighter_b": "Lucas Armand",
+    "slug": "anthony-wint-vs-lucas-armand",
+    "url": "/compare/anthony-wint-vs-lucas-armand/",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "Saturday, October 3, 2026",
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Heavyweight"
+  },
+  {
     "fighter_a": "Christian Leroy Duncan",
     "fighter_b": "Brendan Allen",
     "slug": "christian-leroy-duncan-vs-brendan-allen",
@@ -578,6 +578,16 @@
     "event_date": "Saturday, October 24, 2026",
     "event_slug": "ufc-333-volkanovski-vs-evloev",
     "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Renato Moicano",
+    "fighter_b": "Tom Nolan",
+    "slug": "renato-moicano-vs-tom-nolan",
+    "url": "/compare/renato-moicano-vs-tom-nolan/",
+    "event_name": "UFC Fight Night",
+    "event_date": "Saturday, October 31, 2026",
+    "event_slug": "ufc-fight-night",
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Nick Klein",

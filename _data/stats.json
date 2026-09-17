@@ -1,11 +1,11 @@
 {
-  "total_fighters": 3850,
+  "total_fighters": 3851,
   "total_events": 1276,
-  "total_fights": 11393,
+  "total_fights": 11394,
   "upcoming_events": 8,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-11-07",
-  "last_updated": "2026-09-15T13:02:11.595134",
+  "last_updated": "2026-09-17T08:00:18.775043",
   "featured_event": {
     "name": "UFC 331: Van vs. Pantoja 2",
     "date": "Saturday, September 19, 2026",
@@ -36,11 +36,11 @@
         "slug": "patricio-freire-vs-dooho-choi"
       },
       {
-        "fighter_a": "Brian Ortega",
-        "fighter_b": "Renato Moicano",
-        "weight_class": "Lightweight",
+        "fighter_a": "Sean Sharaf",
+        "fighter_b": "Gable Steveson",
+        "weight_class": "Heavyweight",
         "is_title": false,
-        "slug": "brian-ortega-vs-renato-moicano"
+        "slug": "sean-sharaf-vs-gable-steveson"
       },
       {
         "fighter_a": "Iwo Baraniewski",
@@ -48,13 +48,6 @@
         "weight_class": "Light Heavyweight",
         "is_title": false,
         "slug": "iwo-baraniewski-vs-alonzo-menifield"
-      },
-      {
-        "fighter_a": "Sean Sharaf",
-        "fighter_b": "Gable Steveson",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "sean-sharaf-vs-gable-steveson"
       },
       {
         "fighter_a": "Marlon Vera",

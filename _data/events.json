@@ -28,11 +28,11 @@
         "slug": "patricio-freire-vs-dooho-choi"
       },
       {
-        "fighter_a": "Brian Ortega",
-        "fighter_b": "Renato Moicano",
-        "weight_class": "Lightweight",
+        "fighter_a": "Sean Sharaf",
+        "fighter_b": "Gable Steveson",
+        "weight_class": "Heavyweight",
         "is_title": false,
-        "slug": "brian-ortega-vs-renato-moicano"
+        "slug": "sean-sharaf-vs-gable-steveson"
       },
       {
         "fighter_a": "Iwo Baraniewski",
@@ -40,13 +40,6 @@
         "weight_class": "Light Heavyweight",
         "is_title": false,
         "slug": "iwo-baraniewski-vs-alonzo-menifield"
-      },
-      {
-        "fighter_a": "Sean Sharaf",
-        "fighter_b": "Gable Steveson",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "sean-sharaf-vs-gable-steveson"
       },
       {
         "fighter_a": "Marlon Vera",
@@ -277,6 +270,13 @@
         "weight_class": "Welterweight",
         "is_title": false,
         "slug": "eric-nolan-vs-court-mcgee"
+      },
+      {
+        "fighter_a": "Anthony Wint",
+        "fighter_b": "Lucas Armand",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "anthony-wint-vs-lucas-armand"
       }
     ],
     "homepage": true
@@ -472,6 +472,13 @@
     "location": "Las Vegas, Nevada, USA",
     "slug": "ufc-fight-night",
     "matchups": [
+      {
+        "fighter_a": "Renato Moicano",
+        "fighter_b": "Tom Nolan",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "renato-moicano-vs-tom-nolan"
+      },
       {
         "fighter_a": "Nick Klein",
         "fighter_b": "Joe Kropschot",
