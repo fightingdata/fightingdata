@@ -2,97 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fightingdata.com/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/articles/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/events/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/bantamweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/featherweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/flyweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/heavyweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/light-heavyweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/lightweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/middleweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/welterweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/womens-bantamweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/womens-flyweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/divisions/womens-strawweight/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/methodology/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/subscribe/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/about/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -3636,6 +3636,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fightingdata.com/events/ufc-334-gane-vs-hokit/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fightingdata.com/events/ufc-34-high-voltage/</loc>
     <lastmod>2001-11-02</lastmod>
     <priority>0.7</priority>
@@ -3998,11 +4003,6 @@
   <url>
     <loc>https://fightingdata.com/events/ufc-99-the-comeback/</loc>
     <lastmod>2009-06-13</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fightingdata.com/events/ufc-fight-night/</loc>
-    <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -5218,6 +5218,11 @@
   <url>
     <loc>https://fightingdata.com/events/ufc-fight-night-moicano-vs-duncan/</loc>
     <lastmod>2026-04-04</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/events/ufc-fight-night-moicano-vs-nolan/</loc>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6502,12 +6507,17 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/aaron-pico-vs-patricio-freire/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/abdul-rakhman-yakhyaev-vs-brendson-ribeiro/</loc>
     <lastmod>2026-09-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/adrian-yanez-vs-juan-diaz/</loc>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6597,7 +6607,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/alonzo-menifield-vs-zhang-mingyang/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6662,7 +6672,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/ateba-gautier-vs-ozzy-diaz/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6782,7 +6792,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/brendan-allen-vs-edmen-shahbazyan/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6802,12 +6812,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/brunno-ferreira-vs-edmen-shahbazyan/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/brunno-ferreira-vs-ikram-aliskerov/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6818,6 +6828,11 @@
   <url>
     <loc>https://fightingdata.com/compare/caio-borralho-vs-reinier-de-ridder/</loc>
     <lastmod>2026-09-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/caio-borralho-vs-yousri-belgaroui/</loc>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6847,7 +6862,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/casey-oneill-vs-gabriella-fernandes/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6872,12 +6887,17 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/charles-jourdain-vs-kyler-phillips/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/charles-radtke-vs-francisco-prado/</loc>
     <lastmod>2026-08-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/charles-radtke-vs-stephen-thompson/</loc>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6901,6 +6921,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fightingdata.com/compare/chris-duncan-vs-drew-dober/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fightingdata.com/compare/chris-padilla-vs-marquel-mederos/</loc>
     <lastmod>2026-09-14</lastmod>
     <priority>0.7</priority>
@@ -6918,6 +6943,11 @@
   <url>
     <loc>https://fightingdata.com/compare/ciryl-gane-vs-alex-pereira/</loc>
     <lastmod>2026-08-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/ciryl-gane-vs-josh-hokit/</loc>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7002,7 +7032,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/daniel-santos-vs-dooho-choi/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7091,6 +7121,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fightingdata.com/compare/donte-johnson-vs-baisangur-susurkaev/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fightingdata.com/compare/donte-johnson-vs-cody-brundage/</loc>
     <lastmod>2026-08-22</lastmod>
     <priority>0.7</priority>
@@ -7147,12 +7182,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/eduarda-moura-vs-casey-oneill/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/elisha-ellison-vs-gable-steveson/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7212,7 +7247,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/gaston-bolanos-vs-michael-aswell-jr/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7232,7 +7267,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/giga-chikadze-vs-joanderson-brito/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7262,7 +7297,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/gregory-rodrigues-vs-brunno-ferreira/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7332,17 +7367,17 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/iwo-baraniewski-vs-alonzo-menifield/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/iwo-baraniewski-vs-austen-lane/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/iwo-baraniewski-vs-junior-tafa/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7477,12 +7512,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/joosang-yoo-vs-michael-aswell-jr/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/jordan-leavitt-vs-joanderson-brito/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7522,12 +7557,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/joshua-van-vs-alexandre-pantoja/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/joshua-van-vs-tatsuro-taira/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7557,7 +7592,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/junior-tafa-vs-kevin-christian/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7568,6 +7603,11 @@
   <url>
     <loc>https://fightingdata.com/compare/karine-silva-vs-jasmine-jasudavicius/</loc>
     <lastmod>2026-08-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/kayla-harrison-vs-amanda-nunes/</loc>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7701,6 +7741,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fightingdata.com/compare/luis-gurule-vs-bilal-hasan/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fightingdata.com/compare/luis-gurule-vs-daniel-barez/</loc>
     <lastmod>2026-08-22</lastmod>
     <priority>0.7</priority>
@@ -7717,7 +7762,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/luke-riley-vs-michael-aswell-jr/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/macy-chiasson-vs-bia-mesquita/</loc>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7807,17 +7857,17 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/marlon-vera-vs-charles-jourdain/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/marlon-vera-vs-david-martinez/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/marvin-vettori-vs-ismail-naurdiev/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7857,17 +7907,17 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/mauricio-ruffy-vs-arman-tsarukyan/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/mauricio-ruffy-vs-king-green/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/mauricio-ruffy-vs-michael-chandler/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -7887,7 +7937,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8006,6 +8056,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fightingdata.com/compare/nazim-sadykhov-vs-jefferson-nascimento/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fightingdata.com/compare/nazim-sadykhov-vs-matheus-camilo/</loc>
     <lastmod>2026-08-22</lastmod>
     <priority>0.7</priority>
@@ -8017,7 +8072,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/nick-klein-vs-joe-kropschot/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8067,7 +8122,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/patricio-freire-vs-dooho-choi/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8152,7 +8207,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/renato-moicano-vs-tom-nolan/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8222,17 +8277,17 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/ronald-humphrey-vs-alexis-miranda/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/ryan-gandra-vs-jose-daniel-medina/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/ryan-gandra-vs-ozzy-diaz/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8272,7 +8327,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/sean-sharaf-vs-gable-steveson/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8387,17 +8442,17 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/tai-tuivasa-vs-louie-sutherland/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/tai-tuivasa-vs-robelis-despaigne/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/compare/tainara-lisboa-vs-lucia-szabova/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8423,6 +8478,11 @@
   <url>
     <loc>https://fightingdata.com/compare/terrance-chatman-vs-anthony-wint/</loc>
     <lastmod>2026-09-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fightingdata.com/compare/terrance-mckinney-vs-jim-miller/</loc>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8461,8 +8521,13 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fightingdata.com/compare/uros-medic-vs-kevin-holland/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fightingdata.com/compare/valesca-machado-vs-melissa-amaya/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -8557,12 +8622,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/compare/zach-reese-vs-ryan-gandra/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/aalon-cruz/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -8622,7 +8687,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/abdellah-er-ramy/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -8657,7 +8722,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/abel-trujillo/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -9067,7 +9132,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/alex-karalexis/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -9227,7 +9292,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/alexandre-pantoja/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -9362,7 +9427,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/alonzo-menifield/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -9457,7 +9522,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ananias-mulumba/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -9957,7 +10022,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ariel-beck/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -9977,7 +10042,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/arman-tsarukyan/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -10152,7 +10217,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/axel-sola/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -10227,7 +10292,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/bartosz-szewczyk/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -10972,7 +11037,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/brunno-ferreira/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -11032,7 +11097,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/bryan-battle/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -11182,7 +11247,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/cameron-smotherman/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -11382,7 +11447,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/casey-oneill/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -11547,7 +11612,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/charles-jourdain/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -11637,7 +11702,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/chase-waldon/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -13252,7 +13317,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/denis-kang/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -13577,7 +13642,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/don-shainis/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -13667,7 +13732,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/dooho-choi/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -13927,7 +13992,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/edmen-shahbazyan/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -13962,7 +14027,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/eduarda-moura/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -14222,7 +14287,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/eric-schafer/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -14507,7 +14572,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/felice-herrig/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -14782,7 +14847,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/gable-steveson/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -15052,7 +15117,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/giga-chikadze/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -15397,7 +15462,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/heather-clark/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -15432,7 +15497,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/hector-urbina/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -15797,7 +15862,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ilimbek-akylbek-uulu/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -15972,7 +16037,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/iwo-baraniewski/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -16757,7 +16822,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/jefferson-nascimento/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -16832,12 +16897,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/jeremy-jackson/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/jeremy-kennedy/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -17177,7 +17242,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/joanderson-brito/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -17342,7 +17407,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/joe-pyfer/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -17792,7 +17857,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/joosang-yoo/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -18157,7 +18222,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/josh-thomson/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -18177,7 +18242,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/joshua-van/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -18387,7 +18452,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/junior-tafa/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -18867,7 +18932,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/keisuke-fujiwara/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -19132,7 +19197,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/khabib-nurmagomedov/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -19557,7 +19622,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/leandro-issa/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -19687,7 +19752,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/lewis-gonzalez/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -19782,7 +19847,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/loik-radzhabov/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -20792,7 +20857,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/mark-weir/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -20817,7 +20882,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/marlon-vera/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -20832,7 +20897,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/martin-bravo/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -20867,7 +20932,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/marvin-vettori/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -21107,7 +21172,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/matt-wiman/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -21157,7 +21222,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/mauricio-ruffy/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -21227,7 +21292,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/mehemmedeli-osmanli/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -21242,7 +21307,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/melissa-amaya/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -21312,7 +21377,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/michael-aswell-jr/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -21617,7 +21682,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/mike-guymon/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -21682,7 +21747,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/mike-pyle/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -22667,12 +22732,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ozzy-diaz/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/pablo-garza/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -22757,7 +22822,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/patricio-freire/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -22867,7 +22932,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/paul-varelans/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -23152,7 +23217,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/quinn-mulhern/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -23882,7 +23947,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/robelis-despaigne/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -23952,7 +24017,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/roberto-traven/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -24192,12 +24257,12 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ronald-humphrey/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ronald-jhun/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -24437,7 +24502,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ryan-gandra/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -24462,7 +24527,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ryan-jensen/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -24562,7 +24627,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/ryuta-sakurai/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -24772,7 +24837,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/sarah-kaufman/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -24852,7 +24917,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/scott-jorgensen/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -24957,7 +25022,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/sean-sharaf/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -25477,7 +25542,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/stephanie-frausto/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -25657,7 +25722,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/sultan-aliev/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -25732,7 +25797,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/tai-tuivasa/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -25892,7 +25957,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/tatsuya-saika/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -26677,7 +26742,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/tyra-parker/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -26707,7 +26772,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/tyson-pedro/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -26777,7 +26842,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/valesca-machado/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -26982,7 +27047,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/vitor-costa/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -27027,7 +27092,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/volkan-oezdemir/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -27492,7 +27557,7 @@
   </url>
   <url>
     <loc>https://fightingdata.com/fighters/yoshihiro-takayama/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>

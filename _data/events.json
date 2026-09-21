@@ -1,99 +1,5 @@
 [
   {
-    "id": 1266,
-    "name": "UFC 331: Van vs. Pantoja 2",
-    "date": "Saturday, September 19, 2026",
-    "location": "Los Angeles, California, USA",
-    "slug": "ufc-331-van-vs-pantoja-2",
-    "matchups": [
-      {
-        "fighter_a": "Joshua Van",
-        "fighter_b": "Alexandre Pantoja",
-        "weight_class": "Flyweight",
-        "is_title": true,
-        "slug": "joshua-van-vs-alexandre-pantoja"
-      },
-      {
-        "fighter_a": "Mauricio Ruffy",
-        "fighter_b": "Arman Tsarukyan",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "mauricio-ruffy-vs-arman-tsarukyan"
-      },
-      {
-        "fighter_a": "Patricio Freire",
-        "fighter_b": "Dooho Choi",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "patricio-freire-vs-dooho-choi"
-      },
-      {
-        "fighter_a": "Sean Sharaf",
-        "fighter_b": "Gable Steveson",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "sean-sharaf-vs-gable-steveson"
-      },
-      {
-        "fighter_a": "Iwo Baraniewski",
-        "fighter_b": "Alonzo Menifield",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "iwo-baraniewski-vs-alonzo-menifield"
-      },
-      {
-        "fighter_a": "Marlon Vera",
-        "fighter_b": "Charles Jourdain",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "marlon-vera-vs-charles-jourdain"
-      },
-      {
-        "fighter_a": "Tai Tuivasa",
-        "fighter_b": "Robelis Despaigne",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "tai-tuivasa-vs-robelis-despaigne"
-      },
-      {
-        "fighter_a": "JooSang Yoo",
-        "fighter_b": "Michael Aswell Jr.",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "joosang-yoo-vs-michael-aswell-jr"
-      },
-      {
-        "fighter_a": "Ryan Gandra",
-        "fighter_b": "Ozzy Diaz",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "ryan-gandra-vs-ozzy-diaz"
-      },
-      {
-        "fighter_a": "Brunno Ferreira",
-        "fighter_b": "Edmen Shahbazyan",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "brunno-ferreira-vs-edmen-shahbazyan"
-      },
-      {
-        "fighter_a": "Eduarda Moura",
-        "fighter_b": "Casey O'Neill",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "eduarda-moura-vs-casey-oneill"
-      },
-      {
-        "fighter_a": "Giga Chikadze",
-        "fighter_b": "Joanderson Brito",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "giga-chikadze-vs-joanderson-brito"
-      }
-    ],
-    "homepage": true
-  },
-  {
     "id": 1268,
     "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
     "date": "Saturday, September 26, 2026",
@@ -115,13 +21,6 @@
         "slug": "rodolfo-vieira-vs-robert-bryczek"
       },
       {
-        "fighter_a": "Rinya Nakamura",
-        "fighter_b": "Brady Hiestand",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "rinya-nakamura-vs-brady-hiestand"
-      },
-      {
         "fighter_a": "Mehemmedeli Osmanli",
         "fighter_b": "Ilimbek Akylbek Uulu",
         "weight_class": "Bantamweight",
@@ -136,11 +35,11 @@
         "slug": "valesca-machado-vs-melissa-amaya"
       },
       {
-        "fighter_a": "Elves Brener",
-        "fighter_b": "Josiah Harrell",
-        "weight_class": "Lightweight",
+        "fighter_a": "Rinya Nakamura",
+        "fighter_b": "Brady Hiestand",
+        "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "elves-brener-vs-josiah-harrell"
+        "slug": "rinya-nakamura-vs-brady-hiestand"
       },
       {
         "fighter_a": "Rodolfo Bellato",
@@ -150,6 +49,13 @@
         "slug": "rodolfo-bellato-vs-christian-edwards"
       },
       {
+        "fighter_a": "Elves Brener",
+        "fighter_b": "Josiah Harrell",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "elves-brener-vs-josiah-harrell"
+      },
+      {
         "fighter_a": "Ricky Simon",
         "fighter_b": "Montel Jackson",
         "weight_class": "Bantamweight",
@@ -157,18 +63,18 @@
         "slug": "ricky-simon-vs-montel-jackson"
       },
       {
-        "fighter_a": "John Castaneda",
-        "fighter_b": "Alatengheili",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "john-castaneda-vs-alatengheili"
-      },
-      {
         "fighter_a": "Ailin Perez",
         "fighter_b": "Norma Dumont",
         "weight_class": "Women's Bantamweight",
         "is_title": false,
         "slug": "ailin-perez-vs-norma-dumont"
+      },
+      {
+        "fighter_a": "John Castaneda",
+        "fighter_b": "Alatengheili",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "john-castaneda-vs-alatengheili"
       },
       {
         "fighter_a": "Vanessa Demopoulos",
@@ -313,13 +219,6 @@
         "slug": "mike-malott-vs-joaquin-buckley"
       },
       {
-        "fighter_a": "Nate Landwehr",
-        "fighter_b": "Mandel Nallo",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "nate-landwehr-vs-mandel-nallo"
-      },
-      {
         "fighter_a": "Erin Blanchfield",
         "fighter_b": "Jasmine Jasudavicius",
         "weight_class": "Women's Flyweight",
@@ -334,11 +233,18 @@
         "slug": "marc-andre-barriault-vs-kyle-daukaus"
       },
       {
-        "fighter_a": "Jamey-Lyn Horth",
-        "fighter_b": "Katlyn Cerminara",
-        "weight_class": "Women's Flyweight",
+        "fighter_a": "Timmy Cuamba",
+        "fighter_b": "Louis Jourdain",
+        "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "jamey-lyn-horth-vs-katlyn-cerminara"
+        "slug": "timmy-cuamba-vs-louis-jourdain"
+      },
+      {
+        "fighter_a": "Nate Landwehr",
+        "fighter_b": "Mandel Nallo",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "nate-landwehr-vs-mandel-nallo"
       },
       {
         "fighter_a": "Jhonata Diniz",
@@ -348,25 +254,25 @@
         "slug": "jhonata-diniz-vs-tanner-boser"
       },
       {
-        "fighter_a": "Melissa Croden",
-        "fighter_b": "Chelsea Chandler",
-        "weight_class": "Women's Bantamweight",
-        "is_title": false,
-        "slug": "melissa-croden-vs-chelsea-chandler"
-      },
-      {
-        "fighter_a": "Timmy Cuamba",
-        "fighter_b": "Louis Jourdain",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "timmy-cuamba-vs-louis-jourdain"
-      },
-      {
         "fighter_a": "Gilbert Urbina",
         "fighter_b": "Julien Leblanc",
         "weight_class": "Middleweight",
         "is_title": false,
         "slug": "gilbert-urbina-vs-julien-leblanc"
+      },
+      {
+        "fighter_a": "Louie Sutherland",
+        "fighter_b": "Javad Mahjoub",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "louie-sutherland-vs-javad-mahjoub"
+      },
+      {
+        "fighter_a": "Jamey-Lyn Horth",
+        "fighter_b": "Katlyn Cerminara",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "jamey-lyn-horth-vs-katlyn-cerminara"
       },
       {
         "fighter_a": "Chad Anheliger",
@@ -376,11 +282,11 @@
         "slug": "chad-anheliger-vs-steven-koslow"
       },
       {
-        "fighter_a": "Louie Sutherland",
-        "fighter_b": "Javad Mahjoub",
-        "weight_class": "Heavyweight",
+        "fighter_a": "Melissa Croden",
+        "fighter_b": "Chelsea Chandler",
+        "weight_class": "Women's Bantamweight",
         "is_title": false,
-        "slug": "louie-sutherland-vs-javad-mahjoub"
+        "slug": "melissa-croden-vs-chelsea-chandler"
       },
       {
         "fighter_a": "SuYoung You",
@@ -467,10 +373,10 @@
   },
   {
     "id": 1271,
-    "name": "UFC Fight Night",
+    "name": "UFC Fight Night: Moicano vs. Nolan",
     "date": "Saturday, October 31, 2026",
     "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night",
+    "slug": "ufc-fight-night-moicano-vs-nolan",
     "matchups": [
       {
         "fighter_a": "Renato Moicano",
@@ -512,5 +418,99 @@
       }
     ],
     "homepage": false
+  },
+  {
+    "id": 1277,
+    "name": "UFC 334: Gane vs. Hokit",
+    "date": "Saturday, November 14, 2026",
+    "location": "New York City, New York, USA",
+    "slug": "ufc-334-gane-vs-hokit",
+    "matchups": [
+      {
+        "fighter_a": "Ciryl Gane",
+        "fighter_b": "Josh Hokit",
+        "weight_class": "Heavyweight",
+        "is_title": true,
+        "slug": "ciryl-gane-vs-josh-hokit"
+      },
+      {
+        "fighter_a": "Kayla Harrison",
+        "fighter_b": "Amanda Nunes",
+        "weight_class": "Women's Bantamweight",
+        "is_title": true,
+        "slug": "kayla-harrison-vs-amanda-nunes"
+      },
+      {
+        "fighter_a": "Caio Borralho",
+        "fighter_b": "Yousri Belgaroui",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "caio-borralho-vs-yousri-belgaroui"
+      },
+      {
+        "fighter_a": "Uros Medic",
+        "fighter_b": "Kevin Holland",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "uros-medic-vs-kevin-holland"
+      },
+      {
+        "fighter_a": "Luis Gurule",
+        "fighter_b": "Bilal Hasan",
+        "weight_class": "Flyweight",
+        "is_title": false,
+        "slug": "luis-gurule-vs-bilal-hasan"
+      },
+      {
+        "fighter_a": "Charles Radtke",
+        "fighter_b": "Stephen Thompson",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "charles-radtke-vs-stephen-thompson"
+      },
+      {
+        "fighter_a": "Chris Duncan",
+        "fighter_b": "Drew Dober",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "chris-duncan-vs-drew-dober"
+      },
+      {
+        "fighter_a": "Terrance McKinney",
+        "fighter_b": "Jim Miller",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "terrance-mckinney-vs-jim-miller"
+      },
+      {
+        "fighter_a": "Donte Johnson",
+        "fighter_b": "Baisangur Susurkaev",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "donte-johnson-vs-baisangur-susurkaev"
+      },
+      {
+        "fighter_a": "Macy Chiasson",
+        "fighter_b": "Bia Mesquita",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "macy-chiasson-vs-bia-mesquita"
+      },
+      {
+        "fighter_a": "Adrian Yanez",
+        "fighter_b": "Juan Diaz",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "adrian-yanez-vs-juan-diaz"
+      },
+      {
+        "fighter_a": "Nazim Sadykhov",
+        "fighter_b": "Jefferson Nascimento",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "nazim-sadykhov-vs-jefferson-nascimento"
+      }
+    ],
+    "homepage": true
   }
 ]

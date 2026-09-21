@@ -1,125 +1,5 @@
 [
   {
-    "fighter_a": "Joshua Van",
-    "fighter_b": "Alexandre Pantoja",
-    "slug": "joshua-van-vs-alexandre-pantoja",
-    "url": "/compare/joshua-van-vs-alexandre-pantoja/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Mauricio Ruffy",
-    "fighter_b": "Arman Tsarukyan",
-    "slug": "mauricio-ruffy-vs-arman-tsarukyan",
-    "url": "/compare/mauricio-ruffy-vs-arman-tsarukyan/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Patricio Freire",
-    "fighter_b": "Dooho Choi",
-    "slug": "patricio-freire-vs-dooho-choi",
-    "url": "/compare/patricio-freire-vs-dooho-choi/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Sean Sharaf",
-    "fighter_b": "Gable Steveson",
-    "slug": "sean-sharaf-vs-gable-steveson",
-    "url": "/compare/sean-sharaf-vs-gable-steveson/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Iwo Baraniewski",
-    "fighter_b": "Alonzo Menifield",
-    "slug": "iwo-baraniewski-vs-alonzo-menifield",
-    "url": "/compare/iwo-baraniewski-vs-alonzo-menifield/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Marlon Vera",
-    "fighter_b": "Charles Jourdain",
-    "slug": "marlon-vera-vs-charles-jourdain",
-    "url": "/compare/marlon-vera-vs-charles-jourdain/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Tai Tuivasa",
-    "fighter_b": "Robelis Despaigne",
-    "slug": "tai-tuivasa-vs-robelis-despaigne",
-    "url": "/compare/tai-tuivasa-vs-robelis-despaigne/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "JooSang Yoo",
-    "fighter_b": "Michael Aswell Jr.",
-    "slug": "joosang-yoo-vs-michael-aswell-jr",
-    "url": "/compare/joosang-yoo-vs-michael-aswell-jr/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Featherweight"
-  },
-  {
-    "fighter_a": "Ryan Gandra",
-    "fighter_b": "Ozzy Diaz",
-    "slug": "ryan-gandra-vs-ozzy-diaz",
-    "url": "/compare/ryan-gandra-vs-ozzy-diaz/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Brunno Ferreira",
-    "fighter_b": "Edmen Shahbazyan",
-    "slug": "brunno-ferreira-vs-edmen-shahbazyan",
-    "url": "/compare/brunno-ferreira-vs-edmen-shahbazyan/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Eduarda Moura",
-    "fighter_b": "Casey O'Neill",
-    "slug": "eduarda-moura-vs-casey-oneill",
-    "url": "/compare/eduarda-moura-vs-casey-oneill/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Giga Chikadze",
-    "fighter_b": "Joanderson Brito",
-    "slug": "giga-chikadze-vs-joanderson-brito",
-    "url": "/compare/giga-chikadze-vs-joanderson-brito/",
-    "event_name": "UFC 331: Van vs. Pantoja 2",
-    "event_date": "Saturday, September 19, 2026",
-    "event_slug": "ufc-331-van-vs-pantoja-2",
-    "weight_class": "Featherweight"
-  },
-  {
     "fighter_a": "Raul Rosas Jr.",
     "fighter_b": "Raoni Barcelos",
     "slug": "raul-rosas-jr-vs-raoni-barcelos",
@@ -138,16 +18,6 @@
     "event_date": "Saturday, September 26, 2026",
     "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
     "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Rinya Nakamura",
-    "fighter_b": "Brady Hiestand",
-    "slug": "rinya-nakamura-vs-brady-hiestand",
-    "url": "/compare/rinya-nakamura-vs-brady-hiestand/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Mehemmedeli Osmanli",
@@ -170,14 +40,14 @@
     "weight_class": "Women's Strawweight"
   },
   {
-    "fighter_a": "Elves Brener",
-    "fighter_b": "Josiah Harrell",
-    "slug": "elves-brener-vs-josiah-harrell",
-    "url": "/compare/elves-brener-vs-josiah-harrell/",
+    "fighter_a": "Rinya Nakamura",
+    "fighter_b": "Brady Hiestand",
+    "slug": "rinya-nakamura-vs-brady-hiestand",
+    "url": "/compare/rinya-nakamura-vs-brady-hiestand/",
     "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
     "event_date": "Saturday, September 26, 2026",
     "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Lightweight"
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Rodolfo Bellato",
@@ -190,20 +60,20 @@
     "weight_class": "Light Heavyweight"
   },
   {
+    "fighter_a": "Elves Brener",
+    "fighter_b": "Josiah Harrell",
+    "slug": "elves-brener-vs-josiah-harrell",
+    "url": "/compare/elves-brener-vs-josiah-harrell/",
+    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+    "event_date": "Saturday, September 26, 2026",
+    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
+    "weight_class": "Lightweight"
+  },
+  {
     "fighter_a": "Ricky Simon",
     "fighter_b": "Montel Jackson",
     "slug": "ricky-simon-vs-montel-jackson",
     "url": "/compare/ricky-simon-vs-montel-jackson/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "John Castaneda",
-    "fighter_b": "Alatengheili",
-    "slug": "john-castaneda-vs-alatengheili",
-    "url": "/compare/john-castaneda-vs-alatengheili/",
     "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
     "event_date": "Saturday, September 26, 2026",
     "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
@@ -218,6 +88,16 @@
     "event_date": "Saturday, September 26, 2026",
     "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
     "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "John Castaneda",
+    "fighter_b": "Alatengheili",
+    "slug": "john-castaneda-vs-alatengheili",
+    "url": "/compare/john-castaneda-vs-alatengheili/",
+    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+    "event_date": "Saturday, September 26, 2026",
+    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Vanessa Demopoulos",
@@ -380,16 +260,6 @@
     "weight_class": "Welterweight"
   },
   {
-    "fighter_a": "Nate Landwehr",
-    "fighter_b": "Mandel Nallo",
-    "slug": "nate-landwehr-vs-mandel-nallo",
-    "url": "/compare/nate-landwehr-vs-mandel-nallo/",
-    "event_name": "UFC Fight Night: Buckley vs. Malott",
-    "event_date": "Saturday, October 17, 2026",
-    "event_slug": "ufc-fight-night-buckley-vs-malott",
-    "weight_class": "Lightweight"
-  },
-  {
     "fighter_a": "Erin Blanchfield",
     "fighter_b": "Jasmine Jasudavicius",
     "slug": "erin-blanchfield-vs-jasmine-jasudavicius",
@@ -410,14 +280,24 @@
     "weight_class": "Middleweight"
   },
   {
-    "fighter_a": "Jamey-Lyn Horth",
-    "fighter_b": "Katlyn Cerminara",
-    "slug": "jamey-lyn-horth-vs-katlyn-cerminara",
-    "url": "/compare/jamey-lyn-horth-vs-katlyn-cerminara/",
+    "fighter_a": "Timmy Cuamba",
+    "fighter_b": "Louis Jourdain",
+    "slug": "timmy-cuamba-vs-louis-jourdain",
+    "url": "/compare/timmy-cuamba-vs-louis-jourdain/",
     "event_name": "UFC Fight Night: Buckley vs. Malott",
     "event_date": "Saturday, October 17, 2026",
     "event_slug": "ufc-fight-night-buckley-vs-malott",
-    "weight_class": "Women's Flyweight"
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Nate Landwehr",
+    "fighter_b": "Mandel Nallo",
+    "slug": "nate-landwehr-vs-mandel-nallo",
+    "url": "/compare/nate-landwehr-vs-mandel-nallo/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Jhonata Diniz",
@@ -430,26 +310,6 @@
     "weight_class": "Heavyweight"
   },
   {
-    "fighter_a": "Melissa Croden",
-    "fighter_b": "Chelsea Chandler",
-    "slug": "melissa-croden-vs-chelsea-chandler",
-    "url": "/compare/melissa-croden-vs-chelsea-chandler/",
-    "event_name": "UFC Fight Night: Buckley vs. Malott",
-    "event_date": "Saturday, October 17, 2026",
-    "event_slug": "ufc-fight-night-buckley-vs-malott",
-    "weight_class": "Women's Bantamweight"
-  },
-  {
-    "fighter_a": "Timmy Cuamba",
-    "fighter_b": "Louis Jourdain",
-    "slug": "timmy-cuamba-vs-louis-jourdain",
-    "url": "/compare/timmy-cuamba-vs-louis-jourdain/",
-    "event_name": "UFC Fight Night: Buckley vs. Malott",
-    "event_date": "Saturday, October 17, 2026",
-    "event_slug": "ufc-fight-night-buckley-vs-malott",
-    "weight_class": "Bantamweight"
-  },
-  {
     "fighter_a": "Gilbert Urbina",
     "fighter_b": "Julien Leblanc",
     "slug": "gilbert-urbina-vs-julien-leblanc",
@@ -458,6 +318,26 @@
     "event_date": "Saturday, October 17, 2026",
     "event_slug": "ufc-fight-night-buckley-vs-malott",
     "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Louie Sutherland",
+    "fighter_b": "Javad Mahjoub",
+    "slug": "louie-sutherland-vs-javad-mahjoub",
+    "url": "/compare/louie-sutherland-vs-javad-mahjoub/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Jamey-Lyn Horth",
+    "fighter_b": "Katlyn Cerminara",
+    "slug": "jamey-lyn-horth-vs-katlyn-cerminara",
+    "url": "/compare/jamey-lyn-horth-vs-katlyn-cerminara/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Women's Flyweight"
   },
   {
     "fighter_a": "Chad Anheliger",
@@ -470,14 +350,14 @@
     "weight_class": "Bantamweight"
   },
   {
-    "fighter_a": "Louie Sutherland",
-    "fighter_b": "Javad Mahjoub",
-    "slug": "louie-sutherland-vs-javad-mahjoub",
-    "url": "/compare/louie-sutherland-vs-javad-mahjoub/",
+    "fighter_a": "Melissa Croden",
+    "fighter_b": "Chelsea Chandler",
+    "slug": "melissa-croden-vs-chelsea-chandler",
+    "url": "/compare/melissa-croden-vs-chelsea-chandler/",
     "event_name": "UFC Fight Night: Buckley vs. Malott",
     "event_date": "Saturday, October 17, 2026",
     "event_slug": "ufc-fight-night-buckley-vs-malott",
-    "weight_class": "Heavyweight"
+    "weight_class": "Women's Bantamweight"
   },
   {
     "fighter_a": "SuYoung You",
@@ -584,9 +464,9 @@
     "fighter_b": "Tom Nolan",
     "slug": "renato-moicano-vs-tom-nolan",
     "url": "/compare/renato-moicano-vs-tom-nolan/",
-    "event_name": "UFC Fight Night",
+    "event_name": "UFC Fight Night: Moicano vs. Nolan",
     "event_date": "Saturday, October 31, 2026",
-    "event_slug": "ufc-fight-night",
+    "event_slug": "ufc-fight-night-moicano-vs-nolan",
     "weight_class": "Lightweight"
   },
   {
@@ -594,9 +474,9 @@
     "fighter_b": "Joe Kropschot",
     "slug": "nick-klein-vs-joe-kropschot",
     "url": "/compare/nick-klein-vs-joe-kropschot/",
-    "event_name": "UFC Fight Night",
+    "event_name": "UFC Fight Night: Moicano vs. Nolan",
     "event_date": "Saturday, October 31, 2026",
-    "event_slug": "ufc-fight-night",
+    "event_slug": "ufc-fight-night-moicano-vs-nolan",
     "weight_class": "Middleweight"
   },
   {
@@ -604,9 +484,9 @@
     "fighter_b": "Lucia Szabova",
     "slug": "tainara-lisboa-vs-lucia-szabova",
     "url": "/compare/tainara-lisboa-vs-lucia-szabova/",
-    "event_name": "UFC Fight Night",
+    "event_name": "UFC Fight Night: Moicano vs. Nolan",
     "event_date": "Saturday, October 31, 2026",
-    "event_slug": "ufc-fight-night",
+    "event_slug": "ufc-fight-night-moicano-vs-nolan",
     "weight_class": "Women's Flyweight"
   },
   {
@@ -618,5 +498,125 @@
     "event_date": "Saturday, November 7, 2026",
     "event_slug": "ufc-fight-night-bonfim-vs-brady",
     "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Ciryl Gane",
+    "fighter_b": "Josh Hokit",
+    "slug": "ciryl-gane-vs-josh-hokit",
+    "url": "/compare/ciryl-gane-vs-josh-hokit/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Kayla Harrison",
+    "fighter_b": "Amanda Nunes",
+    "slug": "kayla-harrison-vs-amanda-nunes",
+    "url": "/compare/kayla-harrison-vs-amanda-nunes/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Caio Borralho",
+    "fighter_b": "Yousri Belgaroui",
+    "slug": "caio-borralho-vs-yousri-belgaroui",
+    "url": "/compare/caio-borralho-vs-yousri-belgaroui/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Uros Medic",
+    "fighter_b": "Kevin Holland",
+    "slug": "uros-medic-vs-kevin-holland",
+    "url": "/compare/uros-medic-vs-kevin-holland/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Luis Gurule",
+    "fighter_b": "Bilal Hasan",
+    "slug": "luis-gurule-vs-bilal-hasan",
+    "url": "/compare/luis-gurule-vs-bilal-hasan/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Charles Radtke",
+    "fighter_b": "Stephen Thompson",
+    "slug": "charles-radtke-vs-stephen-thompson",
+    "url": "/compare/charles-radtke-vs-stephen-thompson/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Chris Duncan",
+    "fighter_b": "Drew Dober",
+    "slug": "chris-duncan-vs-drew-dober",
+    "url": "/compare/chris-duncan-vs-drew-dober/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Terrance McKinney",
+    "fighter_b": "Jim Miller",
+    "slug": "terrance-mckinney-vs-jim-miller",
+    "url": "/compare/terrance-mckinney-vs-jim-miller/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Donte Johnson",
+    "fighter_b": "Baisangur Susurkaev",
+    "slug": "donte-johnson-vs-baisangur-susurkaev",
+    "url": "/compare/donte-johnson-vs-baisangur-susurkaev/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Macy Chiasson",
+    "fighter_b": "Bia Mesquita",
+    "slug": "macy-chiasson-vs-bia-mesquita",
+    "url": "/compare/macy-chiasson-vs-bia-mesquita/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Adrian Yanez",
+    "fighter_b": "Juan Diaz",
+    "slug": "adrian-yanez-vs-juan-diaz",
+    "url": "/compare/adrian-yanez-vs-juan-diaz/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Nazim Sadykhov",
+    "fighter_b": "Jefferson Nascimento",
+    "slug": "nazim-sadykhov-vs-jefferson-nascimento",
+    "url": "/compare/nazim-sadykhov-vs-jefferson-nascimento/",
+    "event_name": "UFC 334: Gane vs. Hokit",
+    "event_date": "Saturday, November 14, 2026",
+    "event_slug": "ufc-334-gane-vs-hokit",
+    "weight_class": "Lightweight"
   }
 ]

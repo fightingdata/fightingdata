@@ -1,110 +1,103 @@
 {
   "total_fighters": 3851,
-  "total_events": 1276,
-  "total_fights": 11394,
+  "total_events": 1277,
+  "total_fights": 11406,
   "upcoming_events": 8,
   "date_range_start": "1993-11-12",
-  "date_range_end": "2026-11-07",
-  "last_updated": "2026-09-19T08:00:17.046881",
+  "date_range_end": "2026-11-14",
+  "last_updated": "2026-09-21T09:06:13.822591",
   "featured_event": {
-    "name": "UFC 331: Van vs. Pantoja 2",
-    "date": "Saturday, September 19, 2026",
-    "iso_date": "2026-09-19",
-    "location": "Los Angeles, California, USA",
-    "slug": "ufc-331-van-vs-pantoja-2",
+    "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+    "date": "Saturday, September 26, 2026",
+    "iso_date": "2026-09-26",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-rosas-jr-vs-barcelos",
     "is_past": false,
     "matchups": [
       {
-        "fighter_a": "Joshua Van",
-        "fighter_b": "Alexandre Pantoja",
-        "weight_class": "Flyweight",
-        "is_title": true,
-        "slug": "joshua-van-vs-alexandre-pantoja"
-      },
-      {
-        "fighter_a": "Mauricio Ruffy",
-        "fighter_b": "Arman Tsarukyan",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "mauricio-ruffy-vs-arman-tsarukyan"
-      },
-      {
-        "fighter_a": "Patricio Freire",
-        "fighter_b": "Dooho Choi",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "patricio-freire-vs-dooho-choi"
-      },
-      {
-        "fighter_a": "Sean Sharaf",
-        "fighter_b": "Gable Steveson",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "sean-sharaf-vs-gable-steveson"
-      },
-      {
-        "fighter_a": "Iwo Baraniewski",
-        "fighter_b": "Alonzo Menifield",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "iwo-baraniewski-vs-alonzo-menifield"
-      },
-      {
-        "fighter_a": "Marlon Vera",
-        "fighter_b": "Charles Jourdain",
+        "fighter_a": "Raul Rosas Jr.",
+        "fighter_b": "Raoni Barcelos",
         "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "marlon-vera-vs-charles-jourdain"
+        "slug": "raul-rosas-jr-vs-raoni-barcelos"
       },
       {
-        "fighter_a": "Tai Tuivasa",
-        "fighter_b": "Robelis Despaigne",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "tai-tuivasa-vs-robelis-despaigne"
-      },
-      {
-        "fighter_a": "JooSang Yoo",
-        "fighter_b": "Michael Aswell Jr.",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "joosang-yoo-vs-michael-aswell-jr"
-      },
-      {
-        "fighter_a": "Ryan Gandra",
-        "fighter_b": "Ozzy Diaz",
+        "fighter_a": "Rodolfo Vieira",
+        "fighter_b": "Robert Bryczek",
         "weight_class": "Middleweight",
         "is_title": false,
-        "slug": "ryan-gandra-vs-ozzy-diaz"
+        "slug": "rodolfo-vieira-vs-robert-bryczek"
       },
       {
-        "fighter_a": "Brunno Ferreira",
-        "fighter_b": "Edmen Shahbazyan",
-        "weight_class": "Middleweight",
+        "fighter_a": "Mehemmedeli Osmanli",
+        "fighter_b": "Ilimbek Akylbek Uulu",
+        "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "brunno-ferreira-vs-edmen-shahbazyan"
+        "slug": "mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu"
       },
       {
-        "fighter_a": "Eduarda Moura",
-        "fighter_b": "Casey O'Neill",
-        "weight_class": "Women's Flyweight",
+        "fighter_a": "Valesca Machado",
+        "fighter_b": "Melissa Amaya",
+        "weight_class": "Women's Strawweight",
         "is_title": false,
-        "slug": "eduarda-moura-vs-casey-oneill"
+        "slug": "valesca-machado-vs-melissa-amaya"
       },
       {
-        "fighter_a": "Giga Chikadze",
-        "fighter_b": "Joanderson Brito",
-        "weight_class": "Featherweight",
+        "fighter_a": "Rinya Nakamura",
+        "fighter_b": "Brady Hiestand",
+        "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "giga-chikadze-vs-joanderson-brito"
+        "slug": "rinya-nakamura-vs-brady-hiestand"
+      },
+      {
+        "fighter_a": "Rodolfo Bellato",
+        "fighter_b": "Christian Edwards",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "rodolfo-bellato-vs-christian-edwards"
+      },
+      {
+        "fighter_a": "Elves Brener",
+        "fighter_b": "Josiah Harrell",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "elves-brener-vs-josiah-harrell"
+      },
+      {
+        "fighter_a": "Ricky Simon",
+        "fighter_b": "Montel Jackson",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "ricky-simon-vs-montel-jackson"
+      },
+      {
+        "fighter_a": "Ailin Perez",
+        "fighter_b": "Norma Dumont",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "ailin-perez-vs-norma-dumont"
+      },
+      {
+        "fighter_a": "John Castaneda",
+        "fighter_b": "Alatengheili",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "john-castaneda-vs-alatengheili"
+      },
+      {
+        "fighter_a": "Vanessa Demopoulos",
+        "fighter_b": "Yazmin Jauregui",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "vanessa-demopoulos-vs-yazmin-jauregui"
       }
     ]
   },
   "latest_result": {
-    "name": "Noche UFC: Silva vs. Delgado",
-    "date": "Saturday, September 12, 2026",
-    "iso_date": "2026-09-12",
-    "location": "Glendale, Arizona, USA",
-    "slug": "noche-ufc-silva-vs-delgado"
+    "name": "UFC 331: Van vs. Pantoja 2",
+    "date": "Saturday, September 19, 2026",
+    "iso_date": "2026-09-19",
+    "location": "Los Angeles, California, USA",
+    "slug": "ufc-331-van-vs-pantoja-2"
   }
 }
