@@ -1,11 +1,11 @@
 {
   "total_fighters": 3851,
   "total_events": 1277,
-  "total_fights": 11406,
+  "total_fights": 11408,
   "upcoming_events": 8,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-11-14",
-  "last_updated": "2026-09-21T09:06:13.822591",
+  "last_updated": "2026-09-24T08:00:17.116433",
   "featured_event": {
     "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
     "date": "Saturday, September 26, 2026",
@@ -32,14 +32,14 @@
         "fighter_a": "Mehemmedeli Osmanli",
         "fighter_b": "Ilimbek Akylbek Uulu",
         "weight_class": "Bantamweight",
-        "is_title": false,
+        "is_title": true,
         "slug": "mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu"
       },
       {
         "fighter_a": "Valesca Machado",
         "fighter_b": "Melissa Amaya",
         "weight_class": "Women's Strawweight",
-        "is_title": false,
+        "is_title": true,
         "slug": "valesca-machado-vs-melissa-amaya"
       },
       {
@@ -83,6 +83,13 @@
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "john-castaneda-vs-alatengheili"
+      },
+      {
+        "fighter_a": "Sedriques Dumas",
+        "fighter_b": "Mickey Gall",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "sedriques-dumas-vs-mickey-gall"
       },
       {
         "fighter_a": "Vanessa Demopoulos",

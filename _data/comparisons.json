@@ -100,6 +100,16 @@
     "weight_class": "Bantamweight"
   },
   {
+    "fighter_a": "Sedriques Dumas",
+    "fighter_b": "Mickey Gall",
+    "slug": "sedriques-dumas-vs-mickey-gall",
+    "url": "/compare/sedriques-dumas-vs-mickey-gall/",
+    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+    "event_date": "Saturday, September 26, 2026",
+    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
+    "weight_class": "Middleweight"
+  },
+  {
     "fighter_a": "Vanessa Demopoulos",
     "fighter_b": "Yazmin Jauregui",
     "slug": "vanessa-demopoulos-vs-yazmin-jauregui",
@@ -190,6 +200,16 @@
     "weight_class": "Bantamweight"
   },
   {
+    "fighter_a": "Anthony Wint",
+    "fighter_b": "Lucas Armand",
+    "slug": "anthony-wint-vs-lucas-armand",
+    "url": "/compare/anthony-wint-vs-lucas-armand/",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "Saturday, October 3, 2026",
+    "event_slug": "ufc-332-silva-vs-wang",
+    "weight_class": "Heavyweight"
+  },
+  {
     "fighter_a": "Mick Parkin",
     "fighter_b": "Johnny Walker",
     "slug": "mick-parkin-vs-johnny-walker",
@@ -230,16 +250,6 @@
     "weight_class": "Welterweight"
   },
   {
-    "fighter_a": "Anthony Wint",
-    "fighter_b": "Lucas Armand",
-    "slug": "anthony-wint-vs-lucas-armand",
-    "url": "/compare/anthony-wint-vs-lucas-armand/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Heavyweight"
-  },
-  {
     "fighter_a": "Christian Leroy Duncan",
     "fighter_b": "Brendan Allen",
     "slug": "christian-leroy-duncan-vs-brendan-allen",
@@ -268,6 +278,16 @@
     "event_date": "Saturday, October 17, 2026",
     "event_slug": "ufc-fight-night-buckley-vs-malott",
     "weight_class": "Women's Flyweight"
+  },
+  {
+    "fighter_a": "Kyle Nelson",
+    "fighter_b": "Cristian Perez",
+    "slug": "kyle-nelson-vs-cristian-perez",
+    "url": "/compare/kyle-nelson-vs-cristian-perez/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Lightweight"
   },
   {
     "fighter_a": "Marc-Andre Barriault",
@@ -400,6 +420,16 @@
     "weight_class": "Flyweight"
   },
   {
+    "fighter_a": "Alexander Volkov",
+    "fighter_b": "Rizvan Kuniev",
+    "slug": "alexander-volkov-vs-rizvan-kuniev",
+    "url": "/compare/alexander-volkov-vs-rizvan-kuniev/",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "Saturday, October 24, 2026",
+    "event_slug": "ufc-333-volkanovski-vs-evloev",
+    "weight_class": "Heavyweight"
+  },
+  {
     "fighter_a": "Arnold Allen",
     "fighter_b": "Aaron Pico",
     "slug": "arnold-allen-vs-aaron-pico",
@@ -420,16 +450,6 @@
     "weight_class": "Light Heavyweight"
   },
   {
-    "fighter_a": "Cam Rowston",
-    "fighter_b": "Abus Magomedov",
-    "slug": "cam-rowston-vs-abus-magomedov",
-    "url": "/compare/cam-rowston-vs-abus-magomedov/",
-    "event_name": "UFC 333: Volkanovski vs. Evloev",
-    "event_date": "Saturday, October 24, 2026",
-    "event_slug": "ufc-333-volkanovski-vs-evloev",
-    "weight_class": "Middleweight"
-  },
-  {
     "fighter_a": "Nikita Krylov",
     "fighter_b": "Abdul Rakhman Yakhyaev",
     "slug": "nikita-krylov-vs-abdul-rakhman-yakhyaev",
@@ -440,6 +460,16 @@
     "weight_class": "Light Heavyweight"
   },
   {
+    "fighter_a": "Cam Rowston",
+    "fighter_b": "Abus Magomedov",
+    "slug": "cam-rowston-vs-abus-magomedov",
+    "url": "/compare/cam-rowston-vs-abus-magomedov/",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "Saturday, October 24, 2026",
+    "event_slug": "ufc-333-volkanovski-vs-evloev",
+    "weight_class": "Middleweight"
+  },
+  {
     "fighter_a": "Grant Dawson",
     "fighter_b": "Nurullo Aliev",
     "slug": "grant-dawson-vs-nurullo-aliev",
@@ -448,16 +478,6 @@
     "event_date": "Saturday, October 24, 2026",
     "event_slug": "ufc-333-volkanovski-vs-evloev",
     "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Alexander Volkov",
-    "fighter_b": "Rizvan Kuniev",
-    "slug": "alexander-volkov-vs-rizvan-kuniev",
-    "url": "/compare/alexander-volkov-vs-rizvan-kuniev/",
-    "event_name": "UFC 333: Volkanovski vs. Evloev",
-    "event_date": "Saturday, October 24, 2026",
-    "event_slug": "ufc-333-volkanovski-vs-evloev",
-    "weight_class": "Heavyweight"
   },
   {
     "fighter_a": "Renato Moicano",

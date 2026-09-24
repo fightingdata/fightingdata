@@ -24,14 +24,14 @@
         "fighter_a": "Mehemmedeli Osmanli",
         "fighter_b": "Ilimbek Akylbek Uulu",
         "weight_class": "Bantamweight",
-        "is_title": false,
+        "is_title": true,
         "slug": "mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu"
       },
       {
         "fighter_a": "Valesca Machado",
         "fighter_b": "Melissa Amaya",
         "weight_class": "Women's Strawweight",
-        "is_title": false,
+        "is_title": true,
         "slug": "valesca-machado-vs-melissa-amaya"
       },
       {
@@ -75,6 +75,13 @@
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "john-castaneda-vs-alatengheili"
+      },
+      {
+        "fighter_a": "Sedriques Dumas",
+        "fighter_b": "Mickey Gall",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "sedriques-dumas-vs-mickey-gall"
       },
       {
         "fighter_a": "Vanessa Demopoulos",
@@ -150,6 +157,13 @@
         "slug": "marcus-mcghee-vs-benardo-sopaj"
       },
       {
+        "fighter_a": "Anthony Wint",
+        "fighter_b": "Lucas Armand",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "anthony-wint-vs-lucas-armand"
+      },
+      {
         "fighter_a": "Mick Parkin",
         "fighter_b": "Johnny Walker",
         "weight_class": "Heavyweight",
@@ -176,13 +190,6 @@
         "weight_class": "Welterweight",
         "is_title": false,
         "slug": "eric-nolan-vs-court-mcgee"
-      },
-      {
-        "fighter_a": "Anthony Wint",
-        "fighter_b": "Lucas Armand",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "anthony-wint-vs-lucas-armand"
       }
     ],
     "homepage": true
@@ -224,6 +231,13 @@
         "weight_class": "Women's Flyweight",
         "is_title": false,
         "slug": "erin-blanchfield-vs-jasmine-jasudavicius"
+      },
+      {
+        "fighter_a": "Kyle Nelson",
+        "fighter_b": "Cristian Perez",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "kyle-nelson-vs-cristian-perez"
       },
       {
         "fighter_a": "Marc-Andre Barriault",
@@ -327,6 +341,13 @@
         "slug": "loneer-kavanagh-vs-ramazan-temirov"
       },
       {
+        "fighter_a": "Alexander Volkov",
+        "fighter_b": "Rizvan Kuniev",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "alexander-volkov-vs-rizvan-kuniev"
+      },
+      {
         "fighter_a": "Arnold Allen",
         "fighter_b": "Aaron Pico",
         "weight_class": "Featherweight",
@@ -341,13 +362,6 @@
         "slug": "azamat-murzakanov-vs-dominick-reyes"
       },
       {
-        "fighter_a": "Cam Rowston",
-        "fighter_b": "Abus Magomedov",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "cam-rowston-vs-abus-magomedov"
-      },
-      {
         "fighter_a": "Nikita Krylov",
         "fighter_b": "Abdul Rakhman Yakhyaev",
         "weight_class": "Light Heavyweight",
@@ -355,18 +369,18 @@
         "slug": "nikita-krylov-vs-abdul-rakhman-yakhyaev"
       },
       {
+        "fighter_a": "Cam Rowston",
+        "fighter_b": "Abus Magomedov",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "cam-rowston-vs-abus-magomedov"
+      },
+      {
         "fighter_a": "Grant Dawson",
         "fighter_b": "Nurullo Aliev",
         "weight_class": "Lightweight",
         "is_title": false,
         "slug": "grant-dawson-vs-nurullo-aliev"
-      },
-      {
-        "fighter_a": "Alexander Volkov",
-        "fighter_b": "Rizvan Kuniev",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "alexander-volkov-vs-rizvan-kuniev"
       }
     ],
     "homepage": true
