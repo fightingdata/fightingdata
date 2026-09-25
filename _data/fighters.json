@@ -24021,6 +24021,23 @@
     "last_fight_date": "2008-02-01"
   },
   {
+    "id": 3853,
+    "name": "Hugo Guillon",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "hugo-guillon",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": "2026-09-15"
+  },
+  {
     "id": 1708,
     "name": "Hugo Viana",
     "nickname": null,
@@ -38894,6 +38911,23 @@
     "career_nc": 1,
     "division": "Light Heavyweight",
     "last_fight_date": "2018-09-22"
+  },
+  {
+    "id": 3852,
+    "name": "Luis Hernandez",
+    "nickname": null,
+    "height_cm": 175.3,
+    "reach_cm": 185.4,
+    "stance": "Southpaw",
+    "dob": "1996-08-22",
+    "slug": "luis-hernandez",
+    "career_record": "8-0-0",
+    "career_wins": 8,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": "2026-09-15"
   },
   {
     "id": 776,

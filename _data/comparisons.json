@@ -10,14 +10,24 @@
     "weight_class": "Bantamweight"
   },
   {
-    "fighter_a": "Rodolfo Vieira",
-    "fighter_b": "Robert Bryczek",
-    "slug": "rodolfo-vieira-vs-robert-bryczek",
-    "url": "/compare/rodolfo-vieira-vs-robert-bryczek/",
+    "fighter_a": "Ailin Perez",
+    "fighter_b": "Norma Dumont",
+    "slug": "ailin-perez-vs-norma-dumont",
+    "url": "/compare/ailin-perez-vs-norma-dumont/",
     "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
     "event_date": "Saturday, September 26, 2026",
     "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Middleweight"
+    "weight_class": "Women's Bantamweight"
+  },
+  {
+    "fighter_a": "Sedriques Dumas",
+    "fighter_b": "Luis Hernandez",
+    "slug": "sedriques-dumas-vs-luis-hernandez",
+    "url": "/compare/sedriques-dumas-vs-luis-hernandez/",
+    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+    "event_date": "Saturday, September 26, 2026",
+    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
+    "weight_class": "Light Heavyweight"
   },
   {
     "fighter_a": "Mehemmedeli Osmanli",
@@ -50,6 +60,16 @@
     "weight_class": "Bantamweight"
   },
   {
+    "fighter_a": "Rodolfo Vieira",
+    "fighter_b": "Robert Bryczek",
+    "slug": "rodolfo-vieira-vs-robert-bryczek",
+    "url": "/compare/rodolfo-vieira-vs-robert-bryczek/",
+    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+    "event_date": "Saturday, September 26, 2026",
+    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
+    "weight_class": "Middleweight"
+  },
+  {
     "fighter_a": "Rodolfo Bellato",
     "fighter_b": "Christian Edwards",
     "slug": "rodolfo-bellato-vs-christian-edwards",
@@ -80,16 +100,6 @@
     "weight_class": "Bantamweight"
   },
   {
-    "fighter_a": "Ailin Perez",
-    "fighter_b": "Norma Dumont",
-    "slug": "ailin-perez-vs-norma-dumont",
-    "url": "/compare/ailin-perez-vs-norma-dumont/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Women's Bantamweight"
-  },
-  {
     "fighter_a": "John Castaneda",
     "fighter_b": "Alatengheili",
     "slug": "john-castaneda-vs-alatengheili",
@@ -98,16 +108,6 @@
     "event_date": "Saturday, September 26, 2026",
     "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
     "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Sedriques Dumas",
-    "fighter_b": "Mickey Gall",
-    "slug": "sedriques-dumas-vs-mickey-gall",
-    "url": "/compare/sedriques-dumas-vs-mickey-gall/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Middleweight"
   },
   {
     "fighter_a": "Vanessa Demopoulos",

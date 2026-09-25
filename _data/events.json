@@ -14,11 +14,18 @@
         "slug": "raul-rosas-jr-vs-raoni-barcelos"
       },
       {
-        "fighter_a": "Rodolfo Vieira",
-        "fighter_b": "Robert Bryczek",
-        "weight_class": "Middleweight",
+        "fighter_a": "Ailin Perez",
+        "fighter_b": "Norma Dumont",
+        "weight_class": "Women's Bantamweight",
         "is_title": false,
-        "slug": "rodolfo-vieira-vs-robert-bryczek"
+        "slug": "ailin-perez-vs-norma-dumont"
+      },
+      {
+        "fighter_a": "Sedriques Dumas",
+        "fighter_b": "Luis Hernandez",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "sedriques-dumas-vs-luis-hernandez"
       },
       {
         "fighter_a": "Mehemmedeli Osmanli",
@@ -42,6 +49,13 @@
         "slug": "rinya-nakamura-vs-brady-hiestand"
       },
       {
+        "fighter_a": "Rodolfo Vieira",
+        "fighter_b": "Robert Bryczek",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "rodolfo-vieira-vs-robert-bryczek"
+      },
+      {
         "fighter_a": "Rodolfo Bellato",
         "fighter_b": "Christian Edwards",
         "weight_class": "Light Heavyweight",
@@ -63,25 +77,11 @@
         "slug": "ricky-simon-vs-montel-jackson"
       },
       {
-        "fighter_a": "Ailin Perez",
-        "fighter_b": "Norma Dumont",
-        "weight_class": "Women's Bantamweight",
-        "is_title": false,
-        "slug": "ailin-perez-vs-norma-dumont"
-      },
-      {
         "fighter_a": "John Castaneda",
         "fighter_b": "Alatengheili",
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "john-castaneda-vs-alatengheili"
-      },
-      {
-        "fighter_a": "Sedriques Dumas",
-        "fighter_b": "Mickey Gall",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "sedriques-dumas-vs-mickey-gall"
       },
       {
         "fighter_a": "Vanessa Demopoulos",
