@@ -31,14 +31,14 @@
         "fighter_a": "Mehemmedeli Osmanli",
         "fighter_b": "Ilimbek Akylbek Uulu",
         "weight_class": "Bantamweight",
-        "is_title": true,
+        "is_title": false,
         "slug": "mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu"
       },
       {
         "fighter_a": "Valesca Machado",
         "fighter_b": "Melissa Amaya",
         "weight_class": "Women's Strawweight",
-        "is_title": true,
+        "is_title": false,
         "slug": "valesca-machado-vs-melissa-amaya"
       },
       {
