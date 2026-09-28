@@ -1,5 +1,13 @@
 [
   {
+    "id": 1268,
+    "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+    "date": "Saturday, September 26, 2026",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-rosas-jr-vs-barcelos",
+    "year": "2026"
+  },
+  {
     "id": 1266,
     "name": "UFC 331: Van vs. Pantoja 2",
     "date": "Saturday, September 19, 2026",
@@ -61,6 +69,14 @@
     "date": "Saturday, August 22, 2026",
     "location": "Sacramento, California, USA",
     "slug": "ufc-fight-night-hernandez-vs-rodrigues",
+    "year": "2026"
+  },
+  {
+    "id": 1279,
+    "name": "DWCS 10.2",
+    "date": "Tuesday, August 18, 2026",
+    "location": "",
+    "slug": "dwcs-102",
     "year": "2026"
   },
   {

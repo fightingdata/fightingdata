@@ -1,125 +1,5 @@
 [
   {
-    "fighter_a": "Raul Rosas Jr.",
-    "fighter_b": "Raoni Barcelos",
-    "slug": "raul-rosas-jr-vs-raoni-barcelos",
-    "url": "/compare/raul-rosas-jr-vs-raoni-barcelos/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Ailin Perez",
-    "fighter_b": "Norma Dumont",
-    "slug": "ailin-perez-vs-norma-dumont",
-    "url": "/compare/ailin-perez-vs-norma-dumont/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Women's Bantamweight"
-  },
-  {
-    "fighter_a": "Sedriques Dumas",
-    "fighter_b": "Luis Hernandez",
-    "slug": "sedriques-dumas-vs-luis-hernandez",
-    "url": "/compare/sedriques-dumas-vs-luis-hernandez/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Mehemmedeli Osmanli",
-    "fighter_b": "Ilimbek Akylbek Uulu",
-    "slug": "mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu",
-    "url": "/compare/mehemmedeli-osmanli-vs-ilimbek-akylbek-uulu/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Valesca Machado",
-    "fighter_b": "Melissa Amaya",
-    "slug": "valesca-machado-vs-melissa-amaya",
-    "url": "/compare/valesca-machado-vs-melissa-amaya/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Women's Strawweight"
-  },
-  {
-    "fighter_a": "Rinya Nakamura",
-    "fighter_b": "Brady Hiestand",
-    "slug": "rinya-nakamura-vs-brady-hiestand",
-    "url": "/compare/rinya-nakamura-vs-brady-hiestand/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Rodolfo Vieira",
-    "fighter_b": "Robert Bryczek",
-    "slug": "rodolfo-vieira-vs-robert-bryczek",
-    "url": "/compare/rodolfo-vieira-vs-robert-bryczek/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Rodolfo Bellato",
-    "fighter_b": "Christian Edwards",
-    "slug": "rodolfo-bellato-vs-christian-edwards",
-    "url": "/compare/rodolfo-bellato-vs-christian-edwards/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Light Heavyweight"
-  },
-  {
-    "fighter_a": "Elves Brener",
-    "fighter_b": "Josiah Harrell",
-    "slug": "elves-brener-vs-josiah-harrell",
-    "url": "/compare/elves-brener-vs-josiah-harrell/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Ricky Simon",
-    "fighter_b": "Montel Jackson",
-    "slug": "ricky-simon-vs-montel-jackson",
-    "url": "/compare/ricky-simon-vs-montel-jackson/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "John Castaneda",
-    "fighter_b": "Alatengheili",
-    "slug": "john-castaneda-vs-alatengheili",
-    "url": "/compare/john-castaneda-vs-alatengheili/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "Vanessa Demopoulos",
-    "fighter_b": "Yazmin Jauregui",
-    "slug": "vanessa-demopoulos-vs-yazmin-jauregui",
-    "url": "/compare/vanessa-demopoulos-vs-yazmin-jauregui/",
-    "event_name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "event_date": "Saturday, September 26, 2026",
-    "event_slug": "ufc-fight-night-rosas-jr-vs-barcelos",
-    "weight_class": "Women's Strawweight"
-  },
-  {
     "fighter_a": "Wang Cong",
     "fighter_b": "Natalia Silva",
     "slug": "wang-cong-vs-natalia-silva",
@@ -258,6 +138,56 @@
     "event_date": "Saturday, October 10, 2026",
     "event_slug": "ufc-fight-night-allen-vs-duncan",
     "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Matheus Camilo",
+    "fighter_b": "Jai Herbert",
+    "slug": "matheus-camilo-vs-jai-herbert",
+    "url": "/compare/matheus-camilo-vs-jai-herbert/",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "Saturday, October 10, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-duncan",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Ketlen Souza",
+    "fighter_b": "Loopy Godinez",
+    "slug": "ketlen-souza-vs-loopy-godinez",
+    "url": "/compare/ketlen-souza-vs-loopy-godinez/",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "Saturday, October 10, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-duncan",
+    "weight_class": "Women's Strawweight"
+  },
+  {
+    "fighter_a": "Andre Fili",
+    "fighter_b": "Kai Kamaka",
+    "slug": "andre-fili-vs-kai-kamaka",
+    "url": "/compare/andre-fili-vs-kai-kamaka/",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "Saturday, October 10, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-duncan",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Julius Walker",
+    "fighter_b": "Gerald Meerschaert",
+    "slug": "julius-walker-vs-gerald-meerschaert",
+    "url": "/compare/julius-walker-vs-gerald-meerschaert/",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "Saturday, October 10, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-duncan",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Malcolm Wellmaker",
+    "fighter_b": "Otari Tanzilovi",
+    "slug": "malcolm-wellmaker-vs-otari-tanzilovi",
+    "url": "/compare/malcolm-wellmaker-vs-otari-tanzilovi/",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "Saturday, October 10, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-duncan",
+    "weight_class": "Bantamweight"
   },
   {
     "fighter_a": "Mike Malott",
