@@ -1,11 +1,11 @@
 {
-  "total_fighters": 3854,
-  "total_events": 1279,
-  "total_fights": 11415,
+  "total_fighters": 3857,
+  "total_events": 1280,
+  "total_fights": 11442,
   "upcoming_events": 7,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-11-14",
-  "last_updated": "2026-09-28T09:02:40.450692",
+  "last_updated": "2026-10-01T08:00:18.855555",
   "featured_event": {
     "name": "UFC 332: Silva vs. Wang",
     "date": "Saturday, October 3, 2026",
@@ -64,13 +64,6 @@
         "slug": "damian-pinas-vs-andrey-pulyaev"
       },
       {
-        "fighter_a": "Marcus McGhee",
-        "fighter_b": "Benardo Sopaj",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "marcus-mcghee-vs-benardo-sopaj"
-      },
-      {
         "fighter_a": "Anthony Wint",
         "fighter_b": "Lucas Armand",
         "weight_class": "Heavyweight",
@@ -83,6 +76,13 @@
         "weight_class": "Heavyweight",
         "is_title": false,
         "slug": "mick-parkin-vs-johnny-walker"
+      },
+      {
+        "fighter_a": "Jacobe Smith",
+        "fighter_b": "Bruce Whitehead",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "jacobe-smith-vs-bruce-whitehead"
       },
       {
         "fighter_a": "Rafael Dos Anjos",

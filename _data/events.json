@@ -56,13 +56,6 @@
         "slug": "damian-pinas-vs-andrey-pulyaev"
       },
       {
-        "fighter_a": "Marcus McGhee",
-        "fighter_b": "Benardo Sopaj",
-        "weight_class": "Bantamweight",
-        "is_title": false,
-        "slug": "marcus-mcghee-vs-benardo-sopaj"
-      },
-      {
         "fighter_a": "Anthony Wint",
         "fighter_b": "Lucas Armand",
         "weight_class": "Heavyweight",
@@ -75,6 +68,13 @@
         "weight_class": "Heavyweight",
         "is_title": false,
         "slug": "mick-parkin-vs-johnny-walker"
+      },
+      {
+        "fighter_a": "Jacobe Smith",
+        "fighter_b": "Bruce Whitehead",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "jacobe-smith-vs-bruce-whitehead"
       },
       {
         "fighter_a": "Rafael Dos Anjos",
@@ -148,6 +148,48 @@
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "malcolm-wellmaker-vs-otari-tanzilovi"
+      },
+      {
+        "fighter_a": "Ismael Bonfim",
+        "fighter_b": "Francisco Prado",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "ismael-bonfim-vs-francisco-prado"
+      },
+      {
+        "fighter_a": "Niko Price",
+        "fighter_b": "Leon Shahbazyan",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "niko-price-vs-leon-shahbazyan"
+      },
+      {
+        "fighter_a": "Brendson Ribeiro",
+        "fighter_b": "Felipe Franco",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "brendson-ribeiro-vs-felipe-franco"
+      },
+      {
+        "fighter_a": "Allen Frye Jr.",
+        "fighter_b": "RJ Harris",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "allen-frye-jr-vs-rj-harris"
+      },
+      {
+        "fighter_a": "Alice Pereira",
+        "fighter_b": "Daria Zhelezniakova",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "alice-pereira-vs-daria-zhelezniakova"
+      },
+      {
+        "fighter_a": "Ernesta Kareckaite",
+        "fighter_b": "Melissa Gatto",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "ernesta-kareckaite-vs-melissa-gatto"
       }
     ],
     "homepage": true
@@ -353,9 +395,65 @@
         "weight_class": "Women's Flyweight",
         "is_title": false,
         "slug": "tainara-lisboa-vs-lucia-szabova"
+      },
+      {
+        "fighter_a": "Carlos Leal",
+        "fighter_b": "Randy Brown",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "carlos-leal-vs-randy-brown"
+      },
+      {
+        "fighter_a": "Luana Santos",
+        "fighter_b": "Yana Santos",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "luana-santos-vs-yana-santos"
+      },
+      {
+        "fighter_a": "Piera Rodriguez",
+        "fighter_b": "Talita Alencar",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "piera-rodriguez-vs-talita-alencar"
+      },
+      {
+        "fighter_a": "Rodrigo Sezinando",
+        "fighter_b": "Theodor Berggren",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "rodrigo-sezinando-vs-theodor-berggren"
+      },
+      {
+        "fighter_a": "Jean-Paul Lebosnoyani",
+        "fighter_b": "Farman Hasanov",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "jean-paul-lebosnoyani-vs-farman-hasanov"
+      },
+      {
+        "fighter_a": "Azamat Bekoev",
+        "fighter_b": "Andre Petroski",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "azamat-bekoev-vs-andre-petroski"
+      },
+      {
+        "fighter_a": "Julian Erosa",
+        "fighter_b": "JeongYeong Lee",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "julian-erosa-vs-jeongyeong-lee"
+      },
+      {
+        "fighter_a": "Francis Marshall",
+        "fighter_b": "Gaston Bolanos",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "francis-marshall-vs-gaston-bolanos"
       }
     ],
-    "homepage": false
+    "homepage": true
   },
   {
     "id": 1272,
@@ -370,9 +468,93 @@
         "weight_class": "Welterweight",
         "is_title": false,
         "slug": "sean-brady-vs-gabriel-bonfim"
+      },
+      {
+        "fighter_a": "Virna Jandiroba",
+        "fighter_b": "Tatiana Suarez",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "virna-jandiroba-vs-tatiana-suarez"
+      },
+      {
+        "fighter_a": "Wes Schultz",
+        "fighter_b": "Mantas Kondratavicius",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "wes-schultz-vs-mantas-kondratavicius"
+      },
+      {
+        "fighter_a": "Billy Elekana",
+        "fighter_b": "Lucas Fernando",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "billy-elekana-vs-lucas-fernando"
+      },
+      {
+        "fighter_a": "Austin Bashi",
+        "fighter_b": "Lucas Brennan",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "austin-bashi-vs-lucas-brennan"
+      },
+      {
+        "fighter_a": "Gabriella Fernandes",
+        "fighter_b": "Karine Silva",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "gabriella-fernandes-vs-karine-silva"
+      },
+      {
+        "fighter_a": "Priscila Cachoeira",
+        "fighter_b": "Nina Milosevic",
+        "weight_class": "Women's Bantamweight",
+        "is_title": false,
+        "slug": "priscila-cachoeira-vs-nina-milosevic"
+      },
+      {
+        "fighter_a": "Keiichiro Nakamura",
+        "fighter_b": "Ollie Schmid",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "keiichiro-nakamura-vs-ollie-schmid"
+      },
+      {
+        "fighter_a": "Seokhyeon Ko",
+        "fighter_b": "Wellington Turman",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "seokhyeon-ko-vs-wellington-turman"
+      },
+      {
+        "fighter_a": "Jonny Parsons",
+        "fighter_b": "Jose Henrique",
+        "weight_class": "Welterweight",
+        "is_title": false,
+        "slug": "jonny-parsons-vs-jose-henrique"
+      },
+      {
+        "fighter_a": "Davey Grant",
+        "fighter_b": "Elijah Smith",
+        "weight_class": "Bantamweight",
+        "is_title": false,
+        "slug": "davey-grant-vs-elijah-smith"
+      },
+      {
+        "fighter_a": "Jose Delano",
+        "fighter_b": "Murtazali Magomedov",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "jose-delano-vs-murtazali-magomedov"
+      },
+      {
+        "fighter_a": "Alvin Hines",
+        "fighter_b": "Gabriel Lorenco",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "alvin-hines-vs-gabriel-lorenco"
       }
     ],
-    "homepage": false
+    "homepage": true
   },
   {
     "id": 1277,

@@ -8177,6 +8177,23 @@
     "last_fight_date": "2020-09-12"
   },
   {
+    "id": 3855,
+    "name": "Bruce Whitehead",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Switch",
+    "dob": "1996-12-14",
+    "slug": "bruce-whitehead",
+    "career_record": "8-2-0",
+    "career_wins": 8,
+    "career_losses": 2,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 64,
     "name": "Bruna Brasil",
     "nickname": null,
@@ -10351,6 +10368,23 @@
     "career_nc": 0,
     "division": "Lightweight",
     "last_fight_date": "2025-09-27"
+  },
+  {
+    "id": 3857,
+    "name": "Charlie Cleveland",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": null,
+    "dob": null,
+    "slug": "charlie-cleveland",
+    "career_record": null,
+    "career_wins": null,
+    "career_losses": null,
+    "career_draws": null,
+    "career_nc": null,
+    "division": "",
+    "last_fight_date": "2026-09-01"
   },
   {
     "id": 3625,
@@ -21214,6 +21248,23 @@
     "career_nc": 0,
     "division": "Heavyweight",
     "last_fight_date": "2016-04-10"
+  },
+  {
+    "id": 3856,
+    "name": "Gabriel Lorenco",
+    "nickname": null,
+    "height_cm": 188.0,
+    "reach_cm": 193.0,
+    "stance": "Orthodox",
+    "dob": "1999-09-30",
+    "slug": "gabriel-lorenco",
+    "career_record": "8-1-0",
+    "career_wins": 8,
+    "career_losses": 1,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": "2026-09-01"
   },
   {
     "id": 623,
