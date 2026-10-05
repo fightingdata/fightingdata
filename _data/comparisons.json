@@ -1,135 +1,5 @@
 [
   {
-    "fighter_a": "Wang Cong",
-    "fighter_b": "Natalia Silva",
-    "slug": "wang-cong-vs-natalia-silva",
-    "url": "/compare/wang-cong-vs-natalia-silva/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Women's Flyweight"
-  },
-  {
-    "fighter_a": "Deiveson Figueiredo",
-    "fighter_b": "Payton Talbott",
-    "slug": "deiveson-figueiredo-vs-payton-talbott",
-    "url": "/compare/deiveson-figueiredo-vs-payton-talbott/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Bantamweight"
-  },
-  {
-    "fighter_a": "King Green",
-    "fighter_b": "Esteban Ribovics",
-    "slug": "king-green-vs-esteban-ribovics",
-    "url": "/compare/king-green-vs-esteban-ribovics/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Khaos Williams",
-    "fighter_b": "Roberto Soldic",
-    "slug": "khaos-williams-vs-roberto-soldic",
-    "url": "/compare/khaos-williams-vs-roberto-soldic/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Ateba Gautier",
-    "fighter_b": "Roman Kopylov",
-    "slug": "ateba-gautier-vs-roman-kopylov",
-    "url": "/compare/ateba-gautier-vs-roman-kopylov/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Alden Coria",
-    "fighter_b": "Imanol Rodriguez",
-    "slug": "alden-coria-vs-imanol-rodriguez",
-    "url": "/compare/alden-coria-vs-imanol-rodriguez/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Flyweight"
-  },
-  {
-    "fighter_a": "Damian Pinas",
-    "fighter_b": "Andrey Pulyaev",
-    "slug": "damian-pinas-vs-andrey-pulyaev",
-    "url": "/compare/damian-pinas-vs-andrey-pulyaev/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Anthony Wint",
-    "fighter_b": "Lucas Armand",
-    "slug": "anthony-wint-vs-lucas-armand",
-    "url": "/compare/anthony-wint-vs-lucas-armand/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Mick Parkin",
-    "fighter_b": "Johnny Walker",
-    "slug": "mick-parkin-vs-johnny-walker",
-    "url": "/compare/mick-parkin-vs-johnny-walker/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Heavyweight"
-  },
-  {
-    "fighter_a": "Jacobe Smith",
-    "fighter_b": "Bruce Whitehead",
-    "slug": "jacobe-smith-vs-bruce-whitehead",
-    "url": "/compare/jacobe-smith-vs-bruce-whitehead/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Welterweight"
-  },
-  {
-    "fighter_a": "Rafael Dos Anjos",
-    "fighter_b": "Alexander Hernandez",
-    "slug": "rafael-dos-anjos-vs-alexander-hernandez",
-    "url": "/compare/rafael-dos-anjos-vs-alexander-hernandez/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Lightweight"
-  },
-  {
-    "fighter_a": "Marvin Vettori",
-    "fighter_b": "Ismail Naurdiev",
-    "slug": "marvin-vettori-vs-ismail-naurdiev",
-    "url": "/compare/marvin-vettori-vs-ismail-naurdiev/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Eric Nolan",
-    "fighter_b": "Court McGee",
-    "slug": "eric-nolan-vs-court-mcgee",
-    "url": "/compare/eric-nolan-vs-court-mcgee/",
-    "event_name": "UFC 332: Silva vs. Wang",
-    "event_date": "Saturday, October 3, 2026",
-    "event_slug": "ufc-332-silva-vs-wang",
-    "weight_class": "Welterweight"
-  },
-  {
     "fighter_a": "Christian Leroy Duncan",
     "fighter_b": "Brendan Allen",
     "slug": "christian-leroy-duncan-vs-brendan-allen",
@@ -828,5 +698,125 @@
     "event_date": "Saturday, November 14, 2026",
     "event_slug": "ufc-334-gane-vs-hokit",
     "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Navajo Stirling",
+    "fighter_b": "Jiri Prochazka",
+    "slug": "navajo-stirling-vs-jiri-prochazka",
+    "url": "/compare/navajo-stirling-vs-jiri-prochazka/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Light Heavyweight"
+  },
+  {
+    "fighter_a": "Kevin Vallejos",
+    "fighter_b": "Aljamain Sterling",
+    "slug": "kevin-vallejos-vs-aljamain-sterling",
+    "url": "/compare/kevin-vallejos-vs-aljamain-sterling/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Featherweight"
+  },
+  {
+    "fighter_a": "Dan Hooker",
+    "fighter_b": "Brian Ortega",
+    "slug": "dan-hooker-vs-brian-ortega",
+    "url": "/compare/dan-hooker-vs-brian-ortega/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Ikram Aliskerov",
+    "fighter_b": "Jared Cannonier",
+    "slug": "ikram-aliskerov-vs-jared-cannonier",
+    "url": "/compare/ikram-aliskerov-vs-jared-cannonier/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Tallison Teixeira",
+    "fighter_b": "Shamil Gaziev",
+    "slug": "tallison-teixeira-vs-shamil-gaziev",
+    "url": "/compare/tallison-teixeira-vs-shamil-gaziev/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Jake Matthews",
+    "fighter_b": "Tahir Abdullayev",
+    "slug": "jake-matthews-vs-tahir-abdullayev",
+    "url": "/compare/jake-matthews-vs-tahir-abdullayev/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Welterweight"
+  },
+  {
+    "fighter_a": "Santiago Luna",
+    "fighter_b": "Aleksandre Topuria",
+    "slug": "santiago-luna-vs-aleksandre-topuria",
+    "url": "/compare/santiago-luna-vs-aleksandre-topuria/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Kyoji Horiguchi",
+    "fighter_b": "Asu Almabayev",
+    "slug": "kyoji-horiguchi-vs-asu-almabayev",
+    "url": "/compare/kyoji-horiguchi-vs-asu-almabayev/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Amir Albazi",
+    "fighter_b": "Alessandro Costa",
+    "slug": "amir-albazi-vs-alessandro-costa",
+    "url": "/compare/amir-albazi-vs-alessandro-costa/",
+    "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+    "event_date": "Saturday, November 21, 2026",
+    "event_slug": "ufc-fight-night-prochazka-vs-stirling",
+    "weight_class": "Flyweight"
+  },
+  {
+    "fighter_a": "Diego Lopes",
+    "fighter_b": "Charles Oliveira",
+    "slug": "diego-lopes-vs-charles-oliveira",
+    "url": "/compare/diego-lopes-vs-charles-oliveira/",
+    "event_name": "UFC 335: Oliveira vs. Lopes",
+    "event_date": "Saturday, December 12, 2026",
+    "event_slug": "ufc-335-oliveira-vs-lopes",
+    "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Sergei Pavlovich",
+    "fighter_b": "Alex Pereira",
+    "slug": "sergei-pavlovich-vs-alex-pereira",
+    "url": "/compare/sergei-pavlovich-vs-alex-pereira/",
+    "event_name": "UFC 335: Oliveira vs. Lopes",
+    "event_date": "Saturday, December 12, 2026",
+    "event_slug": "ufc-335-oliveira-vs-lopes",
+    "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Joe Pyfer",
+    "fighter_b": "Bo Nickal",
+    "slug": "joe-pyfer-vs-bo-nickal",
+    "url": "/compare/joe-pyfer-vs-bo-nickal/",
+    "event_name": "UFC 335: Oliveira vs. Lopes",
+    "event_date": "Saturday, December 12, 2026",
+    "event_slug": "ufc-335-oliveira-vs-lopes",
+    "weight_class": "Middleweight"
   }
 ]

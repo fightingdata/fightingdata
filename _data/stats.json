@@ -1,117 +1,110 @@
 {
   "total_fighters": 3857,
-  "total_events": 1280,
-  "total_fights": 11442,
-  "upcoming_events": 7,
+  "total_events": 1282,
+  "total_fights": 11454,
+  "upcoming_events": 8,
   "date_range_start": "1993-11-12",
-  "date_range_end": "2026-11-14",
-  "last_updated": "2026-10-03T08:00:15.503229",
+  "date_range_end": "2026-12-12",
+  "last_updated": "2026-10-05T09:20:45.934218",
   "featured_event": {
-    "name": "UFC 332: Silva vs. Wang",
-    "date": "Saturday, October 3, 2026",
-    "iso_date": "2026-10-03",
-    "location": "Salt Lake City, Utah, USA",
-    "slug": "ufc-332-silva-vs-wang",
+    "name": "UFC Fight Night: Allen vs. Duncan",
+    "date": "Saturday, October 10, 2026",
+    "iso_date": "2026-10-10",
+    "location": "Las Vegas, Nevada, USA",
+    "slug": "ufc-fight-night-allen-vs-duncan",
     "is_past": false,
     "matchups": [
       {
-        "fighter_a": "Wang Cong",
-        "fighter_b": "Natalia Silva",
-        "weight_class": "Women's Flyweight",
-        "is_title": true,
-        "slug": "wang-cong-vs-natalia-silva"
+        "fighter_a": "Christian Leroy Duncan",
+        "fighter_b": "Brendan Allen",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "christian-leroy-duncan-vs-brendan-allen"
       },
       {
-        "fighter_a": "Deiveson Figueiredo",
-        "fighter_b": "Payton Talbott",
+        "fighter_a": "Matheus Camilo",
+        "fighter_b": "Jai Herbert",
+        "weight_class": "Lightweight",
+        "is_title": false,
+        "slug": "matheus-camilo-vs-jai-herbert"
+      },
+      {
+        "fighter_a": "Ketlen Souza",
+        "fighter_b": "Loopy Godinez",
+        "weight_class": "Women's Strawweight",
+        "is_title": false,
+        "slug": "ketlen-souza-vs-loopy-godinez"
+      },
+      {
+        "fighter_a": "Andre Fili",
+        "fighter_b": "Kai Kamaka",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "andre-fili-vs-kai-kamaka"
+      },
+      {
+        "fighter_a": "Julius Walker",
+        "fighter_b": "Gerald Meerschaert",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "julius-walker-vs-gerald-meerschaert"
+      },
+      {
+        "fighter_a": "Malcolm Wellmaker",
+        "fighter_b": "Otari Tanzilovi",
         "weight_class": "Bantamweight",
         "is_title": false,
-        "slug": "deiveson-figueiredo-vs-payton-talbott"
+        "slug": "malcolm-wellmaker-vs-otari-tanzilovi"
       },
       {
-        "fighter_a": "King Green",
-        "fighter_b": "Esteban Ribovics",
+        "fighter_a": "Ismael Bonfim",
+        "fighter_b": "Francisco Prado",
         "weight_class": "Lightweight",
         "is_title": false,
-        "slug": "king-green-vs-esteban-ribovics"
+        "slug": "ismael-bonfim-vs-francisco-prado"
       },
       {
-        "fighter_a": "Khaos Williams",
-        "fighter_b": "Roberto Soldic",
+        "fighter_a": "Niko Price",
+        "fighter_b": "Leon Shahbazyan",
         "weight_class": "Welterweight",
         "is_title": false,
-        "slug": "khaos-williams-vs-roberto-soldic"
+        "slug": "niko-price-vs-leon-shahbazyan"
       },
       {
-        "fighter_a": "Ateba Gautier",
-        "fighter_b": "Roman Kopylov",
-        "weight_class": "Middleweight",
+        "fighter_a": "Brendson Ribeiro",
+        "fighter_b": "Felipe Franco",
+        "weight_class": "Light Heavyweight",
         "is_title": false,
-        "slug": "ateba-gautier-vs-roman-kopylov"
+        "slug": "brendson-ribeiro-vs-felipe-franco"
       },
       {
-        "fighter_a": "Alden Coria",
-        "fighter_b": "Imanol Rodriguez",
-        "weight_class": "Flyweight",
-        "is_title": false,
-        "slug": "alden-coria-vs-imanol-rodriguez"
-      },
-      {
-        "fighter_a": "Damian Pinas",
-        "fighter_b": "Andrey Pulyaev",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "damian-pinas-vs-andrey-pulyaev"
-      },
-      {
-        "fighter_a": "Anthony Wint",
-        "fighter_b": "Lucas Armand",
+        "fighter_a": "Allen Frye Jr.",
+        "fighter_b": "RJ Harris",
         "weight_class": "Heavyweight",
         "is_title": false,
-        "slug": "anthony-wint-vs-lucas-armand"
+        "slug": "allen-frye-jr-vs-rj-harris"
       },
       {
-        "fighter_a": "Mick Parkin",
-        "fighter_b": "Johnny Walker",
-        "weight_class": "Heavyweight",
+        "fighter_a": "Alice Pereira",
+        "fighter_b": "Daria Zhelezniakova",
+        "weight_class": "Women's Bantamweight",
         "is_title": false,
-        "slug": "mick-parkin-vs-johnny-walker"
+        "slug": "alice-pereira-vs-daria-zhelezniakova"
       },
       {
-        "fighter_a": "Jacobe Smith",
-        "fighter_b": "Bruce Whitehead",
-        "weight_class": "Welterweight",
+        "fighter_a": "Ernesta Kareckaite",
+        "fighter_b": "Melissa Gatto",
+        "weight_class": "Women's Flyweight",
         "is_title": false,
-        "slug": "jacobe-smith-vs-bruce-whitehead"
-      },
-      {
-        "fighter_a": "Rafael Dos Anjos",
-        "fighter_b": "Alexander Hernandez",
-        "weight_class": "Lightweight",
-        "is_title": false,
-        "slug": "rafael-dos-anjos-vs-alexander-hernandez"
-      },
-      {
-        "fighter_a": "Marvin Vettori",
-        "fighter_b": "Ismail Naurdiev",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "marvin-vettori-vs-ismail-naurdiev"
-      },
-      {
-        "fighter_a": "Eric Nolan",
-        "fighter_b": "Court McGee",
-        "weight_class": "Welterweight",
-        "is_title": false,
-        "slug": "eric-nolan-vs-court-mcgee"
+        "slug": "ernesta-kareckaite-vs-melissa-gatto"
       }
     ]
   },
   "latest_result": {
-    "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-    "date": "Saturday, September 26, 2026",
-    "iso_date": "2026-09-26",
-    "location": "Las Vegas, Nevada, USA",
-    "slug": "ufc-fight-night-rosas-jr-vs-barcelos"
+    "name": "UFC 332: Silva vs. Wang",
+    "date": "Saturday, October 3, 2026",
+    "iso_date": "2026-10-03",
+    "location": "Salt Lake City, Utah, USA",
+    "slug": "ufc-332-silva-vs-wang"
   }
 }
