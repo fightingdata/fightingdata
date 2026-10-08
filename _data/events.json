@@ -35,18 +35,18 @@
         "slug": "andre-fili-vs-kai-kamaka"
       },
       {
-        "fighter_a": "Julius Walker",
-        "fighter_b": "Gerald Meerschaert",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "julius-walker-vs-gerald-meerschaert"
-      },
-      {
         "fighter_a": "Malcolm Wellmaker",
         "fighter_b": "Otari Tanzilovi",
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "malcolm-wellmaker-vs-otari-tanzilovi"
+      },
+      {
+        "fighter_a": "Julius Walker",
+        "fighter_b": "Gerald Meerschaert",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "julius-walker-vs-gerald-meerschaert"
       },
       {
         "fighter_a": "Ismael Bonfim",
@@ -150,20 +150,6 @@
         "slug": "jhonata-diniz-vs-tanner-boser"
       },
       {
-        "fighter_a": "Gilbert Urbina",
-        "fighter_b": "Julien Leblanc",
-        "weight_class": "Middleweight",
-        "is_title": false,
-        "slug": "gilbert-urbina-vs-julien-leblanc"
-      },
-      {
-        "fighter_a": "Louie Sutherland",
-        "fighter_b": "Javad Mahjoub",
-        "weight_class": "Heavyweight",
-        "is_title": false,
-        "slug": "louie-sutherland-vs-javad-mahjoub"
-      },
-      {
         "fighter_a": "Jamey-Lyn Horth",
         "fighter_b": "Katlyn Cerminara",
         "weight_class": "Women's Flyweight",
@@ -190,6 +176,20 @@
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "suyoung-you-vs-cody-chovancek"
+      },
+      {
+        "fighter_a": "Julien Leblanc",
+        "fighter_b": "Nicholas Galanti",
+        "weight_class": "Middleweight",
+        "is_title": false,
+        "slug": "julien-leblanc-vs-nicholas-galanti"
+      },
+      {
+        "fighter_a": "Javad Mahjoub",
+        "fighter_b": "Joel Faglier",
+        "weight_class": "Heavyweight",
+        "is_title": false,
+        "slug": "javad-mahjoub-vs-joel-faglier"
       }
     ],
     "homepage": true
@@ -230,13 +230,6 @@
         "slug": "alexander-volkov-vs-rizvan-kuniev"
       },
       {
-        "fighter_a": "Arnold Allen",
-        "fighter_b": "Aaron Pico",
-        "weight_class": "Featherweight",
-        "is_title": false,
-        "slug": "arnold-allen-vs-aaron-pico"
-      },
-      {
         "fighter_a": "Azamat Murzakanov",
         "fighter_b": "Dominick Reyes",
         "weight_class": "Light Heavyweight",
@@ -263,6 +256,13 @@
         "weight_class": "Lightweight",
         "is_title": false,
         "slug": "grant-dawson-vs-nurullo-aliev"
+      },
+      {
+        "fighter_a": "Losene Keita",
+        "fighter_b": "Aaron Pico",
+        "weight_class": "Featherweight",
+        "is_title": false,
+        "slug": "losene-keita-vs-aaron-pico"
       }
     ],
     "homepage": true

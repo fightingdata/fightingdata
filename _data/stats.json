@@ -1,11 +1,11 @@
 {
-  "total_fighters": 3857,
+  "total_fighters": 3858,
   "total_events": 1282,
   "total_fights": 11454,
   "upcoming_events": 8,
   "date_range_start": "1993-11-12",
   "date_range_end": "2026-12-12",
-  "last_updated": "2026-10-05T09:20:45.934218",
+  "last_updated": "2026-10-08T08:00:18.614519",
   "featured_event": {
     "name": "UFC Fight Night: Allen vs. Duncan",
     "date": "Saturday, October 10, 2026",
@@ -43,18 +43,18 @@
         "slug": "andre-fili-vs-kai-kamaka"
       },
       {
-        "fighter_a": "Julius Walker",
-        "fighter_b": "Gerald Meerschaert",
-        "weight_class": "Light Heavyweight",
-        "is_title": false,
-        "slug": "julius-walker-vs-gerald-meerschaert"
-      },
-      {
         "fighter_a": "Malcolm Wellmaker",
         "fighter_b": "Otari Tanzilovi",
         "weight_class": "Bantamweight",
         "is_title": false,
         "slug": "malcolm-wellmaker-vs-otari-tanzilovi"
+      },
+      {
+        "fighter_a": "Julius Walker",
+        "fighter_b": "Gerald Meerschaert",
+        "weight_class": "Light Heavyweight",
+        "is_title": false,
+        "slug": "julius-walker-vs-gerald-meerschaert"
       },
       {
         "fighter_a": "Ismael Bonfim",

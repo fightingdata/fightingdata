@@ -40,16 +40,6 @@
     "weight_class": "Featherweight"
   },
   {
-    "fighter_a": "Julius Walker",
-    "fighter_b": "Gerald Meerschaert",
-    "slug": "julius-walker-vs-gerald-meerschaert",
-    "url": "/compare/julius-walker-vs-gerald-meerschaert/",
-    "event_name": "UFC Fight Night: Allen vs. Duncan",
-    "event_date": "Saturday, October 10, 2026",
-    "event_slug": "ufc-fight-night-allen-vs-duncan",
-    "weight_class": "Light Heavyweight"
-  },
-  {
     "fighter_a": "Malcolm Wellmaker",
     "fighter_b": "Otari Tanzilovi",
     "slug": "malcolm-wellmaker-vs-otari-tanzilovi",
@@ -58,6 +48,16 @@
     "event_date": "Saturday, October 10, 2026",
     "event_slug": "ufc-fight-night-allen-vs-duncan",
     "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Julius Walker",
+    "fighter_b": "Gerald Meerschaert",
+    "slug": "julius-walker-vs-gerald-meerschaert",
+    "url": "/compare/julius-walker-vs-gerald-meerschaert/",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "Saturday, October 10, 2026",
+    "event_slug": "ufc-fight-night-allen-vs-duncan",
+    "weight_class": "Light Heavyweight"
   },
   {
     "fighter_a": "Ismael Bonfim",
@@ -190,26 +190,6 @@
     "weight_class": "Heavyweight"
   },
   {
-    "fighter_a": "Gilbert Urbina",
-    "fighter_b": "Julien Leblanc",
-    "slug": "gilbert-urbina-vs-julien-leblanc",
-    "url": "/compare/gilbert-urbina-vs-julien-leblanc/",
-    "event_name": "UFC Fight Night: Buckley vs. Malott",
-    "event_date": "Saturday, October 17, 2026",
-    "event_slug": "ufc-fight-night-buckley-vs-malott",
-    "weight_class": "Middleweight"
-  },
-  {
-    "fighter_a": "Louie Sutherland",
-    "fighter_b": "Javad Mahjoub",
-    "slug": "louie-sutherland-vs-javad-mahjoub",
-    "url": "/compare/louie-sutherland-vs-javad-mahjoub/",
-    "event_name": "UFC Fight Night: Buckley vs. Malott",
-    "event_date": "Saturday, October 17, 2026",
-    "event_slug": "ufc-fight-night-buckley-vs-malott",
-    "weight_class": "Heavyweight"
-  },
-  {
     "fighter_a": "Jamey-Lyn Horth",
     "fighter_b": "Katlyn Cerminara",
     "slug": "jamey-lyn-horth-vs-katlyn-cerminara",
@@ -248,6 +228,26 @@
     "event_date": "Saturday, October 17, 2026",
     "event_slug": "ufc-fight-night-buckley-vs-malott",
     "weight_class": "Bantamweight"
+  },
+  {
+    "fighter_a": "Julien Leblanc",
+    "fighter_b": "Nicholas Galanti",
+    "slug": "julien-leblanc-vs-nicholas-galanti",
+    "url": "/compare/julien-leblanc-vs-nicholas-galanti/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Middleweight"
+  },
+  {
+    "fighter_a": "Javad Mahjoub",
+    "fighter_b": "Joel Faglier",
+    "slug": "javad-mahjoub-vs-joel-faglier",
+    "url": "/compare/javad-mahjoub-vs-joel-faglier/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Heavyweight"
   },
   {
     "fighter_a": "Alexander Volkanovski",
@@ -290,16 +290,6 @@
     "weight_class": "Heavyweight"
   },
   {
-    "fighter_a": "Arnold Allen",
-    "fighter_b": "Aaron Pico",
-    "slug": "arnold-allen-vs-aaron-pico",
-    "url": "/compare/arnold-allen-vs-aaron-pico/",
-    "event_name": "UFC 333: Volkanovski vs. Evloev",
-    "event_date": "Saturday, October 24, 2026",
-    "event_slug": "ufc-333-volkanovski-vs-evloev",
-    "weight_class": "Featherweight"
-  },
-  {
     "fighter_a": "Azamat Murzakanov",
     "fighter_b": "Dominick Reyes",
     "slug": "azamat-murzakanov-vs-dominick-reyes",
@@ -338,6 +328,16 @@
     "event_date": "Saturday, October 24, 2026",
     "event_slug": "ufc-333-volkanovski-vs-evloev",
     "weight_class": "Lightweight"
+  },
+  {
+    "fighter_a": "Losene Keita",
+    "fighter_b": "Aaron Pico",
+    "slug": "losene-keita-vs-aaron-pico",
+    "url": "/compare/losene-keita-vs-aaron-pico/",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "Saturday, October 24, 2026",
+    "event_slug": "ufc-333-volkanovski-vs-evloev",
+    "weight_class": "Featherweight"
   },
   {
     "fighter_a": "Renato Moicano",

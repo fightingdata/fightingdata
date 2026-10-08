@@ -30158,6 +30158,23 @@
     "last_fight_date": "2026-08-15"
   },
   {
+    "id": 3858,
+    "name": "Joel Faglier",
+    "nickname": null,
+    "height_cm": null,
+    "reach_cm": null,
+    "stance": "Orthodox",
+    "dob": "2001-01-18",
+    "slug": "joel-faglier",
+    "career_record": "6-0-0",
+    "career_wins": 6,
+    "career_losses": 0,
+    "career_draws": 0,
+    "career_nc": 0,
+    "division": "",
+    "last_fight_date": ""
+  },
+  {
     "id": 3842,
     "name": "Joel Thomas",
     "nickname": null,
