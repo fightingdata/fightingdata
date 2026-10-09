@@ -190,16 +190,6 @@
     "weight_class": "Heavyweight"
   },
   {
-    "fighter_a": "Jamey-Lyn Horth",
-    "fighter_b": "Katlyn Cerminara",
-    "slug": "jamey-lyn-horth-vs-katlyn-cerminara",
-    "url": "/compare/jamey-lyn-horth-vs-katlyn-cerminara/",
-    "event_name": "UFC Fight Night: Buckley vs. Malott",
-    "event_date": "Saturday, October 17, 2026",
-    "event_slug": "ufc-fight-night-buckley-vs-malott",
-    "weight_class": "Women's Flyweight"
-  },
-  {
     "fighter_a": "Chad Anheliger",
     "fighter_b": "Steven Koslow",
     "slug": "chad-anheliger-vs-steven-koslow",
@@ -248,6 +238,16 @@
     "event_date": "Saturday, October 17, 2026",
     "event_slug": "ufc-fight-night-buckley-vs-malott",
     "weight_class": "Heavyweight"
+  },
+  {
+    "fighter_a": "Katlyn Cerminara",
+    "fighter_b": "Mackenzie Stiller",
+    "slug": "katlyn-cerminara-vs-mackenzie-stiller",
+    "url": "/compare/katlyn-cerminara-vs-mackenzie-stiller/",
+    "event_name": "UFC Fight Night: Buckley vs. Malott",
+    "event_date": "Saturday, October 17, 2026",
+    "event_slug": "ufc-fight-night-buckley-vs-malott",
+    "weight_class": "Women's Flyweight"
   },
   {
     "fighter_a": "Alexander Volkanovski",

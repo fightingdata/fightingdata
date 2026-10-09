@@ -150,13 +150,6 @@
         "slug": "jhonata-diniz-vs-tanner-boser"
       },
       {
-        "fighter_a": "Jamey-Lyn Horth",
-        "fighter_b": "Katlyn Cerminara",
-        "weight_class": "Women's Flyweight",
-        "is_title": false,
-        "slug": "jamey-lyn-horth-vs-katlyn-cerminara"
-      },
-      {
         "fighter_a": "Chad Anheliger",
         "fighter_b": "Steven Koslow",
         "weight_class": "Bantamweight",
@@ -190,6 +183,13 @@
         "weight_class": "Heavyweight",
         "is_title": false,
         "slug": "javad-mahjoub-vs-joel-faglier"
+      },
+      {
+        "fighter_a": "Katlyn Cerminara",
+        "fighter_b": "Mackenzie Stiller",
+        "weight_class": "Women's Flyweight",
+        "is_title": false,
+        "slug": "katlyn-cerminara-vs-mackenzie-stiller"
       }
     ],
     "homepage": true
